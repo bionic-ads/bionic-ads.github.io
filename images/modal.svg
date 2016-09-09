@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="14px" height="13px" viewBox="0 0 14 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.2 (29753) - http://www.bohemiancoding.com/sketch -->
+    <title>modal</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0.239551685" width="14.0000167" height="12.7648712" rx="1"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="14.0000167" height="12.7648712" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="modal" transform="translate(0.000000, -0.651778)">
+            <g transform="translate(0.000000, 0.600830)" id="Rectangle-1-Copy" stroke="#333333" stroke-width="2" fill="#FFFFFF">
+                <use mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+            <path d="M1.0212117,4.5 L13.5000002,4.5" id="Line-Copy-3" stroke="#333333" stroke-linecap="square"></path>
+            <path d="M3.0212117,7.5 L11.2757187,7.5" id="Line-Copy" stroke="#979797" stroke-linecap="square"></path>
+            <path d="M3.0212117,9.5 L11.2757187,9.5" id="Line-Copy-2" stroke="#979797" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

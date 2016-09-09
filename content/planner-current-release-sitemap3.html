@@ -1,0 +1,55 @@
+<div class="header">
+    <h2>Current Release: Ratings (2.29)</h2>
+    <ul class="subnav list">
+        <li class="current"><a href="#/planner-current-release">Planner</a></li>
+        <li><a href="#/seller-current-release">Seller</a></li>
+        <li><a href="#/data-card-editor-current-release">Data Card Editor</a></li>
+    </ul>
+
+    <ul class="subnav view">
+        <li><a href="#/planner-current-release">List</a></li>
+        <li class="current"><a href="#/planner-current-release-sitemap">Map</a></li>
+    </ul>
+
+    <span class="source"><a href="https://docs.google.com/drawings/d/1fAa4vSfIBoUIe7VW47gb5rYAq_lkkiM0CR0OxFT7Qb4/edit" target="_blank">Edit Google Drawing</a></span>
+
+</div>
+
+      <section>
+      <div class="buttons">
+        <button class="zoom-in">Zoom In</button>
+        <button class="zoom-out">Zoom Out</button>
+        <input type="range" class="zoom-range">
+        <button class="reset">Reset</button>
+      </div>
+      <div class="parent">
+        <div class="panzoom">
+          
+          <iframe src="https://docs.google.com/presentation/d/18-TWvxSNt2-mlmurqP7HGbACcD2q5cIAvl8ePw_Hibg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="5400" height="3029" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          
+        </div>
+      </div>
+      <script>
+        (function() {
+          var $section = $('section').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
+          });
+        })();
+        
+        var url;
+        
+        $('.panzoom a').on('mousedown touchstart', function( e ) {
+            e.stopImmediatePropagation();
+            url = this.getAttribute('xl:href');
+/*
+            console.log(this);
+            console.log(url);
+*/
+           window.open(url);
+        });
+      </script>
+      </section>

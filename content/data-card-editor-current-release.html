@@ -1,0 +1,82 @@
+<div class="header">
+    <h2>Current Release: Ratings (2.29)</h2>
+    <ul class="subnav">
+        <li><a href="#/planner-current-release">Planner</a></li>
+        <li><a href="#/seller-current-release">Seller</a></li>
+        <li class="current"><a href="#/data-card-editor-current-release">Data Card Editor</a></li>
+    </ul>
+</div>
+
+<table class="inventory" id="inventory">
+    <tr>
+        <th></th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Notes</th>
+        <th>Requirements</th>
+        <th>Design</th>
+        <th>Development</th>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    
+      var spreadsheetTab = "Data-Card-Editor-Ratings";
+    
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1mkVxWy3aoxjzqnyotk5GbHS5VCWYy01MKX_cS08iwb0/pubhtml';
+      
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          var connector = " ";
+          var rowNumber = i + 1;
+          if(item.Group&&item.Group!="Navigation"){
+              connector = ": "
+          }
+          if(item.Group=="Navigation"){
+              item.Group = "";
+          }
+          
+          var designLink;
+          
+          if(item.Requirements) {
+              requirementsLink = '<a href="' +item.Requirements +'" target="_blank">Google Doc</a>';
+          } else {
+              requirementsLink = "";
+          }
+          
+          if(item.Design) {
+              designLink = '<a href="' +item.Design +'" target="_blank">Invision</a>';
+          } else {
+              designLink = "";
+          }
+          
+          if(item.Code) {
+              codeLink = '<a href="' +item.Code +'" target="_blank">Github</a>';
+          } else {
+              codeLink = "";
+          }
+          
+          var cat_li = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          cat_li.append('<td>' +item.Status +'</td>');
+          cat_li.append('<td><div class="'+ item.Type +'"></div><span class="group">'+ "</span>" + item.Name +'</td>');
+          cat_li.append('<td>' +item.Notes +'</td>');
+          cat_li.append('<td>'+requirementsLink+'</td>');
+          cat_li.append('<td>'+designLink+'</td>');
+          cat_li.append('<td>'+codeLink+'</td>');
+          cat_li.append('</tr>');
+          cat_li.appendTo("#inventory");
+        })
+        
+      }
+
+//       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>

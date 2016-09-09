@@ -1,0 +1,32 @@
+<div class="header">
+    <h2>Planner</h2>
+    <ul class="subnav">
+    <li><a href="#/planner">Screen List</a></li>
+    <li class="current"><a href="#/planner-sitemap">Site Map</a></li>
+</ul>
+</div>
+
+      <section>
+      <div class="buttons">
+        <button class="zoom-in">Zoom In</button>
+        <button class="zoom-out">Zoom Out</button>
+        <input type="range" class="zoom-range">
+        <button class="reset">Reset</button>
+      </div>
+      <div class="parent">
+        <div class="panzoom">
+          <img src="images/sitemap.svg" width="1500" height="1000">
+        </div>
+      </div>
+      <script>
+        (function() {
+          var $section = $('section').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
+          });
+        })();
+      </script>
+      </section>

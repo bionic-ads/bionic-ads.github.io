@@ -1,0 +1,57 @@
+<div class="header">
+    <h2>Ratings for TV & Radio (2.29)</h2>
+<ul class="subnav">
+                    <li class="current"><a href="#/planner">Planner</a></li>
+                    <li><a href="#/seller">Seller</a></li>
+                    <li><a href="#/datacardeditor">Data Card Editor</a></li>
+</ul>
+
+</div>
+<!--
+<ul class="filter">
+    <li>All Screens</li>
+    <li class="current">Current Release Only</li>
+</ul>
+-->
+
+<table class="inventory" id="inventory">
+    <tr>
+        <th></th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Requirements</th>
+        <th>Design</th>
+        <th>Development</th>
+    </tr>
+</table>
+<script type="text/javascript">
+    
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1mkVxWy3aoxjzqnyotk5GbHS5VCWYy01MKX_cS08iwb0/pubhtml';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ "PlannerCurrentRelease"],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets("PlannerCurrentRelease").all(), function(i, item) {
+          var rowNumber = i + 1;
+          var cat_li = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          cat_li.append('<td>' +item.Status +'</td>');
+          cat_li.append('<td><div class="' +item.Type +'"></div><strong><a href="#/item">' +item.Name +'</a></strong></td>');
+          cat_li.append('<td><a href="'+item.Requirements +'">Google Doc</a></td>');
+          cat_li.append('<td>Invision' +item.Design +'</td>');
+          cat_li.append('<td>Github' +item.Code +'</td>');
+          cat_li.append('</tr>');
+          cat_li.appendTo("#inventory");
+        })
+
+        
+      }
+
+//       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>

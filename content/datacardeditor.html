@@ -1,0 +1,31 @@
+<table class="inventory" id="content"></table>
+<script type="text/javascript">
+    
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1mkVxWy3aoxjzqnyotk5GbHS5VCWYy01MKX_cS08iwb0/pubhtml';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ "PlannerInventory"],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets("PlannerInventory").all(), function(i, item) {
+          var cat_li = $('<tr><td>' + item.Name + '</td>');
+          cat_li.append('<td>' +item.Type +'</td>');
+          cat_li.append('<td>' +item.InRelease +'</td>');
+          cat_li.append('<td>' +item.Invision +'</td>');
+          cat_li.append('<td>' +item.Github +'</td>');
+          cat_li.append('<td>' +item.Salesforce +'</td>');
+          cat_li.append('</tr>');
+          cat_li.appendTo("#content");
+        })
+
+        
+      }
+
+//       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>

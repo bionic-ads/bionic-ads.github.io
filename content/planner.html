@@ -1,0 +1,51 @@
+<div class="header">
+    <h2>Applications</h2>
+    <ul class="subnav">
+    <li class="current"><a href="#/planner">Planner</a></li>
+    <li><a href="#/seller">Seller</a></li>
+    <li><a href="#/data-card-editor">Data Card Editor</a></li>
+</ul>
+</div>
+
+<table class="inventory" id="inventory">
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Notes</th>
+    </tr>
+</table>
+<script type="text/javascript">
+    
+      var spreadsheetTab = "Planner";
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1x5rHX4QNdSFVm0nXBpggPn2pq1qC0rfL9HmO9ez_dtw/pubhtml';
+
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          var connector = " ";
+          var rowNumber = i + 1;
+          if(item.Group&&item.Group!="Navigation"){
+              connector = " - "
+          }
+          if(item.Group=="Navigation"){
+              item.Group = "";
+          }
+          var cat_li = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          cat_li.append('<td class="name"><div class="type '+ item.Type +'"></div><a href="#/item">'+ item.Group + connector +item.Name +'</a></td>');
+          cat_li.append('<td>'+ item.Notes +'</td>');
+          cat_li.append('</tr>');
+          cat_li.appendTo("#inventory");
+        })
+        
+      }
+
+//       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>
