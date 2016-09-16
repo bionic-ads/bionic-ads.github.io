@@ -576,3 +576,19 @@ table.headings {
 .link-invision {
   color: #ccc;
 }
+
+/* line 1, ../sass/components/code.scss */
+#content pre.prettyprint {
+  width: 600px;
+  padding: 0 20px;
+  border: none;
+  background: #f5f6f7;
+}
+
+/* line 8, ../sass/components/code.scss */
+#content .code-wrapper::before {
+  content: "code";
+  font-size: 11px;
+  border-bottom: none;
+  color: #999;
+}
