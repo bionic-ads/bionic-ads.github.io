@@ -422,22 +422,21 @@ table.headings {
 /* line 373, ../sass/components/main.scss */
 .colors.palette li {
   width: 95px;
-  padding: 10px;
   margin: 0 10px 20px 0;
   height: 80px;
 }
 
-/* line 380, ../sass/components/main.scss */
+/* line 379, ../sass/components/main.scss */
 .colors li {
   color: #333;
 }
 
-/* line 384, ../sass/components/main.scss */
+/* line 383, ../sass/components/main.scss */
 .colors li.light {
   color: #333;
 }
 
-/* line 388, ../sass/components/main.scss */
+/* line 387, ../sass/components/main.scss */
 .colors .description {
   position: relative;
   float: left;
@@ -446,17 +445,17 @@ table.headings {
   width: 100%;
 }
 
-/* line 397, ../sass/components/main.scss */
+/* line 396, ../sass/components/main.scss */
 .colors.primary {
   width: 800px;
 }
 
-/* line 401, ../sass/components/main.scss */
+/* line 400, ../sass/components/main.scss */
 .colors.palette {
   width: 600px;
 }
 
-/* line 406, ../sass/components/main.scss */
+/* line 405, ../sass/components/main.scss */
 .spreadsheet {
   width: calc(100% + 59px);
   margin-bottom: 50px;
@@ -467,14 +466,14 @@ table.headings {
   font-size: 13px;
 }
 
-/* line 416, ../sass/components/main.scss */
+/* line 415, ../sass/components/main.scss */
 .spreadsheet tr:hover td {
   background-color: #E6F2F8 !important;
   border-bottom: 1px solid #69AED4;
   border-top: 1px solid #69AED4;
 }
 
-/* line 422, ../sass/components/main.scss */
+/* line 421, ../sass/components/main.scss */
 .spreadsheet th {
   text-align: left;
   padding: 10px 10px;
@@ -484,7 +483,7 @@ table.headings {
   background: #f5f6f7;
 }
 
-/* line 431, ../sass/components/main.scss */
+/* line 430, ../sass/components/main.scss */
 .spreadsheet .line-number {
   color: #999;
   width: 15px;
@@ -492,7 +491,7 @@ table.headings {
   background: #f5f6f7;
 }
 
-/* line 438, ../sass/components/main.scss */
+/* line 437, ../sass/components/main.scss */
 .spreadsheet td {
   padding: 5px 10px;
   border-bottom: 1px solid #eee;
@@ -500,7 +499,7 @@ table.headings {
   border-right: 1px solid #eee;
 }
 
-/* line 445, ../sass/components/main.scss */
+/* line 444, ../sass/components/main.scss */
 .spreadsheet .status,
 .spreadsheet .type {
   white-space: nowrap;
@@ -508,7 +507,7 @@ table.headings {
   width: 40px;
 }
 
-/* line 456, ../sass/components/main.scss */
+/* line 455, ../sass/components/main.scss */
 .spreadsheet div.status,
 .spreadsheet div.type {
   display: block;
@@ -520,13 +519,13 @@ table.headings {
   color: #333;
 }
 
-/* line 470, ../sass/components/main.scss */
+/* line 469, ../sass/components/main.scss */
 .spreadsheet td.status {
   padding-left: 25px;
   background: transparent;
 }
 
-/* line 475, ../sass/components/main.scss */
+/* line 474, ../sass/components/main.scss */
 .spreadsheet div.status {
   border: 1px solid #ccc;
   text-align: center;
@@ -539,41 +538,41 @@ table.headings {
   margin-right: 5px;
 }
 
-/* line 487, ../sass/components/main.scss */
+/* line 486, ../sass/components/main.scss */
 .spreadsheet .status.inprogress {
   background: transparent url(images/pencil.svg) no-repeat 5px 5px;
 }
 
-/* line 491, ../sass/components/main.scss */
+/* line 490, ../sass/components/main.scss */
 .spreadsheet .status.defer,
 .spreadsheet .status.needed {
   color: #999;
 }
 
-/* line 496, ../sass/components/main.scss */
+/* line 495, ../sass/components/main.scss */
 .spreadsheet .status.needsreview {
   background: transparent url(images/yield.svg) no-repeat 5px 5px;
   color: orange;
 }
 
-/* line 501, ../sass/components/main.scss */
+/* line 500, ../sass/components/main.scss */
 .spreadsheet .status.approved {
   background: transparent url(images/check.svg) no-repeat 7px 7px;
   color: green;
 }
 
-/* line 507, ../sass/components/main.scss */
+/* line 506, ../sass/components/main.scss */
 .spreadsheet div.type.screen {
   color: #ccc;
 }
 
-/* line 523, ../sass/components/main.scss */
+/* line 522, ../sass/components/main.scss */
 .spreadsheet .name {
   font-weight: bold;
   min-width: 300px;
 }
 
-/* line 528, ../sass/components/main.scss */
+/* line 527, ../sass/components/main.scss */
 .link-invision {
   color: #ccc;
 }
