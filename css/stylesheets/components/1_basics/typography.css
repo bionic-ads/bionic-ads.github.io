@@ -1,0 +1,46 @@
+/* Typography */
+/* line 2, ../../../sass/components/1_basics/typography.scss */
+table.headings {
+  box-sizing: border-box;
+  border: none;
+}
+
+/* line 7, ../../../sass/components/1_basics/typography.scss */
+.headings td {
+  padding: 10px 0 10px;
+  margin: none;
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  width: 300px;
+}
+
+/* line 15, ../../../sass/components/1_basics/typography.scss */
+.headings td * {
+  display: inline;
+}
+
+/* line 19, ../../../sass/components/1_basics/typography.scss */
+.pixels {
+  color: #999;
+}
+
+/* line 23, ../../../sass/components/1_basics/typography.scss */
+.headings .nomargin {
+  margin: 0 0 10px !important;
+  color: #333;
+  width: auto;
+  display: inline;
+}
+
+/* line 30, ../../../sass/components/1_basics/typography.scss */
+.headings h1,
+.headings h2,
+.headings h3,
+.headings h4 {
+  font-weight: bold;
+}
+
+/* line 37, ../../../sass/components/1_basics/typography.scss */
+.monospace {
+  font-family: monospace;
+}
