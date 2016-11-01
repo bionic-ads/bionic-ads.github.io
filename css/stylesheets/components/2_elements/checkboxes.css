@@ -6,7 +6,7 @@
 .bionic-checkbox input[type="checkbox"]:checked + label .box {
   border: 3px solid #69AED4;
   background-color: #69AED4;
-  background-image: url('/images/check_mark.svg');
+  background-image: url("../images/check_mark.svg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3px;

@@ -1,0 +1,18 @@
+/* line 1, ../../../sass/components/1_basics/icons.scss */
+#icons {
+  display: block;
+  float: left;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+/* line 8, ../../../sass/components/1_basics/icons.scss */
+#icons li {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  float: left;
+  text-align: center;
+  height: 80px;
+  width: 80px;
+}
