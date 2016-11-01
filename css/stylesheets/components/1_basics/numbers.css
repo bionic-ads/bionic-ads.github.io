@@ -1,0 +1,8 @@
+/* line 1, ../../../sass/components/1_basics/numbers.scss */
+.bdg-numbers {
+  font-size: 24px;
+  padding: 10px 20px;
+  background: #eee;
+  display: inline-block;
+  margin-top: 10px;
+}

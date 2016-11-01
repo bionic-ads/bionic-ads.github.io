@@ -69,7 +69,7 @@ h1, h2, h3, h4 {
 /* line 61, ../sass/components/main.scss */
 h1 {
   font-size: 32px;
-  margin-bottom: 10px;
+  margin: 18px 0 10px;
 }
 
 /* line 66, ../sass/components/main.scss */
@@ -558,7 +558,7 @@ pre {
 }
 
 /* line 1, ../sass/components/1_basics/icons.scss */
-#icons {
+.bdg-icons {
   display: block;
   float: left;
   margin-bottom: 20px;
@@ -566,7 +566,7 @@ pre {
 }
 
 /* line 8, ../sass/components/1_basics/icons.scss */
-#icons li {
+.bdg-icons li {
   padding: 10px;
   border: 1px solid #eee;
   border-collapse: collapse;
@@ -574,6 +574,15 @@ pre {
   text-align: center;
   height: 80px;
   width: 80px;
+}
+
+/* line 1, ../sass/components/1_basics/numbers.scss */
+.bdg-numbers {
+  font-size: 24px;
+  padding: 10px 20px;
+  background: #eee;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 /* Typography */

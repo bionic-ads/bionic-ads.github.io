@@ -1,5 +1,5 @@
 /* line 1, ../../../sass/components/1_basics/icons.scss */
-#icons {
+.bdg-icons {
   display: block;
   float: left;
   margin-bottom: 20px;
@@ -7,7 +7,7 @@
 }
 
 /* line 8, ../../../sass/components/1_basics/icons.scss */
-#icons li {
+.bdg-icons li {
   padding: 10px;
   border: 1px solid #eee;
   border-collapse: collapse;
