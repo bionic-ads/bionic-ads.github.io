@@ -1,0 +1,93 @@
+.blue-button,
+.green-button,
+.gray-button,
+.button-c,
+.gray-button {
+    display: inline-block;
+    font-size: 1em;
+    padding: 8px 20px;
+    line-height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: none;
+    text-shadow: none;
+    position: relative;
+    font-weight: 700 !important;    
+}
+
+
+.blue-button {
+    display: inline-block;
+    color: white !important;
+    position: relative;
+    background: #6CAFD2;
+    color: white;
+    border: 1px solid #6CAFD2;
+}
+
+
+    .blue-button:hover {
+        background: #60B2DB;
+    }
+
+    .blue-button:disabled,
+    .blue-button.disabled,
+    .blue-button.disabled:hover {
+        background: #eee;
+        border: 0px solid #eee;
+        color: #c0c0c0 !important;
+        cursor: default;
+    }
+
+    #crumbs .blue-button {
+        margin-top: 4px;
+        padding: 8px 20px;
+    }
+
+.button-c {
+    background-color: #999;
+    color: #fff !important;
+}
+
+    .button-c-disabled {
+        opacity: 0.8;
+    }
+
+.green-button {
+    color: white !important;
+    position: relative;
+    background: #65a000;
+
+}
+
+input[type="submit"].gray-button,
+input[type="button"].gray-button,
+.gray-button {
+    background: #eee;
+    color: #888!important;
+    border: 1px solid #eee;
+}
+
+    .gray-button:hover {
+        background: #e2e2e2;
+    }
+
+
+
+.small-button {
+    padding: 0 20px;
+}
+
+.blue-button:disabled {
+        background: #B5B5B5;
+        color: #888 !important;
+    }
+
+.button-link {
+    padding: 8px 20px !important;
+    line-height: 20px;
+    background: none !important;
+    &.under-line{
+        text-decoration: underline;
+    }
+}

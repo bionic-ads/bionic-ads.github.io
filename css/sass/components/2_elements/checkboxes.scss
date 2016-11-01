@@ -1,0 +1,56 @@
+.bionic-checkbox{
+    input[type="checkbox"] {
+        display: none;
+
+        &:checked + label .box {
+            border: 3px solid #69AED4;
+            background-color: #69AED4;
+            background-image: image-url('check_mark.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 3px;
+        }
+
+        &:disabled + label {
+            color: #ccc !important;
+            cursor: default;
+
+            .box {
+                border-color: #ddd !important;
+                background-color: #ddd;
+            }
+        }
+    }
+
+    label {
+        display: inline !important;
+        font-size: 13px !important;
+        cursor: pointer;
+
+        span {
+            &:first-child.box {
+                top: -3px;
+                position: relative;
+                height: 16px;
+                width: 16px;
+                border: 3px solid #eee;
+                border-radius: 2px;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 6px;
+                background: #fff;
+            }
+
+            &.text{
+                vertical-align: top;
+                position: relative; 
+                top: 3px;
+                display: inline-block;
+                width: calc(100% - 33px);
+                line-height: 18px;
+                padding: 2px 0 3px;
+              
+            }
+        }
+    }
+}

@@ -4,7 +4,7 @@
 }
 
 ol,ul,li {
-        margin: 0;
+    margin: 0;
     padding: 0;
 
 }
@@ -64,13 +64,13 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin: 20px 0 10px;    
 }
 
 h3 {
     margin: 20px 0 10px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 h4 {
@@ -112,46 +112,6 @@ pre  {
         padding-top: 100px;
         margin-bottom: 20px;
         font-size: 50px;
-    }
-
-/* Typography */
-table.headings {
-    box-sizing: border-box;
-    border: none;
-}
-
-    .headings td {
-        padding: 10px 0 10px;
-        margin: none;
-        border:none;
-        border-bottom: 1px solid #cfcfcf;
-        width: 300px
-    }
-    
-    .headings td * {
-        display: inline;
-    }
-    
-    .pixels {
-        color: #999;
-    }
- 
-.headings .nomargin   {
-    margin: 0 0 10px !important;
-    color: #333;
-    width: auto;
-    display: inline;
-}
-    
-    .headings h1,
-    .headings h2,
-    .headings h3,
-    .headings h4 {
-        font-weight: bold;
-    }
-
-    .monospace {
-        font-family: monospace;
     }
 
 
@@ -321,7 +281,6 @@ table.headings {
     color: #fff;
     font-weight: 700;
     text-shadow: none;
-    margin-bottom: 20px;
     display: inline-block;
     text-decoration: none;
 }
@@ -339,74 +298,6 @@ table.headings {
         color: #c0c0c0;
     }
 
-.colors {
-    clear: both;
-    display: block;
-}
-
-    .colors li{
-        float: left;
-        box-sizing: border-box;
-        width: 150px;
-        height: 200px;
-        background: #fff;
-        margin: 0 10px 20px 0;
-        border:1px solid #fff;
-    }
-    
-    .colors div {
-        display: block;
-        float: left;
-        width: 150px;
-        height: 100px;
-        margin-bottom: 10px;
-    }
-    
-        .colors.task div {
-            width: 100px;
-            height: 50px;
-        }    
-        
-        .colors.task li {
-            height: 130;
-            margin: 0 10px 20px 0;
-        }
-    
-        .colors.palette div {
-            width: 100px;
-            height: 50px;
-        }
-
-        .colors.palette li {
-            width: 95px;
-            margin: 0 10px 20px 0;
-            height: 80px;
-        }
-     
-    .colors li {
-        color: #333;
-    }
-    
-    .colors li.light {
-        color: #333;
-    }
-    
-    .colors .description {
-        position: relative;
-        float: left;
-        margin-top: 10px;
-        clear: both;
-        width: 100%;
-    }
-    
-    
-    .colors.primary {
-        width: 800px;
-    }
-    
-    .colors.palette {
-        width: 600px;
-    }
 
 
 .spreadsheet {
@@ -540,4 +431,25 @@ table.headings {
     .link-salesforce{ 
         
     }
-    
+/*
+::-webkit-input-placeholder {
+   font-size: 11px;
+   font-style: italic;
+}
+
+:-moz-placeholder {
+   font-size: 11px;
+   font-style: italic;
+}
+
+::-moz-placeholder {
+   font-size: 11px;
+   font-style: italic;
+}
+
+:-ms-input-placeholder {
+   font-size: 11px;
+   font-style: italic;
+}
+*/
+  

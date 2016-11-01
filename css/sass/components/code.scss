@@ -1,8 +1,13 @@
+.code-wrapper {
+    margin-top: 10px;
+}
+
 #content pre.prettyprint {
     width:600px;
     padding: 0 20px;
     border: none;
     background: #f5f6f7;
+    margin-top: 0;
 }
 
 #content .code-wrapper::before {
@@ -10,4 +15,5 @@
     font-size: 11px;
     border-bottom: none;
     color: #999;
+    margin-top: 10px;
 }

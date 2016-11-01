@@ -1,23 +1,36 @@
 <h1>Buttons</h1>
 
+<p>Buttons can be rendered as inputs (example: form submission buttons) or as links styled as buttons (example: Add Placement). In both cases they should be styled to look the same.</p>
+
 <h2>Primary Action</h2>
-<a class="button primary action">Add Placement</a>
+<a class="blue-button">Add Placement</a>
 
 <div class="code-wrapper">
 <pre class="prettyprint">
-    <xmp><button class="primary">Action</button></xmp>
+    <xmp><a class="blue-button">Action</a></xmp>
 </pre>
 </div>
 
-<h3>Primary Disabled</h3>
-<a class="button disabled action">Apply</a>
-<p></p>
+<h2>Primary Disabled</h2>
+<input class="blue-button" disabled="disabled" value="Apply" style="width:80px;" />
 
-<h3>Secondary Action</h3>
-<a class="button secondary action">Save As...</a>
-<p></p>
+<div class="code-wrapper">
+<pre class="prettyprint">
+    <xmp><input class="blue-button" disabled="disabled" value="Apply" /></xmp>
+</pre>
+</div>
 
-<h3>Secondary Disabled</h3>
-<a class="button disabled action">Apply</a>
-<p></p>
+<h2>Secondary Action</h2>
+<a class="gray-button">Save As...</a>
+
+<div class="code-wrapper">
+<pre class="prettyprint">
+    <xmp><a class="gray-button">Save As...</a></xmp>
+</pre>
+</div>
+
+<!--
+<h2>Secondary Disabled</h2>
+<input class="gray-button" disabled="disabled" value="Apply" style="width:80px;" />
+-->
 

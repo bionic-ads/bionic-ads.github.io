@@ -1,0 +1,40 @@
+/* Typography */
+table.headings {
+    box-sizing: border-box;
+    border: none;
+}
+
+    .headings td {
+        padding: 10px 0 10px;
+        margin: none;
+        border:none;
+        border-bottom: 1px solid #cfcfcf;
+        width: 300px
+    }
+    
+    .headings td * {
+        display: inline;
+    }
+    
+    .pixels {
+        color: #999;
+    }
+ 
+.headings .nomargin   {
+    margin: 0 0 10px !important;
+    color: #333;
+    width: auto;
+    display: inline;
+}
+    
+    .headings h1,
+    .headings h2,
+    .headings h3,
+    .headings h4 {
+        font-weight: bold;
+    }
+
+    .monospace {
+        font-family: monospace;
+    }
+
