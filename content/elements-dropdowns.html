@@ -1,10 +1,28 @@
 <h1>Dropdowns</h1>
 
+<h2>Primary Dropdowns</h2>
 <p>Dropdowns in Bionic are almost always implemented as comboboxes -- this controls allows the user to type in a value to search for it in a long list</p>
 <p>The arrow should be the caret-down icon in font awesome: <a href="http://fontawesome.io/icon/caret-down/">http://fontawesome.io/icon/caret-down/</a></p>
 
 <span class="input-holder">
     <input class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete" 
+    type="text" autocomplete="off">
+</span>
+
+<div class="code-wrapper">
+<pre class="prettyprint">
+    <xmp><span class="input-holder">
+    <input class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete" 
+    type="text" autocomplete="off">
+</span></xmp>
+</pre>
+</div>
+
+<h2>Secondary Dropdowns</h2>
+<p>In cases where multiple dropdowns are needed, using a secondary style helps provide additional contrast/separation between menus.</p>
+
+<span class="input-holder">
+    <input style="background-color: #eee;" class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete" 
     type="text" autocomplete="off">
 </span>
 
