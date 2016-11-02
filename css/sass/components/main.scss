@@ -9,6 +9,15 @@ ol,ul,li {
 
 }
 
+.checklist {
+    li:before
+    {
+        content: "\2610";
+        margin-right:5px;
+    }
+
+}
+
 body {
     background: #fff;
     color: #333;
