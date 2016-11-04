@@ -11,6 +11,11 @@
         background: #fff;
         margin: 0 10px 20px 0;
         border:1px solid #fff;
+        
+        span {
+            clear: both;
+            display: block;
+        }
     }
     
     .colors div {
@@ -22,7 +27,6 @@
     }
     
         .colors.task div {
-            width: 100px;
             height: 50px;
         }    
         
@@ -32,12 +36,10 @@
         }
     
         .colors.palette div {
-            width: 100px;
             height: 50px;
         }
 
         .colors.palette li {
-            width: 95px;
             margin: 0 10px 20px 0;
             height: 80px;
         }

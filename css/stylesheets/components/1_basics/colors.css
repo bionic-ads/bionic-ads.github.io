@@ -14,8 +14,13 @@
   margin: 0 10px 20px 0;
   border: 1px solid #fff;
 }
+/* line 15, ../../../sass/components/1_basics/colors.scss */
+.colors li span {
+  clear: both;
+  display: block;
+}
 
-/* line 16, ../../../sass/components/1_basics/colors.scss */
+/* line 21, ../../../sass/components/1_basics/colors.scss */
 .colors div {
   display: block;
   float: left;
@@ -24,42 +29,39 @@
   margin-bottom: 10px;
 }
 
-/* line 24, ../../../sass/components/1_basics/colors.scss */
+/* line 29, ../../../sass/components/1_basics/colors.scss */
 .colors.task div {
-  width: 100px;
   height: 50px;
 }
 
-/* line 29, ../../../sass/components/1_basics/colors.scss */
+/* line 33, ../../../sass/components/1_basics/colors.scss */
 .colors.task li {
   height: 130;
   margin: 0 10px 20px 0;
 }
 
-/* line 34, ../../../sass/components/1_basics/colors.scss */
+/* line 38, ../../../sass/components/1_basics/colors.scss */
 .colors.palette div {
-  width: 100px;
   height: 50px;
 }
 
-/* line 39, ../../../sass/components/1_basics/colors.scss */
+/* line 42, ../../../sass/components/1_basics/colors.scss */
 .colors.palette li {
-  width: 95px;
   margin: 0 10px 20px 0;
   height: 80px;
 }
 
-/* line 45, ../../../sass/components/1_basics/colors.scss */
+/* line 47, ../../../sass/components/1_basics/colors.scss */
 .colors li {
   color: #333;
 }
 
-/* line 49, ../../../sass/components/1_basics/colors.scss */
+/* line 51, ../../../sass/components/1_basics/colors.scss */
 .colors li.light {
   color: #333;
 }
 
-/* line 53, ../../../sass/components/1_basics/colors.scss */
+/* line 55, ../../../sass/components/1_basics/colors.scss */
 .colors .description {
   position: relative;
   float: left;
@@ -68,12 +70,12 @@
   width: 100%;
 }
 
-/* line 62, ../../../sass/components/1_basics/colors.scss */
+/* line 64, ../../../sass/components/1_basics/colors.scss */
 .colors.primary {
   width: 800px;
 }
 
-/* line 66, ../../../sass/components/1_basics/colors.scss */
+/* line 68, ../../../sass/components/1_basics/colors.scss */
 .colors.palette {
   width: 600px;
 }
