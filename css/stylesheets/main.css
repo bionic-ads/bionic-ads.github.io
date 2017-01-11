@@ -586,11 +586,16 @@ pre {
 
 /* line 1, ../sass/components/1_basics/numbers.scss */
 .bdg-numbers {
-  font-size: 24px;
-  padding: 10px 20px;
   background: #eee;
   display: inline-block;
-  margin-top: 10px;
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+/* line 9, ../sass/components/1_basics/numbers.scss */
+.bdg-numbers .bdg-currency-symbol {
+  color: #999;
 }
 
 /* Typography */
@@ -827,12 +832,17 @@ textarea:not(.no-outline):focus {
   display: inline-block;
 }
 
-/* line 18, ../sass/components/2_elements/inputs.scss */
+/* line 19, ../sass/components/2_elements/inputs.scss */
+input[type=text][readonly] {
+  color: #999;
+}
+
+/* line 23, ../sass/components/2_elements/inputs.scss */
 input[type=text][readonly]:focus {
   border-color: #eee !important;
 }
 
-/* line 22, ../sass/components/2_elements/inputs.scss */
+/* line 27, ../sass/components/2_elements/inputs.scss */
 input[type=text].datepicker {
   width: 120px;
   background-image: url(../images/calendar.svg);

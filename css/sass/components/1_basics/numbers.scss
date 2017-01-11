@@ -1,7 +1,11 @@
 .bdg-numbers {
-    font-size: 24px;
-    padding: 10px 20px;
     background: #eee;
     display: inline-block;
-    margin-top: 10px;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 10px 20px;
 }
+
+    .bdg-numbers .bdg-currency-symbol {
+        color: #999;
+    }

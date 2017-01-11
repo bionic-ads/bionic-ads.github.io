@@ -15,6 +15,11 @@ input[readonly]:focus {
         outline: none !important;
         display: inline-block;
     }
+    
+    input[type=text][readonly] {
+        color: #999;
+    }
+    
     input[type=text][readonly]:focus{
         border-color: #eee !important;
     }

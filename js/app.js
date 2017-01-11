@@ -1,7 +1,7 @@
 $(document).ready(function() {
     
-        var navItem = window.location.hash.substr(2);
-        console.log(navItem);
+    var navItem = window.location.hash.substr(2);
+//     console.log(navItem);
     
     $( '#navigation li' ).each( function() {
     if( $(this).children('ul').length > 0 ) {
@@ -22,6 +22,11 @@ $( '#all' ).click( function() {
         $( this ).children( 'ul' ).slideToggle( 'fast' );
     });
     });
+    
+var converter = new showdown.Converter(),
+    text      = '##hello, markdown!',
+    html      = converter.makeHtml(text);    
+    $("#content").html(html);
 });
 
 

@@ -18,12 +18,17 @@ textarea:not(.no-outline):focus {
   display: inline-block;
 }
 
-/* line 18, ../../../sass/components/2_elements/inputs.scss */
+/* line 19, ../../../sass/components/2_elements/inputs.scss */
+input[type=text][readonly] {
+  color: #999;
+}
+
+/* line 23, ../../../sass/components/2_elements/inputs.scss */
 input[type=text][readonly]:focus {
   border-color: #eee !important;
 }
 
-/* line 22, ../../../sass/components/2_elements/inputs.scss */
+/* line 27, ../../../sass/components/2_elements/inputs.scss */
 input[type=text].datepicker {
   width: 120px;
   background-image: url(../images/calendar.svg);
