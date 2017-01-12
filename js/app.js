@@ -23,10 +23,14 @@ $( '#all' ).click( function() {
     });
     });
     
+/*
 var converter = new showdown.Converter(),
     text      = '##hello, markdown!',
     html      = converter.makeHtml(text);    
-    $("#content").html(html);
+
+    console.log(html);
+*/
+
 });
 
 
@@ -47,8 +51,23 @@ var converter = new showdown.Converter(),
     		$("#content").load("content/home.html");
     	},
     	
-    	showContent: function(content){
-    		$("#content").load("content/"+content+".html");
+    	showContent: function(content, converter){
+
+//         	content = $.get("content/"+content+".html");
+            content = $.ajax({type: "GET", url: "content/"+content+".html", async: false}).responseText;
+
+        	converter = new showdown.Converter(),
+            html   = converter.makeHtml(content);    
+            console.log(html);
+        	
+/*
+        	content = $.get("content/"+content+".html");
+        	console.log("test: " + content);
+        	content = showdown.Converter(content);
+        	console.log("test: " + content);
+*/
+        	
+    		$("#content").html(html);
     	}        
     });
     
