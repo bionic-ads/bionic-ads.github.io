@@ -33,6 +33,7 @@ p {
 
 a {
     color: #69AED4;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -97,12 +98,11 @@ pre  {
     padding-left: 30px;
     position: absolute;
     width: calc(100% - 240px);
-}
 
-    #content p {
+    p, hr {
         width: 600px;
     }
-
+}
 
 .header {
     background: #4A5155;
@@ -145,13 +145,14 @@ pre  {
     }
     
     #navigation li a {
-        display: block;
-        position: relative;
-        width: 100%;
-        padding: 5px 5px 5px 20px;
         box-sizing: border-box;
-        text-decoration: none;
         color: #ccc;
+        display: block;
+        font-weight: normal;
+        padding: 5px 5px 5px 20px;
+        position: relative;
+        text-decoration: none;
+        width: 100%;
     }
     
     #navigation .divider {
