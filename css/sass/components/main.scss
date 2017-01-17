@@ -38,9 +38,12 @@ a {
 }
 
 li {
-    list-style: none;
     margin: 0;
     padding: 0;
+}
+
+ul {
+    max-width: 650px;
 }
 
 #logo {
@@ -74,9 +77,24 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
-    margin: 20px 0 10px;    
+    font-size: 24px;
+    margin: 20px 0 10px;   
 }
+
+
+    
+    h2:before {
+        content: " ";
+        border-top: 1px dotted #999;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: block;
+        max-width: 600px;
+    } 
+    
+    h2:first-child:before {
+        border-top: none;
+    }
 
 h3 {
     margin: 20px 0 10px;
@@ -84,7 +102,9 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: -1em;
 }
 
 
@@ -101,6 +121,10 @@ pre  {
 
     p, hr {
         width: 600px;
+    }
+    
+    hr {
+        margin-left: 0;
     }
 }
 

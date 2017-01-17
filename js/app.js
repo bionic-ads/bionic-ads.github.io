@@ -13,23 +13,18 @@ $(document).ready(function() {
     $( '#navigation li.parent > a' ).click( function( ) {
         $(this).parent().toggleClass( 'active' );
         $(this).parent().children( 'ul' ).slideToggle( 'fast' );
+        prettyPrint();
     });
 
-$( '#all' ).click( function() {
-
-    $( '#navigation li' ).each( function() {
-        $( this ).toggleClass( 'active' );
-        $( this ).children( 'ul' ).slideToggle( 'fast' );
-    });
-    });
+    $( '#all' ).click( function() {
     
-/*
-var converter = new showdown.Converter(),
-    text      = '##hello, markdown!',
-    html      = converter.makeHtml(text);    
+        $( '#navigation li' ).each( function() {
+            $( this ).toggleClass( 'active' );
+            $( this ).children( 'ul' ).slideToggle( 'fast' );
+        });
+    });
 
-    console.log(html);
-*/
+    prettyPrint();                
 
 });
 
@@ -58,16 +53,12 @@ var converter = new showdown.Converter(),
 
         	converter = new showdown.Converter(),
             html   = converter.makeHtml(content);    
-            console.log(html);
-        	
-/*
-        	content = $.get("content/"+content+".html");
-        	console.log("test: " + content);
-        	content = showdown.Converter(content);
-        	console.log("test: " + content);
-*/
+//          console.log(html);
         	
     		$("#content").html(html);
+    		
+            prettyPrint();                
+
     	}        
     });
     

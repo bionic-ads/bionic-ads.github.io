@@ -6,8 +6,12 @@
   margin: 10px 0;
   padding: 10px 20px;
 }
+/* line 8, ../../../sass/components/1_basics/numbers.scss */
+.bdg-numbers li {
+  list-style: none;
+}
 
-/* line 9, ../../../sass/components/1_basics/numbers.scss */
+/* line 13, ../../../sass/components/1_basics/numbers.scss */
 .bdg-numbers .bdg-currency-symbol {
   color: #999;
 }
