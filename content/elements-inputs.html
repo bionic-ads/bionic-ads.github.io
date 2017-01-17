@@ -1,5 +1,7 @@
-<h1>Inputs</h1>
-<h2>Text</h2>
+# Inputs
+
+## Text
+
 <input type="text" />
 <div class="code-wrapper">
 <pre class="prettyprint">
@@ -7,7 +9,8 @@
 </pre>
 </div>
 
-<h2>Readonly Text Input</h2>
+## Readonly Text 
+
 <input type="text" readonly="readonly" value="Readonly" />
 <div class="code-wrapper">
 <pre class="prettyprint">
@@ -20,9 +23,17 @@
 
 
 <h2>Comboboxes</h2>
-<p>see also: dropdowns</p>
+
+see also: Dropdowns
+
+Note that the difference between Dropdowns and Comboboxes is that custom text **cannot** be entered in a dropdown
+
+A Combobox, however, can be either one of the choices in the menu or custom text from the user (making it a hybrid of a dropdown and input box)
+
+Note the styling difference: a Combobox has a line to the left of the down arrow; a dropdown has purely a down arrow with no line to the left
+
 <span class="input-holder">
-    <input class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete" 
+    <input class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete combobox" 
     type="text" autocomplete="off">
 </span>
 

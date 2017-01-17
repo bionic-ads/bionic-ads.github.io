@@ -8,3 +8,14 @@ input.ui-autocomplete-input-with-arrow
     box-sizing: border-box;
     width: 230px;
 }
+
+input.ui-autocomplete-input-with-arrow.combobox
+{
+    background-image: url("../images/combobox-arrow-3px.svg");
+    background-origin: padding-box;
+    background-position: right 7px center, right center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    box-sizing: border-box;
+    width: 230px;
+}
