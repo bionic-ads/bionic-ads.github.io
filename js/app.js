@@ -55,9 +55,7 @@ $(document).ready(function() {
             html   = converter.makeHtml(content);    
 //          console.log(html);
         	
-    		$("#content").html(html);
-    		
-            prettyPrint();                
+    		$("#content").html(html);           
 
     	}        
     });
