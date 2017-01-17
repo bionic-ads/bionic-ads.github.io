@@ -514,8 +514,11 @@ pre {
   clear: both;
   display: block;
 }
-
-/* line 6, ../sass/components/1_basics/colors.scss */
+/* line 5, ../sass/components/1_basics/colors.scss */
+.colors ul {
+  width: 1200px;
+}
+/* line 9, ../sass/components/1_basics/colors.scss */
 .colors li {
   float: left;
   list-style: none;
@@ -526,13 +529,12 @@ pre {
   margin: 0 10px 20px 0;
   border: 1px solid #fff;
 }
-/* line 16, ../sass/components/1_basics/colors.scss */
+/* line 19, ../sass/components/1_basics/colors.scss */
 .colors li span {
   clear: both;
   display: block;
 }
-
-/* line 22, ../sass/components/1_basics/colors.scss */
+/* line 25, ../sass/components/1_basics/colors.scss */
 .colors div {
   display: block;
   float: left;
@@ -541,39 +543,40 @@ pre {
   margin-bottom: 10px;
 }
 
-/* line 30, ../sass/components/1_basics/colors.scss */
+/* line 35, ../sass/components/1_basics/colors.scss */
+.colors
 .colors.task div {
   height: 50px;
 }
 
-/* line 34, ../sass/components/1_basics/colors.scss */
+/* line 40, ../sass/components/1_basics/colors.scss */
 .colors.task li {
   height: 130;
   margin: 0 10px 20px 0;
 }
 
-/* line 39, ../sass/components/1_basics/colors.scss */
+/* line 45, ../sass/components/1_basics/colors.scss */
 .colors.palette div {
   height: 50px;
 }
 
-/* line 43, ../sass/components/1_basics/colors.scss */
+/* line 49, ../sass/components/1_basics/colors.scss */
 .colors.palette li {
   margin: 0 10px 20px 0;
   height: 80px;
 }
 
-/* line 48, ../sass/components/1_basics/colors.scss */
+/* line 54, ../sass/components/1_basics/colors.scss */
 .colors li {
   color: #333;
 }
 
-/* line 52, ../sass/components/1_basics/colors.scss */
+/* line 58, ../sass/components/1_basics/colors.scss */
 .colors li.light {
   color: #333;
 }
 
-/* line 56, ../sass/components/1_basics/colors.scss */
+/* line 62, ../sass/components/1_basics/colors.scss */
 .colors .description {
   position: relative;
   float: left;
@@ -582,12 +585,12 @@ pre {
   width: 100%;
 }
 
-/* line 65, ../sass/components/1_basics/colors.scss */
+/* line 71, ../sass/components/1_basics/colors.scss */
 .colors.primary {
   width: 800px;
 }
 
-/* line 69, ../sass/components/1_basics/colors.scss */
+/* line 75, ../sass/components/1_basics/colors.scss */
 .colors.palette {
   width: 600px;
 }

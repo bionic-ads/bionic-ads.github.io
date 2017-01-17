@@ -1,9 +1,12 @@
 .colors {
     clear: both;
     display: block;
-}
-
-    .colors li{
+    
+    ul {
+        width: 1200px;
+    }
+    
+    li{
         float: left;
         list-style: none;
         box-sizing: border-box;
@@ -19,14 +22,17 @@
         }
     }
     
-    .colors div {
-        display: block;
-        float: left;
-        width: 150px;
-        height: 100px;
-        margin-bottom: 10px;
-    }
-    
+    div {
+            display: block;
+            float: left;
+            width: 150px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+}
+
+
+    .colors     
         .colors.task div {
             height: 50px;
         }    
