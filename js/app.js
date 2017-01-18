@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 
 (function(){
-    
+        
     window.App = {
     	Models: {},
     	Collections: {},
@@ -55,9 +55,12 @@ $(document).ready(function() {
             html   = converter.makeHtml(content);    
 //          console.log(html);
         	
-    		$("#content").html(html);           
-
-    	}        
+    		$("#content").html(html);
+            
+            prettyPrint();
+            
+    	}
+    	
     });
     
     new App.Router;
