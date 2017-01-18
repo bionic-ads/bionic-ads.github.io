@@ -681,6 +681,11 @@ table.headings {
 }
 
 /* line 37, ../sass/components/1_basics/typography.scss */
+.headings h2:before {
+  display: none;
+}
+
+/* line 41, ../sass/components/1_basics/typography.scss */
 .monospace {
   font-family: monospace;
 }

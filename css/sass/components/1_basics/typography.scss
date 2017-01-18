@@ -33,6 +33,10 @@ table.headings {
     .headings h4 {
         font-weight: bold;
     }
+    
+    .headings h2:before {
+        display: none;
+    }
 
     .monospace {
         font-family: monospace;
