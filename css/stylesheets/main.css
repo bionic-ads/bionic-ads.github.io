@@ -913,6 +913,39 @@ a.bdg {
   cursor: pointer;
 }
 
+/* line 1, ../sass/components/5_messaging/tables.scss */
+table.comparison {
+  border-collapse: collapse;
+}
+/* line 5, ../sass/components/5_messaging/tables.scss */
+table.comparison th {
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding-bottom: 5px;
+}
+/* line 12, ../sass/components/5_messaging/tables.scss */
+table.comparison th:last-child {
+  padding-left: 10px;
+}
+/* line 18, ../sass/components/5_messaging/tables.scss */
+table.comparison td {
+  padding: 10px 10px 10px 0;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+}
+/* line 24, ../sass/components/5_messaging/tables.scss */
+table.comparison td:first-child::before {
+  content: url("../../images/green-checkmark.svg");
+  padding-right: 10px;
+}
+/* line 29, ../sass/components/5_messaging/tables.scss */
+table.comparison td:last-child::before {
+  content: url("../../images/red-x.svg");
+  padding: 0 10px;
+}
+
 /* line 1, ../sass/components/code.scss */
 .code-wrapper {
   margin-top: 10px;
