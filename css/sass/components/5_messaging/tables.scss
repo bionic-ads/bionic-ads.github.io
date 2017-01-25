@@ -7,7 +7,8 @@ table.comparison {
         text-align: left;
         text-transform:uppercase;
         font-size: 11px;
-        padding-bottom: 5px;
+        padding: 20px 0 10px;
+        border-bottom: 1px solid #333;
     
         &:last-child {
             padding-left: 10px;
