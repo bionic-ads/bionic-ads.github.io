@@ -1,0 +1,33 @@
+table.comparison {
+    
+    border-collapse: collapse;
+    
+    th {
+        font-weight: bold;
+        text-align: left;
+        text-transform:uppercase;
+        font-size: 11px;
+        padding-bottom: 5px;
+    
+        &:last-child {
+            padding-left: 10px;
+        }
+    
+    }
+    
+    td {
+        padding: 10px 10px 10px 0;
+        border-top: 1px solid #ddd;
+        box-sizing: border-box;
+    }
+    
+    td:first-child::before {
+        content: url('../../images/green-checkmark.svg');
+        padding-right: 10px;
+    }
+    
+    td:last-child::before {
+        content: url('../../images/red-x.svg');
+        padding: 0 10px;
+    }    
+}
