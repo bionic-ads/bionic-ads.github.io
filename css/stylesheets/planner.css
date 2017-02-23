@@ -1,0 +1,884 @@
+/* line 3, ../sass/components/1_basics/_numbers.scss */
+.bdg-numbers .bdg-currency-symbol {
+  color: #999;
+}
+
+/* line 1, ../sass/base/_reset.scss */
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 7, ../sass/base/_reset.scss */
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 12, ../sass/base/_reset.scss */
+.block {
+  display: block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+/* line 18, ../sass/base/_reset.scss */
+.block.fullwidth {
+  width: 100%;
+}
+
+/* line 24, ../sass/base/_reset.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 3, ../sass/base/_settings.scss */
+* {
+  color: #333333;
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 10, ../sass/base/_settings.scss */
+h1 {
+  font-size: 28px;
+}
+
+/* line 14, ../sass/base/_settings.scss */
+h2 {
+  font-size: 18px;
+}
+
+/* line 18, ../sass/base/_settings.scss */
+a {
+  color: #69AED4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* line 24, ../sass/base/_settings.scss */
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 29, ../sass/base/_settings.scss */
+ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 34, ../sass/base/_settings.scss */
+.block {
+  display: block;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* line 1, ../sass/components/2_elements/_buttons.scss */
+.blue-button,
+.green-button,
+.gray-button,
+.button-c,
+.gray-button {
+  display: inline-block;
+  font-size: 1em;
+  padding: 8px 20px;
+  line-height: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: none;
+  text-shadow: none;
+  position: relative;
+  font-weight: 700 !important;
+}
+
+/* line 19, ../sass/components/2_elements/_buttons.scss */
+.blue-button {
+  display: inline-block;
+  color: white !important;
+  position: relative;
+  background: #6CAFD2;
+  color: white;
+  border: 1px solid #6CAFD2;
+}
+
+/* line 29, ../sass/components/2_elements/_buttons.scss */
+.blue-button:hover {
+  background: #60B2DB;
+}
+
+/* line 33, ../sass/components/2_elements/_buttons.scss */
+.blue-button:disabled,
+.blue-button.disabled,
+.blue-button.disabled:hover {
+  background: #eee;
+  border: 0px solid #eee;
+  color: #c0c0c0 !important;
+  cursor: default;
+}
+
+/* line 42, ../sass/components/2_elements/_buttons.scss */
+#crumbs .blue-button {
+  margin-top: 4px;
+  padding: 8px 20px;
+}
+
+/* line 47, ../sass/components/2_elements/_buttons.scss */
+.button-c {
+  background-color: #999;
+  color: #fff !important;
+}
+
+/* line 52, ../sass/components/2_elements/_buttons.scss */
+.button-c-disabled {
+  opacity: 0.8;
+}
+
+/* line 56, ../sass/components/2_elements/_buttons.scss */
+.green-button {
+  color: white !important;
+  position: relative;
+  background: #65a000;
+}
+
+/* line 63, ../sass/components/2_elements/_buttons.scss */
+input[type="submit"].gray-button,
+input[type="button"].gray-button,
+.gray-button {
+  background: #eee;
+  color: #888 !important;
+  border: 1px solid #eee;
+}
+
+/* line 71, ../sass/components/2_elements/_buttons.scss */
+.gray-button:hover {
+  background: #e2e2e2;
+}
+
+/* line 77, ../sass/components/2_elements/_buttons.scss */
+.small-button {
+  padding: 0 20px;
+}
+
+/* line 81, ../sass/components/2_elements/_buttons.scss */
+.blue-button:disabled {
+  background: #B5B5B5;
+  color: #888 !important;
+}
+
+/* line 86, ../sass/components/2_elements/_buttons.scss */
+.button-link {
+  padding: 8px 20px !important;
+  line-height: 20px;
+  background: none !important;
+}
+/* line 90, ../sass/components/2_elements/_buttons.scss */
+.button-link.under-line {
+  text-decoration: underline;
+}
+
+/* line 2, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox input[type="checkbox"] {
+  display: none;
+}
+/* line 5, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox input[type="checkbox"]:checked + label .box {
+  border: 3px solid #69AED4;
+  background-color: #69AED4;
+  background-image: url("../images/check_mark.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+}
+/* line 14, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox input[type="checkbox"]:disabled + label {
+  color: #ccc !important;
+  cursor: default;
+}
+/* line 18, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox input[type="checkbox"]:disabled + label .box {
+  border-color: #ddd !important;
+  background-color: #ddd;
+}
+/* line 25, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox label {
+  display: inline !important;
+  font-size: 13px !important;
+  cursor: pointer;
+}
+/* line 31, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox label span:first-child.box {
+  top: -3px;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border: 3px solid #eee;
+  border-radius: 2px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+  background: #fff;
+}
+/* line 44, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox label span.text {
+  vertical-align: top;
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: calc(100% - 33px);
+  line-height: 18px;
+  padding: 2px 0 3px;
+}
+
+/* line 1, ../sass/components/2_elements/_dropdowns.scss */
+input.ui-autocomplete-input-with-arrow {
+  background-image: url("../images/arrow-down.svg");
+  background-origin: padding-box;
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  box-sizing: border-box;
+  width: 230px;
+}
+
+/* line 12, ../sass/components/2_elements/_dropdowns.scss */
+input.ui-autocomplete-input-with-arrow.combobox {
+  background-image: url("../images/combobox-arrow-3px.svg");
+  background-origin: padding-box;
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  box-sizing: border-box;
+  width: 230px;
+}
+
+/* line 1, ../sass/components/2_elements/_inputs.scss */
+input[type=text],
+textarea,
+input[readonly]:focus {
+  font-size: 13px;
+  border: 3px solid #eee;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  padding: 10px 10px;
+}
+
+/* line 12, ../sass/components/2_elements/_inputs.scss */
+input[type=text]:not(.no-outline):focus,
+textarea:not(.no-outline):focus {
+  border: 3px solid #6BADD1;
+  outline: none;
+  display: inline-block;
+}
+
+/* line 19, ../sass/components/2_elements/_inputs.scss */
+input[type=text][readonly] {
+  color: #999;
+}
+
+/* line 23, ../sass/components/2_elements/_inputs.scss */
+input[type=text][readonly]:focus {
+  border-color: #eee;
+}
+
+/* line 27, ../sass/components/2_elements/_inputs.scss */
+input[type=text].datepicker {
+  width: 120px;
+  background-image: url(../images/calendar.svg);
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+}
+
+/* line 34, ../sass/components/2_elements/_inputs.scss */
+input[type=text].search {
+  background-image: url(../../images/search.svg);
+  background-position: left 7px center, left center;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+}
+
+/* line 1, ../sass/components/2_elements/_links.scss */
+a.bdg {
+  color: #6EB3D6;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* line 3, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse,
+.la-ball-grid-pulse > div {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse {
+  display: block;
+  font-size: 0;
+  color: #F3351B;
+  text-align: center;
+  padding-top: 300px;
+}
+
+/* line 18, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-dark {
+  color: #333;
+}
+
+/* line 21, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div {
+  display: inline-block;
+  float: none;
+  background-color: #EE3424;
+  border: 0 solid currentColor;
+}
+
+/* line 27, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse {
+  /*     width: 36px;
+      height: 36px; */
+}
+
+/* line 31, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div {
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  border-radius: 100%;
+  -webkit-animation-name: ball-grid-pulse;
+  -moz-animation-name: ball-grid-pulse;
+  -o-animation-name: ball-grid-pulse;
+  animation-name: ball-grid-pulse;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/* line 45, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(1) {
+  -webkit-animation-duration: .65s;
+  -moz-animation-duration: .65s;
+  -o-animation-duration: .65s;
+  animation-duration: .65s;
+  -webkit-animation-delay: .03s;
+  -moz-animation-delay: .03s;
+  -o-animation-delay: .03s;
+  animation-delay: .03s;
+}
+
+/* line 55, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(2) {
+  -webkit-animation-duration: 1.02s;
+  -moz-animation-duration: 1.02s;
+  -o-animation-duration: 1.02s;
+  animation-duration: 1.02s;
+  -webkit-animation-delay: .09s;
+  -moz-animation-delay: .09s;
+  -o-animation-delay: .09s;
+  animation-delay: .09s;
+}
+
+/* line 65, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(3) {
+  -webkit-animation-duration: 1.06s;
+  -moz-animation-duration: 1.06s;
+  -o-animation-duration: 1.06s;
+  animation-duration: 1.06s;
+  -webkit-animation-delay: -.69s;
+  -moz-animation-delay: -.69s;
+  -o-animation-delay: -.69s;
+  animation-delay: -.69s;
+}
+
+/* line 75, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(4) {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: -.41s;
+  -moz-animation-delay: -.41s;
+  -o-animation-delay: -.41s;
+  animation-delay: -.41s;
+}
+
+/* line 85, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(5) {
+  -webkit-animation-duration: 1.6s;
+  -moz-animation-duration: 1.6s;
+  -o-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+  -webkit-animation-delay: .04s;
+  -moz-animation-delay: .04s;
+  -o-animation-delay: .04s;
+  animation-delay: .04s;
+}
+
+/* line 95, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(6) {
+  -webkit-animation-duration: .84s;
+  -moz-animation-duration: .84s;
+  -o-animation-duration: .84s;
+  animation-duration: .84s;
+  -webkit-animation-delay: .07s;
+  -moz-animation-delay: .07s;
+  -o-animation-delay: .07s;
+  animation-delay: .07s;
+}
+
+/* line 105, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(7) {
+  -webkit-animation-duration: .68s;
+  -moz-animation-duration: .68s;
+  -o-animation-duration: .68s;
+  animation-duration: .68s;
+  -webkit-animation-delay: -.66s;
+  -moz-animation-delay: -.66s;
+  -o-animation-delay: -.66s;
+  animation-delay: -.66s;
+}
+
+/* line 115, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(8) {
+  -webkit-animation-duration: .93s;
+  -moz-animation-duration: .93s;
+  -o-animation-duration: .93s;
+  animation-duration: .93s;
+  -webkit-animation-delay: -.76s;
+  -moz-animation-delay: -.76s;
+  -o-animation-delay: -.76s;
+  animation-delay: -.76s;
+}
+
+/* line 125, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse > div:nth-child(9) {
+  -webkit-animation-duration: 1.24s;
+  -moz-animation-duration: 1.24s;
+  -o-animation-duration: 1.24s;
+  animation-duration: 1.24s;
+  -webkit-animation-delay: -.76s;
+  -moz-animation-delay: -.76s;
+  -o-animation-delay: -.76s;
+  animation-delay: -.76s;
+}
+
+/* line 135, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-sm {
+  width: 18px;
+  height: 18px;
+}
+
+/* line 139, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-sm > div {
+  width: 4px;
+  height: 4px;
+  margin: 1px;
+}
+
+/* line 144, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-2x {
+  width: 72px;
+  height: 72px;
+}
+
+/* line 148, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-2x > div {
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+
+/* line 153, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-3x {
+  width: 108px;
+  height: 108px;
+}
+
+/* line 157, ../sass/components/2_elements/_loading.scss */
+.la-ball-grid-pulse.la-3x > div {
+  width: 24px;
+  height: 24px;
+  margin: 6px;
+}
+
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-grid-pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: .35;
+    -webkit-transform: scale(0.45);
+    transform: scale(0.45);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-moz-keyframes ball-grid-pulse {
+  0% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: .35;
+    -moz-transform: scale(0.45);
+    transform: scale(0.45);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-o-keyframes ball-grid-pulse {
+  0% {
+    opacity: 1;
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: .35;
+    -o-transform: scale(0.45);
+    transform: scale(0.45);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes ball-grid-pulse {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: .35;
+    -webkit-transform: scale(0.45);
+    -moz-transform: scale(0.45);
+    -o-transform: scale(0.45);
+    transform: scale(0.45);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/* line 1, ../sass/components/3_components/_modals.scss */
+.modal {
+  padding: 15px 15px;
+  width: 700px;
+}
+
+/* line 6, ../sass/components/3_components/_modals.scss */
+.modal h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* line 3, ../sass/components/8_prototype/_grid.scss */
+.fixedTable .table {
+  background-color: white;
+  width: auto;
+}
+
+/* line 8, ../sass/components/8_prototype/_grid.scss */
+.fixedTable .table tr td,
+.fixedTable .table tr th {
+  border: 1px solid #f5f6f7;
+  min-width: 100px;
+  height: 40px;
+  width: 100px;
+  padding: 0px;
+  text-align: left;
+}
+
+/* line 18, ../sass/components/8_prototype/_grid.scss */
+.fixedTable .table tr td {
+  border: 1px solid #f5f6f7;
+}
+
+/* line 22, ../sass/components/8_prototype/_grid.scss */
+.fixedTable .table tr th {
+  background: #f5f6f7;
+}
+
+/* line 26, ../sass/components/8_prototype/_grid.scss */
+.fixedTable-header {
+  width: calc(100% - 250px);
+  margin-left: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+/* line 33, ../sass/components/8_prototype/_grid.scss */
+.fixedTable-sidebar {
+  width: 275px;
+  height: calc(100vh - 227px);
+  float: left;
+  overflow: hidden;
+  margin-left: 25px;
+}
+/* line 40, ../sass/components/8_prototype/_grid.scss */
+.fixedTable-sidebar table.table tr td {
+  width: 275px;
+}
+
+/* line 46, ../sass/components/8_prototype/_grid.scss */
+.fixedTable-body {
+  overflow: auto;
+  width: calc(100% - 310px);
+  height: calc(100vh - 270px);
+  float: left;
+}
+
+/* line 1, ../sass/components/8_prototype/_menus.scss */
+.bionic-menu {
+  min-width: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+/* line 7, ../sass/components/8_prototype/_menus.scss */
+.bionic-menu .end-date {
+  width: 400px;
+}
+/* line 10, ../sass/components/8_prototype/_menus.scss */
+.bionic-menu .end-date li {
+  line-height: 30px;
+}
+
+/* line 1, ../sass/components/8_prototype/_mediaplan.scss */
+.mediaplan input[type=text] {
+  padding: 5px;
+  width: calc(100% - 12px);
+  height: 15px;
+  margin: 0;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 0px;
+  font-size: 13px;
+  color: #404040;
+  box-sizing: content-box;
+}
+/* line 13, ../sass/components/8_prototype/_mediaplan.scss */
+.mediaplan input[type=text]:focus {
+  border-width: 1px;
+}
+
+/* line 29, ../sass/planner.scss */
+* {
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+
+/* line 33, ../sass/planner.scss */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 35, ../sass/planner.scss */
+body {
+  margin: 0;
+  background: #f5f6f7;
+}
+
+/* line 40, ../sass/planner.scss */
+#bionic-loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: #f5f6f7 url("../../images/bionic.svg") center 250px no-repeat;
+  text-align: center;
+  z-index: 2;
+}
+
+/* line 50, ../sass/planner.scss */
+#bionic-stripe {
+  background: #373E42 url("../../images/bionic.svg") no-repeat;
+  background-position: 25px 13px;
+  background-size: 77px 24px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+/* line 60, ../sass/planner.scss */
+#bionic-figawi {
+  background: #f5f6f7;
+  border-bottom: 1px solid #cfcfcf;
+  height: 45px;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  z-index: 1;
+}
+/* line 69, ../sass/planner.scss */
+#bionic-figawi li {
+  float: left;
+  display: block;
+  height: 45px;
+  width: 45px;
+  background: url("../images/sprite.svg") no-repeat;
+  cursor: pointer;
+}
+/* line 77, ../sass/planner.scss */
+#bionic-figawi li#menu {
+  background-position-x: 24px;
+  background-position-y: -226px;
+  width: 65px;
+  border-right: 1px solid #cfcfcf;
+}
+/* line 84, ../sass/planner.scss */
+#bionic-figawi li#home {
+  background-position-x: 20px;
+  background-position-y: -37px;
+}
+
+/* line 92, ../sass/planner.scss */
+#bionic-main {
+  background: #f5f6f7;
+  padding-top: 95px;
+  width: 100%;
+}
+/* line 97, ../sass/planner.scss */
+#bionic-main .bionic-header {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 0 25px;
+}
+/* line 101, ../sass/planner.scss */
+#bionic-main .bionic-header h1 {
+  margin: 10px 0 0;
+}
+/* line 106, ../sass/planner.scss */
+#bionic-main .bionic-content {
+  padding: 0 25px;
+}
+/* line 110, ../sass/planner.scss */
+#bionic-main .bionic-campaign-header {
+  font-size: 18px;
+}
+/* line 114, ../sass/planner.scss */
+#bionic-main .bionic-tab-menu {
+  margin-top: 5px;
+}
+/* line 118, ../sass/planner.scss */
+#bionic-main .bionic-tab-menu li {
+  background: #f0f0f0;
+  border: 1px solid #cfcfcf;
+  border-left: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  cursor: pointer;
+  float: left;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 3px 15px;
+}
+/* line 131, ../sass/planner.scss */
+#bionic-main .bionic-tab-menu li:first-child {
+  border-left: 1px solid #cfcfcf;
+}
+/* line 135, ../sass/planner.scss */
+#bionic-main .bionic-tab-menu li.current {
+  background: #f5f6f7;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid #cfcfcf;
+  font-weight: bold;
+  margin-bottom: -2px;
+  margin-top: -3px;
+  padding-top: 6px;
+}
+/* line 148, ../sass/planner.scss */
+#bionic-main .bionic-action-menu {
+  padding-left: 25px;
+  width: 100%;
+  border-bottom: 1px solid #cfcfcf;
+}
+/* line 153, ../sass/planner.scss */
+#bionic-main .bionic-action-menu li {
+  float: left;
+  padding: 10px 10px 10px 0;
+}
+
+/* line 161, ../sass/planner.scss */
+.left-nav-open {
+  margin-left: 200px;
+  width: calc(100% - 200px);
+}
+
+/* line 166, ../sass/planner.scss */
+#bionic-left-nav {
+  background: #373E42;
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 175, ../sass/planner.scss */
+.input-menu {
+  display: none;
+  position: fixed;
+  float: left;
+  height: 200px;
+  background: #fff;
+  border: 1px solid #f5f6f7;
+  margin-top: 30px;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px #999;
+  box-sizing: border-box;
+}
+
+/* line 188, ../sass/planner.scss */
+.avatar {
+  background: #cfcfcf url("../images/elizabeth.png") no-repeat;
+  background-size: 44px;
+  display: inline-block;
+  height: 42px;
+  line-height: 44px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 21px;
+  font-weight: normal;
+  border-radius: 21px;
+  margin-right: 10.5px;
+  float: left;
+  width: 42px;
+}
+
+/* line 205, ../sass/planner.scss */
+.module {
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  min-height: 200px;
+  padding: 20px;
+}

@@ -25,6 +25,7 @@ $(document).ready(function() {
     });
 
     prettyPrint();                
+    new Clipboard('.copyIt');
 
 });
 
@@ -58,7 +59,6 @@ $(document).ready(function() {
     		$("#content").html(html);
             
             prettyPrint();
-            
     	}
     	
     });

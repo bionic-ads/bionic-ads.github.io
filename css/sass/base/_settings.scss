@@ -1,0 +1,39 @@
+$font-stack: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+
+* { 
+    color: $primary-font-color;
+    font-family: $font-stack;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+a {
+    color: #69AED4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+ol,ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+}

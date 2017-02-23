@@ -1,0 +1,26 @@
+// Colors
+// Note: This should be color variables only; other declarations such as border width should be in other places
+
+$blue:                      #69AED4;
+$medium-light-blue:         #A1CEE9;
+$light-blue:                #E6F2F8;
+
+$orange:                    #FA6C08;
+$red:                       #EE3424;
+
+$light-gray:                #f5f6f7;
+$medium-light-gray:         #dddddd;
+$medium-gray:               #cfcfcf;
+$dark-gray:                 #373E42;
+
+$off-black:                 #333333;
+
+$background-color:          $light-gray;
+$nav-color:                 $dark-gray;
+
+$primary-font-color:        $off-black;
+$secondary-font-color:      $dark-gray;
+$disabled-font-color:       $medium-gray;
+
+$primary-border-color:      $medium-gray;
+$secondary-border-color:    $medium-light-gray;

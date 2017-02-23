@@ -1,0 +1,39 @@
+input[type=text],
+textarea,
+input[readonly]:focus {
+    font-size: 13px;
+    border: 3px solid #eee;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
+
+    input[type=text]:not(.no-outline):focus,
+    textarea:not(.no-outline):focus {
+        border: 3px solid #6BADD1;
+        outline: none;
+        display: inline-block;
+    }
+    
+    input[type=text][readonly] {
+        color: #999;
+    }
+    
+    input[type=text][readonly]:focus{
+        border-color: #eee;
+    }
+
+    input[type=text].datepicker {
+        width: 120px;
+        background-image: url(../images/calendar.svg);
+        background-position: right 7px center, right center;
+        background-repeat: no-repeat;
+    }
+    
+    input[type=text].search {
+        background-image: url(../../images/search.svg);
+        background-position: left 7px center, left center;
+        background-repeat: no-repeat;
+        padding-left: 25px;
+    }

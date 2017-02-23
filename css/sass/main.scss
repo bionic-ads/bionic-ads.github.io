@@ -1,22 +1,31 @@
 // Compass
 @import "compass/css3";
 
-@import "components/main.scss";
 
-@import "components/1_basics/colors.scss";
-@import "components/1_basics/icons.scss";
-@import "components/1_basics/numbers.scss";
-@import "components/1_basics/typography.scss";
+@import "components/1_basics/_colors.scss";
+@import "components/1_basics/_icons.scss";
+@import "components/1_basics/_numbers.scss";
+@import "components/1_basics/_typography.scss";
 
-@import "components/2_elements/buttons.scss";
-@import "components/2_elements/checkboxes.scss";
-@import "components/2_elements/dropdowns.scss";
-@import "components/2_elements/inputs.scss";
-@import "components/2_elements/links.scss";
-
-@import "components/5_messaging/tables.scss";
+@import "base/_reset.scss";
+@import "base/_settings.scss";
 
 
-// @import "components/3_components/typography.scss";
+@import "components/2_elements/_buttons.scss";
+@import "components/2_elements/_checkboxes.scss";
+@import "components/2_elements/_dropdowns.scss";
+@import "components/2_elements/_inputs.scss";
+@import "components/2_elements/_links.scss";
 
-@import "components/code.scss";
+@import "components/3_components/_stripe.scss";
+@import "components/3_components/_figawi.scss";
+@import "components/3_components/_left_nav.scss";
+@import "components/3_components/_loading.scss";
+@import "components/3_components/_modals.scss";
+
+
+@import "components/7_design_guide_layout/_main.scss";
+@import "components/7_design_guide_layout/_code.scss";
+@import "components/7_design_guide_layout/_colors.scss";
+@import "components/7_design_guide_layout/_tables.scss";
+

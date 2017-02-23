@@ -1,0 +1,121 @@
+<html>
+    <head>
+        
+            <style>
+                body {
+                    background: #f5f6f7;
+                    font-family: sans-serif;
+                    font-size: 13px;
+                }
+                .tr {
+                    border: 1px solid #cfcfcf;
+                    display: block;
+                    position: relative;
+                    float: left;
+                    height: 30px;
+                    background: #fff;
+                }
+                
+                .tr:last-child {
+                    border-top:0;
+                }
+                
+                .td{
+                    display: block;
+                    float: left;
+                    padding: 10px 20px;
+                    border-right: 1px solid #eee;
+                    width: 200px;
+                }
+                
+                .td.number {
+                    width: 20px;
+                }
+                
+                @keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+            .animated-background {
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+                animation-name: placeHolderShimmer;
+                animation-timing-function: linear;
+                background: #f6f7f8;
+                background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+                background-size: 800px 104px;
+                border-radius: 3px;
+                height: 10px;
+                width: 200px;
+                position: relative;
+                float: left;
+                display: block;
+            }    
+            </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class="tr">
+            
+            <div class="td number">
+            
+            </div>
+                        
+            <div class="td">
+                <div>Tim Jones</div>
+            </div>
+
+            <div class="td">
+            </div>
+        
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+        </div>
+        
+        <div class="tr">
+            
+            <div class="td number">
+            
+            </div>
+                        
+            <div class="td">
+                <div class="animated-background"></div>
+            </div>
+
+            <div class="td">
+            </div>
+        
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+            <div class="td">
+            </div>
+
+        </div>        
+    </body>
+    
+
+</html>

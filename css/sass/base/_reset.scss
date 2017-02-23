@@ -1,0 +1,26 @@
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ol,ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+.block {
+    display: block;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+
+    &.fullwidth {
+        width: 100%;
+    }
+
+}
+
+table {
+    border-collapse: collapse;
+}

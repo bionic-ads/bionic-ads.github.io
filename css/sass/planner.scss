@@ -1,0 +1,214 @@
+// Compass
+@import "compass/css3";
+
+@import "components/1_basics/_colors.scss";
+@import "components/1_basics/_icons.scss";
+@import "components/1_basics/_numbers.scss";
+@import "components/1_basics/_typography.scss";
+
+@import "base/_reset.scss";
+@import "base/_settings.scss";
+
+@import "components/2_elements/_buttons.scss";
+@import "components/2_elements/_checkboxes.scss";
+@import "components/2_elements/_dropdowns.scss";
+@import "components/2_elements/_inputs.scss";
+@import "components/2_elements/_links.scss";
+@import "components/2_elements/_loading.scss";
+
+@import "components/3_components/_stripe.scss";
+@import "components/3_components/_figawi.scss";
+@import "components/3_components/_left_nav.scss";
+@import "components/3_components/_loading.scss";
+@import "components/3_components/_modals.scss";
+
+@import "components/8_prototype/_grid.scss";
+@import "components/8_prototype/_menus.scss";
+@import "components/8_prototype/_mediaplan.scss";
+
+* {
+    font-family: $font-stack;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+body {
+    margin: 0;
+    background: $light-gray;
+}
+
+#bionic-loading {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background: $light-gray url("../../images/bionic.svg") center 250px no-repeat;
+    text-align: center;
+    z-index: 2;
+}
+
+#bionic-stripe {    
+    background: $nav-color url("../../images/bionic.svg") no-repeat;
+    background-position: 25px 13px;
+    background-size: 77px 24px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+#bionic-figawi {
+    background: $light-gray;
+    border-bottom: 1px solid $medium-gray;
+    height: 45px;
+    width: 100%;
+    position: fixed;
+    top:50px;
+    z-index: 1;
+    
+    li {
+        float: left;
+        display: block;
+        height: 45px;
+        width: 45px;
+        background: url("../images/sprite.svg") no-repeat;
+        cursor: pointer;
+    
+        &#menu {
+            background-position-x: 24px;
+            background-position-y: -226px;
+            width: 65px;
+            border-right: 1px solid #cfcfcf;
+        }
+        
+        &#home {
+            background-position-x: 20px;
+            background-position-y: -37px;
+        }
+    
+    }
+}
+
+#bionic-main {
+    background: $light-gray;
+    padding-top: 95px;
+    width: 100%;
+    
+    .bionic-header {
+        border-bottom: 1px solid $medium-gray;
+        padding: 0 25px;
+        
+        h1 {
+            margin: 10px 0 0;
+        }
+    }
+    
+    .bionic-content {
+        padding: 0 25px;
+    }
+    
+    .bionic-campaign-header {
+        font-size: 18px;        
+    }
+    
+    .bionic-tab-menu {
+        
+        margin-top: 5px;
+        
+        li {
+            background: #f0f0f0;
+            border: 1px solid $medium-gray;
+            border-left: none;
+            border-bottom: none;
+            box-sizing: border-box;
+            border-collapse: collapse;
+            cursor: pointer;
+            float: left;
+            font-size: 13px;
+            line-height: 18px;
+            padding: 3px 15px;
+        
+            &:first-child {
+                border-left: 1px solid $medium-gray;
+            }
+        
+            &.current {
+                background: $light-gray;
+                border-bottom: 1px solid transparent;
+                border-left: 1px solid $medium-gray;
+                font-weight: bold;
+                margin-bottom: -2px;
+                margin-top: -3px;
+                padding-top: 6px;
+            }
+        
+        }
+    }
+    
+    .bionic-action-menu {
+        padding-left: 25px;
+        width: 100%;
+        border-bottom: 1px solid $medium-gray;
+        
+        li {
+            float: left;
+            padding: 10px 10px 10px 0;
+        }   
+    }
+    
+}
+
+.left-nav-open {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+}
+
+#bionic-left-nav {
+    background: $dark-gray;
+    height: 100%;
+    width: 200px; 
+    position: absolute;
+    z-index: 0;
+}
+
+
+.input-menu {
+    display: none;
+    position: fixed;
+    float: left;
+    height: 200px;
+    background: #fff;
+    border:1px solid $light-gray;
+    margin-top: 30px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 2px #999;
+    box-sizing: border-box;
+}
+
+.avatar {
+    background: $medium-gray url("../images/elizabeth.png") no-repeat;
+    background-size: 44px;
+    display: inline-block;
+    height: 42px;
+    line-height: 44px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 21px;
+    font-weight: normal;
+    border-radius: 21px;
+    margin-right: 10.5px;
+    float: left;
+    width: 42px;
+}
+
+.module {
+    background: #fff;
+    border: 1px solid $medium-gray;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    min-height: 200px;
+    padding: 20px;
+    
+}
+
