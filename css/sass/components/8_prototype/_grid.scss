@@ -1,0 +1,51 @@
+$firstcolumn: 275px;
+
+.fixedTable .table {
+  background-color: white;
+  width: auto;
+}
+
+.fixedTable .table tr td,
+.fixedTable .table tr th {
+  border: 1px solid $light-gray;
+  min-width: 100px;
+  height: 40px;
+  width: 100px;
+  padding: 0px;
+  text-align: left;
+}
+
+.fixedTable .table tr td {
+    border: 1px solid $light-gray;
+}
+
+.fixedTable .table tr th {
+  background: $light-gray;
+}
+
+.fixedTable-header {
+  width: calc(100% - 250px);
+  margin-left: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid $medium-gray; 
+}
+
+.fixedTable-sidebar {
+  width: $firstcolumn;
+  height: calc(100vh - 227px);
+  float: left;
+  overflow: hidden;
+  margin-left: 25px;
+  
+  table.table tr td {
+      width: $firstcolumn;
+  }
+  
+}
+
+.fixedTable-body {
+  overflow: auto;
+  width: calc(100% - 310px);
+  height: calc(100vh - 270px);
+  float: left;
+}

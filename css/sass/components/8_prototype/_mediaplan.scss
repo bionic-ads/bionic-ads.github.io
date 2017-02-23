@@ -1,0 +1,16 @@
+.mediaplan input[type=text] { 
+    padding: 5px;
+    width: calc(100% - 12px);
+    height: 15px;
+    margin: 0;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 0px;
+    font-size: 13px;
+    color: #404040;
+    box-sizing: content-box;
+    
+    &:focus {
+        border-width: 1px;
+    }
+}
