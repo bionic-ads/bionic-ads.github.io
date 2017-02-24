@@ -726,8 +726,28 @@ body {
   position: fixed;
   z-index: 1;
 }
+/* line 59, ../sass/planner.scss */
+#bionic-stripe #bionic-stripe-settings {
+  float: right;
+}
+/* line 62, ../sass/planner.scss */
+#bionic-stripe #bionic-stripe-settings li {
+  float: left;
+  padding: 15px 0px;
+}
+/* line 66, ../sass/planner.scss */
+#bionic-stripe #bionic-stripe-settings li span {
+  color: #f5f6f7;
+  padding: 0 15px;
+  border-right: 1px solid #f5f6f7;
+}
+/* line 72, ../sass/planner.scss */
+#bionic-stripe #bionic-stripe-settings li:last-child span {
+  margin-right: 25px;
+  border: none;
+}
 
-/* line 60, ../sass/planner.scss */
+/* line 81, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -737,7 +757,7 @@ body {
   top: 50px;
   z-index: 1;
 }
-/* line 69, ../sass/planner.scss */
+/* line 90, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -746,47 +766,47 @@ body {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 77, ../sass/planner.scss */
+/* line 98, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 84, ../sass/planner.scss */
+/* line 105, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 92, ../sass/planner.scss */
+/* line 113, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 97, ../sass/planner.scss */
+/* line 118, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
 }
-/* line 101, ../sass/planner.scss */
+/* line 122, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 106, ../sass/planner.scss */
+/* line 127, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 110, ../sass/planner.scss */
+/* line 131, ../sass/planner.scss */
 #bionic-main .bionic-campaign-header {
   font-size: 18px;
 }
-/* line 114, ../sass/planner.scss */
+/* line 135, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu {
   margin-top: 5px;
 }
-/* line 118, ../sass/planner.scss */
+/* line 139, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li {
   background: #f0f0f0;
   border: 1px solid #cfcfcf;
@@ -800,11 +820,11 @@ body {
   line-height: 18px;
   padding: 3px 15px;
 }
-/* line 131, ../sass/planner.scss */
+/* line 152, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li:first-child {
   border-left: 1px solid #cfcfcf;
 }
-/* line 135, ../sass/planner.scss */
+/* line 156, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li.current {
   background: #f5f6f7;
   border-bottom: 1px solid transparent;
@@ -814,25 +834,25 @@ body {
   margin-top: -3px;
   padding-top: 6px;
 }
-/* line 148, ../sass/planner.scss */
+/* line 169, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 153, ../sass/planner.scss */
+/* line 174, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   padding: 10px 10px 10px 0;
 }
 
-/* line 161, ../sass/planner.scss */
+/* line 182, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 166, ../sass/planner.scss */
+/* line 187, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -841,7 +861,7 @@ body {
   z-index: 0;
 }
 
-/* line 175, ../sass/planner.scss */
+/* line 196, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -855,7 +875,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 188, ../sass/planner.scss */
+/* line 209, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -873,7 +893,7 @@ body {
   width: 42px;
 }
 
-/* line 205, ../sass/planner.scss */
+/* line 226, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;

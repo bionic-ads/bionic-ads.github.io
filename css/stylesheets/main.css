@@ -934,6 +934,39 @@ pre {
   width: 600px;
 }
 
+/* line 1, ../sass/components/7_design_guide_layout/_icons.scss */
+.bdg-icons {
+  display: block;
+  float: left;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+/* line 8, ../sass/components/7_design_guide_layout/_icons.scss */
+.bdg-icons li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  float: left;
+  text-align: center;
+  height: 80px;
+  width: 80px;
+}
+
+/* line 1, ../sass/components/7_design_guide_layout/_numbers.scss */
+.bdg-numbers {
+  background: #eee;
+  display: inline-block;
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+/* line 8, ../sass/components/7_design_guide_layout/_numbers.scss */
+.bdg-numbers li {
+  list-style: none;
+}
+
 /* line 1, ../sass/components/7_design_guide_layout/_tables.scss */
 table.comparison {
   border-collapse: collapse;
@@ -966,4 +999,56 @@ table.comparison td:first-child::before {
 table.comparison td:last-child::before {
   content: url("../../images/red-x.svg");
   padding: 0 10px;
+}
+
+/* Typography */
+/* line 2, ../sass/components/7_design_guide_layout/_typography.scss */
+table.headings {
+  box-sizing: border-box;
+  border: none;
+}
+
+/* line 7, ../sass/components/7_design_guide_layout/_typography.scss */
+.headings td {
+  padding: 10px 0 10px;
+  margin: none;
+  border: none;
+  border-bottom: 1px solid #cfcfcf;
+  width: 300px;
+}
+
+/* line 15, ../sass/components/7_design_guide_layout/_typography.scss */
+.headings td * {
+  display: inline;
+}
+
+/* line 19, ../sass/components/7_design_guide_layout/_typography.scss */
+.pixels {
+  color: #999;
+}
+
+/* line 23, ../sass/components/7_design_guide_layout/_typography.scss */
+.headings .nomargin {
+  margin: 0 0 10px !important;
+  color: #333;
+  width: auto;
+  display: inline;
+}
+
+/* line 30, ../sass/components/7_design_guide_layout/_typography.scss */
+.headings h1,
+.headings h2,
+.headings h3,
+.headings h4 {
+  font-weight: bold;
+}
+
+/* line 37, ../sass/components/7_design_guide_layout/_typography.scss */
+.headings h2:before {
+  display: none;
+}
+
+/* line 41, ../sass/components/7_design_guide_layout/_typography.scss */
+.monospace {
+  font-family: monospace;
 }

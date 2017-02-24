@@ -55,6 +55,27 @@ body {
     width: 100%;
     position: fixed;
     z-index: 1;
+    
+    #bionic-stripe-settings {
+        float: right;
+        
+        li {
+            float: left;
+            padding: 15px 0px;
+        
+            span {
+                color: $light-gray;
+                padding: 0 15px;
+                border-right: 1px solid $light-gray;
+            }
+        
+            &:last-child span {
+                margin-right: 25px;
+                border: none;
+            }
+        
+        }
+    }
 }
 
 #bionic-figawi {
