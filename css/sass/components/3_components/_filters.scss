@@ -1,0 +1,289 @@
+.nxm-menu-filters{
+
+    display: inline-block;
+    width: 100%;
+    height: $nxm-menu-filters-height;
+
+    > div {                     // all first childs
+        display: inline-block;
+        float: left;
+        margin: 8px 8px 0 0;
+        line-height: $nxm-menu-filters-height - 2px; // minus borders
+
+        &:first-child {
+            // margin-left: 25px;
+        }
+
+    }
+
+    input[type=text].filter-search-master{
+        background-color: $nxm-page-background;
+        box-shadow: none;
+        float:left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        border: 1px solid $nxm-border-gray;
+        line-height: $nxm-menu-filters-height - 12px; // minus paddings and border
+        z-index: 2;
+        width: calc(100% - 47px);           // minus paddings + 4px for different zooms
+        height: 100%;
+        
+        &:not(.no-outline):focus{
+            border-width: 1px !important ;
+        }
+        
+        &:focus {
+            background-color: #fff !important;
+        }
+        
+        &:valid {
+            border:1px solid #F77B26 !important;
+            background-color: #fff !important;
+            z-index: 0;
+            padding-right: 30px;        // instead of 10
+            width: calc(100% - 67px);   // minus paddings + 4px for different zooms
+
+
+            ~ .clear-search-filter{
+                display: inline-block; 
+            }
+        }
+        
+    }
+    
+    // CLEAR SEARCH FILTER
+    
+    .clear-search-filter {
+        @include nxm-button-orange-backgrond();
+        display: none;
+        margin-left: -29px; 
+        box-sizing: border-box;
+        cursor: pointer;
+        float: left;
+        font-size: 16px;
+        padding-left: 8px;
+        position: relative;
+        border-top: 1px solid transparent;
+        height: 29px;
+        width: 28px;
+        border-radius: 0 2px 2px 0;
+        z-index: 1;
+    }
+    
+    
+    // MENU ITEMS 
+    .menu-item{
+
+        cursor: pointer;
+        
+        .fa.fa-filter{
+
+            color: $nxm-color-gray-medium;
+
+        }
+
+        span.label:after{
+            content: '\f0dd ';
+            font-family: "FontAwesome";
+            padding: 0 0 0 6px;
+            top: -2px;
+            position: relative;
+            color: $nxm-color-gray-medium;
+        }
+
+        &.filter-off{
+            padding: 0 8px;
+            border:1px solid $nxm-border-gray;
+            @include border-radius()
+        }
+        &.filter-on{
+            @include nxm-button-orange-backgrond();
+
+            span.modal-open{
+                padding: 5px 6px 5px 13px;
+            }
+
+            span.label:after{
+                color: inherit;
+            }
+        }
+    }   // End of .menu-item
+
+    // FILTER OPTIONS 
+    .filter-options{
+
+        position: absolute;
+        z-index: 99999;
+        background-color: #FFF;
+
+        border: 1px solid #ccc;
+        // padding: 5px 0;
+        @include nxm-box-shadow();
+
+        > div{
+            // padding: 5px 0px;
+        }
+
+        .overlay {
+            background-color: transparent;
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -5;
+            left: 0;
+        }
+
+        .pad{
+            padding-left: $nxm-menu-filters-options-padding;
+            padding-right: $nxm-menu-filters-options-padding;
+        }
+
+        // .filter-breadcrumb{
+
+        //     line-height: 12px;
+
+        //     span {
+        //         padding: 0 5px 0 0;
+        //         line-height: 12px;
+        //     }
+
+        // }
+
+        .filter-middle{
+            input.list-filter-search {
+                padding: 5px 5px 5px 30px;
+                box-sizing: border-box;
+                margin: $nxm-menu-filters-options-padding;
+                width: calc(100% - #{2 * $nxm-menu-filters-options-padding});
+                background-size: $nxm-menu-filters-inputs-background-size;
+            }
+
+            ul {
+                max-height: 200px;
+                display: block;
+                overflow-y: auto;
+                margin: 0;
+                padding: 7px 0 4px 0;        // removes the unnecessary scroll
+                border-top: 1px solid $nxm-border-gray;
+
+                li.divider{
+                    padding-bottom: 5px;                    
+                    margin-bottom: 5px;                    
+                    border-bottom: 1px solid $nxm-border-gray;
+                    
+                }
+
+                .bionic-checkbox,
+                .bionic-checkbox label,
+                .bionic-checkbox div,
+                .bionic-checkbox span {
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                .bionic-checkbox{
+                    label{
+                        span.box{
+                            top: -2px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        .footer-section{
+            border-top: 1px solid #CCC;
+
+            input {
+                padding: 4px 10px;
+                margin: 0 7px 0 0;
+            }
+        }
+
+        .footer-section-not{
+
+            border-top: 1px solid $nxm-border-gray;
+            // margin-top: -10px;
+            padding: $nxm-menu-filters-options-padding;
+
+            input {
+                padding: 4px 10px;
+                margin: 0 7px 0 0;
+            }
+        }
+
+    } // END of .filter-options
+
+    // borrowed from tasks, not needed yet
+    // .filter-dates {
+    //    // width: 142px;
+
+    //     .filter-middle{
+    //         padding-top: $nxm-menu-filters-options-padding;
+
+    //         input {
+    //             padding: 5px;
+    //             width: 100%;
+    //             box-sizing: border-box;
+    //             display: block;
+    //             margin-bottom: 7px;
+
+    //             &.nxm-bg-calendar{
+
+    //                 background-size: $nxm-menu-filters-inputs-background-size;
+    //             }
+
+    //         }
+    //     }
+
+    // } //END of .filter-dates
+
+    span.endDate span {
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    
+    // STATES
+    
+    .filter-section{
+
+        &.filter-off .filter-on,
+        &.filter-on .filter-off {
+            display: none;
+        }
+
+        &.filter-off .filter-off,
+        &.filter-on .filter-on {
+            display: block;
+        }
+    }
+
+    .custom-fields {
+        display: none;
+    }
+
+    span.CUSTOM ~ .custom-fields {
+        display: block;
+    }
+
+    span.EMPTY ~ .date-fields, 
+    span.NOT_EMPTY ~ .date-fields {
+        display: none;
+    }
+
+    span.endDate {
+        display: none;
+    }
+
+    span.BETWEEN ~ .date-fields span.endDate, 
+    span.NOT_BETWEEN ~ .date-fields span.endDate {
+        display: block  ;
+    }
+
+}// End of tasks-filters

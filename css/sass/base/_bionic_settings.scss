@@ -1,0 +1,186 @@
+//==========================  compass/site variables =================================
+$default-border-radius : 3px;   // @include border-radius(); for default Or @include border-radius($radius); 
+
+
+
+
+
+// ============================= site variables ========================================
+
+
+//==== Nextmark colors =================================================================
+//
+$nxm-color-black:                   #131F20; // Bionic Black 
+$nxm-color-black-almost:            #333333; // Almost black used for text 
+$nxm-color-gray-dark:               #373E42; // Dark Gray used for the header and left nav 
+$nxm-color-gray-medium-dark2:       #565656; // Medium dark gray (legacy color)
+$nxm-color-gray-medium-dark:        #666666; // Medium dark gray 
+$nxm-color-gray-medium:             #9B9B9B; // Medium gray 
+$nxm-color-gray-medium-light:       #dddddd; // Medium-light gray
+$nxm-color-gray-light:              #f5f6f7; // Light gray page background 
+$nxm-color-gray-chart:              #cccccc; // Allocation chart gray 
+$nxm-color-blue:                    #69AED4; // Primary link and button color (Bionic blue) 
+$nxm-color-blue-chart:              #A1CEE9; // Allocation chart blue 
+$nxm-color-green:                   #5FBA74;
+
+$nxm-page-background:               $nxm-color-gray-light;// Light gray page background 
+
+$nxm-border-gray:                   #cfcfcf;// Light gray for border
+
+// Highlight Colors
+$nxm-color-red:                     #EE3424; // Bionic red Pantone 1795 
+$nxm-color-orange:                  #FA6C08; // Filter orange
+
+$nxm-text-color-black:              $nxm-color-black-almost;
+$nxm-text-color-secondary:          $nxm-color-gray-medium;
+$nxm-text-color-blue:               $nxm-color-blue;
+$nxm-text-color-gray-light:         #ccc;
+$nxm-text-color-gray-placeholder:   #b7b7b7;
+
+$nxm-paraghraph-color:              #4a4a4a;
+
+$nxm-chart-color-blue:              $nxm-color-blue-chart;
+$nxm-chart-color-gray:              $nxm-color-gray-chart;
+
+$nxm-button-background-orange-top:      #FAB04D;
+$nxm-button-background-orange-bottom:   #F76B1C;
+
+// Form Controls
+$nxm-dropdown-gray:                 #eeeeee;       // Dropdown gray Background color 
+
+
+$nxm-height-stripe:                 50px;
+$nxm-height-fugawi:                 45px;
+
+// mediagrid/Media plan
+$grid-color-background:             #ffffff;
+$grid-row-selected-color:           #D2E7F3;
+$grid-row-hover-color:              #E6F2F8;
+$grid-row-primary-text:             #404040;
+$grid-row-secondary-text:           #9B9B9B;
+$grid-row-disabled-text:            #9B9B9B;
+
+$grid-primary-border-color:         #ddd;
+$grid-secondary-border-color:       #eee;
+
+$grid-row-height:                   54px;       // media plan grid row height
+$grid-row-line-height:              15px;     // considering paddings and borders
+
+$nxm-grid-scroll-vertical-width:        10px;   // see also BionicGrid.js
+$nxm-grid-scroll-drag-color:       #ccc;   // see also BionicGrid.js
+
+$nxm-menu-filters-height: 30px;
+$nxm-menu-filters-options-padding: 10px;
+$nxm-menu-filters-inputs-background-size: 16px;
+
+// Task Status Colors
+$nxm-task-color-overdue:            #EE3424; // Overdue 
+$nxm-task-color-overdue-background: #f9DBE3; // Overdue -background
+
+$nxm-task-color-todonow:            #F39C0F; // To Do Now 
+$nxm-task-color-todonow-background: #FCE8C7; // To Do Now - background
+
+$nxm-task-color-todo:               #D8D8D8; // To Do 
+$nxm-task-color-todo-background:    #FFFFFF; // To Do - background
+
+$nxm-task-color-done:           #48B250; // Complete
+$nxm-task-color-done-background:#eeeeee; // Complete- background
+
+$nxm-task-color-abandoned:           #9b9b9b; // Abandoned
+$nxm-task-color-abandoned-background:#cfcfcf; // Abandoned- background
+
+$nxm-color-task-bar-blue:            #5A9DBF;
+$tasks-grid-row-height: 52px;
+
+
+//== Typography
+//
+//## Font, line-height, and (extended) color for body text, headings, and more.
+$nxm-font-family-sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$nxm-font-family-monospace:         monospace;
+// $nxm-font-family-serif:       Georgia, "Times New Roman", Times, serif
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// $nxm-font-family-base:        $nxm-font-family-sans-serif
+
+$nxm-heading-1:                  32px;
+$nxm-heading-2:                  28px;
+$nxm-heading-3:                  18px;
+$nxm-heading-4:                  16px;
+$nxm-heading-height:             40px;
+
+$nxm-font-size-base:             13px;
+$nxm-line-height-base:           18px; // ?16
+$nm-regular-text:                $nxm-font-size-base;
+$nxm-monospace:                  12px;
+
+// $nxm-font-size-large:         ceil(($nxm-font-size-base * 1.30)) // ~18px
+// $nxm-font-size-small:         ceil(($nxm-font-size-base * 0.85)) // ~12px
+
+// $nxm-font-size-h1:            floor(($nxm-font-size-base * 2.6)) // ~36px
+// $nxm-font-size-h2:            floor(($nxm-font-size-base * 2.15)) // ~30px
+// $nxm-font-size-h3:            ceil(($nxm-font-size-base * 1.7)) // ~24px
+// $nxm-font-size-h4:            ceil(($nxm-font-size-base * 1.25)) // ~18px
+// $nxm-font-size-h5:            $nxm-font-size-base
+// $nxm-font-size-h6:            ceil(($nxm-font-size-base * 0.85)) // ~12px
+
+
+//== Iconography ========================================================================
+//
+
+
+//== Components ========================================================================
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+// $nxm-padding-base-vertical:     6px
+// $nxm-padding-base-horizontal:   12px
+
+// $nxm-padding-large-vertical:    10px
+// $nxm-padding-large-horizontal:  16px
+
+// $nxm-padding-small-vertical:    5px
+// $nxm-padding-small-horizontal:  10px
+
+// $nxm-padding-xs-vertical:       1px
+// $nxm-padding-xs-horizontal:     5px
+
+// $nxm-line-height-large:         1.3333333 // extra decimals for Win 8.1 Chrome
+// $nxm-line-height-small:         1.5
+
+// $nxm-border-radius-base:        4px
+// $nxm-border-radius-large:       6px
+// $nxm-border-radius-small:       3px
+
+
+
+//== Buttons ==================================================================
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+// $nxm-btn-font-weight:                normal
+
+// $nxm-btn-default-color:              #333
+// $nxm-btn-default-bg:                 #fff
+// $nxm-btn-default-border:             #ccc
+
+// $nxm-btn-primary-color:              #fff
+// $nxm-btn-primary-bg:                 $nxm-brand-primary
+// $nxm-btn-primary-border:             darken($nxm-btn-primary-bg, 5%)
+
+// $nxm-btn-success-color:              #fff
+// $nxm-btn-success-bg:                 $nxm-brand-success
+// $nxm-btn-success-border:             darken($nxm-btn-success-bg, 5%)
+
+// $nxm-btn-info-color:                 #fff
+// $nxm-btn-info-bg:                    $nxm-brand-info
+// $nxm-btn-info-border:                darken($nxm-btn-info-bg, 5%)
+
+// $nxm-btn-warning-color:              #fff
+// $nxm-btn-warning-bg:                 $nxm-brand-warning
+// $nxm-btn-warning-border:             darken($nxm-btn-warning-bg, 5%)
+
+// $nxm-btn-danger-color:               #fff
+// $nxm-btn-danger-bg:                  $nxm-brand-danger
+// $nxm-btn-danger-border:              darken($nxm-btn-danger-bg, 5%)
+
+// $nxm-btn-link-disabled-color:        $gray-light

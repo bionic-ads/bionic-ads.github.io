@@ -9,6 +9,8 @@
 
 @import "base/_reset.scss";
 @import "base/_settings.scss";
+@import "base/_mixins.scss";
+@import "base/_bionic_settings.scss";
 
 @import "vendor/_jquery-ui.scss";
 @import "vendor/_theme.scss";
@@ -23,6 +25,7 @@
 @import "components/3_components/_calendar.scss";
 @import "components/3_components/_stripe.scss";
 @import "components/3_components/_figawi.scss";
+@import "components/3_components/_filters.scss";
 @import "components/3_components/_left_nav.scss";
 @import "components/3_components/_loading.scss";
 @import "components/3_components/_modals.scss";

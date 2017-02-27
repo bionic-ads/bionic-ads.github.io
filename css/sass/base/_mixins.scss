@@ -1,0 +1,127 @@
+// This mixin ensures cross browser opacity all the way down to Internet Explorer 5. 
+// Though if you have to optomize for IE5, you have a lot bigger problems than opacity, godspeed my friend.
+// Usage
+// .faded-text {
+//   @include opacity(0.8);
+// }
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//used in @include nxm-box-shadow();
+@mixin box-shadow-mixin($h-shadow: 0px, $v-shadow: 0px, $blur: 0px, $color: #CCC, $inset:"") {
+  -webkit-box-shadow: $h-shadow $v-shadow $blur $color #{$inset};
+  -moz-box-shadow: $h-shadow $v-shadow $blur $color #{$inset};
+  box-shadow: $h-shadow $v-shadow $blur $color #{$inset};
+}
+
+//@include media-grid-fix-column-width( 100px ); 
+@mixin media-grid-fix-column-width($width){
+  min-width: $width;
+  max-width: $width;
+}
+
+// compass: @include border-radius($radius, $vertical-radius)
+// @include background( image-url('colorpicker/map.png') no-repeat);
+
+//  =========================================
+// ========= nxm mixins =====================
+//  =========================================
+//  
+
+@mixin nxm-box-shadow() {
+    @include box-shadow-mixin(0, 4px, 5px, rgba(0, 0, 0, 0.15));
+
+}
+
+@mixin nxm-font($type: 'default'){
+    @if $type =="default"{
+            font-size: 14px;
+            line-height: 22.5px;
+    } @else if $type == "bold"{
+            font-size: 14px;
+            line-height: 22.5px;
+            font-weight: bold;
+    }
+    
+}
+
+// applies orange backgrond to element
+// usage: @include nxm-button-orange-backgrond();
+@mixin nxm-button-orange-backgrond(){ 
+  @include background-image(linear-gradient(to bottom, $nxm-button-background-orange-top, $nxm-button-background-orange-bottom));
+  @include border-radius();
+  color: #fff !important;
+  padding: 0;
+  margin: 0;
+
+  i.fa{
+      color: #fff !important;
+      position: relative;
+      &.fa-filter {
+        top: -1px;
+        padding-right: 1px;
+      }
+      &.fa-times-circle {
+          top: 1px;
+          //font-size: 1.2em;
+      }
+  }
+
+  .modal-open {
+      padding: 0 10px 0 13px;
+
+      span{
+          font-weight: bold;
+      }
+  }
+
+  .remove {
+      padding: 0 5px 0 8px;
+      font-size: 16px;
+      vertical-align: middle;
+      border-left: 1px dotted;
+      top: -1px;
+      position: relative;
+      width: 16px;
+      display: inline-block;
+  }
+
+}
+
+// sets circle around photo or initials
+// @include user-photo-initials(32px);
+@mixin user-photo-initials($width){
+  color: #fff;
+  display: inline-block;
+  width: $width;
+  height: $width;
+  line-height: $width + 2;
+  vertical-align: middle;
+  text-align: center;
+  font-size: $width / 2;
+  font-weight: normal;
+  border-radius: $width / 2;
+  margin-right: $width / 4;
+}
+
+
+
+// example for compass linear gradient: http://compass-style.org/examples/compass/css3/gradient/
+//@include background-image(linear-gradient(to bottom right, white, #dddddd));
+
+
+
+//This is SASS function which adds up all the values in a list.
+@function sum-list($list) {
+    $total: 0;
+    // Check it's the first item in the list and set it as the total
+    @each $item in $list {
+        // For each item in the list, add it to the total
+        $total: $total + $item;
+    }
+    @return $total;
+}

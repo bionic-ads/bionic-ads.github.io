@@ -7,28 +7,27 @@
 li {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
-/* line 7, ../sass/base/_reset.scss */
+/* line 6, ../sass/base/_reset.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 12, ../sass/base/_reset.scss */
+/* line 11, ../sass/base/_reset.scss */
 .block {
   display: block;
   float: left;
   position: relative;
   box-sizing: border-box;
 }
-/* line 18, ../sass/base/_reset.scss */
+/* line 17, ../sass/base/_reset.scss */
 .block.fullwidth {
   width: 100%;
 }
 
-/* line 24, ../sass/base/_reset.scss */
+/* line 23, ../sass/base/_reset.scss */
 table {
   border-collapse: collapse;
 }
