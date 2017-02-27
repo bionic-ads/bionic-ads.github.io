@@ -10,6 +10,9 @@
 @import "base/_reset.scss";
 @import "base/_settings.scss";
 
+@import "vendor/_jquery-ui.scss";
+@import "vendor/_theme.scss";
+
 @import "components/2_elements/_buttons.scss";
 @import "components/2_elements/_checkboxes.scss";
 @import "components/2_elements/_dropdowns.scss";
@@ -17,6 +20,7 @@
 @import "components/2_elements/_links.scss";
 @import "components/2_elements/_radio_buttons.scss";
 
+@import "components/3_components/_calendar.scss";
 @import "components/3_components/_stripe.scss";
 @import "components/3_components/_figawi.scss";
 @import "components/3_components/_left_nav.scss";

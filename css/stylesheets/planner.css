@@ -35,42 +35,41 @@ table {
 
 /* line 3, ../sass/base/_settings.scss */
 * {
-  color: #333333;
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 10, ../sass/base/_settings.scss */
+/* line 9, ../sass/base/_settings.scss */
 h1 {
   font-size: 28px;
 }
 
-/* line 14, ../sass/base/_settings.scss */
+/* line 13, ../sass/base/_settings.scss */
 h2 {
   font-size: 18px;
 }
 
-/* line 18, ../sass/base/_settings.scss */
+/* line 17, ../sass/base/_settings.scss */
 a {
   color: #69AED4;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 24, ../sass/base/_settings.scss */
+/* line 23, ../sass/base/_settings.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 29, ../sass/base/_settings.scss */
+/* line 28, ../sass/base/_settings.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 34, ../sass/base/_settings.scss */
+/* line 33, ../sass/base/_settings.scss */
 .block {
   display: block;
   float: left;
