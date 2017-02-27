@@ -5,6 +5,10 @@ $font-stack: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
+body, table {
+    font-size: 13px;
+}
+
 h1 {
     font-size: 28px;
 }

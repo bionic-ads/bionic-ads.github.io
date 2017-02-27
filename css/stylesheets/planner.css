@@ -40,35 +40,40 @@ table {
 }
 
 /* line 8, ../sass/base/_settings.scss */
+body, table {
+  font-size: 13px;
+}
+
+/* line 12, ../sass/base/_settings.scss */
 h1 {
   font-size: 28px;
 }
 
-/* line 12, ../sass/base/_settings.scss */
+/* line 16, ../sass/base/_settings.scss */
 h2 {
   font-size: 18px;
 }
 
-/* line 16, ../sass/base/_settings.scss */
+/* line 20, ../sass/base/_settings.scss */
 a {
   color: #69AED4;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 22, ../sass/base/_settings.scss */
+/* line 26, ../sass/base/_settings.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 27, ../sass/base/_settings.scss */
+/* line 31, ../sass/base/_settings.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 32, ../sass/base/_settings.scss */
+/* line 36, ../sass/base/_settings.scss */
 .block {
   display: block;
   float: left;
