@@ -10,19 +10,18 @@
 @import "base/_reset.scss";
 @import "base/_settings.scss";
 
-
 @import "components/2_elements/_buttons.scss";
 @import "components/2_elements/_checkboxes.scss";
 @import "components/2_elements/_dropdowns.scss";
 @import "components/2_elements/_inputs.scss";
 @import "components/2_elements/_links.scss";
+@import "components/2_elements/_radio_buttons.scss";
 
 @import "components/3_components/_stripe.scss";
 @import "components/3_components/_figawi.scss";
 @import "components/3_components/_left_nav.scss";
 @import "components/3_components/_loading.scss";
 @import "components/3_components/_modals.scss";
-
 
 @import "components/7_design_guide_layout/_main.scss";
 @import "components/7_design_guide_layout/_code.scss";

@@ -1,0 +1,55 @@
+.bionic-radio{
+    padding-left: 30px;
+    position: relative;
+    margin-top: 10px;
+
+    input[type="radio"] {
+        display: none !important;
+
+        &:checked + label > span:first-child {
+            background-position: 0 66px;
+        }
+
+        // &:disabled + label {
+        //     color: #ccc;
+        //     cursor: default; 
+        // }
+        &[disabled] + label{
+            color: #ccc !important;
+            cursor: default; 
+
+            > span:first-child {
+                background-position: 0 44px;
+                cursor: default;
+            }
+        }
+
+        &[checked][disabled] + label{
+            color: #ccc !important;
+            cursor: default; 
+
+            > span:first-child {
+                background-position: 0 22px;
+                cursor: default;
+            }
+        }
+    }
+
+    label{
+        margin: 0;
+
+        > span:first-child {  // it is the one shows the radio button
+            background-image: url('../images/radio.svg');
+            background-position: 0 -1px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -11px;
+            cursor: pointer;
+            width: 22px !important;
+            height: 22px !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+    }
+}

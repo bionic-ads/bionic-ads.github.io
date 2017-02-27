@@ -586,6 +586,59 @@ a.bdg {
     transform: scale(1);
   }
 }
+/* line 1, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio {
+  padding-left: 30px;
+  position: relative;
+  margin-top: 10px;
+}
+/* line 6, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"] {
+  display: none !important;
+}
+/* line 9, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"]:checked + label > span:first-child {
+  background-position: 0 66px;
+}
+/* line 17, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"][disabled] + label {
+  color: #ccc !important;
+  cursor: default;
+}
+/* line 21, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"][disabled] + label > span:first-child {
+  background-position: 0 44px;
+  cursor: default;
+}
+/* line 27, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"][checked][disabled] + label {
+  color: #ccc !important;
+  cursor: default;
+}
+/* line 31, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio input[type="radio"][checked][disabled] + label > span:first-child {
+  background-position: 0 22px;
+  cursor: default;
+}
+/* line 38, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio label {
+  margin: 0;
+}
+/* line 41, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio label > span:first-child {
+  background-image: url("../images/radio.svg");
+  background-position: 0 -1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  cursor: pointer;
+  width: 22px !important;
+  height: 22px !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   padding: 15px 15px;
@@ -687,25 +740,25 @@ a.bdg {
   border-width: 1px;
 }
 
-/* line 29, ../sass/planner.scss */
+/* line 30, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 33, ../sass/planner.scss */
+/* line 34, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
   overflow: hidden;
 }
 
-/* line 35, ../sass/planner.scss */
+/* line 36, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
 }
 
-/* line 40, ../sass/planner.scss */
+/* line 41, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -716,7 +769,7 @@ body {
   z-index: 2;
 }
 
-/* line 50, ../sass/planner.scss */
+/* line 51, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -726,28 +779,28 @@ body {
   position: fixed;
   z-index: 1;
 }
-/* line 59, ../sass/planner.scss */
+/* line 60, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 62, ../sass/planner.scss */
+/* line 63, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 66, ../sass/planner.scss */
+/* line 67, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 72, ../sass/planner.scss */
+/* line 73, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 81, ../sass/planner.scss */
+/* line 82, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -757,7 +810,7 @@ body {
   top: 50px;
   z-index: 1;
 }
-/* line 90, ../sass/planner.scss */
+/* line 91, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -766,47 +819,47 @@ body {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 98, ../sass/planner.scss */
+/* line 99, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 105, ../sass/planner.scss */
+/* line 106, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 113, ../sass/planner.scss */
+/* line 114, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 118, ../sass/planner.scss */
+/* line 119, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
 }
-/* line 122, ../sass/planner.scss */
+/* line 123, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 127, ../sass/planner.scss */
+/* line 128, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 131, ../sass/planner.scss */
+/* line 132, ../sass/planner.scss */
 #bionic-main .bionic-campaign-header {
   font-size: 18px;
 }
-/* line 135, ../sass/planner.scss */
+/* line 136, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu {
   margin-top: 5px;
 }
-/* line 139, ../sass/planner.scss */
+/* line 140, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li {
   background: #f0f0f0;
   border: 1px solid #cfcfcf;
@@ -820,11 +873,11 @@ body {
   line-height: 18px;
   padding: 3px 15px;
 }
-/* line 152, ../sass/planner.scss */
+/* line 153, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li:first-child {
   border-left: 1px solid #cfcfcf;
 }
-/* line 156, ../sass/planner.scss */
+/* line 157, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li.current {
   background: #f5f6f7;
   border-bottom: 1px solid transparent;
@@ -834,25 +887,25 @@ body {
   margin-top: -3px;
   padding-top: 6px;
 }
-/* line 169, ../sass/planner.scss */
+/* line 170, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 174, ../sass/planner.scss */
+/* line 175, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   padding: 10px 10px 10px 0;
 }
 
-/* line 182, ../sass/planner.scss */
+/* line 183, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 187, ../sass/planner.scss */
+/* line 188, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -861,7 +914,7 @@ body {
   z-index: 0;
 }
 
-/* line 196, ../sass/planner.scss */
+/* line 197, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -875,7 +928,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 209, ../sass/planner.scss */
+/* line 210, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -893,7 +946,7 @@ body {
   width: 42px;
 }
 
-/* line 226, ../sass/planner.scss */
+/* line 227, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
