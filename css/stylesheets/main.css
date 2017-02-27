@@ -36,40 +36,39 @@ table {
 /* line 3, ../sass/base/_settings.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 9, ../sass/base/_settings.scss */
+/* line 8, ../sass/base/_settings.scss */
 h1 {
   font-size: 28px;
 }
 
-/* line 13, ../sass/base/_settings.scss */
+/* line 12, ../sass/base/_settings.scss */
 h2 {
   font-size: 18px;
 }
 
-/* line 17, ../sass/base/_settings.scss */
+/* line 16, ../sass/base/_settings.scss */
 a {
   color: #69AED4;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 23, ../sass/base/_settings.scss */
+/* line 22, ../sass/base/_settings.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 28, ../sass/base/_settings.scss */
+/* line 27, ../sass/base/_settings.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 33, ../sass/base/_settings.scss */
+/* line 32, ../sass/base/_settings.scss */
 .block {
   display: block;
   float: left;
