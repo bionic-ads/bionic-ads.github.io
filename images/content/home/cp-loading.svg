@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="103px" height="14px" viewBox="0 0 103 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>cp-loading</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-247.000000, -489.000000)" fill="#EE3024">
+            <g id="cp-loading" transform="translate(247.000000, 489.000000)">
+                <circle id="Oval" cx="3.15625" cy="7.5" r="2.5"></circle>
+                <circle id="Oval-Copy" cx="18.65625" cy="6" r="5"></circle>
+                <ellipse id="Oval-Copy-2" cx="39.65625" cy="7" rx="7" ry="7"></ellipse>
+                <circle id="Oval-Copy-3" cx="59.65625" cy="7" r="5"></circle>
+                <ellipse id="Oval-Copy-4" cx="79.65625" cy="7" rx="7" ry="7"></ellipse>
+                <ellipse id="Oval-Copy-5" cx="97.65625" cy="7" rx="5" ry="5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

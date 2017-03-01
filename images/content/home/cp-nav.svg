@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="164px" height="62px" viewBox="0 0 164 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>cp-nav</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="76.65625" y="6.5" width="87" height="30" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="87" height="30" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="0.65625" y="6.5" width="87" height="30" rx="2"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="87" height="30" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M40.65625,32 L0.65625,32 L0.65625,62 L163.65625,62 L163.65625,32 L127.65625,32 L127.65625,2.79134022 C127.65625,1.6886924 126.76016,0.80078125 125.654777,0.80078125 L42.6577225,0.80078125 C41.5456581,0.80078125 40.65625,1.69198486 40.65625,2.79134022 L40.65625,32 Z" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="163" height="61.1992188" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-232.000000, -314.000000)" stroke-width="2">
+            <g id="cp-nav" transform="translate(232.000000, 314.000000)">
+                <use id="Rectangle-Copy-2" stroke="#CFCFCF" mask="url(#mask-2)" fill="#EDEDEE" xlink:href="#path-1"></use>
+                <use id="Rectangle-Copy" stroke="#CFCFCF" mask="url(#mask-4)" fill="#EDEDEE" xlink:href="#path-3"></use>
+                <use id="Combined-Shape" stroke="#CCCCCC" mask="url(#mask-6)" fill="#FFFFFF" xlink:href="#path-5"></use>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="138px" height="30px" viewBox="0 0 138 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>cp-dropdowns</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0.5546875" y="0" width="137" height="30" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="137" height="30" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-631.000000, -476.000000)">
+            <g id="cp-dropdowns" transform="translate(631.000000, 476.000000)">
+                <use id="Rectangle-3-Copy-4" stroke="#CFCFCF" mask="url(#mask-2)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <path d="M128.504464,12.8264509 C128.504464,13.0005589 128.440849,13.151227 128.313616,13.2784598 L123.813616,17.7784598 C123.686383,17.9056926 123.535715,17.969308 123.361607,17.969308 C123.187499,17.969308 123.036831,17.9056926 122.909598,17.7784598 L118.409598,13.2784598 C118.282365,13.151227 118.21875,13.0005589 118.21875,12.8264509 C118.21875,12.6523429 118.282365,12.5016747 118.409598,12.374442 C118.536831,12.2472092 118.687499,12.1835938 118.861607,12.1835938 L127.861607,12.1835938 C128.035715,12.1835938 128.186383,12.2472092 128.313616,12.374442 C128.440849,12.5016747 128.504464,12.6523429 128.504464,12.8264509 Z" id="" fill="#9B9B9B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -4012,8 +4012,9 @@ a.bdg {
 /* line 38, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio label {
   margin: 0;
+  cursor: pointer;
 }
-/* line 41, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 42, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio label > span:first-child {
   background-image: url("../images/radio.svg");
   background-position: 0 -1px;
@@ -4021,7 +4022,6 @@ a.bdg {
   top: 50%;
   left: 0;
   margin-top: -11px;
-  cursor: pointer;
   width: 22px !important;
   height: 22px !important;
   padding: 0 !important;
@@ -4964,6 +4964,49 @@ pre {
 /* line 75, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette {
   width: 600px;
+}
+
+/* line 1, ../sass/components/7_design_guide_layout/_home.scss */
+.header.home, h1.home {
+  padding-top: 100px;
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+/* line 7, ../sass/components/7_design_guide_layout/_home.scss */
+#common-patterns {
+  max-width: 800px;
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+}
+/* line 14, ../sass/components/7_design_guide_layout/_home.scss */
+#common-patterns li {
+  cursor: pointer;
+  list-style: none;
+  float: left;
+  border-collapse: collapse;
+  box-sizing: border-box;
+}
+/* line 21, ../sass/components/7_design_guide_layout/_home.scss */
+#common-patterns li a {
+  color: #333;
+  font-weight: normal;
+  display: block;
+  height: 150px;
+  width: 200px;
+  padding: 0 0 20px 0;
+}
+/* line 30, ../sass/components/7_design_guide_layout/_home.scss */
+#common-patterns li span {
+  display: inline-block;
+  width: 100%;
+}
+/* line 35, ../sass/components/7_design_guide_layout/_home.scss */
+#common-patterns li img {
+  float: left;
+  clear: both;
+  margin-top: 20px;
 }
 
 /* line 1, ../sass/components/7_design_guide_layout/_icons.scss */

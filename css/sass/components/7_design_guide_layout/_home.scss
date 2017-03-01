@@ -1,0 +1,41 @@
+.header.home, h1.home {
+        padding-top: 100px;
+        margin-bottom: 20px;
+        font-size: 50px;
+}
+
+#common-patterns {
+    
+    max-width: 800px;
+    display: block;
+    float: left;
+    margin-bottom: 30px;
+    
+    li {
+        cursor: pointer;
+        list-style: none;
+        float: left;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        
+        a {
+            color: #333;
+            font-weight: normal;
+            display: block;
+            height: 150px;
+            width: 200px;
+            padding: 0 0 20px 0;
+        }
+        
+        span {
+            display: inline-block;
+            width: 100%;
+        }
+        
+        img {
+            float: left;
+            clear: both;
+            margin-top: 20px;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+<div class="header">
+    <h2>UI Checklist</h2>
+
+    
+    <div class="subnav-container">
+<!--     <span class="label">Source</span> -->
+    <span class="source"><a href="https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk" target="_blank">Edit Google Sheet</a></span>
+    </div>
+</div>
+
+<table class="spreadsheet" id="examples">
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+</table>
+<script type="text/javascript">
+    
+      var spreadsheetTab = "Checklist";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          var rowNumber = i + 1;
+                    
+          
+          var cat_li = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          cat_li.append('<td><a href="'+item.URL+'" target="_blank">'+item.Name +'</a></td>');
+          cat_li.append('<td>'+ item.Description +'</td>');
+          cat_li.append('</tr>');
+          cat_li.appendTo("#examples");
+        })
+
+        
+      }
+
+//       document.write("The published spreadsheet is located at <a target='_new' href='" + public_spreadsheet_url + "'>" + public_spreadsheet_url + "</a>");    
+    </script>
