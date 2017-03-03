@@ -48,6 +48,7 @@ ul {
     background-position: 20px 22px;
     position: fixed;
     border-right:1px solid #e2e2e2;
+    z-index: 10;
 }
 
     h1 a {
@@ -131,13 +132,6 @@ pre  {
     border-bottom: 1px solid #ddd;
 }
 
-    
-    .header.home, h2.home {
-        padding-top: 100px;
-        margin-bottom: 20px;
-        font-size: 50px;
-    }
-
 
 #navigation {
     position: fixed;
@@ -148,6 +142,7 @@ pre  {
     top:70px;
     background: #373E42;
     box-sizing: border-box;
+    z-index: 10;
 }
 
     #navigation li {
