@@ -3847,6 +3847,23 @@ input[type="button"].gray-button,
   text-decoration: underline;
 }
 
+/* line 95, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li {
+  background: #ddd;
+  padding: 7px 15px 0px 15px;
+  margin: 10px 8px 5px 0;
+  display: block;
+  height: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* line 104, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li i {
+  font-size: 14px;
+  color: #69AED4;
+  margin-right: 8px;
+}
+
 /* line 2, ../sass/components/2_elements/_checkboxes.scss */
 .bionic-checkbox input[type="checkbox"] {
   display: none;
@@ -3969,7 +3986,7 @@ input[type=text].search {
 }
 
 /* line 1, ../sass/components/2_elements/_links.scss */
-a.bdg {
+a {
   color: #6EB3D6;
   text-decoration: none;
   cursor: pointer;
@@ -4343,10 +4360,10 @@ a.bdg {
 
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
-  padding: 15px 15px;
-  width: 700px;
+  max-width: none;
+  padding: 15px 30px;
+  width: 500px;
 }
-
 /* line 6, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;

@@ -1,12 +1,14 @@
+
 $(document).ready(function() {
     
     var navItem = window.location.hash.substr(2);
+    var userState = window.location.hash.substr(2);
 //     console.log(navItem);
 
     $("#bionic-left-nav").hide();
 
-//     $("#bionic-loading").delay(1000).fadeOut();
-    $("#bionic-loading").hide();
+    $("#bionic-loading").delay(1000).fadeOut();
+//     $("#bionic-loading").hide();
 
 });
 
@@ -23,17 +25,43 @@ $(document).ready(function() {
     Planner.Router = Backbone.Router.extend({
     	routes: {
     		'' : 'index',
-    		'campaign/:content' : 'showCampaign'
+    		'newuser' : 'newUser',
+    		'notes' : 'notes',
+    		'campaign/:content' : 'showCampaign',
+    		'advertiser/:content' : 'showAdvertiser'
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
     	},
+
+    	newUser: function(){
+    		$("#bionic-main").load("templates/home.html");
+            $("#bionic-overlay").delay(1000).fadeIn();
+            console.log("new");
+    	},
+
+    	notes: function(){
+    		$("#bionic-main").load("templates/home.html", function() {
+                $("#bionic-overlay").delay(1000).fadeOut();
+        		$("#bionic-home-note-1").delay(1000).fadeIn();
+    		});
+            
+            console.log("callouts");
+    	},
+
     	
     	showCampaign: function(content){
             console.log(content);
     		$("#bionic-main").load("templates/campaign/"+content+".html");
             
+    	},
+    	
+    	showAdvertiser: function(content){
+            console.log(content);
+    		$("#bionic-main").load("templates/advertiser/"+content+".html");
+            
     	}
+    	
     	
     });
     
@@ -93,4 +121,9 @@ $("#menu").click(function(){
         $("#bionic-left-nav").show();
 
     }
+});
+
+$('body').on('click', '.note a', function(event) {
+    console.log("note");
+    $(this).parent().fadeOut(); 
 });

@@ -1,9 +1,11 @@
 .modal {
-    padding: 15px 15px;   
-    width: 700px; 
+    max-width: none;
+    padding: 15px 30px;   
+    width: 500px; 
+    
+    h1 {
+        margin: 0;
+        font-size: 28px;
+    }
 }
 
-.modal h1 {
-    margin: 0;
-    font-size: 28px;
-}

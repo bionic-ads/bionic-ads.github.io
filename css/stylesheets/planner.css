@@ -183,6 +183,23 @@ input[type="button"].gray-button,
   text-decoration: underline;
 }
 
+/* line 95, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li {
+  background: #ddd;
+  padding: 7px 15px 0px 15px;
+  margin: 10px 8px 5px 0;
+  display: block;
+  height: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* line 104, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li i {
+  font-size: 14px;
+  color: #69AED4;
+  margin-right: 8px;
+}
+
 /* line 2, ../sass/components/2_elements/_checkboxes.scss */
 .bionic-checkbox input[type="checkbox"] {
   display: none;
@@ -305,7 +322,7 @@ input[type=text].search {
 }
 
 /* line 1, ../sass/components/2_elements/_links.scss */
-a.bdg {
+a {
   color: #6EB3D6;
   text-decoration: none;
   cursor: pointer;
@@ -643,14 +660,87 @@ a.bdg {
 
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
-  padding: 15px 15px;
-  width: 700px;
+  max-width: none;
+  padding: 15px 30px;
+  width: 500px;
 }
-
 /* line 6, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
+}
+
+/* line 1, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container {
+  width: 1150px;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border-radius: 3px;
+}
+/* line 10, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary {
+  font-size: 20px;
+  line-height: 28px;
+  width: 270px;
+  height: 100%;
+  margin-top: -20px;
+}
+/* line 18, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary .bionic-overview-label {
+  display: inline-block;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 11px;
+  line-height: 11px;
+  color: #9b9b9b;
+  width: 100%;
+}
+/* line 29, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary .bionic-overview-label.divider {
+  border-top: 1px solid #cfcfcf;
+  padding-top: 20px;
+}
+/* line 37, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-advertiser-description {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 40px;
+  margin-left: 20px;
+  min-height: 600px;
+  width: 770px;
+}
+/* line 49, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-advertiser-description img {
+  clear: both;
+  display: block;
+  margin-bottom: 25px;
+  max-width: 690px;
+}
+/* line 57, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state {
+  border: 3px dashed #e2e2e2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+/* line 67, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state.image-zero-state {
+  height: 300px;
+  background: url(../../planner/images/image.svg) no-repeat center center;
+}
+/* line 72, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state.description-zero-state {
+  height: 400px;
+  background: url(../../planner/images/pencil.svg) no-repeat center center;
 }
 
 /* line 3, ../sass/components/8_prototype/_grid.scss */
@@ -742,41 +832,72 @@ a.bdg {
   border-width: 1px;
 }
 
-/* line 30, ../sass/planner.scss */
+/* line 32, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 34, ../sass/planner.scss */
+/* line 36, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 38, ../sass/planner.scss */
+/* line 41, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
 }
 
-/* line 40, ../sass/planner.scss */
+/* line 43, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
+  color: #333;
 }
 
-/* line 45, ../sass/planner.scss */
+/* line 49, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
   width: 100%;
   display: block;
-  background: #f5f6f7 url("../../images/bionic.svg") center 250px no-repeat;
+  background: #f5f6f7 url("../../images/bionic-black.png") center 250px no-repeat;
+  text-align: center;
+  z-index: 2;
+}
+/* line 58, ../sass/planner.scss */
+#bionic-loading .la-ball-grid-pulse {
+  margin: 10px 0 10px;
+}
+
+/* line 63, ../sass/planner.scss */
+#bionic-overlay {
+  display: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
   text-align: center;
   z-index: 2;
 }
 
-/* line 55, ../sass/planner.scss */
+/* line 73, ../sass/planner.scss */
+.note {
+  background: #373E42;
+  color: #eee;
+  display: none;
+  padding: 30px;
+  position: fixed;
+  border-radius: 3px;
+  box-shadow: 0 5px 5px #333;
+}
+/* line 82, ../sass/planner.scss */
+.note#bionic-home-note-1 {
+  top: 100px;
+  left: 100px;
+}
+
+/* line 94, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -786,28 +907,28 @@ body {
   position: fixed;
   z-index: 1;
 }
-/* line 64, ../sass/planner.scss */
+/* line 103, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 67, ../sass/planner.scss */
+/* line 106, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 71, ../sass/planner.scss */
+/* line 110, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 77, ../sass/planner.scss */
+/* line 116, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 86, ../sass/planner.scss */
+/* line 125, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -817,7 +938,7 @@ body {
   top: 50px;
   z-index: 1;
 }
-/* line 95, ../sass/planner.scss */
+/* line 134, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -826,47 +947,48 @@ body {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 103, ../sass/planner.scss */
+/* line 142, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 110, ../sass/planner.scss */
+/* line 149, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 118, ../sass/planner.scss */
+/* line 157, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 123, ../sass/planner.scss */
+/* line 162, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
+  min-width: 1200px;
 }
-/* line 127, ../sass/planner.scss */
+/* line 167, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 132, ../sass/planner.scss */
+/* line 172, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 136, ../sass/planner.scss */
-#bionic-main .bionic-campaign-header {
-  font-size: 18px;
+/* line 180, ../sass/planner.scss */
+#bionic-main .bionic-campaign-summary {
+  margin: 5px 0 10px;
 }
-/* line 140, ../sass/planner.scss */
+/* line 185, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu {
   margin-top: 5px;
 }
-/* line 144, ../sass/planner.scss */
+/* line 189, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li {
   background: #f0f0f0;
   border: 1px solid #cfcfcf;
@@ -880,11 +1002,16 @@ body {
   line-height: 18px;
   padding: 3px 15px;
 }
-/* line 157, ../sass/planner.scss */
+/* line 202, ../sass/planner.scss */
+#bionic-main .bionic-tab-menu li a {
+  color: #333;
+  font-weight: normal;
+}
+/* line 207, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li:first-child {
   border-left: 1px solid #cfcfcf;
 }
-/* line 161, ../sass/planner.scss */
+/* line 211, ../sass/planner.scss */
 #bionic-main .bionic-tab-menu li.current {
   background: #f5f6f7;
   border-bottom: 1px solid transparent;
@@ -893,26 +1020,25 @@ body {
   margin-bottom: -2px;
   margin-top: -3px;
   padding-top: 6px;
+  color: #333;
 }
-/* line 174, ../sass/planner.scss */
+/* line 225, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
-  border-bottom: 1px solid #cfcfcf;
 }
-/* line 179, ../sass/planner.scss */
+/* line 229, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
-  padding: 10px 10px 10px 0;
 }
 
-/* line 187, ../sass/planner.scss */
+/* line 236, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 192, ../sass/planner.scss */
+/* line 241, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -921,7 +1047,7 @@ body {
   z-index: 0;
 }
 
-/* line 201, ../sass/planner.scss */
+/* line 250, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -935,7 +1061,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 214, ../sass/planner.scss */
+/* line 263, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -949,14 +1075,15 @@ body {
   font-weight: normal;
   border-radius: 21px;
   margin-right: 10.5px;
+  margin-top: -4px;
   float: left;
   width: 42px;
 }
 
-/* line 231, ../sass/planner.scss */
+/* line 281, ../sass/planner.scss */
 .module {
   background: #fff;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #ddd;
   border-radius: 3px;
   margin-bottom: 20px;
   min-height: 200px;

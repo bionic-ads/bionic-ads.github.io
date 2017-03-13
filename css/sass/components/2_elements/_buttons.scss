@@ -91,3 +91,19 @@ input[type="button"].gray-button,
         text-decoration: underline;
     }
 }
+
+.bionic-action-menu li {
+    background: #ddd;
+    padding: 7px 15px 0px 15px;
+    margin: 10px 8px 5px 0;
+    display: block;
+    height: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    
+    i {
+        font-size: 14px;
+        color: $blue;
+        margin-right:8px;
+    }
+}

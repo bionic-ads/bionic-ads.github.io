@@ -23,6 +23,8 @@
 @import "components/3_components/_loading.scss";
 @import "components/3_components/_modals.scss";
 
+@import "components/4_layouts/_overview.scss";
+
 @import "components/8_prototype/_grid.scss";
 @import "components/8_prototype/_menus.scss";
 @import "components/8_prototype/_mediaplan.scss";
@@ -35,11 +37,13 @@ li {
     list-style: none;
 }
 
-html, body {margin: 0; height: 100%; overflow: hidden}
+// html, body {margin: 0; height: 100%; overflow: hidden}
+html, body {margin: 0; height: 100%;}
 
 body {
     margin: 0;
     background: $light-gray;
+    color: #333;
 }
 
 #bionic-loading {
@@ -47,10 +51,45 @@ body {
     height: 100%;
     width: 100%;
     display: block;
-    background: $light-gray url("../../images/bionic.svg") center 250px no-repeat;
+    background: $light-gray url("../../images/bionic-black.png") center 250px no-repeat;
+    text-align: center;
+    z-index: 2;
+    
+    .la-ball-grid-pulse {
+            margin: 10px 0 10px;
+        } 
+}
+
+#bionic-overlay {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.25);
     text-align: center;
     z-index: 2;
 }
+
+.note {
+    background: $dark-gray;
+    color: #eee;
+    display: none;
+    padding: 30px;
+    position: fixed;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px #333;
+    
+    &#bionic-home-note-1 {
+        top:100px;
+        left:100px;
+    }
+}
+
+#bionic-help-bubble {
+    
+}
+
+
 
 #bionic-stripe {    
     background: $nav-color url("../../images/bionic.svg") no-repeat;
@@ -123,6 +162,7 @@ body {
     .bionic-header {
         border-bottom: 1px solid $medium-gray;
         padding: 0 25px;
+        min-width: 1200px;
         
         h1 {
             margin: 10px 0 0;
@@ -134,8 +174,13 @@ body {
     }
     
     .bionic-campaign-header {
-        font-size: 18px;        
+
     }
+    
+    .bionic-campaign-summary {
+        margin: 5px 0 10px;
+    }
+    
     
     .bionic-tab-menu {
         
@@ -154,6 +199,11 @@ body {
             line-height: 18px;
             padding: 3px 15px;
         
+            a {
+                color: #333;
+                font-weight: normal;
+            }
+            
             &:first-child {
                 border-left: 1px solid $medium-gray;
             }
@@ -166,6 +216,7 @@ body {
                 margin-bottom: -2px;
                 margin-top: -3px;
                 padding-top: 6px;
+                color: #333;
             }
         
         }
@@ -174,11 +225,9 @@ body {
     .bionic-action-menu {
         padding-left: 25px;
         width: 100%;
-        border-bottom: 1px solid $medium-gray;
         
         li {
             float: left;
-            padding: 10px 10px 10px 0;
         }   
     }
     
@@ -224,13 +273,14 @@ body {
     font-weight: normal;
     border-radius: 21px;
     margin-right: 10.5px;
+    margin-top: -4px;
     float: left;
     width: 42px;
 }
 
 .module {
     background: #fff;
-    border: 1px solid $medium-gray;
+    border: 1px solid #ddd;
     border-radius: 3px;
     margin-bottom: 20px;
     min-height: 200px;
