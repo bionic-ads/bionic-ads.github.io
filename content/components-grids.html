@@ -1,8 +1,26 @@
 # Grids
 
+![Grid](images/content/components/grid.png)
+
 ## Layout
 
-![Grid](images/content/components/grid.png)
+### Column Widths
+
+Bionic grids have two primary column width options, Fixed Width and Evenly Spaced.
+
+#### Fixed-Width (Default)
+
+Fixed-width grid layouts should use a fluid final column when there are only a handful of columns. 
+
+EXAMPLE: Picklist Admin, Campaign List
+
+#### Evenly Spaced
+
+Evenly spaced columns are a useful option when columns make sense to be the same size. This is useful for data visualizations such as a Usage Report heatmap.
+
+EXAMPLE: Usage Report
+
+------
 
 ### Grid Line Colors
 
@@ -12,13 +30,19 @@ In Sass, the color is defined as a variable called #grid-primary-border-color
 Secondary grid lines (main body lines) should be 1px solid #eeeeee; 
 In Sass, the color is defined as a variable called #grid-secondary-border-color
 
+------
+
 ### Fixed First Column
 
 The first column (after the line numbers) should have a border on the right so that the border is visible on scroll
 
+------
+
 ### Summary Rows
 
 Should appear outside the grid and use bold text formatting in most cases
+
+------
 
 ### Row Height
 
