@@ -4393,28 +4393,29 @@ body {
 /* line 20, ../sass/components/7_design_guide_layout/_main.scss */
 p {
   margin-bottom: 20px;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* line 25, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 26, ../sass/components/7_design_guide_layout/_main.scss */
 a {
   color: #69AED4;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* line 31, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 32, ../sass/components/7_design_guide_layout/_main.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 36, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 37, ../sass/components/7_design_guide_layout/_main.scss */
 ul {
   max-width: 650px;
 }
 
-/* line 40, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 41, ../sass/components/7_design_guide_layout/_main.scss */
 #logo {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   height: 70px;
@@ -4429,7 +4430,7 @@ ul {
   z-index: 10;
 }
 
-/* line 54, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 55, ../sass/components/7_design_guide_layout/_main.scss */
 h1 a {
   text-decoration: none;
   display: block;
@@ -4437,25 +4438,25 @@ h1 a {
   padding: 25px 20px;
 }
 
-/* line 61, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 62, ../sass/components/7_design_guide_layout/_main.scss */
 h1, h2, h3, h4 {
   clear: both;
   font-weight: normal;
 }
 
-/* line 66, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 67, ../sass/components/7_design_guide_layout/_main.scss */
 h1 {
   font-size: 32px;
   margin: 18px 0 10px;
 }
 
-/* line 71, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 72, ../sass/components/7_design_guide_layout/_main.scss */
 h2 {
   font-size: 24px;
   margin: 20px 0 10px;
 }
 
-/* line 78, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 79, ../sass/components/7_design_guide_layout/_main.scss */
 h2:before {
   content: " ";
   border-top: 1px dotted #999;
@@ -4465,30 +4466,30 @@ h2:before {
   max-width: 600px;
 }
 
-/* line 87, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 88, ../sass/components/7_design_guide_layout/_main.scss */
 h2:first-child:before {
   border-top: none;
 }
 
-/* line 91, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 92, ../sass/components/7_design_guide_layout/_main.scss */
 h3 {
   margin: 20px 0 10px;
   font-size: 18px;
 }
 
-/* line 96, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 97, ../sass/components/7_design_guide_layout/_main.scss */
 h4 {
   font-size: 13px;
   font-weight: bold;
   margin-bottom: -1em;
 }
 
-/* line 103, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 104, ../sass/components/7_design_guide_layout/_main.scss */
 pre {
   font-family: courier,monospace;
 }
 
-/* line 107, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 108, ../sass/components/7_design_guide_layout/_main.scss */
 #content {
   margin-left: 180px;
   margin-bottom: 50px;
@@ -4496,16 +4497,16 @@ pre {
   position: absolute;
   width: calc(100% - 240px);
 }
-/* line 114, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 115, ../sass/components/7_design_guide_layout/_main.scss */
 #content p, #content hr {
   width: 600px;
 }
-/* line 118, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 119, ../sass/components/7_design_guide_layout/_main.scss */
 #content hr {
   margin-left: 0;
 }
 
-/* line 123, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 124, ../sass/components/7_design_guide_layout/_main.scss */
 .header {
   background: #4A5155;
   background: #f5f6f7;
@@ -4518,7 +4519,7 @@ pre {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 136, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 137, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation {
   position: fixed;
   width: 180px;
@@ -4531,7 +4532,7 @@ pre {
   z-index: 10;
 }
 
-/* line 148, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 149, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li {
   display: block;
   position: relative;
@@ -4541,7 +4542,7 @@ pre {
   box-sizing: border-box;
 }
 
-/* line 157, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 158, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li a {
   box-sizing: border-box;
   color: #ccc;
@@ -4553,7 +4554,7 @@ pre {
   width: 100%;
 }
 
-/* line 168, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 169, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation .divider {
   padding-left: 20px;
   margin-top: 10px;
@@ -4566,57 +4567,57 @@ pre {
   font-weight: bold;
 }
 
-/* line 180, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 181, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation .divider:first-of-type {
   margin-top: 0;
   padding-top: 0px;
 }
 
-/* line 185, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 186, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li.top > a {
   padding-left: 20px;
 }
 
-/* line 190, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 191, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li a:hover {
   color: #fff;
 }
 
-/* line 194, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 195, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li a:visited {
   /*         color: #fafafa; */
 }
 
-/* line 198, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 199, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li.top {
   background: url("../../images/angle-right.svg") no-repeat 6px 8px;
 }
 
-/* line 201, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 202, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li.top.active {
   background: url("../../images/angle-down.svg") no-repeat 3px 9px;
   color: #fff;
 }
 
-/* line 206, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 207, ../sass/components/7_design_guide_layout/_main.scss */
 #navigation li.top ul li a {
   padding-left: 35px;
 }
 
-/* line 211, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 212, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav-container {
   margin-right: 20px;
   float: left;
   display: block;
 }
 
-/* line 217, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 218, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav-container.right {
   float: right;
   margin-right: 0;
 }
 
-/* line 226, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 227, ../sass/components/7_design_guide_layout/_main.scss */
 .label {
   font-size: 9px;
   text-transform: uppercase;
@@ -4625,53 +4626,53 @@ pre {
   position: absolute;
 }
 
-/* line 234, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 235, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav.view {
   float: left;
 }
 
-/* line 238, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 239, ../sass/components/7_design_guide_layout/_main.scss */
 .source {
   float: left;
   border: 1px solid #ccc;
   border-radius: 2px;
 }
 
-/* line 245, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 246, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li {
   float: left;
   border: 1px solid #ccc;
 }
 
-/* line 250, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 251, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-/* line 253, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 254, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li:last-child {
   border-radius: 0px 2px 2px 0px;
 }
 
-/* line 257, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 258, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li.current {
   border: 1px solid #999;
   z-index: 999;
 }
 
-/* line 263, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 264, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li.current a {
   color: #333;
 }
 
-/* line 266, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 267, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li a, .source {
   color: #999;
   display: block;
   padding: 5px 10px;
 }
 
-/* line 272, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 273, ../sass/components/7_design_guide_layout/_main.scss */
 .filter {
   clear: both;
   display: block;
@@ -4684,7 +4685,7 @@ pre {
   padding: 0 30px 0 31px;
 }
 
-/* line 284, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 285, ../sass/components/7_design_guide_layout/_main.scss */
 .filter li {
   float: left;
   padding: 10px 0px;
@@ -4693,13 +4694,13 @@ pre {
   margin-right: 15px;
 }
 
-/* line 292, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 293, ../sass/components/7_design_guide_layout/_main.scss */
 .filter li.current {
   font-weight: bold;
   color: #333;
 }
 
-/* line 297, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 298, ../sass/components/7_design_guide_layout/_main.scss */
 .button {
   padding: 10px 20px;
   border-radius: 3px;
@@ -4710,23 +4711,23 @@ pre {
   text-decoration: none;
 }
 
-/* line 307, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 308, ../sass/components/7_design_guide_layout/_main.scss */
 .button.primary {
   background: #69AED4;
 }
 
-/* line 311, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 312, ../sass/components/7_design_guide_layout/_main.scss */
 .button.secondary {
   background: #9B9B9B;
 }
 
-/* line 315, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 316, ../sass/components/7_design_guide_layout/_main.scss */
 .button.disabled {
   background: #dddddd;
   color: #c0c0c0;
 }
 
-/* line 322, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 323, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet {
   width: calc(100% + 59px);
   margin-bottom: 50px;
@@ -4737,14 +4738,14 @@ pre {
   font-size: 13px;
 }
 
-/* line 332, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 333, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet tr:hover td {
   background-color: #E6F2F8 !important;
   border-bottom: 1px solid #69AED4;
   border-top: 1px solid #69AED4;
 }
 
-/* line 338, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 339, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet th {
   text-align: left;
   padding: 10px 10px;
@@ -4754,7 +4755,7 @@ pre {
   background: #f5f6f7;
 }
 
-/* line 347, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 348, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .line-number {
   color: #999;
   width: 15px;
@@ -4762,7 +4763,7 @@ pre {
   background: #f5f6f7;
 }
 
-/* line 354, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 355, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet td {
   padding: 5px 10px;
   border-bottom: 1px solid #eee;
@@ -4770,7 +4771,7 @@ pre {
   border-right: 1px solid #eee;
 }
 
-/* line 361, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 362, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status,
 .spreadsheet .type {
   white-space: nowrap;
@@ -4778,7 +4779,7 @@ pre {
   width: 40px;
 }
 
-/* line 372, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 373, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.status,
 .spreadsheet div.type {
   display: block;
@@ -4790,13 +4791,13 @@ pre {
   color: #333;
 }
 
-/* line 386, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 387, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet td.status {
   padding-left: 25px;
   background: transparent;
 }
 
-/* line 391, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 392, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.status {
   border: 1px solid #ccc;
   text-align: center;
@@ -4809,41 +4810,41 @@ pre {
   margin-right: 5px;
 }
 
-/* line 403, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 404, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.inprogress {
   background: transparent url(images/pencil.svg) no-repeat 5px 5px;
 }
 
-/* line 407, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 408, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.defer,
 .spreadsheet .status.needed {
   color: #999;
 }
 
-/* line 412, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 413, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.needsreview {
   background: transparent url(images/yield.svg) no-repeat 5px 5px;
   color: orange;
 }
 
-/* line 417, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 418, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.approved {
   background: transparent url(images/check.svg) no-repeat 7px 7px;
   color: green;
 }
 
-/* line 423, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 424, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.type.screen {
   color: #ccc;
 }
 
-/* line 439, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 440, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .name {
   font-weight: bold;
   min-width: 300px;
 }
 
-/* line 444, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 445, ../sass/components/7_design_guide_layout/_main.scss */
 .link-invision {
   color: #ccc;
 }
