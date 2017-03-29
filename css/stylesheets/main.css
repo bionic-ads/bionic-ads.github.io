@@ -4916,13 +4916,15 @@ pre {
   background: #fff;
   margin: 0 10px 20px 0;
   border: 1px solid #fff;
+  font-size: 13px;
+  line-height: auto;
 }
-/* line 19, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 21, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors li span {
   clear: both;
   display: block;
 }
-/* line 25, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 27, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors div {
   display: block;
   float: left;
@@ -4931,40 +4933,40 @@ pre {
   margin-bottom: 10px;
 }
 
-/* line 35, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 37, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors
 .colors.task div {
   height: 50px;
 }
 
-/* line 40, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 42, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.task li {
   height: 130;
   margin: 0 10px 20px 0;
 }
 
-/* line 45, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 47, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette div {
   height: 50px;
 }
 
-/* line 49, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 51, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette li {
   margin: 0 10px 20px 0;
   height: 80px;
 }
 
-/* line 54, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 56, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors li {
   color: #333;
 }
 
-/* line 58, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 60, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors li.light {
   color: #333;
 }
 
-/* line 62, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 64, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors .description {
   position: relative;
   float: left;
@@ -4973,12 +4975,12 @@ pre {
   width: 100%;
 }
 
-/* line 71, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 73, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.primary {
   width: 800px;
 }
 
-/* line 75, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 77, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette {
   width: 600px;
 }
