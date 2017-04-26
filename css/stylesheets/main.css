@@ -3771,7 +3771,7 @@ div.ui-dialog .ui-widget-header-supertip {
 .button-c,
 .gray-button {
   display: inline-block;
-  font-size: 1em;
+  font-size: 13px;
   padding: 8px 20px;
   line-height: 20px;
   border-radius: 3px;
