@@ -3,6 +3,16 @@
   color: #999;
 }
 
+/* line 3, ../sass/components/1_basics/_typography.scss */
+p.regulartext {
+  font-size: 13px;
+}
+
+/* line 7, ../sass/components/1_basics/_typography.scss */
+p.monospace {
+  font-size: 12px;
+}
+
 /* line 1, ../sass/base/_reset.scss */
 li {
   margin: 0;
