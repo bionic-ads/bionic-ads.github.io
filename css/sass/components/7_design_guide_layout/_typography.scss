@@ -27,10 +27,11 @@ table.headings {
     display: inline;
 }
     
-    .headings h1,
-    .headings h2,
-    .headings h3,
-    .headings h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
+        clear: both;
         font-weight: bold;
     }
     
@@ -41,11 +42,6 @@ table.headings {
     .monospace {
         font-family: monospace;
     }
-
-h1,h2,h3,h4 {
-    clear: both;
-    font-weight: normal;
-}
 
 h1 {
     margin: 18px 0 10px;    

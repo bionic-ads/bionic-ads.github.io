@@ -4915,32 +4915,31 @@ pre {
 
 /* line 42, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.task li {
-  height: 130;
   margin: 0 10px 20px 0;
 }
 
-/* line 47, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 46, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette div {
   height: 50px;
 }
 
-/* line 51, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 50, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette li {
   margin: 0 10px 20px 0;
   height: 80px;
 }
 
-/* line 56, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 55, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors li {
   color: #333;
 }
 
-/* line 60, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 59, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors li.light {
   color: #333;
 }
 
-/* line 64, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 63, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors .description {
   position: relative;
   float: left;
@@ -4949,12 +4948,12 @@ pre {
   width: 100%;
 }
 
-/* line 73, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 72, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.primary {
   width: 800px;
 }
 
-/* line 77, ../sass/components/7_design_guide_layout/_colors.scss */
+/* line 76, ../sass/components/7_design_guide_layout/_colors.scss */
 .colors.palette {
   width: 600px;
 }
@@ -5104,40 +5103,35 @@ table.headings {
 }
 
 /* line 30, ../sass/components/7_design_guide_layout/_typography.scss */
-.headings h1,
-.headings h2,
-.headings h3,
-.headings h4 {
+h1,
+h2,
+h3,
+h4 {
+  clear: both;
   font-weight: bold;
 }
 
-/* line 37, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 38, ../sass/components/7_design_guide_layout/_typography.scss */
 .headings h2:before {
   display: none;
 }
 
-/* line 41, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 42, ../sass/components/7_design_guide_layout/_typography.scss */
 .monospace {
   font-family: monospace;
 }
 
-/* line 45, ../sass/components/7_design_guide_layout/_typography.scss */
-h1, h2, h3, h4 {
-  clear: both;
-  font-weight: normal;
-}
-
-/* line 50, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 46, ../sass/components/7_design_guide_layout/_typography.scss */
 h1 {
   margin: 18px 0 10px;
 }
 
-/* line 54, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 50, ../sass/components/7_design_guide_layout/_typography.scss */
 h2 {
   margin: 20px 0 10px;
 }
 
-/* line 60, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 56, ../sass/components/7_design_guide_layout/_typography.scss */
 h2:before {
   content: " ";
   border-top: 1px dotted #999;
@@ -5147,17 +5141,17 @@ h2:before {
   max-width: 600px;
 }
 
-/* line 69, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 65, ../sass/components/7_design_guide_layout/_typography.scss */
 h2:first-child:before {
   border-top: none;
 }
 
-/* line 73, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 69, ../sass/components/7_design_guide_layout/_typography.scss */
 h3 {
   margin: 20px 0 10px;
 }
 
-/* line 77, ../sass/components/7_design_guide_layout/_typography.scss */
+/* line 73, ../sass/components/7_design_guide_layout/_typography.scss */
 h4 {
   margin-bottom: -1em;
 }
