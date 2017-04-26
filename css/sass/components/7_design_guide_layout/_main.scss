@@ -61,43 +61,6 @@ ul {
         padding: 25px 20px;
     }
 
-h1,h2,h3,h4 {
-    clear: both;
-    font-weight: normal;
-}
-
-h1 {
-    margin: 18px 0 10px;    
-}
-
-h2 {
-    margin: 20px 0 10px;   
-}
-
-
-    
-    h2:before {
-        content: " ";
-        border-top: 1px dotted #999;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        display: block;
-        max-width: 600px;
-    } 
-    
-    h2:first-child:before {
-        border-top: none;
-    }
-
-h3 {
-    margin: 20px 0 10px;
-}
-
-h4 {
-    font-weight: bold;
-    margin-bottom: -1em;
-}
-
 
 pre  {
     font-family:courier,monospace;
