@@ -40,6 +40,10 @@ ul {
     max-width: 650px;
 }
 
+    #content ul:not(.colors) {
+        margin-left: 20px;
+    }
+
 #logo {
     background: #373E42 url("../../images/bionic.svg") no-repeat;
     height: 70px;
