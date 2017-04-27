@@ -23,14 +23,24 @@ h4 {
   font-size: 13px;
 }
 
-/* line 20, ../sass/components/1_basics/_typography.scss */
+/* line 19, ../sass/components/1_basics/_typography.scss */
+p.overviewtext {
+  font-size: 18px;
+}
+
+/* line 23, ../sass/components/1_basics/_typography.scss */
 p.regulartext {
   font-size: 13px;
 }
 
-/* line 24, ../sass/components/1_basics/_typography.scss */
+/* line 27, ../sass/components/1_basics/_typography.scss */
 p.monospace {
   font-size: 12px;
+}
+
+/* line 31, ../sass/components/1_basics/_typography.scss */
+p.labels {
+  font-size: 11px;
 }
 
 /* line 1, ../sass/base/_reset.scss */
