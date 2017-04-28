@@ -40,6 +40,7 @@ p.monospace {
 
 /* line 31, ../sass/components/1_basics/_typography.scss */
 p.labels {
+  color: #9b9b9b;
   font-size: 11px;
 }
 
