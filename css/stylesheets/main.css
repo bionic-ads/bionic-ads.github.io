@@ -4678,6 +4678,46 @@ a {
   font-size: 28px;
 }
 
+/* line 1, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu {
+  margin-top: 5px;
+}
+/* line 5, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li {
+  background: #f0f0f0;
+  border: 1px solid #cfcfcf;
+  border-left: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  cursor: pointer;
+  float: left;
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+  padding: 3px 15px;
+}
+/* line 19, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li a {
+  color: #333;
+  font-weight: normal;
+}
+/* line 24, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li:first-child {
+  border-left: 1px solid #cfcfcf;
+}
+/* line 28, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li.current {
+  background: #f5f6f7;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid #cfcfcf;
+  font-weight: bold;
+  margin-bottom: -2px;
+  margin-top: -3px;
+  padding-top: 6px;
+  color: #333;
+}
+
 /* line 1, ../sass/components/7_design_guide_layout/_main.scss */
 .checklist {
   /*
@@ -4937,7 +4977,7 @@ pre {
 }
 
 /* line 234, ../sass/components/7_design_guide_layout/_main.scss */
-.subnav li a, .source {
+.subnav li a, .source a {
   color: #999;
   display: block;
   padding: 5px 10px;

@@ -22,6 +22,7 @@
 @import "components/3_components/_left_nav.scss";
 @import "components/3_components/_loading.scss";
 @import "components/3_components/_modals.scss";
+@import "components/3_components/_navigation.scss";
 
 @import "components/4_layouts/_overview.scss";
 
@@ -182,45 +183,6 @@ body {
     }
     
     
-    .bionic-tab-menu {
-        
-        margin-top: 5px;
-        
-        li {
-            background: #f0f0f0;
-            border: 1px solid $medium-gray;
-            border-left: none;
-            border-bottom: none;
-            box-sizing: border-box;
-            border-collapse: collapse;
-            cursor: pointer;
-            float: left;
-            font-size: 13px;
-            line-height: 18px;
-            padding: 3px 15px;
-        
-            a {
-                color: #333;
-                font-weight: normal;
-            }
-            
-            &:first-child {
-                border-left: 1px solid $medium-gray;
-            }
-        
-            &.current {
-                background: $light-gray;
-                border-bottom: 1px solid transparent;
-                border-left: 1px solid $medium-gray;
-                font-weight: bold;
-                margin-bottom: -2px;
-                margin-top: -3px;
-                padding-top: 6px;
-                color: #333;
-            }
-        
-        }
-    }
     
     .bionic-action-menu {
         padding-left: 25px;
