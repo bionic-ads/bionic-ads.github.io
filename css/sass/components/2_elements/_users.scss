@@ -1,0 +1,66 @@
+.avatar {
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: normal;
+  overflow: hidden;
+    
+    &.extra-large {
+        
+        border-radius: 36px;
+        font-size: 32px;
+        height: 72px;
+        line-height: 72px;
+        margin-right: 10px;    
+        width: 72px;
+        
+        img {
+            height: 100px;
+        }
+        
+    }
+    
+    &.large {
+        
+        border-radius: 24px;
+        width: 48px;
+        height: 48px;
+        line-height: 46px;
+        font-size: 20px;
+        margin-right: 10px;
+        
+        img {
+            height: 72px;
+        }
+    }
+    
+    &.medium {
+        
+        border-radius: 16px;
+        font-size: 13px;
+        height: 32px;
+        line-height: 32px;
+        margin-right: 10px;
+        width: 32px;
+        
+        img {
+            height: 48px;
+        }
+    }
+        
+    &.small {
+
+        border-radius: 12px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        font-size: 11px;
+        margin-right: 10px;
+        
+        img {
+            height: 32px;
+        }    
+    }
+    
+}

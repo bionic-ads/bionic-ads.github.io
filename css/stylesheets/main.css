@@ -4353,6 +4353,68 @@ a {
   display: block !important;
 }
 
+/* line 1, ../sass/components/2_elements/_users.scss */
+.avatar {
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: normal;
+  overflow: hidden;
+}
+/* line 9, ../sass/components/2_elements/_users.scss */
+.avatar.extra-large {
+  border-radius: 36px;
+  font-size: 32px;
+  height: 72px;
+  line-height: 72px;
+  margin-right: 10px;
+  width: 72px;
+}
+/* line 18, ../sass/components/2_elements/_users.scss */
+.avatar.extra-large img {
+  height: 100px;
+}
+/* line 24, ../sass/components/2_elements/_users.scss */
+.avatar.large {
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  line-height: 46px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+/* line 33, ../sass/components/2_elements/_users.scss */
+.avatar.large img {
+  height: 72px;
+}
+/* line 38, ../sass/components/2_elements/_users.scss */
+.avatar.medium {
+  border-radius: 16px;
+  font-size: 13px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 10px;
+  width: 32px;
+}
+/* line 47, ../sass/components/2_elements/_users.scss */
+.avatar.medium img {
+  height: 48px;
+}
+/* line 52, ../sass/components/2_elements/_users.scss */
+.avatar.small {
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 11px;
+  margin-right: 10px;
+}
+/* line 61, ../sass/components/2_elements/_users.scss */
+.avatar.small img {
+  height: 32px;
+}
+
 /* line 1, ../sass/components/3_components/_calendar.scss */
 .ui-datepicker td span,
 .ui-datepicker td a {
