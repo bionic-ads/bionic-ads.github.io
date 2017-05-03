@@ -182,9 +182,9 @@ ol, ul, li {
 input[type="submit"].gray-button,
 input[type="button"].gray-button,
 .gray-button {
-  background: #eee;
-  color: #888 !important;
-  border: 1px solid #eee;
+  background: #dfe0e1;
+  color: #555 !important;
+  border: 1px solid #dfe0e1;
 }
 
 /* line 71, ../sass/components/2_elements/_buttons.scss */
