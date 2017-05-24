@@ -75,7 +75,7 @@ table {
 
 /* line 3, ../sass/base/_settings.scss */
 * {
-  font-family: "Avenir", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
