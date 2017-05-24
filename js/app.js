@@ -27,17 +27,22 @@ $(document).ready(function() {
     prettyPrint();                
     new Clipboard('.copyIt');
 
+    $( '.menu-item' ).click( function (){
+        $( '.filter-options' ).toggle();
+    });
+
 });
 
 
 (function(){
         
-    window.App = {
+    App = {
     	Models: {},
     	Collections: {},
     	Views: {},
     	Router: {}
     };
+    
     App.Router = Backbone.Router.extend({
     	routes: {
     		'': 'index',
@@ -49,6 +54,11 @@ $(document).ready(function() {
     	
     	showContent: function(content, converter){
 
+    		if(content == "components-filters"){
+        		console.log("filters");
+        		//BionicMenuFiltersView();
+    		}
+
 //         	content = $.get("content/"+content+".html");
             content = $.ajax({type: "GET", url: "content/"+content+".html", async: false}).responseText;
 
@@ -57,6 +67,7 @@ $(document).ready(function() {
 //          console.log(html);
         	
     		$("#content").html(html);
+    		
             
             prettyPrint();
     	}
@@ -67,3 +78,5 @@ $(document).ready(function() {
     Backbone.history.start();
 
 })();
+
+

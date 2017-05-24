@@ -192,11 +192,13 @@ pre  {
 }   
 
     .label {
+/*
         font-size: 9px;
         text-transform: uppercase;
         float: left;
         margin-top: -12px;
         position: absolute;
+*/
     }
 
     .subnav.view {
@@ -237,6 +239,7 @@ pre  {
         padding: 5px 10px;
     }
 
+/*
 .filter {
     clear: both;
     display: block;
@@ -261,6 +264,7 @@ pre  {
         font-weight: bold;
         color: #333;
     }
+*/
 
 .button {
     padding: 10px 20px;

@@ -75,7 +75,7 @@ table {
 
 /* line 3, ../sass/base/_settings.scss */
 * {
-  font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: "Avenir", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -4426,7 +4426,7 @@ a {
 
 /* line 1, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters {
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 30px;
 }
@@ -4434,7 +4434,7 @@ a {
 .nxm-menu-filters > div {
   display: inline-block;
   float: left;
-  margin: 8px 8px 0 0;
+  margin: 0px 8px 0 0;
   line-height: 28px;
 }
 /* line 19, ../sass/components/3_components/_filters.scss */
@@ -4448,7 +4448,7 @@ a {
   border: 1px solid #cfcfcf;
   line-height: 18px;
   z-index: 2;
-  width: calc(100% - 47px);
+  width: calc(100% - 42px);
   height: 100%;
 }
 /* line 32, ../sass/components/3_components/_filters.scss */
@@ -4571,6 +4571,7 @@ a {
   color: #fff !important;
   padding: 0;
   margin: 0;
+  line-height: 29px;
 }
 /* line 61, ../sass/base/_mixins.scss */
 .nxm-menu-filters .menu-item.filter-on i.fa {
@@ -4605,15 +4606,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 103, ../sass/components/3_components/_filters.scss */
+/* line 104, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.modal-open {
   padding: 5px 6px 5px 13px;
 }
-/* line 107, ../sass/components/3_components/_filters.scss */
+/* line 108, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.label:after {
   color: inherit;
 }
-/* line 114, ../sass/components/3_components/_filters.scss */
+/* line 116, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options {
   position: absolute;
   z-index: 99999;
@@ -4623,7 +4624,7 @@ a {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
 }
-/* line 128, ../sass/components/3_components/_filters.scss */
+/* line 130, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .overlay {
   background-color: transparent;
   display: block;
@@ -4633,12 +4634,12 @@ a {
   z-index: -5;
   left: 0;
 }
-/* line 138, ../sass/components/3_components/_filters.scss */
+/* line 140, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .pad {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 155, ../sass/components/3_components/_filters.scss */
+/* line 157, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle input.list-filter-search {
   padding: 5px 5px 5px 30px;
   box-sizing: border-box;
@@ -4646,7 +4647,7 @@ a {
   width: calc(100% - 20px);
   background-size: 16px;
 }
-/* line 163, ../sass/components/3_components/_filters.scss */
+/* line 165, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul {
   max-height: 200px;
   display: block;
@@ -4655,74 +4656,78 @@ a {
   padding: 7px 0 4px 0;
   border-top: 1px solid #cfcfcf;
 }
-/* line 171, ../sass/components/3_components/_filters.scss */
+/* line 173, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul li.divider {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 182, ../sass/components/3_components/_filters.scss */
+/* line 184, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox div:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox span:focus {
   outline: none;
 }
-/* line 188, ../sass/components/3_components/_filters.scss */
+/* line 190, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label span.box {
   top: -2px;
 }
-/* line 198, ../sass/components/3_components/_filters.scss */
+/* line 200, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section {
   border-top: 1px solid #CCC;
 }
-/* line 201, ../sass/components/3_components/_filters.scss */
+/* line 203, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 207, ../sass/components/3_components/_filters.scss */
+/* line 209, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not {
   border-top: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 213, ../sass/components/3_components/_filters.scss */
+/* line 215, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 245, ../sass/components/3_components/_filters.scss */
+/* line 247, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate span {
   text-align: center;
   width: 100%;
   display: block;
 }
-/* line 256, ../sass/components/3_components/_filters.scss */
+/* line 258, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-on, .nxm-menu-filters .filter-section.filter-on .filter-off {
   display: none;
 }
-/* line 261, ../sass/components/3_components/_filters.scss */
+/* line 263, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-off, .nxm-menu-filters .filter-section.filter-on .filter-on {
   display: block;
 }
-/* line 267, ../sass/components/3_components/_filters.scss */
+/* line 269, ../sass/components/3_components/_filters.scss */
+.nxm-menu-filters .filter-section.disabled span.label:after {
+  color: #ccc;
+}
+/* line 275, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .custom-fields {
   display: none;
 }
-/* line 271, ../sass/components/3_components/_filters.scss */
+/* line 279, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.CUSTOM ~ .custom-fields {
   display: block;
 }
-/* line 275, ../sass/components/3_components/_filters.scss */
+/* line 283, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.EMPTY ~ .date-fields,
 .nxm-menu-filters span.NOT_EMPTY ~ .date-fields {
   display: none;
 }
-/* line 280, ../sass/components/3_components/_filters.scss */
+/* line 288, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate {
   display: none;
 }
-/* line 284, ../sass/components/3_components/_filters.scss */
+/* line 292, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.BETWEEN ~ .date-fields span.endDate,
 .nxm-menu-filters span.NOT_BETWEEN ~ .date-fields span.endDate {
   display: block;
@@ -4992,88 +4997,88 @@ pre {
 
 /* line 194, ../sass/components/7_design_guide_layout/_main.scss */
 .label {
-  font-size: 9px;
-  text-transform: uppercase;
-  float: left;
-  margin-top: -12px;
-  position: absolute;
+  /*
+          font-size: 9px;
+          text-transform: uppercase;
+          float: left;
+          margin-top: -12px;
+          position: absolute;
+  */
 }
 
-/* line 202, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 204, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav.view {
   float: left;
 }
 
-/* line 206, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 208, ../sass/components/7_design_guide_layout/_main.scss */
 .source {
   float: left;
   border: 1px solid #ccc;
   border-radius: 2px;
 }
 
-/* line 213, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 215, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li {
   float: left;
   border: 1px solid #ccc;
 }
 
-/* line 218, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 220, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li:first-child {
   border-radius: 2px 0 0 2px;
 }
 
-/* line 221, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 223, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li:last-child {
   border-radius: 0px 2px 2px 0px;
 }
 
-/* line 225, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 227, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li.current {
   border: 1px solid #999;
   z-index: 999;
 }
 
-/* line 231, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 233, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li.current a {
   color: #333;
 }
 
-/* line 234, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 236, ../sass/components/7_design_guide_layout/_main.scss */
 .subnav li a, .source a {
   color: #999;
   display: block;
   padding: 5px 10px;
 }
 
-/* line 240, ../sass/components/7_design_guide_layout/_main.scss */
+/*
 .filter {
-  clear: both;
-  display: block;
-  width: 100%;
-  font-size: 11px;
-  float: left;
-  border-bottom: 1px solid #ccc;
-  margin-left: -30px;
-  box-sizing: border-box;
-  padding: 0 30px 0 31px;
+    clear: both;
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    float: left;
+        border-bottom: 1px solid #ccc;
+        margin-left:-30px;
+        box-sizing: border-box;
+        padding: 0 30px 0 31px;
 }
 
-/* line 252, ../sass/components/7_design_guide_layout/_main.scss */
-.filter li {
-  float: left;
-  padding: 10px 0px;
-  box-sizing: border-box;
-  color: #999;
-  margin-right: 15px;
-}
-
-/* line 260, ../sass/components/7_design_guide_layout/_main.scss */
-.filter li.current {
-  font-weight: bold;
-  color: #333;
-}
-
-/* line 265, ../sass/components/7_design_guide_layout/_main.scss */
+    .filter li {
+        float: left;
+        padding: 10px 0px;
+        box-sizing: border-box;
+        color: #999;
+        margin-right: 15px;
+    }
+    
+    .filter li.current {
+        font-weight: bold;
+        color: #333;
+    }
+*/
+/* line 269, ../sass/components/7_design_guide_layout/_main.scss */
 .button {
   padding: 10px 20px;
   border-radius: 3px;
@@ -5084,23 +5089,23 @@ pre {
   text-decoration: none;
 }
 
-/* line 275, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 279, ../sass/components/7_design_guide_layout/_main.scss */
 .button.primary {
   background: #69AED4;
 }
 
-/* line 279, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 283, ../sass/components/7_design_guide_layout/_main.scss */
 .button.secondary {
   background: #9B9B9B;
 }
 
-/* line 283, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 287, ../sass/components/7_design_guide_layout/_main.scss */
 .button.disabled {
   background: #dddddd;
   color: #c0c0c0;
 }
 
-/* line 290, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 294, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet {
   width: calc(100% + 59px);
   margin-bottom: 50px;
@@ -5111,14 +5116,14 @@ pre {
   font-size: 13px;
 }
 
-/* line 300, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 304, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet tr:hover td {
   background-color: #E6F2F8 !important;
   border-bottom: 1px solid #69AED4;
   border-top: 1px solid #69AED4;
 }
 
-/* line 306, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 310, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet th {
   text-align: left;
   padding: 10px 10px;
@@ -5128,7 +5133,7 @@ pre {
   background: #f5f6f7;
 }
 
-/* line 315, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 319, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .line-number {
   color: #999;
   width: 15px;
@@ -5136,7 +5141,7 @@ pre {
   background: #f5f6f7;
 }
 
-/* line 322, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 326, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet td {
   padding: 5px 10px;
   border-bottom: 1px solid #eee;
@@ -5144,7 +5149,7 @@ pre {
   border-right: 1px solid #eee;
 }
 
-/* line 329, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 333, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status,
 .spreadsheet .type {
   white-space: nowrap;
@@ -5152,7 +5157,7 @@ pre {
   width: 40px;
 }
 
-/* line 340, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 344, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.status,
 .spreadsheet div.type {
   display: block;
@@ -5164,13 +5169,13 @@ pre {
   color: #333;
 }
 
-/* line 354, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 358, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet td.status {
   padding-left: 25px;
   background: transparent;
 }
 
-/* line 359, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 363, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.status {
   border: 1px solid #ccc;
   text-align: center;
@@ -5183,41 +5188,41 @@ pre {
   margin-right: 5px;
 }
 
-/* line 371, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 375, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.inprogress {
   background: transparent url(images/pencil.svg) no-repeat 5px 5px;
 }
 
-/* line 375, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 379, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.defer,
 .spreadsheet .status.needed {
   color: #999;
 }
 
-/* line 380, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 384, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.needsreview {
   background: transparent url(images/yield.svg) no-repeat 5px 5px;
   color: orange;
 }
 
-/* line 385, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 389, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .status.approved {
   background: transparent url(images/check.svg) no-repeat 7px 7px;
   color: green;
 }
 
-/* line 391, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 395, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet div.type.screen {
   color: #ccc;
 }
 
-/* line 407, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 411, ../sass/components/7_design_guide_layout/_main.scss */
 .spreadsheet .name {
   font-weight: bold;
   min-width: 300px;
 }
 
-/* line 412, ../sass/components/7_design_guide_layout/_main.scss */
+/* line 416, ../sass/components/7_design_guide_layout/_main.scss */
 .link-invision {
   color: #ccc;
 }
@@ -5411,6 +5416,7 @@ pre {
   border: 1px solid #eee;
   border-collapse: collapse;
   float: left;
+  font-size: 13px;
   text-align: center;
   height: 80px;
   width: 80px;
