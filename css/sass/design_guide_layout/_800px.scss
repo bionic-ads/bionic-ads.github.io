@@ -1,0 +1,36 @@
+@media (min-width: 800px) {
+
+    #logo {
+        background-position: 20px 22px;
+        width: 180px;
+    }
+    
+    #menu {
+        display: none;
+    }
+    
+    #navigation {
+        display: block !important;
+        width: 180px;
+        
+        li {
+            font-size: 13px;
+        
+            &.top {
+                background-position: 6px 8px;
+            }
+        
+        }
+        
+        
+    }
+    
+    #content {
+        margin-left:180px;
+        margin-bottom: 50px;
+        margin-top: 0;
+        padding-left: 30px;
+        position: absolute;
+        width: calc(100% - 240px);
+    }
+}

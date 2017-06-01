@@ -814,13 +814,13 @@ a {
   background: url(../../planner/images/pencil.svg) no-repeat center center;
 }
 
-/* line 3, ../sass/components/8_prototype/_grid.scss */
+/* line 3, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table {
   background-color: white;
   width: auto;
 }
 
-/* line 8, ../sass/components/8_prototype/_grid.scss */
+/* line 8, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table tr td,
 .fixedTable .table tr th {
   border: 1px solid #f5f6f7;
@@ -831,17 +831,17 @@ a {
   text-align: left;
 }
 
-/* line 18, ../sass/components/8_prototype/_grid.scss */
+/* line 18, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table tr td {
   border: 1px solid #f5f6f7;
 }
 
-/* line 22, ../sass/components/8_prototype/_grid.scss */
+/* line 22, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table tr th {
   background: #f5f6f7;
 }
 
-/* line 26, ../sass/components/8_prototype/_grid.scss */
+/* line 26, ../sass/components/7_prototype/_grid.scss */
 .fixedTable-header {
   width: calc(100% - 250px);
   margin-left: 300px;
@@ -849,7 +849,7 @@ a {
   border-bottom: 1px solid #cfcfcf;
 }
 
-/* line 33, ../sass/components/8_prototype/_grid.scss */
+/* line 33, ../sass/components/7_prototype/_grid.scss */
 .fixedTable-sidebar {
   width: 275px;
   height: calc(100vh - 227px);
@@ -857,12 +857,12 @@ a {
   overflow: hidden;
   margin-left: 25px;
 }
-/* line 40, ../sass/components/8_prototype/_grid.scss */
+/* line 40, ../sass/components/7_prototype/_grid.scss */
 .fixedTable-sidebar table.table tr td {
   width: 275px;
 }
 
-/* line 46, ../sass/components/8_prototype/_grid.scss */
+/* line 46, ../sass/components/7_prototype/_grid.scss */
 .fixedTable-body {
   overflow: auto;
   width: calc(100% - 310px);
@@ -870,22 +870,22 @@ a {
   float: left;
 }
 
-/* line 1, ../sass/components/8_prototype/_menus.scss */
+/* line 1, ../sass/components/7_prototype/_menus.scss */
 .bionic-menu {
   min-width: 200px;
   padding: 10px;
   box-sizing: border-box;
 }
-/* line 7, ../sass/components/8_prototype/_menus.scss */
+/* line 7, ../sass/components/7_prototype/_menus.scss */
 .bionic-menu .end-date {
   width: 400px;
 }
-/* line 10, ../sass/components/8_prototype/_menus.scss */
+/* line 10, ../sass/components/7_prototype/_menus.scss */
 .bionic-menu .end-date li {
   line-height: 30px;
 }
 
-/* line 1, ../sass/components/8_prototype/_mediaplan.scss */
+/* line 1, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -898,7 +898,7 @@ a {
   color: #404040;
   box-sizing: content-box;
 }
-/* line 13, ../sass/components/8_prototype/_mediaplan.scss */
+/* line 13, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text]:focus {
   border-width: 1px;
 }

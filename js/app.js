@@ -27,6 +27,10 @@ $(document).ready(function() {
     prettyPrint();                
     new Clipboard('.copyIt');
 
+    $( '#menu' ).click( function (){
+        $( '#navigation' ).toggle();
+    });
+    
     $( '.menu-item' ).click( function (){
         $( '.filter-options' ).toggle();
     });

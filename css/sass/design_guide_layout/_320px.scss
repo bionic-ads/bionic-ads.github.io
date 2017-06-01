@@ -1,0 +1,36 @@
+#logo {
+    background-position: center;
+    width: 100%;
+}
+
+#menu {
+    background: #373e42;
+    color: #eee;
+    cursor: pointer;
+    float: left;
+    font-size: 28px;
+    padding: 20px;
+    position: fixed;
+    z-index: 20;
+}
+
+#navigation {
+    display: none;
+    width: 100%;
+
+    li {
+        font-size: 20px;
+    }
+    
+    li.top {
+        background-position: 6px 15px;
+    }
+
+}
+
+#content {
+    margin-left: 0;
+    margin-top: 72px;
+    padding-left: 20px;
+    width: 100%;
+}
