@@ -1,0 +1,173 @@
+table.module {
+    border-collapse: collapse;
+    padding: 0;
+    width: auto;
+    
+    thead {
+        background: #f5f6f7;
+        width: 100%;
+    }
+    
+    tr {
+        border-bottom: 1px solid #f0f0f0;
+        
+        &:hover {
+            background: #E6F2F8;
+        }
+        
+    }
+    
+    th,td {
+        border-right: 1px solid #cfcfcf;
+        padding: 8px 10px;
+        white-space: nowrap;
+        width: auto;
+        
+        img {
+        }
+        
+        .sm-campaign-image {
+            display: inline-block;
+            float: left;
+            margin-right: 10px;
+            text-align: center;
+            width: 42px;
+        }
+        
+        &.line-number {
+            background: #f5f6f7;
+        }
+        
+        &.campaign,&.advertiser {
+            width: 100%;
+        }
+        
+        &.campaign,&.advertiser,&.planned {
+            min-width: 240px;
+            padding: 0;
+            
+            a {
+                padding: 8px 10px;
+                display: inline-block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+        
+        &.campaign {
+            
+            a {
+                font-weight: bold;
+            }
+        } 
+        
+        &.advertiser {
+            min-width: 120px;
+        }
+
+        &.budget, &.planned {
+            text-align: right;
+            min-width: 120px;
+        
+            .currency {
+                color: #9b9b9b;
+                float: left;
+                font-size: 11px;
+            }
+        
+        }
+        
+        &.percentplanned {
+            min-width: 120px;
+            
+            .budget-progress-bar {
+                
+                background: #69AED4;
+                color: #fff;
+                font-size: 11px;
+                font-weight: bold;
+                display: inline-block;
+                height: 15px;
+                line-height: 13px;
+                text-align: right;
+                box-sizing: border-box;
+                
+                span {
+                    right: 5px;
+                    position: relative;
+                }
+                
+                &.over {
+                    background: #EE3424;
+                    width: 100%;
+                }
+                
+                &.under {
+                    color: #333;
+                    
+                    span {
+                        right: auto;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    
+    th {
+        background: #f5f6f7;
+        border-bottom: 1px solid #cfcfcf;
+        padding: 8px 10px !important;
+        text-align: left;
+        
+    }
+    
+    th:last-child,
+    td:last-child {
+//         width: 100%;
+    }
+    
+}
+
+table#mostrecentcampaigns {
+    th,td {
+        line-height: 25px;
+    }
+}
+
+table#schedule {
+    
+    th:nth-child(n+3) {
+        text-align: center;
+    }
+    
+    th:nth-child(n+3),
+    td:nth-child(n+3) {
+        min-width: 80px;
+    }
+    
+    tr:last-child td {
+        background: #f5f6f7;
+        border-color: transparent;
+        border-top: 1px solid #cfcfcf;
+        font-weight: bold;
+        
+        a {
+            color: #333;
+            cursor: default;
+        }
+        
+        &:first-child {
+            color: #f5f6f7;
+        }
+        
+    }
+    
+    th:last-child,
+    td:last-child {
+        width: auto;
+    }
+    
+}

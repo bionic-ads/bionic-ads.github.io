@@ -8,6 +8,8 @@
 
 @import "base/_reset.scss";
 @import "base/_settings.scss";
+@import "base/_mixins.scss";
+@import "base/_bionic_settings.scss";
 
 @import "components/2_elements/_buttons.scss";
 @import "components/2_elements/_checkboxes.scss";
@@ -19,13 +21,17 @@
 
 @import "components/3_components/_stripe.scss";
 @import "components/3_components/_figawi.scss";
+@import "components/3_components/_filters.scss";
 @import "components/3_components/_left_nav.scss";
 @import "components/3_components/_loading.scss";
 @import "components/3_components/_modals.scss";
 @import "components/3_components/_navigation.scss";
+@import "components/3_components/_tables.scss";
 
 @import "components/4_layouts/_overview.scss";
+@import "components/4_layouts/_tasks.scss";
 
+@import "components/7_prototype/_filters.scss";
 @import "components/7_prototype/_grid.scss";
 @import "components/7_prototype/_menus.scss";
 @import "components/7_prototype/_mediaplan.scss";
@@ -45,6 +51,10 @@ body {
     margin: 0;
     background: $light-gray;
     color: #333;
+}
+
+h2 {
+    margin-bottom: 10px;
 }
 
 #bionic-loading {
@@ -242,11 +252,21 @@ body {
 
 .module {
     background: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid #cfcfcf;
     border-radius: 3px;
     margin-bottom: 20px;
-    min-height: 200px;
+    min-height: 220px;
+    min-width: 1250px;
     padding: 20px;
+    
+    &.tasks {
+        h2 {
+            margin-top: -20px;
+        }
+        p {
+            margin: 0;
+        }
+    }
     
 }
 

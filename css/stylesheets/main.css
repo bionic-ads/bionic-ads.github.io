@@ -84,31 +84,34 @@ body, table {
   font-size: 13px;
 }
 
-/* line 12, ../sass/base/_settings.scss */
-a {
-  color: #69AED4;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* line 18, ../sass/base/_settings.scss */
+/* line 13, ../sass/base/_settings.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 23, ../sass/base/_settings.scss */
+/* line 18, ../sass/base/_settings.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 28, ../sass/base/_settings.scss */
+/* line 23, ../sass/base/_settings.scss */
 .block {
   display: block;
   float: left;
   position: relative;
   box-sizing: border-box;
+}
+
+/* line 30, ../sass/base/_settings.scss */
+.center {
+  text-align: center;
+}
+
+/* line 34, ../sass/base/_settings.scss */
+.right {
+  text-align: right;
 }
 
 /* jQuery UI - v1.11.2 - 2014-10-16
@@ -3880,15 +3883,20 @@ input[type="button"].gray-button,
 
 /* line 95, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li {
-  background: #ddd;
-  padding: 7px 15px 0px 15px;
-  margin: 10px 8px 5px 0;
+  background: #dfe0e1;
+  margin: 8px 8px 8px 0;
+  padding: 0;
   display: block;
-  height: 22px;
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 104, ../sass/components/2_elements/_buttons.scss */
+/* line 103, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li a {
+  color: #333;
+  display: block;
+  padding: 8px 15px;
+}
+/* line 109, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
@@ -4427,8 +4435,8 @@ a {
 /* line 1, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters {
   display: block;
-  width: 100%;
   height: 30px;
+  user-select: none;
 }
 /* line 7, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters > div {
@@ -4447,7 +4455,7 @@ a {
   position: relative;
   border: 1px solid #cfcfcf;
   line-height: 18px;
-  z-index: 2;
+  z-index: 1;
   width: calc(100% - 42px);
   height: 100%;
 }
@@ -4511,7 +4519,7 @@ a {
 }
 /* line 68, ../sass/base/_mixins.scss */
 .nxm-menu-filters .clear-search-filter i.fa.fa-times-circle {
-  top: 1px;
+  top: 5px;
 }
 /* line 74, ../sass/base/_mixins.scss */
 .nxm-menu-filters .clear-search-filter .modal-open {
@@ -4585,7 +4593,7 @@ a {
 }
 /* line 68, ../sass/base/_mixins.scss */
 .nxm-menu-filters .menu-item.filter-on i.fa.fa-times-circle {
-  top: 1px;
+  top: 5px;
 }
 /* line 74, ../sass/base/_mixins.scss */
 .nxm-menu-filters .menu-item.filter-on .modal-open {
@@ -4736,13 +4744,33 @@ a {
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   max-width: none;
-  padding: 15px 30px;
+  padding: 0;
   width: 500px;
 }
 /* line 6, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
+}
+/* line 11, ../sass/components/3_components/_modals.scss */
+.modal a.close-modal {
+  top: 17px;
+  right: 10px;
+}
+/* line 16, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-top {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 10px 25px;
+}
+/* line 21, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body {
+  padding: 15px 25px;
+  min-height: 200px;
+}
+/* line 26, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-footer {
+  padding: 15px 25px;
+  border-top: 1px solid #cfcfcf;
 }
 
 /* line 1, ../sass/components/3_components/_navigation.scss */
@@ -4751,7 +4779,7 @@ a {
 }
 /* line 5, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li {
-  background: #f0f0f0;
+  background: #e9ebed;
   border: 1px solid #cfcfcf;
   border-left: none;
   border-bottom: none;
@@ -4783,6 +4811,10 @@ a {
   margin-top: -3px;
   padding-top: 6px;
   color: #333;
+}
+/* line 38, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li.current a {
+  font-weight: bold;
 }
 
 /* line 1, ../sass/design_guide_layout/_main.scss */

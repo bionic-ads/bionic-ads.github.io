@@ -1,0 +1,191 @@
+
+<div id="bionic-home" class="block fullwidth">
+    
+    <div class="bionic-header block fullwidth">
+    
+        <h1>
+            <span class="avatar"></span>
+            Good Afternoon, Elizabeth!
+        </h1>
+    
+        <ul class="bionic-tab-menu block fullwidth">
+       
+            <li><a href="#/">Home</a></li>
+            <li>Advertisers</li>
+            <li>Campaigns</li>
+            <li class="current">Schedule</li>
+            <li>Tasks</li>
+       
+        </ul>
+
+    </div>
+
+<div class="nxm-menu-bar nxm-menu-filters">
+<div class="filter-section filter-search-master">
+<input type="text" placeholder="Search Advertiser" value="" required id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
+<span id="clear-search" class="clear-search-filter">
+    <i class="fa fa-times-circle"></i>
+</span>
+</div>
+
+<div class="filter-section filter-advertiser-follow filter-off">
+<div class="menu-button">
+<div class="menu-item filter-off">
+<span class="active filter modal-open">
+<i class="fa fa-filter"></i>
+<span class="label">All Advertisers</span>
+</span>
+</div>
+<div class="menu-item filter-on">
+<span class="active filter modal-open">
+<i class="fa fa-filter"></i>
+<span class="label">Following</span>
+</span>
+<span class="active filter remove" id="remove-type-filter-advertisers" data-action='removeFilterFollow'>
+<i class="fa fa-times-circle"></i>
+</span>
+</div>
+</div>
+<div class="filter-options" style="display: none;">
+<div class="overlay"></div>
+<div class="filter-middle">
+<ul id="filter-types-list" data-select-all="follow" style="margin-left: 0; min-width: 150px;">
+<li class="divider">
+<div class="bionic-checkbox filter-cb-all pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="ALL" 
+class="filter-cb-all selectAll">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">All Advertisers</span>
+</label>
+</div>
+</li>
+<li class="">
+<div class="bionic-checkbox pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="FOLLOWING" 
+class="filter-cb-sub">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">Following</span>
+</label>
+</div>
+</li>
+<li class="">
+<div class="bionic-checkbox pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="NOT_FOLLOWING" 
+class="filter-cb-sub">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">Not Following</span>
+</label>
+</div>
+</li>
+</ul>
+</div>
+<div class="footer-section-not">
+<input type="button" value="Apply" class="next-btn blue-button"
+tabindex="0"
+id="apply-follow-filter-advertisers">
+</div>
+</div>
+</div>
+</div>
+
+    <ul class="bionic-action-menu block">
+        <li><a><i class="fa fa-download"></i>Download Excel</a></li>
+    </ul>        
+
+    <table id="schedule" class="module">
+
+            <thead>
+            <tr>
+                <th class="line-number">#</th>
+                <th class="advertiser">Advertiser</th>
+                <th>Monday<br>Jun 05</th>
+                <th>Tuesday<br>Jun 06</th>
+                <th>Wednesday<br>Jun 07</th>
+                <th>Thursday<br>Jun 08</th>
+                <th>Friday<br>Jun 09</th>
+                <th>Saturday<br>Jun 10</th>
+                <th>Sunday<br>Jun 11</th>
+                <th>Monday<br>Jun 12</th>
+                <th>Tuesday<br>Jun 13</th>
+                <th>Wednesday<br>Jun 14</th>
+                <th>Thursday<br>Jun 15</th>
+                <th>Friday<br>Jun 16</th>
+            </tr>
+            </thead>
+
+        
+    
+    </table>
+
+    
+</div>
+
+<script type="text/javascript">
+    
+    $('.menu-button').click(function (){
+        $( '.filter-options' ).toggle();
+    });
+
+    
+      var spreadsheetTab = "Schedule";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var rowNumber = i + 1;
+          
+          var scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
+              scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview">'+ item.Advertiser +'</a></td>');
+              scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
+              scheduleTable.append('<td class="right '+ item.two +'">'+ item.two +'</td>');
+              scheduleTable.append('<td class="right '+ item.three +'">'+ item.three +'</td>');
+              scheduleTable.append('<td class="right'+ item.four +'"><a href="#/campaign/mediaplan">'+ item.four +'</a></td>');
+              scheduleTable.append('<td class="right'+ item.five +'">'+ item.five +'</td>');
+              scheduleTable.append('<td class="right'+ item.six +'">'+ item.six +'</td>');
+              scheduleTable.append('<td class="right'+ item.seven +'">'+ item.seven +'</td>');
+              scheduleTable.append('<td class="right'+ item.eight +'">'+ item.eight +'</td>');
+              scheduleTable.append('<td class="right'+ item.nine +'">'+ item.nine +'</td>');
+              scheduleTable.append('<td class="right'+ item.ten +'">'+ item.ten +'</td>');
+              scheduleTable.append('<td class="right'+ item.eleven +'">'+ item.eleven +'</td>');
+              scheduleTable.append('<td class="right'+ item.twelve +'">'+ item.twelve +'</td>');
+          scheduleTable.append('</tr>');
+          scheduleTable.appendTo("#schedule");
+                    
+        })
+
+      }
+
+function formatNumber(value){
+    
+//     value.toFixed(2);
+    return value;
+    
+}
+
+      
+</script>

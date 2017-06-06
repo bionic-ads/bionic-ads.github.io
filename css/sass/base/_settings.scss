@@ -9,11 +9,6 @@ body, table {
     font-size: 13px;
 }
 
-a {
-    color: #69AED4;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 li {
     margin: 0;
@@ -30,4 +25,12 @@ ol,ul,li {
     float: left;
     position: relative;
     box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
 }

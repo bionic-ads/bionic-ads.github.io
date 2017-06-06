@@ -7,28 +7,31 @@ $(document).ready(function() {
 
     $("#bionic-left-nav").hide();
 
-    $("#bionic-loading").delay(1000).fadeOut();
+    $("#bionic-loading").delay(500).fadeOut();
 //     $("#bionic-loading").hide();
+
+
 
 });
 
 
 (function(){
         
-    window.Planner = {
+    window.App = {
     	Models: {},
     	Collections: {},
     	Views: {},
     	Router: {}
     };
     
-    Planner.Router = Backbone.Router.extend({
+    App.Router = Backbone.Router.extend({
     	routes: {
     		'' : 'index',
     		'newuser' : 'newUser',
     		'notes' : 'notes',
     		'campaign/:content' : 'showCampaign',
-    		'advertiser/:content' : 'showAdvertiser'
+    		'advertiser/:content' : 'showAdvertiser',
+    		'schedule' : 'showSchedule'
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -59,19 +62,21 @@ $(document).ready(function() {
     	showAdvertiser: function(content){
             console.log(content);
     		$("#bionic-main").load("templates/advertiser/"+content+".html");
-            
-    	}
+    	},
     	
-    	
+    	showSchedule: function(){
+    		$("#bionic-main").load("templates/schedule.html");
+    		
+    	},    	
     });
     
-    new Planner.Router;
+    new App.Router;
     Backbone.history.start();
 
 })();
 
 
-$('body').on('click', 'a.open-modal', function(event) {
+$('body').on('click', '.open-modal', function(event) {
   $(this).modal({
       escapeClose: true,
       clickClose: false,
@@ -126,4 +131,10 @@ $("#menu").click(function(){
 $('body').on('click', '.note a', function(event) {
     console.log("note");
     $(this).parent().fadeOut(); 
+});
+
+
+$('.menu-button').click(function (){
+    $( '.filter-options' ).toggle();
+    console.log("asdfadsf");
 });

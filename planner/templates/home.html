@@ -10,9 +10,10 @@
     
         <ul class="bionic-tab-menu block fullwidth">
        
-            <li class="current">Home</li>
+            <li class="current"><a href="#/">Home</a></li>
             <li>Advertisers</li>
             <li>Campaigns</li>
+            <li><a href="#/schedule">Schedule</a></li>
             <li>Tasks</li>
        
         </ul>
@@ -21,18 +22,33 @@
 
     <div class="bionic-content block fullwidth">
 
-    <h2>Most Recent Campaign</h2>
+    <h2>Most Recent Campaigns</h2>
         
-        <div class="module block fullwidth">
-        
-            <a href="#/campaign/overview">Media Plan</a>
-        
-        </div>
+        <table id="MostRecentCampaigns" class="module block fullwidth">
+
+            <thead>
+            <tr>
+                <th class="campaign">Campaign</th>
+                <th class="advertiser">Advertiser</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th class="budget">Budget</th>
+                <th class="planned">Planned</th>
+                <th>% Planned</th>
+                <th>Last Viewed</th>
+            </tr>
+            </thead>
+
+        </table>
     
     <h2>Tasks to Do Now</h2>
         
-        <div class="module block fullwidth">
-        
+        <div class="module block fullwidth center tasks">
+
+            <div id="noStickerArea" style="" class="watermark-image"></div>
+            <h2>You're all caught up!</h2>
+            <p>All the tasks you need to do now are done.</p>
+            <a>View All Tasks</a>
             
         </div>
     
@@ -43,3 +59,80 @@
 Here's the content
 <a>Next</a>
 </div>
+
+<script type="text/javascript">
+    
+      var spreadsheetTab = "MostRecentCampaigns";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var mostRecentCampaigns,
+              advertiserimage, 
+              campaignimage, 
+              percentplanned,
+              textcolor
+              ;
+          
+          advertiserimage = item.AdvertiserImage;
+          campaignimage = item.CampaignImage;
+                    
+          if(item.AdvertiserImage != '') {
+              advertiserimage =  '<img src="../planner/images/home/' + item.AdvertiserImage + '" />';
+          } else {
+              advertiserimage =  item.Advertiser;
+          }
+          
+          if(item.CampaignImage != '') {
+              campaignimage =  '<img src="../planner/images/home/' + item.CampaignImage + '" />';
+          } else {
+              campaignimage =  '<img src="../planner/images/home/no_image.png" />';
+          }
+          
+          percentplanned = item.PercentPlanned;
+          
+          if(percentplanned != ''){
+              
+              textcolor = '';
+              
+              if((percentplanned > -1)&&(percentplanned < 30)){
+                  textcolor = "under";
+              }
+              
+              if(percentplanned < 101) {
+                  percentplannedbar = '<span class="budget-progress-bar '+textcolor+'" style="width:'+percentplanned+'px"><span>'+ percentplanned +'%</span></span>';
+              }
+              else if(percentplanned > 100) {
+                  percentplannedbar = '<span class="budget-progress-bar over"><span>Over 100%</span></span>';
+              }
+          }
+                    
+          mostRecentCampaigns = $('<tr><td class="campaign"><a href="#/campaign/overview"><span class="sm-campaign-image">'+campaignimage + '</span>' + item.CampaignName + '</a></td>');
+          mostRecentCampaigns.append('<td class="advertiser"><a href="#/advertiser/overview">'+ advertiserimage +'</a></td>');
+          mostRecentCampaigns.append('<td class="startdate">'+ item.StartDate +'</td>');
+          mostRecentCampaigns.append('<td>'+ item.EndDate +'</td>');
+          mostRecentCampaigns.append('<td class="budget"><span class="currency">$</span>'+ item.Budget +'</td>');
+          mostRecentCampaigns.append('<td class="planned"><a href="#/campaign/mediaplan"><span class="currency">$</span>'+ item.Planned +'</a></td>');
+          mostRecentCampaigns.append('<td class="percentplanned">'+ percentplannedbar +'</td>');
+          mostRecentCampaigns.append('<td>'+ item.LastViewed +'</td>');
+          mostRecentCampaigns.append('</tr>');
+          mostRecentCampaigns.appendTo("#MostRecentCampaigns");
+                    
+        })
+
+        
+      }
+</script>

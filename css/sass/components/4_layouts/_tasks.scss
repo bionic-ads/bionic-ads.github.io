@@ -1,0 +1,11 @@
+#noStickerArea {
+
+    height: 200px;
+    margin: 0 auto;
+    width: 400px;
+
+    &.watermark-image {
+        background: url('../../planner/images/home/sticker-tasks-complete-stars.png') no-repeat center 0px;
+    }
+}
+    

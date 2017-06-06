@@ -1,6 +1,6 @@
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
-    <h1>Voluptuous False Lash Effect</h1>
+    <h1>Campaign Name</h1>
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
@@ -10,6 +10,7 @@
         <li>Proposals</li>
         <li class="current">Media Plan</li>
         <li>Flowchart</li>
+        <li>Schedule</li>
         <li>Allocations</li>
         <li>Tasks</li>
         <li>Performance</li>
@@ -17,12 +18,44 @@
 </div>
 
 <ul class="bionic-action-menu block">
-    <li>Columns</li>
-    <li>Filter</li>
-    <li>Edit</li>
+    <li><a><i class="fa fa-bars fa-rotate-90"></i>Columns</a></li>
+    <li><a><i class="fa fa-filter"></i>Filter</a></li>
+    <li><a><i class="fa fa-pencil"></i>Edit</a></li>
+    <li><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-arrows-v"></i>Move</a></li>
 </ul>
 
+<div class="mediaplan fixedTable" id="demo">
+  <header class="fixedTable-header">
+    <table class="table table-bordered">
+        <tr>
+          <th>Bionic ID</th>
+          <th>Program</th>
+          <th>Vendor</th>
+          <th>Product</th>
+          <th>Targeting</th>
+          <th>Channel</th>
+          <th>Ad Unit</th>
+          <th>Ad Specs</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Week Part</th>
+          <th>Day Part</th>
+        </tr>
+    </table>
+  </header>
+  <aside class="fixedTable-sidebar">
+    <table class="table table-bordered" id="MediaPlanFirstColumns">
 
+    </table>
+  </aside>
+  <div class="fixedTable-body">
+    <table class="table table-bordered" id="MediaPlanBody">
+
+    </table>
+  </div>
+</div>
+
+<!--
 <div class="mediaplan fixedTable" id="demo">
   <header class="fixedTable-header">
     <table class="table table-bordered">
@@ -347,6 +380,54 @@
     </table>
   </div>
 </div>
+-->
+
+<script type="text/javascript">
+    
+      var spreadsheetTab = "MediaPlan";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          var rowNumber = i + 1;
+          
+          var mediaPlanFirstColumns = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          mediaPlanFirstColumns.append('<td>'+ '<input type="checkbox"> ' +'</td>');
+          mediaPlanFirstColumns.append('<td>'+ '' +'</td>');
+          mediaPlanFirstColumns.append('<td>'+ '' +'</td>');
+          mediaPlanFirstColumns.append('<td>'+ item.PlacementName +'</td>');
+          mediaPlanFirstColumns.append('</tr>');
+          mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns");
+                    
+          var mediaPlanBody = $('<tr><td>' + item.BionicID + '</td>');
+          mediaPlanBody.append('<td>'+ item.Program +'</td>');
+          mediaPlanBody.append('<td>'+ item.Vendor +'</td>');
+          mediaPlanBody.append('<td>'+ item.Product +'</td>');
+          mediaPlanBody.append('<td>'+ item.Targeting +'</td>');
+          mediaPlanBody.append('<td>'+ item.Channel +'</td>');
+          mediaPlanBody.append('<td>'+ item.AdUnit +'</td>');
+          mediaPlanBody.append('<td>'+ item.AdSpecs +'</td>');
+          mediaPlanBody.append('<td>'+ item.StartDate +'</td>');
+          mediaPlanBody.append('<td>'+ item.EndDate +'</td>');
+          mediaPlanBody.append('</tr>');
+          mediaPlanBody.appendTo("#MediaPlanBody");
+        })
+
+        
+      }
+</script>
         
 <script type="text/javascript">
 (function() {
