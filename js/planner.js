@@ -35,6 +35,7 @@ $(document).ready(function() {
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
+    		updateFigawi("hide","none");
     	},
 
     	newUser: function(){
@@ -51,10 +52,10 @@ $(document).ready(function() {
             
             console.log("callouts");
     	},
-
-    	
+	
     	showCampaign: function(content){
             console.log(content);
+            updateFigawi("show","none");
     		$("#bionic-main").load("templates/campaign/"+content+".html");
             
     	},
@@ -75,6 +76,17 @@ $(document).ready(function() {
 
 })();
 
+function updateFigawi(menu,location){
+
+    // hide the left menu on home page
+    if(menu == "hide"){
+        $("#menu").hide();
+        $("#home").addClass("disabled");
+    } else {
+        $("#menu").show();
+        $("#home").removeClass("disabled");
+    }
+}
 
 $('body').on('click', '.open-modal', function(event) {
   $(this).modal({
@@ -136,5 +148,4 @@ $('body').on('click', '.note a', function(event) {
 
 $('.menu-button').click(function (){
     $( '.filter-options' ).toggle();
-    console.log("asdfadsf");
 });

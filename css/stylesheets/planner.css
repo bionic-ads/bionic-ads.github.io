@@ -120,6 +120,16 @@ ol, ul, li {
   filter: grayscale(100%);
 }
 
+/* line 43, ../sass/base/_settings.scss */
+.hidden {
+  display: none;
+}
+
+/* line 47, ../sass/base/_settings.scss */
+.grayscale {
+  filter: grayscale(100%);
+}
+
 /* line 1, ../sass/components/2_elements/_buttons.scss */
 .blue-button,
 .green-button,

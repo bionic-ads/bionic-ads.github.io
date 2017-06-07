@@ -39,3 +39,11 @@ ol,ul,li {
     opacity: .5;
     filter: grayscale(100%);
 }
+
+.hidden {
+    display: none;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
