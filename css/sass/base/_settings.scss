@@ -34,3 +34,8 @@ ol,ul,li {
 .right {
     text-align: right;
 }
+
+.disabled {
+    opacity: .5;
+    filter: grayscale(100%);
+}

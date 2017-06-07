@@ -20,10 +20,18 @@
 <ul class="bionic-action-menu block">
     <li><a><i class="fa fa-bars fa-rotate-90"></i>Columns</a></li>
     <li><a><i class="fa fa-filter"></i>Filter</a></li>
-    <li><a><i class="fa fa-pencil"></i>Edit</a></li>
-    <li><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-arrows-v"></i>Move</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Edit</a></li>
+    <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-arrows-v"></i>Move</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Color</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-calendar-plus-o"></i>Add Tasks</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
 
+<img class="placeholder" src="../planner/images/mediaplan.png" />
+<img class="placeholder" src="../planner/images/mediaplan-selected.png" style="display: none;" />
+
+<!--
 <div class="mediaplan fixedTable" id="demo">
   <header class="fixedTable-header">
     <table class="table table-bordered">
@@ -54,333 +62,8 @@
     </table>
   </div>
 </div>
-
-<!--
-<div class="mediaplan fixedTable" id="demo">
-  <header class="fixedTable-header">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>A</th>
-          <th>B</th>
-          <th>C</th>
-          <th>D</th>
-          <th>E</th>
-          <th>F</th>
-          <th>G</th>
-          <th>H</th>
-          <th>I</th>
-          <th>J</th>
-          <th>K</th>
-          <th>L</th>
-        </tr>
-      </thead>
-    </table>
-  </header>
-  <aside class="fixedTable-sidebar">
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td><input type="checkbox"> 
-              <a class="open-modal" href="templates/modals/worksheet/1.html" rel="modal:open">test</a></td>
-        </tr>
-        <tr>
-          <td><div class="bionic-checkbox"><input type="checkbox" name="example" id="example"/> <label for="example"><span class="box"></span>Item 1</label></div></td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 3</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 4</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 5</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 6</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 7</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 8</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 9</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 10</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 11</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 12</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 13</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 14</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 15</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 16</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"> 17</td>
-        </tr>
-      </tbody>
-    </table>
-  </aside>
-  <div class="fixedTable-body">
-    <table class="table table-bordered">
-      <tbody>
-        <tr>
-          <td><input type="text" class="menu" data-rel="startdate"></td>
-          <td><input type="text" class="menu" data-rel="enddate"></td>
-          <td><input type="text" class="menu"></td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-        <tr>
-          <td>a</td>
-          <td>b</td>
-          <td>c</td>
-          <td>d</td>
-          <td>e</td>
-          <td>f</td>
-          <td>g</td>
-          <td>h</td>
-          <td>i</td>
-          <td>j</td>
-          <td>k</td>
-          <td>l</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
 -->
+
 
 <script type="text/javascript">
     
@@ -395,6 +78,12 @@
                          wanted: [ spreadsheetTab ],
                         // query:["state=done and (name=performance or name=flowchart)"],
                          debug: true } )
+      
+      
+        $(".placeholder").click(function() {
+           $("img").toggle(); 
+           $(".row-select").toggleClass("disabled");
+        });
       
       })
         

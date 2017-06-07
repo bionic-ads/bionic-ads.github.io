@@ -29,7 +29,10 @@
 @import "components/3_components/_tables.scss";
 
 @import "components/4_layouts/_overview.scss";
+@import "components/4_layouts/_move.scss";
 @import "components/4_layouts/_tasks.scss";
+
+@import "components/5_messaging/_notifications.scss";
 
 @import "components/7_prototype/_filters.scss";
 @import "components/7_prototype/_grid.scss";
@@ -238,7 +241,7 @@ h2 {
     display: inline-block;
     height: 42px;
     line-height: 44px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     vertical-align: middle;
     text-align: center;
     font-size: 21px;
@@ -256,7 +259,7 @@ h2 {
     border-radius: 3px;
     margin-bottom: 20px;
     min-height: 220px;
-    min-width: 1250px;
+    min-width: 1200px;
     padding: 20px;
     
     &.tasks {

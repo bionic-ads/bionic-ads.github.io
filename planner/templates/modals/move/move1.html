@@ -1,12 +1,67 @@
+<div class="move">
 <div class="bionic-modal-top">
-    <h1>Move Lines</h1>
+    <h1>Move - 3 Lines</h1>
 </div>
     
 <div class="bionic-modal-body">
 
+    <div class="notification info">
+        <strong>Note:</strong> You've selected lines that are part of a package. If the package header or any line in a package is selected, the entire package will move together.
+    </div>
+
+    <strong>Media Plan</strong>
+    
+    <div class="bionic-radio">
+        <input id="mp-item1" name="mediaplan" type="radio" value="item1" checked />
+        <label for="mp-item1">
+            <span></span>
+            Within This Media Plan
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="mp-item2" name="mediaplan" type="radio" value="item2">
+        <label for="mp-item2">
+            <span></span>
+            To Another Media Plan:
+        </label> 
+    </div>
+        <span class="move-to-another-media-plan input-holder">
+            <input class="ui-autocomplete-input-with-arrow ui-autocomplete-input hasAutoComplete" placeholder="Select Campaign..."
+            type="text" autocomplete="off">
+        </span>   
+        
+        
+        <p><strong>Location</strong></p>
+        
+    <div class="bionic-radio">
+        <input id="item1" name="location" type="radio" value="item1" checked />
+        <label for="item1">
+            <span></span>
+            Before the First Line
+        </label>
+    </div>
+    
+    <div class="bionic-radio" style="margin-bottom: -5px; margin-top: 5px;">
+        <input id="item2" name="location" type="radio" value="item2">
+        <label for="item2">
+            <span></span>
+            After Line <input type="text" value="1" style="text-align: center; width: 60px; padding: 5px;" />
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item3" name="location" type="radio" value="item3">
+        <label for="item3">
+            <span></span>
+            After the Last Line (47)
+        </label>
+    </div>
+    
 </div>
 
 <div class="bionic-modal-footer">
     <a class="blue-button open-modal" rel="modal:open" href="templates/modals/move/move2.html">Move</a>
     <a class="gray-button" rel="modal:close">Cancel</a>
+</div>
 </div>

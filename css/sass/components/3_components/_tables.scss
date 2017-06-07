@@ -1,5 +1,7 @@
 table.module {
     border-collapse: collapse;
+    border-right: 0;
+    min-width: 1200px;
     padding: 0;
     width: auto;
     
@@ -23,6 +25,7 @@ table.module {
         white-space: nowrap;
         width: auto;
         
+        
         img {
         }
         
@@ -32,6 +35,11 @@ table.module {
             margin-right: 10px;
             text-align: center;
             width: 42px;
+            
+            img {
+                max-height: 26px;
+            }
+            
         }
         
         &.line-number {
@@ -40,10 +48,11 @@ table.module {
         
         &.campaign,&.advertiser {
             width: 100%;
+            overflow: hidden;
         }
         
         &.campaign,&.advertiser,&.planned {
-            min-width: 240px;
+            min-width: 220px;
             padding: 0;
             
             a {
@@ -51,6 +60,8 @@ table.module {
                 display: inline-block;
                 width: 100%;
                 box-sizing: border-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         
@@ -67,7 +78,7 @@ table.module {
 
         &.budget, &.planned {
             text-align: right;
-            min-width: 120px;
+            min-width: 160px;
         
             .currency {
                 color: #9b9b9b;
@@ -132,8 +143,12 @@ table.module {
 }
 
 table#mostrecentcampaigns {
+    
+    table-layout: fixed;
+    width: 100%;
+    
     th,td {
-        line-height: 25px;
+        line-height: 24px;
     }
 }
 

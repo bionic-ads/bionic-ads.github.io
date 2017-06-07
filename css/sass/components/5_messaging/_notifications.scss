@@ -1,0 +1,22 @@
+.notification {
+    background: #f5f6f7;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    line-height: 18px;
+    
+    &.info {
+        background: #E6F2F8;
+    }
+
+    &.warning {
+        background: #FDECCC;
+    }
+
+    &.error {
+        background: #FDD6D1;
+    }
+
+}

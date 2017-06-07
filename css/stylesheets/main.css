@@ -114,6 +114,12 @@ ol, ul, li {
   text-align: right;
 }
 
+/* line 38, ../sass/base/_settings.scss */
+.disabled {
+  opacity: .5;
+  filter: grayscale(100%);
+}
+
 /* jQuery UI - v1.11.2 - 2014-10-16
 * http://jqueryui.com
 * Includes: core.css, accordion.css, autocomplete.css, button.css, datepicker.css, dialog.css, draggable.css, menu.css, progressbar.css, resizable.css, selectable.css, selectmenu.css, slider.css, sortable.css, spinner.css, tabs.css, tooltip.css, theme.css
@@ -3883,8 +3889,7 @@ input[type="button"].gray-button,
 
 /* line 95, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li {
-  background: #dfe0e1;
-  margin: 8px 8px 8px 0;
+  margin: 6px 6px 3px 0;
   padding: 0;
   display: block;
   cursor: pointer;
@@ -3894,9 +3899,14 @@ input[type="button"].gray-button,
 .bionic-action-menu li a {
   color: #333;
   display: block;
-  padding: 8px 15px;
+  padding: 6px 12px;
 }
-/* line 109, ../sass/components/2_elements/_buttons.scss */
+/* line 108, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li a:hover {
+  transition: background-color 0.5s ease;
+  background-color: #e9ebed;
+}
+/* line 115, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
@@ -4745,7 +4755,7 @@ a {
 .modal {
   max-width: none;
   padding: 0;
-  width: 500px;
+  width: auto;
 }
 /* line 6, ../sass/components/3_components/_modals.scss */
 .modal h1 {
@@ -4753,24 +4763,39 @@ a {
   font-size: 28px;
 }
 /* line 11, ../sass/components/3_components/_modals.scss */
+.modal .larger {
+  font-size: 18px;
+  line-height: 28px;
+}
+/* line 16, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
   top: 17px;
   right: 10px;
 }
-/* line 16, ../sass/components/3_components/_modals.scss */
+/* line 21, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-top {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
-/* line 21, ../sass/components/3_components/_modals.scss */
+/* line 26, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
-  padding: 15px 25px;
+  padding: 10px 25px;
   min-height: 200px;
 }
-/* line 26, ../sass/components/3_components/_modals.scss */
+/* line 31, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
-  padding: 15px 25px;
   border-top: 1px solid #cfcfcf;
+  padding: 15px 25px;
+  margin-top: 10px;
+}
+/* line 36, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-footer .blue-button {
+  margin-right: 5px;
+}
+
+/* line 44, ../sass/components/3_components/_modals.scss */
+.blocker {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* line 1, ../sass/components/3_components/_navigation.scss */
@@ -4815,6 +4840,132 @@ a {
 /* line 38, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li.current a {
   font-weight: bold;
+}
+
+/* line 1, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container {
+  width: 1150px;
+  margin-left: 25px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border-radius: 3px;
+}
+/* line 10, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary {
+  font-size: 20px;
+  line-height: 28px;
+  width: 270px;
+  height: 100%;
+  margin-top: -20px;
+}
+/* line 18, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary .bionic-overview-label {
+  display: inline-block;
+  font-weight: normal;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 11px;
+  line-height: 11px;
+  color: #9b9b9b;
+  width: 100%;
+}
+/* line 29, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-summary .bionic-overview-label.divider {
+  border-top: 1px solid #cfcfcf;
+  padding-top: 20px;
+}
+/* line 37, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-advertiser-description {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 40px;
+  margin-left: 20px;
+  min-height: 600px;
+  width: 760px;
+}
+/* line 49, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .bionic-advertiser-description img {
+  clear: both;
+  display: block;
+  margin-bottom: 25px;
+  max-width: 690px;
+}
+/* line 57, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state {
+  border: 3px dashed #e2e2e2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: #9b9b9b;
+}
+/* line 67, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state.image-zero-state {
+  height: 300px;
+  background: url(../../planner/images/image.svg) no-repeat center center;
+}
+/* line 72, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .zero-state.description-zero-state {
+  height: 400px;
+  background: url(../../planner/images/pencil.svg) no-repeat center center;
+}
+
+/* line 3, ../sass/components/4_layouts/_move.scss */
+.modal .move {
+  width: 600px;
+}
+/* line 6, ../sass/components/4_layouts/_move.scss */
+.modal .move .bionic-modal-body {
+  min-height: 300px;
+}
+/* line 12, ../sass/components/4_layouts/_move.scss */
+.modal .move-to-another-media-plan {
+  display: block;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+/* line 17, ../sass/components/4_layouts/_move.scss */
+.modal .move-to-another-media-plan input {
+  width: 100%;
+}
+
+/* line 1, ../sass/components/4_layouts/_tasks.scss */
+#noStickerArea {
+  height: 200px;
+  margin: 0 auto;
+  width: 400px;
+}
+/* line 7, ../sass/components/4_layouts/_tasks.scss */
+#noStickerArea.watermark-image {
+  background: url("../../planner/images/home/sticker-tasks-complete-stars.png") no-repeat center 0px;
+}
+
+/* line 1, ../sass/components/5_messaging/_notifications.scss */
+.notification {
+  background: #f5f6f7;
+  border-radius: 3px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+/* line 10, ../sass/components/5_messaging/_notifications.scss */
+.notification.info {
+  background: #E6F2F8;
+}
+/* line 14, ../sass/components/5_messaging/_notifications.scss */
+.notification.warning {
+  background: #FDECCC;
+}
+/* line 18, ../sass/components/5_messaging/_notifications.scss */
+.notification.error {
+  background: #FDD6D1;
 }
 
 /* line 1, ../sass/design_guide_layout/_main.scss */
