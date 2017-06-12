@@ -4,7 +4,15 @@
         width: 600px;
 
         .bionic-modal-body {
-            min-height: 300px;
+            min-height: auto;
+        }
+
+        .bionic-modal-footer {
+            min-height: 40px;
+            
+            img {
+                margin-top: 10px;
+            }
         }
 
     }
@@ -12,7 +20,7 @@
     .move-to-another-media-plan {
     display: block;
     margin-top: 10px;
-    margin-left: 30px;
+//     margin-left: 30px;
 
         input {
             width: 100%;

@@ -4,7 +4,6 @@
         
         li {
             background: #e9ebed;
-            border: 1px solid $medium-gray;
             border-left: none;
             border-bottom: none;
             box-sizing: border-box;
@@ -14,30 +13,32 @@
             font-size: 13px;
             line-height: 18px;
             list-style: none;
-            padding: 3px 15px;
+            
         
             a {
+                border: 1px solid $medium-gray;
+                border-bottom: none;
                 color: #333;
+                display: block;
                 font-weight: normal;
+                padding: 3px 15px;
+                
+                &.current {
+                background: $light-gray;
+                border-bottom: 1px solid #f5f6f7;
+                border-left: 1px solid $medium-gray;
+                border-top: 1px solid $medium-gray;
+                font-weight: bold;
+                margin-bottom: -2px;
+                margin-top: -2px;
+                padding-top: 5px;
+
             }
             
             &:first-child {
                 border-left: 1px solid $medium-gray;
             }
         
-            &.current {
-                background: $light-gray;
-                border-bottom: 1px solid transparent;
-                border-left: 1px solid $medium-gray;
-                font-weight: bold;
-                margin-bottom: -2px;
-                margin-top: -3px;
-                padding-top: 6px;
-                color: #333;
-                
-                a {
-                    font-weight: bold;
-                }
             }
         
         }

@@ -11,10 +11,10 @@
         <ul class="bionic-tab-menu block fullwidth">
        
             <li><a href="#/">Home</a></li>
-            <li>Advertisers</li>
-            <li>Campaigns</li>
-            <li class="current">Schedule</li>
-            <li>Tasks</li>
+            <li><a href="#/advertisers">Advertisers</a></li>
+            <li><a href="#/campaigns">Campaigns</a></li>
+            <li><a href="#/" class="current">Schedule</a></li>
+            <li><a href="#/tasks">Tasks</a></li>
        
         </ul>
 
@@ -104,7 +104,7 @@ id="apply-follow-filter-advertisers">
         <li><a><i class="fa fa-download"></i>Download Excel</a></li>
     </ul>        
 
-    <table id="schedule" class="module">
+    <table id="schedule" class="module heatmap">
 
             <thead>
             <tr>
@@ -157,22 +157,26 @@ id="apply-follow-filter-advertisers">
 
         $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
           
-          var rowNumber = i + 1;
           
-          var scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
-              scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview">'+ item.Advertiser +'</a></td>');
-              scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
-              scheduleTable.append('<td class="right '+ item.two +'">'+ item.two +'</td>');
-              scheduleTable.append('<td class="right '+ item.three +'">'+ item.three +'</td>');
-              scheduleTable.append('<td class="right'+ item.four +'"><a href="#/campaign/mediaplan">'+ item.four +'</a></td>');
-              scheduleTable.append('<td class="right'+ item.five +'">'+ item.five +'</td>');
-              scheduleTable.append('<td class="right'+ item.six +'">'+ item.six +'</td>');
-              scheduleTable.append('<td class="right'+ item.seven +'">'+ item.seven +'</td>');
-              scheduleTable.append('<td class="right'+ item.eight +'">'+ item.eight +'</td>');
-              scheduleTable.append('<td class="right'+ item.nine +'">'+ item.nine +'</td>');
-              scheduleTable.append('<td class="right'+ item.ten +'">'+ item.ten +'</td>');
-              scheduleTable.append('<td class="right'+ item.eleven +'">'+ item.eleven +'</td>');
-              scheduleTable.append('<td class="right'+ item.twelve +'">'+ item.twelve +'</td>');
+          var rowNumber,
+              scheduleTable;
+          
+          rowNumber = i + 1;
+          
+          scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview">'+ item.Advertiser +'</a></td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.two) +'">'+ item.two +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.three) +'">'+ item.three +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.four) +'">'+ item.four +'</a></td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.five) +'">'+ item.five +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.six) +'">'+ item.six +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.seven) +'">'+ item.seven +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.eight) +'">'+ item.eight +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.nine) +'">'+ item.nine +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.ten) +'">'+ item.ten +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.eleven) +'">'+ item.eleven +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.twelve) +'">'+ item.twelve +'</td>');
           scheduleTable.append('</tr>');
           scheduleTable.appendTo("#schedule");
                     
@@ -181,9 +185,26 @@ id="apply-follow-filter-advertisers">
       }
 
 function formatNumber(value){
-    
-//     value.toFixed(2);
-    return value;
+     
+     var round = Math.round;
+     var theNumber = value.replace(/,/g , '');    
+     var rvalue = round(theNumber);
+     
+     var bgcolor = '';
+              
+      if((rvalue > -1)&&(value < 1000)){
+          bgcolor = "";
+      } else if((rvalue >= 1000)&&(rvalue < 10000)) {
+          bgcolor = "light";
+      } else if((rvalue >= 10000)&&(rvalue < 20000)) {
+          bgcolor = "medium";
+      } else if((rvalue >= 20000)&&(rvalue < 30000)) {
+          bgcolor = "medium-dark";
+      } else if(rvalue >= 30000) {
+          bgcolor = "dark";
+      }  
+          
+    return bgcolor;
     
 }
 

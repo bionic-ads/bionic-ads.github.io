@@ -1,0 +1,41 @@
+table#schedule.module.heatmap {
+    
+    width: 100%;
+    
+    th.advertiser,
+    td.advertiser {
+        min-width: 180px;
+        max-width: 220px;
+        width: auto;
+        
+        a {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+    }
+    
+    th:nth-child(n+3),
+    td:nth-child(n+3) {
+        min-width: auto;
+        width: auto;
+    }
+    
+    tr:not(:last-child){
+    .light {
+        background: #FEF2F2;
+    }
+    
+    .medium {
+        background: #FED2D2;
+    }
+    
+    .medium-dark {
+        background: #FDB2B2;
+    }
+    
+    .dark {
+        background: #FB7E7F;
+    }
+    }
+    
+}

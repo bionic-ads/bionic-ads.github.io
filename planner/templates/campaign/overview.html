@@ -1,19 +1,19 @@
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
-    <h1>Campaign Name</h1>
+    <h1 id="campaignname">...</h1>
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
     <ul class="bionic-tab-menu">
-        <li class="current">Overview</li>
-        <li>Settings</li>
-        <li>Proposals</li>
-        <li><a href="#/campaign/mediaplan">Media Plan</a></li>
-        <li>Flowchart</li>
-        <li>Schedule</li>
-        <li>Allocations</li>
-        <li>Tasks</li>
-        <li>Performance</li>
+        <li><a href="#/campaign/overview/" class="current">Overview</a></li>
+        <li><a href="#/campaign/settings/">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan/">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
     </ul>
 </div>
 
@@ -90,3 +90,7 @@
 
 
 </div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+</script>

@@ -10,11 +10,11 @@
     
         <ul class="bionic-tab-menu block fullwidth">
        
-            <li class="current"><a href="#/">Home</a></li>
-            <li>Advertisers</li>
-            <li>Campaigns</li>
+            <li><a href="#/" class="current">Home</a></li>
+            <li><a href="#/advertisers">Advertisers</a></li>
+            <li><a href="#/campaigns">Campaigns</a></li>
             <li><a href="#/schedule">Schedule</a></li>
-            <li>Tasks</li>
+            <li><a href="#/">Tasks</a></li>
        
         </ul>
 
@@ -61,13 +61,15 @@ Here's the content
 </div>
 
 <script type="text/javascript">
-    
+        
+
+        
       var spreadsheetTab = "MostRecentCampaigns";
       
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
       
       $(document).ready( function() {
-        
+
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
                          wanted: [ spreadsheetTab ],
@@ -120,12 +122,12 @@ Here's the content
               }
           }
                     
-          mostRecentCampaigns = $('<tr><td class="campaign"><a href="#/campaign/overview"><span class="sm-campaign-image">'+campaignimage + '</span>' + item.CampaignName + '</a></td>');
-          mostRecentCampaigns.append('<td class="advertiser"><a href="#/advertiser/overview">'+ advertiserimage +'</a></td>');
+          mostRecentCampaigns = $('<tr><td class="campaign"><a href="#/campaign/overview/'+i+'"><span class="sm-campaign-image">'+campaignimage + '</span>' + item.CampaignName + '</a></td>');
+          mostRecentCampaigns.append('<td class="advertiser"><a href="#/advertiser/overview/">'+ advertiserimage +'</a></td>');
           mostRecentCampaigns.append('<td class="startdate">'+ item.StartDate +'</td>');
           mostRecentCampaigns.append('<td>'+ item.EndDate +'</td>');
           mostRecentCampaigns.append('<td class="budget"><span class="currency">$</span>'+ item.Budget +'</td>');
-          mostRecentCampaigns.append('<td class="planned"><a href="#/campaign/mediaplan"><span class="currency">$</span>'+ item.Planned +'</a></td>');
+          mostRecentCampaigns.append('<td class="planned"><a href="#/campaign/mediaplan/'+i+'"><span class="currency">$</span>'+ item.Planned +'</a></td>');
           mostRecentCampaigns.append('<td class="percentplanned">'+ percentplannedbar +'</td>');
           mostRecentCampaigns.append('<td>'+ item.LastViewed +'</td>');
           mostRecentCampaigns.append('</tr>');
@@ -135,4 +137,5 @@ Here's the content
 
         
       }
+      
 </script>

@@ -4761,6 +4761,46 @@ a {
   display: block;
 }
 
+/* line 1, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap {
+  width: 100%;
+}
+/* line 5, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap th.advertiser,
+table#schedule.module.heatmap td.advertiser {
+  min-width: 180px;
+  max-width: 220px;
+  width: auto;
+}
+/* line 11, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap th.advertiser a,
+table#schedule.module.heatmap td.advertiser a {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+/* line 17, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap th:nth-child(n+3),
+table#schedule.module.heatmap td:nth-child(n+3) {
+  min-width: auto;
+  width: auto;
+}
+/* line 24, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap tr:not(:last-child) .light {
+  background: #FEF2F2;
+}
+/* line 28, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap tr:not(:last-child) .medium {
+  background: #FED2D2;
+}
+/* line 32, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap tr:not(:last-child) .medium-dark {
+  background: #FDB2B2;
+}
+/* line 36, ../sass/components/3_components/_heatmap.scss */
+table#schedule.module.heatmap tr:not(:last-child) .dark {
+  background: #FB7E7F;
+}
+
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   max-width: none;
@@ -4815,7 +4855,6 @@ a {
 /* line 5, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li {
   background: #e9ebed;
-  border: 1px solid #cfcfcf;
   border-left: none;
   border-bottom: none;
   box-sizing: border-box;
@@ -4825,31 +4864,30 @@ a {
   font-size: 13px;
   line-height: 18px;
   list-style: none;
+}
+/* line 18, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li a {
+  border: 1px solid #cfcfcf;
+  border-bottom: none;
+  color: #333;
+  display: block;
+  font-weight: normal;
   padding: 3px 15px;
 }
-/* line 19, ../sass/components/3_components/_navigation.scss */
-.bionic-tab-menu li a {
-  color: #333;
-  font-weight: normal;
-}
-/* line 24, ../sass/components/3_components/_navigation.scss */
-.bionic-tab-menu li:first-child {
-  border-left: 1px solid #cfcfcf;
-}
-/* line 28, ../sass/components/3_components/_navigation.scss */
-.bionic-tab-menu li.current {
+/* line 26, ../sass/components/3_components/_navigation.scss */
+.bionic-tab-menu li a.current {
   background: #f5f6f7;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #f5f6f7;
   border-left: 1px solid #cfcfcf;
+  border-top: 1px solid #cfcfcf;
   font-weight: bold;
   margin-bottom: -2px;
-  margin-top: -3px;
-  padding-top: 6px;
-  color: #333;
+  margin-top: -2px;
+  padding-top: 5px;
 }
 /* line 38, ../sass/components/3_components/_navigation.scss */
-.bionic-tab-menu li.current a {
-  font-weight: bold;
+.bionic-tab-menu li a:first-child {
+  border-left: 1px solid #cfcfcf;
 }
 
 /* line 1, ../sass/components/4_layouts/_overview.scss */
@@ -4931,15 +4969,22 @@ a {
 }
 /* line 6, ../sass/components/4_layouts/_move.scss */
 .modal .move .bionic-modal-body {
-  min-height: 300px;
+  min-height: auto;
 }
-/* line 12, ../sass/components/4_layouts/_move.scss */
+/* line 10, ../sass/components/4_layouts/_move.scss */
+.modal .move .bionic-modal-footer {
+  min-height: 40px;
+}
+/* line 13, ../sass/components/4_layouts/_move.scss */
+.modal .move .bionic-modal-footer img {
+  margin-top: 10px;
+}
+/* line 20, ../sass/components/4_layouts/_move.scss */
 .modal .move-to-another-media-plan {
   display: block;
   margin-top: 10px;
-  margin-left: 30px;
 }
-/* line 17, ../sass/components/4_layouts/_move.scss */
+/* line 25, ../sass/components/4_layouts/_move.scss */
 .modal .move-to-another-media-plan input {
   width: 100%;
 }

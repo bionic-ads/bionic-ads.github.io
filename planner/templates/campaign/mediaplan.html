@@ -1,19 +1,19 @@
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
-    <h1>Campaign Name</h1>
+    <h1 id="campaignname">...</h1>
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
     <ul class="bionic-tab-menu">
-        <li><a href="#/campaign/overview">Overview</a></li>
-        <li>Settings</li>
-        <li>Proposals</li>
-        <li class="current">Media Plan</li>
-        <li>Flowchart</li>
-        <li>Schedule</li>
-        <li>Allocations</li>
-        <li>Tasks</li>
-        <li>Performance</li>
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings/">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/proposals/" class="current">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
     </ul>
 </div>
 
@@ -21,7 +21,7 @@
     <li><a><i class="fa fa-bars fa-rotate-90"></i>Columns</a></li>
     <li><a><i class="fa fa-filter"></i>Filter</a></li>
     <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Edit</a></li>
-    <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-arrows-v"></i>Move</a></li>
+    <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-external-link"></i>Move</a></li>
     <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Color</a></li>
     <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
     <li class="row-select disabled"><a><i class="fa fa-calendar-plus-o"></i>Add Tasks</a></li>
@@ -66,7 +66,10 @@
 
 
 <script type="text/javascript">
-    
+
+      if(Campaigns.length > 0){setCampaignInfo();}
+
+/*
       var spreadsheetTab = "MediaPlan";
       
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
@@ -116,9 +119,11 @@
 
         
       }
+*/
 </script>
         
 <script type="text/javascript">
+/*
 (function() {
   var demo, fixedTable;
 
@@ -136,4 +141,5 @@
   demo = new fixedTable($('#demo'));
 
 }).call(this);
+*/
 </script>       

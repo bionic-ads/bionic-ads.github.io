@@ -1,5 +1,10 @@
+var Campaigns = [];
 
 $(document).ready(function() {
+
+    getCampaigns().then(function() {
+      setCampaignInfo();
+    });
     
     var navItem = window.location.hash.substr(2);
     var userState = window.location.hash.substr(2);
@@ -8,30 +13,31 @@ $(document).ready(function() {
     $("#bionic-left-nav").hide();
 
     $("#bionic-loading").delay(500).fadeOut();
+    
 //     $("#bionic-loading").hide();
 
-
-
+    
 });
 
 
 (function(){
         
     window.App = {
+        Campaigns: {},
     	Models: {},
     	Collections: {},
     	Views: {},
     	Router: {}
     };
-    
+            
     App.Router = Backbone.Router.extend({
     	routes: {
     		'' : 'index',
     		'newuser' : 'newUser',
     		'notes' : 'notes',
-    		'campaign/:content' : 'showCampaign',
-    		'advertiser/:content' : 'showAdvertiser',
-    		'schedule' : 'showSchedule'
+    		'campaign/:content/:id' : 'showCampaign',
+    		'advertiser/:content/'  : 'showAdvertiser',
+    		'schedule'              : 'showSchedule'
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -53,15 +59,15 @@ $(document).ready(function() {
             console.log("callouts");
     	},
 	
-    	showCampaign: function(content){
+    	showCampaign: function(content,id){
             console.log(content);
             updateFigawi("show","none");
-    		$("#bionic-main").load("templates/campaign/"+content+".html");
-            
+    		$("#bionic-main").load("templates/campaign/"+content+".html");           
     	},
     	
     	showAdvertiser: function(content){
-            console.log(content);
+            console.log("Advertiser " + content);
+            updateFigawi("show","none");
     		$("#bionic-main").load("templates/advertiser/"+content+".html");
     	},
     	
@@ -72,9 +78,101 @@ $(document).ready(function() {
     });
     
     new App.Router;
-    Backbone.history.start();
+    
+    Backbone.history.start();    
+
+
 
 })();
+
+        
+function getCampaigns(){
+    
+    return new Promise(function(resolve, reject){
+        public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+        spreadsheetTab = 'MostRecentCampaigns';
+        
+        Tabletop.init( { key:       public_spreadsheet_url,
+                         callback:  createList,
+                         wanted:    [ spreadsheetTab ],
+                         debug:     true } );
+                         
+        function createList(data, tabletop) {
+            var i = 0;
+            $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+                i++;
+        
+                campaign = {
+                    campaignID : i,
+                    campaignName : item.CampaignName,
+                    advertiser : item.Advertiser,
+                    start : item.StartDate,
+                    end : item.EndDate,
+                    budget : item.Budget,
+                    planned : item.Planned,
+                    percent : item.PercentPlanned,
+                    lastviewed : item.LastViewed,
+                }
+                
+                Campaigns.push(campaign);
+            
+           })
+           
+          if (Campaigns.length > 0) {
+            resolve("Stuff worked!");
+          }
+          else {
+            reject(Error("It broke"));
+          }     
+                  
+        console.log(Campaigns.length);
+        
+        }
+        
+                           
+    });
+}
+
+
+
+function setCampaignInfo(){
+    
+    var url, theID, newName;
+    console.log("set campaign name "+Campaigns.length);
+    
+    if(Campaigns.length > 0){
+        
+        url = window.location.href;
+        console.log(url);
+        theID = url.substring(url.lastIndexOf('/') + 1);
+
+        // Campaign Name
+        
+        var header = $.find("#campaignname");
+        
+        if( header.length ){
+            
+            
+            newName = Campaigns[theID].campaignName;
+            
+            $("#campaignname").text(newName);
+            console.log(newName);
+        
+        }
+        
+        // Campaign Tabs
+        
+        $('.bionic-tab-menu a').each(function(){
+            this.href += theID;
+        })
+        
+    }
+    
+}
+
+function checkIfFinished(){
+    return(Campaigns.length >= 5);
+}
 
 function updateFigawi(menu,location){
 
@@ -149,3 +247,4 @@ $('body').on('click', '.note a', function(event) {
 $('.menu-button').click(function (){
     $( '.filter-options' ).toggle();
 });
+
