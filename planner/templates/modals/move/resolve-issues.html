@@ -1,0 +1,125 @@
+<div class="move">
+
+<div class="bionic-modal-header">
+    <h1><i class="fa fa-warning orange"></i> We've Got Issues - Move - 9 Lines</h1>
+</div>
+    
+<div class="bionic-modal-body">
+
+    <div class="notification info">
+        The settings of one or more of the selected lines are inconsistent with the settings of the destination campaign. Please indicate how you would like to handle these discrepancies.
+    </div>
+
+    <strong>Currency</strong> of selected lines is different than the destination campaign setting.
+    
+    <div class="bionic-radio">
+        <input id="item1" name="currency" type="radio" value="item1" checked />
+        <label for="item1">
+            <span></span> <strong>Retain</strong> existing currency and switch campaign setting to allow multi-currency
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item2" name="currency" type="radio" value="item2">
+        <label for="item2">
+            <span></span> <strong>Switch</strong> currency of selected lines to campaign currency of USD and clear the rate
+        </label> 
+    </div>
+    
+    <hr>
+        
+    <strong>Agency Compensation</strong> of selected lines is different than the destination campaign setting.
+        
+    <div class="bionic-radio">
+        <input id="item3" name="comp" type="radio" value="item3" checked />
+        <label for="item3">
+            <span></span> <strong>Retain</strong> existing agency compensation by overriding campaign settings on those lines
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item4" name="comp" type="radio" value="item4">
+        <label for="item4">
+            <span></span> <strong>Switch</strong> to campaign settings, which is currently 15% commission on gross media cost
+        </label>
+    </div>
+    
+    <hr>
+        
+    <strong>Ad Serving Rate</strong> of selected lines is different than the destination campaign setting.
+        
+    <div class="bionic-radio">
+        <input id="item5" name="adserving" type="radio" value="item5" checked />
+        <label for="item5">
+            <span></span> <strong>Retain</strong> existing ad serving rate by overriding campaign settings on those lines
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item6" name="adserving" type="radio" value="item6">
+        <label for="item6">
+            <span></span> <strong>Switch</strong> to campaign settings, which is currently USD $5.00 CPM with 10% overage buffer
+        </label>
+    </div>
+
+    <hr>
+        
+    <strong>Task Columns</strong> of selected lines are missing in the destination campaign.
+        
+    <div class="bionic-radio">
+        <input id="item7" name="tasks" type="radio" value="item7" checked />
+        <label for="item7">
+            <span></span> <strong>Add</strong> the missing task columns to the destination campaign
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item8" name="tasks" type="radio" value="item8">
+        <label for="item8">
+            <span></span> <strong>Remove</strong> the task columns from the selected lines
+        </label>
+    </div>
+
+    <hr>
+        
+    <strong>Metric Columns</strong> of selected lines are missing in the destination campaign.
+        
+    <div class="bionic-radio">
+        <input id="item9" name="metrics" type="radio" value="item9" checked />
+        <label for="item9">
+            <span></span> <strong>Add</strong> the missing metric columns to the destination campaign
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item10" name="metrics" type="radio" value="item10">
+        <label for="item10">
+            <span></span> <strong>Remove</strong> the metric columns from the selected lines
+        </label>
+    </div>
+
+    <hr>
+
+    <strong>Picklist Columns</strong> of selected lines are missing in the destination campaign.
+        
+    <div class="bionic-radio">
+        <input id="item11" name="picklists" type="radio" value="item11" checked />
+        <label for="item11">
+            <span></span> <strong>Add</strong> the missing task columns to the destination campaign
+        </label>
+    </div>
+    
+    <div class="bionic-radio">
+        <input id="item12" name="picklists" type="radio" value="item12">
+        <label for="item12">
+            <span></span> <strong>Remove</strong> the task columns from the selected lines
+        </label>
+    </div>
+
+</div>
+
+<div class="bionic-modal-footer">
+    <a class="blue-button open-modal" rel="modal:open" href="templates/modals/move/move2.html">Move</a>
+    <a class="gray-button" rel="modal:close">Cancel</a>
+</div>
+</div>
