@@ -84,19 +84,26 @@ body, table {
   font-size: 13px;
 }
 
-/* line 13, ../sass/base/_settings.scss */
+/* line 12, ../sass/base/_settings.scss */
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* line 18, ../sass/base/_settings.scss */
 li {
   margin: 0;
   padding: 0;
 }
 
-/* line 18, ../sass/base/_settings.scss */
+/* line 23, ../sass/base/_settings.scss */
 ol, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 23, ../sass/base/_settings.scss */
+/* line 28, ../sass/base/_settings.scss */
 .block {
   display: block;
   float: left;
@@ -104,28 +111,28 @@ ol, ul, li {
   box-sizing: border-box;
 }
 
-/* line 30, ../sass/base/_settings.scss */
+/* line 35, ../sass/base/_settings.scss */
 .center {
   text-align: center;
 }
 
-/* line 34, ../sass/base/_settings.scss */
+/* line 39, ../sass/base/_settings.scss */
 .right {
   text-align: right;
 }
 
-/* line 38, ../sass/base/_settings.scss */
+/* line 43, ../sass/base/_settings.scss */
 .disabled {
   opacity: .5;
   filter: grayscale(100%);
 }
 
-/* line 43, ../sass/base/_settings.scss */
+/* line 48, ../sass/base/_settings.scss */
 .hidden {
   display: none;
 }
 
-/* line 47, ../sass/base/_settings.scss */
+/* line 52, ../sass/base/_settings.scss */
 .grayscale {
   filter: grayscale(100%);
 }
@@ -253,6 +260,12 @@ input[type="button"].gray-button,
   background-color: #e9ebed;
 }
 /* line 115, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li img {
+  margin-right: 5px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+/* line 121, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
@@ -1088,7 +1101,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   right: 10px;
 }
 /* line 21, ../sass/components/3_components/_modals.scss */
-.modal .bionic-modal-top {
+.modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
@@ -1394,27 +1407,70 @@ table#schedule td:last-child {
 }
 
 /* line 3, ../sass/components/4_layouts/_move.scss */
-.modal .move {
-  width: 600px;
+.modal i.orange {
+  color: #F39C0F;
 }
-/* line 6, ../sass/components/4_layouts/_move.scss */
+/* line 7, ../sass/components/4_layouts/_move.scss */
+.modal .move {
+  width: 620px;
+}
+/* line 10, ../sass/components/4_layouts/_move.scss */
+.modal .move table {
+  width: 100%;
+}
+/* line 14, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr {
+  border-bottom: 1px solid #ddd;
+}
+/* line 17, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr th {
+  border-bottom: 1px solid #cfcfcf;
+  padding: 0 20px 10px;
+  text-align: left;
+}
+/* line 23, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr td {
+  padding: 10px 20px;
+  text-align: left;
+}
+/* line 27, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr td .bionic-radio {
+  margin: 0;
+}
+/* line 31, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr td:first-child {
+  font-weight: bold;
+  text-align: left;
+  padding-left: 0;
+}
+/* line 39, ../sass/components/4_layouts/_move.scss */
+.modal .move table tr:last-child {
+  border: none;
+}
+/* line 46, ../sass/components/4_layouts/_move.scss */
+.modal .move hr {
+  margin: 15px 0;
+  clear: both;
+}
+/* line 55, ../sass/components/4_layouts/_move.scss */
 .modal .move .bionic-modal-body {
   min-height: auto;
 }
-/* line 10, ../sass/components/4_layouts/_move.scss */
+/* line 59, ../sass/components/4_layouts/_move.scss */
 .modal .move .bionic-modal-footer {
+  clear: both;
   min-height: 40px;
 }
-/* line 13, ../sass/components/4_layouts/_move.scss */
+/* line 63, ../sass/components/4_layouts/_move.scss */
 .modal .move .bionic-modal-footer img {
   margin-top: 10px;
 }
-/* line 20, ../sass/components/4_layouts/_move.scss */
+/* line 70, ../sass/components/4_layouts/_move.scss */
 .modal .move-to-another-media-plan {
   display: block;
   margin-top: 10px;
 }
-/* line 25, ../sass/components/4_layouts/_move.scss */
+/* line 75, ../sass/components/4_layouts/_move.scss */
 .modal .move-to-another-media-plan input {
   width: 100%;
 }

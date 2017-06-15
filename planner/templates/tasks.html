@@ -1,0 +1,101 @@
+
+<div id="bionic-home" class="block fullwidth">
+    
+    <div class="bionic-header block fullwidth">
+    
+        <h1>
+            <span class="avatar"></span>
+            Good Afternoon, Elizabeth!
+        </h1>
+    
+        <ul class="bionic-tab-menu block fullwidth">
+       
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/advertisers">Advertisers</a></li>
+            <li><a href="#/campaigns">Campaigns</a></li>
+            <li><a href="#/schedule">Schedule</a></li>
+            <li><a href="#/tasks" class="current">Tasks</a></li>
+       
+        </ul>
+
+    </div>
+
+<div class="nxm-menu-bar nxm-menu-filters">
+<div class="filter-section filter-search-master">
+<input type="text" placeholder="Search Advertiser" value="" required id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
+<span id="clear-search" class="clear-search-filter">
+    <i class="fa fa-times-circle"></i>
+</span>
+</div>
+
+<div class="filter-section filter-advertiser-follow filter-off">
+<div class="menu-button">
+<div class="menu-item filter-off">
+<span class="active filter modal-open">
+<i class="fa fa-filter"></i>
+<span class="label">All Advertisers</span>
+</span>
+</div>
+<div class="menu-item filter-on">
+<span class="active filter modal-open">
+<i class="fa fa-filter"></i>
+<span class="label">Following</span>
+</span>
+<span class="active filter remove" id="remove-type-filter-advertisers" data-action='removeFilterFollow'>
+<i class="fa fa-times-circle"></i>
+</span>
+</div>
+</div>
+<div class="filter-options" style="display: none;">
+<div class="overlay"></div>
+<div class="filter-middle">
+<ul id="filter-types-list" data-select-all="follow" style="margin-left: 0; min-width: 150px;">
+<li class="divider">
+<div class="bionic-checkbox filter-cb-all pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="ALL" 
+class="filter-cb-all selectAll">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">All Advertisers</span>
+</label>
+</div>
+</li>
+<li class="">
+<div class="bionic-checkbox pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="FOLLOWING" 
+class="filter-cb-sub">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">Following</span>
+</label>
+</div>
+</li>
+<li class="">
+<div class="bionic-checkbox pad" tabindex="0" >
+<input type="checkbox" 
+name="<%= theID %>" 
+id="<%= theID %>" 
+value="NOT_FOLLOWING" 
+class="filter-cb-sub">
+<label for="<%= theID %>">
+<span class="box"></span>
+<span class="text filter-handle">Not Following</span>
+</label>
+</div>
+</li>
+</ul>
+</div>
+<div class="footer-section-not">
+<input type="button" value="Apply" class="next-btn blue-button"
+tabindex="0"
+id="apply-follow-filter-advertisers">
+</div>
+</div>
+</div>
+</div>

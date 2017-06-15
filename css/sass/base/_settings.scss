@@ -9,6 +9,11 @@ body, table {
     font-size: 13px;
 }
 
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid #ddd;
+}
 
 li {
     margin: 0;

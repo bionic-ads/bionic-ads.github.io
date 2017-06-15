@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>bucket-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="bucket-icon" transform="translate(-0.755446, -1.500000)">
+            <g id="icon-bucket">
+                <path d="M2.39205291,6.66769564 C2.39205291,5.56135882 3.28145092,4.73876201 4.39235968,4.83152494 L7.24114383,5.06940367 L7.24114383,5.06940367 C7.97184947,5.80010931 9.19192308,7.02018292 9.51321516,7.341475 L9.51321516,7.341475 L9.53658246,10.8477948 C9.54396385,11.9553891 8.65786804,12.8532718 7.5560749,12.8532718 L4.38592565,12.8532718 C3.28474014,12.8532718 2.39205291,11.9613408 2.39205291,10.8500718 L2.39205291,6.66769564 Z" id="Rectangle-3" fill="#CCCCCC" transform="translate(5.964341, 8.838831) rotate(-315.000000) translate(-5.964341, -8.838831) "></path>
+                <path d="M7.03556743,2.1542006 L7.03556743,5.73314796" id="Line" stroke="#777777" stroke-linecap="square"></path>
+                <path d="M10.2894737,7.93993483 L10.2894737,11.5188822" id="Line-Copy" stroke="#777777" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M11.1842105,8.83467167 L11.1842105,10.6241454" id="Line-Copy-2" stroke="#777777" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M6.14083059,2.1542006 L7.03556743,2.1542006" id="Line" stroke="#777777" stroke-linecap="square"></path>
+                <path d="M5.24609375,2.1542006 L5.24609375,4.83841112" id="Line" stroke="#777777" stroke-linecap="square"></path>
+            </g>
+            <rect id="Rectangle-10" fill="#69AED4" x="0.894736842" y="15.2105263" width="11.6315789" height="1.78947368"></rect>
+        </g>
+    </g>
+</svg>

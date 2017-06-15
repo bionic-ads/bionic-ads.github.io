@@ -32,11 +32,13 @@ $(document).ready(function() {
             
     App.Router = Backbone.Router.extend({
     	routes: {
-    		'' : 'index',
-    		'newuser' : 'newUser',
-    		'notes' : 'notes',
+    		''                      : 'index',
+    		'newuser'               : 'newUser',
+    		'notes'                 : 'notes',
     		'campaign/:content/:id' : 'showCampaign',
     		'advertiser/:content/'  : 'showAdvertiser',
+    		'advertisers'           : 'showAdvertisers',
+    		'campaigns'             : 'showCampaigns',
     		'schedule'              : 'showSchedule'
     	},
     	index: function(){
@@ -70,6 +72,16 @@ $(document).ready(function() {
             updateFigawi("show","none");
     		$("#bionic-main").load("templates/advertiser/"+content+".html");
     	},
+    	
+    	showAdvertisers: function(){
+    		$("#bionic-main").load("templates/advertisers.html");
+    		
+    	}, 
+    	
+    	showCampaigns: function(){
+    		$("#bionic-main").load("templates/campaigns.html");
+    		
+    	},       	
     	
     	showSchedule: function(){
     		$("#bionic-main").load("templates/schedule.html");

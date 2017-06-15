@@ -22,7 +22,7 @@
     <li><a><i class="fa fa-filter"></i>Filter</a></li>
     <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Edit</a></li>
     <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-external-link"></i>Move</a></li>
-    <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Color</a></li>
+    <li class="row-select disabled"><a><img src="../planner/images/bucket.svg"> Color</a></li>
     <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
     <li class="row-select disabled"><a><i class="fa fa-calendar-plus-o"></i>Add Tasks</a></li>
     <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
@@ -68,7 +68,11 @@
 <script type="text/javascript">
 
       if(Campaigns.length > 0){setCampaignInfo();}
-
+      
+        $(".placeholder").click(function() {
+           $(".placeholder").toggle(); 
+           $(".row-select").toggleClass("disabled");
+        });
 /*
       var spreadsheetTab = "MediaPlan";
       
@@ -83,10 +87,7 @@
                          debug: true } )
       
       
-        $(".placeholder").click(function() {
-           $("img").toggle(); 
-           $(".row-select").toggleClass("disabled");
-        });
+
       
       })
         
