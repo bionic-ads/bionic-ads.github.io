@@ -1,0 +1,80 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <ul class="bionic-tab-menu">
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan-metrics/">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
+    </ul>
+</div>
+
+<ul class="bionic-subnav-menu">
+    <li><a>Basic Info</a></li>
+    <li><a>Image</a></li>
+    <li><a>Description</a></li>
+    <li><a>Contacts</a></li>
+    <li><a>Currency</a></li>
+    <li><a>Agency Compensation</a></li>
+    <li><a>Ad Serving</a></li>
+    <li><a>Task Columns</a></li>
+    <li><a class="current">KPI Columns</a></li>
+    <li><a>Picklist Columns</a></li>
+</ul>
+
+<div class="block has-subnav">
+    
+<h2>Key Performance Indicator (KPI) Columns</h2> 
+
+<table class="addToCampaign custom-form-controls simple gridlines">
+    <thead>
+        <tr>
+            <th colspan="2">KPI</th>
+            <th colspan="2">Default Cost Efficiency Goal</th>
+            <th>Cost Basis</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Impressions</td>
+            <td class="editable narrow"><span class="currency-symbol">$</span><input class="right narrow" type="text" value="25.00"></td>
+            <td>CPM - Cost per Thousand</td>
+                <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
+            <td>Remove</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Clicks</td>
+                <td class="editable narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="10.00"></td>
+            <td>CPC - Cost per Click</td>
+                <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
+            <td>Remove</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Customers</td>
+                <td class="editable narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="600.00"></td>
+            <td>CAC - Customer Acquisition Cost</td>
+                <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
+            <td>Remove</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<a class="blue-button open-modal" href="templates/modals/settings/addmetrics.html" rel="modal:open" >Add KPIs</a>
+
+</div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+</script>

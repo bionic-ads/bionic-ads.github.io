@@ -1,0 +1,65 @@
+<div class="addmetrics">
+    <div class="bionic-modal-header">
+        <h1>Add KPIs</h1>
+    </div>
+    <div class="bionic-modal-header">
+        <input type="text" class="search" placeholder="Search" style="width: 60%; margin-right: 10px;" /> 
+        <a>Can't Find a KPI?</a>
+    </div>
+</div>
+    
+<div class="bionic-modal-body custom-form-controls" style="height: 300px;">
+
+    <ul id="MetricMenu">
+    
+    </ul>
+     
+</div>
+
+<div class="bionic-modal-footer" style="margin-top: 0;">
+    <a class="blue-button" rel="modal:close">Apply</a>
+    <a class="gray-button" rel="modal:close">Cancel</a>
+</div>
+</div>
+
+<script>
+
+      var spreadsheetTab = "Metrics";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+
+
+
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var metric,
+              costType, 
+              costBasis,
+              checked;           
+          
+          metric =      item.Metric;
+          costType =    item.CostType;
+          costBasis =   item.CostBasis;
+          checked =     item.Checked;
+                    
+              metricMenu = $('<li><input id="cb'+i+'" type="checkbox" '+checked+'><label for="cb'+i+'">'+metric+'</label> </li>');
+              metricMenu.appendTo("#MetricMenu");
+        
+        });
+
+        
+      }
+
+</script>

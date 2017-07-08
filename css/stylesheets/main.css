@@ -118,7 +118,7 @@ ol, ul, li {
 
 /* line 39, ../sass/base/_settings.scss */
 .right {
-  text-align: right;
+  text-align: right !important;
 }
 
 /* line 43, ../sass/base/_settings.scss */
@@ -3989,6 +3989,52 @@ input[type="button"].gray-button,
   padding: 2px 0 3px;
 }
 
+/* line 58, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls {
+  user-select: none;
+}
+/* line 62, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+/* line 67, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input:checked + label::before {
+  background-color: #69AED4;
+  border: 3px solid #69AED4;
+  color: white;
+  content: '\f00c';
+}
+/* line 74, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls label {
+  cursor: pointer;
+  line-height: 21px;
+  top: 3px;
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  width: 100%;
+}
+/* line 84, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls label::before {
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  content: '';
+  cursor: pointer;
+  display: block;
+  font-family: 'FontAwesome';
+  float: left;
+  line-height: 16px;
+  margin-right: 10px;
+  padding-left: 1px;
+  position: relative;
+  height: 21px;
+  width: 21px;
+  border: 3px solid #eee;
+  transition: background-color .1s;
+}
+
 /* line 1, ../sass/components/2_elements/_dropdowns.scss */
 input.ui-autocomplete-input-with-arrow {
   background-image: url("../images/arrow-down.svg");
@@ -4009,6 +4055,17 @@ input.ui-autocomplete-input-with-arrow.combobox {
   background-size: auto auto;
   box-sizing: border-box;
   width: 230px;
+}
+
+/* line 23, ../sass/components/2_elements/_dropdowns.scss */
+input.dropdown {
+  background-image: url("../images/arrow-down.svg");
+  background-origin: padding-box;
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  box-sizing: border-box;
+  padding-right: 30px;
 }
 
 /* line 1, ../sass/components/2_elements/_inputs.scss */
@@ -4394,6 +4451,75 @@ a {
   display: block !important;
 }
 
+/* line 1, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle {
+  display: table;
+  padding-right: 8px;
+}
+/* line 6, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle a {
+  color: #333;
+}
+/* line 10, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li {
+  background: #f5f6f7;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  min-width: 100px;
+}
+/* line 19, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li:first-child {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/* line 23, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li:last-child {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 29, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"] {
+  display: none;
+}
+/* line 32, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"]:checked + label {
+  background: linear-gradient(#cfcfcf, #e9ebed);
+}
+/* line 36, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"]:disabled + label {
+  cursor: default;
+}
+/* line 41, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label {
+  cursor: pointer;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+/* line 49, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label span.text {
+  padding: 0 7px;
+}
+/* line 53, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label i.fa {
+  padding: 0 4px 0 7px;
+}
+/* line 56, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label i.fa ~ span.text {
+  padding-left: 0px;
+}
+
 /* line 1, ../sass/components/2_elements/_users.scss */
 .avatar {
   color: #fff;
@@ -4774,6 +4900,26 @@ a {
   display: block;
 }
 
+/* line 300, ../sass/components/3_components/_filters.scss */
+.bionic-filter {
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 7px 10px;
+}
+
+/* line 309, ../sass/components/3_components/_filters.scss */
+.bionic-filter-menu {
+  background: #fff;
+  display: block;
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 140px;
+}
+
 /* line 1, ../sass/components/3_components/_heatmap.scss */
 table#schedule.module.heatmap {
   width: 100%;
@@ -4817,55 +4963,59 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   max-width: none;
+  min-width: 400px;
   padding: 0;
   width: auto;
 }
-/* line 6, ../sass/components/3_components/_modals.scss */
+/* line 7, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
 }
-/* line 11, ../sass/components/3_components/_modals.scss */
+/* line 12, ../sass/components/3_components/_modals.scss */
 .modal .larger {
   font-size: 18px;
   line-height: 28px;
 }
-/* line 16, ../sass/components/3_components/_modals.scss */
+/* line 17, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
   top: 17px;
   right: 10px;
 }
-/* line 21, ../sass/components/3_components/_modals.scss */
+/* line 22, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
-/* line 26, ../sass/components/3_components/_modals.scss */
+/* line 27, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
-  padding: 10px 25px;
+  padding: 10px 25px 20px;
   min-height: 200px;
+  overflow-y: auto;
 }
-/* line 31, ../sass/components/3_components/_modals.scss */
+/* line 33, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
-  margin-top: 10px;
 }
-/* line 36, ../sass/components/3_components/_modals.scss */
+/* line 37, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 44, ../sass/components/3_components/_modals.scss */
+/* line 45, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* line 1, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu {
+  display: block;
+  float: left;
   margin-top: 5px;
+  margin-left: 0 !important;
 }
-/* line 5, ../sass/components/3_components/_navigation.scss */
+/* line 8, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li {
   background: #e9ebed;
   border-left: none;
@@ -4878,7 +5028,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   line-height: 18px;
   list-style: none;
 }
-/* line 18, ../sass/components/3_components/_navigation.scss */
+/* line 21, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a {
   border: 1px solid #cfcfcf;
   border-bottom: none;
@@ -4887,7 +5037,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-weight: normal;
   padding: 3px 15px;
 }
-/* line 26, ../sass/components/3_components/_navigation.scss */
+/* line 29, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a.current {
   background: #f5f6f7;
   border-bottom: 1px solid #f5f6f7;
@@ -4898,9 +5048,39 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: -2px;
   padding-top: 5px;
 }
-/* line 38, ../sass/components/3_components/_navigation.scss */
+/* line 41, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a:first-child {
   border-left: 1px solid #cfcfcf;
+}
+
+/* line 50, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu {
+  display: block;
+  float: left;
+  margin: 0 25px;
+}
+/* line 56, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li {
+  font-size: 13px;
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  width: 170px;
+}
+/* line 63, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  padding: 10px 10px 10px 15px;
+}
+/* line 72, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li a.current {
+  border: 1px solid #cfcfcf;
+  font-weight: bold;
 }
 
 /* line 1, ../sass/components/4_layouts/_overview.scss */

@@ -1,5 +1,6 @@
 .modal {
     max-width: none;
+    min-width: 400px;
     padding: 0;
     width: auto;
     
@@ -24,14 +25,14 @@
     }
     
     .bionic-modal-body {
-        padding: 10px 25px;  
+        padding: 10px 25px 20px;  
         min-height: 200px;
+        overflow-y: auto;
     }
     
     .bionic-modal-footer {
         border-top: 1px solid #cfcfcf;
         padding: 15px 25px;  
-        margin-top: 10px;
         
         .blue-button {
             margin-right: 5px;

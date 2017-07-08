@@ -295,3 +295,23 @@
     }
 
 }// End of tasks-filters
+
+
+.bionic-filter {
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 8px 0 ;
+    padding: 7px 10px;
+}
+
+.bionic-filter-menu {
+    background: #fff;
+    display: block;
+    float: left;
+    padding: 5px;
+    position: relative;
+    width: 140px;
+    
+}

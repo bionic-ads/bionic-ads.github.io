@@ -28,8 +28,7 @@
     <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
 
-<img class="placeholder" src="../planner/images/mediaplan.png" />
-<img class="placeholder" src="../planner/images/mediaplan-selected.png" style="display: none;" />
+<img class="placeholder" src="../planner/images/mediaplan-metrics.png" />
 
 <!--
 <div class="mediaplan fixedTable" id="demo">
@@ -69,58 +68,6 @@
 
       if(Campaigns.length > 0){setCampaignInfo();}
       
-        $(".placeholder").click(function() {
-           $(".placeholder").toggle(); 
-           $(".row-select").toggleClass("disabled");
-        });
-/*
-      var spreadsheetTab = "MediaPlan";
-      
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
-      
-      $(document).ready( function() {
-        
-        Tabletop.init( { key: public_spreadsheet_url,
-                         callback: showInfo,
-                         wanted: [ spreadsheetTab ],
-                        // query:["state=done and (name=performance or name=flowchart)"],
-                         debug: true } )
-      
-      
-
-      
-      })
-        
-      function showInfo(data, tabletop) {
-
-        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
-          var rowNumber = i + 1;
-          
-          var mediaPlanFirstColumns = $('<tr><td class="line-number">' + rowNumber + '</td>');
-          mediaPlanFirstColumns.append('<td>'+ '<input type="checkbox"> ' +'</td>');
-          mediaPlanFirstColumns.append('<td>'+ '' +'</td>');
-          mediaPlanFirstColumns.append('<td>'+ '' +'</td>');
-          mediaPlanFirstColumns.append('<td>'+ item.PlacementName +'</td>');
-          mediaPlanFirstColumns.append('</tr>');
-          mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns");
-                    
-          var mediaPlanBody = $('<tr><td>' + item.BionicID + '</td>');
-          mediaPlanBody.append('<td>'+ item.Program +'</td>');
-          mediaPlanBody.append('<td>'+ item.Vendor +'</td>');
-          mediaPlanBody.append('<td>'+ item.Product +'</td>');
-          mediaPlanBody.append('<td>'+ item.Targeting +'</td>');
-          mediaPlanBody.append('<td>'+ item.Channel +'</td>');
-          mediaPlanBody.append('<td>'+ item.AdUnit +'</td>');
-          mediaPlanBody.append('<td>'+ item.AdSpecs +'</td>');
-          mediaPlanBody.append('<td>'+ item.StartDate +'</td>');
-          mediaPlanBody.append('<td>'+ item.EndDate +'</td>');
-          mediaPlanBody.append('</tr>');
-          mediaPlanBody.appendTo("#MediaPlanBody");
-        })
-
-        
-      }
-*/
 </script>
         
 <script type="text/javascript">

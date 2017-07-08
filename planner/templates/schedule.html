@@ -100,6 +100,21 @@ id="apply-follow-filter-advertisers">
 </div>
 </div>
 
+
+<div class="bionic-filter bionic-filter-off">All Advertisers</div>
+
+<div class="bionic-filter-menu custom-form-controls">
+    
+  <ul>
+      <li><input id="cb1" type="checkbox" checked>  <label for="cb1">All Advertisers</label></li>
+
+      <li><input id="cb2" type="checkbox" checked>  <label for="cb2">Item 1</label></li>
+
+      <li><input id="cb3" type="checkbox" checked>  <label for="cb3">Item 2</label></li>
+  </ul>
+  
+</div>
+
     <ul class="bionic-action-menu block">
         <li><a><i class="fa fa-download"></i>Download Excel</a></li>
     </ul>        
@@ -164,7 +179,7 @@ id="apply-follow-filter-advertisers">
           rowNumber = i + 1;
           
           scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
-          scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview">'+ item.Advertiser +'</a></td>');
+          scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview/">'+ item.Advertiser +'</a></td>');
           scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
           scheduleTable.append('<td class="right '+ formatNumber(item.two) +'">'+ item.two +'</td>');
           scheduleTable.append('<td class="right '+ formatNumber(item.three) +'">'+ item.three +'</td>');

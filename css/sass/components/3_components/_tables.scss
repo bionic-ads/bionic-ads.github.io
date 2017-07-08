@@ -1,3 +1,29 @@
+.currency-symbol {
+    color: #9b9b9b;
+    float: left;
+}
+.editable .currency-symbol {
+    position: absolute;
+    margin: 10px;
+}
+
+.editable {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+.readonly {
+    background: #f5f6f7;
+}
+
+table {
+    td {
+        background: #fff;
+    }
+    tr:hover td{
+        background: #E6F2F8 !important;
+    }
+}
+
 table.module {
     border-collapse: collapse;
     border-right: 0;
@@ -185,4 +211,307 @@ table#schedule {
         width: auto;
     }
     
+}
+
+
+table.goals {
+    
+    clear: both;
+    width: 950px;
+    
+    th {
+        text-align: left;
+    }
+    
+    td,th {
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid #ddd;
+        white-space: nowrap;
+        
+        input[type='checkbox'], label {
+            max-width: 21px;
+            margin: 0 15px 0 0;
+        }
+        
+        &:first-child {
+            padding-left: 15px;
+        }        
+        
+        &.narrow {
+            width: 80px;
+            text-align: right
+        }    
+
+        
+    }
+    
+    &.budget {
+        
+        tr:not(.spacer){
+        td:first-child {
+//             font-weight: bold;
+/*
+            border-color: transparent;
+            border-right: 1px solid #ddd;
+            padding-left: 0;
+*/
+        }
+        }
+        
+        td:nth-child(2) {
+            font-weight: normal;
+            text-align: right;
+        }
+        
+        td:nth-child(3) {
+            background: transparent !important;
+            border-color: #f5f6f7;
+            text-align: right;
+        }
+    }
+    
+    td:first-child {
+        min-width: 180px;
+    }
+    
+    
+    td:nth-child(2) {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    td:nth-child(4) {
+        min-width: 150px;
+    }
+        
+    tr:hover {
+        td {
+            input {
+                border: 1px solid $blue;
+            }
+        }
+    }
+    
+    tr.spacer td, tr.spacer:hover td {
+        border: 0;
+        background: transparent !important;
+        padding: 5px;
+    }
+    
+    .uncategorized, 
+    td:nth-child(3).uncategorized {
+        background: #FCF0BF !important;
+//         border-color:#FCF0BF !important;
+    }
+    
+
+    
+    td {
+        
+
+        
+        &.editable {
+            color: #333;
+            padding: 0;
+            
+            input[type="text"] {
+                padding: 10px;
+                width: 100%;
+
+                &:hover {
+                    border: 1px solid $blue;
+                }
+            }
+        }
+        
+         input[type="text"] {
+            border: 1px solid #fff;
+            border-radius: 0;
+            
+            &:focus {
+                border-width: 1px !important;
+            }
+            
+        }        
+    }
+    
+}
+
+table.addToCampaign {
+    
+    clear: both;
+    max-width: 950px;
+    
+    th {
+        text-align: left;
+    }
+    
+    
+    td,th {
+        box-sizing: border-box;
+        padding: 10px;
+        border: 0;
+        white-space: nowrap;
+        
+        input[type='checkbox'], label {
+            max-width: 21px;
+            margin: 0 15px 0 0;
+        }
+        
+        &:first-child {
+            border-right: 0;
+            min-width: 20px !important;
+        }        
+    }
+    
+    &.budget {
+        
+        td:nth-child(2) {
+            font-weight: normal;
+            text-align: right;
+        }
+        
+        td:nth-child(3) {
+            background: transparent !important;
+            border: 0;
+        }
+    }
+
+    
+/*
+    td:first-child {
+        padding-left: 20px;
+    }
+    
+    th:first-child {
+        padding-left: 20px;
+    }    
+*/
+    
+    
+    td:nth-child(2) {
+        color: #333;
+        border-left:0;
+    }
+    
+    td:nth-child(4) {
+        min-width: 150px;
+        text-overflow: ellipsis;
+    }
+ 
+     td:nth-child(5) {
+        min-width: 120px;
+        text-overflow: ellipsis;
+    }   
+    
+    td:last-child {
+        color: #fff;
+        cursor: pointer;
+    }
+        
+    &.simple {
+        th:first-child,
+        td:first-child {
+            min-width: 180px;
+            padding-left: 15px;
+        }
+        
+        td:last-child {
+            min-width: 80px;
+        }
+    }
+        
+    tr:hover {
+        
+        td:first-child {
+            cursor: pointer;
+            text-indent: -9999px;
+            background: url(../../planner/images/move.png) center no-repeat !important;
+            background-size: 16px 13px !important;
+            background-color: #E6F2F8 !important;
+        }
+        
+        td {
+            input {
+                border: 1px solid $blue;
+            }
+        }
+        
+        td:last-child {
+            color: $blue;            
+            
+        }
+    
+    }
+    
+    td {
+        
+        border-bottom: 2px solid #f5f6f7;
+        
+                    &.narrow {
+                    width: 80px;
+                    text-align: right
+                }    
+
+        
+        &.editable {
+            color: #333;
+            padding: 0;
+            
+            
+            input[type="text"] {
+                padding: 10px;
+                width: 100%;
+                
+            
+                
+                &:hover {
+                    border: 1px solid $blue;
+                }
+            }
+            input[type="text"].dropdown::after {
+                content: "\f0d7";
+                font-family: "FontAwesome";
+                font-style: normal;
+                position: absolute;
+            }
+        }
+        
+         input[type="text"] {
+            border: 1px solid #fff;
+            border-radius: 0;
+            
+
+            
+            &:focus {
+                border-width: 1px !important;
+            }
+            
+        }        
+    }
+    
+}
+
+table.gridlines {
+    th,td {
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+    
+    &.addToCampaign th:first-child {
+        padding-left: 15px;
+    }
+    
+    &.addToCampaign th:last-child,
+    &.addToCampaign td:last-child
+      {
+        color: transparent;
+        border-color: transparent;
+        background: transparent;
+    }
+    &.addToCampaign tr:hover td:last-child {
+        background: transparent !important;
+    }
+
 }

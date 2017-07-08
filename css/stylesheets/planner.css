@@ -118,7 +118,7 @@ ol, ul, li {
 
 /* line 39, ../sass/base/_settings.scss */
 .right {
-  text-align: right;
+  text-align: right !important;
 }
 
 /* line 43, ../sass/base/_settings.scss */
@@ -325,6 +325,52 @@ input[type="button"].gray-button,
   padding: 2px 0 3px;
 }
 
+/* line 58, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls {
+  user-select: none;
+}
+/* line 62, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+/* line 67, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input:checked + label::before {
+  background-color: #69AED4;
+  border: 3px solid #69AED4;
+  color: white;
+  content: '\f00c';
+}
+/* line 74, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls label {
+  cursor: pointer;
+  line-height: 21px;
+  top: 3px;
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  width: 100%;
+}
+/* line 84, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls label::before {
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  content: '';
+  cursor: pointer;
+  display: block;
+  font-family: 'FontAwesome';
+  float: left;
+  line-height: 16px;
+  margin-right: 10px;
+  padding-left: 1px;
+  position: relative;
+  height: 21px;
+  width: 21px;
+  border: 3px solid #eee;
+  transition: background-color .1s;
+}
+
 /* line 1, ../sass/components/2_elements/_dropdowns.scss */
 input.ui-autocomplete-input-with-arrow {
   background-image: url("../images/arrow-down.svg");
@@ -345,6 +391,17 @@ input.ui-autocomplete-input-with-arrow.combobox {
   background-size: auto auto;
   box-sizing: border-box;
   width: 230px;
+}
+
+/* line 23, ../sass/components/2_elements/_dropdowns.scss */
+input.dropdown {
+  background-image: url("../images/arrow-down.svg");
+  background-origin: padding-box;
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  box-sizing: border-box;
+  padding-right: 30px;
 }
 
 /* line 1, ../sass/components/2_elements/_inputs.scss */
@@ -730,6 +787,75 @@ a {
   display: block !important;
 }
 
+/* line 1, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle {
+  display: table;
+  padding-right: 8px;
+}
+/* line 6, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle a {
+  color: #333;
+}
+/* line 10, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li {
+  background: #f5f6f7;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+  min-width: 100px;
+}
+/* line 19, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li:first-child {
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+/* line 23, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle li:last-child {
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 29, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"] {
+  display: none;
+}
+/* line 32, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"]:checked + label {
+  background: linear-gradient(#cfcfcf, #e9ebed);
+}
+/* line 36, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle input[type="radio"]:disabled + label {
+  cursor: default;
+}
+/* line 41, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label {
+  cursor: pointer;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+/* line 49, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label span.text {
+  padding: 0 7px;
+}
+/* line 53, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label i.fa {
+  padding: 0 4px 0 7px;
+}
+/* line 56, ../sass/components/2_elements/_toggle.scss */
+.page-view-toggle label i.fa ~ span.text {
+  padding-left: 0px;
+}
+
 /* line 1, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters {
   display: block;
@@ -1039,6 +1165,26 @@ a {
   display: block;
 }
 
+/* line 300, ../sass/components/3_components/_filters.scss */
+.bionic-filter {
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 7px 10px;
+}
+
+/* line 309, ../sass/components/3_components/_filters.scss */
+.bionic-filter-menu {
+  background: #fff;
+  display: block;
+  float: left;
+  padding: 5px;
+  position: relative;
+  width: 140px;
+}
+
 /* line 1, ../sass/components/3_components/_heatmap.scss */
 table#schedule.module.heatmap {
   width: 100%;
@@ -1082,55 +1228,59 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   max-width: none;
+  min-width: 400px;
   padding: 0;
   width: auto;
 }
-/* line 6, ../sass/components/3_components/_modals.scss */
+/* line 7, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
 }
-/* line 11, ../sass/components/3_components/_modals.scss */
+/* line 12, ../sass/components/3_components/_modals.scss */
 .modal .larger {
   font-size: 18px;
   line-height: 28px;
 }
-/* line 16, ../sass/components/3_components/_modals.scss */
+/* line 17, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
   top: 17px;
   right: 10px;
 }
-/* line 21, ../sass/components/3_components/_modals.scss */
+/* line 22, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
-/* line 26, ../sass/components/3_components/_modals.scss */
+/* line 27, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
-  padding: 10px 25px;
+  padding: 10px 25px 20px;
   min-height: 200px;
+  overflow-y: auto;
 }
-/* line 31, ../sass/components/3_components/_modals.scss */
+/* line 33, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
-  margin-top: 10px;
 }
-/* line 36, ../sass/components/3_components/_modals.scss */
+/* line 37, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 44, ../sass/components/3_components/_modals.scss */
+/* line 45, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* line 1, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu {
+  display: block;
+  float: left;
   margin-top: 5px;
+  margin-left: 0 !important;
 }
-/* line 5, ../sass/components/3_components/_navigation.scss */
+/* line 8, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li {
   background: #e9ebed;
   border-left: none;
@@ -1143,7 +1293,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   line-height: 18px;
   list-style: none;
 }
-/* line 18, ../sass/components/3_components/_navigation.scss */
+/* line 21, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a {
   border: 1px solid #cfcfcf;
   border-bottom: none;
@@ -1152,7 +1302,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-weight: normal;
   padding: 3px 15px;
 }
-/* line 26, ../sass/components/3_components/_navigation.scss */
+/* line 29, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a.current {
   background: #f5f6f7;
   border-bottom: 1px solid #f5f6f7;
@@ -1163,12 +1313,73 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: -2px;
   padding-top: 5px;
 }
-/* line 38, ../sass/components/3_components/_navigation.scss */
+/* line 41, ../sass/components/3_components/_navigation.scss */
 .bionic-tab-menu li a:first-child {
   border-left: 1px solid #cfcfcf;
 }
 
+/* line 50, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu {
+  display: block;
+  float: left;
+  margin: 0 25px;
+}
+/* line 56, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li {
+  font-size: 13px;
+  list-style: none;
+  margin: 10px 0 10px 0;
+  padding: 0;
+  width: 170px;
+}
+/* line 63, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li a {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  padding: 10px 10px 10px 15px;
+}
+/* line 72, ../sass/components/3_components/_navigation.scss */
+.bionic-subnav-menu li a.current {
+  border: 1px solid #cfcfcf;
+  font-weight: bold;
+}
+
 /* line 1, ../sass/components/3_components/_tables.scss */
+.currency-symbol {
+  color: #9b9b9b;
+  float: left;
+}
+
+/* line 5, ../sass/components/3_components/_tables.scss */
+.editable .currency-symbol {
+  position: absolute;
+  margin: 10px;
+}
+
+/* line 10, ../sass/components/3_components/_tables.scss */
+.editable {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+/* line 14, ../sass/components/3_components/_tables.scss */
+.readonly {
+  background: #f5f6f7;
+}
+
+/* line 19, ../sass/components/3_components/_tables.scss */
+table td {
+  background: #fff;
+}
+/* line 22, ../sass/components/3_components/_tables.scss */
+table tr:hover td {
+  background: #E6F2F8 !important;
+}
+
+/* line 27, ../sass/components/3_components/_tables.scss */
 table.module {
   border-collapse: collapse;
   border-right: 0;
@@ -1176,27 +1387,27 @@ table.module {
   padding: 0;
   width: auto;
 }
-/* line 8, ../sass/components/3_components/_tables.scss */
+/* line 34, ../sass/components/3_components/_tables.scss */
 table.module thead {
   background: #f5f6f7;
   width: 100%;
 }
-/* line 13, ../sass/components/3_components/_tables.scss */
+/* line 39, ../sass/components/3_components/_tables.scss */
 table.module tr {
   border-bottom: 1px solid #f0f0f0;
 }
-/* line 16, ../sass/components/3_components/_tables.scss */
+/* line 42, ../sass/components/3_components/_tables.scss */
 table.module tr:hover {
   background: #E6F2F8;
 }
-/* line 22, ../sass/components/3_components/_tables.scss */
+/* line 48, ../sass/components/3_components/_tables.scss */
 table.module th, table.module td {
   border-right: 1px solid #e2e2e2;
   padding: 8px 10px;
   white-space: nowrap;
   width: auto;
 }
-/* line 32, ../sass/components/3_components/_tables.scss */
+/* line 58, ../sass/components/3_components/_tables.scss */
 table.module th .sm-campaign-image, table.module td .sm-campaign-image {
   display: inline-block;
   float: left;
@@ -1204,25 +1415,25 @@ table.module th .sm-campaign-image, table.module td .sm-campaign-image {
   text-align: center;
   width: 42px;
 }
-/* line 39, ../sass/components/3_components/_tables.scss */
+/* line 65, ../sass/components/3_components/_tables.scss */
 table.module th .sm-campaign-image img, table.module td .sm-campaign-image img {
   max-height: 26px;
 }
-/* line 45, ../sass/components/3_components/_tables.scss */
+/* line 71, ../sass/components/3_components/_tables.scss */
 table.module th.line-number, table.module td.line-number {
   background: #f5f6f7;
 }
-/* line 49, ../sass/components/3_components/_tables.scss */
+/* line 75, ../sass/components/3_components/_tables.scss */
 table.module th.campaign, table.module th.advertiser, table.module td.campaign, table.module td.advertiser {
   width: 100%;
   overflow: hidden;
 }
-/* line 54, ../sass/components/3_components/_tables.scss */
+/* line 80, ../sass/components/3_components/_tables.scss */
 table.module th.campaign, table.module th.advertiser, table.module th.planned, table.module td.campaign, table.module td.advertiser, table.module td.planned {
   min-width: 220px;
   padding: 0;
 }
-/* line 58, ../sass/components/3_components/_tables.scss */
+/* line 84, ../sass/components/3_components/_tables.scss */
 table.module th.campaign a, table.module th.advertiser a, table.module th.planned a, table.module td.campaign a, table.module td.advertiser a, table.module td.planned a {
   padding: 8px 10px;
   display: inline-block;
@@ -1231,30 +1442,30 @@ table.module th.campaign a, table.module th.advertiser a, table.module th.planne
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 70, ../sass/components/3_components/_tables.scss */
+/* line 96, ../sass/components/3_components/_tables.scss */
 table.module th.campaign a, table.module td.campaign a {
   font-weight: bold;
 }
-/* line 75, ../sass/components/3_components/_tables.scss */
+/* line 101, ../sass/components/3_components/_tables.scss */
 table.module th.advertiser, table.module td.advertiser {
   min-width: 120px;
 }
-/* line 79, ../sass/components/3_components/_tables.scss */
+/* line 105, ../sass/components/3_components/_tables.scss */
 table.module th.budget, table.module th.planned, table.module td.budget, table.module td.planned {
   text-align: right;
   min-width: 160px;
 }
-/* line 83, ../sass/components/3_components/_tables.scss */
+/* line 109, ../sass/components/3_components/_tables.scss */
 table.module th.budget .currency, table.module th.planned .currency, table.module td.budget .currency, table.module td.planned .currency {
   color: #9b9b9b;
   float: left;
   font-size: 11px;
 }
-/* line 91, ../sass/components/3_components/_tables.scss */
+/* line 117, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned, table.module td.percentplanned {
   min-width: 120px;
 }
-/* line 94, ../sass/components/3_components/_tables.scss */
+/* line 120, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar, table.module td.percentplanned .budget-progress-bar {
   background: #69AED4;
   color: #fff;
@@ -1266,25 +1477,25 @@ table.module th.percentplanned .budget-progress-bar, table.module td.percentplan
   text-align: right;
   box-sizing: border-box;
 }
-/* line 106, ../sass/components/3_components/_tables.scss */
+/* line 132, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar span, table.module td.percentplanned .budget-progress-bar span {
   right: 5px;
   position: relative;
 }
-/* line 111, ../sass/components/3_components/_tables.scss */
+/* line 137, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.over, table.module td.percentplanned .budget-progress-bar.over {
   background: #EE3424;
   width: 100%;
 }
-/* line 116, ../sass/components/3_components/_tables.scss */
+/* line 142, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.under, table.module td.percentplanned .budget-progress-bar.under {
   color: #333;
 }
-/* line 119, ../sass/components/3_components/_tables.scss */
+/* line 145, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.under span, table.module td.percentplanned .budget-progress-bar.under span {
   right: auto;
 }
-/* line 130, ../sass/components/3_components/_tables.scss */
+/* line 156, ../sass/components/3_components/_tables.scss */
 table.module th {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -1292,45 +1503,297 @@ table.module th {
   text-align: left;
 }
 
-/* line 145, ../sass/components/3_components/_tables.scss */
+/* line 171, ../sass/components/3_components/_tables.scss */
 table#mostrecentcampaigns {
   table-layout: fixed;
   width: 100%;
 }
-/* line 150, ../sass/components/3_components/_tables.scss */
+/* line 176, ../sass/components/3_components/_tables.scss */
 table#mostrecentcampaigns th, table#mostrecentcampaigns td {
   line-height: 24px;
 }
 
-/* line 157, ../sass/components/3_components/_tables.scss */
+/* line 183, ../sass/components/3_components/_tables.scss */
 table#schedule th:nth-child(n+3) {
   text-align: center;
 }
-/* line 161, ../sass/components/3_components/_tables.scss */
+/* line 187, ../sass/components/3_components/_tables.scss */
 table#schedule th:nth-child(n+3),
 table#schedule td:nth-child(n+3) {
   min-width: 80px;
 }
-/* line 166, ../sass/components/3_components/_tables.scss */
+/* line 192, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td {
   background: #f5f6f7;
   border-color: transparent;
   border-top: 1px solid #cfcfcf;
   font-weight: bold;
 }
-/* line 172, ../sass/components/3_components/_tables.scss */
+/* line 198, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td a {
   color: #333;
   cursor: default;
 }
-/* line 177, ../sass/components/3_components/_tables.scss */
+/* line 203, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td:first-child {
   color: #f5f6f7;
 }
-/* line 183, ../sass/components/3_components/_tables.scss */
+/* line 209, ../sass/components/3_components/_tables.scss */
 table#schedule th:last-child,
 table#schedule td:last-child {
   width: auto;
+}
+
+/* line 217, ../sass/components/3_components/_tables.scss */
+table.goals {
+  clear: both;
+  width: 950px;
+}
+/* line 222, ../sass/components/3_components/_tables.scss */
+table.goals th {
+  text-align: left;
+}
+/* line 226, ../sass/components/3_components/_tables.scss */
+table.goals td, table.goals th {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}
+/* line 232, ../sass/components/3_components/_tables.scss */
+table.goals td input[type='checkbox'], table.goals td label, table.goals th input[type='checkbox'], table.goals th label {
+  max-width: 21px;
+  margin: 0 15px 0 0;
+}
+/* line 237, ../sass/components/3_components/_tables.scss */
+table.goals td:first-child, table.goals th:first-child {
+  padding-left: 15px;
+}
+/* line 241, ../sass/components/3_components/_tables.scss */
+table.goals td.narrow, table.goals th.narrow {
+  width: 80px;
+  text-align: right;
+}
+/* line 252, ../sass/components/3_components/_tables.scss */
+table.goals.budget tr:not(.spacer) td:first-child {
+  /*
+              border-color: transparent;
+              border-right: 1px solid #ddd;
+              padding-left: 0;
+  */
+}
+/* line 262, ../sass/components/3_components/_tables.scss */
+table.goals.budget td:nth-child(2) {
+  font-weight: normal;
+  text-align: right;
+}
+/* line 267, ../sass/components/3_components/_tables.scss */
+table.goals.budget td:nth-child(3) {
+  background: transparent !important;
+  border-color: #f5f6f7;
+  text-align: right;
+}
+/* line 274, ../sass/components/3_components/_tables.scss */
+table.goals td:first-child {
+  min-width: 180px;
+}
+/* line 279, ../sass/components/3_components/_tables.scss */
+table.goals td:nth-child(2) {
+  font-weight: bold;
+  color: #333;
+}
+/* line 284, ../sass/components/3_components/_tables.scss */
+table.goals td:nth-child(4) {
+  min-width: 150px;
+}
+/* line 290, ../sass/components/3_components/_tables.scss */
+table.goals tr:hover td input {
+  border: 1px solid #69AED4;
+}
+/* line 296, ../sass/components/3_components/_tables.scss */
+table.goals tr.spacer td, table.goals tr.spacer:hover td {
+  border: 0;
+  background: transparent !important;
+  padding: 5px;
+}
+/* line 302, ../sass/components/3_components/_tables.scss */
+table.goals .uncategorized,
+table.goals td:nth-child(3).uncategorized {
+  background: #FCF0BF !important;
+}
+/* line 314, ../sass/components/3_components/_tables.scss */
+table.goals td.editable {
+  color: #333;
+  padding: 0;
+}
+/* line 318, ../sass/components/3_components/_tables.scss */
+table.goals td.editable input[type="text"] {
+  padding: 10px;
+  width: 100%;
+}
+/* line 322, ../sass/components/3_components/_tables.scss */
+table.goals td.editable input[type="text"]:hover {
+  border: 1px solid #69AED4;
+}
+/* line 328, ../sass/components/3_components/_tables.scss */
+table.goals td input[type="text"] {
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+/* line 332, ../sass/components/3_components/_tables.scss */
+table.goals td input[type="text"]:focus {
+  border-width: 1px !important;
+}
+
+/* line 341, ../sass/components/3_components/_tables.scss */
+table.addToCampaign {
+  clear: both;
+  max-width: 950px;
+  /*
+      td:first-child {
+          padding-left: 20px;
+      }
+      
+      th:first-child {
+          padding-left: 20px;
+      }    
+  */
+}
+/* line 346, ../sass/components/3_components/_tables.scss */
+table.addToCampaign th {
+  text-align: left;
+}
+/* line 351, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td, table.addToCampaign th {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 0;
+  white-space: nowrap;
+}
+/* line 357, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td input[type='checkbox'], table.addToCampaign td label, table.addToCampaign th input[type='checkbox'], table.addToCampaign th label {
+  max-width: 21px;
+  margin: 0 15px 0 0;
+}
+/* line 362, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td:first-child, table.addToCampaign th:first-child {
+  border-right: 0;
+  min-width: 20px !important;
+}
+/* line 370, ../sass/components/3_components/_tables.scss */
+table.addToCampaign.budget td:nth-child(2) {
+  font-weight: normal;
+  text-align: right;
+}
+/* line 375, ../sass/components/3_components/_tables.scss */
+table.addToCampaign.budget td:nth-child(3) {
+  background: transparent !important;
+  border: 0;
+}
+/* line 393, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td:nth-child(2) {
+  color: #333;
+  border-left: 0;
+}
+/* line 398, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td:nth-child(4) {
+  min-width: 150px;
+  text-overflow: ellipsis;
+}
+/* line 403, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td:nth-child(5) {
+  min-width: 120px;
+  text-overflow: ellipsis;
+}
+/* line 408, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td:last-child {
+  color: #fff;
+  cursor: pointer;
+}
+/* line 414, ../sass/components/3_components/_tables.scss */
+table.addToCampaign.simple th:first-child,
+table.addToCampaign.simple td:first-child {
+  min-width: 180px;
+  padding-left: 15px;
+}
+/* line 420, ../sass/components/3_components/_tables.scss */
+table.addToCampaign.simple td:last-child {
+  min-width: 80px;
+}
+/* line 427, ../sass/components/3_components/_tables.scss */
+table.addToCampaign tr:hover td:first-child {
+  cursor: pointer;
+  text-indent: -9999px;
+  background: url(../../planner/images/move.png) center no-repeat !important;
+  background-size: 16px 13px !important;
+  background-color: #E6F2F8 !important;
+}
+/* line 436, ../sass/components/3_components/_tables.scss */
+table.addToCampaign tr:hover td input {
+  border: 1px solid #69AED4;
+}
+/* line 441, ../sass/components/3_components/_tables.scss */
+table.addToCampaign tr:hover td:last-child {
+  color: #69AED4;
+}
+/* line 448, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td {
+  border-bottom: 2px solid #f5f6f7;
+}
+/* line 452, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.narrow {
+  width: 80px;
+  text-align: right;
+}
+/* line 458, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.editable {
+  color: #333;
+  padding: 0;
+}
+/* line 463, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.editable input[type="text"] {
+  padding: 10px;
+  width: 100%;
+}
+/* line 469, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.editable input[type="text"]:hover {
+  border: 1px solid #69AED4;
+}
+/* line 473, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.editable input[type="text"].dropdown::after {
+  content: "\f0d7";
+  font-family: "FontAwesome";
+  font-style: normal;
+  position: absolute;
+}
+/* line 481, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td input[type="text"] {
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+/* line 487, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td input[type="text"]:focus {
+  border-width: 1px !important;
+}
+
+/* line 497, ../sass/components/3_components/_tables.scss */
+table.gridlines th, table.gridlines td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+/* line 502, ../sass/components/3_components/_tables.scss */
+table.gridlines.addToCampaign th:first-child {
+  padding-left: 15px;
+}
+/* line 506, ../sass/components/3_components/_tables.scss */
+table.gridlines.addToCampaign th:last-child, table.gridlines.addToCampaign td:last-child {
+  color: transparent;
+  border-color: transparent;
+  background: transparent;
+}
+/* line 513, ../sass/components/3_components/_tables.scss */
+table.gridlines.addToCampaign tr:hover td:last-child {
+  background: transparent !important;
 }
 
 /* line 1, ../sass/components/4_layouts/_overview.scss */
@@ -1604,35 +2067,35 @@ table#schedule td:last-child {
   border-width: 1px;
 }
 
-/* line 43, ../sass/planner.scss */
+/* line 44, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 47, ../sass/planner.scss */
+/* line 48, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 52, ../sass/planner.scss */
+/* line 53, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 54, ../sass/planner.scss */
+/* line 55, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 60, ../sass/planner.scss */
+/* line 61, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 64, ../sass/planner.scss */
+/* line 65, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -1642,12 +2105,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 73, ../sass/planner.scss */
+/* line 74, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 78, ../sass/planner.scss */
+/* line 79, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -1658,7 +2121,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 88, ../sass/planner.scss */
+/* line 89, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -1668,13 +2131,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 97, ../sass/planner.scss */
+/* line 98, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 109, ../sass/planner.scss */
+/* line 110, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -1684,28 +2147,28 @@ h2 {
   position: fixed;
   z-index: 1;
 }
-/* line 118, ../sass/planner.scss */
+/* line 119, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 121, ../sass/planner.scss */
+/* line 122, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 125, ../sass/planner.scss */
+/* line 126, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 131, ../sass/planner.scss */
+/* line 132, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 140, ../sass/planner.scss */
+/* line 141, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -1715,7 +2178,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 149, ../sass/planner.scss */
+/* line 150, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -1724,60 +2187,65 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 157, ../sass/planner.scss */
+/* line 158, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 164, ../sass/planner.scss */
+/* line 165, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 172, ../sass/planner.scss */
+/* line 173, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 177, ../sass/planner.scss */
+/* line 178, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 1200px;
 }
-/* line 182, ../sass/planner.scss */
+/* line 183, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 187, ../sass/planner.scss */
+/* line 188, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 195, ../sass/planner.scss */
+/* line 196, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 10px;
 }
-/* line 201, ../sass/planner.scss */
+/* line 202, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
 }
-/* line 205, ../sass/planner.scss */
+/* line 206, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
 }
 
-/* line 212, ../sass/planner.scss */
+/* line 213, ../sass/planner.scss */
+.bionic-page {
+  margin: 0 25px;
+}
+
+/* line 217, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 217, ../sass/planner.scss */
+/* line 222, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -1786,7 +2254,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 226, ../sass/planner.scss */
+/* line 231, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -1800,7 +2268,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 239, ../sass/planner.scss */
+/* line 244, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -1819,7 +2287,7 @@ h2 {
   width: 42px;
 }
 
-/* line 257, ../sass/planner.scss */
+/* line 262, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -1829,11 +2297,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 267, ../sass/planner.scss */
+/* line 272, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 270, ../sass/planner.scss */
+/* line 275, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

@@ -1,0 +1,83 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <ul class="bionic-tab-menu">
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan-metrics/">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
+    </ul>
+</div>
+
+<ul class="bionic-subnav-menu">
+    <li><a>Basic Info</a></li>
+    <li><a>Image</a></li>
+    <li><a>Description</a></li>
+    <li><a>Contacts</a></li>
+    <li><a>Currency</a></li>
+    <li><a>Agency Compensation</a></li>
+    <li><a>Ad Serving</a></li>
+    <li><a>Task Columns</a></li>
+    <li><a class="current">Metrics & Goals</a></li>
+    <li><a>Picklist Columns</a></li>
+</ul>
+
+<div class="block has-subnav">
+    
+<h2>Metrics & Goals</h2>
+
+<ul class="page-view-toggle">
+    <li><input type="radio" name="metrics" checked><label for="metrics">Metrics</label></li>
+    <li><input type="radio" name="budget"><a href="#/campaign/settings-g/0"><label for="goals">Goals</label></a></li>
+</ul>
+
+<br>       
+
+<table class="addToCampaign custom-form-controls simple gridlines">
+    <thead>
+        <tr>
+            <th colspan="1">
+                Metric</th><th colspan="1">Cost Type</th><th colspan="1">Cost Basis</th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+<!--                 <input id="cb1" type="checkbox"><label for="cb1"></label> -->
+                Impressions</td><td>CPM - Cost per Thousand</td>
+                <td class="editable"><input class="dropdown" type="text" value="Total Media Cost"></td>
+                <td>Remove</td>
+        </tr>
+        <tr>
+            <td>
+<!--                 <input id="cb2" type="checkbox"><label for="cb2"></label> -->
+                Clicks</td><td>CPC - Cost per Click</td>
+                <td class="editable"><input class="dropdown" class="dropdown" type="text" value="Net Media Cost"></td>
+                <td>Remove</td>
+        </tr>
+        <tr>
+            <td>
+<!--                 <input id="cb3" type="checkbox"><label for="cb3"></label> -->
+                Customers</td>
+                <td>CAC - Customer Acquisition Cost</td>
+                <td class="editable"><input class="dropdown" type="text" value="Total Cost"></td>
+                <td>Remove</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<a class="blue-button open-modal" href="templates/modals/settings/addmetrics.html" rel="modal:open" >Choose Metrics</a>
+
+</div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+</script>

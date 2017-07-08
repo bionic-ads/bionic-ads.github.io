@@ -1,0 +1,165 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <ul class="bionic-tab-menu">
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan/">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
+    </ul>
+</div>
+
+<ul class="bionic-subnav-menu">
+    <li><a>Basic Info</a></li>
+    <li><a>Image</a></li>
+    <li><a>Description</a></li>
+    <li><a>Contacts</a></li>
+    <li><a>Currency</a></li>
+    <li><a>Agency Compensation</a></li>
+    <li><a>Ad Serving</a></li>
+    <li><a>Task Columns</a></li>
+    <li><a class="current">Goals & KPIs</a></li>
+    <li><a>Picklist Columns</a></li>
+</ul>
+
+<div class="block has-subnav">
+<h2>Goals & KPIs</h2>
+
+<div id="budget">
+<h3>Budget</h3>
+
+<table class="goals budget">
+
+    <tr>
+        <td>Total Budget</td>
+        <td class="editable"><span class="currency-symbol">$</span><input class="right" type="text" value="1,200,000.00"></td>
+        <td></td>
+    </tr>
+    
+    <tr class="spacer">
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    
+    <tr>
+        <td>Net Media Cost</td>
+        <td class="editable"><span class="currency-symbol">$</span><input class="right" type="text" value="500,000.00"></td>
+        <td>75.00%</td>
+    </tr>
+    
+    <tr>
+        <td>Agency Compensation</td>
+        <td class="editable"><span class="currency-symbol">$</span><input class="right" type="text" value="200,000.00"></td>
+        <td>16.67%</td>
+    </tr>
+    
+    <tr>
+        <td>Additional Cost</td>
+        <td class="editable"><span class="currency-symbol">$</span><input class="right" type="text" value="50,000.00"></td>
+        <td>4.17%</td>
+    </tr>
+        
+    <tr>
+        <td>Ad Serving</td>
+        <td class="editable"><span class="currency-symbol">$</span><input class="right" type="text" value="22,500.00"></td>
+        <td>1.88%</td>
+    </tr>
+            
+    <tr>
+        <td>Uncategorized</td>
+        <td class="uncategorized"><span class="currency-symbol">$</span>27,500.00</td>
+        <td class="uncategorized">2.29%</td>
+    </tr>
+
+    <tr>
+        <td>Total</td>
+        <td class="readonly"><span class="currency-symbol">$</span>1,200,000.00</td>
+        <td>100.00%</td>
+    </tr>        
+    <tr class="spacer">
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+                 
+    <tr>
+        <td>Gross Media Cost</td>
+        <td class="readonly"><span class="currency-symbol">$</span>500,000.00</td>
+        <td></td>
+    </tr>
+    
+    <tr>
+        <td>Total Media Cost</td>
+        <td class="readonly"><span class="currency-symbol">$</span>1,150,000.00</td>
+        <td></td>
+    </tr>
+                        
+</table>
+</div>
+
+<h3>Performance</h3>
+
+<table class="goals custom-form-controls">
+    <thead>
+        <tr>
+            <th>
+<!--                 <input id="cb-all" type="checkbox"><label for="cb-all"></label> -->
+                Metric</th><th colspan="2">Default Cost Efficiency</th><th colspan="2">Cost Basis</th><th>Campaign Goal</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Impressions</td>
+                <td class="editable narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="25.00"></td>
+                <td class="readonly">CPM - Cost per Thousand</td>
+                <td class="right readonly"><span class="currency-symbol">$</span> 1,150,000.00</td>
+                <td class="editable"><input class="dropdown" type="text" value="Total Media Cost"></td>
+                <td class="right readonly">46,000,000</td>
+        </tr>
+        <tr>
+            <td>
+<!--                 <input id="cb2" type="checkbox"><label for="cb2"></label> -->
+                Clicks</td>
+                <td class="editable narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="10.00"></td>
+                <td class="readonly">CPC - Cost per Click</td>
+                <td class="right readonly"><span class="currency-symbol">$</span> 500,000.00</td>
+                <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
+                <td class="right readonly">50,000</td>
+        </tr>
+        <tr>
+            <td>
+<!--                 <input id="cb3" type="checkbox"><label for="cb3"></label> -->
+                Customers</td>
+                <td class="editable narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="600.00"></td>
+                <td class="readonly">CAC - Customer Acquisition Cost</td>
+                <td class="right readonly"><span class="currency-symbol">$</span>1,200,000.00</td>
+                <td class="editable"><input class="dropdown" type="text" value="Total Cost"></td>
+                <td class="right readonly">2,000</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<a class="blue-button open-modal" href="templates/modals/settings/addmetrics.html" rel="modal:open" >Choose Metrics</a>
+<br>
+<br>
+<!--
+<ul class="bionic-action-menu block" style="padding-left: 0; width: 800px; display: block; clear: both; position: relative;">
+    <li class="bionic-action-edit"><a><i class="fa fa-plus"></i>Add Metrics</a></li>
+</ul>
+-->
+
+</div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+</script>

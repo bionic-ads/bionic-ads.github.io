@@ -12,11 +12,10 @@ $(document).ready(function() {
 
     $("#bionic-left-nav").hide();
 
-    $("#bionic-loading").delay(500).fadeOut();
+//     $("#bionic-loading").delay(500).fadeOut();
     
-//     $("#bionic-loading").hide();
+    $("#bionic-loading").hide();
 
-    
 });
 
 

@@ -18,6 +18,7 @@
 @import "components/2_elements/_links.scss";
 @import "components/2_elements/_loading.scss";
 @import "components/2_elements/_radio_buttons.scss";
+@import "components/2_elements/_toggle.scss";
 
 @import "components/3_components/_stripe.scss";
 @import "components/3_components/_figawi.scss";
@@ -207,6 +208,10 @@ h2 {
         }   
     }
     
+}
+
+.bionic-page {
+    margin: 0 25px;
 }
 
 .left-nav-open {
