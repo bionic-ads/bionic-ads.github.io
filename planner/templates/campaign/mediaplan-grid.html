@@ -94,7 +94,7 @@
           var rowNumber = i + 1;
           var mediaPlanFirstColumns = $('<tr>');
           var custom = "";
-          var kpiActionsCPM = '<div class="kpi-actions"><a>Edit</a> | <a>Don\'t Track</a></div>';
+          var kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
               kpiActionsCPC = '<div class="kpi-actions"><a>Clear</a></div>';
               kpiActionsCPV = '<div class="kpi-actions"><a>Clear</a></div>';
           
@@ -102,7 +102,7 @@
               custom = "";
           } else {
               custom = "custom";
-              kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Clear</a></div>';
+              kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
           }
           
           console.log(item.CPC);
