@@ -2252,34 +2252,14 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   min-width: 238px;
 }
 /* line 106, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
+.mediaplan.fixedTable table td .col-kpi-cost, .mediaplan.fixedTable table tr .col-kpi-cost {
+  min-width: 100px;
 }
 /* line 107, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
-}
-/* line 108, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
-}
-/* line 109, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
-}
-/* line 110, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
-}
-/* line 111, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
+.mediaplan.fixedTable table td .col-kpi-number, .mediaplan.fixedTable table tr .col-kpi-number {
+  min-width: 150px;
 }
 /* line 112, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable table td .col-program, .mediaplan.fixedTable table tr .col-program {
-  min-width: 200px;
-}
-/* line 118, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -2293,16 +2273,16 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 131, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 125, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 136, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 130, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text]:focus {
   border-width: 1px;
 }
-/* line 140, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 134, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -2310,38 +2290,44 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 149, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 142, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan input[type=text].custom {
+  background: #fff url(../../css/images/triangle.svg) no-repeat right top;
+}
+/* line 148, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 156, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 155, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .kpi-actions {
   color: #999;
   font-size: 11px;
   padding: 5px;
   padding-top: 5px;
   display: none;
+  position: absolute;
+  white-space: nowrap;
 }
-/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 164, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .kpi-actions a {
   font-weight: bold;
 }
-/* line 171, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 172, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 175, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 176, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 176, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover .kpi-actions {
+/* line 181, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 180, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 186, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan:focus {
   border-width: 1px;
 }
