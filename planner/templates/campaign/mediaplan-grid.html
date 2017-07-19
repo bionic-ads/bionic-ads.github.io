@@ -1,0 +1,160 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <ul class="bionic-tab-menu">
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings-kpis/">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan-grid/" class="current">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
+    </ul>
+</div>
+
+<ul class="bionic-action-menu block">
+    <li><a><i class="fa fa-bars fa-rotate-90"></i>Columns</a></li>
+    <li><a><i class="fa fa-filter"></i>Filter</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-pencil"></i>Edit</a></li>
+    <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-external-link"></i>Move</a></li>
+    <li class="row-select disabled"><a><img src="../planner/images/bucket.svg"> Color</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-calendar-plus-o"></i>Add Tasks</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
+</ul>
+
+<div class="mediaplan fixedTable block" id="mediaplan">
+  
+  <table class="mediaPlanFirstColumnHeader">
+      <tr>
+          <th></th>
+          <th>Line</th>
+          <th><a>Placement Name</a></th>
+      </tr>
+  </table>  
+    
+    
+  <header class="fixedTable-header block">
+    <table class="table table-bordered">
+        <tr>
+          <th class="col-id">Bionic ID</th>
+          <th class="col-program"><a>Program</a> / <a>Vendor</a></th>
+          <th class="col-product"><a>Product</a> / <a>Targeting</a></th>
+          <th class="col-channel"><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></th>
+          <th class="col-flight-dates"><a>Flight Dates</a> / <a>Day Parts</a></th>
+          <th class="col-kpi-cost right"><a>CPM</a></th>
+          <th class="col-kpi-number right"><a>Impressions</a></th>
+          <th class="col-kpi-cost right"><a>CPC</a></th>
+          <th class="col-kpi-number right"><a>Clicks</a></th>
+          <th class="col-kpi-cost right"><a>/View</a></th>
+          <th class="col-kpi-number right"><a>Views</a></th>
+        </tr>
+    </table>
+  </header>
+  <aside class="fixedTable-sidebar block">
+    <table class="table table-bordered mediaplan" id="MediaPlanFirstColumns">
+        
+    </table>
+  </aside>
+  <div class="fixedTable-body block">
+    <table class="table table-bordered mediaplan" id="MediaPlanBody">
+
+    </table>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+      setCampaignInfo();
+      
+      var mediaPlanTab = "MediaPlan";
+      
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ mediaPlanTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      
+
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(mediaPlanTab).all(), function(i, item) {
+          var rowNumber = i + 1;
+          var mediaPlanFirstColumns = $('<tr>');
+          
+          console.log(item.PlacementName);
+          
+//           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');          
+          mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
+          mediaPlanFirstColumns.append('<td class="col-line-number">' + rowNumber + '</td>');
+          mediaPlanFirstColumns.append('<td class="col-placement-name ">'+ item.PlacementName +'</td>');
+          mediaPlanFirstColumns.append('</tr>');
+          mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns");
+                    
+          var mediaPlanBody = $('<tr><td class="col-id readonly">' + item.BionicID + '</td>');
+          mediaPlanBody.append('<td class="col-program"><input type="text" value="'+ item.Program +'"><span class="vendor">'+ item.Vendor +'</span></td>');
+          mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
+          mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
+          mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right" type="text" value="'+ item.CPM +'"><div class="kpi-actions"><a>Reset</a> | <a>Clear</a></div></td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Impressions +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right" type="text" value="'+ item.CPC +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Clicks +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right" type="text" value="'+ item.CPV +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Views +'"></td>');
+          mediaPlanBody.append('</tr>');
+          mediaPlanBody.appendTo("#MediaPlanBody");
+        })
+
+        
+      }
+</script>
+        
+<script type="text/javascript">
+(function() {
+  var mediaplan, fixedTable;
+
+  fixedTable = function(el) {
+    var $body, $header, $sidebar;
+    $body = $(el).find('.fixedTable-body');
+    $sidebar = $(el).find('.fixedTable-sidebar table');
+    $header = $(el).find('.fixedTable-header table');
+    return $($body).scroll(function() {
+      $($sidebar).css('margin-top', -$($body).scrollTop());
+      return $($header).css('margin-left', -$($body).scrollLeft());
+    });
+  };
+
+  mediaplan = new fixedTable($('#mediaplan'));
+
+}).call(this);
+
+
+$(document).on({
+mouseenter: function () {
+var trIndex = $(this).index();
+$("table.mediaplan").each(function(index) {
+    $(this).find("tr:eq("+trIndex+")").addClass("hover")
+});
+},
+mouseleave: function () {
+var trIndex = $(this).index();
+$("table.mediaplan").each(function(index) {
+    $(this).find("tr:eq("+trIndex+")").removeClass("hover")
+});
+}
+}, "#mediaplan table tr");
+
+</script>    

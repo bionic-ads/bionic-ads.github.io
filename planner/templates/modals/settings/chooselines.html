@@ -1,0 +1,68 @@
+<div class="chooselines" style="width: 700px;">
+    <div class="bionic-modal-header">
+        <h1>Lines That Track Impressions</h1>
+    </div>
+    <div class="bionic-modal-header">
+        <input type="text" class="keyword filter" placeholder="Filter by Placement Name" style="width: 200px;" /> 
+        <div class="filter"><i class="fa fa-filter"></i> All Channels</div>
+        <div class="filter"><i class="fa fa-filter"></i> All Rate Types</div>
+    </div>
+</div>
+    
+<div class="bionic-modal-body custom-form-controls" style="height: 300px;">
+
+    <ul id="LineMenu">
+    <li><input id="cb-all" type="checkbox" checked><label for="cb-all" style="margin-bottom: 10px;">All Lines</label></li>
+    </ul>
+     
+</div>
+
+<div class="bionic-modal-footer" style="margin-top: 0;">
+    <a class="blue-button" rel="modal:close">Apply</a>
+    <a class="gray-button" rel="modal:close">Cancel</a>
+</div>
+</div>
+
+<script>
+
+      var spreadsheetTab = "Lines";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+
+
+
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var lineNumber,
+                placement,
+              startDate, 
+              endDate,
+              rateType;           
+          
+          lineNumber = i + 1;
+          placement =      item.Placement;
+          startDate =   item.Start;
+          endDate =    item.End;
+          rateType =   item.RateType;
+                    
+              lineMenu = $('<li><input id="cb'+i+'" type="checkbox" checked><label for="cb'+i+'"><span class="secondary-text" style="display: inline-block;text-overflow: ellipsis; white-space: nowrap; overflow:hidden; width: 15px;">'+lineNumber+'</span> <div style="width:300px;display:inline-block;text-overflow: ellipsis; white-space: nowrap; overflow:hidden;">' + placement +'</div><div style="padding-left:40px;width:150px;display:inline-block;text-overflow: ellipsis; white-space: nowrap; overflow:hidden;">'+ startDate +' - ' + endDate + '</div><div style="display:inline-block;text-overflow: ellipsis; white-space: nowrap; overflow:hidden;">'+ rateType +'</div></label> </li>');
+              lineMenu.appendTo("#LineMenu");
+        
+        });
+
+        
+      }
+
+</script>
