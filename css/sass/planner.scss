@@ -35,6 +35,7 @@
 @import "components/4_layouts/_tasks.scss";
 
 @import "components/5_messaging/_notifications.scss";
+@import "components/5_messaging/_tooltips.scss";
 
 @import "components/7_prototype/_filters.scss";
 @import "components/7_prototype/_grid.scss";
@@ -178,7 +179,7 @@ h2 {
     .bionic-header {
         border-bottom: 1px solid $medium-gray;
         padding: 0 25px;
-        min-width: 1200px;
+        min-width: 800px;
         
         h1 {
             margin: 10px 0 0;

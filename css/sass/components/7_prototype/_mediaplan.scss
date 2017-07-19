@@ -1,16 +1,186 @@
-.mediaplan input[type=text] { 
-    padding: 5px;
-    width: calc(100% - 12px);
-    height: 15px;
-    margin: 0;
-    border-width: 1px;
-    border-color: transparent;
-    border-radius: 0px;
-    font-size: 13px;
-    color: #404040;
-    box-sizing: content-box;
+.mediaplan { 
+        
+    width: 100%;
+    
+    .fixedtable-header {
+        width: calc(100% - 300px);
+        margin-left: 300px;
+    }
+    
+    .fixedtable-body {
+        width: calc(100% - 300px);
+    }
+    
+    .fixedtable-sidebar {
+        margin-left: 0;
+        width: 300px;
+    }
+    
+    .fixedtable-sidebar, .fixedtable-body {
+        height: calc(100% - 268px);
+    }    
+    
+    .fixedTable-sidebar table.table tr td {
+        width: auto;
+    }
+    
+    .mediaPlanFirstColumnHeader {
+        position: absolute; width: 300px;
+        
+        th:first-child {
+            width: 22px;
+                background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0));
+                background-size: 4px 4px;
+                height: 100%;
+        }
+        
+        th:nth-child(2){
+            width: 100px;
+        }
+    }
+    
+    .mediaPlanFirstColumnHeader th,
+    &.fixedTable .table tr th {
+        height: 30px;
+        border: 1px solid #cfcfcf;
+        font-weight: normal;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: left;
+                
+                
+    }
+        
+    th {
+        white-space: nowrap;
+    }
+    
+    tr.hover td {
+        background: #E6F2F8 !important;
+    }
+    
+    &.fixedTable .table tr td {
+        background: #fff;
+        height: 55px;
+        vertical-align: top;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #ddd;
+    }
+    
+    &.fixedTable table {
+        border-collapse: collapse;
+        
+        td, tr {
+            box-sizing: border-box;
+        
+            &.readonly, &.link {
+                padding: 5px;
+            }
+            
+            .col-line-number {
+                color: #ccc;
+                font-size: 2em;
+                padding: 10px;
+            }
+            
+            .col-checkbox {
+                max-width: 22px;
+                min-width: 22px;
+                width: 22px;
+                background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0));
+                background-size: 4px 4px;
+                height: 100%;
+            }
+            
+            .col-placement-name {
+                color: $blue;
+                width: 177px !important;
+                padding: 5px;
+            }
+            
+            .col-id         {min-width: 80px; width: 80px; text-align: center !important;}
+            .col-program    {min-width: 180px;}
+            .col-product    {min-width: 200px;}
+            .col-channel    {min-width: 232px;}
+            .col-flight-dates {min-width: 238px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+            .col-program    {min-width: 200px;}
+
+        }
+        
+    }
+        
+    input[type=text] { 
+        padding: 5px;
+        width: calc(100% - 12px);
+        height: 15px;
+        margin: 0;
+        border-width: 1px;
+        border-color: transparent;
+        border-radius: 0px;
+        font-size: 13px;
+        color: #404040;
+        box-sizing: content-box;
+        text-overflow: ellipsis;
+        
+        &.half {
+            width: calc(50% - 12px);
+            float: left;
+        }
+        
+        &:focus {
+            border-width: 1px;
+        }
+        
+        &.secondary {
+            color: #9b9b9b;
+            font-size: 11px;
+            padding-top: 3px;
+            padding-bottom: 8px;
+            margin-top: -1px;
+        }
+    }
+    
+    .vendor {
+        font-size: 11px;
+        color: #9b9b9b;
+        display: block;
+        padding: 3px 5px 0px;
+    }
+    
+    .kpi-actions {
+        color: #999;
+        font-size: 11px;
+        padding: 5px;
+        padding-top: 5px;
+        display: none;
+        
+        a {
+            font-weight: bold;
+        }
+    
+    }
+    
+    tr.hover {
+        
+        input[type=text] {
+            border-color: #6BADD1;
+        }
+        
+        .col-kpi-cost {border-right: 1px solid #E6F2F8 !important;}
+        .kpi-actions {display: block;}
+        
+    }
     
     &:focus {
         border-width: 1px;
     }
+    
+
+    
 }

@@ -3988,25 +3988,29 @@ input[type="button"].gray-button,
   line-height: 18px;
   padding: 2px 0 3px;
 }
+/* line 55, ../sass/components/2_elements/_checkboxes.scss */
+.bionic-checkbox label span.secondary-text {
+  color: #888;
+}
 
-/* line 58, ../sass/components/2_elements/_checkboxes.scss */
+/* line 62, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls {
   user-select: none;
 }
-/* line 62, ../sass/components/2_elements/_checkboxes.scss */
+/* line 66, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox'] {
   opacity: 0;
   position: absolute;
 }
-/* line 67, ../sass/components/2_elements/_checkboxes.scss */
-.custom-form-controls input:checked + label::before {
+/* line 71, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox']:checked + label::before {
   background-color: #69AED4;
   border: 3px solid #69AED4;
   color: white;
   content: '\f00c';
 }
-/* line 74, ../sass/components/2_elements/_checkboxes.scss */
-.custom-form-controls label {
+/* line 78, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox'] + label {
   cursor: pointer;
   line-height: 21px;
   top: 3px;
@@ -4015,8 +4019,12 @@ input[type="button"].gray-button,
   margin-right: 15px;
   width: 100%;
 }
-/* line 84, ../sass/components/2_elements/_checkboxes.scss */
-.custom-form-controls label::before {
+/* line 87, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox'] + label .secondary-text {
+  color: #888;
+}
+/* line 93, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls input[type='checkbox'] + label::before {
   background: #fff;
   border-radius: 2px;
   box-sizing: border-box;
@@ -4405,39 +4413,43 @@ a {
   margin-top: 10px;
 }
 /* line 6, ../sass/components/2_elements/_radio_buttons.scss */
+.bionic-radio.inline {
+  margin-top: 0;
+}
+/* line 10, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"] {
   display: none !important;
 }
-/* line 9, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 13, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"]:checked + label > span:first-child {
   background-position: 0 66px;
 }
-/* line 17, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 21, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"][disabled] + label {
   color: #ccc !important;
   cursor: default;
 }
-/* line 21, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 25, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"][disabled] + label > span:first-child {
   background-position: 0 44px;
   cursor: default;
 }
-/* line 27, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 31, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"][checked][disabled] + label {
   color: #ccc !important;
   cursor: default;
 }
-/* line 31, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 35, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio input[type="radio"][checked][disabled] + label > span:first-child {
   background-position: 0 22px;
   cursor: default;
 }
-/* line 38, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 42, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio label {
   margin: 0;
   cursor: pointer;
 }
-/* line 42, ../sass/components/2_elements/_radio_buttons.scss */
+/* line 46, ../sass/components/2_elements/_radio_buttons.scss */
 .bionic-radio label > span:first-child {
   background-image: url("../images/radio.svg");
   background-position: 0 -1px;
@@ -4449,6 +4461,11 @@ a {
   height: 22px !important;
   padding: 0 !important;
   display: block !important;
+}
+
+/* line 63, ../sass/components/2_elements/_radio_buttons.scss */
+.custom-form-controls .bionic-radio {
+  margin-topp: 0;
 }
 
 /* line 1, ../sass/components/2_elements/_toggle.scss */
@@ -4592,19 +4609,50 @@ a {
 }
 
 /* line 1, ../sass/components/3_components/_filters.scss */
+.filter {
+  border-radius: 2px;
+  cursor: pointer;
+  min-width: 100px;
+  border: 1px solid #cfcfcf;
+  padding: 5px 24px 5px 10px;
+  display: inline-block;
+  background-image: url(../images/arrow-down.svg);
+  background-origin: padding-box;
+  background-position: right 7px center, right center;
+  background-repeat: no-repeat;
+  background-size: auto auto;
+  box-sizing: border-box;
+}
+/* line 15, ../sass/components/3_components/_filters.scss */
+.filter i {
+  color: #9b9b9b;
+  margin-right: 5px;
+}
+/* line 20, ../sass/components/3_components/_filters.scss */
+.filter.keyword, .filter.keyword:focus {
+  border: 1px solid #cfcfcf;
+  background-image: url(../images/search.svg);
+  background-position: left 7px center, left center;
+  background-repeat: no-repeat;
+  cursor: default;
+  padding: 5px 24px 5px 10px;
+  padding-left: 25px;
+}
+
+/* line 36, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters {
   display: block;
   height: 30px;
   user-select: none;
 }
-/* line 7, ../sass/components/3_components/_filters.scss */
+/* line 42, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters > div {
   display: inline-block;
   float: left;
   margin: 0px 8px 0 0;
   line-height: 28px;
 }
-/* line 19, ../sass/components/3_components/_filters.scss */
+/* line 54, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master {
   background-color: #f5f6f7;
   box-shadow: none;
@@ -4618,15 +4666,15 @@ a {
   width: calc(100% - 42px);
   height: 100%;
 }
-/* line 32, ../sass/components/3_components/_filters.scss */
+/* line 67, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:not(.no-outline):focus {
   border-width: 1px !important;
 }
-/* line 36, ../sass/components/3_components/_filters.scss */
+/* line 71, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:focus {
   background-color: #fff !important;
 }
-/* line 40, ../sass/components/3_components/_filters.scss */
+/* line 75, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid {
   border: 1px solid #F77B26 !important;
   background-color: #fff !important;
@@ -4634,11 +4682,11 @@ a {
   padding-right: 30px;
   width: calc(100% - 67px);
 }
-/* line 48, ../sass/components/3_components/_filters.scss */
+/* line 83, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid ~ .clear-search-filter {
   display: inline-block;
 }
-/* line 57, ../sass/components/3_components/_filters.scss */
+/* line 92, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .clear-search-filter {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4699,15 +4747,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 76, ../sass/components/3_components/_filters.scss */
+/* line 111, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item {
   cursor: pointer;
 }
-/* line 80, ../sass/components/3_components/_filters.scss */
+/* line 115, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item .fa.fa-filter {
   color: #9B9B9B;
 }
-/* line 86, ../sass/components/3_components/_filters.scss */
+/* line 121, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item span.label:after {
   content: '\f0dd ';
   font-family: "FontAwesome";
@@ -4716,7 +4764,7 @@ a {
   position: relative;
   color: #9B9B9B;
 }
-/* line 95, ../sass/components/3_components/_filters.scss */
+/* line 130, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-off {
   padding: 0 8px;
   border: 1px solid #cfcfcf;
@@ -4724,7 +4772,7 @@ a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 100, ../sass/components/3_components/_filters.scss */
+/* line 135, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4773,15 +4821,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 104, ../sass/components/3_components/_filters.scss */
+/* line 139, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.modal-open {
   padding: 5px 6px 5px 13px;
 }
-/* line 108, ../sass/components/3_components/_filters.scss */
+/* line 143, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.label:after {
   color: inherit;
 }
-/* line 116, ../sass/components/3_components/_filters.scss */
+/* line 151, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options {
   position: absolute;
   z-index: 99999;
@@ -4791,7 +4839,7 @@ a {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
 }
-/* line 130, ../sass/components/3_components/_filters.scss */
+/* line 165, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .overlay {
   background-color: transparent;
   display: block;
@@ -4801,12 +4849,12 @@ a {
   z-index: -5;
   left: 0;
 }
-/* line 140, ../sass/components/3_components/_filters.scss */
+/* line 175, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .pad {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 157, ../sass/components/3_components/_filters.scss */
+/* line 192, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle input.list-filter-search {
   padding: 5px 5px 5px 30px;
   box-sizing: border-box;
@@ -4814,7 +4862,7 @@ a {
   width: calc(100% - 20px);
   background-size: 16px;
 }
-/* line 165, ../sass/components/3_components/_filters.scss */
+/* line 200, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul {
   max-height: 200px;
   display: block;
@@ -4823,84 +4871,84 @@ a {
   padding: 7px 0 4px 0;
   border-top: 1px solid #cfcfcf;
 }
-/* line 173, ../sass/components/3_components/_filters.scss */
+/* line 208, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul li.divider {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 184, ../sass/components/3_components/_filters.scss */
+/* line 219, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox div:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox span:focus {
   outline: none;
 }
-/* line 190, ../sass/components/3_components/_filters.scss */
+/* line 225, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label span.box {
   top: -2px;
 }
-/* line 200, ../sass/components/3_components/_filters.scss */
+/* line 235, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section {
   border-top: 1px solid #CCC;
 }
-/* line 203, ../sass/components/3_components/_filters.scss */
+/* line 238, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 209, ../sass/components/3_components/_filters.scss */
+/* line 244, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not {
   border-top: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 215, ../sass/components/3_components/_filters.scss */
+/* line 250, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 247, ../sass/components/3_components/_filters.scss */
+/* line 282, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate span {
   text-align: center;
   width: 100%;
   display: block;
 }
-/* line 258, ../sass/components/3_components/_filters.scss */
+/* line 293, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-on, .nxm-menu-filters .filter-section.filter-on .filter-off {
   display: none;
 }
-/* line 263, ../sass/components/3_components/_filters.scss */
+/* line 298, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-off, .nxm-menu-filters .filter-section.filter-on .filter-on {
   display: block;
 }
-/* line 269, ../sass/components/3_components/_filters.scss */
+/* line 304, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.disabled span.label:after {
   color: #ccc;
 }
-/* line 275, ../sass/components/3_components/_filters.scss */
+/* line 310, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .custom-fields {
   display: none;
 }
-/* line 279, ../sass/components/3_components/_filters.scss */
+/* line 314, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.CUSTOM ~ .custom-fields {
   display: block;
 }
-/* line 283, ../sass/components/3_components/_filters.scss */
+/* line 318, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.EMPTY ~ .date-fields,
 .nxm-menu-filters span.NOT_EMPTY ~ .date-fields {
   display: none;
 }
-/* line 288, ../sass/components/3_components/_filters.scss */
+/* line 323, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate {
   display: none;
 }
-/* line 292, ../sass/components/3_components/_filters.scss */
+/* line 327, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.BETWEEN ~ .date-fields span.endDate,
 .nxm-menu-filters span.NOT_BETWEEN ~ .date-fields span.endDate {
   display: block;
 }
 
-/* line 300, ../sass/components/3_components/_filters.scss */
+/* line 335, ../sass/components/3_components/_filters.scss */
 .bionic-filter {
   border: 1px solid #cfcfcf;
   border-radius: 3px;
@@ -4910,7 +4958,7 @@ a {
   padding: 7px 10px;
 }
 
-/* line 309, ../sass/components/3_components/_filters.scss */
+/* line 344, ../sass/components/3_components/_filters.scss */
 .bionic-filter-menu {
   background: #fff;
   display: block;
@@ -4962,48 +5010,49 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
+  background: #fff;
   max-width: none;
   min-width: 400px;
   padding: 0;
   width: auto;
 }
-/* line 7, ../sass/components/3_components/_modals.scss */
+/* line 8, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
 }
-/* line 12, ../sass/components/3_components/_modals.scss */
+/* line 13, ../sass/components/3_components/_modals.scss */
 .modal .larger {
   font-size: 18px;
   line-height: 28px;
 }
-/* line 17, ../sass/components/3_components/_modals.scss */
+/* line 18, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
   top: 17px;
   right: 10px;
 }
-/* line 22, ../sass/components/3_components/_modals.scss */
+/* line 23, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
-/* line 27, ../sass/components/3_components/_modals.scss */
+/* line 28, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
   padding: 10px 25px 20px;
   min-height: 200px;
   overflow-y: auto;
 }
-/* line 33, ../sass/components/3_components/_modals.scss */
+/* line 34, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 37, ../sass/components/3_components/_modals.scss */
+/* line 38, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 45, ../sass/components/3_components/_modals.scss */
+/* line 46, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -5257,6 +5306,28 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 18, ../sass/components/5_messaging/_notifications.scss */
 .notification.error {
   background: #FDD6D1;
+}
+
+/* line 1, ../sass/components/5_messaging/_tooltips.scss */
+.ui-tooltip {
+  background: #565656;
+  max-width: 200px;
+}
+/* line 6, ../sass/components/5_messaging/_tooltips.scss */
+.ui-tooltip .ui-tooltip-content {
+  color: #fff;
+}
+
+/* line 12, ../sass/components/5_messaging/_tooltips.scss */
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* line 1, ../sass/design_guide_layout/_main.scss */

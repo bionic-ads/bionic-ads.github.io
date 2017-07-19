@@ -3,6 +3,10 @@
     position: relative;
     margin-top: 10px;
 
+    &.inline {
+        margin-top: 0;
+    }
+
     input[type="radio"] {
         display: none !important;
 
@@ -52,4 +56,12 @@
             display: block !important;
         }
     }
+}
+
+.custom-form-controls {
+    
+    .bionic-radio {
+        margin-topp: 0;
+    }
+
 }

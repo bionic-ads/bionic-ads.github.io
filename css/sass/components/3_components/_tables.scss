@@ -37,7 +37,7 @@ table.module {
     }
     
     tr {
-        border-bottom: 1px solid #f0f0f0;
+        border-bottom: 1px solid #eee;
         
         &:hover {
             background: #E6F2F8;
@@ -46,7 +46,7 @@ table.module {
     }
     
     th,td {
-        border-right: 1px solid #e2e2e2;
+        border-right: 1px solid #cfcfcf;
         padding: 8px 10px;
         white-space: nowrap;
         width: auto;
@@ -226,7 +226,7 @@ table.goals {
     td,th {
         box-sizing: border-box;
         padding: 10px;
-        border: 1px solid #ddd;
+        border: 1px solid #cfcfcf;
         white-space: nowrap;
         
         input[type='checkbox'], label {
@@ -272,7 +272,7 @@ table.goals {
     }
     
     td:first-child {
-        min-width: 180px;
+        min-width: 130px;
     }
     
     
@@ -309,7 +309,9 @@ table.goals {
     
     td {
         
-
+        &.custom input {
+            background: #fff url(../../css/images/triangle.svg) no-repeat right top;  
+        }
         
         &.editable {
             color: #333;
@@ -393,10 +395,12 @@ table.addToCampaign {
     td:nth-child(2) {
         color: #333;
         border-left:0;
+        padding-left: 5px;
+        width: 150px;
     }
     
     td:nth-child(4) {
-        min-width: 150px;
+        min-width: 250px;
         text-overflow: ellipsis;
     }
  
@@ -495,9 +499,14 @@ table.addToCampaign {
 
 table.gridlines {
     th,td {
-        border: 1px solid #ddd;
+        border: 1px solid #cfcfcf;
         padding: 10px;
     }
+    
+        tr:not(:last-child) td {
+            border-bottom: 1px solid #eee;
+            
+        }
     
     &.addToCampaign th:first-child {
         padding-left: 15px;

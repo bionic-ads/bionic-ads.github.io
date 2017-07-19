@@ -1,7 +1,9 @@
 var Campaigns = [];
 
 $(document).ready(function() {
-
+    
+    var public_spreadsheet_url = '';
+    
     getCampaigns().then(function() {
       setCampaignInfo();
     });
@@ -136,7 +138,7 @@ function getCampaigns(){
             reject(Error("It broke"));
           }     
                   
-        console.log(Campaigns.length);
+//         console.log(Campaigns.length);
         
         }
         
@@ -149,12 +151,12 @@ function getCampaigns(){
 function setCampaignInfo(){
     
     var url, theID, newName;
-    console.log("set campaign name "+Campaigns.length);
+//     console.log("set campaign name "+Campaigns.length);
     
     if(Campaigns.length > 0){
         
         url = window.location.href;
-        console.log(url);
+//         console.log(url);
         theID = url.substring(url.lastIndexOf('/') + 1);
 
         // Campaign Name
@@ -167,7 +169,7 @@ function setCampaignInfo(){
             newName = Campaigns[theID].campaignName;
             
             $("#campaignname").text(newName);
-            console.log(newName);
+//             console.log(newName);
         
         }
         

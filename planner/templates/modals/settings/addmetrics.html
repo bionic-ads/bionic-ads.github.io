@@ -1,4 +1,4 @@
-<div class="addmetrics">
+<div class="addmetrics" style="width: 600px;">
     <div class="bionic-modal-header">
         <h1>Add KPIs</h1>
     </div>
@@ -17,7 +17,7 @@
 </div>
 
 <div class="bionic-modal-footer" style="margin-top: 0;">
-    <a class="blue-button" rel="modal:close">Apply</a>
+    <a class="blue-button" rel="modal:close">Add</a>
     <a class="gray-button" rel="modal:close">Cancel</a>
 </div>
 </div>
@@ -50,11 +50,16 @@
               checked;           
           
           metric =      item.Metric;
+          shortCostType =   item.ShortCostType;
           costType =    item.CostType;
           costBasis =   item.CostBasis;
           checked =     item.Checked;
+          console.log(shortCostType);
+          if(shortCostType != " ") {
+//               shortCostType = shortCostType + " - ";
+          }
                     
-              metricMenu = $('<li><input id="cb'+i+'" type="checkbox" '+checked+'><label for="cb'+i+'">'+metric+'</label> </li>');
+              metricMenu = $('<li><input id="cb'+i+'" type="checkbox" '+checked+'><label for="cb'+i+'">' + metric +' & '+ shortCostType +' <span class="secondary-text"> - '+ costType +'</span></label> </li>');
               metricMenu.appendTo("#MetricMenu");
         
         });

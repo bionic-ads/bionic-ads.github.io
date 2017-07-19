@@ -1,3 +1,38 @@
+.filter {
+    border-radius: 2px;
+    cursor: pointer;
+    min-width: 100px;
+    border:1px solid #cfcfcf;
+    padding: 5px 24px 5px 10px;
+    display: inline-block;
+    background-image: url(../images/arrow-down.svg);
+    background-origin: padding-box;
+    background-position: right 7px center, right center;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    box-sizing: border-box;    
+    
+    i {
+        color: #9b9b9b;
+        margin-right: 5px;
+    }
+    
+    &.keyword, &.keyword:focus {
+        border: 1px solid #cfcfcf;
+        
+        background-image: url(../images/search.svg);
+        background-position: left 7px center, left center;
+        background-repeat: no-repeat;
+        
+        cursor: default;
+        
+        padding: 5px 24px 5px 10px;
+        padding-left: 25px;
+        
+    }
+    
+}
+
 .nxm-menu-filters{
 
     display: block;
