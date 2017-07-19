@@ -93,18 +93,32 @@
         $.each( tabletop.sheets(mediaPlanTab).all(), function(i, item) {
           var rowNumber = i + 1;
           var mediaPlanFirstColumns = $('<tr>');
-          var custom = "";
-          var kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
-              kpiActionsCPC = '<div class="kpi-actions"><a>Clear</a></div>';
-              kpiActionsCPV = '<div class="kpi-actions"><a>Clear</a></div>';
+          var customCPM, customCPC, customCPV;
+          var kpiActionsCPM = '<div class="kpi-actions"><a>Exclude</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"><a>Exclude</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a>Exclude</a></div>';
           
           if(item.CPM == item.CPMdefault){
-              custom = "";
+              customCPM = "";
           } else {
-              custom = "custom";
+              customCPM = "custom";
               kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
           }
+
+          if(item.CPC == item.CPCdefault){
+              customCPC = "";
+          } else {
+              customCPC = "custom";
+              kpiActionsCPC = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
+          }
           
+          if(item.CPV == item.CPVdefault){
+              customCPV = "";
+          } else {
+              customCPV = "custom";
+              kpiActionsCPV = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
+          }       
+             
           console.log(item.CPC);
           console.log(item.CPCdefault);
           
@@ -120,11 +134,11 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+custom+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Impressions +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
           mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Clicks +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
           mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Views +'"></td>');
           mediaPlanBody.append('</tr>');
           mediaPlanBody.appendTo("#MediaPlanBody");
