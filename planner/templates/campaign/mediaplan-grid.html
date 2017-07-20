@@ -132,12 +132,12 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
+          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-cost"><input class="right cpw kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-number"><input class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
+          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-cost"><input class="right cpw kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
+          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-number"><input class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
+          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-cost"><input class="right cpw kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
+          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-number"><input class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
           mediaPlanBody.append('</tr>');
           mediaPlanBody.appendTo("#MediaPlanBody");
         })
@@ -204,14 +204,24 @@
             $("."+target).removeClass("custom");
             $("#actionExclude"+kpi+item).hide();
             $("#actionReset"+kpi+item).show();
+            $("td."+kpi+item).addClass("inactive");
+            $("."+target).addClass("inactive");
             
         } else if(action == "reset") {
             $(".cpw.kpi"+kpi+item).val(kpidefault);
 //             $(".number.kpi"+kpi+item).val("");
             $("."+target).removeClass("custom");
+            $("."+target).removeClass("inactive");
+            $("td."+kpi+item).removeClass("inactive");
             $("#actionReset"+kpi+item).hide();
             $("#actionExclude"+kpi+item).show();
         }
+    });
+    
+    $().on('mouseup', '.cpw', function(){
+        
+        alert("custom typing");
+        
     });
     
 </script>    

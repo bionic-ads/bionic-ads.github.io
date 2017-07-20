@@ -55,8 +55,22 @@
         white-space: nowrap;
     }
     
-    tr.hover td {
-        background: #E6F2F8 !important;
+    .inactive {
+        background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0)) !important;
+        background-size: 4px 4px !important;
+        height: 100%;
+    }
+    
+    tr.hover { 
+        
+        td {
+            background: #E6F2F8 !important;
+        }
+    
+        .inactive input {
+            background: #fff !important;
+        }
+        
     }
     
     &.fixedTable .table tr td {
