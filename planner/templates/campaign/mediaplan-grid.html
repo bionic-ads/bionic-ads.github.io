@@ -94,19 +94,19 @@
               flightMemberImage='';
           
           if(item.FlightedPlacement){
-              flightHeader = 'flightHeader flightHeader'+i;
+              flightHeader = 'flightHeader flight'+flightHeader;
               flightHeaderImage = '<img class="flightheader" src="../images/flight-header-open.svg" />';
           }
 
           if(item.FlightMember){
-              flightMember = 'flightMember flightMember'+i;
+              flightMember = 'flightMember flight'+flightMember;
               flightMemberImage = '<img class="flightmember" src="../images/flight-member.svg" />';
           }
 
 // KPI Actions
           
           var customCPM, customCPC, customCPV;
-          var kpiActionsCPM = '<div class="kpi-actions"><a class="action" id="actionExcludeCPM'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
+          var kpiActionsCPM = '<div class="kpi-actions"><a class="action" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
               kpiActionsCPC = '<div class="kpi-actions"><a class="action" id="actionExcludeCPC'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
               kpiActionsCPV = '<div class="kpi-actions"><a class="action" id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
           
@@ -211,6 +211,8 @@
         var target = $(this).data('target');
         var kpidefault = $(this).data('default');
         var numberdefault = $(this).data('numberdefault');
+        var flightheader =  $(this).data('flightheader');
+        var flightheader =  $(this).data('flightmember');
 //         console.log(action + '' + target);
         
         if(action == "exclude") {
