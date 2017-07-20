@@ -87,8 +87,24 @@
       function showInfo(data, tabletop) {
 
         $.each( tabletop.sheets(mediaPlanTab).all(), function(i, item) {
-          var rowNumber = i + 1;
-          var mediaPlanFirstColumns = $('<tr>');
+          var rowNumber = item.RowNumber;
+          var flightHeader='', 
+              flightMember ='', 
+              flightHeaderImage='',
+              flightMemberImage='';
+          
+          if(item.FlightedPlacement){
+              flightHeader = 'flightHeader flightHeader'+i;
+              flightHeaderImage = '<img class="flightheader" src="../images/flight-header-open.svg" />';
+          }
+
+          if(item.FlightMember){
+              flightMember = 'flightMember flightMember'+i;
+              flightMemberImage = '<img class="flightmember" src="../images/flight-member.svg" />';
+          }
+
+// KPI Actions
+          
           var customCPM, customCPC, customCPV;
           var kpiActionsCPM = '<div class="kpi-actions"><a class="action" id="actionExcludeCPM'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
               kpiActionsCPC = '<div class="kpi-actions"><a class="action" id="actionExcludeCPC'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
@@ -116,14 +132,15 @@
           }
              
           
-//           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');          
+//           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');   
+          var mediaPlanFirstColumns = $('<tr class="'+flightHeader+' '+flightMember+'">');
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
-          mediaPlanFirstColumns.append('<td class="col-line-number">' + rowNumber + '</td>');
+          mediaPlanFirstColumns.append('<td class="col-line-number">' + rowNumber + flightHeaderImage+flightMemberImage+'</td>');
           mediaPlanFirstColumns.append('<td class="col-placement-name ">'+ item.PlacementName +'</td>');
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns");
                     
-          var mediaPlanBody = $('<tr><td class="col-id readonly">' + item.BionicID + '</td>');
+          var mediaPlanBody = $('<tr class="'+flightHeader+' '+flightMember+'"><td class="col-id readonly">' + item.BionicID + '</td>');
           mediaPlanBody.append('<td class="col-program"><input type="text" value="'+ item.Program +'"><span class="vendor">'+ item.Vendor +'</span></td>');
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');

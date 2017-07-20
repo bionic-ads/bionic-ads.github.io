@@ -1,4 +1,4 @@
-.mediaplan { 
+.mediaplan.fixedTable { 
         
     width: 100%;
     
@@ -40,7 +40,7 @@
     }
     
     .mediaPlanFirstColumnHeader th,
-    &.fixedTable .table tr th {
+    .table tr th {
         height: 30px;
         border: 1px solid #cfcfcf;
         font-weight: normal;
@@ -74,7 +74,7 @@
         
     }
     
-    &.fixedTable .table tr td {
+    .table tr td {
         background: #fff;
         height: 55px;
         vertical-align: top;
@@ -82,7 +82,7 @@
         border-right: 1px solid #ddd;
     }
     
-    &.fixedTable table {
+     table {
         border-collapse: collapse;
         
         td, tr {
@@ -122,6 +122,33 @@
             .col-kpi-number    {min-width: 150px;}
         }
         
+    }
+    
+
+    
+    img.flightheader {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 3px;
+        
+        :after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 27px;
+            background: #ddd;
+            left: 50%;
+            z-index: 1;
+            top: 27px;
+        }
+        
+    }
+    
+    img.flightmember {
+        position: absolute;
+        margin-left: 40px;
+        margin-top: 10px;        
     }
     
     .currency-symbol {
@@ -209,7 +236,50 @@
     &:focus {
         border-width: 1px;
     }
-    
 
+
+    tr.flightHeader {
+        .col-flight-dates  input[type=text],
+        .col-kpi-cost   input[type=text],
+        .col-kpi-number   input[type=text],
+        {
+            color: #9b9b9b;
+//             background-image: none;
+        }
+        &.hover {
+            .col-flight-dates input[type=text],    
+        .col-kpi-cost   input[type=text],
+        .col-kpi-number   input[type=text],
+             {
+                border-color:transparent !important;
+                background-color: #E6F2F8;
+                user-select: none;
+            }
+        }
+        
+    }
+
+
+    tr.flightMember {
+        .col-program input,
+        .col-product input,
+        .col-channel input
+         {
+            color:#9b9b9b;
+        }
+        
+        &.hover {
+            .col-program input[type=text],
+            .col-product input[type=text],
+            .col-channel input[type=text],
+            
+             {
+                border-color:transparent !important;
+                background-color: #E6F2F8;
+                user-select: none;
+            }
+        }
+        
+    }
     
 }

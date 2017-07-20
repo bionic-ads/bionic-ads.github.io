@@ -2130,49 +2130,50 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 
 /* line 1, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan {
+.mediaplan.fixedTable {
   width: 100%;
 }
 /* line 5, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .fixedtable-header {
+.mediaplan.fixedTable .fixedtable-header {
   width: calc(100% - 300px);
   margin-left: 300px;
 }
 /* line 10, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .fixedtable-body {
+.mediaplan.fixedTable .fixedtable-body {
   width: calc(100% - 300px);
 }
 /* line 14, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .fixedtable-sidebar {
+.mediaplan.fixedTable .fixedtable-sidebar {
   margin-left: 0;
   width: 300px;
 }
 /* line 19, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .fixedtable-sidebar, .mediaplan .fixedtable-body {
+.mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
   height: calc(100% - 268px);
 }
 /* line 23, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .fixedTable-sidebar table.table tr td {
+.mediaplan.fixedTable .fixedTable-sidebar table.table tr td {
   width: auto;
 }
 /* line 27, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .mediaPlanFirstColumnHeader {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader {
   position: absolute;
   width: 300px;
 }
 /* line 30, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .mediaPlanFirstColumnHeader th:first-child {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader th:first-child {
   width: 22px;
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 4px 4px;
   height: 100%;
 }
 /* line 37, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .mediaPlanFirstColumnHeader th:nth-child(2) {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader th:nth-child(2) {
   width: 100px;
 }
 /* line 42, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .mediaPlanFirstColumnHeader th, .mediaplan.fixedTable .table tr th {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader th,
+.mediaplan.fixedTable .table tr th {
   height: 30px;
   border: 1px solid #cfcfcf;
   font-weight: normal;
@@ -2181,21 +2182,21 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   text-align: left;
 }
 /* line 54, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan th {
+.mediaplan.fixedTable th {
   white-space: nowrap;
 }
 /* line 58, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .inactive {
+.mediaplan.fixedTable .inactive {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
   height: 100%;
 }
 /* line 67, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover td {
+.mediaplan.fixedTable tr.hover td {
   background: #E6F2F8 !important;
 }
 /* line 71, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover .inactive input {
+.mediaplan.fixedTable tr.hover .inactive input {
   background: #fff !important;
 }
 /* line 77, ../sass/components/7_prototype/_mediaplan.scss */
@@ -2269,14 +2270,38 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 .mediaplan.fixedTable table td .col-kpi-number, .mediaplan.fixedTable table tr .col-kpi-number {
   min-width: 150px;
 }
-/* line 127, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .currency-symbol {
+/* line 129, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable img.flightheader {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 3px;
+}
+/* line 134, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable img.flightheader :after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 27px;
+  background: #ddd;
+  left: 50%;
+  z-index: 1;
+  top: 27px;
+}
+/* line 148, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable img.flightmember {
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+/* line 154, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 133, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan input[type=text] {
+/* line 160, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
   height: 15px;
@@ -2289,37 +2314,37 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 146, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan input[type=text].half {
+/* line 173, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 151, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan input[type=text]:focus {
+/* line 178, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 155, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan input[type=text].secondary {
+/* line 182, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
   padding-top: 3px;
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan input[type=text].custom {
+/* line 190, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 170, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .vendor {
+/* line 197, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 177, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .kpi-actions {
+/* line 204, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .kpi-actions {
   color: #999;
   font-size: 11px;
   padding: 5px;
@@ -2328,26 +2353,54 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: absolute;
   white-space: nowrap;
 }
-/* line 186, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan .kpi-actions a {
+/* line 213, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 195, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover input[type=text] {
+/* line 222, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 199, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover .col-kpi-cost {
+/* line 226, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 204, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan tr.hover td[class*="col-kpi"]:hover .kpi-actions {
+/* line 231, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 209, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan:focus {
+/* line 236, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable:focus {
   border-width: 1px;
+}
+/* line 242, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.flightHeader .col-flight-dates input[type=text],
+.mediaplan.fixedTable tr.flightHeader .col-kpi-cost input[type=text],
+.mediaplan.fixedTable tr.flightHeader .col-kpi-number input[type=text] {
+  color: #9b9b9b;
+}
+/* line 250, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.flightHeader.hover .col-flight-dates input[type=text],
+.mediaplan.fixedTable tr.flightHeader.hover .col-kpi-cost input[type=text],
+.mediaplan.fixedTable tr.flightHeader.hover .col-kpi-number input[type=text] {
+  border-color: transparent !important;
+  background-color: #E6F2F8;
+  user-select: none;
+}
+/* line 264, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.flightMember .col-program input,
+.mediaplan.fixedTable tr.flightMember .col-product input,
+.mediaplan.fixedTable tr.flightMember .col-channel input {
+  color: #9b9b9b;
+}
+/* line 272, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.flightMember.hover .col-program input[type=text],
+.mediaplan.fixedTable tr.flightMember.hover .col-product input[type=text],
+.mediaplan.fixedTable tr.flightMember.hover .col-channel input[type=text] {
+  border-color: transparent !important;
+  background-color: #E6F2F8;
+  user-select: none;
 }
 
 /* line 45, ../sass/planner.scss */
