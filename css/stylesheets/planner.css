@@ -2270,6 +2270,12 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   min-width: 150px;
 }
 /* line 127, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan .currency-symbol {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+/* line 133, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -2283,16 +2289,16 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 140, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 146, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 145, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 151, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text]:focus {
   border-width: 1px;
 }
-/* line 149, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 155, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -2300,18 +2306,18 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 157, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
 }
-/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 169, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 170, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 176, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .kpi-actions {
   color: #999;
   font-size: 11px;
@@ -2321,24 +2327,24 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: absolute;
   white-space: nowrap;
 }
-/* line 179, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 185, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 188, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 194, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 192, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 198, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 197, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 203, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 202, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 208, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan:focus {
   border-width: 1px;
 }
