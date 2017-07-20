@@ -94,29 +94,29 @@
           var rowNumber = i + 1;
           var mediaPlanFirstColumns = $('<tr>');
           var customCPM, customCPC, customCPV;
-          var kpiActionsCPM = '<div class="kpi-actions"><a id="actionExcludeCPM'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
-              kpiActionsCPC = '<div class="kpi-actions"><a id="actionExcludeCPC'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
-              kpiActionsCPV = '<div class="kpi-actions"><a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a style="display:none" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
+          var kpiActionsCPM = '<div class="kpi-actions"><a id="actionExcludeCPM'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"><a id="actionExcludeCPC'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a style="display:none" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
           
           if(item.CPM == item.CPMdefault){
               customCPM = "";
           } else {
               customCPM = "custom";
-              kpiActionsCPM = '<div class="kpi-actions"><a id="actionExcludeCPM'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
+              kpiActionsCPM = '<div class="kpi-actions"><a id="actionExcludeCPM'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'"  data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
           }
 
           if(item.CPC == item.CPCdefault){
               customCPC = "";
           } else {
               customCPC = "custom";
-              kpiActionsCPC = '<div class="kpi-actions"> <a id="actionExcludeCPC'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"> <a id="actionExcludeCPC'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
           }
           
           if(item.CPV == item.CPVdefault){
               customCPV = "";
           } else {
               customCPV = "custom";
-              kpiActionsCPV = '<div class="kpi-actions"><a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
           }
              
           
@@ -197,6 +197,7 @@
         var kpi = $(this).data('kpi');
         var target = $(this).data('target');
         var kpidefault = $(this).data('default');
+        var numberdefault = $(this).data('numberdefault');
 //         console.log(action + '' + target);
         
         if(action == "exclude") {
@@ -209,6 +210,7 @@
             
         } else if(action == "reset") {
             $(".cpw.kpi"+kpi+item).val(kpidefault);
+//             $(".number.kpi"+kpi+item).val(numberdefault);
 //             $(".number.kpi"+kpi+item).val("");
             $("."+target).removeClass("custom");
             $("."+target).removeClass("inactive");
@@ -218,9 +220,9 @@
         }
     });
     
-    $().on('mouseup', '.cpw', function(){
-        
-        alert("custom typing");
+    $(document).on('change', '.cpw', function(){
+
+        $(this).addClass("custom");        
         
     });
     
