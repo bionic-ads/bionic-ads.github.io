@@ -132,12 +132,12 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-cost"><input class="right cpw kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-number"><input class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
-          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-cost"><input class="right cpw kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
-          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-number"><input class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
-          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-cost"><input class="right cpw kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
-          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-number"><input class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
+          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-cost"><input data-kpi="impressions'+ i + '" class="right cpw kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="CPM'+ i + ' col-kpi-number"><input id="impressions'+ i + '" class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
+          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-cost"><input data-kpi="clicks'+ i + '" class="right cpw kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
+          mediaPlanBody.append('<td class="CPC'+ i + ' col-kpi-number"><input id="clicks'+ i + '" class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
+          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-cost"><input  data-kpi="views'+ i + '" class="right cpw kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
+          mediaPlanBody.append('<td class="CPV'+ i + ' col-kpi-number"><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
           mediaPlanBody.append('</tr>');
           mediaPlanBody.appendTo("#MediaPlanBody");
         })
@@ -221,9 +221,11 @@
     });
     
     $(document).on('change', '.cpw', function(){
-
-        $(this).addClass("custom");        
-        
+        var kpi = $(this).data('kpi');
+            $(this).parent().removeClass("inactive");   
+            $("#"+kpi).removeClass("inactive");             
+            $("#"+kpi).parent().removeClass("inactive");             
+            $(this).addClass("custom");                
     });
     
 </script>    
