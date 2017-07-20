@@ -94,33 +94,31 @@
           var rowNumber = i + 1;
           var mediaPlanFirstColumns = $('<tr>');
           var customCPM, customCPC, customCPV;
-          var kpiActionsCPM = '<div class="kpi-actions"><a>Exclude</a></div>';
-              kpiActionsCPC = '<div class="kpi-actions"><a>Exclude</a></div>';
-              kpiActionsCPV = '<div class="kpi-actions"><a>Exclude</a></div>';
+          var kpiActionsCPM = '<div class="kpi-actions"><a style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-target="kpiCPM'+i+'">Reset</a> <a id="actionExcludeCPM'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"><a style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-target="kpiCPC'+i+'">Reset</a> <a id="actionExcludeCPC'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a style="display:none" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-target="kpiCPV'+i+'">Reset</a> <a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a></div>';
           
           if(item.CPM == item.CPMdefault){
               customCPM = "";
           } else {
               customCPM = "custom";
-              kpiActionsCPM = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
+              kpiActionsCPM = '<div class="kpi-actions"><a id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-target="kpiCPM'+i+'">Reset</a> <a id="actionExcludeCPM'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a></div>';
           }
 
           if(item.CPC == item.CPCdefault){
               customCPC = "";
           } else {
               customCPC = "custom";
-              kpiActionsCPC = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"><a id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-target="kpiCPC'+i+'">Reset</a> <a id="actionExcludeCPC'+i+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a></div>';
           }
           
           if(item.CPV == item.CPVdefault){
               customCPV = "";
           } else {
               customCPV = "custom";
-              kpiActionsCPV = '<div class="kpi-actions"><a>Reset</a> | <a>Exclude</a></div>';
-          }       
+              kpiActionsCPV = '<div class="kpi-actions"><a id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-target="kpiCPV'+i+'">Reset</a> <a id="actionExcludeCPV'+i+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a></div>';
+          }
              
-          console.log(item.CPC);
-          console.log(item.CPCdefault);
           
 //           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');          
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
@@ -134,12 +132,12 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Impressions +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Clicks +'"></td>');
-          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
-          mediaPlanBody.append('<td class="col-kpi-number"><input class="right" type="text" value="'+ item.Views +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
+          mediaPlanBody.append('<td class="col-kpi-cost"><input class="right cpw kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
+          mediaPlanBody.append('<td class="col-kpi-number"><input class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
           mediaPlanBody.append('</tr>');
           mediaPlanBody.appendTo("#MediaPlanBody");
         })
@@ -192,10 +190,28 @@
     // ------------------------------------------------
     // KPI Actions
     
-    $(".kpiAction").click(function(){
+    $(document).on('click', '.kpi-actions a', function() {
+        var action = $(this).data('action');
+        var actionButton = $(this).attr('id');
+        var item = $(this).data('item');
+        var kpi = $(this).data('kpi');
+        var target = $(this).data('target');
+        var kpidefault = $(this).data('default');
+//         console.log(action + '' + target);
         
-        
-        
+        if(action == "exclude") {
+            $("."+target).val("");
+            $("."+target).removeClass("custom");
+            $("#actionExclude"+kpi+item).hide();
+            $("#actionReset"+kpi+item).show();
+            
+        } else if(action == "reset") {
+            $(".cpw.kpi"+kpi+item).val(kpidefault);
+//             $(".number.kpi"+kpi+item).val("");
+            $("."+target).removeClass("custom");
+            $("#actionReset"+kpi+item).hide();
+            $("#actionExclude"+kpi+item).show();
+        }
     });
     
 </script>    
