@@ -24,6 +24,24 @@ table {
     }
 }
 
+table.overview-kpis {
+    
+    background: transparent;
+    margin-top: 15px;
+    border-bottom: 1px solid #f5f6f7;
+    
+    td {
+        font-size: 20px;
+        padding: 7px 10px 7px 0;
+        background: transparent;
+        
+        &:first-child {
+//             font-weight: bold;
+        }
+        
+    }
+}
+
 table.module {
     border-collapse: collapse;
     border-right: 0;

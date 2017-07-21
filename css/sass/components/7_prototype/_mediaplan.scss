@@ -44,8 +44,8 @@
         height: 30px;
         border: 1px solid #cfcfcf;
         font-weight: normal;
-        padding: 5px;
         box-sizing: border-box;
+        padding: 5px;
         text-align: left;
                 
                 
@@ -85,11 +85,13 @@
      table {
         border-collapse: collapse;
         
-        td, tr {
+        th, td, tr {
             box-sizing: border-box;
         
             &.readonly, &.link {
                 padding: 5px;
+                box-sizing: border-box;
+                display: inline-block;
             }
             
             .col-line-number {
@@ -113,13 +115,13 @@
                 padding: 5px;
             }
             
-            .col-id         {min-width: 80px; width: 80px; text-align: center !important;}
-            .col-program    {min-width: 180px;}
-            .col-product    {min-width: 200px;}
-            .col-channel    {min-width: 232px;}
-            .col-flight-dates {min-width: 238px;}
-            .col-kpi-cost    {min-width: 100px;}
-            .col-kpi-number    {min-width: 150px;}
+            .col-id         {min-width: 80px; max-width: 80px; width: 80px; text-align: center !important;}
+            .col-program    {min-width: 180px; max-width: 180px; width:180px;}
+            .col-product    {min-width: 200px; max-width: 200px; width:200px;}
+            .col-channel    {min-width: 232px; max-width: 232px; width: 232px;}
+            .col-flight-dates {min-width: 238px; max-width: 238px; width: 238px;}
+            .col-kpi-cost    {min-width: 100px; max-width: 100px; width: 100px;}
+            .col-kpi-number    {min-width: 150px; max-width: 150px; width: 150px;}
         }
         
     }

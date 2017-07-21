@@ -5169,7 +5169,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 2px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
   padding: 40px;
   margin-left: 20px;
