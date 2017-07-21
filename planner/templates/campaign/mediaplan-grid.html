@@ -112,29 +112,29 @@
 // KPI Actions
           
           var customCPM, customCPC, customCPV;
-          var kpiActionsCPM = '<div class="kpi-actions"><a class="action" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
-              kpiActionsCPC = '<div class="kpi-actions"><a class="action" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
-              kpiActionsCPV = '<div class="kpi-actions"><a class="action" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a  class="action" style="display:none" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
+          var kpiActionsCPM = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
           
           if(item.CPM == item.CPMdefault){
               customCPM = "";
           } else {
               customCPM = "custom";
-              kpiActionsCPM = '<div class="kpi-actions"><a class="action" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action" id="actionResetCPM'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'"  data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
+              kpiActionsCPM = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'"  data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
           }
 
           if(item.CPC == item.CPCdefault){
               customCPC = "";
           } else {
               customCPC = "custom";
-              kpiActionsCPC = '<div class="kpi-actions"> <a class="action" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action" id="actionResetCPC'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="kpi-actions"> <a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
           }
           
           if(item.CPV == item.CPVdefault){
               customCPV = "";
           } else {
               customCPV = "custom";
-              kpiActionsCPV = '<div class="kpi-actions"><a class="action" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a class="action" id="actionResetCPV'+i+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a class="action reset" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
           }
              
           
@@ -217,6 +217,7 @@
         var target = $(this).data('target');
         var kpidefault = $(this).data('default');
         var numberdefault = $(this).data('numberdefault');
+        var numberdefaultline = "100,000";
         var flightheader =  $(this).data('flightheader');
         var flightmember =  $(this).data('flightmember');
 //         console.log(action + '' + target);
@@ -224,7 +225,6 @@
         if(action == "exclude") {
             
             if(flightheader > 0){
-                console.log(flightheader);
                 $("tr.flight"+flightheader+" td input."+kpi).val("");
                 $("tr.flight"+flightheader+" td input."+kpi).removeClass("custom");
                 $("tr.flight"+flightheader+" td input."+kpi).parent().addClass("inactive");
@@ -232,7 +232,8 @@
                 $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").addClass("inactive");
                 $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").val("");
                 $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").hide();
-                
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").hide();
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").show();
             }
             
             $(this).parent().parent().find(".currency-symbol").hide();
@@ -244,6 +245,17 @@
             $("."+target).addClass("inactive");
             
         } else if(action == "reset") {
+            
+            if(flightheader > 0){
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).removeClass("inactive");
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").removeClass("inactive");
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.cpw").val(kpidefault);
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.number").val(numberdefaultline);
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").show();
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").show();
+                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").hide();
+            }
+            
             $(".cpw.kpi"+kpi+item).val(kpidefault);
             $(".number.kpi"+kpi+item).val(numberdefault);
 //             $(".number.kpi"+kpi+item).val("");
