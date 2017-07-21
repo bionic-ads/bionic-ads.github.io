@@ -31,39 +31,43 @@
 <div class="mediaplan fixedTable block" id="mediaplan">
   
   <table class="mediaPlanFirstColumnHeader">
+      <thead>
       <tr>
           <th></th>
-          <th>Line</th>
-          <th><a>Placement Name</a></th>
+          <th><span class="header">Line</span></th>
+          <th><span class="header"><a>Placement Name</a></span></th>
       </tr>
+      </thead>
   </table>  
     
     
   <header class="fixedTable-header block">
     <table class="table table-bordered">
+        <thead>
         <tr>
-          <th class="col-id">Bionic ID</th>
-          <th class="col-program"><a>Program</a> / <a>Vendor</a></th>
-          <th class="col-product"><a>Product</a> / <a>Targeting</a></th>
-          <th class="col-channel"><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></th>
-          <th class="col-flight-dates"><a>Flight Dates</a> / <a>Day Parts</a></th>
-          <th class="col-kpi-cost right"><a>CPM</a></th>
-          <th class="col-kpi-number right"><a>Impressions</a></th>
-          <th class="col-kpi-cost right"><a>CPC</a></th>
-          <th class="col-kpi-number right"><a>Clicks</a></th>
-          <th class="col-kpi-cost right"><a>/View</a></th>
-          <th class="col-kpi-number right"><a>Views</a></th>
+          <th class="col-id"><span>Bionic ID</span></th>
+          <th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th>
+          <th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th>
+          <th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th>
+          <th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th>
+          <th class="col-kpi-cost right"><span><a>CPM</a></span></th>
+          <th class="col-kpi-number right"><span><a>Impressions</a></span></th>
+          <th class="col-kpi-cost right"><span><a>CPC</a></span></th>
+          <th class="col-kpi-number right"><span><a>Clicks</a></span></th>
+          <th class="col-kpi-cost right"><span><a>/View</a></span></th>
+          <th class="col-kpi-number right"><span><a>Views</a></span></th>
         </tr>
+        </thead>
     </table>
   </header>
   <aside class="fixedTable-sidebar block">
     <table class="table table-bordered mediaplan" id="MediaPlanFirstColumns">
-        
+        <tbody></tbody>
     </table>
   </aside>
   <div class="fixedTable-body block">
     <table class="table table-bordered mediaplan" id="MediaPlanBody">
-
+        <tbody></tbody>
     </table>
   </div>
 </div>
@@ -137,10 +141,10 @@
 //           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');   
           var mediaPlanFirstColumns = $('<tr class="'+flightHeader+' '+isFlightMember+'">');
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
-          mediaPlanFirstColumns.append('<td class="col-line-number">' + rowNumber + flightHeaderImage+flightMemberImage+'</td>');
+          mediaPlanFirstColumns.append('<td class="col-line-number"><span>' + rowNumber + flightHeaderImage+flightMemberImage+'</span></td>');
           mediaPlanFirstColumns.append('<td class="col-placement-name ">'+ item.PlacementName +'</td>');
           mediaPlanFirstColumns.append('</tr>');
-          mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns");
+          mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
           var mediaPlanBody = $('<tr class="'+flightHeader+' '+isFlightMember+'"><td class="col-id readonly">' + item.BionicID + '</td>');
           mediaPlanBody.append('<td class="col-program"><input type="text" value="'+ item.Program +'"><span class="vendor">'+ item.Vendor +'</span></td>');
@@ -154,7 +158,7 @@
           mediaPlanBody.append('<td class="CPV CPV'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input  data-kpi="views'+ i + '" class="right cpw CPV kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
           mediaPlanBody.append('<td class="CPV CPV'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
           mediaPlanBody.append('</tr>');
-          mediaPlanBody.appendTo("#MediaPlanBody");
+          mediaPlanBody.appendTo("#MediaPlanBody tbody");
         })
 
         

@@ -21,7 +21,7 @@
     }    
     
     .fixedTable-sidebar table.table tr td {
-        width: auto;
+//         width: auto;
     }
     
     .mediaPlanFirstColumnHeader {
@@ -37,22 +37,36 @@
         th:nth-child(2){
             width: 100px;
         }
+        
+        
     }
     
     .mediaPlanFirstColumnHeader th,
     .table tr th {
         height: 30px;
         border: 1px solid #cfcfcf;
+        border-left: 0;
         font-weight: normal;
         box-sizing: border-box;
-        padding: 5px;
+        padding: 0px;
         text-align: left;
+             
+        span {
+            padding-left: 5px;
+            padding-right: 5px;
+        }        
                 
-                
+    }
+    
+    #mediaPlanFirstColumns td {
+        border-left: 0;
     }
         
     th {
         white-space: nowrap;
+        min-width: none;
+        padding: 5px;
+        box-sizing: border-box;
     }
     
     .inactive {
@@ -97,7 +111,14 @@
             .col-line-number {
                 color: #ccc;
                 font-size: 2em;
-                padding: 10px;
+                padding: 0px;
+                width: 100px;
+                
+                span {
+                    display: block;
+                    padding: 10px;
+                }
+                
             }
             
             .col-checkbox {
@@ -115,18 +136,26 @@
                 padding: 5px;
             }
             
-            .col-id         {min-width: 80px; max-width: 80px; width: 80px; text-align: center !important;}
-            .col-program    {min-width: 180px; max-width: 180px; width:180px;}
-            .col-product    {min-width: 200px; max-width: 200px; width:200px;}
-            .col-channel    {min-width: 232px; max-width: 232px; width: 232px;}
-            .col-flight-dates {min-width: 238px; max-width: 238px; width: 238px;}
-            .col-kpi-cost    {min-width: 100px; max-width: 100px; width: 100px;}
-            .col-kpi-number    {min-width: 150px; max-width: 150px; width: 150px;}
         }
         
     }
     
-
+    th span {
+        display: block;
+        box-sizing: border-box;
+    }
+    
+    th, td {
+            
+            &.col-id            {min-width: 80px; max-width: 80px; width: 80px; text-align: center !important;}
+            &.col-program       {min-width: 180px; max-width: 180px; width:180px;}
+            &.col-product       {min-width: 200px; max-width: 200px; width:200px;}
+            &.col-channel       {min-width: 232px; max-width: 232px; width: 232px;}
+            &.col-flight-dates  {min-width: 238px; max-width: 238px; width: 238px;}
+            &.col-kpi-cost      {min-width: 100px; max-width: 100px; width: 100px;}
+            &.col-kpi-number    {min-width: 150px; max-width: 150px; width: 150px;}
+    }
+    
     
     img.flightheader {
         position: absolute;
