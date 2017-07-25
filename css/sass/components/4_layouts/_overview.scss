@@ -75,4 +75,28 @@
         }
     }
     
+    .overview-kpis {
+        
+        margin-top: 5px;
+        border-bottom: 1px solid #cfcfcf;
+        margin-bottom: 10px;
+        width: 200px;
+        
+        .kpi {
+            
+            display: block;
+            clear: both;
+            margin-bottom: 10px;
+            
+            .kpi-name {
+                
+            }
+            
+            .kpi-goal {
+                display: block;
+                color: $blue;
+            }
+        }
+    }
+    
 }

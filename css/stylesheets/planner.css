@@ -1940,6 +1940,24 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   height: 400px;
   background: url(../../planner/images/pencil.svg) no-repeat center center;
 }
+/* line 78, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .overview-kpis {
+  margin-top: 5px;
+  border-bottom: 1px solid #cfcfcf;
+  margin-bottom: 10px;
+  width: 200px;
+}
+/* line 85, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .overview-kpis .kpi {
+  display: block;
+  clear: both;
+  margin-bottom: 10px;
+}
+/* line 95, ../sass/components/4_layouts/_overview.scss */
+.bionic-overview-container .overview-kpis .kpi .kpi-goal {
+  display: block;
+  color: #69AED4;
+}
 
 /* line 3, ../sass/components/4_layouts/_move.scss */
 .modal i.orange {
