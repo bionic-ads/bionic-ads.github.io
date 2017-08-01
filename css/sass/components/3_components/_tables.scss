@@ -19,6 +19,12 @@ table {
     td {
         background: #fff;
     }
+    
+    .hashed {
+    background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
+    background-size: 4px 4px !important;
+    }
+    
     tr:hover td{
         background: #E6F2F8 !important;
     }
@@ -381,9 +387,16 @@ table.addToCampaign {
         
         &:first-child {
             border-right: 0;
-            min-width: 20px !important;
-        }        
+            min-width: 34px !important;
+        }    
+        
+        &.description {
+            background: #f5f6f7;
+            color: #9b9b9b;
+        }            
     }
+    
+
     
     &.budget {
         
@@ -408,7 +421,9 @@ table.addToCampaign {
         padding-left: 20px;
     }    
 */
-    
+    td:first-child {
+        color: #9b9b9b;
+    }
     
     td:nth-child(2) {
         color: #333;
@@ -443,8 +458,10 @@ table.addToCampaign {
             min-width: 80px;
         }
     }
+    
+
         
-    tr:hover {
+    tr:hover:not(.divider) {
         
         td:first-child {
             cursor: pointer;
@@ -467,6 +484,30 @@ table.addToCampaign {
     
     }
     
+    tr.divider {
+        
+        td:first-child {
+            border-right: 1px solid #cfcfcf;
+            padding: 10px 0 10px 15px;
+            background: transparent;
+            color: #333;
+            font-size: 11px;
+            font-weight: bold;
+            border: 1px solid #cfcfcf !important;
+        }
+        
+        &:hover {
+            background: transparent;
+            
+            td {
+                background: transparent !important;
+            }
+            
+        }
+        
+        
+    }
+        
     td {
         
         border-bottom: 2px solid #f5f6f7;
@@ -476,6 +517,13 @@ table.addToCampaign {
                     text-align: right
                 }    
 
+        
+        &.width50  { min-width: 50px;}
+        &.width100 { min-width: 100px;}
+        &.width150 { min-width: 150px;}
+        &.width250 { min-width: 250px;}
+        &.width300 { min-width: 300px;}
+        
         
         &.editable {
             color: #333;
@@ -525,6 +573,19 @@ table.gridlines {
             border-bottom: 1px solid #eee;
             
         }
+    
+    .section td {
+        font-size: 11px;
+        font-weight: bold;
+        border-right: 1px solid #cfcfcf;
+        border-bottom: 1px solid #cfcfcf;
+    }
+    
+    .section:hover td:first-child {
+        cursor: default;
+        text-indent: -9999px;
+        background: #fff;
+    }    
     
     &.addToCampaign th:first-child {
         padding-left: 15px;

@@ -4,31 +4,46 @@
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
-    <ul class="bionic-tab-menu">
-        <li><a href="#/campaign/overview/">Overview</a></li>
-        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
-        <li><a href="#/campaign/proposals/">Proposals</a></li>
-        <li><a href="#/campaign/mediaplan-kpis/">Media Plan</a></li>
-        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
-        <li><a href="#/campaign/schedule/">Schedule</a></li>
-        <li><a href="#/campaign/allocations/">Allocations</a></li>
-        <li><a href="#/campaign/tasks/">Tasks</a></li>
-        <li><a href="#/campaign/performance/">Performance</a></li>
-    </ul>
+    <script type="text/template" class="campaignNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/campaign/'));
+                var group = campaignNavItem.group;
+                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+    
 </div>
 
-<ul class="bionic-subnav-menu">
-    <li><a>Basic Info</a></li>
-    <li><a>Image</a></li>
-    <li><a>Description</a></li>
-    <li><a>Contacts</a></li>
-    <li><a>Currency</a></li>
-    <li><a>Agency Compensation</a></li>
-    <li><a>Ad Serving</a></li>
-    <li><a>Task Columns</a></li>
-    <li><a class="current">KPI Columns</a></li>
-    <li><a>Picklist Columns</a></li>
-</ul>
+<script type="text/template" class="template">
+	
+	<ul class="bionic-subnav-menu">
+		<% _.each( bionic.listItems, function( listItem ){ %>
+        <% 
+            var url = window.location.href;
+            var theID = url.substring(url.lastIndexOf('/') + 1);
+            var page = url.substring(url.lastIndexOf('#/campaign/'));
+            if (listItem.page + theID == page){ var currentSubnav = 'class="current"'; } 
+        %>
+			<li>
+				<a <%= currentSubnav %> href="<%- listItem.page %>"><%- listItem.name %></a>
+			</li>
+
+		<% }); %>
+	</ul>
+	
+</script>
 
 <div class="block has-subnav">
     
@@ -99,6 +114,8 @@
 
 </div>
 
+<script type="text/javascript" src="templates/campaign/_nav-campaign.js"></script>
+<script type="text/javascript" src="templates/campaign/_nav-campaign-settings.js"></script>
 <script>
       if(Campaigns.length > 0){setCampaignInfo();}
 </script>

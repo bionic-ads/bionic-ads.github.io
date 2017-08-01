@@ -4,17 +4,26 @@
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
-    <ul class="bionic-tab-menu">
-        <li><a href="#/campaign/overview/">Overview</a></li>
-        <li><a href="#/campaign/settings-kpis/">Settings</a></li>
-        <li><a href="#/campaign/proposals/">Proposals</a></li>
-        <li><a href="#/campaign/mediaplan-grid/" class="current">Media Plan</a></li>
-        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
-        <li><a href="#/campaign/schedule/">Schedule</a></li>
-        <li><a href="#/campaign/allocations/">Allocations</a></li>
-        <li><a href="#/campaign/tasks/">Tasks</a></li>
-        <li><a href="#/campaign/performance/">Performance</a></li>
-    </ul>
+    <script type="text/template" class="campaignNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/campaign/'));
+                var group = campaignNavItem.group;
+                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+	
 </div>
 
 <ul class="bionic-action-menu block">
@@ -50,6 +59,14 @@
           <th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th>
           <th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th>
           <th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th>
+          <th class="col-rate center"><span>Rate</span></th>
+          <th class="col-quantity right"><span>Quantity</span></th>
+          <th class="col-gross-media right"><span>Gross Media Cost</span></th>
+          <th class="col-net-media right"><span>Net Media Cost</span></th>
+          <th class="col-agency-comp right"><span>Agency Comp</span></th>
+          <th class="col-total-media-cost right"><span>Total Media Cost</span></th>
+          <th class="col-ad-serving right"><span>Ad Serving</span></th>
+          <th class="col-total-cost right"><span>Total Cost</span></th>
           <th class="col-kpi-cost right"><span><a>CPM</a></span></th>
           <th class="col-kpi-number right"><span><a>Impressions</a></span></th>
           <th class="col-kpi-cost right"><span><a>CPC</a></span></th>
@@ -72,6 +89,7 @@
   </div>
 </div>
 
+<script type="text/javascript" src="templates/campaign/_nav-campaign.js"></script>
 
 <script type="text/javascript">
 
@@ -151,6 +169,16 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
+          
+          mediaPlanBody.append('<td class="col-rate"></td>');
+          mediaPlanBody.append('<td class="col-quantity"></td>');
+          mediaPlanBody.append('<td class="col-gross-media"></td>');
+          mediaPlanBody.append('<td class="col-net-media"></td>');
+          mediaPlanBody.append('<td class="col-agency-comp"></td>');
+          mediaPlanBody.append('<td class="col-total-media-cost"></td>');
+          mediaPlanBody.append('<td class="col-ad-serving"></td>');
+          mediaPlanBody.append('<td class="col-total-cost"></td>');          
+          
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="impressions'+ i + '" class="right cpw CPM kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="impressions'+ i + '" class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
           mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="clicks'+ i + '" class="right cpw CPC kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');

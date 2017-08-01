@@ -1,0 +1,118 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <ul class="bionic-tab-menu">
+        <li><a href="#/campaign/overview/">Overview</a></li>
+        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
+        <li><a href="#/campaign/proposals/">Proposals</a></li>
+        <li><a href="#/campaign/mediaplan-kpis/">Media Plan</a></li>
+        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
+        <li><a href="#/campaign/schedule/">Schedule</a></li>
+        <li><a href="#/campaign/allocations/">Allocations</a></li>
+        <li><a href="#/campaign/tasks/">Tasks</a></li>
+        <li><a href="#/campaign/performance/">Performance</a></li>
+    </ul>
+</div>
+
+<ul class="bionic-subnav-menu">
+    <li><a>Basic Info</a></li>
+    <li><a>Image</a></li>
+    <li><a>Description</a></li>
+    <li><a>Contacts</a></li>
+    <li><a>Currency</a></li>
+    <li><a>Agency Compensation</a></li>
+    <li><a class="current" href="#/campaign/settings-additional-costs/">Cost Columns</a></li>
+    <li><a>Ad Serving</a></li>
+    <li><a>Task Columns</a></li>
+    <li><a href="#/campaign/settings-kpis/">KPI Columns</a></li>
+    <li><a>Picklist Columns</a></li>
+</ul>
+
+<div class="block has-subnav">
+    
+<h2>Cost Columns</h2> 
+
+<!--         <div class="filter" style="margin-bottom: 10px;"><i class="fa fa-filter"></i> All Cost Types</div> -->
+
+<h3>Production</h3>
+
+<table class="addToCampaign custom-form-controls simple gridlines">
+    <thead>
+        <tr>
+            <th colspan="2">Cost</th>
+            <th colspan="3">Calculation</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>1</td>
+            <td><a class="open-modal" href="templates/modals/settings/editcost.html" rel="modal:open">Talent</a></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Rate"></td>
+            <td class="editable width100 narrow"><input class="right" type="text" value="5.00 %"></td>
+            <td class="editable"><input class="dropdown" type="text" value="of Net Media Cost"></td>
+            <td>Remove</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a class="open-modal" href="templates/modals/settings/editcost.html" rel="modal:open">Email Template Design</a></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Percentage"></td>
+            <td class="editable width100 narrow"><input class="right" type="text" value="10.00 %"></td>
+            <td class="editable"><input class="dropdown" type="text" value="of Total Cost"></td>
+            <td>Remove</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a class="open-modal" href="templates/modals/settings/editcost.html" rel="modal:open">Layouts</a></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Flat Rate"></td>
+            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="600.00">
+            <td class="width250">per Line Item</td>
+            <td>Remove</td>
+                
+        </tr>
+
+
+    </tbody>
+</table>
+
+<h3>Delivery</h3>
+
+<table class="addToCampaign custom-form-controls simple gridlines">
+    <thead>
+        <tr>
+            <th colspan="2">Cost</th>
+            <th colspan="3">Calculation</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <td>1</td>
+            <td class="width150"><a class="open-modal" href="templates/modals/settings/editcost.html" rel="modal:open">Google DBM Tech</a></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Rate"></td>
+            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="0.1200">
+            <td class="editable width250"><input class="dropdown" type="text" value="&times; Cost per Thousand Impressions"></td>
+            <td>Remove</td>
+                
+        </tr>
+    </tbody>
+</table>
+
+
+
+<br>
+<a class="blue-button open-modal" href="templates/modals/settings/additionalcosts.html" rel="modal:open" >Select Costs</a>
+<br>
+<br>
+
+</div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+</script>

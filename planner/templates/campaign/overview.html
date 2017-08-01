@@ -4,17 +4,26 @@
     
     <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
     
-    <ul class="bionic-tab-menu">
-        <li><a href="#/campaign/overview/" class="current">Overview</a></li>
-        <li><a href="#/campaign/settings-kpis/">Settings</a></li>
-        <li><a href="#/campaign/proposals/">Proposals</a></li>
-        <li><a href="#/campaign/mediaplan-grid/">Media Plan</a></li>
-        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
-        <li><a href="#/campaign/schedule/">Schedule</a></li>
-        <li><a href="#/campaign/allocations/">Allocations</a></li>
-        <li><a href="#/campaign/tasks/">Tasks</a></li>
-        <li><a href="#/campaign/performance/">Performance</a></li>
-    </ul>
+    <script type="text/template" class="campaignNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/campaign/'));
+                var group = campaignNavItem.group;
+                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+
 </div>
 
 <ul class="bionic-action-menu block">
@@ -124,6 +133,7 @@
 
 </div>
 
+<script type="text/javascript" src="templates/campaign/_nav-campaign.js"></script>
 <script>
       if(Campaigns.length > 0){setCampaignInfo();}
 </script>

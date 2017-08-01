@@ -113,7 +113,7 @@ ol, ul, li {
 
 /* line 35, ../sass/base/_settings.scss */
 .center {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* line 39, ../sass/base/_settings.scss */

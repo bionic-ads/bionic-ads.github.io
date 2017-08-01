@@ -178,6 +178,12 @@ function setCampaignInfo(){
         $('.bionic-tab-menu a').each(function(){
             this.href += theID;
         })
+ 
+         // Campaign Tabs
+        
+        $('.bionic-subnav-menu a').each(function(){
+            this.href += theID;
+        })
         
     }
     
