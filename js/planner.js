@@ -36,6 +36,8 @@ $(document).ready(function() {
     		''                      : 'index',
     		'newuser'               : 'newUser',
     		'notes'                 : 'notes',
+    		'admin/:content/'       : 'showAdmin',
+    		'line/:content/:id'     : 'showLine',
     		'campaign/:content/:id' : 'showCampaign',
     		'advertiser/:content/'  : 'showAdvertiser',
     		'advertisers'           : 'showAdvertisers',
@@ -60,6 +62,18 @@ $(document).ready(function() {
     		});
             
             console.log("callouts");
+    	},
+	
+    	showAdmin: function(content,id){
+            console.log(content);
+            updateFigawi("show","none");
+    		$("#bionic-main").load("templates/admin/"+content+".html");           
+    	},
+    	
+    	showLine: function(content,id){
+            console.log(content);
+            updateFigawi("show","none");
+    		$("#bionic-main").load("templates/line/"+content+".html");           
     	},
 	
     	showCampaign: function(content,id){

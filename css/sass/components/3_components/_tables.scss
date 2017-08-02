@@ -366,6 +366,17 @@ table.goals {
 
 table.addToCampaign {
     
+    counter-reset: rowNumber -1;
+    
+    tr {
+        counter-increment: rowNumber;
+    
+        td:first-child::before {
+            content:  counter(rowNumber);
+        }
+    
+    }
+    
     clear: both;
     max-width: 950px;
     

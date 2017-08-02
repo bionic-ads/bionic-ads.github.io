@@ -60,13 +60,13 @@
           <th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th>
           <th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th>
           <th class="col-rate center"><span>Rate</span></th>
-          <th class="col-quantity right"><span>Quantity</span></th>
-          <th class="col-gross-media right"><span>Gross Media Cost</span></th>
-          <th class="col-net-media right"><span>Net Media Cost</span></th>
-          <th class="col-agency-comp right"><span>Agency Comp</span></th>
-          <th class="col-total-media-cost right"><span>Total Media Cost</span></th>
-          <th class="col-ad-serving right"><span>Ad Serving</span></th>
-          <th class="col-total-cost right"><span>Total Cost</span></th>
+          <th class="col-quantity right"><span><a>Quantity</a></span></th>
+          <th class="col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th>
+          <th class="col-net-media col-cost right"><span><a>Net Media Cost</a></span></th>
+          <th class="col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th>
+          <th class="col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th>
+          <th class="col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th>
+          <th class="col-total-cost col-cost right"><span><a>Total Cost</a></span></th>
           <th class="col-kpi-cost right"><span><a>CPM</a></span></th>
           <th class="col-kpi-number right"><span><a>Impressions</a></span></th>
           <th class="col-kpi-cost right"><span><a>CPC</a></span></th>
@@ -160,7 +160,7 @@
           var mediaPlanFirstColumns = $('<tr class="'+flightHeader+' '+isFlightMember+'">');
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
           mediaPlanFirstColumns.append('<td class="col-line-number"><span>' + rowNumber + flightHeaderImage+flightMemberImage+'</span></td>');
-          mediaPlanFirstColumns.append('<td class="col-placement-name ">'+ item.PlacementName +'</td>');
+          mediaPlanFirstColumns.append('<td class="col-placement-name "><a href="#/line/line-overview/0">'+ item.PlacementName +'</a></td>');
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
@@ -170,14 +170,14 @@
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
           
-          mediaPlanBody.append('<td class="col-rate"></td>');
-          mediaPlanBody.append('<td class="col-quantity"></td>');
-          mediaPlanBody.append('<td class="col-gross-media"></td>');
-          mediaPlanBody.append('<td class="col-net-media"></td>');
-          mediaPlanBody.append('<td class="col-agency-comp"></td>');
-          mediaPlanBody.append('<td class="col-total-media-cost"></td>');
-          mediaPlanBody.append('<td class="col-ad-serving"></td>');
-          mediaPlanBody.append('<td class="col-total-cost"></td>');          
+          mediaPlanBody.append('<td class="col-rate"><input class="currency" type="text"><input class="number" type="text"><input type="text"><input type="text"></td>');
+          mediaPlanBody.append('<td class="col-quantity"><input type="text" value=""></input></td>');
+          mediaPlanBody.append('<td class="col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-net-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-agency-comp col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-total-media-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-ad-serving col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-total-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');          
           
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="impressions'+ i + '" class="right cpw CPM kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="impressions'+ i + '" class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');

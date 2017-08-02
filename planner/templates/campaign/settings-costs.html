@@ -68,7 +68,7 @@
         </tr>
 -->
         <tr>
-            <td>1</td>
+            <td></td>
             <td>Gross Media Cost</strong></td>
             <td>Media</td>
             <td class="description" colspan="3"> </td>
@@ -76,7 +76,7 @@
         </tr>
 
         <tr>
-            <td>2</td>
+            <td></td>
             <td>Net Media Cost</strong></td>
             <td>Media</td>
             <td class="description" colspan="3"> </td>
@@ -84,22 +84,22 @@
         </tr>
 
         <tr>
-            <td>3</td>
+            <td></td>
             <td>Agency Comp</strong></td>
             <td>Media</td>
-            <td class="editable width100"><input class="dropdown" type="text" value=""></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Percentage of"></td>
+            <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
             <td class="editable width100 narrow"><input class="right" type="text" value="5.00 %"></td>
-            <td class="editable"><input class="dropdown" type="text" value="of Net Media Cost"></td>
             <td>Remove</td>
         </tr>
         
         <tr>
-            <td>4</td>
+            <td></td>
             <td>Total Media Cost</strong></td>
             <td>Media</td>
-            <td class="editable width100"><input class="dropdown" type="text" value=""></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Percentage of"></td>
+            <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
             <td class="editable width100 narrow"><input class="right" type="text" value="5.00 %"></td>
-            <td class="editable"><input class="dropdown" type="text" value="of Net Media Cost"></td>
             <td>Remove</td>
         </tr>
 
@@ -111,37 +111,37 @@
 -->
 
         <tr>
-            <td>5</td>
+            <td></td>
             <td>Talent</strong></td>
             <td>Production</td>
-            <td class="editable width100"><input class="dropdown" type="text" value=""></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Percentage of"></td>
+            <td class="editable"><input class="dropdown" type="text" value="Net Media Cost"></td>
             <td class="editable width100 narrow"><input class="right" type="text" value="5.00 %"></td>
-            <td class="editable"><input class="dropdown" type="text" value="of Net Media Cost"></td>
             <td>Remove</td>
         </tr>
         
 
         <tr>
-            <td>6</td>
+            <td></td>
             <td>Email Template Design</strong></td>
             <td>Production</td>
-            <td class="editable width100"><input class="dropdown" type="text" value="Percentage"></td>
+            <td class="editable width100"><input class="dropdown" type="text" value="Percentage of"></td>
+            <td class="editable"><input class="dropdown" type="text" value="Total Cost"></td>
             <td class="editable width100 narrow"><input class="right" type="text" value="10.00 %"></td>
-            <td class="editable"><input class="dropdown" type="text" value="of Total Cost"></td>
             <td>Remove</td>
         </tr>
         <tr>
-            <td>7</td>
+            <td></td>
             <td>Layouts</strong></td>
             <td>Production</td>
             <td class="editable width100"><input class="dropdown" type="text" value="Flat Rate"></td>
-            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="600.00">
             <td class="width250">per Line Item</td>
+            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="600.00">
             <td>Remove</td>
         </tr>
         
         <tr>
-            <td>8</td>
+            <td></td>
             <td class="width150">Total Production Cost</strong></td>
             <td>Production</td>
             <td class="description" colspan="3"> </td>
@@ -156,17 +156,17 @@
 -->
 
         <tr>
-            <td>9</td>
+            <td></td>
             <td class="width150">Google DBM Tech</strong></td>
             <td>Delivery</td>
-            <td class="editable width100"><input class="dropdown" type="text" value="Rate"></td>
-            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="0.1200">
+            <td class="editable width100"><input class="dropdown" type="text" value=""></td>
             <td class="editable width250"><input class="dropdown" type="text" value="&times; Cost per Thousand Impressions"></td>
+            <td class="editable width100 narrow"><span class="currency-symbol">$</span><input class="right" type="text" value="0.1200">
             <td>Remove</td>
         </tr>
 
         <tr>
-            <td>10</td>
+            <td></td>
             <td class="width150">Total Delivery Cost</strong></td>
             <td>Delivery</td>
             <td class="description " colspan="3"> </td>
@@ -174,7 +174,7 @@
         </tr>
         
         <tr>
-            <td>11</td>
+            <td></td>
             <td class="width150">Total Cost</strong></td>
             <td class="description"></td>
             <td class="description " colspan="3"> </td>
@@ -196,4 +196,20 @@
 <script type="text/javascript" src="templates/campaign/_nav-campaign-settings.js"></script>
 <script>
       if(Campaigns.length > 0){setCampaignInfo();}
+      
+        $("tbody").sortable({
+            items: "> tr",
+            appendTo: "parent",
+            helper: "clone"
+        }).disableSelection();
+        
+        $("tbody").droppable({
+            hoverClass: "drophover",
+            tolerance: "pointer",
+            drop: function(e, ui) {
+                var tabdiv = $(this).attr("href");
+                $(tabdiv + " table tr:last").after("<tr>" + ui.draggable.html() + "</tr>");
+            }
+        });    
+          
 </script>

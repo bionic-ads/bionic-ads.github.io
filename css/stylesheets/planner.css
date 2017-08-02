@@ -1307,17 +1307,21 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   min-height: 200px;
   overflow-y: auto;
 }
-/* line 34, ../sass/components/3_components/_modals.scss */
+/* line 33, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body ul {
+  box-sizing: border-box;
+}
+/* line 39, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 38, ../sass/components/3_components/_modals.scss */
+/* line 43, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 46, ../sass/components/3_components/_modals.scss */
+/* line 51, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -1718,6 +1722,7 @@ table.goals td input[type="text"]:focus {
 
 /* line 367, ../sass/components/3_components/_tables.scss */
 table.addToCampaign {
+  counter-reset: rowNumber -1;
   clear: both;
   max-width: 950px;
   /*
@@ -1730,79 +1735,87 @@ table.addToCampaign {
       }    
   */
 }
-/* line 372, ../sass/components/3_components/_tables.scss */
+/* line 371, ../sass/components/3_components/_tables.scss */
+table.addToCampaign tr {
+  counter-increment: rowNumber;
+}
+/* line 374, ../sass/components/3_components/_tables.scss */
+table.addToCampaign tr td:first-child::before {
+  content: counter(rowNumber);
+}
+/* line 383, ../sass/components/3_components/_tables.scss */
 table.addToCampaign th {
   text-align: left;
 }
-/* line 377, ../sass/components/3_components/_tables.scss */
+/* line 388, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td, table.addToCampaign th {
   box-sizing: border-box;
   padding: 10px;
   border: 0;
   white-space: nowrap;
 }
-/* line 383, ../sass/components/3_components/_tables.scss */
+/* line 394, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type='checkbox'], table.addToCampaign td label, table.addToCampaign th input[type='checkbox'], table.addToCampaign th label {
   max-width: 21px;
   margin: 0 15px 0 0;
 }
-/* line 388, ../sass/components/3_components/_tables.scss */
+/* line 399, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:first-child, table.addToCampaign th:first-child {
   border-right: 0;
   min-width: 34px !important;
 }
-/* line 393, ../sass/components/3_components/_tables.scss */
+/* line 404, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.description, table.addToCampaign th.description {
   background: #f5f6f7;
   color: #9b9b9b;
 }
-/* line 403, ../sass/components/3_components/_tables.scss */
+/* line 414, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.budget td:nth-child(2) {
   font-weight: normal;
   text-align: right;
 }
-/* line 408, ../sass/components/3_components/_tables.scss */
+/* line 419, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.budget td:nth-child(3) {
   background: transparent !important;
   border: 0;
 }
-/* line 424, ../sass/components/3_components/_tables.scss */
+/* line 435, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:first-child {
   color: #9b9b9b;
 }
-/* line 428, ../sass/components/3_components/_tables.scss */
+/* line 439, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(2) {
   color: #333;
   border-left: 0;
   padding-left: 5px;
   width: 150px;
 }
-/* line 435, ../sass/components/3_components/_tables.scss */
+/* line 446, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(4) {
   min-width: 250px;
   text-overflow: ellipsis;
 }
-/* line 440, ../sass/components/3_components/_tables.scss */
+/* line 451, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(5) {
   min-width: 120px;
   text-overflow: ellipsis;
 }
-/* line 445, ../sass/components/3_components/_tables.scss */
+/* line 456, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:last-child {
   color: #fff;
   cursor: pointer;
 }
-/* line 451, ../sass/components/3_components/_tables.scss */
+/* line 462, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.simple th:first-child,
 table.addToCampaign.simple td:first-child {
   min-width: 180px;
   padding-left: 15px;
 }
-/* line 457, ../sass/components/3_components/_tables.scss */
+/* line 468, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.simple td:last-child {
   min-width: 80px;
 }
-/* line 466, ../sass/components/3_components/_tables.scss */
+/* line 477, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td:first-child {
   cursor: pointer;
   text-indent: -9999px;
@@ -1810,15 +1823,15 @@ table.addToCampaign tr:hover:not(.divider) td:first-child {
   background-size: 16px 13px !important;
   background-color: #E6F2F8 !important;
 }
-/* line 475, ../sass/components/3_components/_tables.scss */
+/* line 486, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td input {
   border: 1px solid #69AED4;
 }
-/* line 480, ../sass/components/3_components/_tables.scss */
+/* line 491, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td:last-child {
   color: #69AED4;
 }
-/* line 489, ../sass/components/3_components/_tables.scss */
+/* line 500, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider td:first-child {
   border-right: 1px solid #cfcfcf;
   padding: 10px 0 10px 15px;
@@ -1828,107 +1841,107 @@ table.addToCampaign tr.divider td:first-child {
   font-weight: bold;
   border: 1px solid #cfcfcf !important;
 }
-/* line 499, ../sass/components/3_components/_tables.scss */
+/* line 510, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider:hover {
   background: transparent;
 }
-/* line 502, ../sass/components/3_components/_tables.scss */
+/* line 513, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider:hover td {
   background: transparent !important;
 }
-/* line 511, ../sass/components/3_components/_tables.scss */
+/* line 522, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td {
   border-bottom: 2px solid #f5f6f7;
 }
-/* line 515, ../sass/components/3_components/_tables.scss */
+/* line 526, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.narrow {
   width: 80px;
   text-align: right;
 }
-/* line 521, ../sass/components/3_components/_tables.scss */
+/* line 532, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width50 {
   min-width: 50px;
 }
-/* line 522, ../sass/components/3_components/_tables.scss */
+/* line 533, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width100 {
   min-width: 100px;
 }
-/* line 523, ../sass/components/3_components/_tables.scss */
+/* line 534, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width150 {
   min-width: 150px;
 }
-/* line 524, ../sass/components/3_components/_tables.scss */
+/* line 535, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width250 {
   min-width: 250px;
 }
-/* line 525, ../sass/components/3_components/_tables.scss */
+/* line 536, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width300 {
   min-width: 300px;
 }
-/* line 528, ../sass/components/3_components/_tables.scss */
+/* line 539, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable {
   color: #333;
   padding: 0;
 }
-/* line 533, ../sass/components/3_components/_tables.scss */
+/* line 544, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"] {
   padding: 10px;
   width: 100%;
 }
-/* line 539, ../sass/components/3_components/_tables.scss */
+/* line 550, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"]:hover {
   border: 1px solid #69AED4;
 }
-/* line 543, ../sass/components/3_components/_tables.scss */
+/* line 554, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"].dropdown::after {
   content: "\f0d7";
   font-family: "FontAwesome";
   font-style: normal;
   position: absolute;
 }
-/* line 551, ../sass/components/3_components/_tables.scss */
+/* line 562, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type="text"] {
   border: 1px solid #fff;
   border-radius: 0;
 }
-/* line 557, ../sass/components/3_components/_tables.scss */
+/* line 568, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type="text"]:focus {
   border-width: 1px !important;
 }
 
-/* line 567, ../sass/components/3_components/_tables.scss */
+/* line 578, ../sass/components/3_components/_tables.scss */
 table.gridlines th, table.gridlines td {
   border: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 572, ../sass/components/3_components/_tables.scss */
+/* line 583, ../sass/components/3_components/_tables.scss */
 table.gridlines tr:not(:last-child) td {
   border-bottom: 1px solid #eee;
 }
-/* line 577, ../sass/components/3_components/_tables.scss */
+/* line 588, ../sass/components/3_components/_tables.scss */
 table.gridlines .section td {
   font-size: 11px;
   font-weight: bold;
   border-right: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 584, ../sass/components/3_components/_tables.scss */
+/* line 595, ../sass/components/3_components/_tables.scss */
 table.gridlines .section:hover td:first-child {
   cursor: default;
   text-indent: -9999px;
   background: #fff;
 }
-/* line 590, ../sass/components/3_components/_tables.scss */
+/* line 601, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign th:first-child {
   padding-left: 15px;
 }
-/* line 594, ../sass/components/3_components/_tables.scss */
+/* line 605, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign th:last-child, table.gridlines.addToCampaign td:last-child {
   color: transparent;
   border-color: transparent;
   background: transparent;
 }
-/* line 601, ../sass/components/3_components/_tables.scss */
+/* line 612, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign tr:hover td:last-child {
   background: transparent !important;
 }
@@ -2386,9 +2399,9 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 /* line 154, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-flight-dates, .mediaplan.fixedTable td.col-flight-dates {
-  min-width: 238px;
-  max-width: 238px;
-  width: 238px;
+  min-width: 210px;
+  max-width: 210px;
+  width: 210px;
 }
 /* line 155, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-rate, .mediaplan.fixedTable td.col-rate {
@@ -2396,67 +2409,88 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   max-width: 300px;
   width: 300px;
 }
-/* line 156, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable th.col-quantity, .mediaplan.fixedTable td.col-quantity {
-  min-width: 300px;
-  max-width: 300px;
-  width: 300px;
+/* line 160, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-rate input, .mediaplan.fixedTable td.col-rate input {
+  width: 67px;
 }
-/* line 157, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-rate input.number, .mediaplan.fixedTable td.col-rate input.number {
+  text-align: right;
+}
+/* line 167, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-rate input.currency, .mediaplan.fixedTable td.col-rate input.currency {
+  width: 50px;
+}
+/* line 174, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-quantity, .mediaplan.fixedTable td.col-quantity {
+  min-width: 150px;
+  max-width: 150px;
+  width: 150px;
+}
+/* line 182, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-gross-media, .mediaplan.fixedTable td.col-gross-media {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 158, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 183, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-total-media-cost, .mediaplan.fixedTable td.col-total-media-cost {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 159, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 184, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-agency-comp, .mediaplan.fixedTable td.col-agency-comp {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 160, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 185, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-ad-serving, .mediaplan.fixedTable td.col-ad-serving {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 161, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 186, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-total-cost, .mediaplan.fixedTable td.col-total-cost {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 162, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable th.col-net-media, .mediaplan.fixedTable td.col-net-media {
-  min-width: 300px;
-  max-width: 300px;
-  width: 300px;
+/* line 187, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-cost, .mediaplan.fixedTable td.col-cost {
+  min-width: 150px;
+  max-width: 150px;
+  width: 150px;
+  padding: 5px;
 }
-/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 193, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-cost .currency-symbol, .mediaplan.fixedTable td.col-cost .currency-symbol {
+  margin: 0;
+}
+/* line 197, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-cost a, .mediaplan.fixedTable td.col-cost a {
+  float: right;
+}
+/* line 201, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-kpi-cost, .mediaplan.fixedTable td.col-kpi-cost {
   min-width: 100px;
   max-width: 100px;
   width: 100px;
 }
-/* line 164, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 202, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-kpi-number, .mediaplan.fixedTable td.col-kpi-number {
   min-width: 150px;
   max-width: 150px;
   width: 150px;
 }
-/* line 168, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 206, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightheader {
   position: absolute;
   margin-left: 20px;
   margin-top: 3px;
 }
-/* line 173, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 211, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightheader :after {
   content: "";
   display: block;
@@ -2468,19 +2502,19 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   z-index: 1;
   top: 27px;
 }
-/* line 187, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 225, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightmember {
   position: absolute;
   margin-left: 40px;
   margin-top: 10px;
 }
-/* line 193, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 231, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 199, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 237, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -2494,16 +2528,16 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 212, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 250, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 217, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 255, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 221, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 259, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -2511,19 +2545,19 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 229, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 267, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 236, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 274, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 243, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 281, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .kpi-actions {
   color: #999;
   font-size: 11px;
@@ -2533,34 +2567,34 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: absolute;
   white-space: nowrap;
 }
-/* line 252, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 290, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 261, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 299, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 265, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 303, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 270, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 308, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 275, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 313, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable:focus {
   border-width: 1px;
 }
-/* line 281, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 319, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-number input[type=text] {
   color: #9b9b9b;
 }
-/* line 289, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 327, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader.hover .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-number input[type=text] {
@@ -2568,13 +2602,13 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   background-color: #E6F2F8;
   user-select: none;
 }
-/* line 303, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 341, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember .col-program input,
 .mediaplan.fixedTable tr.flightMember .col-product input,
 .mediaplan.fixedTable tr.flightMember .col-channel input {
   color: #9b9b9b;
 }
-/* line 311, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 349, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember.hover .col-program input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-product input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-channel input[type=text] {
@@ -2678,13 +2712,17 @@ h2 {
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 133, ../sass/planner.scss */
+/* line 132, ../sass/planner.scss */
+#bionic-stripe #bionic-stripe-settings li span a {
+  color: #f5f6f7;
+}
+/* line 138, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 142, ../sass/planner.scss */
+/* line 147, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -2694,7 +2732,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 151, ../sass/planner.scss */
+/* line 156, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -2703,65 +2741,65 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 159, ../sass/planner.scss */
+/* line 164, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 166, ../sass/planner.scss */
+/* line 171, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 174, ../sass/planner.scss */
+/* line 179, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 179, ../sass/planner.scss */
+/* line 184, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 184, ../sass/planner.scss */
+/* line 189, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 189, ../sass/planner.scss */
+/* line 194, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 197, ../sass/planner.scss */
+/* line 202, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 10px;
 }
-/* line 203, ../sass/planner.scss */
+/* line 208, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
 }
-/* line 207, ../sass/planner.scss */
+/* line 212, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
 }
 
-/* line 214, ../sass/planner.scss */
+/* line 219, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 218, ../sass/planner.scss */
+/* line 223, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 223, ../sass/planner.scss */
+/* line 228, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -2770,7 +2808,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 232, ../sass/planner.scss */
+/* line 237, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -2784,7 +2822,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 245, ../sass/planner.scss */
+/* line 250, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -2803,7 +2841,7 @@ h2 {
   width: 42px;
 }
 
-/* line 263, ../sass/planner.scss */
+/* line 268, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -2813,11 +2851,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 273, ../sass/planner.scss */
+/* line 278, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 276, ../sass/planner.scss */
+/* line 281, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

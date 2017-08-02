@@ -29,6 +29,11 @@
         padding: 10px 25px 20px;  
         min-height: 200px;
         overflow-y: auto;
+        
+        ul {
+            box-sizing: border-box;
+        }
+        
     }
     
     .bionic-modal-footer {
