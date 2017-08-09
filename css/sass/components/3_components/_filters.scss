@@ -336,9 +336,21 @@
     border: 1px solid #cfcfcf;
     border-radius: 3px;
     box-sizing: border-box;
+    cursor: pointer;
     display: inline-block;
     margin: 8px 0 ;
-    padding: 7px 10px;
+    padding: 7px 22px 7px 10px;
+    
+    background-image: url(../images/arrow-down.svg);
+    background-origin: padding-box;
+    background-position: right 7px center, right center;
+    background-repeat: no-repeat;
+    background-size: auto auto;    
+    
+    i {
+        color: #999;
+        margin-right: 3px;
+    }
 }
 
 .bionic-filter-menu {

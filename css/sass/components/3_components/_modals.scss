@@ -5,6 +5,8 @@
     padding: 0;
     width: auto;
     
+    
+    
     h1 {
         margin: 0;
         font-size: 28px;
@@ -26,12 +28,17 @@
     }
     
     .bionic-modal-body {
-        padding: 10px 25px 20px;  
+        box-sizing: border-box;
+        display: block;
+        padding: 10px 25px 20px;
         min-height: 200px;
         overflow-y: auto;
+        position: relative;
         
         ul {
             box-sizing: border-box;
+            margin-top: -10px;
+            width: calc(100% - 20px);
         }
         
     }

@@ -1,0 +1,256 @@
+.grid.fixedTable { 
+        
+    width: 100%;
+    
+    aside {
+        border-right: 1px solid #cfcfcf;
+    }
+    
+    th, td {
+        &.col-25  {min-width: 25px;width: 25px;max-width: 25px;}
+        &.col-50  {min-width: 50px;width: 50px;max-width: 50px;}
+        &.col-100 {min-width:100px;width:100px;max-width:100px}
+        &.col-150 {min-width:150px;width:150px;max-width:150px}
+        &.col-200 {min-width:200px;width:200px;max-width:200px}
+        &.col-250 {min-width:250px;width:250px;max-width:250px}
+        &.col-300 {min-width:300px;width:300px;max-width:300px}
+        &.col-350 {min-width:350px;width:350px;max-width:350px}
+        &.col-400 {min-width:400px;width:400px;max-width:400px}
+        
+        &.combine {
+            border-right: 1px solid #f5f6f7;
+        }
+    }
+    
+    .fixedtable-header {
+        width: calc(100% - 325px);
+        margin-left: 325px;
+    }
+    
+    .fixedtable-body {
+        width: calc(100% - 325px);
+    }
+    
+    .fixedtable-sidebar {
+        margin-left: 0;
+        width: 325px;
+    }
+    
+    &.costs {
+        .fixedtable-sidebar, .fixedtable-body {
+            height: calc(100% - 282px);
+        }   
+    } 
+    
+    .fixedTable-sidebar table tr td {
+//         width: auto;
+    }
+    
+    .gridFirstColumnHeader {
+        position: absolute; width: 325px;
+    
+        
+    }
+    
+    .gridColumnHeader th,
+    tr th {
+        height: 30px;
+        border: 1px solid #cfcfcf;
+        border-left: 0;
+        font-weight: normal;
+        box-sizing: border-box;
+        padding: 0px;
+        text-align: left;
+        border-collapse: collapse;
+             
+        span {
+            padding-left: 5px;
+            padding-right: 5px;
+        }        
+                
+    }
+    
+    #gridFirstColumns {        
+        
+        counter-reset: rowNumber;
+    
+        tr {
+            counter-increment: rowNumber;
+        
+            td:first-child::before {
+                content: counter(rowNumber);
+            }
+    
+        }
+
+    }
+        
+    th {
+        white-space: nowrap;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+    
+    .inactive {
+        background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0)) !important;
+        background-size: 4px 4px !important;
+        height: 100%;
+//         background: #f5f6f7 !important;
+    }
+    
+    tr.hover { 
+        
+        td {
+            background: #E6F2F8 !important;
+        }
+    
+        .inactive input {
+            background: #fff !important;
+        }
+        
+    }
+    
+    tr td {
+        background: #fff;
+        height: 55px;
+        vertical-align: top;
+        border-bottom: 1px solid #eee;
+        border-right: 1px solid #ddd;
+    }
+    
+     table {
+        border-collapse: collapse;
+        
+        th, td, tr {
+            box-sizing: border-box;
+        
+            &.readonly, &.link {
+                padding: 5px;
+                box-sizing: border-box;
+                display: inline-block;
+            }
+            
+            .col-line-number {
+                color: #ccc;
+                font-size: 2em;
+                padding: 0px;
+                width: 100px;
+                
+                span {
+                    display: block;
+                    padding: 10px;
+                }
+                
+            }
+            
+            .col-checkbox {
+                max-width: 22px;
+                min-width: 22px;
+                width: 22px;
+                background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0));
+                background-size: 4px 4px;
+                height: 100%;
+            }
+            
+            .col-placement-name {
+                color: $blue;
+                width: 177px !important;
+                padding: 5px;
+            }
+            
+        }
+        
+    }
+    
+    th span {
+        display: block;
+        box-sizing: border-box;
+    }    
+    
+    .currency-symbol {
+        position: absolute;
+        margin-top: 7px;
+        margin-left: 5px;
+    }
+    
+    input[type=text] { 
+        padding: 5px;
+        width: calc(100% - 12px);
+        height: 15px;
+        margin: 0;
+        border-width: 1px;
+        border-color: transparent;
+        border-radius: 0px;
+        font-size: 13px;
+        color: #404040;
+        box-sizing: content-box;
+        text-overflow: ellipsis;
+        
+        &.half {
+            width: calc(50% - 12px);
+            float: left;
+        }
+        
+        &:focus {
+            border-width: 1px;
+        }
+        
+        &.secondary {
+            color: #9b9b9b;
+            font-size: 11px;
+            padding-top: 3px;
+            padding-bottom: 8px;
+            margin-top: -1px;
+        }
+        
+        &.custom {
+            background: #fff url(../../css/images/triangle.svg) no-repeat right top;  
+            background-position-y: -5px;
+        }
+        
+    }
+    
+    .vendor {
+        font-size: 11px;
+        color: #9b9b9b;
+        display: block;
+        padding: 3px 5px 0px;
+    }
+    
+    .kpi-actions {
+        color: #999;
+        font-size: 11px;
+        padding: 5px;
+        padding-top: 5px;
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        
+        a {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    
+    }
+    
+    tr.hover {
+        
+        input[type=text] {
+            border-color: #6BADD1;
+        }
+        
+        .col-kpi-cost {border-right: 1px solid #E6F2F8 !important;}
+
+//         .kpi-actions {display: block;}
+
+        td[class*="col-kpi"]:hover {
+            .kpi-actions {display: block;}
+        }
+        
+    }
+    
+    &:focus {
+        border-width: 1px;
+    }
+    
+}

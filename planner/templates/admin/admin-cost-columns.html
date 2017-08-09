@@ -1,6 +1,7 @@
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
     <h1>Ignition Media</h1>
+    
     <ul class="bionic-tab-menu" style="margin-top:10px;">
         <li><a href="#/admin/admin-overview/">Overview</a></li>
         <li><a href="#/admin/admin-settings/">Settings</a></li>
@@ -9,9 +10,164 @@
         <li><a href="#/admin/admin-cost-columns/" class="current">Cost Columns</a></li>
         <li><a href="#/admin/admin-picklist-columns/">Picklist Columns</a></li>
     </ul>
-</div>
-
-<div class="block bionic-page">
-
 
 </div>
+
+
+<div class="bionic-filter bionic-filter-off" style="margin-left: 25px; margin-bottom: 0;"><i class="fa fa-filter"></i> All Cost Types</div>
+
+<ul class="bionic-action-menu block">
+    <li><a><i class="fa fa-plus"></i>Add New Cost</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-lock"></i>Lock</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
+</ul>
+
+
+<div class="grid fixedTable block costs" id="grid">
+  
+  <table class="gridFirstColumnHeader">
+      <thead>
+          <tr>
+              <th class="col-25"><span class="header"></span></th>
+              <th class="col-300"><span class="header">Cost</span></th>
+          </tr>
+      </thead>
+  </table>  
+    
+  <header class="fixedTable-header block">
+    <table>
+        <thead>
+        <tr>
+          <th class="col-150"><span>Type</span></th>
+          <th class="col-350 combine"><span>Calculation</span></th>
+          <th class="col-350"><span>Calculation</span></th>
+          <th class="col-350"><span>Calculation</span></th>
+          <th class="col-350"><span>Calculation</span></th>
+          <th class="col-350"><span>Calculation</span></th>
+          <th class="col-350"><span>Calculation</span></th>
+        </tr>
+        </thead>
+    </table>
+  </header>
+  
+  <aside class="fixedTable-sidebar block">
+    <table class="table table-bordered grid" id="gridFirstColumns">
+        <tbody>
+            <tr>
+                <td class="col-25"></td>
+                <td class="col-300"></td>
+            </tr>
+        </tbody>
+    </table>
+  </aside>
+  
+  <div class="fixedTable-body block">
+    <table class="table table-bordered grid" id="gridBody">
+        <tbody>
+            <tr>
+                <td class="col-150"></td>
+                <td class="col-350"></td>
+                <td class="col-350"></td>
+                <td class="col-350"></td>
+                <td class="col-350"></td>
+                <td class="col-350"></td>
+                <td class="col-350"></td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  
+</div>
+
+
+<script>
+    
+    
+/*
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          
+          var rowNumber,
+              scheduleTable;
+          
+          rowNumber = i + 1;
+          
+          scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
+          scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview/">'+ item.Advertiser +'</a></td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.two) +'">'+ item.two +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.three) +'">'+ item.three +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.four) +'">'+ item.four +'</a></td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.five) +'">'+ item.five +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.six) +'">'+ item.six +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.seven) +'">'+ item.seven +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.eight) +'">'+ item.eight +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.nine) +'">'+ item.nine +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.ten) +'">'+ item.ten +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.eleven) +'">'+ item.eleven +'</td>');
+          scheduleTable.append('<td class="right '+ formatNumber(item.twelve) +'">'+ item.twelve +'</td>');
+          scheduleTable.append('</tr>');
+          scheduleTable.appendTo("#schedule");
+                    
+        })
+
+      }
+*/
+
+
+</script>
+
+<script type="text/javascript">
+
+    // ------------------------------------------------
+    // Set Up the Fixed First Column Table
+    
+    (function() {
+      var grid, fixedTable;
+    
+      fixedTable = function(el) {
+        var $body, $header, $sidebar;
+        $body = $(el).find('.fixedTable-body');
+        $sidebar = $(el).find('.fixedTable-sidebar table');
+        $header = $(el).find('.fixedTable-header table');
+        return $($body).scroll(function() {
+          $($sidebar).css('margin-top', -$($body).scrollTop());
+          return $($header).css('margin-left', -$($body).scrollLeft());
+        });
+      };
+    
+      grid = new fixedTable($('#grid'));
+    
+    }).call(this);
+
+    // ------------------------------------------------
+    // Make the rows highlight with Fixed First Column   
+    
+    $(document).on({
+    mouseenter: function () {
+    var trIndex = $(this).index();
+    $("table.grid").each(function(index) {
+        $(this).find("tr:eq("+trIndex+")").addClass("hover")
+    });
+    },
+    mouseleave: function () {
+    var trIndex = $(this).index();
+    $("table.grid").each(function(index) {
+        $(this).find("tr:eq("+trIndex+")").removeClass("hover")
+    });
+    }
+    }, "#grid table tr");
+    
+</script>

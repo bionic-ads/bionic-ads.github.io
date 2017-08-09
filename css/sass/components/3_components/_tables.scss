@@ -614,3 +614,51 @@ table.gridlines {
     }
 
 }
+
+.bionic-grid {
+    width: 100%;
+    
+    counter-reset: rowNumber -1;
+    
+    tr {
+        counter-increment: rowNumber;
+    
+        td:first-child::before {
+            content: counter(rowNumber);
+        }
+    
+    }
+    
+    th {
+        text-align: left;
+    }
+    
+    .col-number {
+        width: 10px;
+    }
+    
+    th,td {
+        border: 1px solid #cfcfcf;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    
+        tr:not(:last-child) td {
+            border-bottom: 1px solid #eee;
+            
+        }
+
+    .col-100 {width:100px}
+    .col-150 {width:150px}
+    .col-200 {width:200px}
+    .col-250 {width:250px}
+    .col-300 {width:300px}
+    .col-400 {width:350px}
+
+}
+
+    .bionic-grid.costs {
+        .col-cost {width: 300px;}
+        .col-type {width: 100px;}
+    }
+
