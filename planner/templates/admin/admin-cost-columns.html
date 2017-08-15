@@ -23,28 +23,24 @@
 </ul>
 
 
-<div class="grid fixedTable block costs" id="grid">
+<div class="grid fixedTable block costs custom-form-controls" id="grid">
   
   <table class="gridFirstColumnHeader">
       <thead>
           <tr>
-              <th class="col-25"><span class="header"></span></th>
-              <th class="col-300"><span class="header">Cost</span></th>
+              <th class="col-45"><span class="header center">#</span></th>
+              <th class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></th>
+              <th class="col-275"><span class="header">Cost</span></th>
           </tr>
       </thead>
-  </table>  
-    
+  </table>
+
   <header class="fixedTable-header block">
     <table>
         <thead>
         <tr>
           <th class="col-150"><span>Type</span></th>
           <th class="col-350 combine"><span>Calculation</span></th>
-          <th class="col-350"><span>Calculation</span></th>
-          <th class="col-350"><span>Calculation</span></th>
-          <th class="col-350"><span>Calculation</span></th>
-          <th class="col-350"><span>Calculation</span></th>
-          <th class="col-350"><span>Calculation</span></th>
         </tr>
         </thead>
     </table>
@@ -53,10 +49,6 @@
   <aside class="fixedTable-sidebar block">
     <table class="table table-bordered grid" id="gridFirstColumns">
         <tbody>
-            <tr>
-                <td class="col-25"></td>
-                <td class="col-300"></td>
-            </tr>
         </tbody>
     </table>
   </aside>
@@ -64,15 +56,6 @@
   <div class="fixedTable-body block">
     <table class="table table-bordered grid" id="gridBody">
         <tbody>
-            <tr>
-                <td class="col-150"></td>
-                <td class="col-350"></td>
-                <td class="col-350"></td>
-                <td class="col-350"></td>
-                <td class="col-350"></td>
-                <td class="col-350"></td>
-                <td class="col-350"></td>
-            </tr>
         </tbody>
     </table>
   </div>
@@ -82,50 +65,42 @@
 
 <script>
     
+      var costsTab = "AdditionalCosts";
     
-/*
       $(document).ready( function() {
         
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
-                         wanted: [ spreadsheetTab ],
+                         wanted: [ costsTab ],
                         // query:["state=done and (name=performance or name=flowchart)"],
                          debug: true } )
-      
       })
         
       function showInfo(data, tabletop) {
-
-        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
-          
+    
+        $.each( tabletop.sheets(costsTab).all(), function(i, item) {
           
           var rowNumber,
-              scheduleTable;
+              costsTableFirstColumns,
+              costsTableBody;
           
-          rowNumber = i + 1;
+          rowNumber = i++;
           
-          scheduleTable = $('<tr><td class="line-number">' + rowNumber + '</td>');
-          scheduleTable.append('<td class="advertiser"><a href="#/advertiser/overview/">'+ item.Advertiser +'</a></td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.one) +'">'+ item.one +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.two) +'">'+ item.two +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.three) +'">'+ item.three +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.four) +'">'+ item.four +'</a></td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.five) +'">'+ item.five +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.six) +'">'+ item.six +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.seven) +'">'+ item.seven +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.eight) +'">'+ item.eight +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.nine) +'">'+ item.nine +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.ten) +'">'+ item.ten +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.eleven) +'">'+ item.eleven +'</td>');
-          scheduleTable.append('<td class="right '+ formatNumber(item.twelve) +'">'+ item.twelve +'</td>');
-          scheduleTable.append('</tr>');
-          scheduleTable.appendTo("#schedule");
+          costsTableFirstColumns = $('<tr><td class="line-number col-45"></td>');
+          costsTableFirstColumns.append('<td class="col-30 no-right-border"><input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label></td>');
+          costsTableFirstColumns.append('<td class="col-275 no-left-border"><a open-modal" href="templates/modals/settings/editcost.html" rel="modal:open" ><span>'+ item.Name +'</span></a></td>');
+          costsTableFirstColumns.append('</tr>');
+          costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
+                    
+          costsTableBody = $('<tr>');
+          costsTableBody.append('<td class="col-150"><span>'+ item.Type +'</span></td>');
+          costsTableBody.append('<td class="col-350"><a href="#/advertiser/overview/"><span>'+ item.Calculation +'</span></a></td>');
+          costsTableBody.append('</tr>');
+          costsTableBody.appendTo("#gridBody tbody");
                     
         })
-
+    
       }
-*/
-
 
 </script>
 

@@ -42,7 +42,8 @@ $(document).ready(function() {
     		'advertiser/:content/'  : 'showAdvertiser',
     		'advertisers'           : 'showAdvertisers',
     		'campaigns'             : 'showCampaigns',
-    		'schedule'              : 'showSchedule'
+    		'schedule'              : 'showSchedule',
+    		'tasks'                 : 'showTasks'
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -100,7 +101,10 @@ $(document).ready(function() {
     	
     	showSchedule: function(){
     		$("#bionic-main").load("templates/schedule.html");
-    		
+    	},    	
+    	
+    	showTasks: function(){
+    		$("#bionic-main").load("templates/tasks.html");
     	},    	
     });
     

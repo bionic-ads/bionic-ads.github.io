@@ -7,7 +7,28 @@
     }
     
     th, td {
+        
+        label {
+            margin-left: 5px;
+            margin-top: 8px;
+        }
+        
+        &.no-right-border {
+            border-right: 0;
+        }
+        &.no-left-border {
+            border-left: 0;
+            span { padding-left: 5px;}
+        }
+        
+        span {
+            display: block;
+            padding: 11px;
+        }
+                
         &.col-25  {min-width: 25px;width: 25px;max-width: 25px;}
+        &.col-30  {min-width: 30px;width: 30px;max-width: 30px;}
+        &.col-45  {min-width: 45px;width: 45px;max-width: 45px;}
         &.col-50  {min-width: 50px;width: 50px;max-width: 50px;}
         &.col-100 {min-width:100px;width:100px;max-width:100px}
         &.col-150 {min-width:150px;width:150px;max-width:150px}
@@ -23,22 +44,23 @@
     }
     
     .fixedtable-header {
-        width: calc(100% - 325px);
-        margin-left: 325px;
+        width: calc(100% - 321px);
+        margin-left: 321px;
     }
     
     .fixedtable-body {
-        width: calc(100% - 325px);
+        width: calc(100% - 321px);
     }
     
     .fixedtable-sidebar {
         margin-left: 0;
-        width: 325px;
+        width: 321px;
     }
     
     &.costs {
         .fixedtable-sidebar, .fixedtable-body {
-            height: calc(100% - 282px);
+            height: calc(100vh - 296px);
+            display: block;
         }   
     } 
     
@@ -47,7 +69,7 @@
     }
     
     .gridFirstColumnHeader {
-        position: absolute; width: 325px;
+        position: absolute; width: 321px;
     
         
     }
@@ -59,7 +81,6 @@
         border-left: 0;
         font-weight: normal;
         box-sizing: border-box;
-        padding: 0px;
         text-align: left;
         border-collapse: collapse;
              
@@ -77,6 +98,14 @@
         tr {
             counter-increment: rowNumber;
         
+            td:first-child {
+                background: #f5f6f7;
+                border-right: 1px solid #cfcfcf;
+                padding: 0;
+                padding-top: 11px;
+                text-align: center;
+            }
+        
             td:first-child::before {
                 content: counter(rowNumber);
             }
@@ -87,7 +116,6 @@
         
     th {
         white-space: nowrap;
-        padding: 5px;
         box-sizing: border-box;
     }
     

@@ -44,8 +44,12 @@ var templateData = {
 			page: ""
 		},
 		{
-			name: "Cost Columns",
+			name: "Production Costs",
 			page: "#/campaign/settings-costs/"
+		},
+		{
+			name: "Delivery Costs",
+			page: "#/campaign/settings-delivery-costs/"
 		},
 		{
 			name: "Task Columns",
