@@ -5333,20 +5333,19 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 38, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body ul {
   box-sizing: border-box;
-  margin-top: -10px;
   width: calc(100% - 20px);
 }
-/* line 46, ../sass/components/3_components/_modals.scss */
+/* line 45, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 50, ../sass/components/3_components/_modals.scss */
+/* line 49, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 58, ../sass/components/3_components/_modals.scss */
+/* line 57, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }

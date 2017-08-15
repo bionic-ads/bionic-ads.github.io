@@ -13,7 +13,8 @@
                 var theID = url.substring(url.lastIndexOf('/') + 1);
                 var directory = url.substring(url.lastIndexOf('#/campaign/'));
                 var group = campaignNavItem.group;
-                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+                                
+                if (window.location.hash.substr(1,12) == campaignNavItem.page.substr(1,12)){ var currentnav = 'class="current"'; } 
             %>
     			<li>
     				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
@@ -28,14 +29,7 @@
 
 <div class="block bionic-page">
 
-<h2>Impressions</h2>
-<p>Data Source(s)</p>
-
-<h2>Clicks</h2>
-<p>Data Source(s)</p>
-
-<h2>Customers</h2>
-<p>Data Source(s)</p>
+tasks
 
 </div>
 
