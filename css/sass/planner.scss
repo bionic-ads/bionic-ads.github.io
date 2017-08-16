@@ -27,6 +27,7 @@
 @import "components/3_components/_heatmap.scss";
 @import "components/3_components/_left_nav.scss";
 @import "components/3_components/_loading.scss";
+@import "components/3_components/_menus.scss";
 @import "components/3_components/_modals.scss";
 @import "components/3_components/_navigation.scss";
 @import "components/3_components/_tables.scss";
@@ -198,6 +199,12 @@ h2 {
     
     .bionic-campaign-header {
 
+    }
+    
+    .bionic-advertiser-header {
+        h1 {
+            line-height: 45px;
+        }
     }
     
     .bionic-campaign-summary {

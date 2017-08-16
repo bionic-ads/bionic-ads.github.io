@@ -48,6 +48,22 @@
     
 <h2>Cost Columns</h2> 
 
+<!--
+<ul>
+        <li class="menu">Select Production Costs
+
+            <ul class="menu">
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+            </ul>
+        </li>
+</ul>
+-->
+
 <!--         <div class="filter" style="margin-bottom: 10px;"><i class="fa fa-filter"></i> All Cost Types</div> -->
 
 <table class="addToCampaign custom-form-controls simple gridlines">
@@ -193,6 +209,14 @@
 <script type="text/javascript" src="templates/campaign/nav-campaign.js"></script>
 <script type="text/javascript" src="templates/campaign/nav-campaign-settings.js"></script>
 <script>
+$(document).ready(function () {
+    $("li").click(function () {
+        $('li > ul').not($(this).children("ul").toggle()).hide();
+        
+    });
+});
+
+    
       if(Campaigns.length > 0){setCampaignInfo();}
       
         $("tbody").sortable({

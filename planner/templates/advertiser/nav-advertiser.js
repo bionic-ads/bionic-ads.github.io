@@ -1,4 +1,3 @@
-
 // When rending an underscore template, we want top-level
 // variables to be referenced as part of an object. For
 // technical reasons (scope-chain search), this speeds up
@@ -9,64 +8,44 @@
 _.templateSettings.variable = "bionic";
 // Grab the HTML out of our template tag and pre-compile it.
 var template = _.template(
-	$( "script.template" ).html()
+	$( "script.advertiserNav" ).html()
 );
 // Define our render data (to be put into the "rc" variable).
 var templateData = {
-	listTitle: "Campaign Settings Subnav",
-	listItems: [
+	listTitle: "Advertiser Tabs",
+	advertiserNavItems: [
 		{
-			name: "Basic Info",
-			page: ""
+			name: "Overview",
+			page: "#/advertiser/overview/"
 		},
 		{
-			name: "Image",
-			page: ""
+			name: "Settings",
+			page: "#/advertiser/settings-costs-production/"
 		},
 		{
-			name: "Description",
-			page: ""
+			name: "Campaigns",
+			page: "#/advertiser/campaigns/"
 		},
 		{
-			name: "Contacts",
-			page: ""
+			name: "Tasks",
+			page: "#/advertiser/tasks/"
 		},
 		{
-			name: "Currency",
-			page: ""
+			name: "Flowchart",
+			page: "#/advertiser/flowchart/"
 		},
 		{
-			name: "Agency Compensation",
-			page: ""
+			name: "Allocations",
+			page: "#/advertiser/allocations/"
 		},
 		{
-			name: "Ad Serving",
-			page: ""
-		},
-		{
-			name: "Production Costs",
-			page: "#/campaign/settings-costs-production/"
-		},
-		{
-			name: "Delivery Costs",
-			page: "#/campaign/settings-costs-delivery/"
-		},
-		{
-			name: "Task Columns",
-			page: ""
-		},
-		{
-			name: "KPI Columns",
-			page: "#/campaign/settings-kpis/"
-		},
-		{
-			name: "Picklist Columns",
-			page: ""
+			name: "Performace",
+			page: "#/advertiser/performance/"
 		}
 	]
 };
 // Render the underscore template and inject it after the H1
 // in our current DOM.
-$( ".bionic-campaign-header" ).after(
+$( "h1" ).after(
 	template( templateData )
 );

@@ -16,11 +16,13 @@ $firstcolumn: 275px;
 }
 
 .fixedTable .table tr td {
-    border: 1px solid $light-gray;
+    border: 1px solid #eee;
+    border-right: 1px solid $medium-gray;
 }
 
 .fixedTable .table tr th {
   background: $light-gray;
+  font-weight: bold;
 }
 
 .fixedTable-header {

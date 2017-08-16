@@ -35,7 +35,7 @@ var templateData = {
 		},
 		{
 			name: "Settings",
-			page: "#/campaign/settings-costs/"
+			page: "#/campaign/settings-costs-production/"
 		},
 		{
 			name: "Proposals",

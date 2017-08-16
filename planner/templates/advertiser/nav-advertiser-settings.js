@@ -13,14 +13,14 @@ var template = _.template(
 );
 // Define our render data (to be put into the "rc" variable).
 var templateData = {
-	listTitle: "Campaign Settings Subnav",
+	listTitle: "Advertiser Settings Subnav",
 	listItems: [
 		{
 			name: "Basic Info",
 			page: ""
 		},
 		{
-			name: "Image",
+			name: "Logo",
 			page: ""
 		},
 		{
@@ -29,6 +29,10 @@ var templateData = {
 		},
 		{
 			name: "Contacts",
+			page: ""
+		},
+		{
+			name: "Security",
 			page: ""
 		},
 		{
@@ -45,28 +49,16 @@ var templateData = {
 		},
 		{
 			name: "Production Costs",
-			page: "#/campaign/settings-costs-production/"
+			page: "#/advertiser/settings-costs-production/"
 		},
 		{
 			name: "Delivery Costs",
-			page: "#/campaign/settings-costs-delivery/"
+			page: "#/advertiser/settings-costs-delivery/"
 		},
-		{
-			name: "Task Columns",
-			page: ""
-		},
-		{
-			name: "KPI Columns",
-			page: "#/campaign/settings-kpis/"
-		},
-		{
-			name: "Picklist Columns",
-			page: ""
-		}
 	]
 };
 // Render the underscore template and inject it after the H1
 // in our current DOM.
-$( ".bionic-campaign-header" ).after(
+$( ".bionic-advertiser-header" ).after(
 	template( templateData )
 );

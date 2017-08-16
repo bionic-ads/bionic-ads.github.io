@@ -1,0 +1,35 @@
+<div class="bionic-advertiser-header bionic-header block fullwidth">
+                
+    <h1>Advertiser Name</h1>
+        
+    <script type="text/template" class="advertiserNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.advertiserNavItems, function( advertiserNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/advertiser/'));
+                var group = advertiserNavItem.group;
+                if (window.location.hash.substr(1,18) == advertiserNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- advertiserNavItem.page %>"><%- advertiserNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+</div>
+
+
+
+<div class="block">
+
+    <h2>Campaigns</h2> 
+
+
+</div>
+
+<script type="text/javascript" src="templates/advertiser/nav-advertiser.js"></script>

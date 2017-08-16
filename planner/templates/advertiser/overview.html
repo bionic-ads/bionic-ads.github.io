@@ -1,16 +1,27 @@
-<div class="bionic-campaign-header bionic-header block fullwidth">
+<div class="bionic-advertiser-header bionic-header block fullwidth">
                 
     <h1>Advertiser Name</h1>
         
-    <ul class="bionic-tab-menu">
-        <li><a href="" class="current">Overview</a></li>
-        <li><a href="">Settings</a></li>
-        <li><a href="">Campaigns</a></li>
-        <li><a href="">Tasks</a></li>
-        <li><a href="">Flowchart</a></li>
-        <li><a href="">Allocations</a></li>
-        <li><a href="">Performance</a></li>
-    </ul>
+    <script type="text/template" class="advertiserNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.advertiserNavItems, function( advertiserNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/advertiser/'));
+                var group = advertiserNavItem.group;
+                if (window.location.hash.substr(1,18) == advertiserNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- advertiserNavItem.page %>"><%- advertiserNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+	
 </div>
 
 <ul class="bionic-action-menu block">
@@ -66,3 +77,5 @@
 
 
 </div>
+
+<script type="text/javascript" src="templates/advertiser/nav-advertiser.js"></script>
