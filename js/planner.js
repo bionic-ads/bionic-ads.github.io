@@ -37,7 +37,7 @@ $(document).ready(function() {
     		'newuser'               : 'newUser',
     		'notes'                 : 'notes',
     		'admin/:content/'       : 'showAdmin',
-    		'line/:content/:id'     : 'showLine',
+    		'line/:content/'        : 'showLine',
     		'campaign/:content/:id' : 'showCampaign',
     		'advertiser/:content/'  : 'showAdvertiser',
     		'advertisers'           : 'showAdvertisers',

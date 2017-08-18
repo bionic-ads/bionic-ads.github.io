@@ -7,9 +7,11 @@
     margin: 10px;
 }
 
+/*
 .editable {
     box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
+*/
 
 .readonly {
     background: #f5f6f7;
@@ -534,6 +536,7 @@ table.addToCampaign {
         &.width150 { min-width: 150px;}
         &.width250 { min-width: 250px;}
         &.width300 { min-width: 300px;}
+        &.width350 { min-width: 350px;}
         
         
         &.editable {

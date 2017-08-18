@@ -7,7 +7,6 @@ $firstcolumn: 275px;
 
 .fixedTable .table tr td,
 .fixedTable .table tr th {
-  border: 1px solid $light-gray;
   min-width: 100px;
   height: 40px;
   width: 100px;
@@ -16,8 +15,9 @@ $firstcolumn: 275px;
 }
 
 .fixedTable .table tr td {
-    border: 1px solid #eee;
-    border-right: 1px solid $medium-gray;
+    border: 0px solid #eee;
+    border-top: 1px solid #eee;
+    border-left:1px solid #ddd;
 }
 
 .fixedTable .table tr th {

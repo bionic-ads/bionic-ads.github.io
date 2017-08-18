@@ -801,7 +801,9 @@ a {
 
 /* line 63, ../sass/components/2_elements/_radio_buttons.scss */
 .custom-form-controls .bionic-radio {
-  margin-topp: 0;
+  margin-top: 0;
+  float: left;
+  margin-right: 20px;
 }
 
 /* line 1, ../sass/components/2_elements/_toggle.scss */
@@ -1598,15 +1600,22 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 }
 
 /* line 1, ../sass/components/3_components/_menus.scss */
-ul.menu {
+.menu {
+  border: 1px solid #cfcfcf;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
   display: none;
   position: absolute;
-  background: #333333;
+  background: #fff;
+  margin-top: -9px;
   padding: 10px;
+  max-height: 200px;
+  width: 200px;
+  z-index: 99;
 }
-/* line 7, ../sass/components/3_components/_menus.scss */
-ul.menu li {
-  line-height: 16px;
+/* line 13, ../sass/components/3_components/_menus.scss */
+.menu.columnMenu {
+  margin-top: 8px;
+  position: fixed;
 }
 
 /* line 1, ../sass/components/3_components/_modals.scss */
@@ -1614,30 +1623,31 @@ ul.menu li {
   background: #fff;
   max-width: none;
   min-width: 400px;
+  max-width: 800px;
   padding: 0;
   width: auto;
 }
-/* line 10, ../sass/components/3_components/_modals.scss */
+/* line 11, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
   font-size: 28px;
 }
-/* line 15, ../sass/components/3_components/_modals.scss */
+/* line 16, ../sass/components/3_components/_modals.scss */
 .modal .larger {
   font-size: 18px;
   line-height: 28px;
 }
-/* line 20, ../sass/components/3_components/_modals.scss */
+/* line 21, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
   top: 17px;
   right: 10px;
 }
-/* line 25, ../sass/components/3_components/_modals.scss */
+/* line 26, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
 }
-/* line 30, ../sass/components/3_components/_modals.scss */
+/* line 31, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
   box-sizing: border-box;
   display: block;
@@ -1646,22 +1656,64 @@ ul.menu li {
   overflow-y: auto;
   position: relative;
 }
-/* line 38, ../sass/components/3_components/_modals.scss */
+/* line 39, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body ul {
   box-sizing: border-box;
   width: calc(100% - 20px);
 }
-/* line 45, ../sass/components/3_components/_modals.scss */
+/* line 44, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns {
+  padding: 0;
+}
+/* line 47, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div {
+  box-sizing: border-box;
+  float: left;
+  max-height: 500px;
+  min-height: 500px;
+  overflow-y: auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 10px;
+  border-right: 1px solid #cfcfcf;
+  width: 205px;
+}
+/* line 59, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div:first-child {
+  padding-left: 25px;
+}
+/* line 63, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div ul, .modal .bionic-modal-body.columns div li {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+/* line 70, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div ul {
+  margin-bottom: 15px;
+}
+/* line 74, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div li {
+  margin-left: 30px;
+  width: calc(100% - 30px);
+}
+/* line 79, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-body.columns div input[type='checkbox'] + label::before {
+  left: -30px;
+  position: absolute;
+}
+/* line 88, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 49, ../sass/components/3_components/_modals.scss */
+/* line 92, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 57, ../sass/components/3_components/_modals.scss */
+/* line 100, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -1753,44 +1805,44 @@ ul.menu li {
   margin: 10px;
 }
 
-/* line 10, ../sass/components/3_components/_tables.scss */
+/*
 .editable {
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
-
-/* line 14, ../sass/components/3_components/_tables.scss */
+*/
+/* line 16, ../sass/components/3_components/_tables.scss */
 .readonly {
   background: #f5f6f7;
 }
 
-/* line 19, ../sass/components/3_components/_tables.scss */
+/* line 21, ../sass/components/3_components/_tables.scss */
 table td {
   background: #fff;
 }
-/* line 23, ../sass/components/3_components/_tables.scss */
+/* line 25, ../sass/components/3_components/_tables.scss */
 table .hashed {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
 }
-/* line 28, ../sass/components/3_components/_tables.scss */
+/* line 30, ../sass/components/3_components/_tables.scss */
 table tr:hover td {
   background: #E6F2F8 !important;
 }
 
-/* line 33, ../sass/components/3_components/_tables.scss */
+/* line 35, ../sass/components/3_components/_tables.scss */
 table.overview-kpis {
   background: transparent;
   margin-top: 15px;
   border-bottom: 1px solid #f5f6f7;
 }
-/* line 39, ../sass/components/3_components/_tables.scss */
+/* line 41, ../sass/components/3_components/_tables.scss */
 table.overview-kpis td {
   font-size: 20px;
   padding: 7px 10px 7px 0;
   background: transparent;
 }
 
-/* line 51, ../sass/components/3_components/_tables.scss */
+/* line 53, ../sass/components/3_components/_tables.scss */
 table.module {
   border-collapse: collapse;
   border-right: 0;
@@ -1798,27 +1850,27 @@ table.module {
   padding: 0;
   width: auto;
 }
-/* line 58, ../sass/components/3_components/_tables.scss */
+/* line 60, ../sass/components/3_components/_tables.scss */
 table.module thead {
   background: #f5f6f7;
   width: 100%;
 }
-/* line 63, ../sass/components/3_components/_tables.scss */
+/* line 65, ../sass/components/3_components/_tables.scss */
 table.module tr {
   border-bottom: 1px solid #eee;
 }
-/* line 66, ../sass/components/3_components/_tables.scss */
+/* line 68, ../sass/components/3_components/_tables.scss */
 table.module tr:hover {
   background: #E6F2F8;
 }
-/* line 72, ../sass/components/3_components/_tables.scss */
+/* line 74, ../sass/components/3_components/_tables.scss */
 table.module th, table.module td {
   border-right: 1px solid #cfcfcf;
   padding: 8px 10px;
   white-space: nowrap;
   width: auto;
 }
-/* line 82, ../sass/components/3_components/_tables.scss */
+/* line 84, ../sass/components/3_components/_tables.scss */
 table.module th .sm-campaign-image, table.module td .sm-campaign-image {
   display: inline-block;
   float: left;
@@ -1826,25 +1878,25 @@ table.module th .sm-campaign-image, table.module td .sm-campaign-image {
   text-align: center;
   width: 42px;
 }
-/* line 89, ../sass/components/3_components/_tables.scss */
+/* line 91, ../sass/components/3_components/_tables.scss */
 table.module th .sm-campaign-image img, table.module td .sm-campaign-image img {
   max-height: 26px;
 }
-/* line 95, ../sass/components/3_components/_tables.scss */
+/* line 97, ../sass/components/3_components/_tables.scss */
 table.module th.line-number, table.module td.line-number {
   background: #f5f6f7;
 }
-/* line 99, ../sass/components/3_components/_tables.scss */
+/* line 101, ../sass/components/3_components/_tables.scss */
 table.module th.campaign, table.module th.advertiser, table.module td.campaign, table.module td.advertiser {
   width: 100%;
   overflow: hidden;
 }
-/* line 104, ../sass/components/3_components/_tables.scss */
+/* line 106, ../sass/components/3_components/_tables.scss */
 table.module th.campaign, table.module th.advertiser, table.module th.planned, table.module td.campaign, table.module td.advertiser, table.module td.planned {
   min-width: 220px;
   padding: 0;
 }
-/* line 108, ../sass/components/3_components/_tables.scss */
+/* line 110, ../sass/components/3_components/_tables.scss */
 table.module th.campaign a, table.module th.advertiser a, table.module th.planned a, table.module td.campaign a, table.module td.advertiser a, table.module td.planned a {
   padding: 8px 10px;
   display: inline-block;
@@ -1853,30 +1905,30 @@ table.module th.campaign a, table.module th.advertiser a, table.module th.planne
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 120, ../sass/components/3_components/_tables.scss */
+/* line 122, ../sass/components/3_components/_tables.scss */
 table.module th.campaign a, table.module td.campaign a {
   font-weight: bold;
 }
-/* line 125, ../sass/components/3_components/_tables.scss */
+/* line 127, ../sass/components/3_components/_tables.scss */
 table.module th.advertiser, table.module td.advertiser {
   min-width: 120px;
 }
-/* line 129, ../sass/components/3_components/_tables.scss */
+/* line 131, ../sass/components/3_components/_tables.scss */
 table.module th.budget, table.module th.planned, table.module td.budget, table.module td.planned {
   text-align: right;
   min-width: 160px;
 }
-/* line 133, ../sass/components/3_components/_tables.scss */
+/* line 135, ../sass/components/3_components/_tables.scss */
 table.module th.budget .currency, table.module th.planned .currency, table.module td.budget .currency, table.module td.planned .currency {
   color: #9b9b9b;
   float: left;
   font-size: 11px;
 }
-/* line 141, ../sass/components/3_components/_tables.scss */
+/* line 143, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned, table.module td.percentplanned {
   min-width: 120px;
 }
-/* line 144, ../sass/components/3_components/_tables.scss */
+/* line 146, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar, table.module td.percentplanned .budget-progress-bar {
   background: #69AED4;
   color: #fff;
@@ -1888,25 +1940,25 @@ table.module th.percentplanned .budget-progress-bar, table.module td.percentplan
   text-align: right;
   box-sizing: border-box;
 }
-/* line 156, ../sass/components/3_components/_tables.scss */
+/* line 158, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar span, table.module td.percentplanned .budget-progress-bar span {
   right: 5px;
   position: relative;
 }
-/* line 161, ../sass/components/3_components/_tables.scss */
+/* line 163, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.over, table.module td.percentplanned .budget-progress-bar.over {
   background: #EE3424;
   width: 100%;
 }
-/* line 166, ../sass/components/3_components/_tables.scss */
+/* line 168, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.under, table.module td.percentplanned .budget-progress-bar.under {
   color: #333;
 }
-/* line 169, ../sass/components/3_components/_tables.scss */
+/* line 171, ../sass/components/3_components/_tables.scss */
 table.module th.percentplanned .budget-progress-bar.under span, table.module td.percentplanned .budget-progress-bar.under span {
   right: auto;
 }
-/* line 180, ../sass/components/3_components/_tables.scss */
+/* line 182, ../sass/components/3_components/_tables.scss */
 table.module th {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -1914,78 +1966,78 @@ table.module th {
   text-align: left;
 }
 
-/* line 195, ../sass/components/3_components/_tables.scss */
+/* line 197, ../sass/components/3_components/_tables.scss */
 table#mostrecentcampaigns {
   table-layout: fixed;
   width: 100%;
 }
-/* line 200, ../sass/components/3_components/_tables.scss */
+/* line 202, ../sass/components/3_components/_tables.scss */
 table#mostrecentcampaigns th, table#mostrecentcampaigns td {
   line-height: 24px;
 }
 
-/* line 207, ../sass/components/3_components/_tables.scss */
+/* line 209, ../sass/components/3_components/_tables.scss */
 table#schedule th:nth-child(n+3) {
   text-align: center;
 }
-/* line 211, ../sass/components/3_components/_tables.scss */
+/* line 213, ../sass/components/3_components/_tables.scss */
 table#schedule th:nth-child(n+3),
 table#schedule td:nth-child(n+3) {
   min-width: 80px;
 }
-/* line 216, ../sass/components/3_components/_tables.scss */
+/* line 218, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td {
   background: #f5f6f7;
   border-color: transparent;
   border-top: 1px solid #cfcfcf;
   font-weight: bold;
 }
-/* line 222, ../sass/components/3_components/_tables.scss */
+/* line 224, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td a {
   color: #333;
   cursor: default;
 }
-/* line 227, ../sass/components/3_components/_tables.scss */
+/* line 229, ../sass/components/3_components/_tables.scss */
 table#schedule tr:last-child td:first-child {
   color: #f5f6f7;
 }
-/* line 233, ../sass/components/3_components/_tables.scss */
+/* line 235, ../sass/components/3_components/_tables.scss */
 table#schedule th:last-child,
 table#schedule td:last-child {
   width: auto;
 }
 
-/* line 241, ../sass/components/3_components/_tables.scss */
+/* line 243, ../sass/components/3_components/_tables.scss */
 table.goals {
   clear: both;
   width: 950px;
 }
-/* line 246, ../sass/components/3_components/_tables.scss */
+/* line 248, ../sass/components/3_components/_tables.scss */
 table.goals th {
   text-align: left;
 }
-/* line 250, ../sass/components/3_components/_tables.scss */
+/* line 252, ../sass/components/3_components/_tables.scss */
 table.goals td, table.goals th {
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #cfcfcf;
   white-space: nowrap;
 }
-/* line 256, ../sass/components/3_components/_tables.scss */
+/* line 258, ../sass/components/3_components/_tables.scss */
 table.goals td input[type='checkbox'], table.goals td label, table.goals th input[type='checkbox'], table.goals th label {
   max-width: 21px;
   margin: 0 15px 0 0;
 }
-/* line 261, ../sass/components/3_components/_tables.scss */
+/* line 263, ../sass/components/3_components/_tables.scss */
 table.goals td:first-child, table.goals th:first-child {
   padding-left: 15px;
 }
-/* line 265, ../sass/components/3_components/_tables.scss */
+/* line 267, ../sass/components/3_components/_tables.scss */
 table.goals td.narrow, table.goals th.narrow {
   width: 80px;
   text-align: right;
 }
-/* line 276, ../sass/components/3_components/_tables.scss */
+/* line 278, ../sass/components/3_components/_tables.scss */
 table.goals.budget tr:not(.spacer) td:first-child {
   /*
               border-color: transparent;
@@ -1993,74 +2045,74 @@ table.goals.budget tr:not(.spacer) td:first-child {
               padding-left: 0;
   */
 }
-/* line 286, ../sass/components/3_components/_tables.scss */
+/* line 288, ../sass/components/3_components/_tables.scss */
 table.goals.budget td:nth-child(2) {
   font-weight: normal;
   text-align: right;
 }
-/* line 291, ../sass/components/3_components/_tables.scss */
+/* line 293, ../sass/components/3_components/_tables.scss */
 table.goals.budget td:nth-child(3) {
   background: transparent !important;
   border-color: #f5f6f7;
   text-align: right;
 }
-/* line 298, ../sass/components/3_components/_tables.scss */
+/* line 300, ../sass/components/3_components/_tables.scss */
 table.goals td:first-child {
   min-width: 130px;
 }
-/* line 303, ../sass/components/3_components/_tables.scss */
+/* line 305, ../sass/components/3_components/_tables.scss */
 table.goals td:nth-child(2) {
   font-weight: bold;
   color: #333;
 }
-/* line 308, ../sass/components/3_components/_tables.scss */
+/* line 310, ../sass/components/3_components/_tables.scss */
 table.goals td:nth-child(4) {
   min-width: 150px;
 }
-/* line 314, ../sass/components/3_components/_tables.scss */
+/* line 316, ../sass/components/3_components/_tables.scss */
 table.goals tr:hover td input {
   border: 1px solid #69AED4;
 }
-/* line 320, ../sass/components/3_components/_tables.scss */
+/* line 322, ../sass/components/3_components/_tables.scss */
 table.goals tr.spacer td, table.goals tr.spacer:hover td {
   border: 0;
   background: transparent !important;
   padding: 5px;
 }
-/* line 326, ../sass/components/3_components/_tables.scss */
+/* line 328, ../sass/components/3_components/_tables.scss */
 table.goals .uncategorized,
 table.goals td:nth-child(3).uncategorized {
   background: #FCF0BF !important;
 }
-/* line 336, ../sass/components/3_components/_tables.scss */
+/* line 338, ../sass/components/3_components/_tables.scss */
 table.goals td.custom input {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
 }
-/* line 340, ../sass/components/3_components/_tables.scss */
+/* line 342, ../sass/components/3_components/_tables.scss */
 table.goals td.editable {
   color: #333;
   padding: 0;
 }
-/* line 344, ../sass/components/3_components/_tables.scss */
+/* line 346, ../sass/components/3_components/_tables.scss */
 table.goals td.editable input[type="text"] {
   padding: 10px;
   width: 100%;
 }
-/* line 348, ../sass/components/3_components/_tables.scss */
+/* line 350, ../sass/components/3_components/_tables.scss */
 table.goals td.editable input[type="text"]:hover {
   border: 1px solid #69AED4;
 }
-/* line 354, ../sass/components/3_components/_tables.scss */
+/* line 356, ../sass/components/3_components/_tables.scss */
 table.goals td input[type="text"] {
   border: 1px solid #fff;
   border-radius: 0;
 }
-/* line 358, ../sass/components/3_components/_tables.scss */
+/* line 360, ../sass/components/3_components/_tables.scss */
 table.goals td input[type="text"]:focus {
   border-width: 1px !important;
 }
 
-/* line 367, ../sass/components/3_components/_tables.scss */
+/* line 369, ../sass/components/3_components/_tables.scss */
 table.addToCampaign {
   counter-reset: rowNumber -1;
   clear: both;
@@ -2075,87 +2127,87 @@ table.addToCampaign {
       }    
   */
 }
-/* line 371, ../sass/components/3_components/_tables.scss */
+/* line 373, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr {
   counter-increment: rowNumber;
 }
-/* line 374, ../sass/components/3_components/_tables.scss */
+/* line 376, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr td:first-child::before {
   content: counter(rowNumber);
 }
-/* line 383, ../sass/components/3_components/_tables.scss */
+/* line 385, ../sass/components/3_components/_tables.scss */
 table.addToCampaign th {
   text-align: left;
 }
-/* line 388, ../sass/components/3_components/_tables.scss */
+/* line 390, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td, table.addToCampaign th {
   box-sizing: border-box;
   padding: 10px;
   border: 0;
   white-space: nowrap;
 }
-/* line 394, ../sass/components/3_components/_tables.scss */
+/* line 396, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type='checkbox'], table.addToCampaign td label, table.addToCampaign th input[type='checkbox'], table.addToCampaign th label {
   max-width: 21px;
   margin: 0 15px 0 0;
 }
-/* line 399, ../sass/components/3_components/_tables.scss */
+/* line 401, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:first-child, table.addToCampaign th:first-child {
   border-right: 0;
   min-width: 34px !important;
 }
-/* line 404, ../sass/components/3_components/_tables.scss */
+/* line 406, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.description, table.addToCampaign th.description {
   background: #f5f6f7;
   color: #9b9b9b;
 }
-/* line 414, ../sass/components/3_components/_tables.scss */
+/* line 416, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.budget td:nth-child(2) {
   font-weight: normal;
   text-align: right;
 }
-/* line 419, ../sass/components/3_components/_tables.scss */
+/* line 421, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.budget td:nth-child(3) {
   background: transparent !important;
   border: 0;
 }
-/* line 435, ../sass/components/3_components/_tables.scss */
+/* line 437, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:first-child {
   color: #9b9b9b;
 }
-/* line 439, ../sass/components/3_components/_tables.scss */
+/* line 441, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(2) {
   color: #333;
   border-left: 0;
   padding-left: 5px;
   width: 150px;
 }
-/* line 446, ../sass/components/3_components/_tables.scss */
+/* line 448, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(4) {
   min-width: 250px;
   text-overflow: ellipsis;
 }
-/* line 451, ../sass/components/3_components/_tables.scss */
+/* line 453, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:nth-child(5) {
   min-width: 120px;
   text-overflow: ellipsis;
 }
-/* line 456, ../sass/components/3_components/_tables.scss */
+/* line 458, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td:last-child {
   color: #fff;
   cursor: pointer;
 }
-/* line 462, ../sass/components/3_components/_tables.scss */
+/* line 464, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.simple th:first-child,
 table.addToCampaign.simple td:first-child {
   min-width: 180px;
   padding-left: 15px;
 }
-/* line 468, ../sass/components/3_components/_tables.scss */
+/* line 470, ../sass/components/3_components/_tables.scss */
 table.addToCampaign.simple td:last-child {
   min-width: 80px;
 }
-/* line 477, ../sass/components/3_components/_tables.scss */
+/* line 479, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td:first-child {
   cursor: pointer;
   text-indent: -9999px;
@@ -2163,15 +2215,15 @@ table.addToCampaign tr:hover:not(.divider) td:first-child {
   background-size: 16px 13px !important;
   background-color: #E6F2F8 !important;
 }
-/* line 486, ../sass/components/3_components/_tables.scss */
+/* line 488, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td input {
   border: 1px solid #69AED4;
 }
-/* line 491, ../sass/components/3_components/_tables.scss */
+/* line 493, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr:hover:not(.divider) td:last-child {
   color: #69AED4;
 }
-/* line 500, ../sass/components/3_components/_tables.scss */
+/* line 502, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider td:first-child {
   border-right: 1px solid #cfcfcf;
   padding: 10px 0 10px 15px;
@@ -2181,172 +2233,176 @@ table.addToCampaign tr.divider td:first-child {
   font-weight: bold;
   border: 1px solid #cfcfcf !important;
 }
-/* line 510, ../sass/components/3_components/_tables.scss */
+/* line 512, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider:hover {
   background: transparent;
 }
-/* line 513, ../sass/components/3_components/_tables.scss */
+/* line 515, ../sass/components/3_components/_tables.scss */
 table.addToCampaign tr.divider:hover td {
   background: transparent !important;
 }
-/* line 522, ../sass/components/3_components/_tables.scss */
+/* line 524, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td {
   border-bottom: 2px solid #f5f6f7;
 }
-/* line 526, ../sass/components/3_components/_tables.scss */
+/* line 528, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.narrow {
   width: 80px;
   text-align: right;
 }
-/* line 532, ../sass/components/3_components/_tables.scss */
+/* line 534, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width50 {
   min-width: 50px;
 }
-/* line 533, ../sass/components/3_components/_tables.scss */
+/* line 535, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width100 {
   min-width: 100px;
 }
-/* line 534, ../sass/components/3_components/_tables.scss */
+/* line 536, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width150 {
   min-width: 150px;
 }
-/* line 535, ../sass/components/3_components/_tables.scss */
+/* line 537, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width250 {
   min-width: 250px;
 }
-/* line 536, ../sass/components/3_components/_tables.scss */
+/* line 538, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.width300 {
   min-width: 300px;
 }
 /* line 539, ../sass/components/3_components/_tables.scss */
+table.addToCampaign td.width350 {
+  min-width: 350px;
+}
+/* line 542, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable {
   color: #333;
   padding: 0;
 }
-/* line 544, ../sass/components/3_components/_tables.scss */
+/* line 547, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"] {
   padding: 10px;
   width: 100%;
 }
-/* line 550, ../sass/components/3_components/_tables.scss */
+/* line 553, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"]:hover {
   border: 1px solid #69AED4;
 }
-/* line 554, ../sass/components/3_components/_tables.scss */
+/* line 557, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td.editable input[type="text"].dropdown::after {
   content: "\f0d7";
   font-family: "FontAwesome";
   font-style: normal;
   position: absolute;
 }
-/* line 562, ../sass/components/3_components/_tables.scss */
+/* line 565, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type="text"] {
   border: 1px solid #fff;
   border-radius: 0;
 }
-/* line 568, ../sass/components/3_components/_tables.scss */
+/* line 571, ../sass/components/3_components/_tables.scss */
 table.addToCampaign td input[type="text"]:focus {
   border-width: 1px !important;
 }
 
-/* line 578, ../sass/components/3_components/_tables.scss */
+/* line 581, ../sass/components/3_components/_tables.scss */
 table.gridlines th, table.gridlines td {
   border: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 583, ../sass/components/3_components/_tables.scss */
+/* line 586, ../sass/components/3_components/_tables.scss */
 table.gridlines tr:not(:last-child) td {
   border-bottom: 1px solid #eee;
 }
-/* line 588, ../sass/components/3_components/_tables.scss */
+/* line 591, ../sass/components/3_components/_tables.scss */
 table.gridlines .section td {
   font-size: 11px;
   font-weight: bold;
   border-right: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 595, ../sass/components/3_components/_tables.scss */
+/* line 598, ../sass/components/3_components/_tables.scss */
 table.gridlines .section:hover td:first-child {
   cursor: default;
   text-indent: -9999px;
   background: #fff;
 }
-/* line 601, ../sass/components/3_components/_tables.scss */
+/* line 604, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign th:first-child {
   padding-left: 15px;
 }
-/* line 605, ../sass/components/3_components/_tables.scss */
+/* line 608, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign th:last-child, table.gridlines.addToCampaign td:last-child {
   color: transparent;
   border-color: transparent;
   background: transparent;
 }
-/* line 612, ../sass/components/3_components/_tables.scss */
+/* line 615, ../sass/components/3_components/_tables.scss */
 table.gridlines.addToCampaign tr:hover td:last-child {
   background: transparent !important;
 }
 
-/* line 618, ../sass/components/3_components/_tables.scss */
+/* line 621, ../sass/components/3_components/_tables.scss */
 .bionic-grid {
   width: 100%;
   counter-reset: rowNumber -1;
 }
-/* line 623, ../sass/components/3_components/_tables.scss */
+/* line 626, ../sass/components/3_components/_tables.scss */
 .bionic-grid tr {
   counter-increment: rowNumber;
 }
-/* line 626, ../sass/components/3_components/_tables.scss */
+/* line 629, ../sass/components/3_components/_tables.scss */
 .bionic-grid tr td:first-child::before {
   content: counter(rowNumber);
 }
-/* line 632, ../sass/components/3_components/_tables.scss */
+/* line 635, ../sass/components/3_components/_tables.scss */
 .bionic-grid th {
   text-align: left;
 }
-/* line 636, ../sass/components/3_components/_tables.scss */
+/* line 639, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-number {
   width: 10px;
 }
-/* line 640, ../sass/components/3_components/_tables.scss */
+/* line 643, ../sass/components/3_components/_tables.scss */
 .bionic-grid th, .bionic-grid td {
   border: 1px solid #cfcfcf;
   padding: 10px;
   box-sizing: border-box;
 }
-/* line 646, ../sass/components/3_components/_tables.scss */
+/* line 649, ../sass/components/3_components/_tables.scss */
 .bionic-grid tr:not(:last-child) td {
   border-bottom: 1px solid #eee;
 }
-/* line 651, ../sass/components/3_components/_tables.scss */
+/* line 654, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-100 {
   width: 100px;
 }
-/* line 652, ../sass/components/3_components/_tables.scss */
+/* line 655, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-150 {
   width: 150px;
 }
-/* line 653, ../sass/components/3_components/_tables.scss */
+/* line 656, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-200 {
   width: 200px;
 }
-/* line 654, ../sass/components/3_components/_tables.scss */
+/* line 657, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-250 {
   width: 250px;
 }
-/* line 655, ../sass/components/3_components/_tables.scss */
+/* line 658, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-300 {
   width: 300px;
 }
-/* line 656, ../sass/components/3_components/_tables.scss */
+/* line 659, ../sass/components/3_components/_tables.scss */
 .bionic-grid .col-400 {
   width: 350px;
 }
 
-/* line 661, ../sass/components/3_components/_tables.scss */
+/* line 664, ../sass/components/3_components/_tables.scss */
 .bionic-grid.costs .col-cost {
   width: 300px;
 }
-/* line 662, ../sass/components/3_components/_tables.scss */
+/* line 665, ../sass/components/3_components/_tables.scss */
 .bionic-grid.costs .col-type {
   width: 100px;
 }
@@ -2511,6 +2567,65 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   width: 100%;
 }
 
+/* line 1, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details {
+  margin: 20px 0px;
+  width: 1000px;
+}
+/* line 5, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-header td {
+  border-bottom: none;
+}
+/* line 9, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details h3 {
+  font-size: 13px;
+}
+/* line 13, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details td {
+  border: 0;
+  border-bottom: 1px dotted #e2e2e2;
+  vertical-align: middle;
+  background: transparent;
+  padding: 12px 0;
+}
+/* line 21, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .line-item-overview-wrapper h3 {
+  color: #333;
+  font-size: 13px;
+  padding-left: 0;
+  clear: both;
+}
+/* line 28, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-number {
+  width: 20px;
+  text-align: right;
+  padding-right: 20px;
+  color: #999;
+  vertical-align: middle;
+}
+/* line 36, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-name {
+  width: 500px;
+}
+/* line 40, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-operator {
+  width: 20px;
+}
+/* line 44, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-amount {
+  width: 210px;
+  border-right: 20px solid #f5f6f7;
+  text-align: right;
+  padding: 0 32px 0 10px;
+}
+/* line 51, ../sass/components/4_layouts/_line-cost.scss */
+.cost-details .cost-details-functional-amount {
+  border: none;
+  width: 210px;
+  text-align: right;
+  color: #999;
+}
+
 /* line 1, ../sass/components/4_layouts/_tasks.scss */
 #noStickerArea {
   height: 200px;
@@ -2543,6 +2658,32 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 /* line 18, ../sass/components/5_messaging/_notifications.scss */
 .notification.error {
   background: #FDD6D1;
+}
+
+/* line 24, ../sass/components/5_messaging/_notifications.scss */
+.alert {
+  background-color: #DBE8F0;
+  border: 1px solid #D6E6F0;
+  border-radius: 5px;
+  padding: 15px 20px 15px 10px;
+  display: block;
+  max-width: 700px;
+  margin: 10px 0;
+}
+/* line 33, ../sass/components/5_messaging/_notifications.scss */
+.alert .fa {
+  display: block;
+  float: left;
+  font-size: 2.0em;
+  margin: 5px 20px 0 10px;
+  color: #9FC0DE;
+}
+/* line 41, ../sass/components/5_messaging/_notifications.scss */
+.alert p {
+  padding-left: 58px;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 18px;
 }
 
 /* line 1, ../sass/components/5_messaging/_tooltips.scss */
@@ -2582,7 +2723,6 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 /* line 8, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table tr td,
 .fixedTable .table tr th {
-  border: 1px solid #f5f6f7;
   min-width: 100px;
   height: 40px;
   width: 100px;
@@ -2590,10 +2730,11 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   text-align: left;
 }
 
-/* line 18, ../sass/components/7_prototype/_grid.scss */
+/* line 17, ../sass/components/7_prototype/_grid.scss */
 .fixedTable .table tr td {
-  border: 1px solid #eee;
-  border-right: 1px solid #cfcfcf;
+  border: 0px solid #eee;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #ddd;
 }
 
 /* line 23, ../sass/components/7_prototype/_grid.scss */
@@ -2665,7 +2806,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 /* line 19, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
-  height: calc(100% - 268px);
+  height: calc(100% - 292px);
 }
 /* line 27, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .mediaPlanFirstColumnHeader {
@@ -2673,93 +2814,138 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   width: 300px;
 }
 /* line 30, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable .mediaPlanFirstColumnHeader th:first-child {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader th.col-checkbox {
   width: 22px;
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
   background-size: 4px 4px;
   height: 100%;
 }
 /* line 37, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable .mediaPlanFirstColumnHeader th:nth-child(2) {
+.mediaplan.fixedTable .mediaPlanFirstColumnHeader th.col-placement-name {
   width: 100px;
+  height: 54px;
 }
-/* line 44, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 45, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .divider-right {
+  border-right: 1px solid #9b9b9b !important;
+}
+/* line 49, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .divider {
+  border-left: 1px solid #9b9b9b !important;
+}
+/* line 53, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .divider-costs {
+  /*
+          border-left: 1px solid green !important;
+          border-top: 1px solid green !important;
+  */
+}
+/* line 61, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .divider-kpis {
+  /*
+          border-left: 1px solid orange !important;
+          border-top: 1px solid orange !important;
+  */
+}
+/* line 69, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.group th {
+  height: 24px !important;
+  font-weight: bold;
+  padding-left: 5px !important;
+  border-bottom: 1px solid #cfcfcf;
+}
+/* line 75, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.group th span {
+  display: block;
+  font-weight: bold;
+  float: left;
+  margin-left: -3px;
+}
+/* line 86, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.group-members th {
+  border-bottom: 1px solid #cfcfcf;
+}
+/* line 91, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .mediaPlanFirstColumnHeader th,
 .mediaplan.fixedTable .table tr th {
   height: 30px;
-  border: 1px solid #cfcfcf;
-  border-left: 0;
+  border-left: 1px solid #cfcfcf;
+  border-top: 1px solid #9b9b9b;
   font-weight: normal;
   box-sizing: border-box;
   padding: 0px;
   text-align: left;
 }
-/* line 54, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 101, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .mediaPlanFirstColumnHeader th span,
 .mediaplan.fixedTable .table tr th span {
   padding-left: 5px;
   padding-right: 5px;
 }
-/* line 61, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable #mediaPlanFirstColumns td {
-  border-left: 0;
-}
-/* line 65, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 108, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th {
   white-space: nowrap;
   min-width: none;
   padding: 5px;
   box-sizing: border-box;
 }
-/* line 72, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 115, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .inactive {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
   height: 100%;
 }
-/* line 81, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 124, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover td {
   background: #E6F2F8 !important;
 }
-/* line 85, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 128, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover .inactive input {
   background: #fff !important;
 }
-/* line 91, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 134, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .table tr td {
   background: #fff;
   height: 55px;
   vertical-align: top;
   border-bottom: 1px solid #eee;
-  border-right: 1px solid #ddd;
 }
-/* line 99, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 141, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table {
   border-collapse: collapse;
 }
-/* line 102, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 144, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th, .mediaplan.fixedTable table td, .mediaplan.fixedTable table tr {
   box-sizing: border-box;
 }
-/* line 105, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 147, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th.readonly, .mediaplan.fixedTable table th.link, .mediaplan.fixedTable table td.readonly, .mediaplan.fixedTable table td.link, .mediaplan.fixedTable table tr.readonly, .mediaplan.fixedTable table tr.link {
   padding: 5px;
   box-sizing: border-box;
   display: inline-block;
 }
-/* line 111, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 153, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable table th .col-line-number:not(th), .mediaplan.fixedTable table td .col-line-number:not(th), .mediaplan.fixedTable table tr .col-line-number:not(th) {
+  font-size: 2em;
+}
+/* line 157, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th .col-line-number, .mediaplan.fixedTable table td .col-line-number, .mediaplan.fixedTable table tr .col-line-number {
   color: #ccc;
-  font-size: 2em;
   padding: 0px;
+  min-width: 100px;
   width: 100px;
 }
-/* line 117, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable table th .col-line-number .header, .mediaplan.fixedTable table td .col-line-number .header, .mediaplan.fixedTable table tr .col-line-number .header {
+  color: #333;
+}
+/* line 167, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th .col-line-number span, .mediaplan.fixedTable table td .col-line-number span, .mediaplan.fixedTable table tr .col-line-number span {
   display: block;
+  box-sizing: border-box;
   padding: 10px;
 }
-/* line 124, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 175, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th .col-checkbox, .mediaplan.fixedTable table td .col-checkbox, .mediaplan.fixedTable table tr .col-checkbox {
   max-width: 22px;
   min-width: 22px;
@@ -2768,141 +2954,140 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   background-size: 4px 4px;
   height: 100%;
 }
-/* line 133, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 184, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable table th .col-placement-name, .mediaplan.fixedTable table td .col-placement-name, .mediaplan.fixedTable table tr .col-placement-name {
   color: #69AED4;
   width: 177px !important;
   padding: 5px;
 }
-/* line 143, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 194, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th span {
   display: block;
   box-sizing: border-box;
 }
-/* line 150, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 201, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-id, .mediaplan.fixedTable td.col-id {
   min-width: 80px;
   max-width: 80px;
   width: 80px;
-  text-align: center !important;
 }
-/* line 151, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 202, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-program, .mediaplan.fixedTable td.col-program {
   min-width: 180px;
   max-width: 180px;
   width: 180px;
 }
-/* line 152, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 203, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-product, .mediaplan.fixedTable td.col-product {
   min-width: 200px;
   max-width: 200px;
   width: 200px;
 }
-/* line 153, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 204, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-channel, .mediaplan.fixedTable td.col-channel {
   min-width: 232px;
   max-width: 232px;
   width: 232px;
 }
-/* line 154, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 205, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-flight-dates, .mediaplan.fixedTable td.col-flight-dates {
   min-width: 210px;
   max-width: 210px;
   width: 210px;
 }
-/* line 155, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 206, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-rate, .mediaplan.fixedTable td.col-rate {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 160, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 211, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-rate input, .mediaplan.fixedTable td.col-rate input {
   width: 67px;
 }
-/* line 163, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 214, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-rate input.number, .mediaplan.fixedTable td.col-rate input.number {
   text-align: right;
 }
-/* line 167, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 218, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-rate input.currency, .mediaplan.fixedTable td.col-rate input.currency {
   width: 50px;
 }
-/* line 174, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 225, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-quantity, .mediaplan.fixedTable td.col-quantity {
   min-width: 150px;
   max-width: 150px;
   width: 150px;
 }
-/* line 182, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 233, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-gross-media, .mediaplan.fixedTable td.col-gross-media {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 183, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 234, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-total-media-cost, .mediaplan.fixedTable td.col-total-media-cost {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 184, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 235, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-agency-comp, .mediaplan.fixedTable td.col-agency-comp {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 185, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 236, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-ad-serving, .mediaplan.fixedTable td.col-ad-serving {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 186, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 237, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-total-cost, .mediaplan.fixedTable td.col-total-cost {
   min-width: 300px;
   max-width: 300px;
   width: 300px;
 }
-/* line 187, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 238, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-cost, .mediaplan.fixedTable td.col-cost {
   min-width: 150px;
   max-width: 150px;
   width: 150px;
 }
-/* line 192, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 243, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-cost .currency-symbol, .mediaplan.fixedTable td.col-cost .currency-symbol {
   margin-top: 6px;
   margin-left: 5px;
 }
-/* line 197, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable th.col-cost a, .mediaplan.fixedTable td.col-cost a {
+/* line 248, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-cost a:not(.action), .mediaplan.fixedTable td.col-cost a:not(.action) {
   float: right;
 }
-/* line 201, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable th.col-cost.col-cost:not(th) a, .mediaplan.fixedTable td.col-cost.col-cost:not(th) a {
+/* line 253, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable th.col-cost.col-cost:not(th) a:not(.action), .mediaplan.fixedTable td.col-cost.col-cost:not(th) a:not(.action) {
   margin-right: 5px;
   margin-top: 6px;
 }
-/* line 208, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 260, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-kpi-cost, .mediaplan.fixedTable td.col-kpi-cost {
   min-width: 100px;
   max-width: 100px;
   width: 100px;
 }
-/* line 209, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 261, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable th.col-kpi-number, .mediaplan.fixedTable td.col-kpi-number {
   min-width: 150px;
   max-width: 150px;
   width: 150px;
 }
-/* line 213, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 265, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightheader {
   position: absolute;
   margin-left: 20px;
   margin-top: 3px;
 }
-/* line 218, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 270, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightheader :after {
   content: "";
   display: block;
@@ -2914,19 +3099,19 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   z-index: 1;
   top: 27px;
 }
-/* line 232, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 284, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable img.flightmember {
   position: absolute;
   margin-left: 40px;
   margin-top: 10px;
 }
-/* line 238, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 290, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 244, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 296, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -2940,16 +3125,16 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 257, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 309, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 262, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 314, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 266, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 318, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -2957,20 +3142,20 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 274, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 326, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 281, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 333, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 288, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable .kpi-actions {
+/* line 340, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .exclude-reset {
   color: #999;
   font-size: 11px;
   padding: 5px;
@@ -2979,34 +3164,34 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: absolute;
   white-space: nowrap;
 }
-/* line 297, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable .kpi-actions a {
+/* line 349, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .exclude-reset a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 306, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 358, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 310, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 362, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 315, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
+/* line 367, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable tr.hover td[class*="col-kpi"]:hover .exclude-reset {
   display: block;
 }
-/* line 320, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 372, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable:focus {
   border-width: 1px;
 }
-/* line 326, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 378, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-number input[type=text] {
   color: #9b9b9b;
 }
-/* line 334, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 386, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader.hover .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-number input[type=text] {
@@ -3014,13 +3199,13 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   background-color: #E6F2F8;
   user-select: none;
 }
-/* line 348, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 400, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember .col-program input,
 .mediaplan.fixedTable tr.flightMember .col-product input,
 .mediaplan.fixedTable tr.flightMember .col-channel input {
   color: #9b9b9b;
 }
-/* line 356, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 408, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember.hover .col-program input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-product input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-channel input[type=text] {
@@ -3029,35 +3214,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 47, ../sass/planner.scss */
+/* line 48, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 51, ../sass/planner.scss */
+/* line 52, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 56, ../sass/planner.scss */
+/* line 57, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 58, ../sass/planner.scss */
+/* line 59, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 64, ../sass/planner.scss */
+/* line 65, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 68, ../sass/planner.scss */
+/* line 69, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -3067,12 +3252,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 77, ../sass/planner.scss */
+/* line 78, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 82, ../sass/planner.scss */
+/* line 83, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -3083,7 +3268,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 92, ../sass/planner.scss */
+/* line 93, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -3093,13 +3278,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 101, ../sass/planner.scss */
+/* line 102, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 113, ../sass/planner.scss */
+/* line 114, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -3109,32 +3294,32 @@ h2 {
   position: fixed;
   z-index: 1;
 }
-/* line 122, ../sass/planner.scss */
+/* line 123, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 125, ../sass/planner.scss */
+/* line 126, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 129, ../sass/planner.scss */
+/* line 130, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 134, ../sass/planner.scss */
+/* line 135, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span a {
   color: #f5f6f7;
 }
-/* line 140, ../sass/planner.scss */
+/* line 141, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 149, ../sass/planner.scss */
+/* line 150, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -3144,7 +3329,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 158, ../sass/planner.scss */
+/* line 159, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -3153,69 +3338,69 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 166, ../sass/planner.scss */
+/* line 167, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 173, ../sass/planner.scss */
+/* line 174, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 181, ../sass/planner.scss */
+/* line 182, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 186, ../sass/planner.scss */
+/* line 187, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 191, ../sass/planner.scss */
+/* line 192, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 196, ../sass/planner.scss */
+/* line 197, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 205, ../sass/planner.scss */
+/* line 206, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 210, ../sass/planner.scss */
+/* line 211, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 10px;
 }
-/* line 216, ../sass/planner.scss */
+/* line 217, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
 }
-/* line 220, ../sass/planner.scss */
+/* line 221, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
 }
 
-/* line 227, ../sass/planner.scss */
+/* line 228, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 231, ../sass/planner.scss */
+/* line 232, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 236, ../sass/planner.scss */
+/* line 237, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -3224,7 +3409,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 245, ../sass/planner.scss */
+/* line 246, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -3238,7 +3423,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 258, ../sass/planner.scss */
+/* line 259, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -3257,7 +3442,7 @@ h2 {
   width: 42px;
 }
 
-/* line 276, ../sass/planner.scss */
+/* line 277, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -3267,11 +3452,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 286, ../sass/planner.scss */
+/* line 287, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 289, ../sass/planner.scss */
+/* line 290, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

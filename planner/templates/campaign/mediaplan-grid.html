@@ -41,10 +41,11 @@
   
   <table class="mediaPlanFirstColumnHeader">
       <thead>
-      <tr>
-          <th></th>
-          <th><span class="header">Line</span></th>
-          <th><span class="header"><a>Placement Name</a></span></th>
+
+      <tr class="group-members">
+          <th class="col-checkbox" style=""></th>
+          <th class="col-line-number"><span class="header">Line</span></th>
+          <th class="col-placement-name divider-right"><span class="header"><a>Placement Name</a></span></th>
       </tr>
       </thead>
   </table>  
@@ -53,21 +54,42 @@
   <header class="fixedTable-header block">
     <table class="table table-bordered">
         <thead>
-        <tr>
+            
+        <tr class="group">
+            <th colspan="7" style="border-left: 1px solid #cfcfcf !important;"><span>Basics</span> <a><i class="columnMenu fa fa-bars" style="top: 2px; position: relative;"></i></a></th>
+            <th colspan="9" class="divider divider-costs"><span>Costs</span></th>
+            <th colspan="6" class="divider divider-kpis"><span>KPIs</span></th>
+        </tr>
+        
+        <tr class="group-members">
           <th class="col-id"><span>Bionic ID</span></th>
-          <th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th>
+          <th class="col-program">
+              <span><a>Program</a> / <a>Vendor</a><a><i class="columnMenu fa fa-bars" style="top: 1px; float: right; position: relative;"></i></a></span>
+              <div class="menu columnMenu">
+                <ul>
+                    <li>One</li>
+                    <li>Two</li>
+                    <li>Three</li>
+                </ul>
+              </div>
+          </th>
           <th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th>
           <th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th>
           <th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th>
           <th class="col-rate center"><span>Rate</span></th>
-          <th class="col-quantity right"><span><a>Quantity</a></span></th>
-          <th class="col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th>
-          <th class="col-net-media col-cost right"><span><a>Net Media Cost</a></span></th>
-          <th class="col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th>
-          <th class="col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th>
-          <th class="col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th>
-          <th class="col-total-cost col-cost right"><span><a>Total Cost</a></span></th>
-          <th class="col-kpi-cost right"><span><a>CPM</a></span></th>
+          <th class="col-quantity right "><span><a>Quantity</a></span></th>
+          
+          <th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th>
+          <th class="divider-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th>
+          <th class="divider-costs col-net-media col-cost right"><span><a>Talent</a></span></th>
+          <th class="divider-costs col-net-media col-cost right"><span><a>Color Charge</a></span></th>
+          <th class="divider-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th>
+          <th class="divider-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th>
+          <th class="divider-costs col-ad-serving col-cost right"><span><a>DCM Ad Serving</a></span></th>
+          <th class="divider-costs col-ad-serving col-cost right"><span><a>Rich Media</a></span></th>
+          <th class="divider-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th>
+          
+          <th class="divider col-kpi-cost right"><span><a>CPM</a></span></th>
           <th class="col-kpi-number right"><span><a>Impressions</a></span></th>
           <th class="col-kpi-cost right"><span><a>CPC</a></span></th>
           <th class="col-kpi-number right"><span><a>Clicks</a></span></th>
@@ -99,6 +121,17 @@
       
       $(document).ready( function() {
         
+            $(".columnMenu").click(function () {
+                $(".menu").toggle();
+            });
+            
+            $("th.col-program").bind("contextmenu",function(e){
+                
+                $(".menu").toggle();
+                return false;
+                
+            });
+
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
                          wanted: [ mediaPlanTab ],
@@ -130,29 +163,29 @@
 // KPI Actions
           
           var customCPM, customCPC, customCPV;
-          var kpiActionsCPM = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
-              kpiActionsCPC = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
-              kpiActionsCPV = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
+          var kpiActionsCPM = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a> </div>';
           
           if(item.CPM == item.CPMdefault){
               customCPM = "";
           } else {
               customCPM = "custom";
-              kpiActionsCPM = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'"  data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
+              kpiActionsCPM = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'"  data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> </div>';
           }
 
           if(item.CPC == item.CPCdefault){
               customCPC = "";
           } else {
               customCPC = "custom";
-              kpiActionsCPC = '<div class="kpi-actions"> <a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
+              kpiActionsCPC = '<div class="exclude-reset"> <a class="action exclude" id="actionExcludeCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'"  data-item="'+i+'" data-action="exclude" data-kpi="CPC" data-target="kpiCPC'+i+'">Exclude</a> <a  class="action reset" id="actionResetCPC'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPC" data-default="'+item.CPCdefault+'" data-numberdefault="'+item.ClicksDefault+'" data-target="kpiCPC'+i+'">Reset</a></div>';
           }
           
           if(item.CPV == item.CPVdefault){
               customCPV = "";
           } else {
               customCPV = "custom";
-              kpiActionsCPV = '<div class="kpi-actions"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a class="action reset" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
+              kpiActionsCPV = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPV" data-target="kpiCPV'+i+'">Exclude</a> <a class="action reset" id="actionResetCPV'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPV" data-default="'+item.CPVdefault+'" data-numberdefault="'+item.ViewsDefault+'" data-target="kpiCPV'+i+'">Reset</a></div>';
           }
              
           
@@ -160,7 +193,7 @@
           var mediaPlanFirstColumns = $('<tr class="'+flightHeader+' '+isFlightMember+'">');
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
           mediaPlanFirstColumns.append('<td class="col-line-number"><span>' + rowNumber + flightHeaderImage+flightMemberImage+'</span></td>');
-          mediaPlanFirstColumns.append('<td class="col-placement-name "><a href="#/line/line-item-overview/0">'+ item.PlacementName +'</a></td>');
+          mediaPlanFirstColumns.append('<td class="col-placement-name divider-right"><a href="#/line/overview/">'+ item.PlacementName +'</a></td>');
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
@@ -169,17 +202,22 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          
           mediaPlanBody.append('<td class="col-rate"><input class="currency" type="text"><input class="number" type="text"><input type="text"><input type="text"></td>');
           mediaPlanBody.append('<td class="col-quantity"><input type="text" value=""></input></td>');
-          mediaPlanBody.append('<td class="col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          
+          //costs
+          mediaPlanBody.append('<td class="divider col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-net-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-talent col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="200.00">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-color col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="200.00">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-agency-comp col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-total-media-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
-          mediaPlanBody.append('<td class="col-ad-serving col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
-          mediaPlanBody.append('<td class="col-total-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');          
+          mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-total-cost  col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');          
           
-          mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="impressions'+ i + '" class="right cpw CPM kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
+          //kpis
+          mediaPlanBody.append('<td class="divider CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="impressions'+ i + '" class="right cpw CPM kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="impressions'+ i + '" class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
           mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="clicks'+ i + '" class="right cpw CPC kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
           mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="clicks'+ i + '" class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
@@ -223,21 +261,21 @@
     mouseenter: function () {
     var trIndex = $(this).index();
     $("table.mediaplan").each(function(index) {
-        $(this).find("tr:eq("+trIndex+")").addClass("hover")
+        $(this).find("tbody>tr:eq("+trIndex+")").addClass("hover")
     });
     },
     mouseleave: function () {
     var trIndex = $(this).index();
     $("table.mediaplan").each(function(index) {
-        $(this).find("tr:eq("+trIndex+")").removeClass("hover")
+        $(this).find("tbody>tr:eq("+trIndex+")").removeClass("hover")
     });
     }
-    }, "#mediaplan table tr");
+    }, "#mediaplan table tbody tr");
     
     // ------------------------------------------------
     // KPI Actions
     
-    $(document).on('click', '.kpi-actions a', function() {
+    $(document).on('click', '.exclude-reset a', function() {
         var action = $(this).data('action');
         var actionButton = $(this).attr('id');
         var item = $(this).data('item');
@@ -303,7 +341,7 @@
             $("#"+kpi).removeClass("inactive");             
             $("#"+kpi).parent().removeClass("inactive");             
             $(this).addClass("custom"); 
-            $(this).parent().find(".kpi-actions a").show();               
+            $(this).parent().find(".exclude-reset a").show();               
     });
     
 </script>    

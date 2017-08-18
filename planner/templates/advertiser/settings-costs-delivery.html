@@ -45,10 +45,148 @@
 
 <div class="block has-subnav">
 
-    <h2>Delivery Costs</h2> 
+<h2>Delivery Costs</h2> 
 
+<div class="alert">
+    <span class="fa fa-exclamation-triangle"></span>
+    <p>
+        <strong>Note:</strong> These are the default <strong>Delivery Costs</strong> that will be added to any <strong>new</strong>
+        campaigns that you create for this advertiser. Campaigns that you've already created will not
+        be affected by the changes you make here.
+    </p>
+</div>
+
+<p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p>
+<!--
+<ul>
+        <li class="menu">Select Production Costs
+
+            <ul class="menu">
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                </li>
+            </ul>
+        </li>
+</ul>
+-->
+
+<table class="addToCampaign custom-form-controls simple gridlines" id="costs">
+    <thead>
+        <tr>
+            <th colspan="2">Cost</th>
+            <th colspan="3">Calculation</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+    </tbody>
+</table>
+
+
+
+<br>
+<a class="blue-button open-modal" href="templates/modals/settings/delivery-costs.html" rel="modal:open" >Select Delivery Costs</a>
+<br>
+<br>
 
 </div>
 
+
 <script type="text/javascript" src="templates/advertiser/nav-advertiser.js"></script>
 <script type="text/javascript" src="templates/advertiser/nav-advertiser-settings.js"></script>
+
+<script>
+$(document).ready(function () {
+    $("li").click(function () {
+        $('li > ul').not($(this).children("ul").toggle()).hide();
+        
+    });
+});
+
+    
+if(Campaigns.length > 0){setCampaignInfo();}
+
+$("tbody").sortable({
+    items: "> tr",
+    appendTo: "parent",
+    helper: "clone"
+}).disableSelection();
+
+$("tbody").droppable({
+    hoverClass: "drophover",
+    tolerance: "pointer",
+    drop: function(e, ui) {
+        var tabdiv = $(this).attr("href");
+        $(tabdiv + " table tr:last").after("<tr>" + ui.draggable.html() + "</tr>");
+    }
+});    
+          
+</script>
+
+<script>
+
+      costsTab = "AdditionalCosts";
+            
+      $(document).ready( function() {
+
+    
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ costsTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(costsTab).all(), function(i, item) {
+          
+          var costRow,
+              name,
+              status, 
+              campaigns, 
+              type, 
+              calculationCost,
+              calculationBasis,
+              calculationValue,
+              symbol,
+              overageBuffer,
+              checked;           
+          
+              name =        item.Name;
+              status =      item.Status;
+              campaigns =   item.Campaigns;
+              type =        item.Type;
+              calculationCost = item.CalculationCost;
+              calculationBasis = item.CalculationBasis;
+              calculationValue = item.CalculationValue;
+              overageBuffer = item.OverageBuffer;
+              checked =     item.Checked; 
+              if(calculationCost == "Percentage of"){
+                  symbol = ""
+              } else {
+                  symbol = '<span class="currency-symbol">$</span>';
+              }          
+          
+              if((type == "Delivery")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td class="width350"><strong>'+name+'</strong></td>');
+                  costRow.append('<td class="width100">'+calculationCost+'</td>')
+                  costRow.append('<td class="width250">'+calculationBasis+'</td>')
+                  costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td>Remove</td></tr>')
+                  costRow.appendTo("#costs tbody");
+              }
+          
+        });
+
+        
+      }
+
+        
+</script>

@@ -47,6 +47,7 @@ var templateData = {
 			name: "Ad Serving",
 			page: ""
 		},
+/*
 		{
 			name: "Production Costs",
 			page: "#/advertiser/settings-costs-production/"
@@ -55,6 +56,7 @@ var templateData = {
 			name: "Delivery Costs",
 			page: "#/advertiser/settings-costs-delivery/"
 		},
+*/
 	]
 };
 // Render the underscore template and inject it after the H1

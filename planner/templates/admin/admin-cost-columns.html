@@ -14,11 +14,31 @@
 </div>
 
 
-<div class="bionic-filter bionic-filter-off" style="margin-left: 25px; margin-bottom: 0;"><i class="fa fa-filter"></i> All Cost Types</div>
+<div style="float: left; display: block; margin-left: 25px;">
+    <div class="bionic-filter filterStatus bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> Any Status</div>
+        <div class="menu filterStatusMenu">
+            <ul>
+                <li>Active</li>
+                <li>Inactive</li>
+            </ul>
+        </div>
+</div>
+
+
+<div style="float: left; display: block; margin-left: 8px;">
+    <div class="bionic-filter filterType bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Cost Types</div>
+        <div class="menu filterTypeMenu">
+            <ul>
+                <li>Production</li>
+                <li>Delivery</li>
+            </ul>
+        </div>
+</div>
+
 
 <ul class="bionic-action-menu block">
-    <li><a><i class="fa fa-plus"></i>Add New Cost</a></li>
-    <li class="row-select disabled"><a><i class="fa fa-lock"></i>Lock</a></li>
+    <li><a href="templates/modals/settings/add-new-cost.html" rel="modal:open" ><i class="fa fa-plus"></i>Add New Cost</a></li>
+    <li class="row-select disabled"><a><i class="fa fa-ban"></i>Make Inactive</a></li>
     <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
 
@@ -42,9 +62,9 @@
           <th class="col-100"><span><a>Status</a></span></th>
           <th class="col-100 right"><span><a>Campaigns</a></span></th>
           <th class="col-100"><span><a>Type</a></span></th>
-          <th class="col-150 combine"><span>Calculation</span></th>
-          <th class="col-150 combine"><span></span></th>
-          <th class="col-150 combine"><span></span></th>
+          <th class="col-300 combine"><span><a>Calculation</a></span></th>
+          <th class="col-150"><span></span></th>
+          <th class="col-150"><span><a>Overage Buffer</a></span></th>
         </tr>
         </thead>
     </table>
@@ -73,6 +93,13 @@
     
       $(document).ready( function() {
         
+        $(".filterType").click(function () {
+            $(".filterTypeMenu").toggle();
+        });
+        $(".filterStatus").click(function () {
+            $(".filterStatusMenu").toggle();
+        });
+        
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
                          wanted: [ costsTab ],
@@ -84,15 +111,21 @@
     
         $.each( tabletop.sheets(costsTab).all(), function(i, item) {
           
-          var rowNumber,
+          var rowNumber, symbol,
               costsTableFirstColumns,
               costsTableBody;
+
+              if(item.CalculationValue.includes("%")){
+                  symbol = ""
+              } else {
+                  symbol = '<span style="padding:0; margin-top:11px;" class="currency-symbol">$</span>';
+              }
           
           rowNumber = i++;
           
           costsTableFirstColumns = $('<tr><td class="line-number col-45"></td>');
           costsTableFirstColumns.append('<td class="col-30 no-right-border"><input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label></td>');
-          costsTableFirstColumns.append('<td class="col-275 no-left-border" style="border-right:0;"><a open-modal" href="templates/modals/settings/editcost.html" rel="modal:open" ><span><strong>'+ item.Name +'</strong></span></a></td>');
+          costsTableFirstColumns.append('<td class="col-275 no-left-border" style="border-right:0;"><a href="templates/modals/settings/editcost.html" rel="modal:open" ><span><strong>'+ item.Name +'</strong></span></a></td>');
           costsTableFirstColumns.append('</tr>');
           costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
                     
@@ -100,9 +133,9 @@
           costsTableBody.append('<td class="col-75"><span>'+ item.Status +'</span></td>');
           costsTableBody.append('<td class="col-100 right"><span><a>'+ item.Campaigns +'</a></span></td>');
           costsTableBody.append('<td class="col-100"><span>'+ item.Type +'</span></td>');
-          costsTableBody.append('<td class="col-150"><span>'+ item.CalculationCost +'</span></td>');
-          costsTableBody.append('<td class="col-150"><span>'+ item.CalculationBasis +'</span></td>');
-          costsTableBody.append('<td class="col-150"><span>'+ item.CalculationValue +'</span></td>');
+          costsTableBody.append('<td class="col-300"><span>'+ item.CalculationCost +'</span></td>');
+          costsTableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.CalculationValue +'</span></td>');
+          costsTableBody.append('<td class="col-150 right"><span> '+ item.OverageBuffer +'</span></td>');
           costsTableBody.append('</tr>');
           costsTableBody.appendTo("#gridBody tbody");
                     

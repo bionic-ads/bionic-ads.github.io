@@ -47,17 +47,17 @@
 <div class="block has-subnav">
     
 <h2>Production Costs</h2> 
-<p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p>
+<!-- <p><strong>Note: </strong>The order of these costs are the order they will appear as columns on the Media Plan. <br>Change the order they appear in the Media Plan by dragging the rows below.</p> -->
 <!--
 <ul>
-        <li class="menu">Select Production Costs
+        <li class=""><div class="bionic-filter bionic-filter-off"><i class="fa fa-filter"></i> Select Production Costs</div>
 
-            <ul class="menu">
-                <li><a href="#">Parent 1 &raquo; Child 1</a>
+            <ul class="menu custom-form-controls">
+                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">one</label>
                 </li>
-                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">two</label>
                 </li>
-                <li><a href="#">Parent 1 &raquo; Child 1</a>
+                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">three</label>
                 </li>
             </ul>
         </li>
@@ -67,8 +67,8 @@
 <table class="addToCampaign custom-form-controls simple gridlines" id="costs">
     <thead>
         <tr>
-            <th colspan="2">Cost</th>
-            <th colspan="3">Calculation</th>
+            <th colspan="2" class="">Cost</th>
+            <th colspan="2">Calculation</th>
             <th></th>
         </tr>
     </thead>
@@ -81,7 +81,7 @@
 
 
 <br>
-<a class="blue-button open-modal" href="templates/modals/settings/additionalcosts.html" rel="modal:open" >Select Production Costs</a>
+<a class="blue-button open-modal" href="templates/modals/settings/production-costs.html" rel="modal:open" >Select Production Costs</a>
 <br>
 <br>
 
@@ -163,11 +163,11 @@ $("tbody").droppable({
                   symbol = '<span class="currency-symbol">$</span>';
               }
               
-              if(type == "Production") {
-                  costRow = $('<tr><td></td><td><strong>'+name+'</strong></td>');
-                  costRow.append('<td class="width100">'+calculationCost+'</td>')
-                  costRow.append('<td class="width250">'+calculationBasis+'</td>')
-                  costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+              if((type == "Production")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td class="width250"><strong>'+name+'</strong></td>');
+                  costRow.append('<td class="width250">'+calculationCost+'</td>')
+//                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
+                  costRow.append('<td class="editable width250 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
               }

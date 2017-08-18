@@ -47,7 +47,7 @@
 <div class="block has-subnav">
     
 <h2>Delivery Costs</h2> 
-<p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p>
+<!-- <p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p> -->
 <!--
 <ul>
         <li class="menu">Select Production Costs
@@ -67,8 +67,8 @@
 <table class="addToCampaign custom-form-controls simple gridlines" id="costs">
     <thead>
         <tr>
-            <th colspan="2">Cost</th>
-            <th colspan="3">Calculation</th>
+            <th colspan="2" class="width350">Cost</th>
+            <th colspan="2">Calculation</th>
             <th></th>
         </tr>
     </thead>
@@ -81,7 +81,7 @@
 
 
 <br>
-<a class="blue-button open-modal" href="templates/modals/settings/additionalcosts.html" rel="modal:open" >Select Delivery Costs</a>
+<a class="blue-button open-modal" href="templates/modals/settings/delivery-costs.html" rel="modal:open" >Select Delivery Costs</a>
 <br>
 <br>
 
@@ -161,15 +161,13 @@ $("tbody").droppable({
                   symbol = ""
               } else {
                   symbol = '<span class="currency-symbol">$</span>';
-              }
-              
+              }          
           
-          
-              if(type == "Delivery") {
-                  costRow = $('<tr><td></td><td><strong>'+name+'</strong></td>');
-                  costRow.append('<td class="width100">'+calculationCost+'</td>')
-                  costRow.append('<td class="width250">'+calculationBasis+'</td>')
-                  costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+              if((type == "Delivery")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td class="width250"><strong>'+name+'</strong></td>');
+                  costRow.append('<td class="width250">'+calculationCost+' '+calculationBasis+'</td>')
+//                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
+                  costRow.append('<td class="editable width200 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
               }

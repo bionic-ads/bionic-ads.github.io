@@ -1,10 +1,21 @@
-ul.menu {
+.menu {
+    border: 1px solid $medium-gray;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
     display: none;
     position: absolute;
-    background: #333333;
+    background: #fff;
+    margin-top: -9px;
     padding: 10px;
+    max-height: 200px;
+    width: 200px;
+    z-index: 99;
+    
+    &.columnMenu {
+        margin-top: 8px;
+        position: fixed;
+    }
     
     li {
-        line-height: 16px;
+
     }
 }

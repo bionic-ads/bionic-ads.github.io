@@ -17,7 +17,7 @@
     }
     
     .fixedtable-sidebar, .fixedtable-body {
-        height: calc(100% - 268px);
+        height: calc(100% - 292px);
     }    
     
     .fixedTable-sidebar table.table tr td {
@@ -27,25 +27,72 @@
     .mediaPlanFirstColumnHeader {
         position: absolute; width: 300px;
         
-        th:first-child {
+        th.col-checkbox {
             width: 22px;
                 background-image: linear-gradient(-45deg, #dddddd 25%,rgba(0,0,0,0) 25%,rgba(0,0,0,0) 50%,#dddddd 50%,#dddddd 75%,rgba(0,0,0,0) 75%,rgba(0,0,0,0));
                 background-size: 4px 4px;
                 height: 100%;
         }
         
-        th:nth-child(2){
+        th.col-placement-name {
             width: 100px;
+            height: 54px;
         }
         
         
     }
     
+    .divider-right {
+        border-right: 1px solid #9b9b9b !important;
+    }
+    
+    .divider {
+        border-left: 1px solid #9b9b9b !important;   
+    }
+    
+    .divider-costs {
+//         background: #E1ECE8;
+//         color: #3F8E2D;
+/*
+        border-left: 1px solid green !important;
+        border-top: 1px solid green !important;
+*/
+    }
+    .divider-kpis {
+/*
+        border-left: 1px solid orange !important;
+        border-top: 1px solid orange !important;
+*/
+    }    
+
+    tr.group {
+        th {
+            height: 24px !important;
+            font-weight: bold;
+            padding-left: 5px !important;
+            border-bottom: 1px solid #cfcfcf;
+            
+            span {
+                display: block;
+                font-weight: bold;
+//                 color: #fff;
+                float: left;
+                margin-left: -3px;
+            }
+        }
+    }
+    
+    tr.group-members {
+        th {
+            border-bottom: 1px solid #cfcfcf;
+        }
+    }
+    
     .mediaPlanFirstColumnHeader th,
     .table tr th {
         height: 30px;
-        border: 1px solid #cfcfcf;
-        border-left: 0;
+        border-left: 1px solid #cfcfcf;
+        border-top: 1px solid #9b9b9b;
         font-weight: normal;
         box-sizing: border-box;
         padding: 0px;
@@ -57,11 +104,7 @@
         }        
                 
     }
-    
-    #mediaPlanFirstColumns td {
-        border-left: 0;
-    }
-        
+            
     th {
         white-space: nowrap;
         min-width: none;
@@ -93,7 +136,6 @@
         height: 55px;
         vertical-align: top;
         border-bottom: 1px solid #eee;
-        border-right: 1px solid #ddd;
     }
     
      table {
@@ -107,15 +149,24 @@
                 box-sizing: border-box;
                 display: inline-block;
             }
+
+            .col-line-number:not(th) {
+                font-size: 2em;
+            }
             
             .col-line-number {
                 color: #ccc;
-                font-size: 2em;
                 padding: 0px;
+                min-width: 100px;
                 width: 100px;
+                
+                .header {
+                    color: #333;
+                }
                 
                 span {
                     display: block;
+                    box-sizing: border-box;
                     padding: 10px;
                 }
                 
@@ -147,7 +198,7 @@
     
     th, td {
             
-            &.col-id            {min-width: 80px; max-width: 80px; width: 80px; text-align: center !important;}
+            &.col-id            {min-width: 80px; max-width: 80px; width: 80px;}
             &.col-program       {min-width: 180px; max-width: 180px; width:180px;}
             &.col-product       {min-width: 200px; max-width: 200px; width:200px;}
             &.col-channel       {min-width: 232px; max-width: 232px; width: 232px;}
@@ -194,11 +245,12 @@
                                 margin-left: 5px; 
                             }
                             
-                            a {
+                            a:not(.action) {
                                 float: right;
                             }
+                            
             &.col-cost:not(th){
-                a {
+                a:not(.action) {
                     margin-right: 5px;
                     margin-top: 6px;
                 }
@@ -285,7 +337,7 @@
         padding: 3px 5px 0px;
     }
     
-    .kpi-actions {
+    .exclude-reset {
         color: #999;
         font-size: 11px;
         padding: 5px;
@@ -312,7 +364,7 @@
 //         .kpi-actions {display: block;}
 
         td[class*="col-kpi"]:hover {
-            .kpi-actions {display: block;}
+            .exclude-reset {display: block;}
         }
         
     }

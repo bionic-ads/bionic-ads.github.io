@@ -2,6 +2,7 @@
     background: #fff;
     max-width: none;
     min-width: 400px;
+    max-width: 800px;
     padding: 0;
     width: auto;
     
@@ -38,6 +39,48 @@
         ul {
             box-sizing: border-box;
             width: calc(100% - 20px);
+        }
+        
+        &.columns {
+            padding: 0;
+            
+            div {
+                box-sizing: border-box;
+                float: left;
+                max-height: 500px;
+                min-height: 500px;
+                overflow-y: auto;
+                padding-top: 15px;
+                padding-left: 15px;
+                padding-right: 10px;
+                border-right: 1px solid #cfcfcf;
+                width: 205px;
+                
+                &:first-child {
+                    padding-left: 25px;
+                }
+                
+                ul,li {
+                    display: block;
+                    position: relative;
+                    float: left;
+                    width: 100%;
+                }
+                
+                ul {
+                    margin-bottom: 15px;
+                }
+                
+                li {
+                    margin-left: 30px;
+                    width: calc(100% - 30px);
+                }
+                
+                input[type='checkbox'] + label::before    {
+                    left: -30px;
+                    position: absolute;
+                }            
+            }
         }
         
     }
