@@ -50,14 +50,33 @@
         border-left: 1px solid #9b9b9b !important;   
     }
     
-    .divider-costs {
-        background: #E1ECE8;
-        color: #3F8E2D;
+    .group {
+        .divider-costs {
+/*
+            background: #E1ECE8;
+            border-left: 1px solid #3F8E2D !important;
+            border-top: 1px solid #3F8E2D !important;
+            border-bottom: 1px solid #3F8E2D !important;
+            color: #3F8E2D;
+*/
+        }
+        
+        .divider-kpis {
+/*
+            background: #FCE5CB;
+            color: #F77623;
+            border-left: 1px solid #F77623 !important;
+            border-top: 1px solid #F77623 !important;
+            border-bottom: 1px solid #F77623 !important;
+*/
+        }
 /*
         border-left: 1px solid green !important;
         border-top: 1px solid green !important;
 */
     }
+    
+    
     .divider-kpis {
 /*
         border-left: 1px solid orange !important;
