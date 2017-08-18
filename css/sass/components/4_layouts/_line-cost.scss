@@ -1,0 +1,58 @@
+.cost-details {
+    margin: 20px 0px;
+    width: 1000px;
+
+    .cost-details-header td {
+        border-bottom: none;
+    }
+    
+    h3 {
+        font-size: 13px;
+    }
+    
+    td {
+        border: 0;
+        border-bottom: 1px dotted #e2e2e2;
+        vertical-align: middle;
+        background: transparent;
+        padding: 12px 0;
+    }
+
+    .line-item-overview-wrapper h3 {
+        color: #333;
+        font-size: 13px;
+        padding-left: 0;
+        clear: both;
+    }
+
+    .cost-details-number {
+        width: 20px;
+        text-align: right;
+        padding-right: 20px;
+        color: #999;
+        vertical-align: middle;
+    }
+    
+    .cost-details-name {
+        width: 500px;
+    }
+    
+    .cost-details-operator {
+        width: 20px;
+    }
+    
+    .cost-details-amount {
+        width: 210px;
+        border-right: 20px solid #f5f6f7;
+        text-align: right;
+        padding: 0 32px 0 10px;
+    }    
+
+    .cost-details-functional-amount {
+        border: none;
+        width: 210px;
+        text-align: right;
+        color: #999;
+    }
+    
+}
