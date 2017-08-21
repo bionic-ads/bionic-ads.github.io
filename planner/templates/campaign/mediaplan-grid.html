@@ -49,6 +49,7 @@
       </tr>
       </thead>
   </table>  
+  <div class="location" style="position: fixed; display: block; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">Basics</div>
     
     
   <header class="fixedTable-header block">
@@ -56,7 +57,7 @@
         <thead>
             
         <tr class="group">
-            <th colspan="7" style="border-left: 1px solid #cfcfcf !important;"><span>Basics</span> 
+            <th colspan="7" style="border-left: 1px solid #cfcfcf !important;"><span></span> 
 <!--                 <a><i class="columnMenu fa fa-bars" style="top: 2px; position: relative;"></i></a> -->
             </th>
             <th colspan="9" class="divider divider-costs"><span>Costs</span></th>
@@ -244,12 +245,36 @@
       var mediaplan, fixedTable;
     
       fixedTable = function(el) {
-        var $body, $header, $sidebar;
+        var $body, $header, $sidebar, $label;
         $body = $(el).find('.fixedTable-body');
         $sidebar = $(el).find('.fixedTable-sidebar table');
         $header = $(el).find('.fixedTable-header table');
+        $location = $(el).find('.location');
         return $($body).scroll(function() {
           $($sidebar).css('margin-top', -$($body).scrollTop());
+          if(($($body).scrollLeft() > 0)&&$($body).scrollLeft() < 1245){ 
+              $($location).text("Basics");
+          }
+          
+          if(($($body).scrollLeft() > 1245)&&$($body).scrollLeft() < 1354){ 
+              $($location).text(" ");
+          }
+
+          if(($($body).scrollLeft() > 1355)&&$($body).scrollLeft() < 2400){ 
+              $($location).text("Costs");
+          }
+/*
+          if(($($body).scrollLeft() > 600)&&$($body).scrollLeft() < 900){ 
+              $($location).text("Ratings" + $($body).scrollLeft());
+          }
+          if(($($body).scrollLeft() > 900)&&$($body).scrollLeft() < 1200){ 
+              $($location).text("Tasks" + $($body).scrollLeft());
+          }
+          if(($($body).scrollLeft() > 1200)&&$($body).scrollLeft() < 2400){ 
+              $($location).text("KPIs" + $($body).scrollLeft());
+          }
+*/
+          
           return $($header).css('margin-left', -$($body).scrollLeft());
         });
       };

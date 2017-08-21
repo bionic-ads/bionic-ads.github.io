@@ -157,11 +157,13 @@ $("tbody").droppable({
               calculationValue = item.CalculationValue;
               overageBuffer = item.OverageBuffer;
               checked =     item.Checked; 
-              if(calculationCost == "Percentage of"){
+               
+              
+              if(calculationCost.includes("Percentage")){
                   symbol = ""
               } else {
                   symbol = '<span class="currency-symbol">$</span>';
-              }          
+              }    
           
               if((type == "Delivery")&&(checked == "checked")) {
                   costRow = $('<tr><td></td><td class="width250"><strong>'+name+'</strong></td>');

@@ -2806,7 +2806,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 /* line 19, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
-  height: calc(100% - 292px);
+  height: calc(100% - 287px);
 }
 /* line 27, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .mediaPlanFirstColumnHeader {
@@ -3397,7 +3397,7 @@ h2 {
 }
 /* line 211, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
-  margin: 5px 0 10px;
+  margin: 5px 0 5px;
 }
 /* line 217, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
