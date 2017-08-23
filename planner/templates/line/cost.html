@@ -29,7 +29,7 @@
 
 <div class="block bionic-page">
 
-<table class="cost-details">
+<table class="cost-details custom-form-controls">
                     <tbody><tr class="cost-details-header cost-details-first">
                         <td colspan="5"><h3 id="netMediaCost">Net Media Cost</h3></td>
                     </tr>
@@ -44,7 +44,7 @@
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount">
                         
-		                <input id="plcurrency_48481" class="narrow ldRateCurrency ldRateCurrency-complete ldAnyInput" type="text" value="USD - US Dollar" maxlength="3">
+		                <input id="plcurrency_48481" class="dropdown narrow ldRateCurrency ldRateCurrency-complete ldAnyInput" type="text" value="USD - US Dollar" maxlength="3">
                             
                         </td>
                         <td class="cost-details-functional-amount functional-amount-header" style="display: none;">Functional Amounts</td>
@@ -56,9 +56,9 @@
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount">
                             <div class="currency-input">
-                                <span class="cost-details-currency-label">USD</span>
+                                <span class="cost-details-currency-label" style="top:11px;">USD</span>
                                 
-                                <input type="text" id="plrate_48481" class="no-outline regular ldRateAmount number ldAnyInput" value="500.00">
+                                <input type="text" id="plrate_48481" class="regular ldRateAmount number ldAnyInput" value="500.00">
                                 
                             </div>
                         </td>
@@ -71,7 +71,7 @@
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount">
                         
-                            <input type="text" id="plrateunit_48481" class="narrow ldRateUnit ldRateUnit-complete ldAnyInput createTag ui-autocomplete-input" value="CPM">
+                            <input type="text" id="plrateunit_48481" class="dropdown narrow ldRateUnit ldRateUnit-complete ldAnyInput createTag ui-autocomplete-input" value="CPM">
                         
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
@@ -83,7 +83,7 @@
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount"> 
                          
-                            <input type="text" id="plratepricingmodel_48481" class="narrow ldRateNet ldRateNet-complete ldAnyInput ui-autocomplete-input" value="Net">
+                            <input type="text" id="plratepricingmodel_48481" class="dropdown narrow ldRateNet ldRateNet-complete ldAnyInput ui-autocomplete-input" value="Net">
                          
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
@@ -97,7 +97,9 @@
                             
 <div class="quantity-field" data-section="1"> 
     
-        <span tabindex="-1" class="quantity">100,000</span>
+        <span tabindex="-1" class="quantity">
+            <input id="plannedImps_48483" class="quantity plannedImps plannedImps_lineCost number anyInput" type="text" value="100,000" tabindex="0">
+        </span>
 
     
 </div>
@@ -122,7 +124,7 @@
                         <td class="cost-details-name">Raw to Gross multiplier
                             <span class="cost-details-explanatory-text">= if is Net Pricing then 1.1764, else 1</span>
                         </td>
-                        <td class="cost-details-operator cost-details-sum">&plus;</td>
+                        <td class="cost-details-operator cost-details-sum">&times;</td>
                         <td class="cost-details-amount cost-details-sum">1.176470588</td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
@@ -176,7 +178,7 @@
 
                     <tr>
                         <td class="cost-details-number">12</td>
-                        <td class="cost-details-name">USD -&gt; USD Exchange Rate
+                        <td class="cost-details-name">USD &rarr; USD Exchange Rate
                             <span class="cost-details-explanatory-text">from Campaign Settings</span>
                         </td>
                         <td class="cost-details-operator  cost-details-sum">&times;</td>
@@ -189,21 +191,21 @@
                     <tr id="grossMediaCostRow">
                         <td class="cost-details-number">13</td>
                         <td class="cost-details-name">Gross Media Cost
-                            <span class="cost-details-explanatory-text">= Raw Gross Media Cost ? Exchange Rate</span>
+                            <span class="cost-details-explanatory-text">= Raw Gross Media Cost &times; Exchange Rate</span>
                         </td>
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount" id="grossMediaCostAmount">
                             <span class="left cost-details-currency-label">USD</span> 58,823.53
                         </td>
                         <td class="cost-details-functional-amount" id="functionalGrossMediaCostAmount" style="display: none;">
-                            <span class="left cost-details-currency-label"><a class="goToExchangeRate">? 1.0000</a> USD</span> 58,823.53
+                            <span class="left cost-details-currency-label"><a class="goToExchangeRate">&times; 1.0000</a> USD</span> 58,823.53
                         </td>
                     </tr>
 
                     <tr class="cost-details-net-media-cost">
                         <td class="cost-details-number">14</td>
                         <td class="cost-details-name">Net Media Cost
-                            <span class="cost-details-explanatory-text">= Raw Net Media Cost ? Exchange Rate</span>
+                            <span class="cost-details-explanatory-text">= Raw Net Media Cost &times; Exchange Rate</span>
                         </td>
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount" id="netMediaCostAmount">
@@ -222,7 +224,6 @@
                             <div class="settings-private bionic-checkbox nowrap">
                                 <input type="checkbox" id="mediaCommissionUseLocal" class="mediaCommissionUseLocalCheckBox" value="">
                                 <label for="mediaCommissionUseLocal">
-                                    <span class="box"></span>
                                     Edit the compensation for this line item
                                 </label>
                             </div>
@@ -256,7 +257,7 @@
                             
                         </td>
                         <td class="cost-details-operator cost-details-sum">
-                            ?
+                            &times;
                         </td>
                         <td class="cost-details-amount cost-details-sum">
                             
@@ -328,7 +329,7 @@
                             <td class="cost-details-amount">
                                 <div class="currency-input">
                                     <span class="cost-details-currency-label">USD</span>
-                                    <input type="text" id="addCostAmount_0" class="no-outline number ldAnyInput lcAddCostAmount anyInput" value="" data-field_id="">
+                                    <input type="text" id="addCostAmount_0" class="number ldAnyInput lcAddCostAmount anyInput" value="" data-field_id="">
                                 </div>
                             </td>
                             <td><a class="lcRmoveAddCost" data-field_id="" id="addCostRemove_0">remove</a></td>
@@ -355,7 +356,7 @@
 
                     <tr class="cost-details-header cost-details-total-media-cost">
                         <td colspan="3"><h3 id="totalMediaCost">Total Media Cost <span class="cost-details-explanatory-text">= Net Media Cost + Agency Compensation + Additional Costs</span></h3></td>
-                        <td colspan="1" class="cost-details-amount" id="totalMediaCostAmount"><h3><span class="left">USD</span> 50,100.00</h3></td>
+                        <td colspan="1" class="cost-details-amount" id="totalMediaCostAmount"> <span class="left cost-details-currency-label" style="margin-top:20px;">USD</span> <h3> 50,100.00</h3></td>
                         <td colspan="1" class="cost-details-functional-amount" id="functionalTotalMediaCostAmount" style="display: none;"><h3><span class="left">USD</span> 50,100.00</h3></td>
                     </tr>
 
@@ -367,7 +368,6 @@
                             <div class="settings-private bionic-checkbox nowrap">
                                 <input type="checkbox" id="adServingFeeUseLocal" class="adServingFeeUseLocalCheckBox" value="">
                                 <label for="adServingFeeUseLocal">
-                                    <span class="box"></span>
                                     Edit Ad Serving Fee for this line item
                                 </label>
                             </div>
@@ -422,10 +422,10 @@
                     <tr class="cost-details-row-edit">
                         <td class="cost-details-number">25</td>
                         <td class="cost-details-name">Ad Serving CPM</td>
-                        <td class="cost-details-operator cost-details-sum">?</td>
+                        <td class="cost-details-operator cost-details-sum">&times;</td>
                         <td class="cost-details-amount cost-details-sum">
                             
-                            <span class="cost-details-currency-label">USD</span>
+                            <span class="cost-details-currency-label" style="float:left;">USD</span>
                             <a class="subnav-left-adServing ad-serving-buffer-link">0.0000</a>
                             
                         </td>
@@ -441,7 +441,7 @@
                         
                         <td class="cost-details-name">Ad Serving Fee
                             
-                            <span class="cost-details-explanatory-text">= (Ad Server Impressions Ö 1000) ? Ad Serving CPM</span>
+                            <span class="cost-details-explanatory-text">= (Ad Server Impressions &divide; 1000) &times; Ad Serving CPM</span>
                             
                         </td>
                         <td class="cost-details-operator"></td>
@@ -512,7 +512,7 @@
                     <tr>
                         <td id="eCPM" class="cost-details-number">30</td>
                         <td class="cost-details-name">Estimated Effective CPM
-                            <span class="cost-details-explanatory-text">= Total Media Cost Ö (Estimated Impressions Ö 1000) </span>
+                            <span class="cost-details-explanatory-text">= Total Media Cost &divide; (Estimated Impressions &divide; 1000) </span>
                         </td>
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount" id="estimatedEffectiveCPMAmount">

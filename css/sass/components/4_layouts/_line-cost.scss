@@ -1,13 +1,62 @@
 .cost-details {
-    margin: 20px 0px;
+    margin: 0px 0px 100px;
     width: 1000px;
+
+    tr:hover td {
+        background: none !important;
+    }
+
+    .left {
+        float: left;
+    }
+
+    input[type="text"] {
+        border: 3px solid #f5f6f7;
+    }
 
     .cost-details-header td {
         border-bottom: none;
     }
     
+    .cost-details-amount.estimps-input, 
+    .cost-details-row-edit .cost-details-amount {
+        padding-right: 0;
+    }
+    
+    .cost-details .cost-details-amount {
+        width: 210px;
+        border-right: 20px solid #f5f6f7;
+        text-align: right;
+        padding: 0 32px 0 10px;
+    }
+    
+    .cost-details-currency-label {
+        color: #999;
+        margin-left: 13px;
+        margin-right: 5px;
+    }
+    
+    .cost-details-row-edit .ad-serving-buffer-link {
+        padding-right: 30px;
+    }
+    
+    .cost-details-header .bionic-checkbox {
+        display: inline-block;
+        margin-left: 10px;
+        position: relative;
+        top: 11px;
+    }
+    
     h3 {
         font-size: 13px;
+    }
+    
+    .cost-details-first h3 {
+        margin: 0;
+    }
+    
+    .cost-details-header-inline h3, h3#agencyCompensation {
+        display: inline-block;
     }
     
     td {
@@ -16,6 +65,20 @@
         vertical-align: middle;
         background: transparent;
         padding: 12px 0;
+        
+        h3 {
+            padding: 0;
+            margin: 20px 0 0;
+            
+        }
+        
+    }
+    
+    .cost-details-add-field, 
+    .cost-details-total-cost .cost-details-amount, 
+    .cost-details-total-cost .cost-details-currency-label {
+        font-weight: bold;
+        font-size: 18px;
     }
 
     .line-item-overview-wrapper h3 {
@@ -46,6 +109,12 @@
         border-right: 20px solid #f5f6f7;
         text-align: right;
         padding: 0 32px 0 10px;
+        
+        input[type="text"] {
+            padding-right: 30px;
+            text-align: right;
+            margin: 0;
+        }
     }    
 
     .cost-details-functional-amount {
@@ -54,5 +123,12 @@
         text-align: right;
         color: #999;
     }
-    
+    .cost-details-explanatory-text {
+        color: #9b9b9b;
+        font-size: 11px;
+        
+    }
+    .cost-details-sum {
+        border-bottom: 1px solid #333;
+    }
 }

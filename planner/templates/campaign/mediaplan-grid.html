@@ -202,7 +202,7 @@
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
-          var mediaPlanBody = $('<tr class="'+flightHeader+' '+isFlightMember+'"><td class="col-id readonly">' + item.BionicID + '</td>');
+          var mediaPlanBody = $('<tr class="'+flightHeader+' '+isFlightMember+'"><td class="col-id readonly"><span>' + item.BionicID + '</span></td>');
           mediaPlanBody.append('<td class="col-program"><input type="text" value="'+ item.Program +'"><span class="vendor">'+ item.Vendor +'</span></td>');
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
