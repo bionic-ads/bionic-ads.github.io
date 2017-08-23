@@ -1,0 +1,77 @@
+<div class="addmetrics" style="width: 400px;">
+    <div class="bionic-modal-header">
+        <h1>Select Production Costs</h1>
+    </div>
+    <div class="bionic-modal-header">
+        <input type="text" class="search" placeholder="Search" style="width: 100%; margin-right: 10px;" /> 
+        <span style="color: #9b9b9b; font-size: 11px; display: block; top:5px; padding-bottom: 5px; position: relative" class="addnew">Can't find a cost you need? 
+        <a href="#/admin/admin-cost-columns/" rel="modal:close" >Add a New Cost</a></span>
+    </div>
+</div>
+    
+<div class="bionic-modal-body custom-form-controls" style="height: 300px;">
+
+    <ul id="AdditionalCostsMenu">
+    
+    </ul>
+     
+</div>
+
+<div class="bionic-modal-footer" style="margin-top: 0;">
+    <a class="blue-button" href="#/line/overview/" rel="modal:close">Done</a>
+<!--     <a class="blue-button" rel="modal:close">Done</a> -->
+    <a class="gray-button" rel="modal:close">Cancel</a>
+</div>
+</div>
+
+<script>
+
+      var spreadsheetTab = "AdditionalCosts";
+            
+      $(document).ready( function() {
+
+
+
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var costsMenuChecked = $('<li></li>'),
+              costsMenuUnchecked = $('<li></li>'),
+              name,
+              type, 
+              calculation,
+              checked;           
+          
+          name =            item.Name;
+          type =            item.Type;
+          calculation =     item.Calculation;
+          checked =         item.Checked; 
+            
+          if((type == "Production")&&(checked == "checked")){  
+              costsMenuChecked = $('<li><input id="cb'+i+'" type="checkbox" '+checked+'><label for="cb'+i+'">' + name +'</label> </li>');
+          }
+
+          if((type == "Production")&&(checked != "checked")){  
+              costsMenuUnchecked = $('<li><input id="cb'+i+'" type="checkbox" '+checked+'><label for="cb'+i+'">' + name +'</label> </li>');
+          }
+        
+          costsMenuChecked.appendTo("#AdditionalCostsMenu");
+
+          costsMenuUnchecked.appendTo("#AdditionalCostsMenu");
+
+
+        });
+
+        
+      }
+
+</script>

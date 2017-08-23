@@ -61,11 +61,16 @@
 
 .custom-form-controls {
     
-    user-select: none;
     
     input[type='checkbox'] {
         opacity: 0;
         position: absolute;
+        
+    
+    }
+    
+    label {
+        user-select: none;
     }
     
     input[type='checkbox']:checked + label::before {

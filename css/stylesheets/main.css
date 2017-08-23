@@ -3993,23 +3993,23 @@ input[type="button"].gray-button,
   color: #888;
 }
 
-/* line 62, ../sass/components/2_elements/_checkboxes.scss */
-.custom-form-controls {
-  user-select: none;
-}
-/* line 66, ../sass/components/2_elements/_checkboxes.scss */
+/* line 65, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox'] {
   opacity: 0;
   position: absolute;
 }
-/* line 71, ../sass/components/2_elements/_checkboxes.scss */
+/* line 72, ../sass/components/2_elements/_checkboxes.scss */
+.custom-form-controls label {
+  user-select: none;
+}
+/* line 76, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox']:checked + label::before {
   background-color: #69AED4;
   border: 3px solid #69AED4;
   color: white;
   content: '\f00c';
 }
-/* line 78, ../sass/components/2_elements/_checkboxes.scss */
+/* line 83, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox'] + label {
   cursor: pointer;
   line-height: 21px;
@@ -4019,11 +4019,11 @@ input[type="button"].gray-button,
   margin-right: 15px;
   width: 100%;
 }
-/* line 87, ../sass/components/2_elements/_checkboxes.scss */
+/* line 92, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox'] + label .secondary-text {
   color: #888;
 }
-/* line 93, ../sass/components/2_elements/_checkboxes.scss */
+/* line 98, ../sass/components/2_elements/_checkboxes.scss */
 .custom-form-controls input[type='checkbox'] + label::before {
   background: #fff;
   border-radius: 2px;

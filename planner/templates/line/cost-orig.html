@@ -91,7 +91,7 @@
 
                     <tr id="tr_quantity" class="cost-details-row-edit">
                         <td id="quantity" class="cost-details-number">5</td>
-                        <td class="cost-details-name">Quantity <span class="cost-details-explanatory-text"> on <a id="goToOverview">Line Overview Page</a></span></td>
+                        <td class="cost-details-name">Quantity <span class="cost-details-explanatory-text"> on <a id="goToOverview">Overview Page</a></span></td>
                         <td class="cost-details-operator cost-details-sum"></td>
                         <td class="cost-details-amount cost-details-sum quantity-input" id="lcquantity_48481">
                             
@@ -218,48 +218,6 @@
 
                     <tr class="cost-details-header">
                         <td colspan="5">
-                            <h3 id="agencyCompensation">Production Costs </h3>
-                        </td>
-                    </tr>
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number">15a</td>
-                        <td class="cost-details-name">Google DBM Tech Fee <span class="cost-details-explanatory-text">= Percentage of Net Media Cost</span></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number">15b</td>
-                        <td class="cost-details-name">Site Optimization Fee <span class="cost-details-explanatory-text">= Cost per 1,000 Impressions</span></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number"></td>
-                        <td class="cost-details-name"><a class="open-modal" href="templates/modals/line/production-costs.html" rel="modal:open" >Select Production Costs</a></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr class="cost-details-net-media-cost">
-                        <td class="cost-details-number">16</td>
-                        <td class="cost-details-name">Total Production Cost
-                        </td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount" id="netMediaCostAmount">
-                            <span class="left cost-details-currency-label">USD</span> 0.00
-                        </td>
-                        <td class="cost-details-functional-amount" id="functionalNetMediaCostAmount" style="display: none;">
-                            <span class="left cost-details-currency-label"><a class="goToExchangeRate">? 1.0000</a> USD</span> 50,000.00
-                        </td>
-                    </tr>
-                    
-                    <tr class="cost-details-header">
-                        <td colspan="5">
                             <h3 id="agencyCompensation">Agency Compensation </h3>
                             
                             
@@ -274,9 +232,9 @@
                         </td>
                     </tr>
                              
-
+                    
                     <tr>
-                        <td class="cost-details-number">17</td>
+                        <td class="cost-details-number">15</td>
                         <td class="cost-details-name">Media Commission Method
                             
                             <span class="cost-details-explanatory-text">from Campaign Settings</span>
@@ -292,7 +250,7 @@
                     </tr>                    
 
                     <tr>
-                        <td class="cost-details-number">18</td>
+                        <td class="cost-details-number">16</td>
                         <td class="cost-details-name">Media Commission Rate
                             
                             <span class="cost-details-explanatory-text">from Campaign Settings</span>
@@ -310,7 +268,7 @@
                     </tr>
 
                     <tr>
-                        <td class="cost-details-number">19</td>
+                        <td class="cost-details-number">17</td>
                         <td class="cost-details-name">Media Commission
                             <span class="cost-details-explanatory-text">= f(Commission Method, Commission Rate, Gross/Net Media Cost)</span>
                         </td>
@@ -322,7 +280,7 @@
                     </tr>
 
                     <tr>
-                        <td class="cost-details-number">20</td>
+                        <td class="cost-details-number">18</td>
                         <td class="cost-details-name">Fee per Line
                             
                             <span class="cost-details-explanatory-text">from Campaign Settings</span>
@@ -342,7 +300,7 @@
                     
 
                     <tr>
-                        <td class="cost-details-number">21</td>
+                        <td class="cost-details-number">19</td>
                         <td class="cost-details-name">Agency Compensation
                             
                             <span class="cost-details-explanatory-text">= Media Commission + Fee per Line</span>
@@ -355,21 +313,71 @@
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
 
-                    <tr class="cost-details-header">
+					<tr class="cost-details-header">
                         <td colspan="5">
-                            <h3 id="agencyCompensation">Delivery Costs </h3>
+                            <h3 id="additionalCosts">Additional Costs</h3>
                         </td>
                     </tr>
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number">22a</td>
-                        <td class="cost-details-name">DCM Ad Serving <span class="cost-details-explanatory-text">= (Ad Server Impressions &divide; 1,000) &times; Ad Serving CPM</span></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
+                    
+                    
+                        
+                        
+                        <tr class="cost-details-row-edit cost-details-add-cost js-add-cost-row">
+                            <td class="cost-details-number" id="addCostIndex_0">20a.</td>
+                            <td class="cost-details-add-field"><input type="text" name="addCostName" class="lcAddCostName lcAddCostName-complete anyInput ui-autocomplete-input hasAutoComplete" id="addCostName_0" data-field_id="" value="" autocomplete="off"></td>
+                            <td class="cost-details-operator"></td>
+                            <td class="cost-details-amount">
+                                <div class="currency-input">
+                                    <span class="cost-details-currency-label">USD</span>
+                                    <input type="text" id="addCostAmount_0" class="number ldAnyInput lcAddCostAmount anyInput" value="" data-field_id="">
+                                </div>
+                            </td>
+                            <td><a class="lcRmoveAddCost" data-field_id="" id="addCostRemove_0">remove</a></td>
+                        </tr>
+                        
+                        
+                    
+                    
+                    
                     <tr>
-                        <td class="cost-details-number"></td>
+                      <td></td>
+                      <td colspan="4"><a id="addCost">+ add another cost</a></td>
+                    </tr>
+                    
+                    
+                    <tr>
+                        <td class="cost-details-number">21</td>
+                        <td colspan="2" class="cost-details-name">Total Additional Costs</td>
+                        <td colspan="1" class="cost-details-amount" id="totalAdditionalCostsAmount">
+                        <span class="left cost-details-currency-label">USD</span> 
+                        </td>
+                        <td colspan="1" class="cost-details-functional-amount" style="display: none;"></td>
+                    </tr>
+
+                    <tr class="cost-details-header cost-details-total-media-cost">
+                        <td colspan="3"><h3 id="totalMediaCost">Total Media Cost <span class="cost-details-explanatory-text">= Net Media Cost + Agency Compensation + Additional Costs</span></h3></td>
+                        <td colspan="1" class="cost-details-amount" id="totalMediaCostAmount"> <span class="left cost-details-currency-label" style="font-weight:bold; margin-top:20px;">USD</span> <h3> 50,100.00</h3></td>
+                        <td colspan="1" class="cost-details-functional-amount" id="functionalTotalMediaCostAmount" style="display: none;"><h3><span class="left">USD</span> 50,100.00</h3></td>
+                    </tr>
+
+                    <tr class="cost-details-header cost-details-header-inline">
+                        <td colspan="5">
+                            <h3 id="adServing">Ad Serving Fee</h3>
+
+                            
+                            <div class="settings-private bionic-checkbox nowrap">
+                                <input type="checkbox" id="adServingFeeUseLocal" class="adServingFeeUseLocalCheckBox" value="">
+                                <label for="adServingFeeUseLocal">
+                                    Edit Ad Serving Fee for this line item
+                                </label>
+                            </div>
+                            
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cost-details-number">22</td>
                         <td id="estimatedImpressions" class="cost-details-name">Planned Impressions</td>
                         <td class="cost-details-operator"></td>
                         <td class="cost-details-amount estimps-input">
@@ -385,7 +393,7 @@
                     
 
                     <tr class="cost-details-row-edit">
-                        <td class="cost-details-number"></td>
+                        <td class="cost-details-number">23</td>
                         <td class="cost-details-name">Ad Serving Buffer
                             <span class="cost-details-explanatory-text" id="adServingFeeUseLocalHint">from Campaign Settings</span>
                         </td>
@@ -399,7 +407,7 @@
                     </tr>
 
                     <tr>
-                        <td class="cost-details-number"></td>
+                        <td class="cost-details-number">24</td>
                         <td class="cost-details-name">Ad Server Impressions
                             <span class="cost-details-explanatory-text">= Estimated Impressions + Ad Serving Buffer</span>
                         </td>
@@ -412,7 +420,7 @@
                     </tr>
 
                     <tr class="cost-details-row-edit">
-                        <td class="cost-details-number"></td>
+                        <td class="cost-details-number">25</td>
                         <td class="cost-details-name">Ad Serving CPM</td>
                         <td class="cost-details-operator cost-details-sum">&times;</td>
                         <td class="cost-details-amount cost-details-sum">
@@ -423,9 +431,13 @@
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
+                    
+                    
+                    
+
                     <tr class="cost-details-ad-serving-fee oneLine">
                         
-                            <td class="cost-details-number"></td>
+                            <td class="cost-details-number">26</td>
                         
                         <td class="cost-details-name">Ad Serving Fee
                             
@@ -442,41 +454,13 @@
                         </td>
                     </tr>
 
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number">22b</td>
-                        <td class="cost-details-name">Rich Media Ad Serving <span class="cost-details-explanatory-text">= Cost per 1,000 Impressions &times;</span></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr class="cost-details-row-edit">
-                        <td class="cost-details-number"></td>
-                        <td class="cost-details-name"><a class="open-modal" href="templates/modals/line/delivery-costs.html" rel="modal:open" >Select Delivery Costs</a></td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount">
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr class="cost-details-net-media-cost">
-                        <td class="cost-details-number">23</td>
-                        <td class="cost-details-name">Total Delivery Cost
-                        </td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount" id="netMediaCostAmount">
-                            <span class="left cost-details-currency-label">USD</span> 0.00
-                        </td>
-                        <td class="cost-details-functional-amount" id="functionalNetMediaCostAmount" style="display: none;">
-                            <span class="left cost-details-currency-label"><a class="goToExchangeRate">? 1.0000</a> USD</span> 50,000.00
-                        </td>
-                    </tr>
-                    
+
                     <tr class="cost-details-header">
                         <td colspan="5"><h3 id="totalCost">Total Cost</h3></td>
                     </tr>
 
                     <tr>
-                        <td class="cost-details-number">29</td>
+                        <td class="cost-details-number">27</td>
                         <td class="cost-details-name">Net Media Cost
                             <span class="cost-details-explanatory-text">from Line 14</span>
                         </td>
@@ -486,44 +470,62 @@
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
+
                     <tr>
-                        <td class="cost-details-number">30</td>
-                        <td class="cost-details-name">Production Costs
-                            <span class="cost-details-explanatory-text">from Line 16</span>
-                        </td>
-                        <td class="cost-details-operator "></td>
-                        <td class="cost-details-amount" id="additionalCostsAmount">
-                            <span class="left cost-details-currency-label">USD</span> 
-                        </td>
-                        <td class="cost-details-functional-amount" style="display: none;"></td>
-                    </tr>
-                    <tr>
-                        <td class="cost-details-number">31</td>
+                        <td class="cost-details-number">28</td>
                         <td class="cost-details-name">Agency Compensation
-                            <span class="cost-details-explanatory-text">from Line 21</span>
+                            <span class="cost-details-explanatory-text">from Line 19</span>
                         </td>
-                        <td class="cost-details-operator cost-details-sum">+</td>
-                        <td class="cost-details-amount cost-details-sum" id="totalAgencyCompensationAmount">
+                        <td class="cost-details-operator"></td>
+                        <td class="cost-details-amount" id="totalAgencyCompensationAmount">
                             <span class="left cost-details-currency-label">USD</span> 100.00
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
+                    
                     <tr>
-                        <td class="cost-details-number">32</td>
-                        <td class="cost-details-name">Total Media Cost
-                            <span class="cost-details-explanatory-text">= Net Media Cost + Production Costs + Agency Compensation </span>
+                        <td class="cost-details-number">29</td>
+                        <td class="cost-details-name">Additional Costs
+                            <span class="cost-details-explanatory-text">from Line 21</span>
                         </td>
-                        <td class="cost-details-operator"></td>
-                        <td class="cost-details-amount" id="totalAgencyCompensationAmount">
-                            <span class="left cost-details-currency-label">USD</span> 50,100.00
+                        <td class="cost-details-operator cost-details-sum">+</td>
+                        <td class="cost-details-amount cost-details-sum" id="additionalCostsAmount">
+                            <span class="left cost-details-currency-label">USD</span> 
                         </td>
                         <td class="cost-details-functional-amount" style="display: none;"></td>
                     </tr>
 
                     <tr>
-                        <td class="cost-details-number">33</td>
-                        <td class="cost-details-name">Delivery Cost
-                            <span class="cost-details-explanatory-text">from Line 23</span>
+                        <td class="cost-details-number">30</td>
+                        <td class="cost-details-name">Total Media Cost
+                            <span class="cost-details-explanatory-text">= Net Media Cost + Agency Compensation + Additional Costs</span>
+                        </td>
+                        <td class="cost-details-operator"></td>
+                        <td class="cost-details-amount" id="advertiserMediaAmount">
+                            <span class="left cost-details-currency-label">USD</span> 50,100.00
+                        </td>
+                        <td class="cost-details-functional-amount" id="functionalAdvertiserMediaAmount" style="display: none;">
+                            <span class="left cost-details-currency-label">USD</span> 
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="eCPM" class="cost-details-number">30</td>
+                        <td class="cost-details-name">Estimated Effective CPM
+                            <span class="cost-details-explanatory-text">= Total Media Cost &divide; (Estimated Impressions &divide; 1000) </span>
+                        </td>
+                        <td class="cost-details-operator"></td>
+                        <td class="cost-details-amount" id="estimatedEffectiveCPMAmount">
+                            
+                            <span class="left cost-details-currency-label">USD</span> 501.00
+                        </td>
+                        <td class="cost-details-functional-amount" style="display: none;"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="cost-details-number">31</td>
+                        <td class="cost-details-name">Ad Serving Fee
+                            <span class="cost-details-explanatory-text">from Line 26</span>
                         </td>
                         <td class="cost-details-operator cost-details-sum">+</td>
                         <td class="cost-details-amount cost-details-sum" id="totalAdServingFeeAmount">
@@ -533,7 +535,7 @@
                     </tr>
 
                     <tr class="cost-details-total-cost">
-                        <td class="cost-details-number">34</td>
+                        <td class="cost-details-number">32</td>
                         <td class="cost-details-name">Total Cost
                             <span class="cost-details-explanatory-text">= Advertiser Media Amount + Ad Serving Fee</span>
                         </td>
