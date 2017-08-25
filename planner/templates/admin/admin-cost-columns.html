@@ -13,8 +13,17 @@
 
 </div>
 
+    <div class="nxm-menu-bar nxm-menu-filters" style="margin-right: 0px;">
+        <div class="filter-section filter-search-master">
+        <input type="text" placeholder="Search" value="" required id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
+        <span id="clear-search" class="clear-search-filter">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        </div>
+    </div>
 
-<div style="float: left; display: block; margin-left: 25px;">
+
+<div style="float: left; display: block; margin-left: 0px;">
     <div class="bionic-filter filterStatus bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> Any Status</div>
         <div class="menu filterStatusMenu">
             <ul>
@@ -38,8 +47,8 @@
 
 <ul class="bionic-action-menu block">
     <li><a href="templates/modals/settings/add-new-cost.html" rel="modal:open" ><i class="fa fa-plus"></i>Add New Cost</a></li>
-    <li class="row-select disabled"><a><i class="fa fa-ban"></i>Make Inactive</a></li>
-    <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
+    <li id="action-deactivate" class="row-select disabled"><a><i class="fa fa-ban"></i>Deactivate</a></li>
+    <li id="action-delete"  class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
 
 
@@ -61,7 +70,7 @@
         <tr>
           <th class="col-100"><span><a>Status</a></span></th>
           <th class="col-100 right"><span><a>Campaigns</a></span></th>
-          <th class="col-100"><span><a>Type</a></span></th>
+          <th class="col-100"><span><a>Type <i class="fa fa-caret-down"></i></a></span></th>
           <th class="col-300 combine"><span><a>Calculation</a></span></th>
           <th class="col-150"><span></span></th>
           <th class="col-150"><span><a>Overage Buffer</a></span></th>
@@ -96,9 +105,18 @@
         $(".filterType").click(function () {
             $(".filterTypeMenu").toggle();
         });
+        
+        
         $(".filterStatus").click(function () {
             $(".filterStatusMenu").toggle();
         });
+        
+        $('label').click( function(){
+            alert("ADsfadsf");
+            $("#action-deactivate").toggleClass("disabled");
+            $("#action-delete").toggleClass("disabled");
+        });
+        
         
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
@@ -123,13 +141,13 @@
           
           rowNumber = i++;
           
-          costsTableFirstColumns = $('<tr><td class="line-number col-45"></td>');
+          costsTableFirstColumns = $('<tr class="admin '+ item.Status +'"><td class="line-number col-45"></td>');
           costsTableFirstColumns.append('<td class="col-30 no-right-border"><input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label></td>');
           costsTableFirstColumns.append('<td class="col-275 no-left-border" style="border-right:0;"><a href="templates/modals/settings/editcost.html" rel="modal:open" ><span><strong>'+ item.Name +'</strong></span></a></td>');
           costsTableFirstColumns.append('</tr>');
           costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
                     
-          costsTableBody = $('<tr>');
+          costsTableBody = $('<tr class="admin '+ item.Status +'">');
           costsTableBody.append('<td class="col-75"><span>'+ item.Status +'</span></td>');
           costsTableBody.append('<td class="col-100 right"><span><a>'+ item.Campaigns +'</a></span></td>');
           costsTableBody.append('<td class="col-100"><span>'+ item.Type +'</span></td>');

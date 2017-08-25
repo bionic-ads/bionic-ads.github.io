@@ -276,7 +276,18 @@
             
             }
             &.col-kpi-cost      {min-width: 100px; max-width: 100px; width: 100px;}
-            &.col-kpi-number    {min-width: 150px; max-width: 150px; width: 150px;}
+            &.col-kpi-number    {min-width: 150px; max-width: 150px; width: 150px; border-left: 0 !important;}
+            
+            &.col-tasks {min-width: 190px; max-width: 190px; width: 190px;}
+            &.col-picklists {min-width: 150px; max-width: 150px; width: 150px;}
+
+            &.col-450 {min-width: 450px; max-width: 450px; width: 450px;}
+            &.col-350 {min-width: 350px; max-width: 350px; width: 350px;}
+            &.col-180 {min-width: 180px; max-width: 180px; width: 180px;}
+            &.col-120 {min-width: 120px; max-width: 120px; width: 120px;}
+            &.col-135 {min-width: 135px; max-width: 135px; width: 135px;}
+            &.col-50  {min-width: 50px;  max-width: 50px;  width: 50px;}
+            
     }
     
     

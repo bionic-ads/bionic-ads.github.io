@@ -148,6 +148,16 @@
         border-right: 1px solid #ddd;
     }
     
+    tr.inactive {
+        background: #fff;
+        background-image: none !important;
+    }
+    
+    tr.inactive.admin td {
+        background: #fff;
+        opacity: 0.5;
+    }
+    
      table {
         border-collapse: collapse;
         

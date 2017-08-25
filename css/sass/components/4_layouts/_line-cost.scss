@@ -12,8 +12,18 @@
 
     input[type="text"] {
         border: 3px solid #f5f6f7;
+        
+        &.custom {
+            background: #fff url(../../css/images/triangle.svg) no-repeat right top;
+            background-position-y: -5px;
+            background-position-x: 60px;
+        }
     }
 
+    .action {
+        border-bottom: 0;
+    }
+    
     .cost-details-header td {
         border-bottom: none;
     }
@@ -102,6 +112,9 @@
     
     .cost-details-operator {
         width: 20px;
+        font-size: 18px;
+        vertical-align: top;
+        padding: 7px 0;
     }
     
     .cost-details-amount {

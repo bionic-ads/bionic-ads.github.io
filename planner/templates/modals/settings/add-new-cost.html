@@ -1,17 +1,19 @@
-<div class="addmetrics" style="width: 600px;">
+<div class="addmetrics" style="width: 700px;">
     <div class="bionic-modal-header">
         <h1>Add New Cost</h1>
     </div>
 </div>
     
-<div class="bionic-modal-body custom-form-controls" style="height: 300px; width: 600px;">
+<div class="bionic-modal-body custom-form-controls" style="height: 320px; width: 700px;">
  
-    <p><strong>Cost Name</strong></p>
-    <input class="text" type="text" style="width: 100%;" value="">
     
+ 
+    <strong style="display: block; margin-bottom: 10px;">Name</strong>
+    <input class="text" type="text" style="width: 100%;" value="">
+    <span style="position: absolute; right: 35; margin-top:-28px; color: #9b9b9b;">32</span>
 
-    <div class="block" style="width: 250px; margin-top: 10px;">
-        <p><strong>Cost Type</strong></p>
+    <div class="block fullwidth" style="width: 650px; margin-top: 10px;">
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Type</strong>
         <div class="bionic-radio">
             <input id="item1" name="type" type="radio" value="item1" checked />
             <label for="item1">
@@ -29,8 +31,27 @@
         </div>             
     </div>
     
+    
+    <div class="block" style="width: 250px; margin-top: 15px; margin-right: 5px;">
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Calculation</strong>
+        <input class="dropdown" type="text" style="width: 250px;" value="">
+    </div>
+    <div class="block" style="width: 80px; margin-top: 15px; margin-right: 5px;">
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Currency</strong>
+            <input class="text DROPDOWN" type="text" style="width: 80px;" value="USD">
+    </div>
+    <div class="block" style="width: 180px; margin-top: 15px; margin-right: 5px">
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Amount</strong>
+            <input class="text" type="text" style="width: 180px;" value="">
+    </div>
+
+    <div class="block" style="width: 120px; margin-top: 15px;">
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Overage Buffer</strong>
+        <input class="text" type="text" style="width: 120px;" value="">
+    </div>
+    
     <div class="block" style="width: 200px; margin-top: 10px;">
-        <p><strong>Status</strong></p>
+        <strong style="display: block; margin-bottom: 10px; margin-top: 10px;">Status</strong>
         <div class="bionic-radio">
             <input id="item3" name="status" type="radio" value="item3" checked />
             <label for="item3">
@@ -47,20 +68,11 @@
             </label>
         </div>        
     </div>
-    
-    <div class="block" style="width: 450px; margin-top: 15px;">
-        <p><strong>Calculation</strong></p>
-        <input class="dropdown" type="text" style="width: 250px;" value="">
-        <input class="text" type="text" style="width: 170px;" value="">
-    </div>
-    <div class="block" style="width: 100px; margin-top: 15px;">
-        <p><strong>Overage Buffer</strong></p>
-        <input class="text" type="text" style="width: 100px;" value="">
-    </div>
 </div>
 
 <div class="bionic-modal-footer" style="margin-top: 0;">
     <a class="blue-button" rel="modal:close" >Save Cost</a>
     <a class="gray-button" rel="modal:close" >Cancel</a>
+    <div style="display: block; float: right; line-height: 32px;">Need help? <a>View examples</a> of different types of cost calculations</div>
 </div>
 </div>

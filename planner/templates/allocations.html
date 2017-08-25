@@ -1,0 +1,114 @@
+
+<div id="bionic-home" class="block fullwidth">
+    
+    <div class="bionic-header block fullwidth">
+    
+        <h1>
+            <span class="avatar"></span>
+            Good Afternoon, Elizabeth!
+        </h1>
+    
+        <ul class="bionic-tab-menu block fullwidth">
+       
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/advertisers">Advertisers</a></li>
+            <li><a href="#/campaigns">Campaigns</a></li>
+            <li><a href="#/schedule">Schedule</a></li>
+            <li><a href="#/tasks">Tasks</a></li>
+            <li><a href="#/allocations" class="current">Allocations</a></li>
+            <li><a href="#/performance">Performance</a></li>
+       
+        </ul>
+
+    </div>
+</div>
+<div class="bionic-campaign-header bionic-header block fullwidth">
+
+    <script type="text/template" class="template">
+    <ul class="bionic-action-menu block"><li>Any Time</li></ul>	
+    	<ul class="bionic-subnav-menu">
+    		<% _.each( bionic.listItems, function( listItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var page = url.substring(url.lastIndexOf('#/campaign/'));
+                if (listItem.page + theID == page){ var currentSubnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentSubnav %> href="<%- listItem.page %>"><%- listItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>
+    	
+    </script>
+
+</div>
+
+
+
+<div class="block  has-subnav">
+
+<h2>Cost Breakdown</h2>
+
+<style>
+    .chart {width: 850px; border:0px solid #cfcfcf; background: #fff;}
+    .chart th {text-align:left; border-bottom: 1px solid #cfcfcf;}
+    .chart tbody {border-top: 0px solid #cfcfcf;}
+    .chart .spend {text-align: right; width: 100px;}
+    .chart th:first-child, .chart td:first-child {width:200px;}
+    .chart th, .chart td {padding: 10px 20px;}
+/*     .chart tbody tr:first-child td {padding-top: 10px;} */
+    .chart tbody td:first-child {border-left:0px solid #cfcfcf; border-top:none; border-bottom: none;}
+    .chart tbody td:last-child {border-right:0px solid #cfcfcf; border-top:none; border-bottom: none;}
+    .chart .bar span { display: block; background: #A1CDEA; padding: 5px; font-weight: bold; color: #fff; }
+    .chart .total {border-top: 0px solid #cfcfcf;}
+    .chart tbody .total td { background: #f5f6f7; font-weight: bold; border: none; padding-top: 10px;  }
+</style>
+
+<table class="chart">
+    <thead>
+        <tr>
+            <th>Cost Name</th>
+            <th class="spend">Spend</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Net Media Cost</td>
+            <td class="spend">$ 10,000.00</td>
+            <td class="bar"><span>50.8%</span></td>
+        </tr>
+        <tr>
+            <td>Agency Compensation</td>
+            <td class="spend">7,500.00</td>
+            <td class="bar"><span style="width: 250px;">38.1%</span></td>
+        </tr>
+        <tr>
+            <td>Google DBM Tech</td>
+            <td class="spend">1,500.00</td>
+            <td class="bar"><span style="width: 80px;">8.1%</span></td>
+        </tr>
+        <tr>
+            <td>DCM AD Serving</td>
+            <td class="spend">500.00</td>
+            <td class="bar"><span style="width: 40px;">3.0%</span></td>
+        </tr>
+        <tr>
+            <td>Content Optimization</td>
+            <td class="spend">200.00</td>
+            <td class="bar"><span style="width: 10px; color: #333">1.0%</span></td>
+        </tr>
+        <tr class="total">
+            <td>Total</td>
+            <td class="spend">$ 19,700.00</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+
+<script type="text/javascript" src="templates/campaign/nav-campaign-allocations.js"></script>

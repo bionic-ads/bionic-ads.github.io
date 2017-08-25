@@ -36,20 +36,20 @@ var templateData = {
 			page: ""
 		},
 		{
-			name: "Agency Compensation",
-			page: ""
-		},
-		{
-			name: "Ad Serving",
-			page: ""
-		},
-		{
 			name: "Production Costs",
 			page: "#/campaign/settings-costs-production/"
 		},
 		{
+			name: "Agency Compensation",
+			page: ""
+		},
+		{
 			name: "Delivery Costs",
 			page: "#/campaign/settings-costs-delivery/"
+		},
+		{
+			name: "Ad Serving",
+			page: ""
 		},
 		{
 			name: "Task Columns",

@@ -43,7 +43,8 @@ $(document).ready(function() {
     		'advertisers'           : 'showAdvertisers',
     		'campaigns'             : 'showCampaigns',
     		'schedule'              : 'showSchedule',
-    		'tasks'                 : 'showTasks'
+    		'tasks'                 : 'showTasks',
+    		'allocations'           : 'showAllocations'
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -105,6 +106,9 @@ $(document).ready(function() {
     	
     	showTasks: function(){
     		$("#bionic-main").load("templates/tasks.html");
+    	},    	
+    	showAllocations: function(){
+    		$("#bionic-main").load("templates/allocations.html");
     	},    	
     });
     

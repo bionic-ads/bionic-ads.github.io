@@ -49,7 +49,10 @@
       </tr>
       </thead>
   </table>  
-  <div class="location" style="position: fixed; display: block; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">Basics</div>
+  
+  <div class="location" style="position: fixed; display: block; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">
+      <span>Basics</span> <a><i class="fa fa-caret-square-o-down"></i></a> 
+  </div>
     
     
   <header class="fixedTable-header block">
@@ -57,19 +60,21 @@
         <thead>
             
         <tr class="group">
-            <th colspan="7" style="border-left: 1px solid #cfcfcf !important;"><span></span> 
-<!--                 <a><i class="columnMenu fa fa-bars" style="top: 2px; position: relative;"></i></a> -->
-            </th>
-            <th colspan="9" class="divider divider-costs"><span>Costs</span></th>
+            <th colspan="7" style="border-left: 1px solid #cfcfcf !important;"><span>Basics</span></th>
+            <th colspan="9" class="divider divider-costs"><span>Costs <a><i class="fa fa-caret-square-o-down"></i></a> </span></th>
+            <th colspan="7" class="divider divider-ratings"><span>Ratings</span></th>
+            <th colspan="3" class="divider divider-tasks"><span>Tasks</span></th>
+            <th colspan="2" class="divider divider-implementation"><span>Implementation</span></th>
             <th colspan="6" class="divider divider-kpis"><span>KPIs</span></th>
+            <th colspan="3" class="divider divider-kpis"><span>Picklists</span></th>
+            <th colspan="3" class="divider divider-kpis"><span>Notes & History</span></th>
         </tr>
         
         <tr class="group-members">
+<!-- Basics -->
           <th class="col-id"><span>Bionic ID</span></th>
           <th class="col-program">
-              <span><a>Program</a> / <a>Vendor</a>
-<!--               <a><i class="columnMenu fa fa-bars" style="top: 1px; float: right; position: relative;"></i></a> -->
-              </span>
+              <span><a>Program</a> / <a>Vendor</a></span>
               <div class="menu columnMenu">
                 <ul>
                     <li>One</li>
@@ -78,28 +83,67 @@
                 </ul>
               </div>
           </th>
+          
           <th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th>
           <th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th>
           <th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th>
           <th class="col-rate center"><span>Rate</span></th>
           <th class="col-quantity right "><span><a>Quantity</a></span></th>
           
+<!-- Costs -->
           <th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th>
-          <th class="divider-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th>
-          <th class="divider-costs col-net-media col-cost right"><span><a>Talent</a></span></th>
-          <th class="divider-costs col-net-media col-cost right"><span><a>Color Charge</a></span></th>
-          <th class="divider-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th>
-          <th class="divider-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th>
-          <th class="divider-costs col-ad-serving col-cost right"><span><a>DCM Ad Serving</a></span></th>
-          <th class="divider-costs col-ad-serving col-cost right"><span><a>Rich Media</a></span></th>
-          <th class="divider-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th>
+          <th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th>
+          <th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th>
+          <th class="col-costs col-net-media col-cost right"><span><a>Color Charge</a></span></th>
+          <th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th>
+          <th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th>
+          <th class="col-costs col-ad-serving col-cost right"><span><a>DCM Ad Serving</a></span></th>
+          <th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media CPM</a></span></th>
+          <th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th>
           
+<!-- Ratings -->
+
+          <th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th>
+          <th class="col-ratings col-120 "><span><a>Population</a></span></th>
+          <th class="col-ratings col-120"><span><a>Impressions</a></span></th>
+          <th class="col-ratings col-90"><span><a>CPM</a></span></th>
+          <th class="col-ratings col-90 "><span><a>Reach #</a></span></th>
+          <th class="col-ratings col-90 "><span><a>Reach %</a></span></th>
+          <th class="col-ratings col-90 "><span><a>Frequency</a></span></th>
+          
+<!-- Tasks -->
+
+          <th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th>
+          <th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th>
+          <th class="col-tasks "><span><a>Send Report</a></span></th>
+          
+<!-- Implementation -->
+
+          <th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th>
+          <th class="col-implemtation col-450"><span><a>Google Analytics Tracking URL</a></span></th>
+          
+<!-- KPIs -->
+
           <th class="divider col-kpi-cost right"><span><a>CPM</a></span></th>
           <th class="col-kpi-number right"><span><a>Impressions</a></span></th>
-          <th class="col-kpi-cost right"><span><a>CPC</a></span></th>
+          <th class=" col-kpi-cost right"><span><a>CPC</a></span></th>
           <th class="col-kpi-number right"><span><a>Clicks</a></span></th>
-          <th class="col-kpi-cost right"><span><a>/View</a></span></th>
+          <th class=" col-kpi-cost right"><span><a>/View</a></span></th>
           <th class="col-kpi-number right"><span><a>Views</a></span></th>
+          
+<!-- Picklists -->
+
+          <th class="divider col-picklists "><span><a>Picklist 1</a></span></th>
+          <th class="col-picklists "><span><a>Picklist 2</a></span></th>
+          <th class="col-picklists "><span><a>Picklist 3</a></span></th>
+
+<!-- Notes & History -->
+
+          <th class="divider col-50 col-notes "><span><a>Notes</a></span></th>
+          <th class="col-135 col-notes "><span><a>Created</a></span></th>
+          <th class="col-135 col-notes "><span><a>Last Updated</a></span></th>
+
+
         </tr>
         </thead>
     </table>
@@ -196,6 +240,9 @@
           
 //           mediaPlanFirstColumns.append('<td class="td-checkbox">'+ '<input type="checkbox"> ' +'</td>');   
           var mediaPlanFirstColumns = $('<tr class="'+flightHeader+' '+isFlightMember+'">');
+          
+          // Basics
+          
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
           mediaPlanFirstColumns.append('<td class="col-line-number"><span>' + rowNumber + flightHeaderImage+flightMemberImage+'</span></td>');
           mediaPlanFirstColumns.append('<td class="col-placement-name divider-right"><a href="#/line/overview/">'+ item.PlacementName +'</a></td>');
@@ -207,10 +254,11 @@
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
           mediaPlanBody.append('<td class="col-flight-dates"><input class="half" type="text" value="'+ item.StartDate +'"><input class="half" type="text" value="'+ item.EndDate +'"><input class="half secondary" type="text" value="Every Day"><input class="secondary half" type="text" value="All Day"></td>');
-          mediaPlanBody.append('<td class="col-rate"><input class="currency" type="text"><input class="number" type="text"><input type="text"><input type="text"></td>');
+          mediaPlanBody.append('<td class="col-rate"><input class="currency" type="text" value="'+item.RateCurrency+'"><input class="number" type="text" value="'+item.RateAmount+'"><input type="text" value="'+item.RateType+'"><input type="text" value="'+item.GrossOrNetOrTotal+'"></td>');
           mediaPlanBody.append('<td class="col-quantity"><input type="text" value=""></input></td>');
           
-          //costs
+          // Costs
+          
           mediaPlanBody.append('<td class="divider col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-net-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-kpi col-production-talent col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="200.00">'+kpiActionsCPM+'</td>');
@@ -221,13 +269,50 @@
           mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-total-cost  col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');          
           
-          //kpis
+          
+          // Ratings
+          
+          mediaPlanBody.append('<td class="divider col-ratings col-180"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-120"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-120"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-90"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-90"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-90"> </td>');
+          mediaPlanBody.append('<td class=" col-ratings col-90"> </td>');
+
+          // Tasks
+          
+          mediaPlanBody.append('<td class="divider col-tasks"> </td>');
+          mediaPlanBody.append('<td class=" col-tasks"> </td>');
+          mediaPlanBody.append('<td class=" col-tasks"> </td>');
+          
+          
+          // Implementation
+          
+          mediaPlanBody.append('<td class="divider col-implementation col-350"> </td>');
+          mediaPlanBody.append('<td class=" col-implementation col-450"> </td>');
+          
+          // KPIs
+          
           mediaPlanBody.append('<td class="divider CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="impressions'+ i + '" class="right cpw CPM kpiCPM'+ i + ' '+customCPM+'" type="text" value="'+ item.CPM +'">'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="CPM CPM'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="impressions'+ i + '" class="right number kpiCPM'+ i +'" type="text" value="'+ item.Impressions +'"></td>');
-          mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input data-kpi="clicks'+ i + '" class="right cpw CPC kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
+          mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-cost "><span class="currency-symbol">$</span><input data-kpi="clicks'+ i + '" class="right cpw CPC kpiCPC'+i + ' '+customCPC+'" type="text" value="'+ item.CPC +'">'+ kpiActionsCPC +'</td>');
           mediaPlanBody.append('<td class="CPC CPC'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="clicks'+ i + '" class="right number kpiCPC'+i + '" type="text" value="'+ item.Clicks +'"></td>');
-          mediaPlanBody.append('<td class="CPV CPV'+ i +' '+isFlightMember+ ' col-kpi-cost"><span class="currency-symbol">$</span><input  data-kpi="views'+ i + '" class="right cpw CPV kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
+          mediaPlanBody.append('<td class="CPV CPV'+ i +' '+isFlightMember+ ' col-kpi-cost "><span class="currency-symbol">$</span><input  data-kpi="views'+ i + '" class="right cpw CPV kpiCPV'+i + ' '+customCPV+'" type="text" value="'+ item.CPV +'">'+kpiActionsCPV+'</td>');
           mediaPlanBody.append('<td class="CPV CPV'+ i +' '+isFlightMember+ ' col-kpi-number"><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="'+ item.Views +'"></td>');
+          
+          // Picklists
+          
+          mediaPlanBody.append('<td class="divider col-picklists"> </td>');
+          mediaPlanBody.append('<td class=" col-picklists"> </td>');
+          mediaPlanBody.append('<td class=" col-picklists"> </td>');
+
+          // Notes & History
+          
+          mediaPlanBody.append('<td class=" col-50 divider col-notes"> </td>');
+          mediaPlanBody.append('<td class=" col-135 col-notes"> </td>');
+          mediaPlanBody.append('<td class=" col-135 col-notes"> </td>');
+          
           mediaPlanBody.append('</tr>');
           mediaPlanBody.appendTo("#MediaPlanBody tbody");
         })
@@ -249,29 +334,55 @@
         $body = $(el).find('.fixedTable-body');
         $sidebar = $(el).find('.fixedTable-sidebar table');
         $header = $(el).find('.fixedTable-header table');
-        $location = $(el).find('.location');
+        $location = $(el).find('.location span');
         return $($body).scroll(function() {
           $($sidebar).css('margin-top', -$($body).scrollTop());
           if(($($body).scrollLeft() > 0)&&$($body).scrollLeft() < 1245){ 
-              $($location).text("Basics");
+              $($location).text("Basics ");
           }
           
           if(($($body).scrollLeft() > 1245)&&$($body).scrollLeft() < 1354){ 
               $($location).text(" ");
           }
 
-          if(($($body).scrollLeft() > 1355)&&$($body).scrollLeft() < 2400){ 
+          if(($($body).scrollLeft() > 1355)&&$($body).scrollLeft() < 2650){ 
               $($location).text("Costs");
           }
+
+          if(($($body).scrollLeft() > 2650)&&$($body).scrollLeft() < 2702){ 
+              $($location).text(" ");
+          }
+          
+          if(($($body).scrollLeft() > 2703)&&$($body).scrollLeft() < 3424){ 
+              $($location).text("Ratings");
+          }
+          
+          if(($($body).scrollLeft() > 3424)&&$($body).scrollLeft() < 3520){ 
+              $($location).text("");
+          }
+          
+          if(($($body).scrollLeft() > 3521)&&$($body).scrollLeft() < 4010){ 
+              $($location).text("Tasks");
+          }
+
+          if(($($body).scrollLeft() > 4010)&&$($body).scrollLeft() < 4093){ 
+              $($location).text("");
+          }
+
+          if(($($body).scrollLeft() > 4093)&&$($body).scrollLeft() < 4750){ 
+              $($location).text("Implementation");
+          }
+          
+          if(($($body).scrollLeft() > 4750)&&$($body).scrollLeft() < 4893){ 
+              $($location).text("");
+          }
+
+          if(($($body).scrollLeft() > 4893)&&$($body).scrollLeft() < 8000){ 
+              $($location).text("KPIs");
+          }
 /*
-          if(($($body).scrollLeft() > 600)&&$($body).scrollLeft() < 900){ 
-              $($location).text("Ratings" + $($body).scrollLeft());
-          }
-          if(($($body).scrollLeft() > 900)&&$($body).scrollLeft() < 1200){ 
-              $($location).text("Tasks" + $($body).scrollLeft());
-          }
           if(($($body).scrollLeft() > 1200)&&$($body).scrollLeft() < 2400){ 
-              $($location).text("KPIs" + $($body).scrollLeft());
+              $($location).text("Picklists" + $($body).scrollLeft());
           }
 */
           
