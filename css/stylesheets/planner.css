@@ -2986,7 +2986,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   display: block;
   font-weight: bold;
   float: left;
-  margin-left: -3px;
+  margin-left: -4px;
 }
 /* line 105, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.group-members th {
