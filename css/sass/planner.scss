@@ -269,8 +269,17 @@ h2 {
             
             li {
                 display: block;
-                padding: 12px 15px 8px;
+                padding: 12px 5px 8px;
                 margin: 0;
+                
+                span {
+                    border-radius: 3px;
+                    padding: 3px 10px
+                }
+                
+                &.current span {
+                    background: #ddd;
+                }
                 
                 &:hover {
                     background: #f5f6f7;

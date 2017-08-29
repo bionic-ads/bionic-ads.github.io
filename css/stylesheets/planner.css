@@ -3656,26 +3656,35 @@ h2 {
 /* line 270, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
-  padding: 12px 15px 8px;
+  padding: 12px 5px 8px;
   margin: 0;
 }
 /* line 275, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenu li span {
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+/* line 280, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenu li.current span {
+  background: #ddd;
+}
+/* line 284, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
 
-/* line 285, ../sass/planner.scss */
+/* line 294, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 289, ../sass/planner.scss */
+/* line 298, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 294, ../sass/planner.scss */
+/* line 303, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -3684,7 +3693,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 303, ../sass/planner.scss */
+/* line 312, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -3698,7 +3707,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 316, ../sass/planner.scss */
+/* line 325, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -3717,7 +3726,7 @@ h2 {
   width: 42px;
 }
 
-/* line 334, ../sass/planner.scss */
+/* line 343, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -3727,11 +3736,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 344, ../sass/planner.scss */
+/* line 353, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 347, ../sass/planner.scss */
+/* line 356, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

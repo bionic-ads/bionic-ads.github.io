@@ -31,14 +31,14 @@
         <a class="columnMenuButton"><i class="fa fa-arrow-right"></i>Go to... <i class="fa fa-times-circle"></i></a>
         <div class="menu columnMenu">
             <ul>
-                <li rel="0">Basics</li>
-                <li rel="1355">Costs</li>
-                <li rel="2853">Ratings</li>
-                <li rel="3673">Tasks</li>
-                <li rel="4243">Implementation</li>
-                <li rel="5043">KPIs</li>
-                <li rel="">Picklists</li>
-                <li rel="">Notes & History</li>
+                <li class="basics" rel="0"><span>Basics</span></li>
+                <li class="costs" rel="1355"><span>Costs</span></li>
+                <li class="ratings" rel="2853"><span>Ratings</span></li>
+                <li class="tasks" rel="3673"><span>Tasks</span></li>
+                <li class="implementation" rel="4243"><span>Implementation</span></li>
+                <li class="kpis" rel="5043"><span>KPIs</span></li>
+                <li class="picklists" rel=""><span>Picklists</span></li>
+                <li class="notes" rel=""><span>Notes & History</span></li>
             </ul>
         </div>
     </li>
@@ -365,14 +365,18 @@
           $($sidebar).css('margin-top', -$($body).scrollTop());
           if(($($body).scrollLeft() > 0)&&$($body).scrollLeft() < 1245){ 
               $($location).text("Basics ");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.basics").addClass("current");
           }
           
           if(($($body).scrollLeft() > 1245)&&$($body).scrollLeft() < 1354){ 
               $($location).text(" ");
           }
 
-          if(($($body).scrollLeft() > 1355)&&$($body).scrollLeft() < 2800){ 
+          if(($($body).scrollLeft() > 1354)&&$($body).scrollLeft() < 2800){ 
               $($location).text("Costs");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.costs").addClass("current");
           }
 
           if(($($body).scrollLeft() > 2800)&&$($body).scrollLeft() < 2852){ 
@@ -381,6 +385,8 @@
           
           if(($($body).scrollLeft() > 2852)&&$($body).scrollLeft() < 3574){ 
               $($location).text("Ratings");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.ratings").addClass("current");
           }
           
           if(($($body).scrollLeft() > 3574)&&$($body).scrollLeft() < 3670){ 
@@ -389,22 +395,28 @@
           
           if(($($body).scrollLeft() > 3670)&&$($body).scrollLeft() < 4160){ 
               $($location).text("Tasks");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.tasks").addClass("current");
           }
 
           if(($($body).scrollLeft() > 4160)&&$($body).scrollLeft() < 4243){ 
               $($location).text("");
           }
 
-          if(($($body).scrollLeft() > 4243)&&$($body).scrollLeft() < 4900){ 
+          if(($($body).scrollLeft() > 4242)&&$($body).scrollLeft() < 4900){ 
               $($location).text("Implementation");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.implementation").addClass("current");
           }
           
           if(($($body).scrollLeft() > 4900)&&$($body).scrollLeft() < 5043){ 
               $($location).text("");
           }
 
-          if(($($body).scrollLeft() > 5043)&&$($body).scrollLeft() < 8000){ 
+          if(($($body).scrollLeft() > 5042)&&$($body).scrollLeft() < 8000){ 
               $($location).text("KPIs");
+               $(".columnMenu li").removeClass("current");
+               $(".columnMenu li.kpis").addClass("current");
           }
 /*
           if(($($body).scrollLeft() > 1200)&&$($body).scrollLeft() < 2400){ 
