@@ -1726,11 +1726,15 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   padding: 15px 25px;
 }
 /* line 99, ../sass/components/3_components/_modals.scss */
+.modal .bionic-modal-footer.warning {
+  background: #f5f6f7;
+}
+/* line 103, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 107, ../sass/components/3_components/_modals.scss */
+/* line 111, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }

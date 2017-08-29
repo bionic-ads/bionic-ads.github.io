@@ -96,6 +96,10 @@
         border-top: 1px solid #cfcfcf;
         padding: 15px 25px;  
         
+        &.warning {
+            background: #f5f6f7;
+        }
+        
         .blue-button {
             margin-right: 5px;
         }
