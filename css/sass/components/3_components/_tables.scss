@@ -490,7 +490,8 @@ table.addToCampaign {
             }
         }
         
-        td:last-child {
+        td:last-child,
+        td:last-child a {
             color: $blue;            
             
         }
@@ -606,13 +607,14 @@ table.gridlines {
     }
     
     &.addToCampaign th:last-child,
-    &.addToCampaign td:last-child
+    &.addToCampaign td:last-child,
+    &.addToCampaign td:last-child a
       {
         color: transparent;
         border-color: transparent;
         background: transparent;
     }
-    &.addToCampaign tr:hover td:last-child {
+    &.addToCampaign tr:hover td:last-child     {
         background: transparent !important;
     }
 

@@ -221,6 +221,63 @@ h2 {
         li {
             float: left;
         }   
+        
+/*
+        div.columnMenu {
+            padding: 0 0 10px;
+            margin: 0;
+            max-height: none;
+            width: 120px;
+            li {
+                display: block;
+                float: none;
+                padding: 10px 10px;
+                margin: 0;
+                
+                &:hover {
+                    background: #f5f6f7;
+                }
+                
+            }
+        }
+*/
+
+        .columnMenuButton i.fa-times-circle {
+            display: none;
+        }
+        .columnMenuButton.active {
+            @include nxm-button-orange-backgrond();
+            padding: 6px 12px;
+            border-radius: 3px;
+            
+            i.fa-times-circle {
+                display: inline-block;
+                top:0 !important;
+                margin-right: 0;
+            }
+        }
+
+        div.columnMenu {
+            background: #f5f6f7;
+            border: none;
+            box-shadow: none;
+            margin-top: -33px;
+            margin-left: 103px;
+            padding: 0 0 0px;
+            max-height: none;
+            width: 900px;
+            
+            li {
+                display: block;
+                padding: 12px 15px 8px;
+                margin: 0;
+                
+                &:hover {
+                    background: #f5f6f7;
+                }
+                
+            }
+        }
     }
     
 }

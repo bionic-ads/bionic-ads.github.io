@@ -167,7 +167,7 @@ $("tbody").droppable({
               }    
           
               if((type == "Delivery")&&(checked == "checked")) {
-                  costRow = $('<tr><td></td><td class="width250"><strong>'+name+'</strong></td>');
+                  costRow = $('<tr><td></td><td class="width250">'+name+'</td>');
                   costRow.append('<td class="width250">'+calculationCost+'</td>')
 //                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
                   costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
