@@ -1632,7 +1632,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal {
   background: #fff;
   min-width: 300px;
-  max-width: 800px;
+  max-width: 950px;
   padding: 0;
   width: auto;
 }
@@ -2737,6 +2737,28 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   border-bottom: 1px solid #333;
 }
 
+/* line 1, ../sass/components/4_layouts/_settings.scss */
+.zero-state {
+  display: inline-block;
+  width: 700px;
+  background: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px 60px 30px;
+  border-radius: 3px;
+}
+/* line 12, ../sass/components/4_layouts/_settings.scss */
+.zero-state .zero-state-note {
+  font-size: 13px;
+}
+/* line 16, ../sass/components/4_layouts/_settings.scss */
+.zero-state a {
+  font-size: 13px;
+  line-height: 30px;
+}
+
 /* line 1, ../sass/components/4_layouts/_tasks.scss */
 #noStickerArea {
   height: 200px;
@@ -3402,35 +3424,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 48, ../sass/planner.scss */
+/* line 49, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 52, ../sass/planner.scss */
+/* line 53, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 57, ../sass/planner.scss */
+/* line 58, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 59, ../sass/planner.scss */
+/* line 60, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 65, ../sass/planner.scss */
+/* line 66, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 69, ../sass/planner.scss */
+/* line 70, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -3440,12 +3462,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 78, ../sass/planner.scss */
+/* line 79, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 83, ../sass/planner.scss */
+/* line 84, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -3456,7 +3478,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 93, ../sass/planner.scss */
+/* line 94, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -3466,13 +3488,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 102, ../sass/planner.scss */
+/* line 103, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 114, ../sass/planner.scss */
+/* line 115, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -3482,32 +3504,32 @@ h2 {
   position: fixed;
   z-index: 1;
 }
-/* line 123, ../sass/planner.scss */
+/* line 124, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 126, ../sass/planner.scss */
+/* line 127, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 130, ../sass/planner.scss */
+/* line 131, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 135, ../sass/planner.scss */
+/* line 136, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span a {
   color: #f5f6f7;
 }
-/* line 141, ../sass/planner.scss */
+/* line 142, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 150, ../sass/planner.scss */
+/* line 151, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -3517,7 +3539,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 159, ../sass/planner.scss */
+/* line 160, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -3526,48 +3548,48 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 167, ../sass/planner.scss */
+/* line 168, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 174, ../sass/planner.scss */
+/* line 175, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 182, ../sass/planner.scss */
+/* line 183, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 187, ../sass/planner.scss */
+/* line 188, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 192, ../sass/planner.scss */
+/* line 193, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 197, ../sass/planner.scss */
+/* line 198, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 206, ../sass/planner.scss */
+/* line 207, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 211, ../sass/planner.scss */
+/* line 212, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 5px;
 }
-/* line 217, ../sass/planner.scss */
+/* line 218, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
@@ -3591,15 +3613,15 @@ h2 {
           }
   */
 }
-/* line 221, ../sass/planner.scss */
+/* line 222, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
 }
-/* line 245, ../sass/planner.scss */
+/* line 246, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton i.fa-times-circle {
   display: none;
 }
-/* line 248, ../sass/planner.scss */
+/* line 249, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -3649,13 +3671,13 @@ h2 {
   width: 16px;
   display: inline-block;
 }
-/* line 253, ../sass/planner.scss */
+/* line 254, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active i.fa-times-circle {
   display: inline-block;
   top: 0 !important;
   margin-right: 0;
 }
-/* line 260, ../sass/planner.scss */
+/* line 261, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu {
   background: #f5f6f7;
   border: none;
@@ -3666,38 +3688,73 @@ h2 {
   max-height: none;
   width: 900px;
 }
-/* line 270, ../sass/planner.scss */
+/* line 271, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
   padding: 12px 5px 8px;
   margin: 0;
 }
-/* line 275, ../sass/planner.scss */
+/* line 276, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 280, ../sass/planner.scss */
+/* line 281, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li.current span {
   background: #ddd;
 }
-/* line 284, ../sass/planner.scss */
+/* line 285, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
+/* line 292, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenuDropdown {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding: 0 0 0px;
+  max-height: none;
+  width: 133px;
+  box-shadow: 0px 2px 2px #999;
+}
+/* line 303, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenuDropdown li {
+  display: block;
+  padding: 12px 5px 8px;
+  margin: 0;
+  clear: both;
+  box-sizing: border-box;
+  width: 100%;
+}
+/* line 311, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenuDropdown li span {
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+/* line 316, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenuDropdown li.current span {
+  background: none;
+  font-weight: bold;
+}
+/* line 321, ../sass/planner.scss */
+#bionic-main .bionic-action-menu div.columnMenuDropdown li:hover {
+  background: #f5f6f7;
+}
 
-/* line 294, ../sass/planner.scss */
+/* line 332, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 298, ../sass/planner.scss */
+/* line 336, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 303, ../sass/planner.scss */
+/* line 341, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -3706,7 +3763,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 312, ../sass/planner.scss */
+/* line 350, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -3720,7 +3777,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 325, ../sass/planner.scss */
+/* line 363, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -3739,7 +3796,7 @@ h2 {
   width: 42px;
 }
 
-/* line 343, ../sass/planner.scss */
+/* line 381, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -3749,11 +3806,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 353, ../sass/planner.scss */
+/* line 391, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 356, ../sass/planner.scss */
+/* line 394, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

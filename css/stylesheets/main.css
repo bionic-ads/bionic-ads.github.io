@@ -5348,7 +5348,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal {
   background: #fff;
   min-width: 300px;
-  max-width: 800px;
+  max-width: 950px;
   padding: 0;
   width: auto;
 }
@@ -5688,6 +5688,28 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 75, ../sass/components/4_layouts/_move.scss */
 .modal .move-to-another-media-plan input {
   width: 100%;
+}
+
+/* line 1, ../sass/components/4_layouts/_settings.scss */
+.zero-state {
+  display: inline-block;
+  width: 700px;
+  background: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px 60px 30px;
+  border-radius: 3px;
+}
+/* line 12, ../sass/components/4_layouts/_settings.scss */
+.zero-state .zero-state-note {
+  font-size: 13px;
+}
+/* line 16, ../sass/components/4_layouts/_settings.scss */
+.zero-state a {
+  font-size: 13px;
+  line-height: 30px;
 }
 
 /* line 1, ../sass/components/4_layouts/_tasks.scss */

@@ -49,7 +49,7 @@ var templateData = {
 		},
 		{
 			name: "Ad Serving",
-			page: ""
+			page: "#/campaign/settings-ad-serving/"
 		},
 		{
 			name: "Task Columns",
