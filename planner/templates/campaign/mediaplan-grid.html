@@ -231,7 +231,13 @@
           }
 
           if(item.CostOptimization == ''){
-              
+              var excludeCostOptimization = "exclude inactive";
+          }
+          if(item.CostTalent == ''){
+              var excludeCostTalent = "exclude inactive";
+          }
+          if(item.CostTechFee == ''){
+              var excludeCostTechFee = "exclude inactive";
           }
 
 // KPI Actions
@@ -286,13 +292,13 @@
           
           mediaPlanBody.append('<td class="divider col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-net-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost"><span class="currency-symbol">$</span><a>'+item.CostOptimization+'</a>'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="'+item.CostTalent+'">'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost"><span class="currency-symbol">$</span><a>'+item.CostTechFee+'</a>'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+ excludeCostOptimization +'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostOptimization+'</a></div>'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTalent+'"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right '+excludeCostTalent+' number kpiCPV'+i + '" type="text" value="'+item.CostTalent+'"></div>'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTechFee+'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostTechFee+'</a></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-agency-comp col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-total-media-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
-          mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00">'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00">'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-total-cost  col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');          
           
           

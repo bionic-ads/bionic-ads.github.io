@@ -3333,7 +3333,12 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 369, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 370, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .readonly-amount {
+  display: block;
+  height: 25px;
+}
+/* line 375, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .exclude-reset {
   color: #999;
   font-size: 11px;
@@ -3343,34 +3348,38 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: absolute;
   white-space: nowrap;
 }
-/* line 378, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 384, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .exclude-reset a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 387, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 392, ../sass/components/7_prototype/_mediaplan.scss */
+.mediaplan.fixedTable .exclude span {
+  display: none;
+}
+/* line 397, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 391, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 401, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 396, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 406, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.hover td[class*="col-kpi"]:hover .exclude-reset {
   display: block;
 }
-/* line 401, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 411, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable:focus {
   border-width: 1px;
 }
-/* line 407, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 417, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader .col-kpi-number input[type=text] {
   color: #9b9b9b;
 }
-/* line 415, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 425, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightHeader.hover .col-flight-dates input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-cost input[type=text],
 .mediaplan.fixedTable tr.flightHeader.hover .col-kpi-number input[type=text] {
@@ -3378,13 +3387,13 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   background-color: #E6F2F8;
   user-select: none;
 }
-/* line 429, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 439, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember .col-program input,
 .mediaplan.fixedTable tr.flightMember .col-product input,
 .mediaplan.fixedTable tr.flightMember .col-channel input {
   color: #9b9b9b;
 }
-/* line 437, ../sass/components/7_prototype/_mediaplan.scss */
+/* line 447, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable tr.flightMember.hover .col-program input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-product input[type=text],
 .mediaplan.fixedTable tr.flightMember.hover .col-channel input[type=text] {
