@@ -3914,23 +3914,59 @@ input[type="button"].gray-button,
 }
 /* line 103, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a {
+  background: #dfe0e1;
+  border-radius: 3px;
   color: #333;
   display: block;
-  padding: 6px 12px;
+  padding: 9px 17px 9px 15px;
 }
-/* line 108, ../sass/components/2_elements/_buttons.scss */
+/* line 110, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a:hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 115, ../sass/components/2_elements/_buttons.scss */
+/* line 117, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 121, ../sass/components/2_elements/_buttons.scss */
+/* line 123, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
+  font-size: 14px;
+  color: #69AED4;
+  margin-right: 8px;
+}
+
+/* line 130, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu.media-plan li {
+  margin: 6px 6px 3px 0;
+  padding: 0;
+  display: block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* line 138, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu.media-plan li a {
+  background: none;
+  color: #333;
+  display: block;
+  padding: 6px 10px 8px;
+  height: auto;
+}
+/* line 145, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu.media-plan li a:hover {
+  transition: background-color 0.5s ease;
+  background-color: #e9ebed;
+}
+/* line 152, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu.media-plan li img {
+  margin-right: 5px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+/* line 158, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu.media-plan li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;

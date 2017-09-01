@@ -29,7 +29,7 @@
 <ul class="bionic-action-menu media-plan block">
     <li>
         <a class="columnMenuButton"><i class="fa fa-arrow-right"></i>Go to... <i class="fa fa-times-circle"></i></a>
-        <div class="menu columnMenu columnMenuDropdown">
+        <div class="menu columnMenu">
             <ul>
                 <li class="basics" rel="0"><span>Basics</span></li>
                 <li class="costs" rel="1355"><span>Costs</span></li>
@@ -185,6 +185,7 @@
             
             $(".columnMenuButton").click(function () {
                 $(".menu").toggle();
+                $(this).toggleClass("active");
             });
                         
             $(".columnMenu li ").click(function () {
@@ -192,7 +193,6 @@
 //                 $('.fixedTable-body').scrollLeft(2852);
                 var scrollDistance =  $(this).attr('rel');
                 $('.fixedTable-body').animate({scrollLeft:scrollDistance});
-                $(".menu").hide();
             });
             
             $("th.col-program").bind("contextmenu",function(e){

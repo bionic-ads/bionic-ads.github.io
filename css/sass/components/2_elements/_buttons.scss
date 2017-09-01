@@ -101,10 +101,47 @@ input[type="button"].gray-button,
     border-radius: 3px;
     
     a {
+        background: #dfe0e1;
+        border-radius: 3px;
         color: #333;
         display: block;
-        padding: 6px 12px;
+        padding: 9px 17px 9px 15px;
+                
+        &:hover {
+            transition: background-color 0.5s ease;
+            background-color: #e9ebed;
+        }
         
+    }
+    
+    img {
+        margin-right: 5px;
+        margin-top: -3px;
+        vertical-align: middle;
+    }
+    
+    i {
+        font-size: 14px;
+        color: $blue;
+        margin-right:8px;
+    }
+}
+
+.bionic-action-menu.media-plan li {
+//     background: #dfe0e1;
+    margin: 6px 6px 3px 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    border-radius: 3px;
+    
+    a {
+        background: none;
+        color: #333;
+        display: block;
+        padding: 6px 10px 8px;
+        height: auto;
+                
         &:hover {
             transition: background-color 0.5s ease;
             background-color: #e9ebed;

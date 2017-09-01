@@ -68,7 +68,8 @@
     <thead>
         <tr>
             <th colspan="2" class="width350">Cost</th>
-            <th colspan="2">Calculation</th>
+            <th colspan="1">Calculation</th>
+            <th colspan="1">Rate</th>
             <th colspan="1">Overage Buffer</th>
             <th></th>
         </tr>
@@ -163,14 +164,14 @@ $("tbody").droppable({
               if(calculationCost.includes("Percentage")){
                   symbol = ""
               } else {
-                  symbol = '<span class="currency-symbol">$</span>';
+                  symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
               }    
           
               if((type == "Delivery")&&(checked == "checked")) {
                   costRow = $('<tr><td></td><td class="width250">'+name+'</td>');
                   costRow.append('<td class="width250">'+calculationCost+'</td>')
 //                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
-                  costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td class="editable width200 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td class="editable width200 narrow"><input class="right" type="text" value="%"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");

@@ -68,7 +68,8 @@
     <thead>
         <tr>
             <th colspan="2" class="">Cost</th>
-            <th colspan="2">Calculation</th>
+            <th colspan="1">Calculation</th>
+            <th>Rate</th>
             <th></th>
         </tr>
     </thead>
@@ -161,7 +162,7 @@ $("tbody").droppable({
               if(calculationCost.includes("Percentage")){
                   symbol = ""
               } else {
-                  symbol = '<span class="currency-symbol">$</span>';
+                  symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
               }    
               if((type == "Production")&&(checked == "checked")) {
                   costRow = $('<tr><td></td><td class="width250">'+name+'</td>');

@@ -12,6 +12,7 @@
 
     input[type="text"] {
         border: 3px solid #f5f6f7;
+        padding: 13px 10px;
         
         &.custom {
             background: #fff url(../../css/images/triangle.svg) no-repeat right top;
@@ -76,12 +77,45 @@
         background: transparent;
         padding: 12px 0;
         
+        
         h3 {
             padding: 0;
             margin: 20px 0 0;
-            
+            a {
+                font-weight: normal;
+                margin-left: 10px;
+            }
         }
         
+    }
+    
+    tr.header td {
+        border-bottom: 0;
+    }
+    
+    .additional-cost {
+        
+        margin: -5px 0 10px;
+        
+        th {
+            color: #9b9b9b;
+            font-size: 11px;
+            padding: 0 0px 3px;
+            text-align: left;
+        }
+        
+        td{
+            border-bottom: 0;
+            padding: 0;
+            vertical-align: text-bottom;
+        
+            .currency-symbol {
+            
+            margin: 15px 10px;
+            
+            }
+        
+        }
     }
     
     .cost-details-add-field, 

@@ -221,6 +221,8 @@ h2 {
         
         li {
             float: left;
+            color: #333;
+            cursor: pointer;
         }   
         
 /*
@@ -246,6 +248,7 @@ h2 {
         .columnMenuButton i.fa-times-circle {
             display: none;
         }
+        
         .columnMenuButton.active {
             @include nxm-button-orange-backgrond();
             padding: 6px 12px;
