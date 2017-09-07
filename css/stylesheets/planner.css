@@ -2728,34 +2728,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 .cost-details .additional-cost th {
   color: #9b9b9b;
   font-size: 11px;
+  font-weight: normal;
   padding: 0 0px 3px;
   text-align: left;
 }
-/* line 107, ../sass/components/4_layouts/_line-cost.scss */
+/* line 108, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .additional-cost td {
   border-bottom: 0;
   padding: 0;
   vertical-align: text-bottom;
 }
-/* line 112, ../sass/components/4_layouts/_line-cost.scss */
+/* line 113, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .additional-cost td .currency-symbol {
   margin: 15px 10px;
 }
-/* line 121, ../sass/components/4_layouts/_line-cost.scss */
+/* line 122, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-add-field,
 .cost-details .cost-details-total-cost .cost-details-amount,
 .cost-details .cost-details-total-cost .cost-details-currency-label {
   font-weight: bold;
   font-size: 18px;
 }
-/* line 128, ../sass/components/4_layouts/_line-cost.scss */
+/* line 129, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .line-item-overview-wrapper h3 {
   color: #333;
   font-size: 13px;
   padding-left: 0;
   clear: both;
 }
-/* line 135, ../sass/components/4_layouts/_line-cost.scss */
+/* line 136, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-number {
   width: 20px;
   text-align: right;
@@ -2763,43 +2764,43 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   color: #999;
   vertical-align: middle;
 }
-/* line 143, ../sass/components/4_layouts/_line-cost.scss */
+/* line 144, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-name {
   width: 500px;
 }
-/* line 147, ../sass/components/4_layouts/_line-cost.scss */
+/* line 148, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-operator {
   width: 20px;
   font-size: 18px;
   vertical-align: top;
   padding: 7px 0;
 }
-/* line 154, ../sass/components/4_layouts/_line-cost.scss */
+/* line 155, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-amount {
   width: 210px;
   border-right: 20px solid #f5f6f7;
   text-align: right;
   padding: 0 32px 0 10px;
 }
-/* line 160, ../sass/components/4_layouts/_line-cost.scss */
+/* line 161, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-amount input[type="text"] {
   padding-right: 30px;
   text-align: right;
   margin: 0;
 }
-/* line 167, ../sass/components/4_layouts/_line-cost.scss */
+/* line 168, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-functional-amount {
   border: none;
   width: 210px;
   text-align: right;
   color: #999;
 }
-/* line 173, ../sass/components/4_layouts/_line-cost.scss */
+/* line 174, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-explanatory-text {
   color: #9b9b9b;
   font-size: 11px;
 }
-/* line 178, ../sass/components/4_layouts/_line-cost.scss */
+/* line 179, ../sass/components/4_layouts/_line-cost.scss */
 .cost-details .cost-details-sum {
   border-bottom: 1px solid #333;
 }

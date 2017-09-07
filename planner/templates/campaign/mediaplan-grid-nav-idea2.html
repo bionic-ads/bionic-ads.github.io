@@ -26,7 +26,7 @@
 	
 </div>
 
-<ul class="bionic-action-menu block">
+<ul class="bionic-action-menu media-plan block">
     <li>
         <a class="columnMenuButton"><i class="fa fa-arrow-right"></i>Go to... <i class="fa fa-times-circle"></i></a>
         <div class="menu columnMenu columnMenuDropdown">
@@ -63,6 +63,7 @@
           <th class="col-placement-name divider-right"><span class="header"><a>Placement Name</a></span></th>
       </tr>
       </thead>
+      
   </table>  
   
   <div class="location" style="position: fixed; display: block; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">
@@ -161,7 +162,20 @@
     <table class="table table-bordered mediaplan" id="MediaPlanFirstColumns">
         <tbody></tbody>
     </table>
+        <div class="bottom-nav">
+            <ul>
+                <li class="basics" rel="0"><span>Basics</span></li>
+                <li class="costs" rel="1355"><span>Costs</span></li>
+                <li class="ratings" rel="2853"><span>Ratings</span></li>
+                <li class="tasks" rel="3673"><span>Tasks</span></li>
+                <li class="implementation" rel="4243"><span>Implementation</span></li>
+                <li class="kpis" rel="5043"><span>KPIs</span></li>
+                <li class="picklists" rel=""><span>Picklists</span></li>
+                <li class="notes" rel=""><span>Notes & History</span></li>
+            </ul>
+        </div>
   </aside>
+  
   <div class="fixedTable-body block">
     <table class="table table-bordered mediaplan" id="MediaPlanBody">
         <tbody></tbody>
@@ -192,6 +206,7 @@
 //                 $('.fixedTable-body').scrollLeft(2852);
                 var scrollDistance =  $(this).attr('rel');
                 $('.fixedTable-body').animate({scrollLeft:scrollDistance});
+                $(".menu").hide();
             });
             
             $("th.col-program").bind("contextmenu",function(e){
