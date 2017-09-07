@@ -1645,6 +1645,62 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   background: #FB7E7F;
 }
 
+/* line 1, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit {
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  display: none;
+  font-size: 11px;
+  position: absolute;
+  background: #fff;
+  margin-top: 30px;
+  padding: 10px;
+  width: 250px;
+  z-index: 99;
+}
+/* line 14, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .title {
+  font-weight: bold;
+  width: 100%;
+}
+/* line 19, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+/* line 26, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input.cost-per {
+  width: 150px;
+}
+/* line 30, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input.overage {
+  margin-left: 10px;
+  width: 80px;
+}
+/* line 36, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input .label {
+  clear: both;
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 42, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input .currency-symbol {
+  color: #9b9b9b;
+}
+/* line 46, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .input input[type="text"] {
+  border: 3px solid #eee !important;
+  font-size: 13px;
+}
+/* line 54, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .summary {
+  clear: both;
+  display: block;
+  margin-top: 10px;
+}
+
 /* line 1, ../sass/components/3_components/_menus.scss */
 .menu {
   border: 1px solid #cfcfcf;
@@ -3492,35 +3548,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 49, ../sass/planner.scss */
+/* line 50, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 53, ../sass/planner.scss */
+/* line 54, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 58, ../sass/planner.scss */
+/* line 59, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 60, ../sass/planner.scss */
+/* line 61, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 66, ../sass/planner.scss */
+/* line 67, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 70, ../sass/planner.scss */
+/* line 71, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -3530,12 +3586,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 79, ../sass/planner.scss */
+/* line 80, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 84, ../sass/planner.scss */
+/* line 85, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -3546,7 +3602,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 94, ../sass/planner.scss */
+/* line 95, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -3556,13 +3612,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 103, ../sass/planner.scss */
+/* line 104, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 115, ../sass/planner.scss */
+/* line 116, ../sass/planner.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
   background-position: 25px 13px;
@@ -3572,32 +3628,32 @@ h2 {
   position: fixed;
   z-index: 1;
 }
-/* line 124, ../sass/planner.scss */
+/* line 125, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings {
   float: right;
 }
-/* line 127, ../sass/planner.scss */
+/* line 128, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li {
   float: left;
   padding: 15px 0px;
 }
-/* line 131, ../sass/planner.scss */
+/* line 132, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span {
   color: #f5f6f7;
   padding: 0 15px;
   border-right: 1px solid #f5f6f7;
 }
-/* line 136, ../sass/planner.scss */
+/* line 137, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li span a {
   color: #f5f6f7;
 }
-/* line 142, ../sass/planner.scss */
+/* line 143, ../sass/planner.scss */
 #bionic-stripe #bionic-stripe-settings li:last-child span {
   margin-right: 25px;
   border: none;
 }
 
-/* line 151, ../sass/planner.scss */
+/* line 152, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -3607,7 +3663,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 160, ../sass/planner.scss */
+/* line 161, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -3616,48 +3672,48 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 168, ../sass/planner.scss */
+/* line 169, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 175, ../sass/planner.scss */
+/* line 176, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 183, ../sass/planner.scss */
+/* line 184, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 188, ../sass/planner.scss */
+/* line 189, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 193, ../sass/planner.scss */
+/* line 194, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 198, ../sass/planner.scss */
+/* line 199, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 207, ../sass/planner.scss */
+/* line 208, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 212, ../sass/planner.scss */
+/* line 213, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 5px;
 }
-/* line 218, ../sass/planner.scss */
+/* line 219, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
@@ -3681,17 +3737,17 @@ h2 {
           }
   */
 }
-/* line 222, ../sass/planner.scss */
+/* line 223, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   color: #333;
   cursor: pointer;
 }
-/* line 248, ../sass/planner.scss */
+/* line 249, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton i.fa-times-circle {
   display: none;
 }
-/* line 252, ../sass/planner.scss */
+/* line 253, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -3741,13 +3797,13 @@ h2 {
   width: 16px;
   display: inline-block;
 }
-/* line 257, ../sass/planner.scss */
+/* line 258, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active i.fa-times-circle {
   display: inline-block;
   top: 0 !important;
   margin-right: 0;
 }
-/* line 264, ../sass/planner.scss */
+/* line 265, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu {
   background: #f5f6f7;
   border: none;
@@ -3758,26 +3814,26 @@ h2 {
   max-height: none;
   width: 900px;
 }
-/* line 274, ../sass/planner.scss */
+/* line 275, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
   padding: 12px 5px 8px;
   margin: 0;
 }
-/* line 279, ../sass/planner.scss */
+/* line 280, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 284, ../sass/planner.scss */
+/* line 285, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li.current span {
   background: #ddd;
 }
-/* line 288, ../sass/planner.scss */
+/* line 289, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
-/* line 295, ../sass/planner.scss */
+/* line 296, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown {
   background: #fff;
   border: 1px solid #ddd;
@@ -3789,7 +3845,7 @@ h2 {
   width: 133px;
   box-shadow: 0px 2px 2px #999;
 }
-/* line 306, ../sass/planner.scss */
+/* line 307, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li {
   display: block;
   padding: 12px 5px 8px;
@@ -3798,33 +3854,33 @@ h2 {
   box-sizing: border-box;
   width: 100%;
 }
-/* line 314, ../sass/planner.scss */
+/* line 315, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 319, ../sass/planner.scss */
+/* line 320, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li.current span {
   background: none;
   font-weight: bold;
 }
-/* line 324, ../sass/planner.scss */
+/* line 325, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li:hover {
   background: #f5f6f7;
 }
 
-/* line 335, ../sass/planner.scss */
+/* line 336, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 339, ../sass/planner.scss */
+/* line 340, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 344, ../sass/planner.scss */
+/* line 345, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -3833,7 +3889,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 353, ../sass/planner.scss */
+/* line 354, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -3847,7 +3903,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 366, ../sass/planner.scss */
+/* line 367, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -3866,7 +3922,7 @@ h2 {
   width: 42px;
 }
 
-/* line 384, ../sass/planner.scss */
+/* line 385, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -3876,11 +3932,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 394, ../sass/planner.scss */
+/* line 395, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 397, ../sass/planner.scss */
+/* line 398, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

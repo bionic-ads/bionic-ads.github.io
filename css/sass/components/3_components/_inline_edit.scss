@@ -1,0 +1,60 @@
+.inline_edit {
+    border: 1px solid $medium-gray;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+    display: none;
+    font-size: 11px;
+    position: absolute;
+    background: #fff;
+    margin-top: 30px;
+    padding: 10px;
+    width: 250px;
+    z-index: 99;
+    
+    .title {
+        font-weight: bold;
+        width: 100%
+    }
+    
+    .input {
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        float: left;
+        
+        &.cost-per {
+            width: 150px;
+        }
+        
+        &.overage {
+            margin-left: 10px;
+            width: 80px;
+        }
+        
+        
+        .label {
+            clear: both;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .currency-symbol {
+            color: #9b9b9b;
+        }
+        
+        input[type="text"] {
+            border: 3px solid #eee !important;
+            font-size: 13px;
+        }        
+    }
+    
+
+    
+    .summary {
+        clear: both;
+        display: block;
+        margin-top: 10px;
+    }
+    
+}

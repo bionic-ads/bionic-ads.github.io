@@ -200,7 +200,9 @@
             $(".columnMenuButton").click(function () {
                 $(".menu").toggle();
             });
-                        
+
+
+
             $(".columnMenu li ").click(function () {
                 $($location).text("");
 //                 $('.fixedTable-body').scrollLeft(2852);
@@ -254,6 +256,11 @@
               var excludeCostTechFee = "exclude inactive";
           }
 
+// Itemized Costs
+
+          var costActions = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> <a data-action="edit" class="action cost-edit">Edit</a></div><div class="inline_edit "><div class="title">Cost Per 1,000 Impressions</div><div class="input cost-per"><span class="label">Rate</span><input type="text"></div><div class="input overage"><span class="label">Overage Buffer</span><input type="text"></div><div class="summary">= CHF 403.92 &times; USD 1.04 = USD 210.53 </div></div>';
+
+
 // KPI Actions
           
           var customCPM, customCPC, customCPV;
@@ -306,9 +313,9 @@
           
           mediaPlanBody.append('<td class="divider col-gross-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-net-media col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+ excludeCostOptimization +'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostOptimization+'</a></div>'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTalent+'"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right '+excludeCostTalent+' number kpiCPV'+i + '" type="text" value="'+item.CostTalent+'"></div>'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTechFee+'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostTechFee+'</a></div>'+kpiActionsCPM+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+ excludeCostOptimization +'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostOptimization+'</a></div>'+costActions+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTalent+'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostTalent+'</a></div>'+costActions+'</td>');
+          mediaPlanBody.append('<td class="col-kpi col-production-cost col-cost '+excludeCostTechFee+'"><div class="readonly-amount"><span class="currency-symbol">$</span><a>'+item.CostTechFee+'</a></div>'+costActions+'</td>');
           mediaPlanBody.append('<td class="col-agency-comp col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-total-media-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
@@ -529,7 +536,15 @@
             $("#actionReset"+kpi+item).hide();
             $("#actionExclude"+kpi+item).show();
             $(this).parent().parent().find(".currency-symbol").show();
+        
+        } else if(action == "edit") {
+            var inlineEdit = $(event.target).find('.inline_edit');
+            console.log(inlineEdit);
+            $(event.target).closest("td").find('.inline_edit').toggle();
         }
+        
+        
+        
     });
     
     $(document).on('change', '.cpw', function(){

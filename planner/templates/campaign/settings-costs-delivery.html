@@ -162,7 +162,7 @@ $("tbody").droppable({
                
               
               if(calculationCost.includes("Percentage")){
-                  symbol = ""
+                  symbol = '';
               } else {
                   symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
               }    
@@ -172,7 +172,7 @@ $("tbody").droppable({
                   costRow.append('<td class="width250">'+calculationCost+'</td>')
 //                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
                   costRow.append('<td class="editable width200 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
-                  costRow.append('<td class="editable width200 narrow"><input class="right" type="text" value="%"></td>')
+                  costRow.append('<td class="editable width200 narrow"><span style="float: right; color: #9b9b9b; position: relative; top: 11px; right: 15px;">%</span><input class="right" type="text" value=""></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
               }

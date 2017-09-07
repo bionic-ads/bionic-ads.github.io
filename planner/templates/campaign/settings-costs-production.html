@@ -160,7 +160,7 @@ $("tbody").droppable({
               checked =     item.Checked; 
               
               if(calculationCost.includes("Percentage")){
-                  symbol = ""
+                  symbol = '<span style="float: right; color: #9b9b9b; position: relative; top: 11px; right: 15px;">%</span>';
               } else {
                   symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
               }    
