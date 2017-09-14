@@ -44,7 +44,9 @@ $(document).ready(function() {
     		'campaigns'             : 'showCampaigns',
     		'schedule'              : 'showSchedule',
     		'tasks'                 : 'showTasks',
-    		'allocations'           : 'showAllocations'
+    		'allocations'           : 'showAllocations',
+    		'allocations-costs-campaigns'           : 'showAllocationsCostsCampaigns',
+    		'performance'           : 'showPerformance',
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -107,8 +109,17 @@ $(document).ready(function() {
     	showTasks: function(){
     		$("#bionic-main").load("templates/tasks.html");
     	},    	
+    	
     	showAllocations: function(){
-    		$("#bionic-main").load("templates/allocations.html");
+    		$("#bionic-main").load("templates/allocations-costs.html");
+    	},    	
+    	
+    	showAllocationsCostsCampaigns: function(){
+    		$("#bionic-main").load("templates/allocations-costs-campaigns.html");
+    	},    	
+    	
+    	showPerformance: function(){
+    		$("#bionic-main").load("templates/performance.html");
     	},    	
     });
     

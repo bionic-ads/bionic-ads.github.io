@@ -20,7 +20,7 @@ var templateData = {
 		},
 		{
 			name: "Settings",
-			page: "#/advertiser/settings-costs-production/"
+			page: "#/advertiser/settings-costs-ad-serving/"
 		},
 		{
 			name: "Campaigns",
@@ -36,7 +36,7 @@ var templateData = {
 		},
 		{
 			name: "Allocations",
-			page: "#/advertiser/allocations/"
+			page: "#/advertiser/allocations-costs/"
 		},
 		{
 			name: "Performace",

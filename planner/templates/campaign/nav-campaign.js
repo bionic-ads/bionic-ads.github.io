@@ -55,7 +55,7 @@ var templateData = {
 		},
 		{
 			name: "Allocations",
-			page: "#/campaign/allocations-cost-breakdown/"
+			page: "#/campaign/allocations-costs/"
 		},
 		{
 			name: "Tasks",

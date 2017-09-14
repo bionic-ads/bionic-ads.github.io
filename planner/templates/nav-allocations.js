@@ -16,12 +16,20 @@ var templateData = {
 	listTitle: "Campaign Allocations Subnav",
 	listItems: [
 		{
+			name: "Advertiser Spend",
+			page: ""
+		},
+		{
+			name: "Campaign Spend",
+			page: ""
+		},
+		{
 			name: "Over Time",
 			page: ""
 		},
 		{
 			name: "Costs",
-			page: "#/campaign/allocations-costs/"
+			page: "#/allocations-costs/"
 		},
 		{
 			name: "Agency Compensation",

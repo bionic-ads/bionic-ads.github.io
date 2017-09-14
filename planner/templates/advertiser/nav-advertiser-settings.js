@@ -45,7 +45,7 @@ var templateData = {
 		},
 		{
 			name: "Ad Serving",
-			page: ""
+			page: "#/advertiser/settings-costs-ad-serving/"
 		},
 /*
 		{
