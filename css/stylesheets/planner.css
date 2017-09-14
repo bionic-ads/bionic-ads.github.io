@@ -3063,7 +3063,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 /* line 19, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
-  height: calc(100% - 287px);
+  height: calc(100% - 288px);
 }
 /* line 27, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .mediaPlanFirstColumnHeader {
