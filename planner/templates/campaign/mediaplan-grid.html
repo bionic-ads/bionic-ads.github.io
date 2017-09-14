@@ -63,7 +63,7 @@
         <tr class="group">
             <th colspan="7" ><span>Basics</span></th>
             <th colspan="10" class="divider divider-costs"><span>Costs </span></th>
-            <th colspan="7" class="divider divider-ratings"><span>Ratings</span></th>
+            <th colspan="7" class="divider divider-ratings"><span>Audience</span></th>
             <th colspan="3" class="divider divider-tasks"><span>Tasks</span></th>
             <th colspan="2" class="divider divider-implementation"><span>Implementation</span></th>
             <th colspan="6" class="divider divider-kpis"><span>KPIs</span></th>
@@ -96,7 +96,7 @@
           <th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th>
           <th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th>
           
-<!-- Ratings -->
+<!-- Audience -->
 
           <th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th>
           <th class="col-ratings col-120 "><span><a>Population</a></span></th>
@@ -202,7 +202,7 @@
             <ul>
                 <li class="basics current" rel="0"><i class="fa fa-table"></i><span>Basics</span></li>
                 <li class="costs" rel="1355"><i class="fa fa-money"></i><span>Costs</span></li>
-                <li class="ratings" rel="2853"><i class="fa fa-map-o"></i><span>Audience</span></li>
+                <li class="ratings" rel="2853"><i class="fa fa-users"></i><span>Audience</span></li>
                 <li class="tasks" rel="3673"><i class="fa fa-calendar-plus-o"></i><span>Tasks</span></li>
                 <li class="implementation" rel="4243"><i class="fa fa-sliders"></i><span>URLs</span></li>
                 <li class="kpis" rel="5043"><i class="fa fa-bar-chart"></i><span>KPIs</span></li>
@@ -445,7 +445,7 @@
           }
           
           if(($($body).scrollLeft() > 2852)&&$($body).scrollLeft() < 3574){ 
-              $($location).text("Ratings");
+              $($location).text("Audience");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.ratings").addClass("current");
           }
