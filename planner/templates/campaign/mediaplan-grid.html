@@ -65,7 +65,7 @@
             <th colspan="10" class="divider divider-costs"><span>Costs </span></th>
             <th colspan="7" class="divider divider-ratings"><span>Audience</span></th>
             <th colspan="3" class="divider divider-tasks"><span>Tasks</span></th>
-            <th colspan="2" class="divider divider-implementation"><span>Implementation</span></th>
+            <th colspan="2" class="divider divider-implementation"><span>URLs for Implementation</span></th>
             <th colspan="6" class="divider divider-kpis"><span>KPIs</span></th>
             <th colspan="3" class="divider divider-kpis"><span>Picklists</span></th>
             <th colspan="3" class="divider divider-kpis"><span>Notes & History</span></th>
@@ -182,6 +182,10 @@
             color: #333;
             background: linear-gradient(#cfcfcf,#e9ebed);
             border-radius: 2px;
+        }
+        
+        .mediaplan-nav li.current span {
+            font-weight: bold;
         }
         
         .mediaplan-nav li i {
@@ -465,7 +469,7 @@
           }
 
           if(($($body).scrollLeft() > 4242)&&$($body).scrollLeft() < 4900){ 
-              $($location).text("Implementation");
+              $($location).text("URLs for Implementation");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.implementation").addClass("current");
           }

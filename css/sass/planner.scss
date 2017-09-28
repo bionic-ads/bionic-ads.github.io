@@ -132,12 +132,15 @@ h2 {
             span {
                 color: $light-gray;
                 padding: 0 15px;
-                border-right: 1px solid $light-gray;
+                border-right: 1px solid #555;
                 
                 a {
                     color: $light-gray;
                 }
                 
+                i {
+                    margin-right: 5px;
+                }
             }
         
             &:last-child span {
