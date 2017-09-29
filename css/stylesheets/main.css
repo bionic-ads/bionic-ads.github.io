@@ -4509,13 +4509,14 @@ a {
 /* line 1, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle {
   display: table;
+  float: left;
   padding-right: 8px;
 }
-/* line 6, ../sass/components/2_elements/_toggle.scss */
+/* line 7, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle a {
   color: #333;
 }
-/* line 10, ../sass/components/2_elements/_toggle.scss */
+/* line 11, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle li {
   background: #f5f6f7;
   border: 1px solid #cfcfcf;
@@ -4524,7 +4525,7 @@ a {
   float: left;
   min-width: 100px;
 }
-/* line 19, ../sass/components/2_elements/_toggle.scss */
+/* line 20, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle li:first-child {
   -moz-border-radius-topleft: 3px;
   -webkit-border-top-left-radius: 3px;
@@ -4533,7 +4534,7 @@ a {
   -webkit-border-bottom-left-radius: 3px;
   border-bottom-left-radius: 3px;
 }
-/* line 23, ../sass/components/2_elements/_toggle.scss */
+/* line 24, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle li:last-child {
   -moz-border-radius-topright: 3px;
   -webkit-border-top-right-radius: 3px;
@@ -4542,35 +4543,35 @@ a {
   -webkit-border-bottom-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
-/* line 29, ../sass/components/2_elements/_toggle.scss */
+/* line 30, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle input[type="radio"] {
   display: none;
 }
-/* line 32, ../sass/components/2_elements/_toggle.scss */
+/* line 33, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle input[type="radio"]:checked + label {
   background: linear-gradient(#cfcfcf, #e9ebed);
 }
-/* line 36, ../sass/components/2_elements/_toggle.scss */
+/* line 37, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle input[type="radio"]:disabled + label {
   cursor: default;
 }
-/* line 41, ../sass/components/2_elements/_toggle.scss */
+/* line 42, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle label {
   cursor: pointer;
   display: block;
-  padding: 8px;
+  padding: 6px 8px;
   text-align: center;
   white-space: nowrap;
 }
-/* line 49, ../sass/components/2_elements/_toggle.scss */
+/* line 50, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle label span.text {
   padding: 0 7px;
 }
-/* line 53, ../sass/components/2_elements/_toggle.scss */
+/* line 54, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle label i.fa {
   padding: 0 4px 0 7px;
 }
-/* line 56, ../sass/components/2_elements/_toggle.scss */
+/* line 57, ../sass/components/2_elements/_toggle.scss */
 .page-view-toggle label i.fa ~ span.text {
   padding-left: 0px;
 }
@@ -4689,8 +4690,9 @@ a {
   float: left;
   margin: 0px 8px 0 0;
   line-height: 29px;
+  line-height: 13px;
 }
-/* line 54, ../sass/components/3_components/_filters.scss */
+/* line 56, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master {
   background-color: #f5f6f7;
   box-shadow: none;
@@ -4704,15 +4706,15 @@ a {
   width: calc(100% - 42px);
   height: 100%;
 }
-/* line 67, ../sass/components/3_components/_filters.scss */
+/* line 69, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:not(.no-outline):focus {
   border-width: 1px !important;
 }
-/* line 71, ../sass/components/3_components/_filters.scss */
+/* line 73, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:focus {
   background-color: #fff !important;
 }
-/* line 75, ../sass/components/3_components/_filters.scss */
+/* line 77, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid {
   border: 1px solid #F77B26 !important;
   background-color: #fff !important;
@@ -4720,11 +4722,11 @@ a {
   padding-right: 30px;
   width: calc(100% - 67px);
 }
-/* line 83, ../sass/components/3_components/_filters.scss */
+/* line 85, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid ~ .clear-search-filter {
   display: inline-block;
 }
-/* line 92, ../sass/components/3_components/_filters.scss */
+/* line 94, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .clear-search-filter {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4785,15 +4787,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 111, ../sass/components/3_components/_filters.scss */
+/* line 113, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item {
   cursor: pointer;
 }
-/* line 115, ../sass/components/3_components/_filters.scss */
+/* line 117, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item .fa.fa-filter {
   color: #9B9B9B;
 }
-/* line 121, ../sass/components/3_components/_filters.scss */
+/* line 123, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item span.label:after {
   content: '\f0dd ';
   font-family: "FontAwesome";
@@ -4802,7 +4804,7 @@ a {
   position: relative;
   color: #9B9B9B;
 }
-/* line 130, ../sass/components/3_components/_filters.scss */
+/* line 132, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-off {
   padding: 0 8px;
   border: 1px solid #cfcfcf;
@@ -4810,7 +4812,7 @@ a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 135, ../sass/components/3_components/_filters.scss */
+/* line 137, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4859,15 +4861,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 139, ../sass/components/3_components/_filters.scss */
+/* line 141, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.modal-open {
   padding: 5px 6px 5px 13px;
 }
-/* line 143, ../sass/components/3_components/_filters.scss */
+/* line 145, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.label:after {
   color: inherit;
 }
-/* line 151, ../sass/components/3_components/_filters.scss */
+/* line 153, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options {
   position: absolute;
   z-index: 99999;
@@ -4877,7 +4879,7 @@ a {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
 }
-/* line 165, ../sass/components/3_components/_filters.scss */
+/* line 167, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .overlay {
   background-color: transparent;
   display: block;
@@ -4887,12 +4889,12 @@ a {
   z-index: -5;
   left: 0;
 }
-/* line 175, ../sass/components/3_components/_filters.scss */
+/* line 177, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .pad {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 192, ../sass/components/3_components/_filters.scss */
+/* line 194, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle input.list-filter-search {
   padding: 5px 5px 5px 30px;
   box-sizing: border-box;
@@ -4900,7 +4902,7 @@ a {
   width: calc(100% - 20px);
   background-size: 16px;
 }
-/* line 200, ../sass/components/3_components/_filters.scss */
+/* line 202, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul {
   max-height: 200px;
   display: block;
@@ -4909,84 +4911,84 @@ a {
   padding: 7px 0 4px 0;
   border-top: 1px solid #cfcfcf;
 }
-/* line 208, ../sass/components/3_components/_filters.scss */
+/* line 210, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul li.divider {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 219, ../sass/components/3_components/_filters.scss */
+/* line 221, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox div:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox span:focus {
   outline: none;
 }
-/* line 225, ../sass/components/3_components/_filters.scss */
+/* line 227, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label span.box {
   top: -2px;
 }
-/* line 235, ../sass/components/3_components/_filters.scss */
+/* line 237, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section {
   border-top: 1px solid #CCC;
 }
-/* line 238, ../sass/components/3_components/_filters.scss */
+/* line 240, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 244, ../sass/components/3_components/_filters.scss */
+/* line 246, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not {
   border-top: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 250, ../sass/components/3_components/_filters.scss */
+/* line 252, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 282, ../sass/components/3_components/_filters.scss */
+/* line 284, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate span {
   text-align: center;
   width: 100%;
   display: block;
 }
-/* line 293, ../sass/components/3_components/_filters.scss */
+/* line 295, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-on, .nxm-menu-filters .filter-section.filter-on .filter-off {
   display: none;
 }
-/* line 298, ../sass/components/3_components/_filters.scss */
+/* line 300, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-off, .nxm-menu-filters .filter-section.filter-on .filter-on {
   display: block;
 }
-/* line 304, ../sass/components/3_components/_filters.scss */
+/* line 306, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.disabled span.label:after {
   color: #ccc;
 }
-/* line 310, ../sass/components/3_components/_filters.scss */
+/* line 312, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .custom-fields {
   display: none;
 }
-/* line 314, ../sass/components/3_components/_filters.scss */
+/* line 316, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.CUSTOM ~ .custom-fields {
   display: block;
 }
-/* line 318, ../sass/components/3_components/_filters.scss */
+/* line 320, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.EMPTY ~ .date-fields,
 .nxm-menu-filters span.NOT_EMPTY ~ .date-fields {
   display: none;
 }
-/* line 323, ../sass/components/3_components/_filters.scss */
+/* line 325, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate {
   display: none;
 }
-/* line 327, ../sass/components/3_components/_filters.scss */
+/* line 329, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.BETWEEN ~ .date-fields span.endDate,
 .nxm-menu-filters span.NOT_BETWEEN ~ .date-fields span.endDate {
   display: block;
 }
 
-/* line 335, ../sass/components/3_components/_filters.scss */
+/* line 337, ../sass/components/3_components/_filters.scss */
 .bionic-filter {
   border: 1px solid #cfcfcf;
   border-radius: 3px;
@@ -5001,13 +5003,13 @@ a {
   background-repeat: no-repeat;
   background-size: auto auto;
 }
-/* line 350, ../sass/components/3_components/_filters.scss */
+/* line 352, ../sass/components/3_components/_filters.scss */
 .bionic-filter i {
   color: #999;
   margin-right: 3px;
 }
 
-/* line 356, ../sass/components/3_components/_filters.scss */
+/* line 358, ../sass/components/3_components/_filters.scss */
 .bionic-filter-menu {
   background: #fff;
   display: block;

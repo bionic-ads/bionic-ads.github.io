@@ -49,10 +49,12 @@ var templateData = {
 			name: "Flowchart",
 			page: "#/campaign/flowchart/"
 		},
+/*
 		{
 			name: "Schedule",
 			page: "#/campaign/schedule/"
 		},
+*/
 		{
 			name: "Allocations",
 			page: "#/campaign/allocations-costs/"

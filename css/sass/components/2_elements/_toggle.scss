@@ -1,6 +1,7 @@
 .page-view-toggle {
     // width: 200px;
     display: table;
+    float: left;
     padding-right: 8px;
 
     a {
@@ -41,7 +42,7 @@
     label{
         cursor: pointer;
         display: block;
-        padding: 8px;
+        padding: 6px 8px;
         text-align: center;
         white-space: nowrap;
         // padding-right: 6px; 
