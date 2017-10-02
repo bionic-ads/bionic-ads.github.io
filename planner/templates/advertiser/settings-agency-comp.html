@@ -45,18 +45,17 @@
 
 <div class="block has-subnav">
 
-<h2>Production Costs</h2> 
+<h2>Agency Compensation</h2> 
 
 <div class="alert">
     <span class="fa fa-exclamation-triangle"></span>
     <p>
-        <strong>Note:</strong> These are the default <strong>Production Costs</strong> that will be added to any <strong>new</strong>
-        campaigns that you create for this advertiser. Campaigns that you've already created will not
-        be affected by the changes you make here.
+        <strong>Note:</strong> These are the default <strong>Agency Compensation</strong> fees that will be added to any <strong>new</strong>
+        campaigns created for this advertiser. Campaigns that you've already created will not
+        be affected by changes you make here.
     </p>
 </div>
 
-<p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p>
 <!--
 <ul>
         <li class="menu">Select Production Costs
@@ -91,7 +90,7 @@
 
 
 <br>
-<a class="open-modal" href="templates/modals/settings/production-costs.html" rel="modal:open" style="font-weight: bold;" >Select Production Costs</a>
+<a class="open-modal" href="templates/modals/settings/agency-comp.html" rel="modal:open" style="font-weight: bold;" > Select Agency Compensation Fees</a>
 <br>
 <br>
 
@@ -165,16 +164,17 @@ $("tbody").droppable({
               calculationValue = item.CalculationValue;
               overageBuffer = item.OverageBuffer;
               checked =     item.Checked; 
-              if(calculationCost == "Percentage of"){
-                  symbol = ""
-              } else {
-                  symbol = '<span class="currency-symbol">$</span>';
-              }
               
-              if((type == "Production")&&(checked == "checked")) {
+              if(calculationCost.includes("Percentage")){
+                  symbol = '<span style="float: right; color: #9b9b9b; position: relative; top: 11px; right: 15px;">%</span>';
+              } else {
+                  symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
+              }    
+              
+              if((type == "Agency")&&(checked == "checked")) {
                   costRow = $('<tr><td></td><td><strong>'+name+'</strong></td>');
                   costRow.append('<td class="width100">'+calculationCost+'</td>')
-                  costRow.append('<td class="editable width300 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td class="editable width250 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
               }

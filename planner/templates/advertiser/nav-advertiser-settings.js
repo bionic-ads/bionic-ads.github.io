@@ -40,8 +40,16 @@ var templateData = {
 			page: ""
 		},
 		{
+			name: "Production Costs",
+			page: "#/advertiser/settings-costs-production/"
+		},
+		{
 			name: "Agency Compensation",
-			page: ""
+			page: "#/advertiser/settings-agency-comp/"
+		},
+		{
+			name: "Delivery Costs",
+			page: "#/advertiser/settings-costs-delivery/"
 		},
 		{
 			name: "Ad Serving",

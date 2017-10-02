@@ -3024,7 +3024,8 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 
 /* line 47, ../sass/components/7_prototype/_grid.scss */
 .fixedTable-body {
-  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: auto;
   width: calc(100% - 310px);
   height: calc(100vh - 270px);
   float: left;

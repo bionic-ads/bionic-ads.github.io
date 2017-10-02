@@ -45,7 +45,8 @@ $firstcolumn: 275px;
 }
 
 .fixedTable-body {
-  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: auto;
   width: calc(100% - 310px);
   height: calc(100vh - 270px);
   float: left;

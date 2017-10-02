@@ -77,7 +77,8 @@
     <thead>
         <tr>
             <th colspan="2">Cost</th>
-            <th colspan="3">Calculation</th>
+            <th colspan="1">Method</th>
+            <th>Rate</th>
             <th></th>
         </tr>
     </thead>
@@ -90,7 +91,7 @@
 
 
 <br>
-<a class="blue-button open-modal" href="templates/modals/settings/delivery-costs.html" rel="modal:open" >Select Delivery Costs</a>
+<a class="open-modal" href="templates/modals/settings/delivery-costs.html" rel="modal:open" style="font-weight: bold;" >Select Delivery Costs</a>
 <br>
 <br>
 
@@ -168,17 +169,16 @@ $("tbody").droppable({
               calculationValue = item.CalculationValue;
               overageBuffer = item.OverageBuffer;
               checked =     item.Checked; 
-              if(calculationCost == "Percentage of"){
-                  symbol = ""
+              if(calculationCost.includes("Percentage")){
+                  symbol = '<span style="float: right; color: #9b9b9b; position: relative; top: 11px; right: 15px;">%</span>';
               } else {
-                  symbol = '<span class="currency-symbol">$</span>';
-              }          
+                  symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
+              }    
           
               if((type == "Delivery")&&(checked == "checked")) {
-                  costRow = $('<tr><td></td><td class="width350"><strong>'+name+'</strong></td>');
+                  costRow = $('<tr><td></td><td class=""><strong>'+name+'</strong></td>');
                   costRow.append('<td class="width100">'+calculationCost+'</td>')
-                  costRow.append('<td class="width250">'+calculationBasis+'</td>')
-                  costRow.append('<td class="editable width100 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td class="editable width300 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
               }
