@@ -4692,7 +4692,7 @@ a {
   line-height: 29px;
   line-height: 13px;
 }
-/* line 56, ../sass/components/3_components/_filters.scss */
+/* line 57, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master {
   background-color: #f5f6f7;
   box-shadow: none;
@@ -4706,15 +4706,15 @@ a {
   width: calc(100% - 42px);
   height: 100%;
 }
-/* line 69, ../sass/components/3_components/_filters.scss */
+/* line 70, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:not(.no-outline):focus {
   border-width: 1px !important;
 }
-/* line 73, ../sass/components/3_components/_filters.scss */
+/* line 74, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:focus {
   background-color: #fff !important;
 }
-/* line 77, ../sass/components/3_components/_filters.scss */
+/* line 78, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid {
   border: 1px solid #F77B26 !important;
   background-color: #fff !important;
@@ -4722,11 +4722,11 @@ a {
   padding-right: 30px;
   width: calc(100% - 67px);
 }
-/* line 85, ../sass/components/3_components/_filters.scss */
+/* line 86, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters input[type=text].filter-search-master:valid ~ .clear-search-filter {
   display: inline-block;
 }
-/* line 94, ../sass/components/3_components/_filters.scss */
+/* line 95, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .clear-search-filter {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4787,15 +4787,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 113, ../sass/components/3_components/_filters.scss */
+/* line 114, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item {
   cursor: pointer;
 }
-/* line 117, ../sass/components/3_components/_filters.scss */
+/* line 118, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item .fa.fa-filter {
   color: #9B9B9B;
 }
-/* line 123, ../sass/components/3_components/_filters.scss */
+/* line 124, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item span.label:after {
   content: '\f0dd ';
   font-family: "FontAwesome";
@@ -4804,7 +4804,7 @@ a {
   position: relative;
   color: #9B9B9B;
 }
-/* line 132, ../sass/components/3_components/_filters.scss */
+/* line 133, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-off {
   padding: 0 8px;
   border: 1px solid #cfcfcf;
@@ -4812,7 +4812,7 @@ a {
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
-/* line 137, ../sass/components/3_components/_filters.scss */
+/* line 138, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4861,15 +4861,15 @@ a {
   width: 16px;
   display: inline-block;
 }
-/* line 141, ../sass/components/3_components/_filters.scss */
+/* line 142, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.modal-open {
   padding: 5px 6px 5px 13px;
 }
-/* line 145, ../sass/components/3_components/_filters.scss */
+/* line 146, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .menu-item.filter-on span.label:after {
   color: inherit;
 }
-/* line 153, ../sass/components/3_components/_filters.scss */
+/* line 154, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options {
   position: absolute;
   z-index: 99999;
@@ -4879,7 +4879,7 @@ a {
   -moz-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15) ;
 }
-/* line 167, ../sass/components/3_components/_filters.scss */
+/* line 168, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .overlay {
   background-color: transparent;
   display: block;
@@ -4889,12 +4889,12 @@ a {
   z-index: -5;
   left: 0;
 }
-/* line 177, ../sass/components/3_components/_filters.scss */
+/* line 178, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .pad {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* line 194, ../sass/components/3_components/_filters.scss */
+/* line 195, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle input.list-filter-search {
   padding: 5px 5px 5px 30px;
   box-sizing: border-box;
@@ -4902,7 +4902,7 @@ a {
   width: calc(100% - 20px);
   background-size: 16px;
 }
-/* line 202, ../sass/components/3_components/_filters.scss */
+/* line 203, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul {
   max-height: 200px;
   display: block;
@@ -4911,84 +4911,84 @@ a {
   padding: 7px 0 4px 0;
   border-top: 1px solid #cfcfcf;
 }
-/* line 210, ../sass/components/3_components/_filters.scss */
+/* line 211, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul li.divider {
   padding-bottom: 5px;
   margin-bottom: 5px;
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 221, ../sass/components/3_components/_filters.scss */
+/* line 222, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox div:focus,
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox span:focus {
   outline: none;
 }
-/* line 227, ../sass/components/3_components/_filters.scss */
+/* line 228, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .filter-middle ul .bionic-checkbox label span.box {
   top: -2px;
 }
-/* line 237, ../sass/components/3_components/_filters.scss */
+/* line 238, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section {
   border-top: 1px solid #CCC;
 }
-/* line 240, ../sass/components/3_components/_filters.scss */
+/* line 241, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 246, ../sass/components/3_components/_filters.scss */
+/* line 247, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not {
   border-top: 1px solid #cfcfcf;
   padding: 10px;
 }
-/* line 252, ../sass/components/3_components/_filters.scss */
+/* line 253, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-options .footer-section-not input {
   padding: 4px 10px;
   margin: 0 7px 0 0;
 }
-/* line 284, ../sass/components/3_components/_filters.scss */
+/* line 285, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate span {
   text-align: center;
   width: 100%;
   display: block;
 }
-/* line 295, ../sass/components/3_components/_filters.scss */
+/* line 296, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-on, .nxm-menu-filters .filter-section.filter-on .filter-off {
   display: none;
 }
-/* line 300, ../sass/components/3_components/_filters.scss */
+/* line 301, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.filter-off .filter-off, .nxm-menu-filters .filter-section.filter-on .filter-on {
   display: block;
 }
-/* line 306, ../sass/components/3_components/_filters.scss */
+/* line 307, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .filter-section.disabled span.label:after {
   color: #ccc;
 }
-/* line 312, ../sass/components/3_components/_filters.scss */
+/* line 313, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters .custom-fields {
   display: none;
 }
-/* line 316, ../sass/components/3_components/_filters.scss */
+/* line 317, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.CUSTOM ~ .custom-fields {
   display: block;
 }
-/* line 320, ../sass/components/3_components/_filters.scss */
+/* line 321, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.EMPTY ~ .date-fields,
 .nxm-menu-filters span.NOT_EMPTY ~ .date-fields {
   display: none;
 }
-/* line 325, ../sass/components/3_components/_filters.scss */
+/* line 326, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.endDate {
   display: none;
 }
-/* line 329, ../sass/components/3_components/_filters.scss */
+/* line 330, ../sass/components/3_components/_filters.scss */
 .nxm-menu-filters span.BETWEEN ~ .date-fields span.endDate,
 .nxm-menu-filters span.NOT_BETWEEN ~ .date-fields span.endDate {
   display: block;
 }
 
-/* line 337, ../sass/components/3_components/_filters.scss */
+/* line 338, ../sass/components/3_components/_filters.scss */
 .bionic-filter {
   border: 1px solid #cfcfcf;
   border-radius: 3px;
@@ -5003,13 +5003,13 @@ a {
   background-repeat: no-repeat;
   background-size: auto auto;
 }
-/* line 352, ../sass/components/3_components/_filters.scss */
+/* line 353, ../sass/components/3_components/_filters.scss */
 .bionic-filter i {
   color: #999;
   margin-right: 3px;
 }
 
-/* line 358, ../sass/components/3_components/_filters.scss */
+/* line 359, ../sass/components/3_components/_filters.scss */
 .bionic-filter-menu {
   background: #fff;
   display: block;
@@ -5142,12 +5142,21 @@ a {
   height: calc(100vh - 296px);
   display: block;
 }
-/* line 75, ../sass/components/3_components/_grid.scss */
+/* line 72, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.performance .currency-symbol {
+  margin-left: 50px;
+}
+/* line 78, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.performance-advertisers .fixedtable-sidebar, .grid.fixedTable.performance-advertisers .fixedtable-body {
+  height: calc(100vh - 265px);
+  display: block;
+}
+/* line 88, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridFirstColumnHeader {
   position: absolute;
   width: 321px;
 }
-/* line 81, ../sass/components/3_components/_grid.scss */
+/* line 94, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridColumnHeader th,
 .grid.fixedTable tr th {
   height: 30px;
@@ -5158,46 +5167,46 @@ a {
   text-align: left;
   border-collapse: collapse;
 }
-/* line 96, ../sass/components/3_components/_grid.scss */
+/* line 109, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns {
   counter-reset: rowNumber;
 }
-/* line 100, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr {
+/* line 113, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total) {
   counter-increment: rowNumber;
 }
-/* line 103, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr td:first-child {
+/* line 116, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child {
   background: #f5f6f7;
   border-right: 1px solid #cfcfcf;
   padding: 0;
   padding-top: 11px;
   text-align: center;
 }
-/* line 111, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr td:first-child::before {
+/* line 124, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child::before {
   content: counter(rowNumber);
 }
-/* line 119, ../sass/components/3_components/_grid.scss */
+/* line 132, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th {
   white-space: nowrap;
   box-sizing: border-box;
 }
-/* line 124, ../sass/components/3_components/_grid.scss */
+/* line 137, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .inactive {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
   height: 100%;
 }
-/* line 133, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable tr.hover td {
+/* line 146, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr:not(.total).hover td {
   background: #E6F2F8 !important;
 }
-/* line 137, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable tr.hover .inactive input {
+/* line 150, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr:not(.total).hover .inactive input {
   background: #fff !important;
 }
-/* line 143, ../sass/components/3_components/_grid.scss */
+/* line 156, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr td {
   background: #fff;
   height: 55px;
@@ -5205,43 +5214,50 @@ a {
   border-bottom: 1px solid #eee;
   border-right: 1px solid #ddd;
 }
-/* line 151, ../sass/components/3_components/_grid.scss */
+/* line 164, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr.total td {
+  background: #f5f6f7;
+  border-top: 1px solid #cfcfcf;
+  font-weight: bold;
+  border-left: 1px solid transparent;
+}
+/* line 171, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive {
   background: #fff;
   background-image: none !important;
 }
-/* line 156, ../sass/components/3_components/_grid.scss */
+/* line 176, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive.admin td {
   background: #fff;
   opacity: 0.5;
 }
-/* line 161, ../sass/components/3_components/_grid.scss */
+/* line 181, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table {
   border-collapse: collapse;
 }
-/* line 164, ../sass/components/3_components/_grid.scss */
+/* line 184, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th, .grid.fixedTable table td, .grid.fixedTable table tr {
   box-sizing: border-box;
 }
-/* line 167, ../sass/components/3_components/_grid.scss */
+/* line 187, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th.readonly, .grid.fixedTable table th.link, .grid.fixedTable table td.readonly, .grid.fixedTable table td.link, .grid.fixedTable table tr.readonly, .grid.fixedTable table tr.link {
   padding: 5px;
   box-sizing: border-box;
   display: inline-block;
 }
-/* line 173, ../sass/components/3_components/_grid.scss */
+/* line 193, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number, .grid.fixedTable table td .col-line-number, .grid.fixedTable table tr .col-line-number {
   color: #ccc;
   font-size: 2em;
   padding: 0px;
   width: 100px;
 }
-/* line 179, ../sass/components/3_components/_grid.scss */
+/* line 199, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number span, .grid.fixedTable table td .col-line-number span, .grid.fixedTable table tr .col-line-number span {
   display: block;
   padding: 10px;
 }
-/* line 186, ../sass/components/3_components/_grid.scss */
+/* line 206, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-checkbox, .grid.fixedTable table td .col-checkbox, .grid.fixedTable table tr .col-checkbox {
   max-width: 22px;
   min-width: 22px;
@@ -5250,24 +5266,24 @@ a {
   background-size: 4px 4px;
   height: 100%;
 }
-/* line 195, ../sass/components/3_components/_grid.scss */
+/* line 215, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-placement-name, .grid.fixedTable table td .col-placement-name, .grid.fixedTable table tr .col-placement-name {
   color: #69AED4;
   width: 177px !important;
   padding: 5px;
 }
-/* line 205, ../sass/components/3_components/_grid.scss */
+/* line 225, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th span {
   display: block;
   box-sizing: border-box;
 }
-/* line 210, ../sass/components/3_components/_grid.scss */
+/* line 230, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 216, ../sass/components/3_components/_grid.scss */
+/* line 236, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -5281,16 +5297,16 @@ a {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 229, ../sass/components/3_components/_grid.scss */
+/* line 249, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 234, ../sass/components/3_components/_grid.scss */
+/* line 254, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 238, ../sass/components/3_components/_grid.scss */
+/* line 258, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -5298,19 +5314,19 @@ a {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 246, ../sass/components/3_components/_grid.scss */
+/* line 266, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 253, ../sass/components/3_components/_grid.scss */
+/* line 273, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 260, ../sass/components/3_components/_grid.scss */
+/* line 280, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions {
   color: #999;
   font-size: 11px;
@@ -5320,24 +5336,24 @@ a {
   position: absolute;
   white-space: nowrap;
 }
-/* line 269, ../sass/components/3_components/_grid.scss */
+/* line 289, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 278, ../sass/components/3_components/_grid.scss */
+/* line 298, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 282, ../sass/components/3_components/_grid.scss */
+/* line 302, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 287, ../sass/components/3_components/_grid.scss */
+/* line 307, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 292, ../sass/components/3_components/_grid.scss */
+/* line 312, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable:focus {
   border-width: 1px;
 }

@@ -14,6 +14,7 @@
 @import "components/2_elements/_buttons.scss";
 @import "components/2_elements/_checkboxes.scss";
 @import "components/2_elements/_dropdowns.scss";
+@import "components/2_elements/_emoticons.scss";
 @import "components/2_elements/_inputs.scss";
 @import "components/2_elements/_links.scss";
 @import "components/2_elements/_loading.scss";
@@ -31,11 +32,13 @@
 @import "components/3_components/_menus.scss";
 @import "components/3_components/_modals.scss";
 @import "components/3_components/_navigation.scss";
+@import "components/3_components/_rating.scss";
 @import "components/3_components/_tables.scss";
 
 @import "components/4_layouts/_overview.scss";
 @import "components/4_layouts/_move.scss";
 @import "components/4_layouts/_line-cost.scss";
+@import "components/4_layouts/_performance-table.scss";
 @import "components/4_layouts/_settings.scss";
 @import "components/4_layouts/_tasks.scss";
 

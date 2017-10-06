@@ -27,7 +27,7 @@ table {
     background-size: 4px 4px !important;
     }
     
-    tr:hover td{
+    tr:not(.total):hover td{
         background: #E6F2F8 !important;
     }
 }

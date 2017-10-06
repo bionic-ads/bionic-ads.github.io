@@ -1,0 +1,45 @@
+.emoticon {
+    background: url("../images/emoticons.svg") no-repeat;
+    width: 40px;
+    height: 40px;
+    float: left;
+    
+    &.performance-table {
+        background-size: 200%;
+        cursor: pointer;
+        padding: 0 !important;
+        width: 30px;
+        height: 30px;
+        margin-left:10px;
+        margin-top:7px;
+    }
+    
+    &.big-grin {
+        background-position: 100% 33.33%;
+    }
+    
+    &.happy {
+        background-position: 100% 66.66%;
+    }
+    
+    &.smug {
+        background-position: 100% 100%;
+    }
+
+    &.straight-face {
+        background-position: 0 0;
+    }
+
+    &.unhappy {
+        background-position: 0 33.33%;
+    }
+
+    &.angry {
+        background-position: 0 66.66%;
+    }
+
+    &.sleepy {
+        background-position: 0 100%;
+    }
+    
+}

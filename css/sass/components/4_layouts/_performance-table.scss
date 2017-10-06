@@ -1,0 +1,20 @@
+.performance {
+    
+    .performance-details {
+        border: 1px solid #cfcfcf;
+        border-radius: 3px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+        display: none;
+        font-size: 13px;
+        height: 100px;
+        position: fixed;
+        background: #fff;
+        margin-top: -140px;
+        padding: 20px;
+        text-align: left;
+        width: 500px;
+        z-index: 99;
+    }
+    
+}

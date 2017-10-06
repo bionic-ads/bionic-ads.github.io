@@ -1,22 +1,20 @@
-<div class="bionic-campaign-header bionic-header block fullwidth">
+<div class="bionic-advertiser-header bionic-header block fullwidth">
                 
-    <h1 id="campaignname">...</h1>
-    
-    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
-    
-    <script type="text/template" class="campaignNav">
+    <h1>Advertiser Name</h1>
+        
+    <script type="text/template" class="advertiserNav">
 
     	<ul class="bionic-tab-menu">
-    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+    		<% _.each( bionic.advertiserNavItems, function( advertiserNavItem ){ %>
             <% 
                 var url = window.location.href;
                 var theID = url.substring(url.lastIndexOf('/') + 1);
-                var directory = url.substring(url.lastIndexOf('#/campaign/'));
-                var group = campaignNavItem.group;
-                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+                var directory = url.substring(url.lastIndexOf('#/advertiser/'));
+                var group = advertiserNavItem.group;
+                if (window.location.hash.substr(1,18) == advertiserNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
             %>
     			<li>
-    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    				<a <%= currentnav %> href="<%- advertiserNavItem.page %>"><%- advertiserNavItem.name %></a>
     			</li>
     
     		<% }); %>
@@ -25,6 +23,7 @@
 	</script>
 </div>
 
+
 <script type="text/template" class="template">
 	
 	<ul class="bionic-subnav-menu">
@@ -32,8 +31,8 @@
         <% 
             var url = window.location.href;
             var theID = url.substring(url.lastIndexOf('/') + 1);
-            var page = url.substring(url.lastIndexOf('#/campaign/'));
-            if (listItem.page + theID == page){ var currentSubnav = 'class="current"'; } 
+            var page = url.substring(url.lastIndexOf('#/advertiser/'));
+            if (listItem.page == page){ var currentSubnav = 'class="current"'; } 
         %>
 			<li>
 				<a <%= currentSubnav %> href="<%- listItem.page %>"><%- listItem.name %></a>
@@ -45,31 +44,39 @@
 </script>
 
 <div class="block has-subnav">
-    
-<h2>Production Costs</h2> 
 
-<!-- <p><strong>Note: </strong>The order of these costs are the order they will appear as columns on the Media Plan. <br>Change the order they appear in the Media Plan by dragging the rows below.</p> -->
+<h2>Agency Compensation</h2> 
+
+<div class="alert">
+    <span class="fa fa-exclamation-triangle"></span>
+    <p>
+        <strong>Note:</strong> These are the default <strong>Agency Compensation</strong> fees that will be added to any <strong>new</strong>
+        campaigns created for this advertiser. Campaigns that you've already created will not be affected by changes you make here.
+    </p>
+</div>
+
 <!--
 <ul>
-        <li class=""><div class="bionic-filter bionic-filter-off"><i class="fa fa-filter"></i> Select Production Costs</div>
+        <li class="menu">Select Production Costs
 
-            <ul class="menu custom-form-controls">
-                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">one</label>
+            <ul class="menu">
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
                 </li>
-                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">two</label>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
                 </li>
-                <li><input id="cb'+i+'" type="checkbox" 'checked'><label for="cb'+i+'">three</label>
+                <li><a href="#">Parent 1 &raquo; Child 1</a>
                 </li>
             </ul>
         </li>
 </ul>
 -->
-<p><strong>Note: </strong>The order of these costs are the order they will appear on the Media Plan. Reorder by dragging.</p>
 
+
+<p><strong>Itemized Fees</strong></p>
 <table class="addToCampaign custom-form-controls simple gridlines" id="costs">
     <thead>
         <tr>
-            <th colspan="2" class="">Cost</th>
+            <th colspan="2">Cost</th>
             <th colspan="1">Method</th>
             <th>Rate</th>
             <th></th>
@@ -84,13 +91,12 @@
 
 
 <br>
-
-<a class="gray-button open-modal" href="templates/modals/settings/production-costs.html" rel="modal:open" style="font-weight: bold;" ><i class="fa fa-list"></i> Select Production Costs</a>
+<a class="open-modal" href="templates/modals/settings/agency-comp.html" rel="modal:open" style="font-weight: bold;" > Select Agency Compensation Fees</a>
+<br>
+<br>
 
 </div>
 
-<script type="text/javascript" src="templates/campaign/nav-campaign.js"></script>
-<script type="text/javascript" src="templates/campaign/nav-campaign-settings.js"></script>
 <script>
 $(document).ready(function () {
     $("li").click(function () {
@@ -165,10 +171,10 @@ $("tbody").droppable({
               } else {
                   symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
               }    
-              if((type == "Production")&&(checked == "checked")) {
-                  costRow = $('<tr><td></td><td class="width250">'+name+'</td>');
-                  costRow.append('<td class="width250">'+calculationCost+'</td>')
-//                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
+              
+              if((type == "Agency")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td><strong>'+name+'</strong></td>');
+                  costRow.append('<td class="width100">'+calculationCost+'</td>')
                   costRow.append('<td class="editable width250 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
                   costRow.append('<td>Remove</td></tr>')
                   costRow.appendTo("#costs tbody");
@@ -181,3 +187,6 @@ $("tbody").droppable({
 
         
 </script>
+
+<script type="text/javascript" src="templates/advertiser/nav-advertiser.js"></script>
+<script type="text/javascript" src="templates/advertiser/nav-advertiser-settings.js"></script>

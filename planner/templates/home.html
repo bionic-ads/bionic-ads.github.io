@@ -23,6 +23,81 @@
 
     <div class="bionic-content block fullwidth">
 
+    <p class="toggleRatings" style="float: right; color: #cfcfcf;"><span rel="one">New User</span> | <span rel="two">Previously Rated</span> | <span rel="three">In Page</span> | <span rel="four">Previously Rated In Page</span></p>
+
+    <p class="ratings one" style="">You haven't rated Bionic yet <a style="margin-left: 5px;" rel="modal:open" href="templates/modals/home/user-ratings-1.html"><strong>Rate Bionic Now</strong></a></p>
+<!-- <span style="background: #FBE0B4; font-weight: bold; padding-top: 3px; box-sizing: border-box; height:24px; width: 24px; border-radius: 50%; text-align: center; display: inline-block;">8</span> -->
+    <p class="ratings two" style="display: none;">You rated Bionic <span style="font-weight: bold;">8</span> out of 10 on October 5, 2017 <a style="margin-left: 5px;"  rel="modal:open" href="templates/modals/home/user-ratings-1.html"><strong>Change Your Rating</strong></a></p>
+
+    <div class="ratings three" style="display: none;">
+    <h2>How Are We Doing?</h2>
+    <div style="width: 100%;  box-sizing: border-box; display: block; float: left; padding: 20px; background: #e9ebed; border-radius: 3px; border: 0px solid #cfcfcf; margin-bottom: 20px;">
+    
+    <p style="width: 180px; margin-top: 0; margin-right: 20px; float: left;">Please help us understand your experience with Bionic by answering this 1-question survey. Thank you!</p>
+    <div style="width: 495px; float: left;">
+        <p style="margin-top: 0;"><strong>How likely are you to recommend Bionic to a friend or colleague?</strong></p>
+        
+        
+        <div class="user-rating onpage" style="margin-top: 0;">
+            <div class="bionic-radio">
+                <input id="item0" name="type" type="radio" value="0">
+                <a rel="modal:open" href="templates/modals/home/user-ratings-1.html" style="color: #333;">
+                <label for="item0" class="red">
+                    <span>0</span>
+                </label>
+                </a>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item1" name="type" type="radio" value="1">
+                <label for="item1" class="red"><span>1</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item2" name="type" type="radio" value="2">
+                <label for="item2" class="red"><span>2</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item3" name="type" type="radio" value="3">
+                <label for="item3" class="red"><span>3</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item4" name="type" type="radio" value="4">
+                <label for="item4" class="red"><span>4</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item5" name="type" type="radio" value="5">
+                <label for="item5" class="red"><span>5</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item6" name="type" type="radio" value="6">
+                <label for="item6" class="red"><span>6</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item7" name="type" type="radio" value="7">
+                <label for="item7" class="yellow"><span>7</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item8" name="type" type="radio" value="8">
+                <label for="item8" class="yellow"><span>8</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item9" name="type" type="radio" value="9">
+                <label for="item9" class="green"><span>9</span></label>
+            </div>   
+            <div class="bionic-radio">
+                <input id="item10" name="type" type="radio" value="10">
+                <label for="item10" class="green"><span>10</span></label>
+            </div>   
+        </div>
+        </a>
+        <div class="user-rating-legend">
+            <span><i class="fa fa-frown-o"></i> Not Likely</span>
+            <span class="right">Very Likely <i class="fa fa-smile-o"></i> </span>
+        </div>
+
+    </div>
+    </div>
+    </div>
+    
     <h2>Most Recent Campaigns</h2>
         
         <table id="MostRecentCampaigns" class="module block fullwidth">
@@ -63,7 +138,9 @@ Here's the content
 
 <script type="text/javascript">
         
-
+      var showRating, url;
+      url = window.location.href;
+      showRating = url.substring(url.lastIndexOf('/') + 1);
         
       var spreadsheetTab = "MostRecentCampaigns";
       
@@ -78,6 +155,23 @@ Here's the content
                          debug: true } )
       
       })
+        
+      $(".toggleRatings span").click(function(){
+          
+          ratingsState = $(this).attr('rel');
+          
+          $(".ratings").hide();
+          $(".ratings."+ratingsState).show();
+          
+          
+      });  
+      
+      
+      $(".onpage label").click(function(){
+          radio_value = $(this).prev("input[type='radio']").val();
+          console.log("#modal-item"+radio_value);
+          $("#modal-item"+radio_value).prop('checked', true);
+      });
         
       function showInfo(data, tabletop) {
 

@@ -68,6 +68,19 @@
         }   
     } 
     
+    &.performance {
+        .currency-symbol {
+            margin-left: 50px;
+        }
+    }
+    
+    &.performance-advertisers {
+        .fixedtable-sidebar, .fixedtable-body {
+            height: calc(100vh - 265px);
+            display: block;
+        }   
+    }
+    
     .fixedTable-sidebar table tr td {
 //         width: auto;
     }
@@ -97,7 +110,7 @@
         
         counter-reset: rowNumber;
     
-        tr {
+        tr:not(.total) {
             counter-increment: rowNumber;
         
             td:first-child {
@@ -128,7 +141,7 @@
 //         background: #f5f6f7 !important;
     }
     
-    tr.hover { 
+    tr:not(.total).hover { 
         
         td {
             background: #E6F2F8 !important;
@@ -146,6 +159,13 @@
         vertical-align: top;
         border-bottom: 1px solid #eee;
         border-right: 1px solid #ddd;
+    }
+    
+    tr.total td {
+        background: #f5f6f7;
+        border-top: 1px solid #cfcfcf;
+        font-weight: bold;
+        border-left: 1px solid transparent;
     }
     
     tr.inactive {
