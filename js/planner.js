@@ -47,6 +47,7 @@ $(document).ready(function() {
     		'allocations'           : 'showAllocations',
     		'allocations-costs-campaigns'           : 'showAllocationsCostsCampaigns',
     		'performance'           : 'showPerformance',
+    		'performancechart'      : 'showPerformanceChart',
     	},
     	index: function(){
     		$("#bionic-main").load("templates/home.html");
@@ -121,6 +122,9 @@ $(document).ready(function() {
     	showPerformance: function(){
     		$("#bionic-main").load("templates/performance.html");
     	},    	
+    	showPerformanceChart: function(){
+    		$("#bionic-main").load("templates/performance-chart.html");
+    	}    	
     });
     
     new App.Router;

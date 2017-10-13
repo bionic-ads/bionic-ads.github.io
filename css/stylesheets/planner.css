@@ -155,7 +155,19 @@ ol, ul, li {
   font-weight: 700 !important;
 }
 
-/* line 19, ../sass/components/2_elements/_buttons.scss */
+/* line 18, ../sass/components/2_elements/_buttons.scss */
+.action-menu-button {
+  background: #dfe0e1;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+/* line 24, ../sass/components/2_elements/_buttons.scss */
+.action-menu-button i {
+  color: #6CAFD2;
+}
+
+/* line 30, ../sass/components/2_elements/_buttons.scss */
 .blue-button {
   display: inline-block;
   color: white !important;
@@ -165,12 +177,12 @@ ol, ul, li {
   border: 1px solid #6CAFD2;
 }
 
-/* line 29, ../sass/components/2_elements/_buttons.scss */
+/* line 40, ../sass/components/2_elements/_buttons.scss */
 .blue-button:hover {
   background: #60B2DB;
 }
 
-/* line 33, ../sass/components/2_elements/_buttons.scss */
+/* line 44, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled,
 .blue-button.disabled,
 .blue-button.disabled:hover {
@@ -180,31 +192,31 @@ ol, ul, li {
   cursor: default;
 }
 
-/* line 42, ../sass/components/2_elements/_buttons.scss */
+/* line 53, ../sass/components/2_elements/_buttons.scss */
 #crumbs .blue-button {
   margin-top: 4px;
   padding: 8px 20px;
 }
 
-/* line 47, ../sass/components/2_elements/_buttons.scss */
+/* line 58, ../sass/components/2_elements/_buttons.scss */
 .button-c {
   background-color: #999;
   color: #fff !important;
 }
 
-/* line 52, ../sass/components/2_elements/_buttons.scss */
+/* line 63, ../sass/components/2_elements/_buttons.scss */
 .button-c-disabled {
   opacity: 0.8;
 }
 
-/* line 56, ../sass/components/2_elements/_buttons.scss */
+/* line 67, ../sass/components/2_elements/_buttons.scss */
 .green-button {
   color: white !important;
   position: relative;
   background: #65a000;
 }
 
-/* line 63, ../sass/components/2_elements/_buttons.scss */
+/* line 74, ../sass/components/2_elements/_buttons.scss */
 input[type="submit"].gray-button,
 input[type="button"].gray-button,
 .gray-button {
@@ -213,34 +225,34 @@ input[type="button"].gray-button,
   border: 1px solid #dfe0e1;
 }
 
-/* line 71, ../sass/components/2_elements/_buttons.scss */
+/* line 82, ../sass/components/2_elements/_buttons.scss */
 .gray-button:hover {
   background: #e2e2e2;
 }
 
-/* line 77, ../sass/components/2_elements/_buttons.scss */
+/* line 88, ../sass/components/2_elements/_buttons.scss */
 .small-button {
   padding: 0 20px;
 }
 
-/* line 81, ../sass/components/2_elements/_buttons.scss */
+/* line 92, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled {
   background: #B5B5B5;
   color: #888 !important;
 }
 
-/* line 86, ../sass/components/2_elements/_buttons.scss */
+/* line 97, ../sass/components/2_elements/_buttons.scss */
 .button-link {
   padding: 8px 20px !important;
   line-height: 20px;
   background: none !important;
 }
-/* line 90, ../sass/components/2_elements/_buttons.scss */
+/* line 101, ../sass/components/2_elements/_buttons.scss */
 .button-link.under-line {
   text-decoration: underline;
 }
 
-/* line 95, ../sass/components/2_elements/_buttons.scss */
+/* line 106, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -248,7 +260,7 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 103, ../sass/components/2_elements/_buttons.scss */
+/* line 114, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a {
   background: #dfe0e1;
   border-radius: 3px;
@@ -256,25 +268,25 @@ input[type="button"].gray-button,
   display: block;
   padding: 9px 17px 9px 15px;
 }
-/* line 110, ../sass/components/2_elements/_buttons.scss */
+/* line 121, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a:hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 117, ../sass/components/2_elements/_buttons.scss */
+/* line 128, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 123, ../sass/components/2_elements/_buttons.scss */
+/* line 134, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;
 }
 
-/* line 130, ../sass/components/2_elements/_buttons.scss */
+/* line 141, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -282,7 +294,7 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 138, ../sass/components/2_elements/_buttons.scss */
+/* line 149, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a {
   background: none;
   color: #333;
@@ -290,18 +302,18 @@ input[type="button"].gray-button,
   padding: 6px 10px 8px;
   height: auto;
 }
-/* line 145, ../sass/components/2_elements/_buttons.scss */
+/* line 156, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 152, ../sass/components/2_elements/_buttons.scss */
+/* line 163, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 158, ../sass/components/2_elements/_buttons.scss */
+/* line 169, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li i {
   font-size: 14px;
   color: #69AED4;
@@ -1811,17 +1823,18 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
+  cursor: move;
 }
-/* line 29, ../sass/components/3_components/_modals.scss */
+/* line 30, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs {
   display: block;
   margin-top: 5px;
 }
-/* line 33, ../sass/components/3_components/_modals.scss */
+/* line 34, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs .divider {
   margin: 0 5px;
 }
-/* line 39, ../sass/components/3_components/_modals.scss */
+/* line 40, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
   box-sizing: border-box;
   display: block;
@@ -1829,16 +1842,16 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   overflow-y: auto;
   position: relative;
 }
-/* line 46, ../sass/components/3_components/_modals.scss */
+/* line 47, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body ul {
   box-sizing: border-box;
   width: calc(100% - 20px);
 }
-/* line 51, ../sass/components/3_components/_modals.scss */
+/* line 52, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns {
   padding: 0;
 }
-/* line 54, ../sass/components/3_components/_modals.scss */
+/* line 55, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div {
   box-sizing: border-box;
   float: left;
@@ -1851,46 +1864,46 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   border-right: 1px solid #cfcfcf;
   width: 205px;
 }
-/* line 66, ../sass/components/3_components/_modals.scss */
+/* line 67, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div:first-child {
   padding-left: 25px;
 }
-/* line 70, ../sass/components/3_components/_modals.scss */
+/* line 71, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul, .modal .bionic-modal-body.columns div li {
   display: block;
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 77, ../sass/components/3_components/_modals.scss */
+/* line 78, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul {
   margin-bottom: 15px;
 }
-/* line 81, ../sass/components/3_components/_modals.scss */
+/* line 82, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div li {
   margin-left: 30px;
   width: calc(100% - 30px);
 }
-/* line 86, ../sass/components/3_components/_modals.scss */
+/* line 87, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div input[type='checkbox'] + label::before {
   left: -30px;
   position: absolute;
 }
-/* line 95, ../sass/components/3_components/_modals.scss */
+/* line 96, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 99, ../sass/components/3_components/_modals.scss */
+/* line 100, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer.warning {
   background: #f5f6f7;
 }
-/* line 103, ../sass/components/3_components/_modals.scss */
+/* line 104, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 111, ../sass/components/3_components/_modals.scss */
+/* line 112, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -1978,54 +1991,50 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: 10px;
   width: 100%;
 }
-
-/* line 9, ../sass/components/3_components/_rating.scss */
-.bionic-radio label.red > span:first-child {
+/* line 8, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio label.red > span:first-child {
   border-color: #FAC0BD;
 }
-
-/* line 12, ../sass/components/3_components/_rating.scss */
-.bionic-radio label.yellow > span:first-child {
+/* line 11, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio label.yellow > span:first-child {
   border-color: #FBE0B4;
 }
-
-/* line 15, ../sass/components/3_components/_rating.scss */
-.bionic-radio label.green > span:first-child {
+/* line 14, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio label.green > span:first-child {
   border-color: #C0E4BC;
 }
-
-/* line 19, ../sass/components/3_components/_rating.scss */
-.user-rating .bionic-radio input[type="radio"]:checked + label > span:first-child {
+/* line 18, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio input[type="radio"]:checked + label > span:first-child,
+.user-rating .bionic-radio input[type="radio"] + label.red:hover > span:first-child {
   background: #FAC0BD;
   background-image: none;
   font-weight: bold;
   color: #333;
 }
-
 /* line 26, ../sass/components/3_components/_rating.scss */
-.user-rating .bionic-radio input[type="radio"]:checked + label.yellow > span:first-child {
+.user-rating .bionic-radio input[type="radio"]:checked + label.yellow > span:first-child,
+.user-rating .bionic-radio input[type="radio"] + label.yellow:hover > span:first-child {
   background: #FBE0B4;
+  font-weight: bold;
 }
-
-/* line 29, ../sass/components/3_components/_rating.scss */
-.user-rating .bionic-radio input[type="radio"]:checked + label.green > span:first-child {
+/* line 31, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio input[type="radio"]:checked + label.green > span:first-child,
+.user-rating .bionic-radio input[type="radio"] + label.green:hover > span:first-child {
   background: #C0E4BC;
+  font-weight: bold;
 }
-
-/* line 33, ../sass/components/3_components/_rating.scss */
-.bionic-radio {
+/* line 37, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio {
   display: block;
   float: left;
   width: 15px;
 }
-
-/* line 39, ../sass/components/3_components/_rating.scss */
-.bionic-radio label {
+/* line 43, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio label {
   text-align: center;
 }
-
-/* line 44, ../sass/components/3_components/_rating.scss */
-.bionic-radio label > span:first-child {
+/* line 48, ../sass/components/3_components/_rating.scss */
+.user-rating .bionic-radio label > span:first-child {
   background: #fff;
   border: 1px solid #eee;
   border-radius: 50%;
@@ -2035,37 +2044,32 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   width: 40px !important;
 }
 
-/* line 55, ../sass/components/3_components/_rating.scss */
+/* line 60, ../sass/components/3_components/_rating.scss */
 .user-rating-legend {
   display: block;
   float: left;
   width: 100%;
   margin-bottom: 20px;
 }
-
-/* line 62, ../sass/components/3_components/_rating.scss */
+/* line 66, ../sass/components/3_components/_rating.scss */
 .user-rating-legend span {
   display: block;
   float: left;
 }
-
-/* line 67, ../sass/components/3_components/_rating.scss */
+/* line 71, ../sass/components/3_components/_rating.scss */
 .user-rating-legend span.right {
   float: right;
   margin-right: 5px;
 }
-
-/* line 72, ../sass/components/3_components/_rating.scss */
+/* line 76, ../sass/components/3_components/_rating.scss */
 .user-rating-legend i {
   font-size: 16px;
 }
-
-/* line 76, ../sass/components/3_components/_rating.scss */
+/* line 80, ../sass/components/3_components/_rating.scss */
 .user-rating-legend .fa-frown-o {
   color: red;
 }
-
-/* line 79, ../sass/components/3_components/_rating.scss */
+/* line 84, ../sass/components/3_components/_rating.scss */
 .user-rating-legend .fa-smile-o {
   color: green;
 }
@@ -3033,14 +3037,96 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   box-sizing: border-box;
   display: none;
   font-size: 13px;
-  height: 100px;
   position: fixed;
   background: #fff;
-  margin-top: -140px;
-  padding: 20px;
+  margin-left: -5px;
+  margin-top: -190px;
+  padding: 15px 20px;
   text-align: left;
   width: 500px;
   z-index: 99;
+}
+/* line 19, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details::after {
+  content: "\f0d7";
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  font-family: FontAwesome;
+  position: absolute;
+  top: 119px;
+  left: 15px;
+  width: 0;
+  height: 0;
+  /*
+              border-top: solid 15px #fff;
+              border-left: solid 15px transparent;
+              border-right: solid 15px transparent;
+  */
+}
+/* line 37, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details span {
+  padding: 0 !important;
+}
+/* line 41, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .header {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* line 46, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .secondary {
+  color: #999;
+}
+/* line 50, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .content, .performance .performance-details .divider {
+  display: block;
+  float: left;
+  width: 100px;
+}
+/* line 57, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .content.pace {
+  width: 70px;
+}
+/* line 61, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .content.emo {
+  width: 72px;
+}
+/* line 67, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .divider {
+  width: 40px;
+}
+/* line 70, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .divider .fa-arrow-right, .performance .performance-details .divider.bracket {
+  color: #e2e2e2;
+}
+/* line 74, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .divider.emo-arrow {
+  margin-top: 10px;
+}
+/* line 78, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .divider .fa-arrow-right {
+  font-size: 36px;
+}
+/* line 82, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .divider.bracket {
+  font-size: 80px;
+  line-height: 60px;
+  width: 36px;
+}
+/* line 91, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .right {
+  float: right;
+}
+/* line 94, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .emoticon {
+  clear: both;
+  background-size: 200%;
+  padding: 0 !important;
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 7px;
+  float: right;
 }
 
 /* line 1, ../sass/components/4_layouts/_settings.scss */

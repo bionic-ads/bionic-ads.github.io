@@ -64,7 +64,7 @@ var templateData = {
 			page: "#/campaign/tasks/"
 		},
 		{
-			name: "Performace",
+			name: "Performance",
 			page: "#/campaign/performance/"
 		}
 	]

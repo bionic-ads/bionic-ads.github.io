@@ -31,7 +31,7 @@ var templateData = {
 			page: "#/line/kpis/"
 		},
 		{
-			name: "Performace",
+			name: "Performance",
 			page: "#/line/performance/"
 		}
 	]

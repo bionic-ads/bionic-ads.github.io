@@ -4,7 +4,6 @@
         margin-bottom: 40px;
         margin-top: 10px;
         width: 100%;
-    }
     
     .bionic-radio label.red > span:first-child {
         border-color: #FAC0BD;
@@ -16,18 +15,23 @@
         border-color: #C0E4BC;
     }
     
-    .user-rating .bionic-radio input[type="radio"]:checked + label > span:first-child {
+    .bionic-radio input[type="radio"]:checked + label > span:first-child,
+    .bionic-radio input[type="radio"] + label.red:hover > span:first-child {
         background: #FAC0BD;
         background-image: none;
         font-weight: bold;
         color: #333;
     }
 
-    .user-rating .bionic-radio input[type="radio"]:checked + label.yellow > span:first-child {
+    .bionic-radio input[type="radio"]:checked + label.yellow > span:first-child,
+    .bionic-radio input[type="radio"] + label.yellow:hover > span:first-child {
         background: #FBE0B4;
+        font-weight: bold;
     }
-    .user-rating .bionic-radio input[type="radio"]:checked + label.green > span:first-child {
+    .bionic-radio input[type="radio"]:checked + label.green > span:first-child,
+    .bionic-radio input[type="radio"] + label.green:hover > span:first-child {
         background: #C0E4BC;
+        font-weight: bold;
     }
 
     .bionic-radio {
@@ -51,31 +55,38 @@
         width: 40px !important;
     }
     
-    
+    }
+
     .user-rating-legend {
         display: block;
         float: left;
         width: 100%;
         margin-bottom: 20px;
-    }
-    
-        .user-rating-legend span {
+        
+        span {
             display: block;
             float: left;
         }
         
-        .user-rating-legend span.right {
+        span.right {
             float: right;
             margin-right: 5px;
         }
         
-        .user-rating-legend i {
+        i {
             font-size: 16px;
         }
-        
-        .user-rating-legend .fa-frown-o {
+
+        .fa-frown-o {
             color: red;
         }
-        .user-rating-legend .fa-smile-o {
+
+        .fa-smile-o {
             color: green;
         }
+
+    }
+    
+        
+        
+

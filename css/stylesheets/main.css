@@ -3819,7 +3819,19 @@ div.ui-dialog .ui-widget-header-supertip {
   font-weight: 700 !important;
 }
 
-/* line 19, ../sass/components/2_elements/_buttons.scss */
+/* line 18, ../sass/components/2_elements/_buttons.scss */
+.action-menu-button {
+  background: #dfe0e1;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 15px;
+}
+/* line 24, ../sass/components/2_elements/_buttons.scss */
+.action-menu-button i {
+  color: #6CAFD2;
+}
+
+/* line 30, ../sass/components/2_elements/_buttons.scss */
 .blue-button {
   display: inline-block;
   color: white !important;
@@ -3829,12 +3841,12 @@ div.ui-dialog .ui-widget-header-supertip {
   border: 1px solid #6CAFD2;
 }
 
-/* line 29, ../sass/components/2_elements/_buttons.scss */
+/* line 40, ../sass/components/2_elements/_buttons.scss */
 .blue-button:hover {
   background: #60B2DB;
 }
 
-/* line 33, ../sass/components/2_elements/_buttons.scss */
+/* line 44, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled,
 .blue-button.disabled,
 .blue-button.disabled:hover {
@@ -3844,31 +3856,31 @@ div.ui-dialog .ui-widget-header-supertip {
   cursor: default;
 }
 
-/* line 42, ../sass/components/2_elements/_buttons.scss */
+/* line 53, ../sass/components/2_elements/_buttons.scss */
 #crumbs .blue-button {
   margin-top: 4px;
   padding: 8px 20px;
 }
 
-/* line 47, ../sass/components/2_elements/_buttons.scss */
+/* line 58, ../sass/components/2_elements/_buttons.scss */
 .button-c {
   background-color: #999;
   color: #fff !important;
 }
 
-/* line 52, ../sass/components/2_elements/_buttons.scss */
+/* line 63, ../sass/components/2_elements/_buttons.scss */
 .button-c-disabled {
   opacity: 0.8;
 }
 
-/* line 56, ../sass/components/2_elements/_buttons.scss */
+/* line 67, ../sass/components/2_elements/_buttons.scss */
 .green-button {
   color: white !important;
   position: relative;
   background: #65a000;
 }
 
-/* line 63, ../sass/components/2_elements/_buttons.scss */
+/* line 74, ../sass/components/2_elements/_buttons.scss */
 input[type="submit"].gray-button,
 input[type="button"].gray-button,
 .gray-button {
@@ -3877,34 +3889,34 @@ input[type="button"].gray-button,
   border: 1px solid #dfe0e1;
 }
 
-/* line 71, ../sass/components/2_elements/_buttons.scss */
+/* line 82, ../sass/components/2_elements/_buttons.scss */
 .gray-button:hover {
   background: #e2e2e2;
 }
 
-/* line 77, ../sass/components/2_elements/_buttons.scss */
+/* line 88, ../sass/components/2_elements/_buttons.scss */
 .small-button {
   padding: 0 20px;
 }
 
-/* line 81, ../sass/components/2_elements/_buttons.scss */
+/* line 92, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled {
   background: #B5B5B5;
   color: #888 !important;
 }
 
-/* line 86, ../sass/components/2_elements/_buttons.scss */
+/* line 97, ../sass/components/2_elements/_buttons.scss */
 .button-link {
   padding: 8px 20px !important;
   line-height: 20px;
   background: none !important;
 }
-/* line 90, ../sass/components/2_elements/_buttons.scss */
+/* line 101, ../sass/components/2_elements/_buttons.scss */
 .button-link.under-line {
   text-decoration: underline;
 }
 
-/* line 95, ../sass/components/2_elements/_buttons.scss */
+/* line 106, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -3912,7 +3924,7 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 103, ../sass/components/2_elements/_buttons.scss */
+/* line 114, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a {
   background: #dfe0e1;
   border-radius: 3px;
@@ -3920,25 +3932,25 @@ input[type="button"].gray-button,
   display: block;
   padding: 9px 17px 9px 15px;
 }
-/* line 110, ../sass/components/2_elements/_buttons.scss */
+/* line 121, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li a:hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 117, ../sass/components/2_elements/_buttons.scss */
+/* line 128, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 123, ../sass/components/2_elements/_buttons.scss */
+/* line 134, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;
 }
 
-/* line 130, ../sass/components/2_elements/_buttons.scss */
+/* line 141, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -3946,7 +3958,7 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 138, ../sass/components/2_elements/_buttons.scss */
+/* line 149, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a {
   background: none;
   color: #333;
@@ -3954,18 +3966,18 @@ input[type="button"].gray-button,
   padding: 6px 10px 8px;
   height: auto;
 }
-/* line 145, ../sass/components/2_elements/_buttons.scss */
+/* line 156, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 152, ../sass/components/2_elements/_buttons.scss */
+/* line 163, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 158, ../sass/components/2_elements/_buttons.scss */
+/* line 169, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li i {
   font-size: 14px;
   color: #69AED4;
@@ -5425,17 +5437,18 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
+  cursor: move;
 }
-/* line 29, ../sass/components/3_components/_modals.scss */
+/* line 30, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs {
   display: block;
   margin-top: 5px;
 }
-/* line 33, ../sass/components/3_components/_modals.scss */
+/* line 34, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs .divider {
   margin: 0 5px;
 }
-/* line 39, ../sass/components/3_components/_modals.scss */
+/* line 40, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
   box-sizing: border-box;
   display: block;
@@ -5443,16 +5456,16 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   overflow-y: auto;
   position: relative;
 }
-/* line 46, ../sass/components/3_components/_modals.scss */
+/* line 47, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body ul {
   box-sizing: border-box;
   width: calc(100% - 20px);
 }
-/* line 51, ../sass/components/3_components/_modals.scss */
+/* line 52, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns {
   padding: 0;
 }
-/* line 54, ../sass/components/3_components/_modals.scss */
+/* line 55, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div {
   box-sizing: border-box;
   float: left;
@@ -5465,46 +5478,46 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   border-right: 1px solid #cfcfcf;
   width: 205px;
 }
-/* line 66, ../sass/components/3_components/_modals.scss */
+/* line 67, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div:first-child {
   padding-left: 25px;
 }
-/* line 70, ../sass/components/3_components/_modals.scss */
+/* line 71, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul, .modal .bionic-modal-body.columns div li {
   display: block;
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 77, ../sass/components/3_components/_modals.scss */
+/* line 78, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul {
   margin-bottom: 15px;
 }
-/* line 81, ../sass/components/3_components/_modals.scss */
+/* line 82, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div li {
   margin-left: 30px;
   width: calc(100% - 30px);
 }
-/* line 86, ../sass/components/3_components/_modals.scss */
+/* line 87, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div input[type='checkbox'] + label::before {
   left: -30px;
   position: absolute;
 }
-/* line 95, ../sass/components/3_components/_modals.scss */
+/* line 96, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 99, ../sass/components/3_components/_modals.scss */
+/* line 100, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer.warning {
   background: #f5f6f7;
 }
-/* line 103, ../sass/components/3_components/_modals.scss */
+/* line 104, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 111, ../sass/components/3_components/_modals.scss */
+/* line 112, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }

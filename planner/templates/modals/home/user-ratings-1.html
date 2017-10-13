@@ -3,53 +3,53 @@
 <div class="bionic-modal-header">
     <h1>How Are We Doing?</h1>
 </div>
-<div class="bionic-modal-header" style="height: 100px;">
+<div class="bionic-modal-header" style="height: 100px; cursor: default;">
     
     <strong>How likely are you to recommend Bionic to a friend or colleague?</strong>
     
         <div class="user-rating">
             <div class="bionic-radio">
-                <input id="modal-item0" name="type" type="radio" value="0">
+                <input id="modal-item0" name="modal-rating" type="radio" value="0">
                 <label for="modal-item0" class="red"><span>0</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item1" name="type" type="radio" value="1">
+                <input id="modal-item1" name="modal-rating" type="radio" value="1">
                 <label for="modal-item1" class="red"><span>1</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item2" name="type" type="radio" value="2">
+                <input id="modal-item2" name="modal-rating" type="radio" value="2">
                 <label for="modal-item2" class="red"><span>2</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item3" name="type" type="radio" value="3">
+                <input id="modal-item3" name="modal-rating" type="radio" value="3">
                 <label for="modal-item3" class="red"><span>3</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item4" name="type" type="radio" value="4">
+                <input id="modal-item4" name="modal-rating" type="radio" value="4">
                 <label for="modal-item4" class="red"><span>4</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item5" name="type" type="radio" value="5">
+                <input id="modal-item5" name="modal-rating" type="radio" value="5">
                 <label for="modal-item5" class="red"><span>5</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item6" name="type" type="radio" value="6">
+                <input id="modal-item6" name="modal-rating" type="radio" value="6">
                 <label for="modal-item6" class="red"><span>6</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item7" name="type" type="radio" value="7">
+                <input id="modal-item7" name="modal-rating" type="radio" value="7">
                 <label for="modal-item7" class="yellow"><span>7</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item8" name="type" type="radio" value="8">
+                <input id="modal-item8" name="modal-rating" type="radio" value="8">
                 <label for="modal-item8" class="yellow"><span>8</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item9" name="type" type="radio" value="9">
+                <input id="modal-item9" name="modal-rating" type="radio" value="9">
                 <label for="modal-item9" class="green"><span>9</span></label>
             </div>   
             <div class="bionic-radio">
-                <input id="modal-item10" name="type" type="radio" value="10">
+                <input id="modal-item10" name="modal-rating" type="radio" value="10">
                 <label for="modal-item10" class="green"><span>10</span></label>
             </div>   
         </div>
@@ -70,3 +70,24 @@
     <a class="gray-button" rel="modal:close">Cancel</a>
 </div>
 </div>
+
+<script>
+    $(".blue-button").click(function(){
+        
+        var rating = $("input[name='modal-rating']:checked").val();
+        
+        if((rating > -1) && (rating < 7)) {
+            $(this).attr("href", "templates/modals/home/user-ratings-thankyou.html");
+        } 
+        if((rating > 6) && (rating < 9)) {
+            $(this).attr("href", "templates/modals/home/user-ratings-hifive.html");
+        }
+        if((rating > 8) && (rating < 11)) {
+            $(this).attr("href", "templates/modals/home/user-ratings-yourock.html");
+        }
+
+        console.log(rating);
+            
+    });
+    
+</script>

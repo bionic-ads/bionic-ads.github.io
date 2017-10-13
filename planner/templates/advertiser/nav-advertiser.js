@@ -39,7 +39,7 @@ var templateData = {
 			page: "#/advertiser/allocations-costs/"
 		},
 		{
-			name: "Performace",
+			name: "Performance",
 			page: "#/advertiser/performance/"
 		}
 	]
