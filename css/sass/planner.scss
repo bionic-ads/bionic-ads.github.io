@@ -114,47 +114,6 @@ h2 {
     
 }
 
-
-
-#bionic-stripe {    
-    background: $nav-color url("../../images/bionic.svg") no-repeat;
-    background-position: 25px 13px;
-    background-size: 77px 24px;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    
-    #bionic-stripe-settings {
-        float: right;
-        
-        li {
-            float: left;
-            padding: 15px 0px;
-        
-            span {
-                color: $light-gray;
-                padding: 0 15px;
-                border-right: 1px solid #555;
-                
-                a {
-                    color: $light-gray;
-                }
-                
-                i {
-                    margin-right: 5px;
-                }
-            }
-        
-            &:last-child span {
-                margin-right: 25px;
-                border: none;
-            }
-        
-        }
-    }
-}
-
 #bionic-figawi {
     background: $light-gray;
     border-bottom: 1px solid $medium-gray;

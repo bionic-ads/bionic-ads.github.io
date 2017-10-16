@@ -1,3 +1,8 @@
+    <p class="toggleRatings" style="font-weight: bold; padding: 10px; border: 1px solid #cfcfcf; background: #eee; position: fixed; z-index: 9; right: 15px; bottom: 0; margin-top: 50px; float: right; font-size: 12px; cursor: pointer;">
+        <span rel="one">New User</span> &mdash; <span rel="two">Previously Rated</span> &mdash; <span rel="three">In Page</span> &mdash; <span rel="four">Previously Rated In Page</span>
+    </p>
+
+
 
 <div id="bionic-home" class="block fullwidth">
     
@@ -23,8 +28,6 @@
 
     <div class="bionic-content block fullwidth">
 
-    <p class="toggleRatings" style="float: right; color: #cfcfcf;">
-        <span rel="one">New User</span> | <span rel="two">Previously Rated</span> | <span rel="three">In Page</span> | <span rel="four">Previously Rated In Page</span></p>
 
     <p class="ratings one" style="">You haven't rated Bionic yet <a style="margin-left: 2px;" rel="modal:open" href="templates/modals/home/user-ratings-1.html"><strong>Rate Bionic Now</strong></a></p>
 <!-- <span style="background: #FBE0B4; font-weight: bold; padding-top: 3px; box-sizing: border-box; height:24px; width: 24px; border-radius: 50%; text-align: center; display: inline-block;">8</span> -->
@@ -35,6 +38,7 @@
     <div style="width: 100%;  box-sizing: border-box; display: block; float: left; padding: 20px; background: #e9ebed; border-radius: 3px; border: 1px solid #cfcfcf; margin-bottom: 20px;">
     
     <p style="width: 180px; margin-top: 0; margin-right: 20px; float: left;">Please help us understand your experience with Bionic by answering this 1-question survey. Thank you!</p>
+    <a id="close-in-page" style="float: right; margin-right: -5px; margin-top: -10px;">Remind Me Later</a>
     <div style="width: 495px; float: left;">
         <p style="margin-top: 0;"><strong>How likely are you to recommend Bionic to a friend or colleague?</strong><br>
             <span style="display: none;" class="ratings four onpage-note">Note: You rated Bionic <strong>8</strong> out of 10 on October 5, 2017</span>
@@ -193,6 +197,10 @@ Here's the content
           
       });  
       
+      $("#close-in-page").click(function(){
+          $(".ratings").hide();
+          $(".ratings.two").show();
+      });
       
       $(".onpage label").click(function(){
           radio_value = $(this).prev("input[type='radio']").val();

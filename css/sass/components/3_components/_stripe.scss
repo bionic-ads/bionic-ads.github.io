@@ -1,3 +1,62 @@
-#stripe {
+#bionic-stripe {    
+    background: $nav-color url("../../images/bionic.svg") no-repeat;
+    background-position: 25px 13px;
+    background-size: 77px 24px;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
     
+    #bionic-stripe-settings {
+        float: right;
+        
+        li {
+            float: left;
+            padding: 17px 0px;
+        
+            span {
+                color: $light-gray;
+                padding: 0 15px;
+                border-right: 1px solid #555;
+                
+                a {
+                    color: $light-gray;
+                }
+                
+                i {
+                    margin-right: 5px;
+                }
+            }
+        
+            &:last-child span {
+                margin-right: 25px;
+                border: none;
+            }
+        
+        }
+        
+        .user-initials {
+            background: #EE627A;
+            box-sizing: border-box;
+            border: 0;
+            color: #fff;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 32px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 15px;
+            font-weight: normal;
+            border-radius: 15px;
+            margin-right: 0;
+            padding: 0;
+            float: left;
+            margin-top: -8px;
+            margin-right: -5px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+    }
 }
