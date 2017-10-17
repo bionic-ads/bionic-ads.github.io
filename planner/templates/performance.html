@@ -20,7 +20,7 @@
 
     </div>
     
-    <div class="nxm-menu-filters" style="margin-bottom: 5px;">
+    <div class="nxm-menu-filters custom-form-controls" style="margin-bottom: 5px;">
         <ul class="page-view-toggle">
             <li>
                 <input type="radio" name="performance-view-toggle" id="performance-view-toggle-table" value="tableView" checked="">
@@ -35,52 +35,83 @@
                 </label></a>
             </li>
         </ul>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-columns"></i> All Advertisers</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li>All Advertisers</li>
-                    <li>Following</li>
-                    <li>Not Following</li>
-                </ul>
-            </div>
-        </div>
-        <div class="filter-container">
+        
+        <div class="filter-container ">
             <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-columns"></i> All KPIs</div>
-            <div class="menu filterTypeMenu">
+            <div class="menu filterTypeMenu" style="width: 200px">
+                <div class="header filter-section filter-search-master">
+                    <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
+                    <span id="clear-search" class="clear-search-filter">
+                        <i class="fa fa-times-circle"></i>
+                    </span>
+                </div>
                 <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
+                    <li class="divider"><input id="all-kpis" type="checkbox" checked><label for="all-kpis">All KPIs</label></li>
+                    <li><input id="impressions" type="checkbox" checked><label for="impressions">Impressions & CPM</label></li>
+                    <li><input id="clicks" type="checkbox" checked><label for="clicks">Clicks & CPC</label></li>
+                    <li><input id="clicks2" type="checkbox" checked><label for="clicks2">Clicks & CTR</label></li>
+                    <li><input id="customers" type="checkbox" checked><label for="customers">Customers & CAC</label></li>
                 </ul>
+                <div class="footer"><a class="blue-button">Apply</a></div>
             </div>
         </div>
+        
         <div class="filter-container">
             <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calculator"></i> USD - US Dollars</div>
             <div class="menu filterTypeMenu">
+                <div class="header filter-section filter-search-master">
+                    <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
+                    <span id="clear-search" class="clear-search-filter">
+                        <i class="fa fa-times-circle"></i>
+                    </span>
+                </div>
                 <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
+                    <li>USD - US Dollars</li>
                 </ul>
             </div>
         </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Dates</div>
+
+        <div class="filter-container custom-form-controls">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Advertisers</div>
             <div class="menu filterTypeMenu">
                 <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
+                    <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Advertisers</label></li>
+                    <li class="first-option"><input id="following" type="checkbox" checked><label for="following">Following</label></li>
+                    <li><input id="notfollowing" type="checkbox" checked><label for="notfollowing">Not Following</label></li>
+                </ul>
+                <div class="footer"><a class="blue-button">Apply</a></div>
+            </div>
+        </div>
+        <div class="filter-container">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calendar"></i> Any Time</div>
+            <div class="menu filterTypeMenu">
+                <ul>
+                    <li></li>
+                    <li></li>
                 </ul>
             </div>
         </div>
         <div class="filter-container">
             <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-list-ul"></i> Daily Breakdown</div>
             <div class="menu filterTypeMenu">
-                <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
+                
+                <ul class="plain">
+                    <li>Totals Only</li>
+                    <li>Daily</li>
+                    <li>Weekly</li>
+                    <li>Monthly</li>
+                    <li>Quarterly</li>
+                    <li>Annually</li>
+                    <li>Broadcast Weekly</li>
+                    <li>Broadcast Monthly</li>
+                    <li>Broadcast Quarterly</li>
+                    <li>Broadcast Annually</li>
                 </ul>
+                <div class="footer"><a class="blue-button">Apply</a></div>
             </div>
         </div>
+        
+        <div class="button-divider"></div>
         
         <div class="action-menu-button"><i class="fa fa-download"></i> Download</div>
         
@@ -93,8 +124,7 @@
   <table class="gridFirstColumnHeader">
       <thead>
           <tr>
-              <th class="col-45"><span class="header center">#</span></th>
-              <th class="col-275"><span class="header"><a>Advertiser Name <i class="fa fa-caret-down"></i></a></span></th>
+              <th class="col-45"><span class="header center">#</span></th><th class="col-275"><span class="header"><a>Advertiser Name <i class="fa fa-caret-down"></i></a></span></th>
           </tr>
       </thead>
   </table>
@@ -103,16 +133,7 @@
     <table>
         <thead>
         <tr>
-          <th class="col-100"><span><a>First Data</a></span></th>
-          <th class="col-100 "><span><a>Last Data</a></span></th>
-          <th class="col-200"><span class="right"><a>Net Media Cost</a></span></th>
-          <th class="col-200"><span class="right"><a>Impressions</a></span></th>
-          <th class="col-150"><span class="right"><a>CPM</a></span></th>
-          <th class="col-150"><span class="right"><a>Clicks</a></span></th>
-          <th class="col-150"><span class="right"><a>CPC</a></span></th>
-          <th class="col-150"><span class="right"><a>CTR</a></span></th>
-          <th class="col-200"><span class="right"><a>Customers</a></span></th>
-          <th class="col-200"><span class="right"><a>CAC</a></span></th>
+          <th class="col-100"><span><a>First Data</a></span></th><th class="col-100 "><span><a>Last Data</a></span></th><th class="col-200"><span class="right"><a>Net Media Cost</a></span></th><th class="col-200"><span class="right"><a>Impressions</a></span></th><th class="col-150"><span class="right"><a>CPM</a></span></th><th class="col-150"><span class="right"><a>Clicks</a></span></th><th class="col-150"><span class="right"><a>CPC</a></span></th><th class="col-150"><span class="right"><a>CTR</a></span></th><th class="col-200"><span class="right"><a>Customers</a></span></th><th class="col-200"><span class="right"><a>CAC</a></span></th>
         </tr>
         </thead>
     </table>
@@ -203,7 +224,7 @@
           } else {
               
               costsTableFirstColumns = $('<tr class="total">');
-              costsTableFirstColumns.append('<td colspan="2" class="col-275" style="border-right:0; padding-left:5px;"><span><strong>'+ item.AdvertiserName +'</strong></span></a></td>');
+              costsTableFirstColumns.append('<td colspan="2" class="col-325" style="border-right:0; padding-left:5px;"><span><strong>'+ item.AdvertiserName +'</strong></span></a></td>');
               costsTableFirstColumns.append('</tr>');
               costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
@@ -223,7 +244,7 @@
           }
         })
     
-        $(".emoticon").click(function(){
+        $(".emoticon").click(function(event){
             event.stopPropagation();
             $('.performance-details').hide();
             $(event.target).closest("td").find('.performance-details').load("templates/performance-details.html");
@@ -236,10 +257,7 @@
         });
 
       }
-
       
-
-
 </script>
 
 <script type="text/javascript">

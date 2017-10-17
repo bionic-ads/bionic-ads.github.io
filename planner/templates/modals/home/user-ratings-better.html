@@ -1,0 +1,28 @@
+<div class="user-ratings" style="width: 545px;">
+
+    <div class="bionic-modal-header">
+        <h1>Better. Faster. Stronger. </h1>
+    </div>
+        
+    <div class="bionic-modal-body" style="padding-bottom: 0;">
+       
+    <div style="display: block; text-align: center; height: 200px; box-sizing: border-box; padding-top:20px; width: 100%; background: #f5f6f7;">    
+        <img class="rate-thanks" id="yourock" src="images/weightlifting.svg" >
+    </div>
+    <p style="">Thanks so much for your feedback. We're working hard to build better products, and your feedback - good or bad - will help us improve.</p>
+<!--     <p style="margin-bottom: 0;">Better. Stronger. Faster.</p> -->
+                
+    </div>
+    
+    <div class="bionic-modal-footer">
+        <a id="rating-close" class="blue-button" rel="modal:close">Close</a>
+    </div>
+    
+</div>
+
+<script>
+      $("#rating-close").click(function(){
+          $(".ratings").hide();
+          $(".ratings.two").show();
+      });
+</script>

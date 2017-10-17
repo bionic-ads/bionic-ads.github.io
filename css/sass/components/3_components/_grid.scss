@@ -10,7 +10,15 @@
         font-weight: bold;
     }
     
+    tr {
+        white-space: nowrap;
+    }
+    
     th, td {
+        
+        display: inline-block;
+        border-collapse: collapse;
+        border-spacing: 0;
         
         label {
             margin-left: 5px;
@@ -38,7 +46,9 @@
         &.col-150 {min-width:150px;width:150px;max-width:150px}
         &.col-200 {min-width:200px;width:200px;max-width:200px}
         &.col-250 {min-width:250px;width:250px;max-width:250px}
+        &.col-275 {min-width:275px;width:275px;max-width:275px}
         &.col-300 {min-width:300px;width:300px;max-width:300px}
+        &.col-325 {min-width:325px;width:325px;max-width:325px}
         &.col-350 {min-width:350px;width:350px;max-width:350px}
         &.col-400 {min-width:400px;width:400px;max-width:400px}
         
@@ -93,9 +103,9 @@
     
     .gridColumnHeader th,
     tr th {
-        height: 30px;
+        height: 40px;
         border: 1px solid #cfcfcf;
-        border-left: 0;
+        border-right: 0;
         font-weight: normal;
         box-sizing: border-box;
         text-align: left;

@@ -77,12 +77,10 @@
         var rating = $("input[name='modal-rating']:checked").val();
         $(this).attr("href", "templates/modals/home/user-ratings-hifive.html");
         
-/*
         if((rating > -1) && (rating < 7)) {
-            $(this).attr("href", "templates/modals/home/user-ratings-thankyou.html");
+            $(this).attr("href", "templates/modals/home/user-ratings-hifive.html");
         } 
-*/
-        if((rating > -1) && (rating < 9)) {
+        if((rating > 6) && (rating < 9)) {
             $(this).attr("href", "templates/modals/home/user-ratings-hifive.html");
         }
         if((rating > 8) && (rating < 11)) {

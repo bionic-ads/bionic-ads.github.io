@@ -52,6 +52,14 @@
         }
 
     }
+    
+    .button-divider {
+        width: 1px;
+        height: 100%;
+        background: #cfcfcf;
+        margin: 0 8px 0 0;
+        padding: 0px;
+    }
 
 
     input[type=text].filter-search-master{
@@ -60,6 +68,8 @@
         float:left;
         padding-top: 5px;
         padding-bottom: 5px;
+        padding-left: 25px;
+        background: url('../images/search.svg') no-repeat 8px 50%;
         position: relative;
         border: 1px solid $nxm-border-gray;
         line-height: $nxm-menu-filters-height - 12px; // minus paddings and border
