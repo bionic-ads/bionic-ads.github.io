@@ -3493,7 +3493,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 /* line 5, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-header {
   width: calc(100% - 300px);
-  margin-left: 300px;
+  margin-left: 299px;
 }
 /* line 10, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-body {
@@ -3502,7 +3502,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 /* line 14, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-sidebar {
   margin-left: 0;
-  width: 300px;
+  width: 299px;
 }
 /* line 19, ../sass/components/7_prototype/_mediaplan.scss */
 .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
