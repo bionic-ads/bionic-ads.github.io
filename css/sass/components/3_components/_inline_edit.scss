@@ -2,14 +2,32 @@
     border: 1px solid $medium-gray;
     border-radius: 3px;
     box-shadow: 0 4px 5px rgba(0,0,0,0.15);
+    box-sizing: border-box;
     display: none;
     font-size: 11px;
     position: absolute;
     background: #fff;
     margin-top: 30px;
-    padding: 10px;
-    width: 250px;
+    padding: 0px;
+    min-width: 250px;
     z-index: 99;
+    
+    .top, .bottom {
+        display: block;
+        float: left;
+        padding: 15px;
+    }
+    
+    .top {
+        padding-bottom: 0;
+    }
+    
+    .bottom {
+        background: #f5f6f7;
+        border-top: 1px solid #eee;
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
     
     .title {
         font-weight: bold;
@@ -52,6 +70,7 @@
 
     
     .summary {
+        
         clear: both;
         display: block;
         margin-top: 10px;

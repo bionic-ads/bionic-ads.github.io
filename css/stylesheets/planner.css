@@ -1820,51 +1820,69 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   border: 1px solid #cfcfcf;
   border-radius: 3px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
   display: none;
   font-size: 11px;
   position: absolute;
   background: #fff;
   margin-top: 30px;
-  padding: 10px;
-  width: 250px;
+  padding: 0px;
+  min-width: 250px;
   z-index: 99;
 }
-/* line 14, ../sass/components/3_components/_inline_edit.scss */
+/* line 15, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .top, .inline_edit .bottom {
+  display: block;
+  float: left;
+  padding: 15px;
+}
+/* line 21, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .top {
+  padding-bottom: 0;
+}
+/* line 25, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit .bottom {
+  background: #f5f6f7;
+  border-top: 1px solid #eee;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+/* line 32, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .title {
   font-weight: bold;
   width: 100%;
 }
-/* line 19, ../sass/components/3_components/_inline_edit.scss */
+/* line 37, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input {
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
 }
-/* line 26, ../sass/components/3_components/_inline_edit.scss */
+/* line 44, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input.cost-per {
   width: 150px;
 }
-/* line 30, ../sass/components/3_components/_inline_edit.scss */
+/* line 48, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input.overage {
   margin-left: 10px;
   width: 80px;
 }
-/* line 36, ../sass/components/3_components/_inline_edit.scss */
+/* line 54, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input .label {
   clear: both;
   display: block;
   margin-bottom: 5px;
 }
-/* line 42, ../sass/components/3_components/_inline_edit.scss */
+/* line 60, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input .currency-symbol {
   color: #9b9b9b;
 }
-/* line 46, ../sass/components/3_components/_inline_edit.scss */
+/* line 64, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input input[type="text"] {
   border: 3px solid #eee !important;
   font-size: 13px;
 }
-/* line 54, ../sass/components/3_components/_inline_edit.scss */
+/* line 72, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .summary {
   clear: both;
   display: block;
