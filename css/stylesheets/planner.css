@@ -1032,6 +1032,80 @@ a {
   text-align: center;
 }
 
+/* line 1, ../sass/components/3_components/_charts.scss */
+.chart {
+  width: 850px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* line 2, ../sass/components/3_components/_charts.scss */
+.chart th {
+  text-align: left;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+/* line 3, ../sass/components/3_components/_charts.scss */
+.chart tbody {
+  border-top: 0px solid #cfcfcf;
+}
+
+/* line 4, ../sass/components/3_components/_charts.scss */
+.chart tbody td {
+  cursor: pointer;
+}
+
+/* line 5, ../sass/components/3_components/_charts.scss */
+.chart .spend {
+  text-align: right;
+  width: 100px;
+}
+
+/* line 6, ../sass/components/3_components/_charts.scss */
+.chart th:first-child, .chart td:first-child {
+  width: 200px;
+}
+
+/* line 7, ../sass/components/3_components/_charts.scss */
+.chart th, .chart td {
+  padding: 10px 20px;
+}
+
+/* line 8, ../sass/components/3_components/_charts.scss */
+.chart tbody td:first-child {
+  border-left: 0px solid #cfcfcf;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* line 9, ../sass/components/3_components/_charts.scss */
+.chart tbody td:last-child {
+  border-right: 0px solid #cfcfcf;
+  border-top: none;
+  border-bottom: none;
+}
+
+/* line 10, ../sass/components/3_components/_charts.scss */
+.chart .bar span {
+  display: block;
+  background: #A1CDEA;
+  padding: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* line 11, ../sass/components/3_components/_charts.scss */
+.chart .total {
+  border-top: 1px solid #cfcfcf;
+}
+
+/* line 12, ../sass/components/3_components/_charts.scss */
+.chart tbody .total td {
+  font-weight: bold;
+  border: none;
+  padding-top: 10px;
+}
+
 /* line 1, ../sass/components/3_components/_filters.scss */
 .filter {
   border-radius: 2px;
@@ -1420,7 +1494,7 @@ a {
 }
 /* line 5, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable aside {
-  border-right: 1px solid #cfcfcf;
+  border-right: 0px solid #cfcfcf;
 }
 /* line 9, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th span {
@@ -1443,7 +1517,7 @@ a {
 }
 /* line 28, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.no-right-border, .grid.fixedTable td.no-right-border {
-  border-right: 0;
+  border-right: 0 !important;
 }
 /* line 31, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.no-left-border, .grid.fixedTable td.no-left-border {
@@ -1543,37 +1617,54 @@ a {
 /* line 60, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-header {
   width: calc(100% - 321px);
-  margin-left: 321px;
+  margin-left: 320px;
 }
-/* line 65, ../sass/components/3_components/_grid.scss */
+/* line 64, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable .fixedtable-header th:last-child {
+  border-right: 1px solid #cfcfcf;
+}
+/* line 71, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-body {
   width: calc(100% - 321px);
+  left: -1px;
 }
-/* line 69, ../sass/components/3_components/_grid.scss */
+/* line 75, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable .fixedtable-body td:last-child {
+  border-right: 1px solid #cfcfcf;
+}
+/* line 79, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable .fixedtable-body tr:last-child td:last-child {
+  border-right: 1px solid transparent;
+}
+/* line 84, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-sidebar {
   margin-left: 0;
   width: 321px;
 }
-/* line 75, ../sass/components/3_components/_grid.scss */
+/* line 90, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.costs .fixedtable-sidebar, .grid.fixedTable.costs .fixedtable-body {
-  height: calc(100vh - 296px);
+  height: calc(100vh - 301px);
   display: block;
 }
-/* line 82, ../sass/components/3_components/_grid.scss */
+/* line 97, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.performance .currency-symbol {
   margin-left: 50px;
 }
-/* line 88, ../sass/components/3_components/_grid.scss */
+/* line 103, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.performance-advertisers .fixedtable-sidebar, .grid.fixedTable.performance-advertisers .fixedtable-body {
   height: calc(100vh - 265px);
   display: block;
 }
-/* line 98, ../sass/components/3_components/_grid.scss */
+/* line 113, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridFirstColumnHeader {
   position: absolute;
   width: 321px;
 }
-/* line 104, ../sass/components/3_components/_grid.scss */
+/* line 116, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable .gridFirstColumnHeader th:nth-child(2) {
+  border-right: 1px solid #cfcfcf;
+}
+/* line 122, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridColumnHeader th,
 .grid.fixedTable tr th {
   height: 40px;
@@ -1584,46 +1675,49 @@ a {
   text-align: left;
   border-collapse: collapse;
 }
-/* line 119, ../sass/components/3_components/_grid.scss */
+/* line 136, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns {
   counter-reset: rowNumber;
 }
-/* line 123, ../sass/components/3_components/_grid.scss */
+/* line 140, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns tr:not(.total) {
   counter-increment: rowNumber;
 }
-/* line 126, ../sass/components/3_components/_grid.scss */
+/* line 143, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child {
   background: #f5f6f7;
-  border-right: 1px solid #cfcfcf;
   padding: 0;
   padding-top: 11px;
   text-align: center;
 }
-/* line 134, ../sass/components/3_components/_grid.scss */
+/* line 150, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child::before {
   content: counter(rowNumber);
 }
-/* line 142, ../sass/components/3_components/_grid.scss */
+/* line 154, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total) td:nth-child(2) {
+  border-right: 1px solid #cfcfcf;
+}
+/* line 162, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th {
   white-space: nowrap;
   box-sizing: border-box;
 }
-/* line 147, ../sass/components/3_components/_grid.scss */
+/* line 167, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .inactive {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
   height: 100%;
 }
-/* line 156, ../sass/components/3_components/_grid.scss */
+/* line 176, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr:not(.total).hover td {
   background: #E6F2F8 !important;
 }
-/* line 160, ../sass/components/3_components/_grid.scss */
+/* line 180, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr:not(.total).hover .inactive input {
   background: #fff !important;
 }
-/* line 166, ../sass/components/3_components/_grid.scss */
+/* line 186, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr td {
   background: #fff;
   height: 55px;
@@ -1631,50 +1725,50 @@ a {
   border-bottom: 1px solid #eee;
   border-right: 1px solid #ddd;
 }
-/* line 174, ../sass/components/3_components/_grid.scss */
+/* line 194, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.total td {
   background: #f5f6f7;
   border-top: 1px solid #cfcfcf;
   font-weight: bold;
   border-left: 1px solid transparent;
 }
-/* line 181, ../sass/components/3_components/_grid.scss */
+/* line 201, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive {
   background: #fff;
   background-image: none !important;
 }
-/* line 186, ../sass/components/3_components/_grid.scss */
+/* line 206, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive.admin td {
   background: #fff;
   opacity: 0.5;
 }
-/* line 191, ../sass/components/3_components/_grid.scss */
+/* line 211, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table {
   border-collapse: collapse;
 }
-/* line 194, ../sass/components/3_components/_grid.scss */
+/* line 214, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th, .grid.fixedTable table td, .grid.fixedTable table tr {
   box-sizing: border-box;
 }
-/* line 197, ../sass/components/3_components/_grid.scss */
+/* line 217, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th.readonly, .grid.fixedTable table th.link, .grid.fixedTable table td.readonly, .grid.fixedTable table td.link, .grid.fixedTable table tr.readonly, .grid.fixedTable table tr.link {
   padding: 5px;
   box-sizing: border-box;
   display: inline-block;
 }
-/* line 203, ../sass/components/3_components/_grid.scss */
+/* line 223, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number, .grid.fixedTable table td .col-line-number, .grid.fixedTable table tr .col-line-number {
   color: #ccc;
   font-size: 2em;
   padding: 0px;
   width: 100px;
 }
-/* line 209, ../sass/components/3_components/_grid.scss */
+/* line 229, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number span, .grid.fixedTable table td .col-line-number span, .grid.fixedTable table tr .col-line-number span {
   display: block;
   padding: 10px;
 }
-/* line 216, ../sass/components/3_components/_grid.scss */
+/* line 236, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-checkbox, .grid.fixedTable table td .col-checkbox, .grid.fixedTable table tr .col-checkbox {
   max-width: 22px;
   min-width: 22px;
@@ -1683,24 +1777,24 @@ a {
   background-size: 4px 4px;
   height: 100%;
 }
-/* line 225, ../sass/components/3_components/_grid.scss */
+/* line 245, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-placement-name, .grid.fixedTable table td .col-placement-name, .grid.fixedTable table tr .col-placement-name {
   color: #69AED4;
   width: 177px !important;
   padding: 5px;
 }
-/* line 235, ../sass/components/3_components/_grid.scss */
+/* line 255, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th span {
   display: block;
   box-sizing: border-box;
 }
-/* line 240, ../sass/components/3_components/_grid.scss */
+/* line 260, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 246, ../sass/components/3_components/_grid.scss */
+/* line 266, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -1714,16 +1808,16 @@ a {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 259, ../sass/components/3_components/_grid.scss */
+/* line 279, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 264, ../sass/components/3_components/_grid.scss */
+/* line 284, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 268, ../sass/components/3_components/_grid.scss */
+/* line 288, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -1731,19 +1825,19 @@ a {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 276, ../sass/components/3_components/_grid.scss */
+/* line 296, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 283, ../sass/components/3_components/_grid.scss */
+/* line 303, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 290, ../sass/components/3_components/_grid.scss */
+/* line 310, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions {
   color: #999;
   font-size: 11px;
@@ -1753,24 +1847,24 @@ a {
   position: absolute;
   white-space: nowrap;
 }
-/* line 299, ../sass/components/3_components/_grid.scss */
+/* line 319, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 308, ../sass/components/3_components/_grid.scss */
+/* line 328, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 312, ../sass/components/3_components/_grid.scss */
+/* line 332, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 317, ../sass/components/3_components/_grid.scss */
+/* line 337, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 322, ../sass/components/3_components/_grid.scss */
+/* line 342, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable:focus {
   border-width: 1px;
 }
@@ -4024,35 +4118,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 53, ../sass/planner.scss */
+/* line 54, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 57, ../sass/planner.scss */
+/* line 58, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 62, ../sass/planner.scss */
+/* line 63, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 64, ../sass/planner.scss */
+/* line 65, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 70, ../sass/planner.scss */
+/* line 71, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 74, ../sass/planner.scss */
+/* line 75, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -4062,12 +4156,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 83, ../sass/planner.scss */
+/* line 84, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 88, ../sass/planner.scss */
+/* line 89, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -4078,7 +4172,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 98, ../sass/planner.scss */
+/* line 99, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -4088,13 +4182,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 107, ../sass/planner.scss */
+/* line 108, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 117, ../sass/planner.scss */
+/* line 118, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -4104,7 +4198,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 126, ../sass/planner.scss */
+/* line 127, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -4113,48 +4207,48 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 134, ../sass/planner.scss */
+/* line 135, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 141, ../sass/planner.scss */
+/* line 142, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 149, ../sass/planner.scss */
+/* line 150, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 154, ../sass/planner.scss */
+/* line 155, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 159, ../sass/planner.scss */
+/* line 160, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 164, ../sass/planner.scss */
+/* line 165, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 173, ../sass/planner.scss */
+/* line 174, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 178, ../sass/planner.scss */
+/* line 179, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 5px;
 }
-/* line 184, ../sass/planner.scss */
+/* line 185, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
@@ -4178,17 +4272,17 @@ h2 {
           }
   */
 }
-/* line 188, ../sass/planner.scss */
+/* line 189, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   color: #333;
   cursor: pointer;
 }
-/* line 214, ../sass/planner.scss */
+/* line 215, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton i.fa-times-circle {
   display: none;
 }
-/* line 218, ../sass/planner.scss */
+/* line 219, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4238,13 +4332,13 @@ h2 {
   width: 16px;
   display: inline-block;
 }
-/* line 223, ../sass/planner.scss */
+/* line 224, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active i.fa-times-circle {
   display: inline-block;
   top: 0 !important;
   margin-right: 0;
 }
-/* line 230, ../sass/planner.scss */
+/* line 231, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu {
   background: #f5f6f7;
   border: none;
@@ -4255,26 +4349,26 @@ h2 {
   max-height: none;
   width: 900px;
 }
-/* line 240, ../sass/planner.scss */
+/* line 241, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
   padding: 12px 5px 8px;
   margin: 0;
 }
-/* line 245, ../sass/planner.scss */
+/* line 246, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 250, ../sass/planner.scss */
+/* line 251, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li.current span {
   background: #ddd;
 }
-/* line 254, ../sass/planner.scss */
+/* line 255, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
-/* line 261, ../sass/planner.scss */
+/* line 262, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown {
   background: #fff;
   border: 1px solid #ddd;
@@ -4286,7 +4380,7 @@ h2 {
   width: 133px;
   box-shadow: 0px 2px 2px #999;
 }
-/* line 272, ../sass/planner.scss */
+/* line 273, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li {
   display: block;
   padding: 12px 5px 8px;
@@ -4295,33 +4389,33 @@ h2 {
   box-sizing: border-box;
   width: 100%;
 }
-/* line 280, ../sass/planner.scss */
+/* line 281, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 285, ../sass/planner.scss */
+/* line 286, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li.current span {
   background: none;
   font-weight: bold;
 }
-/* line 290, ../sass/planner.scss */
+/* line 291, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li:hover {
   background: #f5f6f7;
 }
 
-/* line 301, ../sass/planner.scss */
+/* line 302, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 305, ../sass/planner.scss */
+/* line 306, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 310, ../sass/planner.scss */
+/* line 311, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -4330,7 +4424,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 319, ../sass/planner.scss */
+/* line 320, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -4344,7 +4438,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 332, ../sass/planner.scss */
+/* line 333, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -4363,7 +4457,7 @@ h2 {
   width: 42px;
 }
 
-/* line 350, ../sass/planner.scss */
+/* line 351, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -4373,11 +4467,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 360, ../sass/planner.scss */
+/* line 361, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 363, ../sass/planner.scss */
+/* line 364, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

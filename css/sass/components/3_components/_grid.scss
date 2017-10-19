@@ -3,7 +3,7 @@
     width: 100%;
     
     aside {
-        border-right: 1px solid #cfcfcf;
+        border-right: 0px solid #cfcfcf;
     }
     
     th span {
@@ -26,7 +26,7 @@
         }
         
         &.no-right-border {
-            border-right: 0;
+            border-right: 0 !important;
         }
         &.no-left-border {
             border-left: 0;
@@ -59,11 +59,26 @@
     
     .fixedtable-header {
         width: calc(100% - 321px);
-        margin-left: 321px;
+        margin-left: 320px;
+        
+        th:last-child {
+            border-right: 1px solid #cfcfcf;
+        }
+        
+        
     }
     
     .fixedtable-body {
         width: calc(100% - 321px);
+        left: -1px;
+        
+        td:last-child {
+            border-right: 1px solid #cfcfcf;
+        }
+        
+        tr:last-child td:last-child {
+            border-right: 1px solid transparent;
+        }
     }
     
     .fixedtable-sidebar {
@@ -73,7 +88,7 @@
     
     &.costs {
         .fixedtable-sidebar, .fixedtable-body {
-            height: calc(100vh - 296px);
+            height: calc(100vh - 301px);
             display: block;
         }   
     } 
@@ -98,7 +113,10 @@
     .gridFirstColumnHeader {
         position: absolute; width: 321px;
     
-        
+        th:nth-child(2) {
+            border-right: 1px solid #cfcfcf;
+        }
+
     }
     
     .gridColumnHeader th,
@@ -110,7 +128,6 @@
         box-sizing: border-box;
         text-align: left;
         border-collapse: collapse;
-             
         span {
         }        
                 
@@ -125,7 +142,6 @@
         
             td:first-child {
                 background: #f5f6f7;
-                border-right: 1px solid #cfcfcf;
                 padding: 0;
                 padding-top: 11px;
                 text-align: center;
@@ -133,6 +149,10 @@
         
             td:first-child::before {
                 content: counter(rowNumber);
+            }
+            
+            td:nth-child(2) {
+                border-right: 1px solid #cfcfcf;
             }
     
         }
