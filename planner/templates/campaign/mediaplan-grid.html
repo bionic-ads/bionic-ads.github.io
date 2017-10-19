@@ -221,7 +221,7 @@
 
 // Itemized Costs
 
-          var costActions = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> <a data-action="edit" class="action cost-edit">Edit</a></div><div class="inline_edit "><div class="top"><div class="title">Cost Per 1,000 Impressions</div><div class="input cost-per"><span class="label">Rate</span><input type="text"></div><div class="input overage"><span class="label">Overage Buffer</span><input type="text"></div></div><div class="bottom"><div class="summary">= Rate x ((Impressions Goal + (Overage Buffer x Impressions Goal)) / 1,000)</div><div class="summary">= CHF 5.00 x (1,000,000 / 1,000) = CHF 1,211.54</div><div class="summary">= CHF 1,211.54 × USD 1.04 = <strong>USD 1,260.00</strong></div></div></div>';
+          var costActions = '<div class="exclude-reset"><a class="action exclude" id="actionExcludeCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="exclude" data-kpi="CPM" data-target="kpiCPM'+i+'">Exclude</a> <a  class="action reset" style="display:none" id="actionResetCPM'+i+'" data-flightheader="'+item.FlightedPlacement+'" data-flightmember="'+item.FlightMember+'" data-item="'+i+'" data-action="reset" data-kpi="CPM" data-default="'+item.CPMdefault+'" data-numberdefault="'+item.ImpressionsDefault+'" data-target="kpiCPM'+i+'">Reset</a> <a data-action="edit" class="action cost-edit">Edit</a></div><div class="inline_edit "></div>';
 
 
 // KPI Actions
@@ -333,23 +333,90 @@
           mediaPlanBody.appendTo("#MediaPlanBody tbody");
         })
 
-        
+        // Cell Actions
+        $(".exclude-reset a").click(function(event){
+//         $(document).on('click', '.exclude-reset a', function() {
+            var action = $(this).data('action');
+            var actionButton = $(this).attr('id');
+            var item = $(this).data('item');
+            var kpi = $(this).data('kpi');
+            var target = $(this).data('target');
+            var kpidefault = $(this).data('default');
+            var numberdefault = $(this).data('numberdefault');
+            var numberdefaultline = "100,000";
+            var flightheader =  $(this).data('flightheader');
+            var flightmember =  $(this).data('flightmember');
+            
+            console.log(action);
+            
+            if(action == "exclude") {
+                
+                if(flightheader > 0){
+                    $("tr.flight"+flightheader+" td input."+kpi).val("");
+                    $("tr.flight"+flightheader+" td input."+kpi).removeClass("custom");
+                    $("tr.flight"+flightheader+" td input."+kpi).parent().addClass("inactive");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).addClass("inactive");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").addClass("inactive");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").val("");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").hide();
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").hide();
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").show();
+                }
+                
+                $(this).parent().parent().find(".currency-symbol").hide();
+                $("."+target).val("");
+                $("."+target).removeClass("custom");
+                $("#actionExclude"+kpi+item).hide();
+                $("#actionReset"+kpi+item).show();
+                $("td."+kpi+item).addClass("inactive");
+                $("."+target).addClass("inactive");
+                
+            } else if(action == "reset") {
+                
+                if(flightheader > 0){
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).removeClass("inactive");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").removeClass("inactive");
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.cpw").val(kpidefault);
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.number").val(numberdefaultline);
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").show();
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").show();
+                    $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").hide();
+                }
+                
+                $(".cpw.kpi"+kpi+item).val(kpidefault);
+                $(".number.kpi"+kpi+item).val(numberdefault);
+    //             $(".number.kpi"+kpi+item).val("");
+                $("."+target).removeClass("custom");
+                $("."+target).removeClass("inactive");
+                $("td."+kpi+item).removeClass("inactive");
+                $("#actionReset"+kpi+item).hide();
+                $("#actionExclude"+kpi+item).show();
+                $(this).parent().parent().find(".currency-symbol").show();
+            
+            } else if(action == "edit") {
+    //             var inlineEdit = $(event.target).find('.inline_edit');
+    //             console.log(inlineEdit);
+                $(".inline_edit").hide();
+                $(event.target).closest("td").find('.inline_edit').load("templates/campaign/mediaplan-inline-cost-edit.html");
+                $(event.target).closest("td").find('.inline_edit').toggle();
+            }
+                    
+        });
+
+
+
       }
 </script>
         
 <script type="text/javascript">
     
     $("body").click(function () {      
-        $(".inline_edit").click(function (event) {        
+        $(".inline_edit, .exclude-reset a").click(function (event) {        
             event.stopPropagation();
         });          
 
         $(".inline_edit").hide();
     });
-    
-
-
-
 
     // ------------------------------------------------
     // Set Up the Fixed First Column Table
@@ -454,74 +521,7 @@
     }, "#mediaplan table tbody tr");
     
     // ------------------------------------------------
-    // KPI Actions
     
-    $(document).on('click', '.exclude-reset a', function() {
-        var action = $(this).data('action');
-        var actionButton = $(this).attr('id');
-        var item = $(this).data('item');
-        var kpi = $(this).data('kpi');
-        var target = $(this).data('target');
-        var kpidefault = $(this).data('default');
-        var numberdefault = $(this).data('numberdefault');
-        var numberdefaultline = "100,000";
-        var flightheader =  $(this).data('flightheader');
-        var flightmember =  $(this).data('flightmember');
-        console.log(action + '' + target);
-        
-        if(action == "exclude") {
-            
-            if(flightheader > 0){
-                $("tr.flight"+flightheader+" td input."+kpi).val("");
-                $("tr.flight"+flightheader+" td input."+kpi).removeClass("custom");
-                $("tr.flight"+flightheader+" td input."+kpi).parent().addClass("inactive");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).addClass("inactive");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").addClass("inactive");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").val("");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").hide();
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").hide();
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").show();
-            }
-            
-            $(this).parent().parent().find(".currency-symbol").hide();
-            $("."+target).val("");
-            $("."+target).removeClass("custom");
-            $("#actionExclude"+kpi+item).hide();
-            $("#actionReset"+kpi+item).show();
-            $("td."+kpi+item).addClass("inactive");
-            $("."+target).addClass("inactive");
-            
-        } else if(action == "reset") {
-            
-            if(flightheader > 0){
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).removeClass("inactive");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input").removeClass("inactive");
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.cpw").val(kpidefault);
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader+" input.number").val(numberdefaultline);
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".currency-symbol").show();
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.exclude").show();
-                $("tr.flight"+flightheader+" td."+kpi+".flight"+flightheader).find(".action.reset").hide();
-            }
-            
-            $(".cpw.kpi"+kpi+item).val(kpidefault);
-            $(".number.kpi"+kpi+item).val(numberdefault);
-//             $(".number.kpi"+kpi+item).val("");
-            $("."+target).removeClass("custom");
-            $("."+target).removeClass("inactive");
-            $("td."+kpi+item).removeClass("inactive");
-            $("#actionReset"+kpi+item).hide();
-            $("#actionExclude"+kpi+item).show();
-            $(this).parent().parent().find(".currency-symbol").show();
-        
-        } else if(action == "edit") {
-//             var inlineEdit = $(event.target).find('.inline_edit');
-//             console.log(inlineEdit);
-            $(event.target).closest("td").find('.inline_edit').toggle();
-        }
-        
-        
-        
-    });
     
     $(document).on('change', '.cpw', function(){
         var kpi = $(this).data('kpi');

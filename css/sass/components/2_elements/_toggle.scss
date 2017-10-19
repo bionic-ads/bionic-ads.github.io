@@ -30,11 +30,11 @@
     input[type="radio"] {
         display: none;
 
-        &:checked + label{
+        &:checked + a label{
             background: linear-gradient(#cfcfcf,#e9ebed);
         }
 
-        &:disabled + label{
+        &:disabled label{
             cursor: default;
         }
     }

@@ -20,103 +20,8 @@
 
     </div>
     
-    <div class="nxm-menu-filters custom-form-controls" style="margin-bottom: 5px;">
-        <ul class="page-view-toggle">
-            <li>
-                <input type="radio" name="performance-view-toggle" id="performance-view-toggle-table" value="tableView" checked="">
-                <label for="performance-view-toggle-list">
-                    <i class="fa fa-table" aria-hidden="true"></i>Table
-                </label>
-            </li>
-            <li>
-                <input type="radio" name="performance-view-toggle" id="performance-view-toggle-chart" value="chartView">
-                <a href="#/performancechart"><label for="performance-view-toggle-">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>Chart
-                </label></a>
-            </li>
-        </ul>
-        
-        <div class="filter-container ">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-columns"></i> All KPIs</div>
-            <div class="menu filterTypeMenu" style="width: 200px">
-                <div class="header filter-section filter-search-master">
-                    <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
-                    <span id="clear-search" class="clear-search-filter">
-                        <i class="fa fa-times-circle"></i>
-                    </span>
-                </div>
-                <ul>
-                    <li class="divider"><input id="all-kpis" type="checkbox" checked><label for="all-kpis">All KPIs</label></li>
-                    <li><input id="impressions" type="checkbox" checked><label for="impressions">Impressions & CPM</label></li>
-                    <li><input id="clicks" type="checkbox" checked><label for="clicks">Clicks & CPC</label></li>
-                    <li><input id="clicks2" type="checkbox" checked><label for="clicks2">Clicks & CTR</label></li>
-                    <li><input id="customers" type="checkbox" checked><label for="customers">Customers & CAC</label></li>
-                </ul>
-                <div class="footer"><a class="blue-button">Apply</a></div>
-            </div>
-        </div>
-        
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calculator"></i> USD - US Dollars</div>
-            <div class="menu filterTypeMenu">
-                <div class="header filter-section filter-search-master">
-                    <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
-                    <span id="clear-search" class="clear-search-filter">
-                        <i class="fa fa-times-circle"></i>
-                    </span>
-                </div>
-                <ul>
-                    <li>USD - US Dollars</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="filter-container custom-form-controls">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Advertisers</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Advertisers</label></li>
-                    <li class="first-option"><input id="following" type="checkbox" checked><label for="following">Following</label></li>
-                    <li><input id="notfollowing" type="checkbox" checked><label for="notfollowing">Not Following</label></li>
-                </ul>
-                <div class="footer"><a class="blue-button">Apply</a></div>
-            </div>
-        </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calendar"></i> Any Time</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-list-ul"></i> Daily Breakdown</div>
-            <div class="menu filterTypeMenu">
-                
-                <ul class="plain">
-                    <li>Totals Only</li>
-                    <li>Daily</li>
-                    <li>Weekly</li>
-                    <li>Monthly</li>
-                    <li>Quarterly</li>
-                    <li>Annually</li>
-                    <li>Broadcast Weekly</li>
-                    <li>Broadcast Monthly</li>
-                    <li>Broadcast Quarterly</li>
-                    <li>Broadcast Annually</li>
-                </ul>
-                <div class="footer"><a class="blue-button">Apply</a></div>
-            </div>
-        </div>
-        
-        <div class="button-divider"></div>
-        
-        <div class="action-menu-button"><i class="fa fa-download"></i> Download</div>
-        
-    </div>
-
+    <div class="filters-performance"></div>
+    
 </div>
 
 <div class="grid fixedTable block performance performance-advertisers custom-form-controls" id="grid">
@@ -161,23 +66,20 @@
 </div>
 <script>
 
+    $(document).ready(function(){
+        
+        $(".filters-performance").load("templates/utilities/filters-performance.html", function(){
+            $("input#performance-view-toggle-table").prop("checked", true);
+        });
+        
+    });
+
     $("body").click(function () {        
 
         $(".menu").hide();
         $(".performance-details").hide();
 
-    });
-
-    $(".bionic-filter").click(function (event) {        
-        event.stopPropagation();
-        $(".menu").hide();
-        $(this).next(".menu").show();
-    });
-    
-    $(".menu").click(function (event) {        
-        event.stopPropagation();
-    });
-    
+    });    
 
     
     var dataTab = "PerformanceOrg";

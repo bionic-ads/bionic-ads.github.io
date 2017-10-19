@@ -9,11 +9,17 @@
     width: 150px;
     z-index: 99;
     
+    * {
+        box-sizing: border-box;
+    }
+    
     .header {
+        
         display: block;
         float: left;
         padding: 8px 10px;
         border-bottom: 1px solid #cfcfcf;
+        width: 100%;
         
         input[type=text].filter-search-master {
             width: 100%;

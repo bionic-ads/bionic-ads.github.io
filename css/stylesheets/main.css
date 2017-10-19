@@ -4560,11 +4560,11 @@ a {
   display: none;
 }
 /* line 33, ../sass/components/2_elements/_toggle.scss */
-.page-view-toggle input[type="radio"]:checked + label {
+.page-view-toggle input[type="radio"]:checked + a label {
   background: linear-gradient(#cfcfcf, #e9ebed);
 }
 /* line 37, ../sass/components/2_elements/_toggle.scss */
-.page-view-toggle input[type="radio"]:disabled + label {
+.page-view-toggle input[type="radio"]:disabled label {
   cursor: default;
 }
 /* line 42, ../sass/components/2_elements/_toggle.scss */

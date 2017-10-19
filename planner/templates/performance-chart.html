@@ -20,58 +20,17 @@
 
     </div>
     
-    <div class="nxm-menu-filters" style="margin-bottom: 5px;">
-        <ul class="page-view-toggle">
-            <li>
-                <input type="radio" name="performance-view-toggle" id="performance-view-toggle-table" value="tableView">
-                <a href="#/performance"><label for="performance-view-toggle-"><i class="fa fa-table" aria-hidden="true"></i>Table</label></a>
-            </li>
-            <li>
-                <input type="radio" name="performance-view-toggle" id="performance-view-toggle-chart" value="chartView" checked="">
-                <label for="performance-view-toggle-chart">
-                    <i class="fa fa-bar-chart" aria-hidden="true"></i>Chart
-                </label>
-            </li>
-        </ul>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-columns"></i> All KPIs</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
-                </ul>
-            </div>
-        </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calculator"></i> USD - US Dollars</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
-                </ul>
-            </div>
-        </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-calendar"></i> Any Time</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
-                </ul>
-            </div>
-        </div>
-        <div class="filter-container">
-            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-list-ul"></i> Daily Breakdown</div>
-            <div class="menu filterTypeMenu">
-                <ul>
-                    <li>Production</li>
-                    <li>Delivery</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="action-menu-button"><i class="fa fa-download"></i> Download</div>
-        
-    </div>
-
+    <div class="filters-performance"></div>
+    
 </div>
+
+<script>
+    $(document).ready(function(){
+        
+        $(".filters-performance").load("templates/utilities/filters-performance.html", function(){
+            $("input#performance-view-toggle-chart").prop("checked", true);
+        });
+        
+    });
+
+</script>

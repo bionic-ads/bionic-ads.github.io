@@ -942,11 +942,11 @@ a {
   display: none;
 }
 /* line 33, ../sass/components/2_elements/_toggle.scss */
-.page-view-toggle input[type="radio"]:checked + label {
+.page-view-toggle input[type="radio"]:checked + a label {
   background: linear-gradient(#cfcfcf, #e9ebed);
 }
 /* line 37, ../sass/components/2_elements/_toggle.scss */
-.page-view-toggle input[type="radio"]:disabled + label {
+.page-view-toggle input[type="radio"]:disabled label {
   cursor: default;
 }
 /* line 42, ../sass/components/2_elements/_toggle.scss */
@@ -1925,58 +1925,71 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   z-index: 99;
 }
 /* line 15, ../sass/components/3_components/_inline_edit.scss */
+.inline_edit :before {
+  content: "\f0d8";
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.05);
+  font-family: FontAwesome;
+  position: absolute;
+  top: -20px;
+  left: 55px;
+  width: 0;
+  height: 0;
+}
+/* line 28, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .top, .inline_edit .bottom {
   display: block;
   float: left;
   padding: 15px;
 }
-/* line 21, ../sass/components/3_components/_inline_edit.scss */
+/* line 34, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .top {
   padding-bottom: 0;
 }
-/* line 25, ../sass/components/3_components/_inline_edit.scss */
+/* line 38, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .bottom {
   background: #f5f6f7;
   border-top: 1px solid #eee;
   padding-top: 0;
   padding-bottom: 20px;
 }
-/* line 32, ../sass/components/3_components/_inline_edit.scss */
+/* line 45, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .title {
   font-weight: bold;
   width: 100%;
 }
-/* line 37, ../sass/components/3_components/_inline_edit.scss */
+/* line 50, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input {
   margin-top: 10px;
   margin-bottom: 10px;
   float: left;
 }
-/* line 44, ../sass/components/3_components/_inline_edit.scss */
+/* line 57, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input.cost-per {
   width: 150px;
 }
-/* line 48, ../sass/components/3_components/_inline_edit.scss */
+/* line 61, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input.overage {
   margin-left: 10px;
   width: 80px;
 }
-/* line 54, ../sass/components/3_components/_inline_edit.scss */
+/* line 67, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input .label {
   clear: both;
   display: block;
   margin-bottom: 5px;
 }
-/* line 60, ../sass/components/3_components/_inline_edit.scss */
+/* line 73, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input .currency-symbol {
   color: #9b9b9b;
 }
-/* line 64, ../sass/components/3_components/_inline_edit.scss */
+/* line 77, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .input input[type="text"] {
   border: 3px solid #eee !important;
   font-size: 13px;
 }
-/* line 72, ../sass/components/3_components/_inline_edit.scss */
+/* line 85, ../sass/components/3_components/_inline_edit.scss */
 .inline_edit .summary {
   clear: both;
   display: block;
@@ -1996,17 +2009,22 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   z-index: 99;
 }
 /* line 12, ../sass/components/3_components/_menus.scss */
+.menu * {
+  box-sizing: border-box;
+}
+/* line 16, ../sass/components/3_components/_menus.scss */
 .menu .header {
   display: block;
   float: left;
   padding: 8px 10px;
   border-bottom: 1px solid #cfcfcf;
+  width: 100%;
 }
-/* line 18, ../sass/components/3_components/_menus.scss */
+/* line 24, ../sass/components/3_components/_menus.scss */
 .menu .header input[type=text].filter-search-master {
   width: 100%;
 }
-/* line 23, ../sass/components/3_components/_menus.scss */
+/* line 29, ../sass/components/3_components/_menus.scss */
 .menu .footer {
   box-sizing: border-box;
   border-top: 1px solid #cfcfcf;
@@ -2015,16 +2033,16 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   float: left;
   width: 100%;
 }
-/* line 31, ../sass/components/3_components/_menus.scss */
+/* line 37, ../sass/components/3_components/_menus.scss */
 .menu .footer .blue-button {
   padding: 3px 10px;
 }
-/* line 36, ../sass/components/3_components/_menus.scss */
+/* line 42, ../sass/components/3_components/_menus.scss */
 .menu.columnMenu {
   margin-top: 8px;
   position: fixed;
 }
-/* line 41, ../sass/components/3_components/_menus.scss */
+/* line 47, ../sass/components/3_components/_menus.scss */
 .menu ul {
   box-sizing: border-box;
   float: left;
@@ -2033,7 +2051,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   overflow-x: hidden;
   width: 100%;
 }
-/* line 49, ../sass/components/3_components/_menus.scss */
+/* line 55, ../sass/components/3_components/_menus.scss */
 .menu ul li {
   box-sizing: border-box;
   cursor: pointer;
@@ -2044,32 +2062,32 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   position: relative;
   width: 100%;
 }
-/* line 59, ../sass/components/3_components/_menus.scss */
+/* line 65, ../sass/components/3_components/_menus.scss */
 .menu ul li input[type='checkbox'] + label {
   margin: 0;
 }
-/* line 64, ../sass/components/3_components/_menus.scss */
+/* line 70, ../sass/components/3_components/_menus.scss */
 .menu ul li.divider {
   border-bottom: 1px solid #cfcfcf;
   padding-bottom: 8px;
 }
-/* line 69, ../sass/components/3_components/_menus.scss */
+/* line 75, ../sass/components/3_components/_menus.scss */
 .menu ul li.divider + li {
   padding-top: 8px;
 }
-/* line 75, ../sass/components/3_components/_menus.scss */
+/* line 81, ../sass/components/3_components/_menus.scss */
 .menu ul li:first-child {
   padding-top: 8px;
 }
-/* line 78, ../sass/components/3_components/_menus.scss */
+/* line 84, ../sass/components/3_components/_menus.scss */
 .menu ul li:last-child {
   padding-bottom: 8px;
 }
-/* line 85, ../sass/components/3_components/_menus.scss */
+/* line 91, ../sass/components/3_components/_menus.scss */
 .menu ul.plain li {
   padding: 8px 10px;
 }
-/* line 88, ../sass/components/3_components/_menus.scss */
+/* line 94, ../sass/components/3_components/_menus.scss */
 .menu ul.plain li:hover {
   background: #eee;
 }
@@ -3318,7 +3336,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   position: fixed;
   background: #fff;
   margin-left: -5px;
-  margin-top: -190px;
+  margin-top: -208px;
   padding: 15px 20px;
   text-align: left;
   width: 500px;
@@ -3328,11 +3346,11 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 .performance .performance-details::after {
   content: "\f0d7";
   color: #fff;
-  font-size: 50px;
-  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  font-size: 45px;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
   font-family: FontAwesome;
   position: absolute;
-  top: 119px;
+  top: 143px;
   left: 15px;
   width: 0;
   height: 0;
@@ -3348,54 +3366,65 @@ table.gridlines.addToCampaign tr:hover td:last-child {
 }
 /* line 41, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .header {
+  display: block;
+  float: left;
   width: 100%;
   margin-bottom: 10px;
 }
-/* line 46, ../sass/components/4_layouts/_performance-table.scss */
+/* line 48, ../sass/components/4_layouts/_performance-table.scss */
+.performance .performance-details .footer {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  float: left;
+  border-top: 1px solid #cfcfcf;
+  padding-top: 5px;
+}
+/* line 57, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .secondary {
   color: #999;
 }
-/* line 50, ../sass/components/4_layouts/_performance-table.scss */
+/* line 61, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content, .performance .performance-details .divider {
   display: block;
   float: left;
   width: 100px;
 }
-/* line 57, ../sass/components/4_layouts/_performance-table.scss */
+/* line 68, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content.pace {
   width: 70px;
 }
-/* line 61, ../sass/components/4_layouts/_performance-table.scss */
+/* line 72, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content.emo {
   width: 72px;
 }
-/* line 67, ../sass/components/4_layouts/_performance-table.scss */
+/* line 78, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider {
   width: 40px;
 }
-/* line 70, ../sass/components/4_layouts/_performance-table.scss */
+/* line 81, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider .fa-arrow-right, .performance .performance-details .divider.bracket {
   color: #e2e2e2;
 }
-/* line 74, ../sass/components/4_layouts/_performance-table.scss */
+/* line 85, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider.emo-arrow {
   margin-top: 10px;
 }
-/* line 78, ../sass/components/4_layouts/_performance-table.scss */
+/* line 89, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider .fa-arrow-right {
   font-size: 36px;
 }
-/* line 82, ../sass/components/4_layouts/_performance-table.scss */
+/* line 93, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider.bracket {
   font-size: 80px;
   line-height: 60px;
   width: 36px;
 }
-/* line 91, ../sass/components/4_layouts/_performance-table.scss */
+/* line 102, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .right {
   float: right;
 }
-/* line 94, ../sass/components/4_layouts/_performance-table.scss */
+/* line 105, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .emoticon {
   clear: both;
   background-size: 200%;
@@ -4070,7 +4099,7 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   margin-right: 5px;
 }
 /* line 406, ../sass/components/7_prototype/_mediaplan.scss */
-.mediaplan.fixedTable .exclude span {
+.mediaplan.fixedTable .exclude span:not(.label) {
   display: none;
 }
 /* line 411, ../sass/components/7_prototype/_mediaplan.scss */

@@ -403,7 +403,7 @@
     }
     
     .exclude {
-        span {display: none;}
+        span:not(.label) {display: none;}
     }
     
     tr.hover {
