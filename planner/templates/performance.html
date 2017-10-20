@@ -72,6 +72,8 @@
             $("input#performance-view-toggle-table").prop("checked", true);
         });
         
+        
+        
     });
 
     $("body").click(function () {        
@@ -80,7 +82,7 @@
         $(".performance-details").hide();
 
     });    
-
+    
     
     var dataTab = "PerformanceOrg";
     
@@ -104,6 +106,12 @@
           
           if(item.AdvertiserName != "Total"){
           
+              dateNote = item.Note;
+              var noteIcon = '';
+              if(dateNote == "yes") {
+                  noteIcon = '<a class="dataNote" style="font-size:10px; color:orange" title="Data only available through this date"><i class="fa fa-warning"></i></a>';
+              }
+              
               costsTableFirstColumns = $('<tr class="admin"><td class="line-number col-45"></td>');
               costsTableFirstColumns.append('<td class="col-275"><a href="#/advertiser/performance/" ><span><strong>'+ item.AdvertiserName +'</strong></span></a></td>');
               costsTableFirstColumns.append('</tr>');
@@ -111,7 +119,7 @@
                         
               costsTableBody = $('<tr class="admin '+ item.FirstData +'">');
               costsTableBody.append('<td class="col-100"><span>'+ item.FirstData +'</span></td>');
-              costsTableBody.append('<td class="col-100"><span>'+ item.LastData +'</span></td>');
+              costsTableBody.append('<td class="col-100"><span>'+ item.LastData + ' '+ noteIcon+'</span></td>');
               costsTableBody.append('<td class="col-200 right"><span class="emoticon performance-table sleepy"></span><span style="padding:0; margin-top:11px;" class="currency-symbol">$</span><span>'+ item.NetMediaCost +'</span></td>');
               costsTableBody.append('<td class="col-200 right"><span class="emoticon performance-table happy"></span><span>'+ item.Impressions +'</span><div class="performance-details"><strong>Impressions for '+item.AdvertiserName+'</strong></div></td>');
               costsTableBody.append('<td class="col-150 right"><span class="emoticon performance-table angry"></span><span style="padding:0; margin-top:11px;" class="currency-symbol">$</span><span>'+ item.CPM +'</span></td>');
@@ -156,6 +164,17 @@
 
         $(".performance-details").click(function (event) {        
             event.stopPropagation();
+        });
+        
+        
+        $('.dataNote').on({
+          "click": function() {
+            $(this).tooltip({ items: ".dataNote", content: "Displaying on click"});
+            $(this).tooltip("enable"); // this line added
+            $(this).tooltip("open");
+          },
+          "mouseout": function() {      
+          }
         });
 
       }

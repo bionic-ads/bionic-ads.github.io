@@ -970,6 +970,19 @@ a {
   padding-left: 0px;
 }
 
+/* line 1, ../sass/components/2_elements/_tooltips.scss */
+.ui-tooltip {
+  height: 100px;
+}
+/* line 4, ../sass/components/2_elements/_tooltips.scss */
+.ui-tooltip * {
+  display: block;
+  float: left;
+  position: relative;
+  height: 100px;
+  top: 0;
+}
+
 /* line 1, ../sass/components/3_components/_stripe.scss */
 #bionic-stripe {
   background: #373E42 url("../../images/bionic.svg") no-repeat;
@@ -3376,55 +3389,56 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   display: block;
   width: 100%;
   margin-top: 5px;
+  margin-bottom: -5px;
   float: left;
   border-top: 1px solid #cfcfcf;
-  padding-top: 5px;
+  padding-top: 10px;
 }
-/* line 57, ../sass/components/4_layouts/_performance-table.scss */
+/* line 58, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .secondary {
   color: #999;
 }
-/* line 61, ../sass/components/4_layouts/_performance-table.scss */
+/* line 62, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content, .performance .performance-details .divider {
   display: block;
   float: left;
   width: 100px;
 }
-/* line 68, ../sass/components/4_layouts/_performance-table.scss */
+/* line 69, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content.pace {
   width: 70px;
 }
-/* line 72, ../sass/components/4_layouts/_performance-table.scss */
+/* line 73, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .content.emo {
   width: 72px;
 }
-/* line 78, ../sass/components/4_layouts/_performance-table.scss */
+/* line 79, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider {
   width: 40px;
 }
-/* line 81, ../sass/components/4_layouts/_performance-table.scss */
+/* line 82, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider .fa-arrow-right, .performance .performance-details .divider.bracket {
   color: #e2e2e2;
 }
-/* line 85, ../sass/components/4_layouts/_performance-table.scss */
+/* line 86, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider.emo-arrow {
   margin-top: 10px;
 }
-/* line 89, ../sass/components/4_layouts/_performance-table.scss */
+/* line 90, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider .fa-arrow-right {
   font-size: 36px;
 }
-/* line 93, ../sass/components/4_layouts/_performance-table.scss */
+/* line 94, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .divider.bracket {
   font-size: 80px;
   line-height: 60px;
   width: 36px;
 }
-/* line 102, ../sass/components/4_layouts/_performance-table.scss */
+/* line 103, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .right {
   float: right;
 }
-/* line 105, ../sass/components/4_layouts/_performance-table.scss */
+/* line 106, ../sass/components/4_layouts/_performance-table.scss */
 .performance .performance-details .emoticon {
   clear: both;
   background-size: 200%;
@@ -4147,35 +4161,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 54, ../sass/planner.scss */
+/* line 55, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 58, ../sass/planner.scss */
+/* line 59, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 63, ../sass/planner.scss */
+/* line 64, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 65, ../sass/planner.scss */
+/* line 66, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 71, ../sass/planner.scss */
+/* line 72, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 75, ../sass/planner.scss */
+/* line 76, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -4185,12 +4199,12 @@ h2 {
   text-align: center;
   z-index: 2;
 }
-/* line 84, ../sass/planner.scss */
+/* line 85, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 89, ../sass/planner.scss */
+/* line 90, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -4201,7 +4215,7 @@ h2 {
   z-index: 2;
 }
 
-/* line 99, ../sass/planner.scss */
+/* line 100, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -4211,13 +4225,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 108, ../sass/planner.scss */
+/* line 109, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 118, ../sass/planner.scss */
+/* line 119, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -4227,7 +4241,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 127, ../sass/planner.scss */
+/* line 128, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -4236,48 +4250,48 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 135, ../sass/planner.scss */
+/* line 136, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 142, ../sass/planner.scss */
+/* line 143, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 150, ../sass/planner.scss */
+/* line 151, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 155, ../sass/planner.scss */
+/* line 156, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 160, ../sass/planner.scss */
+/* line 161, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 165, ../sass/planner.scss */
+/* line 166, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 174, ../sass/planner.scss */
+/* line 175, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 179, ../sass/planner.scss */
+/* line 180, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 5px;
 }
-/* line 185, ../sass/planner.scss */
+/* line 186, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
@@ -4301,17 +4315,17 @@ h2 {
           }
   */
 }
-/* line 189, ../sass/planner.scss */
+/* line 190, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   color: #333;
   cursor: pointer;
 }
-/* line 215, ../sass/planner.scss */
+/* line 216, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton i.fa-times-circle {
   display: none;
 }
-/* line 219, ../sass/planner.scss */
+/* line 220, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4361,13 +4375,13 @@ h2 {
   width: 16px;
   display: inline-block;
 }
-/* line 224, ../sass/planner.scss */
+/* line 225, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active i.fa-times-circle {
   display: inline-block;
   top: 0 !important;
   margin-right: 0;
 }
-/* line 231, ../sass/planner.scss */
+/* line 232, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu {
   background: #f5f6f7;
   border: none;
@@ -4378,26 +4392,26 @@ h2 {
   max-height: none;
   width: 900px;
 }
-/* line 241, ../sass/planner.scss */
+/* line 242, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
   padding: 12px 5px 8px;
   margin: 0;
 }
-/* line 246, ../sass/planner.scss */
+/* line 247, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 251, ../sass/planner.scss */
+/* line 252, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li.current span {
   background: #ddd;
 }
-/* line 255, ../sass/planner.scss */
+/* line 256, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
-/* line 262, ../sass/planner.scss */
+/* line 263, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown {
   background: #fff;
   border: 1px solid #ddd;
@@ -4409,7 +4423,7 @@ h2 {
   width: 133px;
   box-shadow: 0px 2px 2px #999;
 }
-/* line 273, ../sass/planner.scss */
+/* line 274, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li {
   display: block;
   padding: 12px 5px 8px;
@@ -4418,33 +4432,33 @@ h2 {
   box-sizing: border-box;
   width: 100%;
 }
-/* line 281, ../sass/planner.scss */
+/* line 282, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 286, ../sass/planner.scss */
+/* line 287, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li.current span {
   background: none;
   font-weight: bold;
 }
-/* line 291, ../sass/planner.scss */
+/* line 292, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li:hover {
   background: #f5f6f7;
 }
 
-/* line 302, ../sass/planner.scss */
+/* line 303, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 306, ../sass/planner.scss */
+/* line 307, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 311, ../sass/planner.scss */
+/* line 312, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -4453,7 +4467,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 320, ../sass/planner.scss */
+/* line 321, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -4467,7 +4481,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 333, ../sass/planner.scss */
+/* line 334, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -4486,7 +4500,7 @@ h2 {
   width: 42px;
 }
 
-/* line 351, ../sass/planner.scss */
+/* line 352, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -4496,11 +4510,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 361, ../sass/planner.scss */
+/* line 362, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 364, ../sass/planner.scss */
+/* line 365, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

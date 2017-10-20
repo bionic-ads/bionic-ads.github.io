@@ -1,3 +1,5 @@
+<!-- header -->
+
 <div id="bionic-home" class="block fullwidth">
     
     <div class="bionic-header block fullwidth">
@@ -24,6 +26,12 @@
     
 </div>
 
+<!-- Main -->
+
+<img class="placeholder" src="images/performancechart.png" style="margin-left: 10px;">
+<img class="placeholder" src="images/datasource.png" style="display:none; margin-left: 10px; margin-top: -3px;">
+
+
 <script>
     $(document).ready(function(){
         
@@ -31,6 +39,10 @@
             $("input#performance-view-toggle-chart").prop("checked", true);
         });
         
+    });
+    
+    $(".placeholder").click(function(){
+        $(".placeholder").toggle();
     });
 
 </script>
