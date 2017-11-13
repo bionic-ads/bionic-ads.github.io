@@ -5544,14 +5544,14 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 }
 /* line 20, ../sass/components/3_components/_modals.scss */
 .modal a.close-modal {
-  top: 17px;
+  top: 20px;
   right: 10px;
   background-size: 20px;
 }
 /* line 26, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
-  padding: 10px 25px;
+  padding: 15px 20px;
   cursor: move;
 }
 /* line 31, ../sass/components/3_components/_modals.scss */
@@ -5567,7 +5567,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal .bionic-modal-body {
   box-sizing: border-box;
   display: block;
-  padding: 10px 25px 20px;
+  padding: 10px 20px 20px;
   overflow-y: auto;
   position: relative;
 }
@@ -5621,7 +5621,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 97, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
-  padding: 15px 25px;
+  padding: 15px 20px;
 }
 /* line 101, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer.warning {

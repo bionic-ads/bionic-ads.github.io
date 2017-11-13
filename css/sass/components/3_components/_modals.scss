@@ -18,14 +18,14 @@
     }
     
     a.close-modal {
-        top: 17px;
+        top: 20px;
         right: 10px;
         background-size: 20px;
     }
     
     .bionic-modal-header {
         border-bottom: 1px solid #cfcfcf;
-        padding: 10px 25px; 
+        padding: 15px 20px; 
         cursor: move; 
         
         .bionic-modal-breadcrumbs {
@@ -41,7 +41,7 @@
     .bionic-modal-body {
         box-sizing: border-box;
         display: block;
-        padding: 10px 25px 20px;
+        padding: 10px 20px 20px;
         overflow-y: auto;
         position: relative;
         
@@ -96,7 +96,7 @@
     
     .bionic-modal-footer {
         border-top: 1px solid #cfcfcf;
-        padding: 15px 25px;  
+        padding: 15px 20px;  
         
         &.warning {
             background: #f5f6f7;
