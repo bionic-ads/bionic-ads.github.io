@@ -2116,7 +2116,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 10, ../sass/components/3_components/_modals.scss */
 .modal h1 {
   margin: 0;
-  font-size: 28px;
+  font-size: 25px;
 }
 /* line 15, ../sass/components/3_components/_modals.scss */
 .modal .larger {
@@ -2127,23 +2127,24 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal a.close-modal {
   top: 17px;
   right: 10px;
+  background-size: 20px;
 }
-/* line 25, ../sass/components/3_components/_modals.scss */
+/* line 26, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 10px 25px;
   cursor: move;
 }
-/* line 30, ../sass/components/3_components/_modals.scss */
+/* line 31, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs {
   display: block;
   margin-top: 5px;
 }
-/* line 34, ../sass/components/3_components/_modals.scss */
+/* line 35, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header .bionic-modal-breadcrumbs .divider {
   margin: 0 5px;
 }
-/* line 40, ../sass/components/3_components/_modals.scss */
+/* line 41, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body {
   box-sizing: border-box;
   display: block;
@@ -2151,16 +2152,16 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   overflow-y: auto;
   position: relative;
 }
-/* line 47, ../sass/components/3_components/_modals.scss */
+/* line 48, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body ul {
   box-sizing: border-box;
   width: calc(100% - 20px);
 }
-/* line 52, ../sass/components/3_components/_modals.scss */
+/* line 53, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns {
   padding: 0;
 }
-/* line 55, ../sass/components/3_components/_modals.scss */
+/* line 56, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div {
   box-sizing: border-box;
   float: left;
@@ -2173,46 +2174,46 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   border-right: 1px solid #cfcfcf;
   width: 205px;
 }
-/* line 67, ../sass/components/3_components/_modals.scss */
+/* line 68, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div:first-child {
   padding-left: 25px;
 }
-/* line 71, ../sass/components/3_components/_modals.scss */
+/* line 72, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul, .modal .bionic-modal-body.columns div li {
   display: block;
   position: relative;
   float: left;
   width: 100%;
 }
-/* line 78, ../sass/components/3_components/_modals.scss */
+/* line 79, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div ul {
   margin-bottom: 15px;
 }
-/* line 82, ../sass/components/3_components/_modals.scss */
+/* line 83, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div li {
   margin-left: 30px;
   width: calc(100% - 30px);
 }
-/* line 87, ../sass/components/3_components/_modals.scss */
+/* line 88, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-body.columns div input[type='checkbox'] + label::before {
   left: -30px;
   position: absolute;
 }
-/* line 96, ../sass/components/3_components/_modals.scss */
+/* line 97, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
   border-top: 1px solid #cfcfcf;
   padding: 15px 25px;
 }
-/* line 100, ../sass/components/3_components/_modals.scss */
+/* line 101, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer.warning {
   background: #f5f6f7;
 }
-/* line 104, ../sass/components/3_components/_modals.scss */
+/* line 105, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer .blue-button {
   margin-right: 5px;
 }
 
-/* line 112, ../sass/components/3_components/_modals.scss */
+/* line 113, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
