@@ -9,6 +9,10 @@
     width: 150px;
     z-index: 99;
     
+    &.view-menu {
+        margin-top: 3px;
+    }
+    
     * {
         box-sizing: border-box;
     }
@@ -43,7 +47,66 @@
         margin-top: 8px;
         position: fixed;
     }
+
+    input[type=text].filter-search-master{
+        background-color: $nxm-page-background;
+        box-shadow: none;
+        float:left;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 25px;
+        background: url('../images/search.svg') no-repeat 8px 50%;
+        position: relative;
+        border: 1px solid $nxm-border-gray;
+        line-height: $nxm-menu-filters-height - 12px; // minus paddings and border
+        z-index: 1;
+        width: calc(100% - 42px);           // minus paddings + 4px for different zooms
+        height: 100%;
+        
+        &:not(.no-outline):focus{
+            border-width: 1px !important ;
+        }
+        
+        &:focus {
+            background-color: #fff !important;
+        }
+        
+        &:valid {
+            border:1px solid #F77B26 !important;
+            background-color: #fff !important;
+            z-index: 0;
+            padding-right: 30px;        // instead of 10
+            width: calc(100% - 67px);   // minus paddings + 4px for different zooms
+
+
+            ~ .clear-search-filter{
+                display: inline-block; 
+            }
+        }
+        
+    }
     
+    // CLEAR SEARCH FILTER
+    
+    .clear-search-filter {
+        @include nxm-button-orange-backgrond();
+        display: none;
+        margin-left: -29px; 
+        box-sizing: border-box;
+        cursor: pointer;
+        float: left;
+        font-size: 16px;
+        padding-left: 8px;
+        position: relative;
+        border-top: 1px solid transparent;
+        height: 29px;
+        width: 28px;
+        border-radius: 0 2px 2px 0;
+        z-index: 1;
+    }
+
+
+
     ul {
         box-sizing: border-box;
         float: left;
@@ -58,7 +121,8 @@
             line-height: 16px;
             display: block;
             float: left;
-            padding: 4px 10px;
+            margin: 0 !important;
+            padding: 5px 10px !important;
             position: relative;
             width: 100%;
             
@@ -79,10 +143,10 @@
     
             
             &:first-child {
-                padding-top: 8px;
+                padding-top: 10px !important;
             }
             &:last-child {
-                padding-bottom: 8px;
+                padding-bottom: 10px !important;
             }
     
         }

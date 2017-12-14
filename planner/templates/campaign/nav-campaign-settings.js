@@ -17,7 +17,7 @@ var templateData = {
 	listItems: [
 		{
 			name: "Basic Info",
-			page: ""
+			page: "#/campaign/settings-basics/"
 		},
 		{
 			name: "Image",
@@ -34,6 +34,10 @@ var templateData = {
 		{
 			name: "Currency",
 			page: ""
+		},
+		{
+			name: "Authorization",
+			page: "#/campaign/settings-authorization/"
 		},
 		{
 			name: "Production Costs",

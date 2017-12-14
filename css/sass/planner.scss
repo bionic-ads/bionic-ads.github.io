@@ -179,10 +179,22 @@ h2 {
     
     .bionic-campaign-summary {
         margin: 5px 0 5px;
+        
+        .divider {
+            color: #999;
+            margin: 0 10px;
+        }
+        .authorize {
+            background: #e9ebed;
+            border-radius: 3px;
+            border:1px solid #cfcfcf;
+            font-size: 11px;
+            margin-left:5px;
+            padding: 3px 10px 3px;
+            
+        }
     }
-    
-    
-    
+        
     .bionic-action-menu {
         padding-left: 25px;
         width: 100%;
@@ -192,6 +204,12 @@ h2 {
             color: #333;
             cursor: pointer;
         }   
+        
+        .button-divider {
+            border-left: 1px solid #cfcfcf;
+            height: 32px;
+            margin: 6px 10px 0 5px;
+        }
         
 /*
         div.columnMenu {

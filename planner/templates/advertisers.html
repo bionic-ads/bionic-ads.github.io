@@ -22,15 +22,216 @@
 
     </div>
 
-    <div class="nxm-menu-bar nxm-menu-filters">
-        <div class="filter-section filter-search-master">
-        <input type="text" placeholder="Search Advertiser" value="" required id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
-        <span id="clear-search" class="clear-search-filter">
-            <i class="fa fa-times-circle"></i>
-        </span>
-        </div>
-    </div>
+<div class="filters-performance"></div>
 
-    <div class="bionic-filter bionic-filter-off" style="margin-left: 25px; margin-bottom: 0;"><i class="fa fa-filter"></i> All Advertisers</div>
+<div class="grid fixedTable block performance performance-advertisers custom-form-controls" id="grid">
+  
+  <table class="gridFirstColumnHeader">
+      <thead>
+          <tr>
+              <th class="col-45"><span class="header center">#</span></th>
+              <th class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></th>
+              <th class="col-275 no-left-border"><span class="header"><a>Placement Name <i class="fa fa-caret-down"></i></a></span></th>
+          </tr>
+      </thead>
+  </table>
+
+  <header class="fixedTable-header block">
+    <table>
+        <thead>
+        <tr>
+          <th class="col-100"><span><a>Start Date</a></span></th>
+          <th class="col-100 "><span><a>End Date</a></span></th>
+          <th class="col-200"><span class="right"><a>Quantity</a></span></th>
+          <th class="col-200"><span class="right"><a>Rate</a></span></th>
+          <th class="col-150"><span class="right"><a>Amount</a></span></th>
+          <th class="col-150"><span class="right"><a>Authorization</a></span></th>
+          <th class="col-150"><span class="right"><a>Requested By</a></span></th>
+          <th class="col-150"><span class="right"><a>Authorizer</a></span></th>
+          <th class="col-200"><span class="right"><a>Comments</a></span></th>
+          <th class="col-200"><span class="right"><a>Last Updated</a></span></th>
+        </tr>
+        </thead>
+    </table>
+  </header>
+  
+  <aside class="fixedTable-sidebar block">
+    <table class="table table-bordered grid" id="gridFirstColumns">
+        <tbody>
+        </tbody>
+    </table>
+  </aside>
+  
+  <div class="fixedTable-body block">
+    <table class="table table-bordered grid" id="gridBody">
+        <tbody>
+        </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<div class="performance">
+    <div class="performance-details">
+    </div>
+</div>
 
 </div>
+
+<script>
+
+
+    $(document).ready(function(){
+        
+        $(".filters-performance").load("templates/utilities/authorizations-menu.html", function(){
+
+        });
+        
+    });
+    
+    $("body").click(function () {        
+
+        $(".menu").hide();
+        $(".performance-details").hide();
+
+    });
+
+    $(".bionic-filter").click(function (event) {        
+        event.stopPropagation();
+        $(".menu").hide();
+        $(this).next(".menu").show();
+    });
+    
+    $(".menu").click(function (event) {        
+        event.stopPropagation();
+    });
+    
+
+    
+    var dataTab = "AuthorizationCampaign";
+    
+    $(document).ready( function() {
+
+
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     wanted: [ dataTab ],
+                    // query:["state=done and (name=performance or name=flowchart)"],
+                     debug: true } );
+                    });
+        
+      function showInfo(data, tabletop) {
+    
+        $.each( tabletop.sheets(dataTab).all(), function(i, item) {
+          
+          var rowNumber, symbol;
+                        
+          rowNumber = i++;
+          
+          if(item.PlacementName != "Total"){
+          
+              costsTableFirstColumns = $('<tr class="admin"><td class="line-number col-45"></td>');
+              costsTableFirstColumns.append('<td class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></td>');
+              costsTableFirstColumns.append('<td class="col-275 no-left-border" white-space:nowrap; text-overflow: ellipsis; "><a href="#/line/performance/"><span><strong>'+ item.PlacementName +'</strong></span></a></td>');
+              costsTableFirstColumns.append('</tr>');
+              costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
+                        
+              costsTableBody = $('<tr class="admin">');
+              costsTableBody.append('<td class="col-100"><span>'+ item.StartDate +'</span></td>');
+              costsTableBody.append('<td class="col-100"><span>'+ item.EndDate +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span>'+ item.Quantity +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span>'+ item.Impressions +'</span><div class="performance-details"><strong>Impressions for '+item.AdvertiserName+'</strong></div></td>');
+              costsTableBody.append('<td class="col-150 right"><span style="padding:0; margin-top:11px;" class="currency-symbol">$</span><span>'+ item.CPM +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span> '+ item.Clicks +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span>'+ item.CPC +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span> '+ item.CTR +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span> '+ item.Customers +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span>'+ item.CAC +'</span></td>');
+              costsTableBody.append('</tr>');
+              costsTableBody.appendTo("#gridBody tbody");
+          
+          } else {
+              
+              costsTableFirstColumns = $('<tr class="total">');
+              costsTableFirstColumns.append('<td colspan="2" class="col-325" style="border-right:0; padding-left:5px;"><span><strong>'+ item.PlacementName +'</strong></span></a></td>');
+              costsTableFirstColumns.append('</tr>');
+              costsTableFirstColumns.appendTo("#gridFirstColumns tbody");
+                        
+              costsTableBody = $('<tr class="total '+ item.FirstData +'">');
+              costsTableBody.append('<td class="col-100"><span>'+ item.StartDate +'</span></td>');
+              costsTableBody.append('<td class="col-100"><span>'+ item.EndDate +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span>'+ item.Quantity +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span>'+ item.Impressions +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span style="padding:0; margin-top:11px;" class="currency-symbol">$</span><span>'+ item.CPM +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span> '+ item.Clicks +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span> '+ item.CPC +'</span></td>');
+              costsTableBody.append('<td class="col-150 right"><span> '+ item.CTR +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span> '+ item.Customers +'</span></td>');
+              costsTableBody.append('<td class="col-200 right"><span style="padding:0; margin-top:11px;" class="currency-symbol">$</span><span> '+ item.CAC +'</span></td>');
+              costsTableBody.append('</tr>');
+              costsTableBody.appendTo("#gridBody tbody");
+          }
+        })
+    
+        $(".emoticon").click(function(){
+            event.stopPropagation();
+            $('.performance-details').hide();
+            $(event.target).closest("td").find('.performance-details').load("templates/performance-details.html");
+            $(event.target).closest("td").find('.performance-details').show();
+            
+        });
+
+        $(".performance-details").click(function (event) {        
+            event.stopPropagation();
+        });
+
+      }
+
+      
+
+
+</script>
+
+<script type="text/javascript">
+
+    // ------------------------------------------------
+    // Set Up the Fixed First Column Table
+    
+    (function() {
+      var grid, fixedTable;
+    
+      fixedTable = function(el) {
+        var $body, $header, $sidebar;
+        $body = $(el).find('.fixedTable-body');
+        $sidebar = $(el).find('.fixedTable-sidebar table');
+        $header = $(el).find('.fixedTable-header table');
+        return $($body).scroll(function() {
+          $($sidebar).css('margin-top', -$($body).scrollTop());
+          return $($header).css('margin-left', -$($body).scrollLeft());
+        });
+      };
+    
+      grid = new fixedTable($('#grid'));
+    
+    }).call(this);
+
+    // ------------------------------------------------
+    // Make the rows highlight with Fixed First Column   
+    
+    $(document).on({
+    mouseenter: function () {
+    var trIndex = $(this).index();
+    $("table.grid").each(function(index) {
+        $(this).find("tr:eq("+trIndex+")").addClass("hover")
+    });
+    },
+    mouseleave: function () {
+    var trIndex = $(this).index();
+    $("table.grid").each(function(index) {
+        $(this).find("tr:eq("+trIndex+")").removeClass("hover")
+    });
+    }
+    }, "#grid table tr");
+    
+</script>
+

@@ -1,0 +1,148 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    <span class="bionic-campaign-summary block fullwidth"><span id="campaignStartDate">...</span> - <span id="campaignEndDate">...</span> 
+        <span class="divider">|</span> $ <span id="campaignBudget">...</span> budget 
+<!--         <span class="authorize">Not Yet Approved</span> -->
+        <span class="divider">|</span> $ <span id="campaignPlanned">...</span> in plan
+    </span>
+    
+    <script type="text/template" class="campaignNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/campaign/'));
+                var group = campaignNavItem.group;
+                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+</div>
+
+<script type="text/template" class="template">
+	
+	<ul class="bionic-subnav-menu">
+		<% _.each( bionic.listItems, function( listItem ){ %>
+        <% 
+            var url = window.location.href;
+            var theID = url.substring(url.lastIndexOf('/') + 1);
+            var page = url.substring(url.lastIndexOf('#/campaign/'));
+            if (listItem.page + theID == page){ var currentSubnav = 'class="current"'; } 
+        %>
+			<li>
+				<a <%= currentSubnav %> href="<%- listItem.page %>"><%- listItem.name %></a>
+			</li>
+
+		<% }); %>
+	</ul>
+	
+</script>
+
+<div class="block has-subnav custom-form-controls">
+    
+<h2>Basics</h2> 
+
+
+</div>
+
+<script type="text/javascript" src="templates/campaign/nav-campaign.js"></script>
+<script type="text/javascript" src="templates/campaign/nav-campaign-settings.js"></script>
+<script>
+$(document).ready(function () {
+    $("li").click(function () {
+        $('li > ul').not($(this).children("ul").toggle()).hide();
+        
+    });
+});
+
+    
+if(Campaigns.length > 0){setCampaignInfo();}
+
+$("tbody").sortable({
+    items: "> tr",
+    appendTo: "parent",
+    helper: "clone"
+}).disableSelection();
+
+$("tbody").droppable({
+    hoverClass: "drophover",
+    tolerance: "pointer",
+    drop: function(e, ui) {
+        var tabdiv = $(this).attr("href");
+        $(tabdiv + " table tr:last").after("<tr>" + ui.draggable.html() + "</tr>");
+    }
+});    
+          
+</script>
+
+<script>
+
+      costsTab = "AdditionalCosts";
+            
+      $(document).ready( function() {
+
+    
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ costsTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(costsTab).all(), function(i, item) {
+          
+          var costRow,
+              name,
+              status, 
+              campaigns, 
+              type, 
+              calculationCost,
+              calculationBasis,
+              calculationValue,
+              overageBuffer,
+              checked,
+              symbol;           
+          
+              name =        item.Name;
+              status =      item.Status;
+              campaigns =   item.Campaigns;
+              type =        item.Type;
+              calculationCost = item.CalculationCost;
+              calculationBasis = item.CalculationBasis;
+              calculationValue = item.CalculationValue;
+              overageBuffer = item.OverageBuffer;
+              checked =     item.Checked; 
+              
+              if(calculationCost.includes("Percentage")){
+                  symbol = ""
+              } else {
+                  symbol = '<span class="currency-symbol">$</span>';
+              }    
+              if((type == "Production")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td class="width250">'+name+'</td>');
+                  costRow.append('<td class="width250">'+calculationCost+'</td>')
+//                   costRow.append('<td class="width250">'+calculationBasis+'</td>')
+                  costRow.append('<td class="editable width250 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td>Remove</td></tr>')
+                  costRow.appendTo("#costs tbody");
+              }
+          
+        });
+
+        
+      }
+
+        
+</script>

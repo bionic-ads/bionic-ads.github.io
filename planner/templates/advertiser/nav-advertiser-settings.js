@@ -40,6 +40,10 @@ var templateData = {
 			page: ""
 		},
 		{
+			name: "Authorization",
+			page: "#/advertiser/settings-authorization/"
+		},
+		{
 			name: "Production Costs",
 			page: "#/advertiser/settings-costs-production/"
 		},

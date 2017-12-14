@@ -39,6 +39,10 @@ var templateData = {
 			page: "#/advertiser/allocations-costs/"
 		},
 		{
+			name: "Authorizations",
+			page: "#/advertiser/authorizations/"
+		},
+		{
 			name: "Performance",
 			page: "#/advertiser/performance/"
 		}

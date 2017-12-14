@@ -8,10 +8,24 @@
     
     th span {
         font-weight: bold;
+        display: block;
+        box-sizing: border-box;
+        
+        a {
+            line-height: 13px;
+        }
+        
     }
     
     tr {
         white-space: nowrap;
+    }
+    
+    td {
+        i {
+            display: block;
+            padding: 12px 5px;
+        }
     }
     
     th, td {
@@ -31,6 +45,7 @@
         &.no-left-border {
             border-left: 0;
             span { padding-left: 5px;}
+            
         }
         
         span {
@@ -68,6 +83,7 @@
         
     }
     
+    
     .fixedtable-body {
         width: calc(100% - 321px);
         left: -1px;
@@ -86,13 +102,68 @@
         width: 321px;
     }
     
+    .gridFirstColumnHeader {
+        position: absolute; 
+        width: 321px;
+    
+        th:nth-child(2) {
+            border-right: 1px solid #cfcfcf;
+        }
+
+    }
+
+
+    #gridFirstColumns {
+        td:last-child {
+            border-right: 1px solid #cfcfcf !important;
+        }
+    }
+    
+    
+    &.budget {
+        
+        .gridFirstColumnHeader {
+            th:last-child {
+                border-right: 1px solid #cfcfcf;
+            }
+        }
+        
+        #gridFirstColumns {
+            td:last-child {
+                border-right: 1px solid #cfcfcf !important;
+            }
+        }
+        
+        .fixedtable-header {
+            width: calc(100% - 756px);
+            margin-left: 755px;
+         }
+    
+        .fixedtable-body {
+            width: calc(100% - 756px);
+            left: -1px;
+        }
+        
+        .fixedtable-sidebar, .fixedtable-body {
+            height: calc(100vh - 280px);
+        }   
+        .gridFirstColumnHeader, .fixedtable-sidebar {
+            width: 756px;
+        }
+    }
+    
+    &.campaign {
+        .fixedtable-sidebar, .fixedtable-body {
+            height: calc(100vh - 321px);
+        }   
+    }
+    
     &.costs {
         .fixedtable-sidebar, .fixedtable-body {
             height: calc(100vh - 301px);
-            display: block;
         }   
     } 
-    
+        
     &.performance {
         .currency-symbol {
             margin-left: 50px;
@@ -102,7 +173,12 @@
     &.performance-advertisers {
         .fixedtable-sidebar, .fixedtable-body {
             height: calc(100vh - 265px);
-            display: block;
+        }   
+    }
+    
+    &.performance-campaign {
+        .fixedtable-sidebar, .fixedtable-body {
+            height: calc(100vh - 279px);
         }   
     }
     
@@ -110,14 +186,6 @@
 //         width: auto;
     }
     
-    .gridFirstColumnHeader {
-        position: absolute; width: 321px;
-    
-        th:nth-child(2) {
-            border-right: 1px solid #cfcfcf;
-        }
-
-    }
     
     .gridColumnHeader th,
     tr th {
@@ -198,6 +266,10 @@
         border-left: 1px solid transparent;
     }
     
+    tr.total:last-child td {
+        border-bottom: 1px solid #cfcfcf;
+    }
+    
     tr.inactive {
         background: #fff;
         background-image: none !important;
@@ -251,12 +323,7 @@
         }
         
     }
-    
-    th span {
-        display: block;
-        box-sizing: border-box;
-    }    
-    
+        
     .currency-symbol {
         position: absolute;
         margin-top: 7px;

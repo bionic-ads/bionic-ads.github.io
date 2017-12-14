@@ -1,18 +1,3 @@
-/*
-<!-- 
-    <ul class="bionic-tab-menu">
-        <li><a href="#/campaign/overview/">Overview</a></li>
-        <li><a href="#/campaign/settings/" class="current">Settings</a></li>
-        <li><a href="#/campaign/proposals/">Proposals</a></li>
-        <li><a href="#/campaign/mediaplan-kpis/">Media Plan</a></li>
-        <li><a href="#/campaign/flowchart/">Flowchart</a></li>
-        <li><a href="#/campaign/schedule/">Schedule</a></li>
-        <li><a href="#/campaign/allocations/">Allocations</a></li>
-        <li><a href="#/campaign/tasks/">Tasks</a></li>
-        <li><a href="#/campaign/performance/">Performance</a></li>
-    </ul>
--->
-*/
 // When rending an underscore template, we want top-level
 // variables to be referenced as part of an object. For
 // technical reasons (scope-chain search), this speeds up
@@ -35,7 +20,11 @@ var templateData = {
 		},
 		{
 			name: "Settings",
-			page: "#/campaign/settings-costs-production/"
+			page: "#/campaign/settings-authorization/"
+		},
+		{
+			name: "Budget",
+			page: "#/campaign/budget/"
 		},
 		{
 			name: "Proposals",
@@ -59,6 +48,12 @@ var templateData = {
 			name: "Allocations",
 			page: "#/campaign/allocations-costs/"
 		},
+/*
+		{
+			name: "Authorizations",
+			page: "#/campaign/authorizations/"
+		},
+*/
 		{
 			name: "Tasks",
 			page: "#/campaign/tasks/"

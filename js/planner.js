@@ -199,17 +199,35 @@ function setCampaignInfo(){
         // Campaign Name
         
         var header = $.find("#campaignname");
+        var startDate = $.find("#campaignStartDate");
+        var endDate = $.find("#campaignEndDate");
+        var budget = $.find("#campaignBudget");
+        var planned = $.find("#campaignPlanned");
         
         if( header.length ){
-            
-            
             newName = Campaigns[theID].campaignName;
-            
             $("#campaignname").text(newName);
-//             console.log(newName);
-        
+        }
+
+        if( startDate.length ){
+            newStartDate = Campaigns[theID].start;
+            $("#campaignStartDate").text(newStartDate);
         }
         
+        if( endDate.length ){
+            newEndDate = Campaigns[theID].end;
+            $("#campaignEndDate").text(newEndDate);
+        }
+        if( budget.length ){
+            newBudget = Campaigns[theID].budget;
+            $("#campaignBudget").text(newBudget);
+        }
+        if( planned.length ){
+            newPlanned = Campaigns[theID].planned;
+            $("#campaignPlanned").text(newPlanned);
+        }
+
+
         // Campaign Tabs
         
         $('.bionic-tab-menu a').each(function(){

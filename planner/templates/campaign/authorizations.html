@@ -1,25 +1,32 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1 id="campaignname">...</h1>
+    <span class="bionic-campaign-summary block fullwidth"><span id="campaignStartDate">...</span> - <span id="campaignEndDate">...</span> 
+        <span class="divider">|</span> $ <span id="campaignBudget">...</span> budget <span class="authorize">Not Yet Approved</span>
+        <span class="divider">|</span> $ <span id="campaignPlanned">...</span> in plan
+    </span>
+    
+    <script type="text/template" class="campaignNav">
 
-<div id="bionic-home" class="block fullwidth">
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.campaignNavItems, function( campaignNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/campaign/'));
+                var group = campaignNavItem.group;
+                if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    			</li>
     
-    <div class="bionic-header block fullwidth">
-    
-        <h1>
-            <span class="avatar"></span>
-            Good Afternoon, Elizabeth!
-        </h1>
-    
-        <ul class="bionic-tab-menu block fullwidth">
-       
-            <li><a href="#/">Home</a></li>
-            <li><a href="#/advertisers">Advertisers</a></li>
-            <li><a href="#/campaigns" class="current">Campaigns</a></li>
-<!--             <li><a href="#/schedule">Schedule</a></li> -->
-            <li><a href="#/tasks">Tasks</a></li>
-            <li><a href="#/allocations">Allocations</a></li>
-            <li><a href="#/performance">Performance</a></li>
-        </ul>
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
 
-    </div>
+</div>
 
 <div class="filters-performance"></div>
 
@@ -74,9 +81,6 @@
     <div class="performance-details">
     </div>
 </div>
-
-</div>
-
 <script>
 
 
@@ -234,3 +238,6 @@
     
 </script>
 
+
+<script type="text/javascript" src="templates/campaign/nav-campaign.js"></script>
+<script>if(Campaigns.length > 0){setCampaignInfo();}</script>

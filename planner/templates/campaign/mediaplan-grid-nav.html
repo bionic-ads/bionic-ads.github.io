@@ -1,33 +1,8 @@
-<style>
-    
-        .location {
-            display: none;
-        }
-        
-        .mediaplan.fixedTable .group {
-            display: none;
-        }
-        .mediaplan.fixedTable .mediaPlanFirstColumnHeader th{
-            height: 30px;
-            padding: 0 0 0  5px !important;
-        }
-        
-        .mediaplan.fixedTable .mediaPlanFirstColumnHeader th.col-line-number span{
-            padding: 0;
-        }
-        .mediaplan.fixedTable table th .col-placement-name {
-            padding: 0 0 0 5px !important;
-        }
-</style>
-
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
     <h1 id="campaignname">...</h1>
-    <span class="bionic-campaign-summary block fullwidth"><span id="campaignStartDate">...</span> - <span id="campaignEndDate">...</span> 
-        <span class="divider">|</span> $ <span id="campaignBudget">...</span> budget 
-<!--         <span class="authorize">Not Yet Approved</span> -->
-        <span class="divider">|</span> $ <span id="campaignPlanned">...</span> in plan
-    </span>
+    
+    <span class="bionic-campaign-summary block fullwidth"><span id="campaignStartDate">...</span> - <span id="campaignEndDate">...</span></span> | <span id="campaignPlanned">...</span>
     
     <script type="text/template" class="campaignNav">
 
@@ -50,24 +25,8 @@
 	</script>
 	
 </div>
+
 <ul class="bionic-action-menu media-plan block">
-    <li><a class="bionic-view-menu"><i class="fa fa-table"></i>Mode</a>
-            <div class="menu view-menu" style="width: 200px">
-                <div class="header filter-section filter-search-master">
-                    <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
-                    <span id="clear-search" class="clear-search-filter">
-                        <i class="fa fa-times-circle"></i>
-                    </span>
-                </div>
-                <ul>
-                    <li><a>Media Authorization</a></li>
-                    <li><a>Performance & KPIs</a></li>
-                    <li><a>Media Authorization</a></li>
-                </ul>
-                <div class="footer"><a>Save Current View...</a></div>
-                <div class="footer"><a>Delete Current View</a></div>
-            </div>
-    </li>
     <li><a class="open-modal" rel="modal:open" href="templates/modals/columns/columns.html"><i class="fa fa-bars fa-rotate-90"></i>Columns</a></li>
     <li><a class="open-modal" rel="modal:open" href="templates/modals/filter/filter-choose-fields.html"><i class="fa fa-filter"></i>Filter</a></li>
     <li class="row-select disabled"><a class="open-modal" rel="modal:open" href="templates/modals/bulk-edit/bulk-edit-choose-fields.html"><i class="fa fa-pencil"></i>Edit</a></li>
@@ -90,19 +49,20 @@
       
   </table>  
   
-  <div class="location" style="position: fixed; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">
+  <div class="location" style="position: fixed; display: block; margin-left: 300px; margin-top: 1px; padding:3px 1px 3px 5px; z-index: 1; background: #f5f6f7; font-weight: bold;">
       <span></span>
-  </div>   
+  </div>
+    
     
   <header class="fixedTable-header block">
     <table class="table table-bordered">
         <thead>
             
         <tr class="group">
-<th colspan="7" style="width:1352px" ><span></span></th><th colspan="10" style="width:1750px" class="divider divider-costs"><span>Costs </span></th><th colspan="7" style="width: 820px" class="divider divider-ratings"><span>Audience</span></th><th colspan="3" style="width: 570px;" class="divider divider-tasks"><span>Tasks</span></th><th colspan="2" style="width: 800px;" class="divider divider-implementation"><span>URLs for Implementation</span></th><th colspan="6" style="width: 750px;" class="divider divider-kpis"><span>KPIs</span></th><th colspan="3" style="width: 450px" class="divider divider-kpis"><span>Picklists</span></th><th colspan="3" style="width: 100%" class="divider divider-kpis"><span>Notes & History</span></th>
+<th colspan="7" style="width:1352px" ><span></span></th><th colspan="10" style="width:1500px" class="divider divider-costs"><span>Costs </span></th><th colspan="7" style="width: 820px" class="divider divider-ratings"><span>Audience</span></th><th colspan="3" style="width: 570px;" class="divider divider-tasks"><span>Tasks</span></th><th colspan="2" style="width: 800px;" class="divider divider-implementation"><span>URLs for Implementation</span></th><th colspan="6" style="width: 750px;" class="divider divider-kpis"><span>KPIs</span></th><th colspan="3" style="width: 450px" class="divider divider-kpis"><span>Picklists</span></th><th colspan="3" style="width: 100%" class="divider divider-kpis"><span>Notes & History</span></th>
         </tr>
         
-        <tr class="group-members"><!-- Basics --><th class="col-id"><span>Bionic ID</span></th><th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th><th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th><th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th><th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th><th class="col-rate center"><span>Rate</span></th><th class="col-quantity right "><span><a>Quantity</a></span></th><!-- Costs --><th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Optimization</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Tech Fee</a></span></th><th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th><th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th><th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th><th class="col-media-authorization"><span><a>Authorization</a> / <a>Authorizer</a></span></th><!-- Audience --><th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th><th class="col-ratings col-120 "><span><a>Population</a></span></th><th class="col-ratings col-120"><span><a>Impressions</a></span></th><th class="col-ratings col-90"><span><a>CPM</a></span></th><th class="col-ratings col-90 "><span><a>Reach #</a></span></th><th class="col-ratings col-90 "><span><a>Reach %</a></span></th><th class="col-ratings col-90 "><span><a>Frequency</a></span></th><!-- Tasks --><th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th><th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th><th class="col-tasks "><span><a>Send Report</a></span></th><!-- Implementation --><th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th><th class="col-implemtation col-450"><span><a>Google Analytics Tracking URL</a></span></th><!-- KPIs --><th class="divider col-kpi-cost right"><span><a>CPM</a></span></th><th class="col-kpi-number right"><span><a>Impressions</a></span></th><th class=" col-kpi-cost right"><span><a>CPC</a></span></th><th class="col-kpi-number right"><span><a>Clicks</a></span></th><th class=" col-kpi-cost right"><span><a>/View</a></span></th><th class="col-kpi-number right"><span><a>Views</a></span></th><!-- Picklists --><th class="divider col-picklists "><span><a>Picklist 1</a></span></th><th class="col-picklists "><span><a>Picklist 2</a></span></th><th class="col-picklists "><span><a>Picklist 3</a></span></th><!-- Notes & History --><th class="divider col-50 col-notes "><span><a>Notes</a></span></th><th class="col-135 col-notes "><span><a>Created</a></span></th><th class="col-135 col-notes "><span><a>Last Updated</a></span></th></tr>
+        <tr class="group-members"><!-- Basics --><th class="col-id"><span>Bionic ID</span></th><th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th><th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th><th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th><th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th><th class="col-rate center"><span>Rate</span></th><th class="col-quantity right "><span><a>Quantity</a></span></th><!-- Costs --><th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Optimization</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Tech Fee</a></span></th><th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th><th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th><th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th><!-- Audience --><th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th><th class="col-ratings col-120 "><span><a>Population</a></span></th><th class="col-ratings col-120"><span><a>Impressions</a></span></th><th class="col-ratings col-90"><span><a>CPM</a></span></th><th class="col-ratings col-90 "><span><a>Reach #</a></span></th><th class="col-ratings col-90 "><span><a>Reach %</a></span></th><th class="col-ratings col-90 "><span><a>Frequency</a></span></th><!-- Tasks --><th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th><th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th><th class="col-tasks "><span><a>Send Report</a></span></th><!-- Implementation --><th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th><th class="col-implemtation col-450"><span><a>Google Analytics Tracking URL</a></span></th><!-- KPIs --><th class="divider col-kpi-cost right"><span><a>CPM</a></span></th><th class="col-kpi-number right"><span><a>Impressions</a></span></th><th class=" col-kpi-cost right"><span><a>CPC</a></span></th><th class="col-kpi-number right"><span><a>Clicks</a></span></th><th class=" col-kpi-cost right"><span><a>/View</a></span></th><th class="col-kpi-number right"><span><a>Views</a></span></th><!-- Picklists --><th class="divider col-picklists "><span><a>Picklist 1</a></span></th><th class="col-picklists "><span><a>Picklist 2</a></span></th><th class="col-picklists "><span><a>Picklist 3</a></span></th><!-- Notes & History --><th class="divider col-50 col-notes "><span><a>Notes</a></span></th><th class="col-135 col-notes "><span><a>Created</a></span></th><th class="col-135 col-notes "><span><a>Last Updated</a></span></th></tr>
         </thead>
     </table>
   </header>
@@ -165,17 +125,16 @@
             color: #333;
             
         } 
-
         
     </style>
         <div class="mediaplan-nav">
             <ul>
                 <li class="basics current" rel="0"><i class="fa fa-table"></i><span>Basics</span></li>
                 <li class="costs" rel="1355"><i class="fa fa-money"></i><span>Costs</span></li>
-                <li class="ratings" rel="3103"><i class="fa fa-users"></i><span>Audience</span></li>
-                <li class="tasks" rel="3923"><i class="fa fa-calendar-plus-o"></i><span>Tasks</span></li>
-                <li class="implementation" rel="4493"><i class="fa fa-code"></i><span>URLs</span></li>
-                <li class="kpis" rel="5293"><i class="fa fa-bar-chart"></i><span>KPIs</span></li>
+                <li class="ratings" rel="2853"><i class="fa fa-users"></i><span>Audience</span></li>
+                <li class="tasks" rel="3673"><i class="fa fa-calendar-plus-o"></i><span>Tasks</span></li>
+                <li class="implementation" rel="4243"><i class="fa fa-code"></i><span>URLs</span></li>
+                <li class="kpis" rel="5043"><i class="fa fa-bar-chart"></i><span>KPIs</span></li>
                 <li class="picklists" rel="6043"><i class="fa fa-list"></i><span>Picklists</span></li>
                 <li class="notes" rel="6043"><i class="fa fa-file-text-o"></i><span>Notes</span></li>
             </ul>
@@ -215,42 +174,12 @@
                 $('.fixedTable-body').animate({scrollLeft:scrollDistance});
             });
             
-            $(".bionic-view-menu").bind("click",function(e){
-                
-                $(".menu").toggle();
-                return false;
-                
-            });
-            
             $("th.col-program").bind("contextmenu",function(e){
                 
-/*
                 $(".menu").toggle();
                 return false;
-*/
                 
             });
-            
-            // Handle closing menus
-            
-            $("body").click(function () {        
-        
-                $(".menu").hide();
-                $(".performance-details").hide();
-        
-            });
-        
-            $(".bionic-filter").click(function (event) {        
-                event.stopPropagation();
-                $(".menu").hide();
-                $(this).next(".menu").show();
-            });
-            
-            $(".menu").click(function (event) {        
-                event.stopPropagation();
-            });
-            
-            // Load Data from Google Sheet
 
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
@@ -359,7 +288,6 @@
           mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-total-cost  col-cost"><span class="currency-symbol">$</span><a class="">1,000.00</a></td>');          
-          mediaPlanBody.append('<td class="col-media-authorization  col-cost"><input class="half" type="text" value=""><input class="half" type="text" value=""></td>');          
           
           
           // Ratings
@@ -519,47 +447,47 @@
               $($location).text(" ");
           }
 
-          if(($($body).scrollLeft() > 1354)&&$($body).scrollLeft() < 3050){ 
+          if(($($body).scrollLeft() > 1354)&&$($body).scrollLeft() < 2800){ 
               $($location).text("Costs");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.costs").addClass("current");
           }
 
-          if(($($body).scrollLeft() > 3050)&&$($body).scrollLeft() < 3102){ 
+          if(($($body).scrollLeft() > 2800)&&$($body).scrollLeft() < 2852){ 
               $($location).text(" ");
           }
           
-          if(($($body).scrollLeft() > 3102)&&$($body).scrollLeft() < 3824){ 
+          if(($($body).scrollLeft() > 2852)&&$($body).scrollLeft() < 3574){ 
               $($location).text("Audience");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.ratings").addClass("current");
           }
           
-          if(($($body).scrollLeft() > 3824)&&$($body).scrollLeft() < 3920){ 
+          if(($($body).scrollLeft() > 3574)&&$($body).scrollLeft() < 3670){ 
               $($location).text("");
           }
           
-          if(($($body).scrollLeft() > 3920)&&$($body).scrollLeft() < 4410){ 
+          if(($($body).scrollLeft() > 3670)&&$($body).scrollLeft() < 4160){ 
               $($location).text("Tasks");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.tasks").addClass("current");
           }
 
-          if(($($body).scrollLeft() > 4410)&&$($body).scrollLeft() < 4492){ 
+          if(($($body).scrollLeft() > 4160)&&$($body).scrollLeft() < 4243){ 
               $($location).text("");
           }
 
-          if(($($body).scrollLeft() > 4492)&&$($body).scrollLeft() < 5150){ 
+          if(($($body).scrollLeft() > 4242)&&$($body).scrollLeft() < 4900){ 
               $($location).text("URLs for Implementation");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.implementation").addClass("current");
           }
           
-          if(($($body).scrollLeft() > 5150)&&$($body).scrollLeft() < 5293){ 
+          if(($($body).scrollLeft() > 4900)&&$($body).scrollLeft() < 5043){ 
               $($location).text("");
           }
 
-          if(($($body).scrollLeft() > 5293)&&$($body).scrollLeft() < 8000){ 
+          if(($($body).scrollLeft() > 5042)&&$($body).scrollLeft() < 8000){ 
               $($location).text("KPIs");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.kpis").addClass("current");
@@ -610,16 +538,3 @@
     });
     
 </script>    
-
-<script>
-    $(".bionic-filter").click(function (event) {        
-        event.stopPropagation();
-        $(".menu").hide();
-        $(this).next(".menu").show();
-    });
-    
-    $(".menu").click(function (event) {        
-        event.stopPropagation();
-    });
-
-</script>
