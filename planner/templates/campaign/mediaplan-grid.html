@@ -38,10 +38,14 @@
                 var theID = url.substring(url.lastIndexOf('/') + 1);
                 var directory = url.substring(url.lastIndexOf('#/campaign/'));
                 var group = campaignNavItem.group;
+                var notification = '';
                 if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+                if ( campaignNavItem.name == "Media Plan") {
+                    campaignNavItem.notification = '<i class="fa fa-question-circle"></i>';
+                }
             %>
     			<li>
-    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %> <%= campaignNavItem.notification %></a>
     			</li>
     
     		<% }); %>

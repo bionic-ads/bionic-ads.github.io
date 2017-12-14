@@ -18,9 +18,14 @@
                 var group = campaignNavItem.group;
                 
                 if (window.location.hash.substr(1,12) == campaignNavItem.page.substr(1,12)){ var currentnav = 'class="current"'; } 
+
+                var notification = '';
+                if ( campaignNavItem.name == "Media Plan") {
+                    campaignNavItem.notification = '<i class="fa fa-question-circle"></i>';
+                }
             %>
     			<li>
-    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %></a>
+    				<a <%= currentnav %> href="<%- campaignNavItem.page %>"><%- campaignNavItem.name %> <%= campaignNavItem.notification %></a>
     			</li>
     
     		<% }); %>
@@ -48,15 +53,7 @@
   
   <table class="gridFirstColumnHeader">
       <thead>
-          <tr>
-              <th class="col-45"><span class="header center">#</span></th>
-              <th class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></th>
-              <th class="col-30 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th>
-              <th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th>
-              <th class="col-150"><span><a>Budget</a></span></th>
-              <th class="col-150 right"><span><a>Share</a></span></th>
-              <th class="col-150"><span><a>Authorization</a></span></th>
-          </tr>
+          <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></th><th class="col-30 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th><th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th><th class="col-150"><span><a>Budget</a></span></th><th class="col-150 right"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th></tr>
       </thead>
   </table>
 
@@ -64,17 +61,7 @@
     <table>
         <thead>
         <tr>
-          <th class="col-150 right"><span><a>Lines in Plan</a></span></th>
-          <th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th>
-          <th class="col-150 right"><span><a>% Planned</a></span></th>
-          <th class="col-150 right"><span><a>Amount Authorized</a></span></th>
-          <th class="col-150 right"><span><a>Not Yet Authorized</a></span></th>
-          <th class="col-150 right"><span><a>% Authorized</a></span></th>
-          <th class="col-150 right"><span><a>Amount Bought</a></span></th>
-          <th class="col-150 right"><span><a>Not Yet Bought</a></span></th>
-          <th class="col-150 right"><span><a>% Bought</a></span></th>
-          <th class="col-150 right"><span><a>Amount Delivered</a></span></th></tr>
-        </thead>
+          <th class="col-150 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 right"><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150 right"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th></tr></thead>
     </table>
   </header>
   
