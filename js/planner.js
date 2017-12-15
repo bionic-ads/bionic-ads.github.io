@@ -134,7 +134,6 @@ $(document).ready(function() {
 
 
 })();
-
         
 function getCampaigns(){
     
@@ -260,6 +259,19 @@ function updateFigawi(menu,location){
     }
 }
 
+function changeMediaPlanMode(mode){
+    
+    if(mode=="mediaAuthorization"){
+        $(".col-id").hide();
+        $(".col-program").hide();
+        $(".col-product").hide();
+        $(".col-channel").hide();
+        $(".col-rate").hide();
+        $(".col-picklists").hide();
+    }
+}
+
+
 $('body').on('click', '.open-modal', function(event) {
   $(this).modal({
       escapeClose: true,
@@ -321,4 +333,12 @@ $('body').on('click', '.note a', function(event) {
 $('.menu-button').click(function (){
     $( '.filter-options' ).toggle();
 });
+
+
+
+$("#app-switcher span").click(function (event) {        
+    $("#app-switcher-menu").toggle();
+});
+
+
 

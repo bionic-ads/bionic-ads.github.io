@@ -5,7 +5,8 @@
     height: 50px;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
+    
     
     #bionic-stripe-settings {
         float: right;
@@ -25,6 +26,59 @@
                 
                 i {
                     margin-right: 5px;
+                }
+            }
+        
+            &#app-switcher {
+                
+                    span {
+                    cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+                    z-index: 50;
+                    background: #444a50;
+                    border: 1px solid #555;
+                    border-radius: 3px;
+                    padding: 5px 10px;
+                    margin-top: -10px;
+                    margin-left: -1px;
+                    
+                    i {
+                        margin-left: 5px;
+                        margin-right: 0;
+                    }
+                }
+                
+                ul {
+                    display: none;
+                    position: fixed;
+                    float: left;
+                    width: 100px;
+                    right: 15px;
+                    margin-top: 13px;
+                    
+                    li {
+                        cursor: pointer;
+                        box-sizing: border-box;
+                        position: relative;
+                        background: #444a50;
+                        display: block;
+                        clear: both;
+                        width: 100px;
+                        padding: 0;
+                        color: #fff;
+                        
+                        a {
+                            color: #fff;
+                            display: block;
+                            padding: 10px;
+                        }
+                        
+                        &:hover {
+                            background: #333;
+                        }
+                        
+                    }
                 }
             }
         

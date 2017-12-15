@@ -123,6 +123,7 @@ input[type="button"].gray-button,
             background-color: #e9ebed;
         }
         
+        
     }
     
     img {
@@ -150,12 +151,22 @@ input[type="button"].gray-button,
         background: none;
         color: #333;
         display: block;
-        padding: 6px 10px 8px;
+        padding: 6px 10px 8px !important;
         height: auto;
-                
+                        
         &:hover {
             transition: background-color 0.5s ease;
             background-color: #e9ebed;
+        }
+        
+        &.on {
+            @include nxm-button-orange-backgrond();
+        }
+        
+        .fa-times-circle {
+            margin-left: 10;
+            margin-right: 0px;
+            top: 1px !important;
         }
         
     }
