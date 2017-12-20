@@ -246,6 +246,35 @@ function setCampaignInfo(){
     
 }
 
+function progressBar(percent,containerWidth){
+  var bar, textcolor;
+  if(!percent){
+      percent = "0";
+      return "";
+  }
+  if(containerWidth > 100){
+      barWidth = Math.round((percent/100)*containerWidth);
+  }
+  if(percent != ''){
+      
+      textcolor = '';
+      
+      if((percent > -1)&&(percent < 30)){
+          textcolor = "under";
+      }
+      
+      if(percent < 101) {
+          bar = '<span class="progress-bar '+textcolor+'" style="width:'+barWidth+'px"><span>'+ percent +'%</span></span>';
+      }
+      
+      else if(percent > 100) {
+          bar = '<span class="progress-bar over"><span>'+ percent +'%</span></span>';
+      }
+  }
+  return bar;
+}
+
+
 function checkIfFinished(){
     return(Campaigns.length >= 5);
 }

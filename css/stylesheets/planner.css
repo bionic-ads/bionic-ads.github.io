@@ -2760,6 +2760,55 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-weight: bold;
 }
 
+/* line 1, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar {
+  background: #69AED4;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  height: 15px;
+  line-height: 13px;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 10px;
+  position: relative;
+  float: left;
+  max-width: 130px;
+}
+/* line 18, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar span {
+  right: 5px;
+  padding: 0 !important;
+  position: relative;
+  width: auto !important;
+}
+/* line 25, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.over {
+  background: #EE3424;
+  width: 100%;
+}
+/* line 29, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.over span {
+  right: 5px;
+  padding: 0 !important;
+  position: relative;
+  width: auto !important;
+}
+/* line 37, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.under {
+  color: #333;
+}
+/* line 40, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.under span {
+  display: inline;
+  float: right;
+  right: -45px;
+  padding: 0 !important;
+  width: auto !important;
+}
+
 /* line 1, ../sass/components/3_components/_rating.scss */
 .user-rating {
   display: block;
@@ -4740,35 +4789,35 @@ table.gridlines.addToCampaign tr:hover td:last-child {
   user-select: none;
 }
 
-/* line 56, ../sass/planner.scss */
+/* line 57, ../sass/planner.scss */
 * {
   font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
 }
 
-/* line 60, ../sass/planner.scss */
+/* line 61, ../sass/planner.scss */
 li {
   list-style: none;
 }
 
-/* line 65, ../sass/planner.scss */
+/* line 66, ../sass/planner.scss */
 html, body {
   margin: 0;
   height: 100%;
 }
 
-/* line 67, ../sass/planner.scss */
+/* line 68, ../sass/planner.scss */
 body {
   margin: 0;
   background: #f5f6f7;
   color: #333;
 }
 
-/* line 73, ../sass/planner.scss */
+/* line 74, ../sass/planner.scss */
 h2 {
   margin-bottom: 10px;
 }
 
-/* line 77, ../sass/planner.scss */
+/* line 78, ../sass/planner.scss */
 #bionic-loading {
   position: fixed;
   height: 100%;
@@ -4778,12 +4827,12 @@ h2 {
   text-align: center;
   z-index: 3;
 }
-/* line 86, ../sass/planner.scss */
+/* line 87, ../sass/planner.scss */
 #bionic-loading .la-ball-grid-pulse {
   margin: 10px 0 10px;
 }
 
-/* line 91, ../sass/planner.scss */
+/* line 92, ../sass/planner.scss */
 #bionic-overlay {
   display: none;
   position: fixed;
@@ -4794,7 +4843,7 @@ h2 {
   z-index: 3;
 }
 
-/* line 101, ../sass/planner.scss */
+/* line 102, ../sass/planner.scss */
 .note {
   background: #373E42;
   color: #eee;
@@ -4804,13 +4853,13 @@ h2 {
   border-radius: 3px;
   box-shadow: 0 5px 5px #333;
 }
-/* line 110, ../sass/planner.scss */
+/* line 111, ../sass/planner.scss */
 .note#bionic-home-note-1 {
   top: 100px;
   left: 100px;
 }
 
-/* line 120, ../sass/planner.scss */
+/* line 121, ../sass/planner.scss */
 #bionic-figawi {
   background: #f5f6f7;
   border-bottom: 1px solid #cfcfcf;
@@ -4820,7 +4869,7 @@ h2 {
   top: 50px;
   z-index: 1;
 }
-/* line 129, ../sass/planner.scss */
+/* line 130, ../sass/planner.scss */
 #bionic-figawi li {
   float: left;
   display: block;
@@ -4829,53 +4878,53 @@ h2 {
   background: url("../images/sprite.svg") no-repeat;
   cursor: pointer;
 }
-/* line 137, ../sass/planner.scss */
+/* line 138, ../sass/planner.scss */
 #bionic-figawi li#menu {
   background-position-x: 24px;
   background-position-y: -226px;
   width: 65px;
   border-right: 1px solid #cfcfcf;
 }
-/* line 144, ../sass/planner.scss */
+/* line 145, ../sass/planner.scss */
 #bionic-figawi li#home {
   background-position-x: 20px;
   background-position-y: -37px;
 }
 
-/* line 152, ../sass/planner.scss */
+/* line 153, ../sass/planner.scss */
 #bionic-main {
   background: #f5f6f7;
   padding-top: 95px;
   width: 100%;
 }
-/* line 157, ../sass/planner.scss */
+/* line 158, ../sass/planner.scss */
 #bionic-main .bionic-header {
   border-bottom: 1px solid #cfcfcf;
   padding: 0 25px;
   min-width: 800px;
 }
-/* line 162, ../sass/planner.scss */
+/* line 163, ../sass/planner.scss */
 #bionic-main .bionic-header h1 {
   margin: 10px 0 0;
 }
-/* line 167, ../sass/planner.scss */
+/* line 168, ../sass/planner.scss */
 #bionic-main .bionic-content {
   padding: 0 25px;
 }
-/* line 176, ../sass/planner.scss */
+/* line 177, ../sass/planner.scss */
 #bionic-main .bionic-advertiser-header h1 {
   line-height: 45px;
 }
-/* line 181, ../sass/planner.scss */
+/* line 182, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary {
   margin: 5px 0 5px;
 }
-/* line 184, ../sass/planner.scss */
+/* line 185, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary .divider {
   color: #999;
   margin: 0 10px;
 }
-/* line 188, ../sass/planner.scss */
+/* line 189, ../sass/planner.scss */
 #bionic-main .bionic-campaign-summary .authorize {
   background: #e9ebed;
   border-radius: 3px;
@@ -4884,7 +4933,7 @@ h2 {
   margin-left: 5px;
   padding: 3px 10px 3px;
 }
-/* line 199, ../sass/planner.scss */
+/* line 200, ../sass/planner.scss */
 #bionic-main .bionic-action-menu {
   padding-left: 25px;
   width: 100%;
@@ -4909,23 +4958,23 @@ h2 {
           }
   */
 }
-/* line 204, ../sass/planner.scss */
+/* line 205, ../sass/planner.scss */
 #bionic-main .bionic-action-menu li {
   float: left;
   color: #333;
   cursor: pointer;
 }
-/* line 210, ../sass/planner.scss */
+/* line 211, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .button-divider {
   border-left: 1px solid #cfcfcf;
   height: 32px;
   margin: 6px 10px 0 5px;
 }
-/* line 236, ../sass/planner.scss */
+/* line 237, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton i.fa-times-circle {
   display: none;
 }
-/* line 240, ../sass/planner.scss */
+/* line 241, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4975,13 +5024,13 @@ h2 {
   width: 16px;
   display: inline-block;
 }
-/* line 245, ../sass/planner.scss */
+/* line 246, ../sass/planner.scss */
 #bionic-main .bionic-action-menu .columnMenuButton.active i.fa-times-circle {
   display: inline-block;
   top: 0 !important;
   margin-right: 0;
 }
-/* line 252, ../sass/planner.scss */
+/* line 253, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu {
   background: #f5f6f7;
   border: none;
@@ -4992,26 +5041,26 @@ h2 {
   max-height: none;
   width: 900px;
 }
-/* line 262, ../sass/planner.scss */
+/* line 263, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li {
   display: block;
   padding: 12px 5px 8px;
   margin: 0;
 }
-/* line 267, ../sass/planner.scss */
+/* line 268, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 272, ../sass/planner.scss */
+/* line 273, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li.current span {
   background: #ddd;
 }
-/* line 276, ../sass/planner.scss */
+/* line 277, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenu li:hover {
   background: #f5f6f7;
 }
-/* line 283, ../sass/planner.scss */
+/* line 284, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown {
   background: #fff;
   border: 1px solid #ddd;
@@ -5023,7 +5072,7 @@ h2 {
   width: 133px;
   box-shadow: 0px 2px 2px #999;
 }
-/* line 294, ../sass/planner.scss */
+/* line 295, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li {
   display: block;
   padding: 12px 5px 8px;
@@ -5032,39 +5081,39 @@ h2 {
   box-sizing: border-box;
   width: 100%;
 }
-/* line 302, ../sass/planner.scss */
+/* line 303, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li span {
   border-radius: 3px;
   padding: 3px 10px;
 }
-/* line 307, ../sass/planner.scss */
+/* line 308, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li.current span {
   background: none;
   font-weight: bold;
 }
-/* line 312, ../sass/planner.scss */
+/* line 313, ../sass/planner.scss */
 #bionic-main .bionic-action-menu div.columnMenuDropdown li:hover {
   background: #f5f6f7;
 }
-/* line 319, ../sass/planner.scss */
+/* line 320, ../sass/planner.scss */
 #bionic-main .bionic-action-menu input.datepicker {
   width: 110px;
   padding: 5px;
   margin-top: -5px;
 }
 
-/* line 329, ../sass/planner.scss */
+/* line 330, ../sass/planner.scss */
 .bionic-page {
   margin: 0 25px;
 }
 
-/* line 333, ../sass/planner.scss */
+/* line 334, ../sass/planner.scss */
 .left-nav-open {
   margin-left: 200px;
   width: calc(100% - 200px);
 }
 
-/* line 338, ../sass/planner.scss */
+/* line 339, ../sass/planner.scss */
 #bionic-left-nav {
   background: #373E42;
   height: 100%;
@@ -5073,7 +5122,7 @@ h2 {
   z-index: 0;
 }
 
-/* line 347, ../sass/planner.scss */
+/* line 348, ../sass/planner.scss */
 .input-menu {
   display: none;
   position: fixed;
@@ -5087,7 +5136,7 @@ h2 {
   box-sizing: border-box;
 }
 
-/* line 360, ../sass/planner.scss */
+/* line 361, ../sass/planner.scss */
 .avatar {
   background: #cfcfcf url("../images/elizabeth.png") no-repeat;
   background-size: 44px;
@@ -5105,12 +5154,12 @@ h2 {
   float: left;
   width: 42px;
 }
-/* line 377, ../sass/planner.scss */
+/* line 378, ../sass/planner.scss */
 .avatar.advertiser {
   background: #9b9b9b;
 }
 
-/* line 383, ../sass/planner.scss */
+/* line 384, ../sass/planner.scss */
 .module {
   background: #fff;
   border: 1px solid #cfcfcf;
@@ -5120,11 +5169,11 @@ h2 {
   min-width: 1200px;
   padding: 20px;
 }
-/* line 393, ../sass/planner.scss */
+/* line 394, ../sass/planner.scss */
 .module.tasks h2 {
   margin-top: -20px;
 }
-/* line 396, ../sass/planner.scss */
+/* line 397, ../sass/planner.scss */
 .module.tasks p {
   margin: 0;
 }

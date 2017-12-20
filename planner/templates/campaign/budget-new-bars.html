@@ -179,7 +179,7 @@
               if(item.PercentPlanned > 100){plannedImage = "bar-red.svg";} else {plannedImage = "bar-gray.svg";}
               if(item.PercentAuthorized > 100){authorizedImage = "bar-red.svg";} else {authorizedImage = "bar-gray.svg";}
               if(item.PercentBought > 100){boughtImage = "bar-red.svg";} else {boughtImage = "bar-gray.svg";}
-              
+          
               if(item.Authorization == "Requested"){
                   authorizationIcon = "fa-question-circle";
               }
@@ -219,8 +219,7 @@
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
               tableBody = $('<tr class="'+rowLock+'">');
-              tableBody.append('<td class="col-150 right bar">' + progressBar(item.Share,150)+'</td>');
-              
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+shareImage+'" style="width:'+shareWidth+'px;"> <span>'+ item.Share +'%</span></td>');
               tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul></td>');
               
               tableBody.append('<td class="col-150 monthly right">'+ item.Jan2017 +'</td>');
@@ -238,13 +237,13 @@
               
               tableBody.append('<td class="col-150 right"><span><a>'+ item.LinesInPlan +'</a></span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a> '+ item.AmountInPlan +'</a></span></td>');
-              tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentPlanned,150)+'</td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+plannedImage+'" style="width:'+plannedWidth+'px;"> <span> '+ item.PercentPlanned +'%</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.AmountAuthorized +'</a></span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.NotYetAuthorized +'</a></span></td>');
-              tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentAuthorized,150)+'</td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+authorizedImage+'" style="width:'+authorizedWidth+'px;"> <span> '+ item.PercentAuthorized +'%</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountBought +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetBought +'</span></td>');
-              tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentBought,150)+'</td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+boughtImage+'" style="width:'+boughtWidth+'px;"> <span> '+ item.PercentBought +'%</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
               tableBody.append('<td class="col-150 right"><span> '+ item.PercentDelivered +'%</span></td>');
               tableBody.append('</tr>');

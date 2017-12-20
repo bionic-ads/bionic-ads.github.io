@@ -6038,6 +6038,55 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-weight: bold;
 }
 
+/* line 1, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar {
+  background: #69AED4;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  height: 15px;
+  line-height: 13px;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 10px;
+  position: relative;
+  float: left;
+  max-width: 130px;
+}
+/* line 18, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar span {
+  right: 5px;
+  padding: 0 !important;
+  position: relative;
+  width: auto !important;
+}
+/* line 25, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.over {
+  background: #EE3424;
+  width: 100%;
+}
+/* line 29, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.over span {
+  right: 5px;
+  padding: 0 !important;
+  position: relative;
+  width: auto !important;
+}
+/* line 37, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.under {
+  color: #333;
+}
+/* line 40, ../sass/components/3_components/_progress_bar.scss */
+.progress-bar.under span {
+  display: inline;
+  float: right;
+  right: -45px;
+  padding: 0 !important;
+  width: auto !important;
+}
+
 /* line 15, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .monthly {
   display: none;
