@@ -37,6 +37,7 @@
 @import "components/3_components/_rating.scss";
 @import "components/3_components/_tables.scss";
 
+@import "components/4_layouts/_budget.scss";
 @import "components/4_layouts/_overview.scss";
 @import "components/4_layouts/_move.scss";
 @import "components/4_layouts/_line-cost.scss";
@@ -80,7 +81,7 @@ h2 {
     display: block;
     background: $light-gray url("../../images/bionic-black.png") center 250px no-repeat;
     text-align: center;
-    z-index: 2;
+    z-index: 3;
     
     .la-ball-grid-pulse {
             margin: 10px 0 10px;
@@ -94,7 +95,7 @@ h2 {
     width: 100%;
     background: rgba(0,0,0,0.25);
     text-align: center;
-    z-index: 2;
+    z-index: 3;
 }
 
 .note {
@@ -198,6 +199,7 @@ h2 {
     .bionic-action-menu {
         padding-left: 25px;
         width: 100%;
+        z-index: 3;
         
         li {
             float: left;
@@ -314,6 +316,12 @@ h2 {
             }
         }
         
+        input.datepicker {
+            width: 110px;
+            padding: 5px;
+            margin-top: -5px;
+        }
+        
     }
     
 }
@@ -365,6 +373,11 @@ h2 {
     margin-top: -4px;
     float: left;
     width: 42px;
+    
+    &.advertiser {
+        background: #9b9b9b;
+    }
+    
 }
 
 .module {

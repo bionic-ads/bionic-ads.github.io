@@ -33,6 +33,10 @@ var templateData = {
 		{
 			name: "Performance",
 			page: "#/line/performance/"
+		},
+		{
+			name: "History",
+			page: "#/line/history/"
 		}
 	]
 };

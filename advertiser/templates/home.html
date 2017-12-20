@@ -1,0 +1,153 @@
+<div id="bionic-home" class="block fullwidth">
+    
+    <div class="bionic-header block fullwidth">
+    
+        <h1>
+            <span class="avatar advertiser"></span>
+            Good Afternoon, Andrew!
+        </h1>
+    
+        <ul class="bionic-tab-menu block fullwidth">
+       
+            <li><a href="#/" class="current">Home</a></li>
+            <li><a href="#/agencies">Agencies</a></li>
+            <li><a href="#/campaigns">Campaigns</a></li>
+            <li><a href="#/performance">Performance</a></li>
+        </ul>
+
+    </div>
+
+    <div class="bionic-content block fullwidth">
+
+    
+    <h2>Authorization Needed</h2>
+        
+        <table id="MostRecentCampaigns" class="module block fullwidth">
+
+            <thead>
+            <tr>
+                <th class="campaign">Campaign</th>
+                <th class="advertiser">Advertiser</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th class="budget">Budget</th>
+                <th class="planned">Planned</th>
+                <th>% Planned</th>
+                <th>Last Viewed</th>
+            </tr>
+            </thead>
+
+        </table>
+    
+    </div>
+    
+</div>
+
+
+<script type="text/javascript">
+        
+        
+      var spreadsheetTab = "MostRecentCampaigns";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      })
+        
+      
+      $("#close-in-page").click(function(){
+          $(".ratings").hide();
+          $(".ratings.two").show();
+      });
+      
+      $(".onpage label").click(function(){
+          radio_value = $(this).prev("input[type='radio']").val();
+          $("#item"+radio_value).prop('checked', true);
+//           $("#modal-item"+radio_value).prop('checked', true);
+          $(document).on($.modal.OPEN, function(event, modal) {
+             $(".modal .user-ratings #modal-item"+radio_value).prop('checked', true);
+          });
+      });
+      
+      $("#change-rating").click(function(){
+          $(document).on($.modal.OPEN, function(event, modal) {
+             $(".modal .user-ratings #modal-item8").prop('checked', true);
+          });
+      });
+/*
+      $('a[rel="modal:open"]').on($.modal.OPEN, function(event, modal) {
+          console.log("it opened!");
+      });
+*/
+
+
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          var mostRecentCampaigns,
+              advertiserimage, 
+              campaignimage, 
+              percentplanned,
+              textcolor
+              ;
+          
+          advertiserimage = item.AdvertiserImage;
+          campaignimage = item.CampaignImage;
+                    
+          if(item.AdvertiserImage != '') {
+              advertiserimage =  '<img src="../planner/images/home/' + item.AdvertiserImage + '" />';
+          } else {
+              advertiserimage =  item.Advertiser;
+          }
+          
+          if(item.CampaignImage != '') {
+              campaignimage =  '<img src="../planner/images/home/' + item.CampaignImage + '" />';
+          } else {
+              campaignimage =  '<img src="../planner/images/home/no_image.png" />';
+          }
+          
+          percentplanned = item.PercentPlanned;
+          
+          if(percentplanned != ''){
+              
+              textcolor = '';
+              
+              if((percentplanned > -1)&&(percentplanned < 30)){
+                  textcolor = "under";
+              }
+              
+              if(percentplanned < 101) {
+                  percentplannedbar = '<span class="budget-progress-bar '+textcolor+'" style="width:'+percentplanned+'px"><span>'+ percentplanned +'%</span></span>';
+              }
+              else if(percentplanned > 100) {
+                  percentplannedbar = '<span class="budget-progress-bar over"><span>Over 100%</span></span>';
+              }
+          }
+          
+          if(i <= 5){                              
+              mostRecentCampaigns = $('<tr><td class="campaign"><a href="#/campaign/overview/'+i+'"><span class="sm-campaign-image">'+campaignimage + '</span>' + item.CampaignName + '</a></td>');
+              mostRecentCampaigns.append('<td class="advertiser"><a href="#/advertiser/overview/">'+ advertiserimage +'</a></td>');
+              mostRecentCampaigns.append('<td class="startdate">'+ item.StartDate +'</td>');
+              mostRecentCampaigns.append('<td>'+ item.EndDate +'</td>');
+              mostRecentCampaigns.append('<td class="budget"><span class="currency">$</span>'+ item.Budget +'</td>');
+              mostRecentCampaigns.append('<td class="planned"><a href="#/campaign/mediaplan-grid/'+i+'"><span class="currency">$</span>'+ item.Planned +'</a></td>');
+              mostRecentCampaigns.append('<td class="percentplanned">'+ percentplannedbar +'</td>');
+              mostRecentCampaigns.append('<td>'+ item.LastViewed +'</td>');
+              mostRecentCampaigns.append('</tr>');
+              mostRecentCampaigns.appendTo("#MostRecentCampaigns");
+        }      
+        
+        })
+
+        
+      }
+      
+</script>

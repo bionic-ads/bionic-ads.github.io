@@ -121,9 +121,50 @@ input[type="button"].gray-button,
         &:hover {
             transition: background-color 0.5s ease;
             background-color: #e9ebed;
+        }        
+        
+    }
+    
+    .menu {
+        padding: 5px;
+        width: auto;
+        
+        li {
+            clear: both;
+            width: 100%;
+            margin: 0;
+            
+            a {
+                background: none;
+                color: $off-black;
+                display: block;
+                padding: 10px 10px;
+                width: 100%;
+            }
+            
+            &:hover {
+             background: $light-gray;   
+            }
+            
+            .fa {
+                margin-right: 5px;
+                font-size: 16px;
+                width: 16px;
+            }
+            
+            .fa-question-circle {
+                color: $yellow;
+            }
+            .fa-check {
+                color: $green;
+            }
+            .fa-file-text {
+                color: $medium-gray;
+            }
+            .fa-ban {
+                color: $red;
+            }
         }
-        
-        
     }
     
     img {
@@ -137,6 +178,13 @@ input[type="button"].gray-button,
         color: $blue;
         margin-right:8px;
     }
+    
+    .fa-caret-down {
+        margin-right: 0;
+        margin-left: 5px;
+        margin-right: -5px;
+        color: #333;
+    }
 }
 
 .bionic-action-menu.media-plan li {
@@ -146,6 +194,17 @@ input[type="button"].gray-button,
     display: block;
     cursor: pointer;
     border-radius: 3px;
+    
+    &.submenu ul {
+        display: block;
+        position: absolute;
+        float: left;
+        z-index: 3;
+        
+        li {
+            clear:both;    
+        }
+    }
     
     a {
         background: none;

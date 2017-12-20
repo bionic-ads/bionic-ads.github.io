@@ -1,0 +1,46 @@
+<div class="bionic-campaign-header bionic-header block fullwidth">
+                
+    <h1>AutoTrader.com | 768x90 - Leaderboard</h1>
+    
+    <span class="bionic-campaign-summary block fullwidth">April 01, 2016 - October 31, 2016</span>
+    
+    <script type="text/template" class="lineNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.lineNavItems, function( lineNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/line/'));
+                var group = lineNavItem.group;
+                if (window.location.hash.substr(1,10) == lineNavItem.page.substr(1,10)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- lineNavItem.page %>"><%- lineNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+    
+</div>
+
+<div class="block bionic-page">
+
+
+</div>
+
+<script>
+      if(Campaigns.length > 0){setCampaignInfo();}
+      
+//       $("body").tooltip();
+
+/*
+      $( ".tooltip.custom" ).tooltip({
+        content: "Here is your HTML"
+      });
+*/      
+</script>
+
+<script type="text/javascript" src="templates/line/nav-line.js"></script>

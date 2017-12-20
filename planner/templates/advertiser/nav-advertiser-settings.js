@@ -17,7 +17,7 @@ var templateData = {
 	listItems: [
 		{
 			name: "Basic Info",
-			page: ""
+			page: "#/advertiser/settings-basic-info/"
 		},
 		{
 			name: "Logo",
@@ -32,16 +32,16 @@ var templateData = {
 			page: ""
 		},
 		{
+			name: "Authorization",
+			page: "#/advertiser/settings-authorization/"
+		},
+		{
 			name: "Security",
 			page: ""
 		},
 		{
 			name: "Currency",
 			page: ""
-		},
-		{
-			name: "Authorization",
-			page: "#/advertiser/settings-authorization/"
 		},
 		{
 			name: "Production Costs",

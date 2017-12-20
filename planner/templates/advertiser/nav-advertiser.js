@@ -20,7 +20,7 @@ var templateData = {
 		},
 		{
 			name: "Settings",
-			page: "#/advertiser/settings-costs-ad-serving/"
+			page: "#/advertiser/settings-basic-info/"
 		},
 		{
 			name: "Campaigns",

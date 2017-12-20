@@ -7,10 +7,48 @@
     margin-top: -9px;
     padding: 0px 0px;
     width: 150px;
-    z-index: 99;
+    z-index: 3;
     
     &.view-menu {
         margin-top: 3px;
+    }
+    
+    &.media-plan-input-menu {
+        margin-top: 27px;
+        width: auto;
+        padding: 5px;
+        li {
+            
+            a {
+                color: $off-black;
+                display: block;
+                padding: 10px 10px;
+                width: 100%;
+            }
+            
+            &:hover {
+             background: $light-gray;   
+            }
+            
+            .fa {
+                margin-right: 5px;
+                font-size: 16px;
+                width: 16px;
+            }
+            
+            .fa-question-circle {
+                color: $yellow;
+            }
+            .fa-check {
+                color: $green;
+            }
+            .fa-file-text {
+                color: $medium-gray;
+            }
+            .fa-ban {
+                color: $red;
+            }
+        }
     }
     
     * {

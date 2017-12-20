@@ -21,7 +21,7 @@
 
                 var notification = '';
                 if ( campaignNavItem.name == "Media Plan") {
-                    campaignNavItem.notification = '<i class="fa fa-question-circle"></i>';
+                    campaignNavItem.notification = '<i class="fa fa-question-circle" style="color:orange; padding-right: 0;"></i>';
                 }
             %>
     			<li>
@@ -37,15 +37,24 @@
 
 
 <ul class="bionic-action-menu block custom-form-controls" style="margin-bottom: 5px;">
-    <li><a href="templates/modals/settings/add-new-cost.html" rel="modal:open" ><i class="fa fa-plus"></i>Add Bucket</a></li>
+    <li><a href="templates/modals/budget/add-new-bucket.html" rel="modal:open" ><i class="fa fa-plus"></i>Add Bucket</a></li>
     <li id="action-delete" class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
     <li class="button-divider"></li>
-    <li id="action-lock"  class="row-select"><a><i class="fa fa-lock"></i>Lock</a></li>
-    <li id="action-lock"  class="row-select"><a><i class="fa fa-unlock"></i>Unlock</a></li>
-    <li id="action-lock"  class="row-select"><a><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a></li>
+    <li id="action-lock"  class="row-select"><a class="disabled"><i class="fa fa-lock"></i>Lock</a></li>
+<!--     <li id="action-lock"  class="row-select"><a class="disabled"><i class="fa fa-unlock"></i>Unlock</a></li> -->
+    <li id="action-lock"  class="row-select">
+        <a class="hasDropdown disabled"><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a>
+        <ul class="menu view-menu authorization-menu">
+            <li class="row-select"><a><i class="fa fa-question-circle"></i>Request Authorization</a></li>    
+            <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>    
+            <li class="row-select"><a><i class="fa fa-file-text"></i>Mark as Draft</a></li>    
+            <li class="row-select"><a><i class="fa fa-ban"></i>Reject</a></li>    
+        </ul>
+
+    </li>
     <li class="button-divider"></li>
     <li id="action-lock"  class="row-select"><a><i class="fa fa-download"></i>Download</a></li>
-    <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label for="showMonthly">Show Monthly</label> </li>
+    <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label> <span class="datepickers hidden"> <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/> - <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/></span></li>
 </ul>
 
 
@@ -53,7 +62,7 @@
   
   <table class="gridFirstColumnHeader">
       <thead>
-          <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="cb0" type="checkbox"><label for="cb0"></label></th><th class="col-30 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th><th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th><th class="col-150"><span><a>Budget</a></span></th><th class="col-150 right"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th></tr>
+          <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="selectAll" type="checkbox"><label for="selectAll"></label></th><th class="col-20 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th><th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th><th class="col-150"><span><a>Budget</a></span></th></tr>
       </thead>
   </table>
 
@@ -61,7 +70,7 @@
     <table>
         <thead>
         <tr>
-          <th class="col-150 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 right"><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150 right"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th></tr></thead>
+          <th class="col-150 right"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th><th class="col-150 monthly right"><span><a>Jan 2017</a></span></th><th class="col-150 monthly right"><span><a>Feb 2017</a></span></th><th class="col-150 monthly right"><span><a>Mar 2017</a></span></th><th class="col-150 monthly right"><span><a>Apr 2017</a></span></th><th class="col-150 monthly right"><span><a>May 2017</a></span></th><th class="col-150 monthly right"><span><a>Jun 2017</a></span></th><th class="col-150 monthly right"><span><a>Jul 2017</a></span></th><th class="col-150 monthly right"><span><a>Aug 2017</a></span></th><th class="col-150 monthly right"><span><a>Sep 2017</a></span></th><th class="col-150 monthly right"><span><a>Oct 2017</a></span></th><th class="col-150 monthly right"><span><a>Nov 2017</a></span></th><th class="col-150 monthly right"><span><a>Dec 2017</a></span></th><th class="col-150 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 right"><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150 right"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th><th class="col-150 right"><span><a>Percent Delivered</a></span></th></tr></thead>
     </table>
   </header>
   
@@ -103,6 +112,15 @@
         });
         
         
+        $(".hasDropdown").bind("click",function(e){
+                
+            $(this).removeClass("disabled");
+            $(this).next(".menu").toggle();
+            return false;
+                
+        });
+
+        
         Tabletop.init( { key: public_spreadsheet_url,
                          callback: showInfo,
                          wanted: [ costsTab ],
@@ -114,7 +132,16 @@
     
         $.each( tabletop.sheets(costsTab).all(), function(i, item) {
           
-          var rowNumber, symbol,
+          var rowNumber, 
+              symbol, 
+              checkbox, 
+              lock, 
+              rowLock, 
+              shareWidth, 
+              shareImage, 
+              plannedWidth,
+              plannedImage,
+              authorizationIcon,
               tableFirstColumns,
               tableBody;
 
@@ -123,56 +150,141 @@
               } else {
                   symbol = '<span style="padding:0; margin-top:11px;" class="currency-symbol">$</span>';
               }
+              
+              if(item.Bucket != "Unbucketed"){
+                  if(item.Locked == "locked"){
+                      lock = '<i class="fa fa-lock"></i>';
+                      rowLock = "locked";
+                  } else {
+                      lock = ""
+                      rowLock = "";
+                  }
+                  checkbox = '<input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label>';
+              } else {
+                  lock = "";
+                  rowLock = "";
+                  checkbox = "";
+              }
+              if(item.Bucket == "Unbucketed"){
+                  rowLock = "locked";
+              }
+              
+              shareWidth = (item.Share/100)*150;
+              plannedWidth = (item.PercentPlanned/100)*150;
+              authorizedWidth = (item.PercentAuthorized/100)*150;
+              boughtWidth = (item.PercentBought/100)*150;
+              deliveredWidth = (item.PercentDelivered/100)*150;
+          
+              if(item.Share > 100){shareImage = "bar-red.svg";} else {shareImage = "bar-gray.svg";}
+              if(item.PercentPlanned > 100){plannedImage = "bar-red.svg";} else {plannedImage = "bar-gray.svg";}
+              if(item.PercentAuthorized > 100){authorizedImage = "bar-red.svg";} else {authorizedImage = "bar-gray.svg";}
+              if(item.PercentBought > 100){boughtImage = "bar-red.svg";} else {boughtImage = "bar-gray.svg";}
+          
+              if(item.Authorization == "Requested"){
+                  authorizationIcon = "fa-question-circle";
+              }
+              if(item.Authorization == "Authorized") {
+                  authorizationIcon = "fa-check";
+              }
+              if(item.Authorization == "Draft") {
+                  authorizationIcon = "fa-file-text";
+              }
+              if(item.Authorization == "Rejected") {
+                  authorizationIcon = "fa-ban";
+              }
+              
+              if(item.Jan2017 == "0.00") {item.Jan2017 = '<span> </span>';} else {item.Jan2017 = symbol+'<span> '+ item.Jan2017 +'</span>'}
+              if(item.Feb2017 == "0.00") {item.Feb2017 = '<span> </span>';} else {item.Feb2017 = symbol+'<span> '+ item.Feb2017 +'</span>'}
+              if(item.Mar2017 == "0.00") {item.Mar2017 = '<span> </span>';} else {item.Mar2017 = symbol+'<span> '+ item.Mar2017 +'</span>'}
+              if(item.Apr2017 == "0.00") {item.Apr2017 = '<span> </span>';} else {item.Apr2017 = symbol+'<span> '+ item.Apr2017 +'</span>'}
+              if(item.May2017 == "0.00") {item.May2017 = '<span> </span>';} else {item.May2017 = symbol+'<span> '+ item.May2017 +'</span>'}
+              if(item.Jun2017 == "0.00") {item.Jun2017 = '<span> </span>';} else {item.Jun2017 = symbol+'<span> '+ item.Jun2017 +'</span>'}
+              if(item.Jul2017 == "0.00") {item.Jul2017 = '<span> </span>';} else {item.Jul2017 = symbol+'<span> '+ item.Jul2017 +'</span>'}
+              if(item.Aug2017 == "0.00") {item.Aug2017 = '<span> </span>';} else {item.Aug2017 = symbol+'<span> '+ item.Aug2017 +'</span>'}
+              if(item.Sep2017 == "0.00") {item.Sep2017 = '<span> </span>';} else {item.Sep2017 = symbol+'<span> '+ item.Sep2017 +'</span>'}
+              if(item.Oct2017 == "0.00") {item.Oct2017 = '<span> </span>';} else {item.Oct2017 = symbol+'<span> '+ item.Oct2017 +'</span>'}
+              if(item.Nov2017 == "0.00") {item.Nov2017 = '<span> </span>';} else {item.Nov2017 = symbol+'<span> '+ item.Nov2017 +'</span>'}
+              if(item.Dec2017 == "0.00") {item.Dec2017 = '<span> </span>';} else {item.Dec2017 = symbol+'<span> '+ item.Dec2017 +'</span>'}
           
           rowNumber = i++;
           
-          if((item.Bucket != "Total") && (item.Bucket != "Unbucketed")){
+          if((item.Bucket != "Total")){
           
-              tableFirstColumns = $('<tr class=""><td class="line-number col-45"></td>');
-              tableFirstColumns.append('<td class="col-30 no-right-border"><input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label></td>');
-              tableFirstColumns.append('<td class="col-30 no-left-border no-right-border"><i class="fa fa-lock"></i></td>');
-              tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;"><a href="templates/modals/settings/editcost.html" rel="modal:open" ><span><strong>'+ item.Bucket +'</strong></span></a></td>');
-              tableFirstColumns.append('<td class="col-150 right"><span>'+ item.Budget +'</span></td>');
-              tableFirstColumns.append('<td class="col-150 right"><span>'+ item.Share +'</span></td>');
-              tableFirstColumns.append('<td class="col-150"><span>'+ item.Authorization +'</span></td>');
+              tableFirstColumns = $('<tr class="'+rowLock+'"><td class="line-number col-45"></td>');
+              tableFirstColumns.append('<td class="col-30 no-right-border">'+ checkbox +'</td>');
+              tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +'</td>');
+              tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;"><a href="templates/modals/budget/edit-bucket.html" rel="modal:open" ><span><strong>'+ item.Bucket +'</strong></span></a></td>');
+              tableFirstColumns.append('<td class="col-150 budget right">'+symbol+'<span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
-              tableBody = $('<tr class="">');
-              tableBody.append('<td class="col-150 right"><span>'+ item.LinesInPlan +'</span></td>');
-              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountInPlan +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentPlanned +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.NotYetAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.NotYetBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountDelivered +'</span></td>');
+              tableBody = $('<tr class="'+rowLock+'">');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+shareImage+'" style="width:'+shareWidth+'px;"> <span>'+ item.Share +'%</span></td>');
+              tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul></td>');
+              
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jan2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Feb2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Mar2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Apr2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.May2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jun2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jul2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Aug2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Sep2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Oct2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Nov2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Dec2017 +'</td>');
+              
+              tableBody.append('<td class="col-150 right"><span><a>'+ item.LinesInPlan +'</a></span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span><a> '+ item.AmountInPlan +'</a></span></td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+plannedImage+'" style="width:'+plannedWidth+'px;"> <span> '+ item.PercentPlanned +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.AmountAuthorized +'</a></span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.NotYetAuthorized +'</a></span></td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+authorizedImage+'" style="width:'+authorizedWidth+'px;"> <span> '+ item.PercentAuthorized +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountBought +'</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetBought +'</span></td>');
+              tableBody.append('<td class="col-150 right bar"><img src="../css/images/'+boughtImage+'" style="width:'+boughtWidth+'px;"> <span> '+ item.PercentBought +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
+              tableBody.append('<td class="col-150 right"><span> '+ item.PercentDelivered +'%</span></td>');
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
                     
           } else {
               
               tableFirstColumns = $('<tr class="total"><td class="line-number col-45"></td>');
-              tableFirstColumns.append('<td class="no-left-border" colspan="2" style="width: 260px; border-right:0;"><span><strong>'+ item.Bucket +'</strong></span></td>');
-              tableFirstColumns.append('<td class="col-150 right"><span>'+ item.Budget +'</span></td>');
-              tableFirstColumns.append('<td class="col-150 right"><span>'+ item.Share +'</span></td>');
-              tableFirstColumns.append('<td class="col-150"><span>'+ item.Authorization +'</span></td>');
+              tableFirstColumns.append('<td class="no-left-border" colspan="2" style="width: 250px; border-right:0;"><span><strong>'+ item.Bucket +'</strong></span></td>');
+              tableFirstColumns.append('<td class="col-150 right">'+symbol+' <span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
               tableBody = $('<tr class="total">');
+              tableBody.append('<td class="col-150 right"><span>'+ item.Share +'%</span></td>');
+              tableBody.append('<td class="col-150"><span>'+ item.Authorization +'</span></td>');
+              
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jan2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Feb2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Mar2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Apr2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.May2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jun2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Jul2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Aug2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Sep2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Oct2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Nov2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right">'+ item.Dec2017 +'</td>');
+              
               tableBody.append('<td class="col-150 right"><span>'+ item.LinesInPlan +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountInPlan +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentPlanned +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.NotYetAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.NotYetBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.AmountDelivered +'</span></td>');
+              tableBody.append('<td class="col-150 right"><span> '+ item.PercentPlanned +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountAuthorized +'</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetAuthorized +'</span></td>');
+              tableBody.append('<td class="col-150 right"><span> '+ item.PercentAuthorized +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountBought +'</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetBought +'</span></td>');
+              tableBody.append('<td class="col-150 right"><span> '+ item.PercentBought +'%</span></td>');
+              tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
+              tableBody.append('<td class="col-150 right"><span> '+ item.PercentDelivered +'%</span></td>');
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
               
@@ -213,9 +325,10 @@
     $(document).on({
     mouseenter: function () {
     var trIndex = $(this).index();
-    $("table.grid").each(function(index) {
-        $(this).find("tr:eq("+trIndex+")").addClass("hover")
-    });
+    
+        $("table.grid").each(function(index) {
+            $(this).find("tr:eq("+trIndex+")").addClass("hover")
+        });
     },
     mouseleave: function () {
     var trIndex = $(this).index();
@@ -224,6 +337,29 @@
     });
     }
     }, "#grid table tr");
+    
+    // Toggle Monthly Columns
+    
+    $(document).on('click', '#showMonthlyLabel', function() {
+        $(".monthly").toggleClass("inline");
+        $(".datepickers").toggleClass("hidden");
+    });
+
+    
+    // Authorization
+    
+    $(document).on('click', 'tr:not(.locked) td.authorization', function() {
+        $(this).find(".menu").show();
+    });
+
+
+    // Hide All Menus When Clicking Away on Page
+    
+    $("body").click(function () {        
+
+        $(".menu").hide();
+
+    });
     
 </script>
 

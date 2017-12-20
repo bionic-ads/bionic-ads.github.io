@@ -90,7 +90,6 @@
         }
         
         .user-initials {
-            background: #EE627A;
             box-sizing: border-box;
             border: 0;
             color: #fff;
@@ -110,6 +109,16 @@
             margin-right: -5px;
             overflow: hidden;
             text-align: center;
+            
+            &.blue {
+                background: $blue;
+            }
+            &.orange {
+                background: $orange;
+            }
+            &.pink {
+                background: $pink;
+            }
         }
         
     }

@@ -1,0 +1,108 @@
+.grid.fixedTable { 
+    
+        &.budget {
+        
+            .locked td:not(.line-number) {
+//                 background: #f5f6f7;
+//                 color: #999;
+
+                img {
+//                     opacity: .5;
+                }
+                
+            }
+            
+            .monthly {
+                display: none;
+            }
+            .monthly.inline {
+                display: inline-block;
+            }
+            
+            tr:not(.locked):hover,
+            tr.hover:not(.locked)  {
+                
+                td.authorization, td.budget {
+                
+                    background: #fff !important;
+                    border: 1px solid $blue !important;
+                
+                }
+                
+                td.authorization {
+                    cursor: pointer;
+                }
+                
+                td.authorization span:after {
+                    content: '\f0dd ';
+                    float: right;
+                    font-family: "FontAwesome";
+                    padding: 0 0 0 6px;
+                    top: -2px;
+                    position: relative;
+                    color: $nxm-color-gray-medium;
+                }
+            }
+            
+            .menu.media-plan-input-menu {
+                margin-top: 0px;
+            }
+        
+             th:nth-child(3) i,
+             td:nth-child(3) i {
+                 display: block;
+                 font-size: 16px;
+                 text-align: right;
+                 top: -2px;
+                 position: relative;
+             }
+             
+             td i {
+                 display: inline;
+                 line-height: 17px;
+                 padding-left: 0;
+                 font-size: 18px;
+                 vertical-align: text-top;
+             }
+             
+            .fa-question-circle {
+                color: $yellow;
+            }
+            .fa-check {
+                color: $green;
+            }
+            .fa-file-text {
+                color: $medium-gray;
+            }
+            .fa-ban {
+                color: $red;
+            }
+             
+             .bar {
+                 
+                img {
+                    float: left;
+//                     opacity: .5;
+                    height: 32px;
+                    margin-left: 3px;
+                    margin-top: 3px;
+                    max-width: 144px;
+                }
+                
+                span {
+                    box-sizing: border-box;
+                    position: absolute;
+                    width: 150px;
+                    text-align: right;
+                }
+                
+             }
+             
+            .cell-with-bar {
+                background: url('../images/bar-gray.png') no-repeat;
+            }
+        
+        
+        }
+    
+}

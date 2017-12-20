@@ -41,6 +41,7 @@ $(document).ready(function() {
     		'campaign/:content/:id' : 'showCampaign',
     		'advertiser/:content/'  : 'showAdvertiser',
     		'advertisers'           : 'showAdvertisers',
+    		'agencies'              : 'showAgencies',
     		'campaigns'             : 'showCampaigns',
     		'schedule'              : 'showSchedule',
     		'tasks'                 : 'showTasks',
@@ -95,12 +96,14 @@ $(document).ready(function() {
     	
     	showAdvertisers: function(){
     		$("#bionic-main").load("templates/advertisers.html");
-    		
+    	}, 
+
+    	showAgencies: function(){
+    		$("#bionic-main").load("templates/agencies.html");
     	}, 
     	
     	showCampaigns: function(){
     		$("#bionic-main").load("templates/campaigns.html");
-    		
     	},       	
     	
     	showSchedule: function(){

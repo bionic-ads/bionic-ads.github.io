@@ -108,6 +108,52 @@
         
     }
     
+    .authorization {
+        
+        .fa-question-circle {
+            color: $yellow;
+        }
+        .fa-check {
+            color: $green;
+        }
+        .fa-file-text {
+            color: $medium-gray;
+        }
+        .fa-ban {
+            color: $red;
+        }
+        
+        .modal-authorization-summary {
+            line-height: 18px; 
+            margin-bottom: 0px; 
+            margin-top: 5px;
+        }
+        
+        .modal-authorization-label {
+            
+            display: block; 
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            width: 100%;
+            
+            span {
+                float: right;
+                font-weight: normal;
+            }
+        }
+        
+        input[type="text"] {
+            width: 100%;
+        }
+        
+        textarea {
+            width:100%; 
+            height: 198px
+        }
+        
+    }
+    
 }
 
 .blocker {

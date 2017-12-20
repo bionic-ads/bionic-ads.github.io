@@ -63,7 +63,7 @@
 	
 </div>
 <ul class="bionic-action-menu media-plan block">
-    <li><a class="bionic-view-menu"><i class="fa fa-table"></i><span>Mode</span><i class="fa fa-times-circle" style="display: none;"></i></a>
+    <li><a class="hasDropdown bionic-mode-menu"><i class="fa fa-table"></i><span>Mode</span><i class="fa fa-times-circle" style="display: none;"></i></a>
             <div class="menu view-menu" style="width: 200px">
                 <div class="header filter-section filter-search-master">
                     <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
@@ -87,6 +87,15 @@
     <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-external-link"></i>Move</a></li>
     <li class="row-select disabled"><a><img src="../planner/images/bucket.svg"> Color</a></li>
     <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
+    <li class="row-select">
+        <a class="hasDropdown disabled"><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a>
+        <ul class="menu view-menu">
+            <li class="row-select"><a><i class="fa fa-question-circle"></i>Request Authorization</a></li>    
+            <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>    
+            <li class="row-select"><a><i class="fa fa-file-text"></i>Mark as Draft</a></li>    
+            <li class="row-select"><a><i class="fa fa-ban"></i>Reject</a></li>    
+        </ul>
+    </li>    
     <li class="row-select disabled"><a><i class="fa fa-calendar-plus-o"></i>Add Tasks</a></li>
     <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
@@ -115,7 +124,7 @@
 <th colspan="7" style="width:1352px" ><span></span></th><th colspan="10" style="width:1750px" class="divider divider-costs"><span>Costs </span></th><th colspan="7" style="width: 820px" class="divider divider-ratings"><span>Audience</span></th><th colspan="3" style="width: 570px;" class="divider divider-tasks"><span>Tasks</span></th><th colspan="2" style="width: 800px;" class="divider divider-implementation"><span>URLs for Implementation</span></th><th colspan="6" style="width: 750px;" class="divider divider-kpis"><span>KPIs</span></th><th colspan="3" style="width: 450px" class="divider divider-kpis"><span>Picklists</span></th><th colspan="3" style="width: 100%" class="divider divider-kpis"><span>Notes & History</span></th>
         </tr>
         
-        <tr class="group-members"><!-- Basics --><th class="col-id"><span>Bionic ID</span></th><th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th><th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th><th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th><th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th><th class="col-rate center"><span>Rate</span></th><th class="col-quantity right "><span><a>Quantity</a></span></th><!-- Costs --><th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Optimization</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Tech Fee</a></span></th><th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th><th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th><th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th><th class="col-media-bucket col-cost"><span><a>Bucket</a></span></th><th class="col-media-authorization"><span><a>Authorization</a> / <a>Authorizer</a></span></th><!-- Audience --><th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th><th class="col-ratings col-120 "><span><a>Population</a></span></th><th class="col-ratings col-120"><span><a>Impressions</a></span></th><th class="col-ratings col-90"><span><a>CPM</a></span></th><th class="col-ratings col-90 "><span><a>Reach #</a></span></th><th class="col-ratings col-90 "><span><a>Reach %</a></span></th><th class="col-ratings col-90 "><span><a>Frequency</a></span></th><!-- Tasks --><th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th><th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th><th class="col-tasks "><span><a>Send Report</a></span></th><!-- Implementation --><th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th><th class="col-implementation col-450"><span><a>Google Analytics Tracking URL</a></span></th><!-- KPIs --><th class="divider col-kpi-cost right"><span><a>CPM</a></span></th><th class="col-kpi-number right"><span><a>Impressions</a></span></th><th class=" col-kpi-cost right"><span><a>CPC</a></span></th><th class="col-kpi-number right"><span><a>Clicks</a></span></th><th class=" col-kpi-cost right"><span><a>/View</a></span></th><th class="col-kpi-number right"><span><a>Views</a></span></th><!-- Picklists --><th class="divider col-picklists "><span><a>Picklist 1</a></span></th><th class="col-picklists "><span><a>Picklist 2</a></span></th><th class="col-picklists "><span><a>Picklist 3</a></span></th><!-- Notes & History --><th class="divider col-50 col-notes "><span><a>Notes</a></span></th><th class="col-135 col-notes "><span><a>Created</a></span></th><th class="col-135 col-notes "><span><a>Last Updated</a></span></th></tr>
+        <tr class="group-members"><!-- Basics --><th class="col-id"><span>Bionic ID</span></th><th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th><th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th><th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th><th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th><th class="col-rate center"><span>Rate</span></th><th class="col-quantity right "><span><a>Quantity</a></span></th><!-- Costs --><th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Optimization</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Tech Fee</a></span></th><th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th><th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th><th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th><th class="col-150 col-media-bucket"><span><a>Bucket</a></span></th><th class="col-media-authorization"><span><a>Authorization</a> / <a>Authorizer</a></span></th><!-- Audience --><th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th><th class="col-ratings col-120 "><span><a>Population</a></span></th><th class="col-ratings col-120"><span><a>Impressions</a></span></th><th class="col-ratings col-90"><span><a>CPM</a></span></th><th class="col-ratings col-90 "><span><a>Reach #</a></span></th><th class="col-ratings col-90 "><span><a>Reach %</a></span></th><th class="col-ratings col-90 "><span><a>Frequency</a></span></th><!-- Tasks --><th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th><th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th><th class="col-tasks "><span><a>Send Report</a></span></th><!-- Implementation --><th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th><th class="col-implementation col-450"><span><a>Google Analytics Tracking URL</a></span></th><!-- KPIs --><th class="divider col-kpi-cost right"><span><a>CPM</a></span></th><th class="col-kpi-number right"><span><a>Impressions</a></span></th><th class=" col-kpi-cost right"><span><a>CPC</a></span></th><th class="col-kpi-number right"><span><a>Clicks</a></span></th><th class=" col-kpi-cost right"><span><a>/View</a></span></th><th class="col-kpi-number right"><span><a>Views</a></span></th><!-- Picklists --><th class="divider col-picklists "><span><a>Picklist 1</a></span></th><th class="col-picklists "><span><a>Picklist 2</a></span></th><th class="col-picklists "><span><a>Picklist 3</a></span></th><!-- Notes & History --><th class="divider col-50 col-notes "><span><a>Notes</a></span></th><th class="col-135 col-notes "><span><a>Created</a></span></th><th class="col-135 col-notes "><span><a>Last Updated</a></span></th></tr>
         </thead>
     </table>
   </header>
@@ -226,28 +235,28 @@
                 $(".menu").toggle();
             });
 
-
-
             $(".mediaplan-nav li ").click(function () {
                 $($location).text("");
                 var scrollDistance =  $(this).attr('rel');
                 $('.fixedTable-body').animate({scrollLeft:scrollDistance});
             });
             
-            $(".bionic-view-menu").bind("click",function(e){
+            $(".hasDropdown").bind("click",function(e){
                 
-                $(".menu").toggle();
+                $(this).removeClass("disabled");
+                $(this).next(".menu").toggle();
                 return false;
                 
             });
+            
             
             $(".mode").bind("click",function(e){
                 
                 $(".menu").hide();
                 
-                $(".bionic-view-menu").addClass("on");
-                $(".bionic-view-menu span").text("Media Authorization");
-                $(".bionic-view-menu .fa-times-circle").show();
+                $(".bionic-mode-menu").addClass("on");
+                $(".bionic-mode-menu span").text("Media Authorization");
+                $(".bionic-mode-menu .fa-times-circle").show();
 
                 $(".bionic-columns-menu").addClass("on");
                 $(".bionic-columns-menu span").text("52 Columns Hidden");
@@ -284,10 +293,10 @@
                 
             });
             
-            $(".bionic-view-menu .fa-times-circle").bind("click",function(e){
-                $(".bionic-view-menu").removeClass("on");
-                $(".bionic-view-menu span").text("Mode");
-                $(".bionic-view-menu .fa-times-circle").hide();
+            $(".bionic-mode-menu .fa-times-circle").bind("click",function(e){
+                $(".bionic-mode-menu").removeClass("on");
+                $(".bionic-mode-menu span").text("Mode");
+                $(".bionic-mode-menu .fa-times-circle").hide();
                 $(".bionic-columns-menu").removeClass("on");
                 $(".bionic-columns-menu span").text("Mode");
                 $(".bionic-columns-menu .fa-times-circle").hide();
@@ -436,7 +445,7 @@
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
-          var mediaPlanBody = $('<tr class="'+flightHeader+' '+isFlightMember+'"><td class="col-id readonly"><span>' + item.BionicID + '</span></td>');
+          var mediaPlanBody = $('<tr id="row'+rowNumber+'" class="'+flightHeader+' '+isFlightMember+'"><td class="col-id readonly"><span>' + item.BionicID + '</span></td>');
           mediaPlanBody.append('<td class="col-program"><input type="text" value="'+ item.Program +'"><span class="vendor">'+ item.Vendor +'</span></td>');
           mediaPlanBody.append('<td class="col-product"><input type="text" value="'+ item.Product +'"><input class="secondary" type="text" value="'+ item.Targeting +'"></td>');
           mediaPlanBody.append('<td class="col-channel"><input class="half" type="text" value="'+ item.Channel +'"><input class="half" type="text" value="'+ item.AdUnit +'"><input class="secondary" type="text" value="'+ item.AdSpecs +'"></td>');
@@ -455,9 +464,14 @@
           mediaPlanBody.append('<td class="col-total-media-cost col-cost"><span class="currency-symbol">$</span><a>1,000.00</a></td>');
           mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
-          mediaPlanBody.append('<td class="col-total-cost  col-cost"><span class="currency-symbol">$</span><a class="">1,000.00</a></td>');          
-          mediaPlanBody.append('<td class="col-bucket col-cost"><input type="text" value=""></td>');          
-          mediaPlanBody.append('<td class="col-media-authorization"><input class="half" type="text" value=""><input class="half" type="text" value=""></td>');          
+
+          mediaPlanBody.append('<td class="col-total-cost col-cost"><span class="currency-symbol">$</span><a class="">1,000.00</a></td>');          
+          mediaPlanBody.append('<td class="col-bucket col-cost"><input type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
+
+          
+          // Authorization
+          
+          mediaPlanBody.append('<td class="col-media-authorization col-dropdown"><input class="half authorization-menu" type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
           
           
           // Ratings
@@ -576,7 +590,21 @@
             }
                     
         });
+        
+        
+        // Authorizations
 
+            $(document).on('click', '.authorization-menu', function() {
+                $(this).next(".menu").show();
+            });
+            
+          $(".authorization-actions a").click(function(){
+              $(document).on($.modal.OPEN, function(event, modal) {
+                $("#row1 td input.authorization-menu").val("Authorized");
+                  
+//                  $(".modal h1").html("change");
+              });
+          });
 
 
       }

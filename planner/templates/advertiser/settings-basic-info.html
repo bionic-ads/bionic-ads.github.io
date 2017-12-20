@@ -1,0 +1,146 @@
+<div class="bionic-advertiser-header bionic-header block fullwidth">
+                
+    <h1>Advertiser Name</h1>
+        
+    <script type="text/template" class="advertiserNav">
+
+    	<ul class="bionic-tab-menu">
+    		<% _.each( bionic.advertiserNavItems, function( advertiserNavItem ){ %>
+            <% 
+                var url = window.location.href;
+                var theID = url.substring(url.lastIndexOf('/') + 1);
+                var directory = url.substring(url.lastIndexOf('#/advertiser/'));
+                var group = advertiserNavItem.group;
+                if (window.location.hash.substr(1,18) == advertiserNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
+            %>
+    			<li>
+    				<a <%= currentnav %> href="<%- advertiserNavItem.page %>"><%- advertiserNavItem.name %></a>
+    			</li>
+    
+    		<% }); %>
+    	</ul>   
+    	 
+	</script>
+</div>
+
+
+<script type="text/template" class="template">
+	
+	<ul class="bionic-subnav-menu">
+		<% _.each( bionic.listItems, function( listItem ){ %>
+        <% 
+            var url = window.location.href;
+            var theID = url.substring(url.lastIndexOf('/') + 1);
+            var page = url.substring(url.lastIndexOf('#/advertiser/'));
+            if (listItem.page == page){ var currentSubnav = 'class="current"'; } 
+        %>
+			<li>
+				<a <%= currentSubnav %> href="<%- listItem.page %>"><%- listItem.name %></a>
+			</li>
+
+		<% }); %>
+	</ul>
+	
+</script>
+
+<div class="block has-subnav">
+
+<h2>Basic Info</h2> 
+
+
+
+</div>
+
+
+<script type="text/javascript" src="templates/advertiser/nav-advertiser.js"></script>
+<script type="text/javascript" src="templates/advertiser/nav-advertiser-settings.js"></script>
+
+<script>
+$(document).ready(function () {
+    $("li").click(function () {
+        $('li > ul').not($(this).children("ul").toggle()).hide();
+        
+    });
+});
+
+    
+if(Campaigns.length > 0){setCampaignInfo();}
+
+$("tbody").sortable({
+    items: "> tr",
+    appendTo: "parent",
+    helper: "clone"
+}).disableSelection();
+
+$("tbody").droppable({
+    hoverClass: "drophover",
+    tolerance: "pointer",
+    drop: function(e, ui) {
+        var tabdiv = $(this).attr("href");
+        $(tabdiv + " table tr:last").after("<tr>" + ui.draggable.html() + "</tr>");
+    }
+});    
+          
+</script>
+
+<script>
+
+      costsTab = "AdditionalCosts";
+            
+      $(document).ready( function() {
+
+    
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ costsTab ],
+                        // query:["state=done and (name=performance or name=flowchart)"],
+                         debug: true } )
+      
+      });
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(costsTab).all(), function(i, item) {
+          
+          var costRow,
+              name,
+              status, 
+              campaigns, 
+              type, 
+              calculationCost,
+              calculationBasis,
+              calculationValue,
+              symbol,
+              overageBuffer,
+              checked;           
+          
+              name =        item.Name;
+              status =      item.Status;
+              campaigns =   item.Campaigns;
+              type =        item.Type;
+              calculationCost = item.CalculationCost;
+              calculationBasis = item.CalculationBasis;
+              calculationValue = item.CalculationValue;
+              overageBuffer = item.OverageBuffer;
+              checked =     item.Checked; 
+              if(calculationCost.includes("Percentage")){
+                  symbol = '<span style="float: right; color: #9b9b9b; position: relative; top: 11px; right: 15px;">%</span>';
+              } else {
+                  symbol = '<span class="currency-symbol">USD <i class="fa fa-caret-down"></i></span>';
+              }    
+          
+              if((type == "Delivery")&&(checked == "checked")) {
+                  costRow = $('<tr><td></td><td class=""><strong>'+name+'</strong></td>');
+                  costRow.append('<td class="width100">'+calculationCost+'</td>')
+                  costRow.append('<td class="editable width300 narrow">'+symbol+'<input class="right" type="text" value="'+calculationValue+'"></td>')
+                  costRow.append('<td>Remove</td></tr>')
+                  costRow.appendTo("#costs tbody");
+              }
+          
+        });
+
+        
+      }
+
+        
+</script>
