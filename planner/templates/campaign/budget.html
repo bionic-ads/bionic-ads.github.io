@@ -54,7 +54,9 @@
     </li>
     <li class="button-divider"></li>
     <li id="action-lock"  class="row-select"><a><i class="fa fa-download"></i>Download</a></li>
-    <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label> <span class="datepickers hidden"> <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/> - <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/></span></li>
+    <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label>  <span class="datepickers hidden" style="line-height: 21px; margin-left: -10px;"> (from <a class="link">Campaign Settings</a>)</span>
+<!--     <span class="datepickers hidden"> <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/> - <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/></span></li> -->
+    </li>
 </ul>
 
 
@@ -70,7 +72,7 @@
     <table>
         <thead>
         <tr>
-          <th class="col-150 right"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th><th class="col-150 monthly right"><span><a>Jan 2017</a></span></th><th class="col-150 monthly right"><span><a>Feb 2017</a></span></th><th class="col-150 monthly right"><span><a>Mar 2017</a></span></th><th class="col-150 monthly right"><span><a>Apr 2017</a></span></th><th class="col-150 monthly right"><span><a>May 2017</a></span></th><th class="col-150 monthly right"><span><a>Jun 2017</a></span></th><th class="col-150 monthly right"><span><a>Jul 2017</a></span></th><th class="col-150 monthly right"><span><a>Aug 2017</a></span></th><th class="col-150 monthly right"><span><a>Sep 2017</a></span></th><th class="col-150 monthly right"><span><a>Oct 2017</a></span></th><th class="col-150 monthly right"><span><a>Nov 2017</a></span></th><th class="col-150 monthly right"><span><a>Dec 2017</a></span></th><th class="col-150 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 right"><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150 right"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th><th class="col-150 right"><span><a>Percent Delivered</a></span></th></tr></thead>
+          <th class="col-150"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th><th class="col-150 monthly right"><span><a>Jan 2017</a></span></th><th class="col-150 monthly right"><span><a>Feb 2017</a></span></th><th class="col-150 monthly right"><span><a>Mar 2017</a></span></th><th class="col-150 monthly right"><span><a>Apr 2017</a></span></th><th class="col-150 monthly right"><span><a>May 2017</a></span></th><th class="col-150 monthly right"><span><a>Jun 2017</a></span></th><th class="col-150 monthly right"><span><a>Jul 2017</a></span></th><th class="col-150 monthly right"><span><a>Aug 2017</a></span></th><th class="col-150 monthly right"><span><a>Sep 2017</a></span></th><th class="col-150 monthly right"><span><a>Oct 2017</a></span></th><th class="col-150 monthly right"><span><a>Nov 2017</a></span></th><th class="col-150 monthly right"><span><a>Dec 2017</a></span></th><th class="col-150 monthly right"><span><a>Total</a></span></th><th class="col-150 monthly right"><span><a>Variance</a></span></th><th class="col-100 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 "><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th><th class="col-150 right"><span><a>Percent Delivered</a></span></th></tr></thead>
     </table>
   </header>
   
@@ -137,13 +139,15 @@
               checkbox, 
               lock, 
               rowLock, 
+              bucket,
               shareWidth, 
               shareImage, 
               plannedWidth,
               plannedImage,
               authorizationIcon,
               tableFirstColumns,
-              tableBody;
+              tableBody,
+              unbucketed;
 
               if(item.Share.includes("%")){
                   symbol = ""
@@ -159,11 +163,14 @@
                       lock = ""
                       rowLock = "";
                   }
+                  bucket = '<a href="templates/modals/budget/edit-bucket.html" rel="modal:open" ><span><strong>'+ item.Bucket +'</strong></span></a>';
                   checkbox = '<input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label>';
               } else {
                   lock = "";
                   rowLock = "";
                   checkbox = "";
+                  bucket = '<span>'+ item.Bucket +'</span>';
+                  unbucketed = "unbucketed";
               }
               if(item.Bucket == "Unbucketed"){
                   rowLock = "locked";
@@ -210,11 +217,11 @@
           
           if((item.Bucket != "Total")){
           
-              tableFirstColumns = $('<tr class="'+rowLock+'"><td class="line-number col-45"></td>');
+              tableFirstColumns = $('<tr class="'+rowLock+' '+unbucketed+'"><td class="line-number col-45"></td>');
               tableFirstColumns.append('<td class="col-30 no-right-border">'+ checkbox +'</td>');
               tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +'</td>');
-              tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;"><a href="templates/modals/budget/edit-bucket.html" rel="modal:open" ><span><strong>'+ item.Bucket +'</strong></span></a></td>');
-              tableFirstColumns.append('<td class="col-150 budget right">'+symbol+'<span>'+ item.Budget +'</span></td>');
+              tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;">'+bucket+'</td>');
+              tableFirstColumns.append('<td class="col-150 budget  right">'+symbol+'<span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
@@ -235,8 +242,10 @@
               tableBody.append('<td class="col-150 monthly right">'+ item.Oct2017 +'</td>');
               tableBody.append('<td class="col-150 monthly right">'+ item.Nov2017 +'</td>');
               tableBody.append('<td class="col-150 monthly right">'+ item.Dec2017 +'</td>');
-              
-              tableBody.append('<td class="col-150 right"><span><a>'+ item.LinesInPlan +'</a></span></td>');
+              tableBody.append('<td class="col-150 monthly right total">'+symbol+'<span> '+ item.Total +'</span></td>');
+              tableBody.append('<td class="col-150 monthly right variance">'+symbol+'<span> '+ item.Variance +'</span></td>');
+
+              tableBody.append('<td class="col-100 right"><span><a>'+ item.LinesInPlan +'</a></span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a> '+ item.AmountInPlan +'</a></span></td>');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentPlanned,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.AmountAuthorized +'</a></span></td>');
@@ -246,7 +255,7 @@
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetBought +'</span></td>');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentBought,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentDelivered +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.PercentDelivered,150)+'</td>');
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
                     
@@ -254,38 +263,40 @@
               
               tableFirstColumns = $('<tr class="total"><td class="line-number col-45"></td>');
               tableFirstColumns.append('<td class="no-left-border" colspan="2" style="width: 250px; border-right:0;"><span><strong>'+ item.Bucket +'</strong></span></td>');
-              tableFirstColumns.append('<td class="col-150 right">'+symbol+' <span>'+ item.Budget +'</span></td>');
+              tableFirstColumns.append('<td class="col-150 budget right" style="background: #fff; border:1px solid #cfcfcf;">'+symbol+' <span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
               tableBody = $('<tr class="total">');
-              tableBody.append('<td class="col-150 right"><span>'+ item.Share +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.Share,150)+'</td>');
               tableBody.append('<td class="col-150"><span>'+ item.Authorization +'</span></td>');
               
-              tableBody.append('<td class="col-150 monthly right">'+ item.Jan2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Feb2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Mar2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Apr2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.May2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Jun2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Jul2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Aug2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Sep2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Oct2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Nov2017 +'</td>');
-              tableBody.append('<td class="col-150 monthly right">'+ item.Dec2017 +'</td>');
-              
-              tableBody.append('<td class="col-150 right"><span>'+ item.LinesInPlan +'</span></td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Jan2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Feb2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Mar2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Apr2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.May2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Jun2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Jul2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Aug2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Sep2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Oct2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Nov2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ item.Dec2017 +'</td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ symbol+'<span> '+ item.Total +'</span></td>');
+              tableBody.append('<td class="col-150 monthly right total">'+ symbol+'<span> '+ item.Variance +'</span></td>');
+
+              tableBody.append('<td class="col-100 right"><span>'+ item.LinesInPlan +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountInPlan +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentPlanned +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.PercentPlanned,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountAuthorized +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetAuthorized +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentAuthorized +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.PercentAuthorized,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountBought +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetBought +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentBought +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.PercentBought,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
-              tableBody.append('<td class="col-150 right"><span> '+ item.PercentDelivered +'%</span></td>');
+              tableBody.append('<td class="col-150 right">' + progressBar(item.PercentDelivered,150)+'</td>');
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
               

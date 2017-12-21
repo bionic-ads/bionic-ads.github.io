@@ -20,9 +20,11 @@
             }
             
             tr:not(.locked):hover,
-            tr.hover:not(.locked)  {
+            tr:not(.total):not(.locked):hover,
+            tr:not(.unbucketed):not(.locked):hover,
+            tr:not(.locked).hover {
                 
-                td.authorization, td.budget {
+                td.authorization, td.budget, td.monthly:not(.total):not(.variance) {
                 
                     background: #fff !important;
                     border: 1px solid $blue !important;
@@ -43,6 +45,8 @@
                     color: $nxm-color-gray-medium;
                 }
             }
+            
+            
             
             .menu.media-plan-input-menu {
                 margin-top: 0px;

@@ -288,6 +288,7 @@
                 $(".col-notes").hide();
                 
                 $(".col-total-cost").show();
+                $(".col-bucket").show();
                                 
                 return false;
                 
@@ -471,7 +472,7 @@
           
           // Authorization
           
-          mediaPlanBody.append('<td class="col-media-authorization col-dropdown"><input class="half authorization-menu" type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
+          mediaPlanBody.append('<td class="col-media-authorization col-dropdown"><input class="half authorization-menu" style="float: none;" type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
           
           
           // Ratings
