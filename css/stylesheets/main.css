@@ -5914,7 +5914,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-right: 5px;
 }
 /* line 113, ../sass/components/3_components/_modals.scss */
-.modal .authorization .fa-question-circle {
+.modal .authorization .fa-question-circle, .modal .authorization .fa-paper-plane {
   color: #F39C0F;
 }
 /* line 116, ../sass/components/3_components/_modals.scss */
@@ -5955,10 +5955,24 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 /* line 150, ../sass/components/3_components/_modals.scss */
 .modal .authorization textarea {
   width: 100%;
-  height: 198px;
+  height: 166px;
+}
+/* line 155, ../sass/components/3_components/_modals.scss */
+.modal .authorization .add-attachment {
+  display: block;
+  padding-top: 12px;
+}
+/* line 160, ../sass/components/3_components/_modals.scss */
+.modal .authorization .add-attachment .fa {
+  font-size: 20px;
+}
+/* line 164, ../sass/components/3_components/_modals.scss */
+.modal .authorization .add-attachment span {
+  color: #333;
+  margin-left: 5px;
 }
 
-/* line 159, ../sass/components/3_components/_modals.scss */
+/* line 175, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -6156,18 +6170,22 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   color: #F39C0F;
 }
 /* line 75, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .fa-paper-plane {
+  color: #F39C0F;
+}
+/* line 78, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-check {
   color: #5FBA74;
 }
-/* line 78, ../sass/components/4_layouts/_budget.scss */
+/* line 81, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-file-text {
   color: #cfcfcf;
 }
-/* line 81, ../sass/components/4_layouts/_budget.scss */
+/* line 84, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-ban {
   color: #EE3424;
 }
-/* line 87, ../sass/components/4_layouts/_budget.scss */
+/* line 90, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .bar img {
   float: left;
   height: 32px;
@@ -6175,14 +6193,14 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: 3px;
   max-width: 144px;
 }
-/* line 96, ../sass/components/4_layouts/_budget.scss */
+/* line 99, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .bar span {
   box-sizing: border-box;
   position: absolute;
   width: 150px;
   text-align: right;
 }
-/* line 105, ../sass/components/4_layouts/_budget.scss */
+/* line 108, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .cell-with-bar {
   background: url("../images/bar-gray.png") no-repeat;
 }

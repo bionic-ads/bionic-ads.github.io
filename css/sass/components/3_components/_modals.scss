@@ -110,7 +110,7 @@
     
     .authorization {
         
-        .fa-question-circle {
+        .fa-question-circle,.fa-paper-plane {
             color: $yellow;
         }
         .fa-check {
@@ -149,7 +149,23 @@
         
         textarea {
             width:100%; 
-            height: 198px
+            height: 166px
+        }
+        
+        .add-attachment {
+            
+            display: block;
+            padding-top: 12px;
+            
+            .fa {
+                font-size: 20px;
+            }
+            
+            span {
+                color: #333;
+                margin-left: 5px;
+            }
+            
         }
         
     }

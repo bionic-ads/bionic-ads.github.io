@@ -45,7 +45,7 @@
     <li id="action-lock"  class="row-select">
         <a class="hasDropdown disabled"><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a>
         <ul class="menu view-menu authorization-menu">
-            <li class="row-select"><a><i class="fa fa-question-circle"></i>Request Authorization</a></li>    
+            <li class="row-select"><a><i class="fa fa-paper-plane"></i>Request Authorization</a></li>    
             <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>    
             <li class="row-select"><a><i class="fa fa-file-text"></i>Mark as Draft</a></li>    
             <li class="row-select"><a><i class="fa fa-ban"></i>Reject</a></li>    
@@ -188,7 +188,7 @@
               if(item.PercentBought > 100){boughtImage = "bar-red.svg";} else {boughtImage = "bar-gray.svg";}
               
               if(item.Authorization == "Requested"){
-                  authorizationIcon = "fa-question-circle";
+                  authorizationIcon = "fa-paper-plane";
               }
               if(item.Authorization == "Authorized") {
                   authorizationIcon = "fa-check";
@@ -228,7 +228,7 @@
               tableBody = $('<tr class="'+rowLock+'">');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.Share,150)+'</td>');
               
-              tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul></td>');
+              tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-paper-plane"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul></td>');
               
               tableBody.append('<td class="col-150 monthly right">'+ item.Jan2017 +'</td>');
               tableBody.append('<td class="col-150 monthly right">'+ item.Feb2017 +'</td>');
