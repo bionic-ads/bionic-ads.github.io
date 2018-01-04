@@ -249,26 +249,30 @@ function setCampaignInfo(){
 function progressBar(percent,containerWidth){
   var bar, textcolor;
   if(!percent){
-      percent = "0";
-      return "";
+      percent = "0.00";
   }
   if(containerWidth > 100){
       barWidth = Math.round((percent/100)*containerWidth);
   }
-  if(percent != ''){
+  if(percent){
       
+      bar = '';
       textcolor = '';
       
-      if((percent > -1)&&(percent < 30)){
+      if((percent > -1)&&(percent < 40)){
           textcolor = "under";
-      }
+      } 
       
       if(percent < 101) {
           bar = '<span class="progress-bar '+textcolor+'" style="width:'+barWidth+'px"><span>'+ percent +'%</span></span>';
       }
       
-      else if(percent > 100) {
+      if(percent > 100) {
           bar = '<span class="progress-bar over"><span>'+ percent +'%</span></span>';
+      }
+      
+      if(percent == 0) {
+          bar = '<span class="progress-bar" style="width:'+barWidth+'px"><span style="right: auto;">'+ percent +'%</span></span>';
       }
   }
   return bar;
