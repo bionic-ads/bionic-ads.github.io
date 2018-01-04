@@ -170,6 +170,26 @@
         
     }
     
+    .budget-modal {
+        .monthlyBreakdown {
+            div {
+                margin-top: 20px;
+                margin-right: 10px;
+                
+                strong {
+                    display: block;
+                    margin-bottom: 2px;
+                    font-weight: normal;
+                    font-size: 11px;
+                }
+                input {
+                    width: 210px;
+                }
+                
+            }
+        }
+    }
+    
 }
 
 .blocker {

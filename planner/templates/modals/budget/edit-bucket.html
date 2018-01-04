@@ -4,34 +4,37 @@
         
         
      <ul class="bionic-tab-menu" style="margin-bottom: -15px; margin-top: 10px;">
-        <li><a class="current" style="background: #fff; border-bottom-color: #fff;">Basics</a></li>
-        <li><a>Monthly</a></li>
-        <li><a>History</a></li>
+        <li><a rel="modal:open" href="templates/modals/budget/edit-bucket.html" class="current" style="background: #fff; border-bottom-color: #fff;">Basics</a></li>
+        <li><a rel="modal:open" href="templates/modals/budget/edit-bucket-monthly.html">Monthly</a></li>
+        <li><a rel="modal:open" href="templates/modals/budget/edit-bucket-history.html">History</a></li>
      </ul>
         
     </div>
 </div>
     
-<div class="bionic-modal-body custom-form-controls" style="height: 500px; width: 700px;">
+<div class="bionic-modal-body budget-modal custom-form-controls" style="height: 500px; width: 700px;">
  
-     <div class="block fullwidth" style="margin-top: 10px;">
-
-    <strong style="display: block; margin-bottom: 10px;">Name</strong>
-    <input class="text" type="text" style="width: 375;" value="">
-    
+    <div class="block fullwidth" style="margin-top: 10px;">
+        <strong style="display: block; margin-bottom: 10px;">Name</strong>
+        <input class="text" type="text" style="width: 375;" value="">
     </div>
 
+    <div class="block fullwidth" style="margin-top: 10px;">
+        <strong style="display: block; margin-bottom: 10px;">Budget</strong>
+        <input class="text" type="text" style="width: 375;" value="">
+    </div>
+
+<!--
      <div class="block fullwidth" style="margin-top: 10px;">
-    <strong style="display: block; margin-bottom: 10px;">Budget</strong>
-    <input class="text" type="text" style="width: 375;" value="">
-     </div>
+<input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label></div>
+-->
 
 
 </div>
 
 
 <div class="bionic-modal-footer" style="margin-top: 0;">
-    <a class="blue-button" rel="modal:close" >Save Changes</a>
+    <a class="blue-button" rel="modal:close" >Done</a>
     <a class="gray-button" rel="modal:close" >Cancel</a>
 </div>
 </div>

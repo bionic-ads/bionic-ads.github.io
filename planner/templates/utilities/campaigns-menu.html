@@ -2,7 +2,7 @@
     
         <div class="nxm-menu-bar nxm-menu-filters" style="margin-right: 0px;">
             <div class="filter-section filter-search-master">
-            <input type="text" placeholder="Search" value="" required id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
+            <input type="text" placeholder="Search" value="" required id="campaigns-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
             <span id="clear-search" class="clear-search-filter">
                 <i class="fa fa-times-circle"></i>
             </span>
@@ -11,10 +11,10 @@
 
     
     <div class="filter-container custom-form-controls">
-        <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Advertisers</div>
+        <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Campaigns</div>
         <div class="menu filterTypeMenu">
             <ul>
-                <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Advertisers</label></li>
+                <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Campaigns</label></li>
                 <li class="first-option"><input id="following" type="checkbox" checked><label for="following">Following</label></li>
                 <li><input id="notfollowing" type="checkbox" checked><label for="notfollowing">Not Following</label></li>
             </ul>
@@ -25,10 +25,9 @@
 </div>
 
 <div class="nxm-menu-filters custom-form-controls" style="clear:both; width: 100%; margin-bottom: 5px;margin-top:0;">
-    <div class="action-menu-button"><i class="fa fa-plus"></i> Add Advertiser</div>
+    <div class="action-menu-button"><i class="fa fa-plus"></i> Add Campaign</div>
     <div class="action-menu-button disabled"><i class="fa fa-star"></i> Follow</div>
 </div>
-    
 <script>
     $(".bionic-filter").click(function (event) {        
         event.stopPropagation();
