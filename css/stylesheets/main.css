@@ -4288,6 +4288,27 @@ input[type=text].search {
   padding-left: 25px;
 }
 
+/* line 41, ../sass/components/2_elements/_inputs.scss */
+input[type=text].currency {
+  margin-left: 50px;
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 47, ../sass/components/2_elements/_inputs.scss */
+.currency-input {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  background: #eee;
+  padding: 13px;
+  height: 41px;
+  width: 50px;
+}
+/* line 57, ../sass/components/2_elements/_inputs.scss */
+.currency-input.usd {
+  content: "USD";
+}
+
 /* line 1, ../sass/components/2_elements/_links.scss */
 a {
   color: #6EB3D6;
