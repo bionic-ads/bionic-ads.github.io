@@ -6191,8 +6191,8 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: 0px;
 }
 /* line 55, ../sass/components/4_layouts/_budget.scss */
-.grid.fixedTable.budget th:nth-child(3) i,
-.grid.fixedTable.budget td:nth-child(3) i {
+.grid.fixedTable.budget th:nth-child(4) i,
+.grid.fixedTable.budget td:nth-child(4) i {
   display: block;
   font-size: 16px;
   text-align: right;

@@ -64,7 +64,7 @@
   
   <table class="gridFirstColumnHeader">
       <thead>
-          <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="selectAll" type="checkbox"><label for="selectAll"></label></th><th class="col-20 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th><th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th><th class="col-150"><span><a>Budget</a></span></th></tr>
+          <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="selectAll" type="checkbox"><label for="selectAll"></label></th><th class="col-200" style="border-left: 0; "><span class="header" style="padding-left: 5px"><a>Bucket <i class="fa fa-caret-down"></i></a></span></th><th class="col-20 no-left-border no-right-border"><span class="header"><a><i class="fa fa-lock"></i></a></span></th><th class="col-150"><span><a>Budget</a></span></th></tr>
       </thead>
   </table>
 
@@ -219,8 +219,8 @@
           
               tableFirstColumns = $('<tr class="'+rowLock+' '+unbucketed+'"><td class="line-number col-45"></td>');
               tableFirstColumns.append('<td class="col-30 no-right-border">'+ checkbox +'</td>');
-              tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +'</td>');
               tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;">'+bucket+'</td>');
+              tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +'</td>');
               tableFirstColumns.append('<td class="col-150 budget  right">'+symbol+'<span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
