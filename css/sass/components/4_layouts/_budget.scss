@@ -24,7 +24,7 @@
             tr:not(.unbucketed):not(.locked):hover,
             tr:not(.locked).hover {
                 
-                td.authorization, td.budget, td.monthly:not(.total):not(.variance) {
+                td.authorization, td.budget, td.po-number:not(.total), td.monthly:not(.total):not(.variance) {
                 
                     background: #fff !important;
                     border: 1px solid $blue !important;

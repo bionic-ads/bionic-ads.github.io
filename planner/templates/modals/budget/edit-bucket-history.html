@@ -13,24 +13,47 @@
 </div>
     
 <div class="bionic-modal-body budget-modal custom-form-controls" style="height: 500px; width: 700px;">
+    
+    <div class="filter-container custom-form-controls">
+        <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Properties </div>
+        <div class="menu filterTypeMenu">
+            <ul>
+                <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Campaigns</label></li>
+                <li class="first-option"><input id="following" type="checkbox" checked><label for="following">Following</label></li>
+                <li><input id="notfollowing" type="checkbox" checked><label for="notfollowing">Not Following</label></li>
+            </ul>
+            <div class="footer"><a class="blue-button">Apply</a></div>
+        </div>
+    </div>                
+    
  
-    <table>
+    <table class="history" style="margin-top: 20px;">
         <thead>
             <tr>
                 <th>Timestamp</th>
-                <th>User/Action</th>
+                <th>User / Action</th>
                 <th>Property</th>
             </tr>
         </thead>
-        <tr>
-            
-        </tr>
-        <tr>
-            
-        </tr>
+        <tbody>
+            <tr>
+                <td class="timestamp">12/31/2017<span class="time">12:45 PM</span></td>
+                <td class="user-action">Elizabeth Planner set <strong>Authorization</strong> to Approved</td>
+                <td class="property">Authorization</td>
+            </tr>
+            <tr>
+                <td class="timestamp">12/31/2017<span class="time">11:33 PM</span></td>
+                <td class="user-action">Elizabeth Planner changed <strong>Budget</strong> from $ 200,000.00 to $ 250,000.00</td>
+                <td class="property">Amount</td>
+            </tr>
+            <tr>
+                <td class="timestamp">12/31/2017<span class="time">10:42 PM</span></td>
+                <td class="user-action">Elizabeth Planner created a Budget for Digital with</td>
+                <td class="property">New</td>
+            </tr>
+        </tbody>
     </table>
     
-
 
 </div>
 

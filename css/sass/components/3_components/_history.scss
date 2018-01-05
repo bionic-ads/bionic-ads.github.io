@@ -1,0 +1,39 @@
+.history {
+    
+    width: 100%;
+    border: 1px solid #ddd;
+    
+    th,td {
+        padding: 10px;
+//         border: 1px solid #ddd;
+        text-align: left;
+    }
+    
+    tr {
+        border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+        background: #f5f6f7;
+    }
+    
+    td {
+        background: #fff;
+        border-color: #fff;
+    }
+    
+    .timestamp {
+        width: 70px;   
+        
+        .time {
+            display: block;
+            clear: both;
+            font-size: 11px;
+        } 
+    } 
+    
+    .property {
+        width: 100px;
+    }
+    
+}

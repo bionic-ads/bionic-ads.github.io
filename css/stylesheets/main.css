@@ -3932,24 +3932,25 @@ input[type="button"].gray-button,
   color: #333;
   display: block;
   padding: 8px 17px 8px 15px;
+  /*
+          &:hover {
+              transition: background-color 0.5s ease;
+              background-color: #e9ebed;
+          }        
+  */
 }
-/* line 122, ../sass/components/2_elements/_buttons.scss */
-.bionic-action-menu li a:not(.link):hover {
-  transition: background-color 0.5s ease;
-  background-color: #e9ebed;
-}
-/* line 129, ../sass/components/2_elements/_buttons.scss */
+/* line 131, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu {
   padding: 5px;
   width: auto;
 }
-/* line 133, ../sass/components/2_elements/_buttons.scss */
+/* line 135, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li {
   clear: both;
   width: 100%;
   margin: 0;
 }
-/* line 138, ../sass/components/2_elements/_buttons.scss */
+/* line 140, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li a {
   background: none;
   color: #333333;
@@ -3957,45 +3958,45 @@ input[type="button"].gray-button,
   padding: 10px 10px;
   width: 100%;
 }
-/* line 146, ../sass/components/2_elements/_buttons.scss */
+/* line 148, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li:hover {
   background: #f5f6f7;
 }
-/* line 150, ../sass/components/2_elements/_buttons.scss */
+/* line 152, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa {
   margin-right: 5px;
   font-size: 16px;
   width: 16px;
 }
-/* line 156, ../sass/components/2_elements/_buttons.scss */
+/* line 158, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-question-circle {
   color: #F39C0F;
 }
-/* line 159, ../sass/components/2_elements/_buttons.scss */
+/* line 161, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-check {
   color: #5FBA74;
 }
-/* line 162, ../sass/components/2_elements/_buttons.scss */
+/* line 164, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-file-text {
   color: #cfcfcf;
 }
-/* line 165, ../sass/components/2_elements/_buttons.scss */
+/* line 167, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-ban {
   color: #EE3424;
 }
-/* line 171, ../sass/components/2_elements/_buttons.scss */
+/* line 173, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 177, ../sass/components/2_elements/_buttons.scss */
+/* line 179, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;
 }
-/* line 183, ../sass/components/2_elements/_buttons.scss */
+/* line 185, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .fa-caret-down {
   margin-right: 0;
   margin-left: 5px;
@@ -4003,7 +4004,7 @@ input[type="button"].gray-button,
   color: #333;
 }
 
-/* line 191, ../sass/components/2_elements/_buttons.scss */
+/* line 193, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -4011,18 +4012,18 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 199, ../sass/components/2_elements/_buttons.scss */
+/* line 201, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li.submenu ul {
   display: block;
   position: absolute;
   float: left;
   z-index: 3;
 }
-/* line 205, ../sass/components/2_elements/_buttons.scss */
+/* line 207, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li.submenu ul li {
   clear: both;
 }
-/* line 210, ../sass/components/2_elements/_buttons.scss */
+/* line 212, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link) {
   background: none;
   color: #333;
@@ -4030,12 +4031,12 @@ input[type="button"].gray-button,
   padding: 6px 10px 8px !important;
   height: auto;
 }
-/* line 217, ../sass/components/2_elements/_buttons.scss */
+/* line 219, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link):hover {
   transition: background-color 0.5s ease;
   background-color: #e9ebed;
 }
-/* line 222, ../sass/components/2_elements/_buttons.scss */
+/* line 224, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link).on {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4083,19 +4084,19 @@ input[type="button"].gray-button,
   width: 16px;
   display: inline-block;
 }
-/* line 226, ../sass/components/2_elements/_buttons.scss */
+/* line 228, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link) .fa-times-circle {
   margin-left: 10;
   margin-right: 0px;
   top: 1px !important;
 }
-/* line 234, ../sass/components/2_elements/_buttons.scss */
+/* line 236, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 240, ../sass/components/2_elements/_buttons.scss */
+/* line 242, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li i {
   font-size: 14px;
   color: #69AED4;
@@ -5828,6 +5829,44 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   background: #FB7E7F;
 }
 
+/* line 1, ../sass/components/3_components/_history.scss */
+.history {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+/* line 6, ../sass/components/3_components/_history.scss */
+.history th, .history td {
+  padding: 10px;
+  text-align: left;
+}
+/* line 12, ../sass/components/3_components/_history.scss */
+.history tr {
+  border-bottom: 1px solid #ddd;
+}
+/* line 16, ../sass/components/3_components/_history.scss */
+.history th {
+  background: #f5f6f7;
+}
+/* line 20, ../sass/components/3_components/_history.scss */
+.history td {
+  background: #fff;
+  border-color: #fff;
+}
+/* line 25, ../sass/components/3_components/_history.scss */
+.history .timestamp {
+  width: 70px;
+}
+/* line 28, ../sass/components/3_components/_history.scss */
+.history .timestamp .time {
+  display: block;
+  clear: both;
+  font-size: 11px;
+}
+/* line 35, ../sass/components/3_components/_history.scss */
+.history .property {
+  width: 100px;
+}
+
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   background: #fff;
@@ -6153,15 +6192,18 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   display: inline-block;
 }
 /* line 27, ../sass/components/4_layouts/_budget.scss */
-.grid.fixedTable.budget tr:not(.locked):hover td.authorization, .grid.fixedTable.budget tr:not(.locked):hover td.budget, .grid.fixedTable.budget tr:not(.locked):hover td.monthly:not(.total):not(.variance),
+.grid.fixedTable.budget tr:not(.locked):hover td.authorization, .grid.fixedTable.budget tr:not(.locked):hover td.budget, .grid.fixedTable.budget tr:not(.locked):hover td.po-number:not(.total), .grid.fixedTable.budget tr:not(.locked):hover td.monthly:not(.total):not(.variance),
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.budget,
+.grid.fixedTable.budget tr:not(.total):not(.locked):hover td.po-number:not(.total),
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.monthly:not(.total):not(.variance),
 .grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.budget,
+.grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.po-number:not(.total),
 .grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.monthly:not(.total):not(.variance),
 .grid.fixedTable.budget tr:not(.locked).hover td.authorization,
 .grid.fixedTable.budget tr:not(.locked).hover td.budget,
+.grid.fixedTable.budget tr:not(.locked).hover td.po-number:not(.total),
 .grid.fixedTable.budget tr:not(.locked).hover td.monthly:not(.total):not(.variance) {
   background: #fff !important;
   border: 1px solid #69AED4 !important;
