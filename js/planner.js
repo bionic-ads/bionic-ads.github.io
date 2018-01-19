@@ -247,13 +247,16 @@ function setCampaignInfo(){
 }
 
 function progressBar(percent,containerWidth){
-  var bar, textcolor;
+  var bar, barWidth, textcolor;
   if(!percent){
       percent = "0.00";
   }
   if(containerWidth > 100){
       barWidth = Math.round((percent/100)*containerWidth);
+  } else {
+      barWidth = Math.round(percent);
   }
+  
   if(percent){
       
       bar = '';

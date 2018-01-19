@@ -21,7 +21,7 @@
 
                 var notification = '';
                 if ( campaignNavItem.name == "Media Plan") {
-                    campaignNavItem.notification = '<i class="fa fa-paper-plane" style="color:orange; padding-right: 0;"></i>';
+<!--                     campaignNavItem.notification = '<i class="fa fa-paper-plane" style="color:orange; padding-right: 0;"></i>'; -->
                 }
             %>
     			<li>
@@ -38,25 +38,29 @@
 
 <ul class="bionic-action-menu block custom-form-controls" style="margin-bottom: 5px;">
     <li><a href="templates/modals/budget/add-new-bucket.html" rel="modal:open" ><i class="fa fa-plus"></i>Add Bucket</a></li>
-    <li id="action-delete" class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
+    <li id="action-delete"  class="row-select"><a class="disabled" href="templates/modals/budget/confirm-delete.html" rel="modal:open"><i class="fa fa-trash"></i>Delete</a></li>
+    <li id="action-undelete" style="display: none;"><a><i class="fa fa-undo"></i>Undelete</a></li>
     <li class="button-divider"></li>
     <li id="action-lock"  class="row-select"><a class="disabled"><i class="fa fa-lock"></i>Lock</a></li>
-<!--     <li id="action-lock"  class="row-select"><a class="disabled"><i class="fa fa-unlock"></i>Unlock</a></li> -->
+    <li id="action-lock"  class="row-select"><a class="disabled"><i class="fa fa-unlock"></i>Unlock</a></li>
+    
     <li id="action-lock"  class="row-select">
-        <a class="hasDropdown disabled"><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a>
+        <a class="disabled"><i class="fa fa-check"></i>Authorization</a>
         <ul class="menu view-menu authorization-menu">
-            <li class="row-select"><a><i class="fa fa-paper-plane"></i>Request Authorization</a></li>    
             <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>    
-            <li class="row-select"><a><i class="fa fa-file-text"></i>Mark as Draft</a></li>    
+            <li class="row-select"><a><i class="fa fa-paper-plane"></i>Pending</a></li>    
+            <li class="row-select"><a><i class="fa fa-pencil"></i>Mark as Draft</a></li>    
             <li class="row-select"><a><i class="fa fa-ban"></i>Reject</a></li>    
         </ul>
 
     </li>
     <li class="button-divider"></li>
-    <li id="action-lock"  class="row-select"><a><i class="fa fa-download"></i>Download</a></li>
-    <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label>  <span class="datepickers hidden" style="line-height: 21px; margin-left: -10px;"> (from <a class="link">Campaign Settings</a>)</span>
-<!--     <span class="datepickers hidden"> <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/> - <input class="datepicker" type="text" placeholder="mm/dd/yyyy" value=""/></span></li> -->
-    </li>
+    <li id="action-lock"  class=""><a><i class="fa fa-download"></i>Download</a></li>
+    <li class="button-divider"></li>
+    <li id="action-lock"  class=""><a href="templates/modals/history/budget.html" rel="modal:open" ><i class="fa fa-history"></i>History</a></li>
+    <li class="button-divider"></li>
+<!--     <li style="padding-top: 5px; margin-left: 10px; display: block"><input id="showMonthly" type="checkbox"><label style="width: auto;" id="showMonthlyLabel" for="showMonthly">Show Monthly</label>  <span class="datepickers hidden" style="line-height: 21px; margin-left: -10px;"> (from <a class="link">Campaign Settings</a>)</span></li> -->
+    <li style="padding-top: 5px; margin-left: 0px; display: block"><input id="showDeleted" type="checkbox"><label style="width: auto;" id="showDeletedLabel" for="showDeleted">Show Deleted</label></li>
 </ul>
 
 
@@ -72,7 +76,7 @@
     <table>
         <thead>
         <tr>
-          <th class="col-150"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th><th class="col-150"><span><a>PO Number</a></span></th><th class="col-150 monthly right"><span><a>Jan 2017</a></span></th><th class="col-150 monthly right"><span><a>Feb 2017</a></span></th><th class="col-150 monthly right"><span><a>Mar 2017</a></span></th><th class="col-150 monthly right"><span><a>Apr 2017</a></span></th><th class="col-150 monthly right"><span><a>May 2017</a></span></th><th class="col-150 monthly right"><span><a>Jun 2017</a></span></th><th class="col-150 monthly right"><span><a>Jul 2017</a></span></th><th class="col-150 monthly right"><span><a>Aug 2017</a></span></th><th class="col-150 monthly right"><span><a>Sep 2017</a></span></th><th class="col-150 monthly right"><span><a>Oct 2017</a></span></th><th class="col-150 monthly right"><span><a>Nov 2017</a></span></th><th class="col-150 monthly right"><span><a>Dec 2017</a></span></th><th class="col-150 monthly right"><span><a>Total of Monthly</a></span></th><th class="col-150 monthly right"><span><a>Variance</a></span></th><th class="col-100 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 "><span><a>% Planned</a></span></th><th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th><th class="col-150 right"><span><a>Percent Delivered</a></span></th></tr></thead>
+          <th class="col-150"><span><a>Share</a></span></th><th class="col-150"><span><a>Authorization</a></span></th><th class="col-150"><span><a>PO Number</a></span></th><th class="col-150 monthly right"><span><a>Jan 2017</a></span></th><th class="col-150 monthly right"><span><a>Feb 2017</a></span></th><th class="col-150 monthly right"><span><a>Mar 2017</a></span></th><th class="col-150 monthly right"><span><a>Apr 2017</a></span></th><th class="col-150 monthly right"><span><a>May 2017</a></span></th><th class="col-150 monthly right"><span><a>Jun 2017</a></span></th><th class="col-150 monthly right"><span><a>Jul 2017</a></span></th><th class="col-150 monthly right"><span><a>Aug 2017</a></span></th><th class="col-150 monthly right"><span><a>Sep 2017</a></span></th><th class="col-150 monthly right"><span><a>Oct 2017</a></span></th><th class="col-150 monthly right"><span><a>Nov 2017</a></span></th><th class="col-150 monthly right"><span><a>Dec 2017</a></span></th><th class="col-150 monthly right"><span><a>Total of Monthly</a></span></th><th class="col-150 monthly right"><span><a>Variance</a></span></th><th class="col-100 right"><span><a>Lines in Plan</a></span></th><th class="col-150 right"><span class="right"><a>Amount in Plan</a></span></th><th class="col-150 "><span><a>% Planned</a></span></th><!-- <th class="col-150 right"><span><a>Amount Authorized</a></span></th><th class="col-150 right"><span><a>Not Yet Authorized</a></span></th><th class="col-150"><span><a>% Authorized</a></span></th><th class="col-150 right"><span><a>Amount Bought</a></span></th><th class="col-150 right"><span><a>Not Yet Bought</a></span></th><th class="col-150 right"><span><a>% Bought</a></span></th><th class="col-150 right"><span><a>Amount Delivered</a></span></th><th class="col-150 right"><span><a>Percent Delivered</a></span></th> --></tr></thead>
     </table>
   </header>
   
@@ -95,7 +99,7 @@
 
 <script>
     
-      var costsTab = "CampaignBudget";
+      var costsTab = "CampaignBudgetUndelete";
     
       $(document).ready( function() {
         
@@ -144,6 +148,8 @@
               shareImage, 
               plannedWidth,
               plannedImage,
+              deleted,
+              rowDeleted,
               authorizationIcon,
               tableFirstColumns,
               tableBody,
@@ -156,24 +162,39 @@
               }
               
               if(item.Bucket != "Unbucketed"){
-                  if(item.Locked == "locked"){
+                  if(item.Status == "locked" ){
                       lock = '<i class="fa fa-lock"></i>';
                       rowLock = "locked";
                   } else {
                       lock = ""
                       rowLock = "";
                   }
-                  bucket = '<a href="templates/modals/budget/edit-bucket.html" rel="modal:open" ><span><strong>'+ item.Bucket +'</strong></span></a>';
-                  checkbox = '<input id="cb'+i+'" type="checkbox"><label for="cb'+i+'"></label>';
+                  if(item.Status == "deleted" ){
+                      deleted = '<span class="del">deleted:</span>';
+//                       deleted = '';
+                      rowDeleted = "deleted locked";
+                  } else {
+                      deleted = ""
+                      rowDeleted = "";
+                  }                  
+                  
+                  bucket = '<a href="templates/modals/budget/view-bucket.html" rel="modal:open" ><span>'+ deleted +' <strong>'+ item.Bucket +'</strong> </span></a>';
+                  checkbox = '<input id="cb'+i+'" class="checkbox '+rowDeleted+'" type="checkbox"><label class="checkbox '+rowDeleted+'" for="cb'+i+'"></label>';
               } else {
                   lock = "";
                   rowLock = "";
+                      deleted = ""
+                      rowDeleted = "";
                   checkbox = "";
                   bucket = '<span>'+ item.Bucket +'</span>';
                   unbucketed = "unbucketed";
               }
               if(item.Bucket == "Unbucketed"){
                   rowLock = "locked";
+              }
+              
+              if(item.Status == "deleted"){
+//                   checkbox = "";
               }
               
               shareWidth = (item.Share/100)*150;
@@ -194,7 +215,7 @@
                   authorizationIcon = "fa-check";
               }
               if(item.Authorization == "Draft") {
-                  authorizationIcon = "fa-file-text";
+                  authorizationIcon = "fa-pencil";
               }
               if(item.Authorization == "Rejected") {
                   authorizationIcon = "fa-ban";
@@ -217,18 +238,18 @@
           
           if((item.Bucket != "Total")){
           
-              tableFirstColumns = $('<tr class="'+rowLock+' '+unbucketed+'"><td class="line-number col-45"></td>');
+              tableFirstColumns = $('<tr class="'+rowLock+' '+rowDeleted+' '+unbucketed+'"><td class="line-number col-45"></td>');
               tableFirstColumns.append('<td class="col-30 no-right-border">'+ checkbox +'</td>');
               tableFirstColumns.append('<td class="col-200 no-left-border" style="border-right:0;">'+bucket+'</td>');
-              tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +'</td>');
+              tableFirstColumns.append('<td class="col-20 no-left-border no-right-border">'+ lock +' </td>');
               tableFirstColumns.append('<td class="col-150 budget  right">'+symbol+'<span>'+ item.Budget +'</span></td>');
               tableFirstColumns.append('</tr>');
               tableFirstColumns.appendTo("#gridFirstColumns tbody");
                         
-              tableBody = $('<tr class="'+rowLock+'">');
+              tableBody = $('<tr class="'+rowLock+'  '+rowDeleted+' '+unbucketed+'">');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.Share,150)+'</td>');
               
-              tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-paper-plane"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize-budget.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul></td>');
+              tableBody.append('<td class="col-150 authorization"><span><i class="fa '+authorizationIcon+'"></i> '+ item.Authorization +'</span><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize-budget.html"><i class="fa fa-check"></i> Authorized</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-paper-plane"></i> Pending</a></li><li><a><i class="fa fa-pencil"></i> Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Rejected</a></li></ul></td>');
 
               tableBody.append('<td class="col-150 po-number"></td>');
 
@@ -251,6 +272,7 @@
               tableBody.append('<td class="col-100 right"><span><a>'+ item.LinesInPlan +'</a></span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a> '+ item.AmountInPlan +'</a></span></td>');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentPlanned,150)+'</td>');
+/*
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.AmountAuthorized +'</a></span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span><a>'+ item.NotYetAuthorized +'</a></span></td>');
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentAuthorized,150)+'</td>');
@@ -259,6 +281,7 @@
               tableBody.append('<td class="col-150 right bar">' + progressBar(item.PercentBought,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
               tableBody.append('<td class="col-150 right">' + progressBar(item.PercentDelivered,150)+'</td>');
+*/
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
                     
@@ -294,6 +317,7 @@
               tableBody.append('<td class="col-100 right"><span>'+ item.LinesInPlan +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountInPlan +'</span></td>');
               tableBody.append('<td class="col-150 right">' + progressBar(item.PercentPlanned,150)+'</td>');
+/*
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountAuthorized +'</span></td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.NotYetAuthorized +'</span></td>');
               tableBody.append('<td class="col-150 right">' + progressBar(item.PercentAuthorized,150)+'</td>');
@@ -302,6 +326,7 @@
               tableBody.append('<td class="col-150 right">' + progressBar(item.PercentBought,150)+'</td>');
               tableBody.append('<td class="col-150 right">'+symbol+'<span> '+ item.AmountDelivered +'</span></td>');
               tableBody.append('<td class="col-150 right">' + progressBar(item.PercentDelivered,150)+'</td>');
+*/
               tableBody.append('</tr>');
               tableBody.appendTo("#gridBody tbody");
               
@@ -362,6 +387,25 @@
         $(".datepickers").toggleClass("hidden");
     });
 
+    // Toggle Undeleted
+    
+    $(document).on('click', 'input.deleted', function() {
+        $("#action-undelete").toggle();
+//         $("#action-delete").toggle();
+    });
+    
+    // Toggle Delete
+    
+    $(document).on('click', '#showDeletedLabel', function() {
+        $(".deleted").toggle();
+    });
+
+    // Toggle Checkbox
+    
+    $(document).on('click', '.checkbox:not(.deleted)', function() {
+        $("li.row-select a").removeClass("disabled");
+    });
+
     
     // Authorization
     
@@ -379,8 +423,6 @@
     });
     
 </script>
-
-
 
 <script type="text/javascript" src="templates/campaign/nav-campaign.js"></script>
 <script>if(Campaigns.length > 0){setCampaignInfo();}</script>

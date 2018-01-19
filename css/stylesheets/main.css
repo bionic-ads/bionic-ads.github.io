@@ -3833,6 +3833,16 @@ div.ui-dialog .ui-widget-header-supertip {
 }
 
 /* line 31, ../sass/components/2_elements/_buttons.scss */
+.primary {
+  background: #6CAFD2 !important;
+  color: white !important;
+}
+/* line 35, ../sass/components/2_elements/_buttons.scss */
+.primary i {
+  color: white !important;
+}
+
+/* line 40, ../sass/components/2_elements/_buttons.scss */
 .blue-button {
   display: inline-block;
   color: white !important;
@@ -3842,12 +3852,12 @@ div.ui-dialog .ui-widget-header-supertip {
   border: 1px solid #6CAFD2;
 }
 
-/* line 41, ../sass/components/2_elements/_buttons.scss */
+/* line 50, ../sass/components/2_elements/_buttons.scss */
 .blue-button:hover {
   background: #60B2DB;
 }
 
-/* line 45, ../sass/components/2_elements/_buttons.scss */
+/* line 54, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled,
 .blue-button.disabled,
 .blue-button.disabled:hover {
@@ -3857,31 +3867,31 @@ div.ui-dialog .ui-widget-header-supertip {
   cursor: default;
 }
 
-/* line 54, ../sass/components/2_elements/_buttons.scss */
+/* line 63, ../sass/components/2_elements/_buttons.scss */
 #crumbs .blue-button {
   margin-top: 4px;
   padding: 8px 20px;
 }
 
-/* line 59, ../sass/components/2_elements/_buttons.scss */
+/* line 68, ../sass/components/2_elements/_buttons.scss */
 .button-c {
   background-color: #999;
   color: #fff !important;
 }
 
-/* line 64, ../sass/components/2_elements/_buttons.scss */
+/* line 73, ../sass/components/2_elements/_buttons.scss */
 .button-c-disabled {
   opacity: 0.8;
 }
 
-/* line 68, ../sass/components/2_elements/_buttons.scss */
+/* line 77, ../sass/components/2_elements/_buttons.scss */
 .green-button {
   color: white !important;
   position: relative;
   background: #65a000;
 }
 
-/* line 75, ../sass/components/2_elements/_buttons.scss */
+/* line 84, ../sass/components/2_elements/_buttons.scss */
 input[type="submit"].gray-button,
 input[type="button"].gray-button,
 .gray-button {
@@ -3890,34 +3900,39 @@ input[type="button"].gray-button,
   border: 1px solid #dfe0e1;
 }
 
-/* line 83, ../sass/components/2_elements/_buttons.scss */
+/* line 92, ../sass/components/2_elements/_buttons.scss */
 .gray-button:hover {
   background: #e2e2e2;
 }
 
-/* line 89, ../sass/components/2_elements/_buttons.scss */
+/* line 98, ../sass/components/2_elements/_buttons.scss */
 .small-button {
   padding: 0 20px;
 }
 
-/* line 93, ../sass/components/2_elements/_buttons.scss */
+/* line 102, ../sass/components/2_elements/_buttons.scss */
 .blue-button:disabled {
   background: #B5B5B5;
   color: #888 !important;
 }
 
-/* line 98, ../sass/components/2_elements/_buttons.scss */
+/* line 107, ../sass/components/2_elements/_buttons.scss */
 .button-link {
   padding: 8px 20px !important;
   line-height: 20px;
   background: none !important;
 }
-/* line 102, ../sass/components/2_elements/_buttons.scss */
+/* line 111, ../sass/components/2_elements/_buttons.scss */
 .button-link.under-line {
   text-decoration: underline;
 }
 
-/* line 107, ../sass/components/2_elements/_buttons.scss */
+/* line 117, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu:not(.what-you-see) li a {
+  background: #dfe0e1;
+}
+
+/* line 123, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -3925,9 +3940,8 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 115, ../sass/components/2_elements/_buttons.scss */
-.bionic-action-menu li a:not(.link) {
-  background: #dfe0e1;
+/* line 131, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li a:not(.link):not(.on) {
   border-radius: 3px;
   color: #333;
   display: block;
@@ -3939,64 +3953,64 @@ input[type="button"].gray-button,
           }        
   */
 }
-/* line 131, ../sass/components/2_elements/_buttons.scss */
+/* line 146, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu {
   padding: 5px;
   width: auto;
 }
-/* line 135, ../sass/components/2_elements/_buttons.scss */
+/* line 150, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li {
   clear: both;
   width: 100%;
   margin: 0;
 }
-/* line 140, ../sass/components/2_elements/_buttons.scss */
+/* line 155, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li a {
-  background: none;
   color: #333333;
   display: block;
   padding: 10px 10px;
   width: 100%;
 }
-/* line 148, ../sass/components/2_elements/_buttons.scss */
+/* line 163, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li:hover {
   background: #f5f6f7;
 }
-/* line 152, ../sass/components/2_elements/_buttons.scss */
+/* line 167, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa {
   margin-right: 5px;
   font-size: 16px;
   width: 16px;
 }
-/* line 158, ../sass/components/2_elements/_buttons.scss */
-.bionic-action-menu li .menu li .fa-question-circle {
+/* line 173, ../sass/components/2_elements/_buttons.scss */
+.bionic-action-menu li .menu li .fa-question-circle,
+.bionic-action-menu li .menu li .fa-paper-plane {
   color: #F39C0F;
 }
-/* line 161, ../sass/components/2_elements/_buttons.scss */
+/* line 177, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-check {
   color: #5FBA74;
 }
-/* line 164, ../sass/components/2_elements/_buttons.scss */
+/* line 180, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-file-text {
   color: #cfcfcf;
 }
-/* line 167, ../sass/components/2_elements/_buttons.scss */
+/* line 183, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .menu li .fa-ban {
   color: #EE3424;
 }
-/* line 173, ../sass/components/2_elements/_buttons.scss */
+/* line 189, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 179, ../sass/components/2_elements/_buttons.scss */
+/* line 195, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;
 }
-/* line 185, ../sass/components/2_elements/_buttons.scss */
+/* line 201, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu li .fa-caret-down {
   margin-right: 0;
   margin-left: 5px;
@@ -4004,7 +4018,7 @@ input[type="button"].gray-button,
   color: #333;
 }
 
-/* line 193, ../sass/components/2_elements/_buttons.scss */
+/* line 209, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li {
   margin: 6px 6px 3px 0;
   padding: 0;
@@ -4012,31 +4026,31 @@ input[type="button"].gray-button,
   cursor: pointer;
   border-radius: 3px;
 }
-/* line 201, ../sass/components/2_elements/_buttons.scss */
+/* line 217, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li.submenu ul {
   display: block;
   position: absolute;
   float: left;
   z-index: 3;
 }
-/* line 207, ../sass/components/2_elements/_buttons.scss */
+/* line 223, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li.submenu ul li {
   clear: both;
 }
-/* line 212, ../sass/components/2_elements/_buttons.scss */
+/* line 228, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link) {
-  background: none;
   color: #333;
   display: block;
   padding: 6px 10px 8px !important;
   height: auto;
+  /*
+          &:hover {
+              transition: background-color 0.5s ease;
+              background-color: #e9ebed;
+          }
+  */
 }
-/* line 219, ../sass/components/2_elements/_buttons.scss */
-.bionic-action-menu.media-plan li a:not(.link):hover {
-  transition: background-color 0.5s ease;
-  background-color: #e9ebed;
-}
-/* line 224, ../sass/components/2_elements/_buttons.scss */
+/* line 242, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link).on {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 100%;
@@ -4084,23 +4098,82 @@ input[type="button"].gray-button,
   width: 16px;
   display: inline-block;
 }
-/* line 228, ../sass/components/2_elements/_buttons.scss */
+/* line 246, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li a:not(.link) .fa-times-circle {
   margin-left: 10;
   margin-right: 0px;
   top: 1px !important;
 }
-/* line 236, ../sass/components/2_elements/_buttons.scss */
+/* line 255, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li img {
   margin-right: 5px;
   margin-top: -3px;
   vertical-align: middle;
 }
-/* line 242, ../sass/components/2_elements/_buttons.scss */
+/* line 261, ../sass/components/2_elements/_buttons.scss */
 .bionic-action-menu.media-plan li i {
   font-size: 14px;
   color: #69AED4;
   margin-right: 8px;
+}
+
+/* line 268, ../sass/components/2_elements/_buttons.scss */
+.what-you-see {
+  margin-bottom: -5px;
+  margin-top: -1px;
+}
+/* line 273, ../sass/components/2_elements/_buttons.scss */
+.what-you-see a {
+  background: none;
+  border: 1px solid #cfcfcf;
+}
+/* line 277, ../sass/components/2_elements/_buttons.scss */
+.what-you-see a.on {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fab04d), color-stop(100%, #f76b1c));
+  background-image: -moz-linear-gradient(top, #fab04d, #f76b1c);
+  background-image: -webkit-linear-gradient(top, #fab04d, #f76b1c);
+  background-image: linear-gradient(to bottom, #fab04d, #f76b1c);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff !important;
+  padding: 0;
+  margin: 0;
+}
+/* line 61, ../sass/base/_mixins.scss */
+.what-you-see a.on i.fa {
+  color: #fff !important;
+  position: relative;
+}
+/* line 64, ../sass/base/_mixins.scss */
+.what-you-see a.on i.fa.fa-filter {
+  top: -1px;
+  padding-right: 1px;
+}
+/* line 68, ../sass/base/_mixins.scss */
+.what-you-see a.on i.fa.fa-times-circle {
+  top: 5px;
+}
+/* line 74, ../sass/base/_mixins.scss */
+.what-you-see a.on .modal-open {
+  padding: 0 10px 0 13px;
+}
+/* line 77, ../sass/base/_mixins.scss */
+.what-you-see a.on .modal-open span {
+  font-weight: bold;
+}
+/* line 82, ../sass/base/_mixins.scss */
+.what-you-see a.on .remove {
+  padding: 0 5px 0 8px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-left: 1px dotted;
+  top: -1px;
+  position: relative;
+  width: 16px;
+  display: inline-block;
 }
 
 /* line 2, ../sass/components/2_elements/_checkboxes.scss */
@@ -5340,8 +5413,78 @@ a {
   color: #999;
   margin-right: 3px;
 }
+/* line 375, ../sass/components/3_components/_filters.scss */
+.bionic-filter.on {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhYjA0ZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y3NmIxYyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fab04d), color-stop(100%, #f76b1c));
+  background-image: -moz-linear-gradient(top, #fab04d, #f76b1c);
+  background-image: -webkit-linear-gradient(top, #fab04d, #f76b1c);
+  background-image: linear-gradient(to bottom, #fab04d, #f76b1c);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff !important;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 6px 15px 7px 10px;
+  background-position: inherit;
+  font-weight: bold;
+}
+/* line 61, ../sass/base/_mixins.scss */
+.bionic-filter.on i.fa {
+  color: #fff !important;
+  position: relative;
+}
+/* line 64, ../sass/base/_mixins.scss */
+.bionic-filter.on i.fa.fa-filter {
+  top: -1px;
+  padding-right: 1px;
+}
+/* line 68, ../sass/base/_mixins.scss */
+.bionic-filter.on i.fa.fa-times-circle {
+  top: 5px;
+}
+/* line 74, ../sass/base/_mixins.scss */
+.bionic-filter.on .modal-open {
+  padding: 0 10px 0 13px;
+}
+/* line 77, ../sass/base/_mixins.scss */
+.bionic-filter.on .modal-open span {
+  font-weight: bold;
+}
+/* line 82, ../sass/base/_mixins.scss */
+.bionic-filter.on .remove {
+  padding: 0 5px 0 8px;
+  font-size: 16px;
+  vertical-align: middle;
+  border-left: 1px dotted;
+  top: -1px;
+  position: relative;
+  width: 16px;
+  display: inline-block;
+}
+/* line 387, ../sass/components/3_components/_filters.scss */
+.bionic-filter.on:after {
+  content: '\f057 ';
+  font-family: "FontAwesome";
+  opacity: 0.8;
+  padding: 10px 0px 6px 8px;
+  top: 1px;
+  font-size: 15px;
+  right: -6px;
+  position: relative;
+  color: #fff;
+  border-left: 1px dotted #fff;
+}
 
-/* line 376, ../sass/components/3_components/_filters.scss */
+/* line 404, ../sass/components/3_components/_filters.scss */
 .bionic-filter-menu {
   background: #fff;
   display: block;
@@ -5373,219 +5516,298 @@ a {
 .grid.fixedTable tr {
   white-space: nowrap;
 }
-/* line 25, ../sass/components/3_components/_grid.scss */
+/* line 23, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr.undo {
+  display: none;
+}
+/* line 30, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable td i {
   display: block;
   padding: 12px 5px;
 }
-/* line 31, ../sass/components/3_components/_grid.scss */
+/* line 36, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th, .grid.fixedTable td {
   display: inline-block;
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 37, ../sass/components/3_components/_grid.scss */
+/* line 42, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th label, .grid.fixedTable td label {
   margin-left: 5px;
   margin-top: 8px;
 }
-/* line 42, ../sass/components/3_components/_grid.scss */
+/* line 47, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.no-right-border, .grid.fixedTable td.no-right-border {
   border-right: 0 !important;
 }
-/* line 45, ../sass/components/3_components/_grid.scss */
+/* line 50, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.no-left-border, .grid.fixedTable td.no-left-border {
-  border-left: 0;
+  border-left: 0 !important;
 }
-/* line 47, ../sass/components/3_components/_grid.scss */
+/* line 52, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.no-left-border span, .grid.fixedTable td.no-left-border span {
   padding-left: 5px;
 }
-/* line 51, ../sass/components/3_components/_grid.scss */
+/* line 56, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th span, .grid.fixedTable td span {
   display: block;
   padding: 11px;
 }
-/* line 56, ../sass/components/3_components/_grid.scss */
+/* line 60, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th span.overflow, .grid.fixedTable td span.overflow {
+  box-sizing: border-box;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* line 67, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th span.col-100, .grid.fixedTable td span.col-100 {
+  min-width: 100px;
+  width: 100px;
+  max-width: 100px;
+}
+/* line 68, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th span.col-150, .grid.fixedTable td span.col-150 {
+  min-width: 150px;
+  width: 150px;
+  max-width: 150px;
+}
+/* line 69, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th span.col-200, .grid.fixedTable td span.col-200 {
+  min-width: 200px;
+  width: 200px;
+  max-width: 200px;
+}
+/* line 70, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th span.col-250, .grid.fixedTable td span.col-250 {
+  min-width: 250px;
+  width: 250px;
+  max-width: 250px;
+}
+/* line 74, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-20, .grid.fixedTable td.col-20 {
   min-width: 20px;
   width: 20px;
   max-width: 20px;
 }
-/* line 57, ../sass/components/3_components/_grid.scss */
+/* line 75, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-25, .grid.fixedTable td.col-25 {
   min-width: 25px;
   width: 25px;
   max-width: 25px;
 }
-/* line 58, ../sass/components/3_components/_grid.scss */
+/* line 76, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-30, .grid.fixedTable td.col-30 {
   min-width: 30px;
   width: 30px;
   max-width: 30px;
 }
-/* line 59, ../sass/components/3_components/_grid.scss */
+/* line 77, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-45, .grid.fixedTable td.col-45 {
   min-width: 45px;
   width: 45px;
   max-width: 45px;
 }
-/* line 60, ../sass/components/3_components/_grid.scss */
+/* line 78, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-50, .grid.fixedTable td.col-50 {
   min-width: 50px;
   width: 50px;
   max-width: 50px;
 }
-/* line 61, ../sass/components/3_components/_grid.scss */
+/* line 79, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable th.col-75, .grid.fixedTable td.col-75 {
+  min-width: 75px;
+  width: 75px;
+  max-width: 75px;
+}
+/* line 80, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-100, .grid.fixedTable td.col-100 {
   min-width: 100px;
   width: 100px;
   max-width: 100px;
 }
-/* line 62, ../sass/components/3_components/_grid.scss */
+/* line 81, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-150, .grid.fixedTable td.col-150 {
   min-width: 150px;
   width: 150px;
   max-width: 150px;
 }
-/* line 63, ../sass/components/3_components/_grid.scss */
+/* line 82, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-200, .grid.fixedTable td.col-200 {
   min-width: 200px;
   width: 200px;
   max-width: 200px;
 }
-/* line 64, ../sass/components/3_components/_grid.scss */
+/* line 83, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-250, .grid.fixedTable td.col-250 {
   min-width: 250px;
   width: 250px;
   max-width: 250px;
 }
-/* line 65, ../sass/components/3_components/_grid.scss */
+/* line 84, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-275, .grid.fixedTable td.col-275 {
   min-width: 275px;
   width: 275px;
   max-width: 275px;
 }
-/* line 66, ../sass/components/3_components/_grid.scss */
+/* line 85, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-300, .grid.fixedTable td.col-300 {
   min-width: 300px;
   width: 300px;
   max-width: 300px;
 }
-/* line 67, ../sass/components/3_components/_grid.scss */
+/* line 86, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-325, .grid.fixedTable td.col-325 {
   min-width: 325px;
   width: 325px;
   max-width: 325px;
 }
-/* line 68, ../sass/components/3_components/_grid.scss */
+/* line 87, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-350, .grid.fixedTable td.col-350 {
   min-width: 350px;
   width: 350px;
   max-width: 350px;
 }
-/* line 69, ../sass/components/3_components/_grid.scss */
+/* line 88, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.col-400, .grid.fixedTable td.col-400 {
   min-width: 400px;
   width: 400px;
   max-width: 400px;
 }
-/* line 71, ../sass/components/3_components/_grid.scss */
+/* line 90, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th.combine, .grid.fixedTable td.combine {
   border-right: 1px solid #f5f6f7;
 }
-/* line 76, ../sass/components/3_components/_grid.scss */
+/* line 95, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-header {
   width: calc(100% - 321px);
   margin-left: 320px;
 }
-/* line 80, ../sass/components/3_components/_grid.scss */
+/* line 99, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-header th:last-child {
   border-right: 1px solid #cfcfcf;
 }
-/* line 88, ../sass/components/3_components/_grid.scss */
+/* line 107, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-body {
   width: calc(100% - 321px);
   left: -1px;
 }
-/* line 92, ../sass/components/3_components/_grid.scss */
+/* line 111, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-body td:last-child {
   border-right: 1px solid #cfcfcf;
 }
-/* line 96, ../sass/components/3_components/_grid.scss */
+/* line 115, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-body tr:last-child td:last-child {
-  border-right: 1px solid transparent;
+  border-right: 1px solid #cfcfcf;
 }
-/* line 101, ../sass/components/3_components/_grid.scss */
+/* line 123, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .fixedtable-sidebar {
   margin-left: 0;
   width: 321px;
 }
-/* line 106, ../sass/components/3_components/_grid.scss */
+/* line 128, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridFirstColumnHeader {
   position: absolute;
   width: 321px;
 }
-/* line 110, ../sass/components/3_components/_grid.scss */
+/* line 132, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridFirstColumnHeader th:nth-child(2) {
   border-right: 1px solid #cfcfcf;
 }
-/* line 118, ../sass/components/3_components/_grid.scss */
+/* line 140, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns td:last-child {
   border-right: 1px solid #cfcfcf !important;
 }
-/* line 127, ../sass/components/3_components/_grid.scss */
+/* line 149, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget .gridFirstColumnHeader th:last-child {
   border-right: 1px solid #cfcfcf;
 }
-/* line 133, ../sass/components/3_components/_grid.scss */
+/* line 155, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget #gridFirstColumns td:last-child {
   border-right: 1px solid #cfcfcf !important;
 }
-/* line 141, ../sass/components/3_components/_grid.scss */
+/* line 165, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget #gridFirstColumns tr:not(.locked):hover td:last-child,
-.grid.fixedTable.budget #gridFirstColumns tr.hover:not(.locked) td:last-child {
+.grid.fixedTable.budget #gridFirstColumns tr:not(.deleted):hover td:last-child,
+.grid.fixedTable.budget #gridFirstColumns tr.hover:not(.locked) td:last-child,
+.grid.fixedTable.budget #gridFirstColumns tr.hover:not(.deleted) td:last-child {
   border-right: 1px solid #69AED4 !important;
 }
-/* line 147, ../sass/components/3_components/_grid.scss */
+/* line 171, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget .fixedtable-header {
   width: calc(100% - 445px);
   margin-left: 445px;
 }
-/* line 152, ../sass/components/3_components/_grid.scss */
+/* line 176, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget .fixedtable-body {
   width: calc(100% - 446px);
   left: -1px;
 }
-/* line 157, ../sass/components/3_components/_grid.scss */
+/* line 181, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget .fixedtable-sidebar, .grid.fixedTable.budget .fixedtable-body {
   height: calc(100vh - 280px);
 }
-/* line 160, ../sass/components/3_components/_grid.scss */
+/* line 184, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.budget .gridFirstColumnHeader, .grid.fixedTable.budget .fixedtable-sidebar {
   width: 446px;
 }
-/* line 166, ../sass/components/3_components/_grid.scss */
+/* line 190, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.campaign .fixedtable-sidebar, .grid.fixedTable.campaign .fixedtable-body {
   height: calc(100vh - 321px);
 }
-/* line 172, ../sass/components/3_components/_grid.scss */
+/* line 196, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.costs .fixedtable-sidebar, .grid.fixedTable.costs .fixedtable-body {
   height: calc(100vh - 301px);
 }
-/* line 178, ../sass/components/3_components/_grid.scss */
+/* line 204, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history .gridFirstColumnHeader th:last-child {
+  border-right: 1px solid #cfcfcf;
+}
+/* line 209, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history th {
+  background: #f5f6f7;
+  border-bottom: 0;
+}
+/* line 215, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history #gridFirstColumns td:last-child {
+  border-right: 1px solid #cfcfcf !important;
+}
+/* line 223, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history #gridFirstColumns tr:not(.locked):hover td:last-child,
+.grid.fixedTable.history #gridFirstColumns tr.hover:not(.locked) td:last-child {
+  border-right: 1px solid #69AED4 !important;
+}
+/* line 229, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history .fixedtable-header {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+}
+/* line 234, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history .fixedtable-body {
+  width: calc(100% - 226px);
+  left: -1px;
+}
+/* line 239, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history .fixedtable-sidebar, .grid.fixedTable.history .fixedtable-body {
+  height: 459px;
+}
+/* line 242, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable.history .gridFirstColumnHeader, .grid.fixedTable.history .fixedtable-sidebar {
+  width: 226px;
+}
+/* line 248, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.performance .currency-symbol {
   margin-left: 50px;
 }
-/* line 184, ../sass/components/3_components/_grid.scss */
+/* line 254, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.performance-advertisers .fixedtable-sidebar, .grid.fixedTable.performance-advertisers .fixedtable-body {
   height: calc(100vh - 265px);
 }
-/* line 190, ../sass/components/3_components/_grid.scss */
+/* line 260, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable.performance-campaign .fixedtable-sidebar, .grid.fixedTable.performance-campaign .fixedtable-body {
   height: calc(100vh - 279px);
 }
-/* line 200, ../sass/components/3_components/_grid.scss */
+/* line 270, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .gridColumnHeader th,
 .grid.fixedTable tr th {
   height: 40px;
@@ -5596,49 +5818,49 @@ a {
   text-align: left;
   border-collapse: collapse;
 }
-/* line 214, ../sass/components/3_components/_grid.scss */
+/* line 284, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable #gridFirstColumns {
   counter-reset: rowNumber;
 }
-/* line 218, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr:not(.total) {
+/* line 288, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total):not(.unbucketed) {
   counter-increment: rowNumber;
 }
-/* line 221, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child {
+/* line 292, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total):not(.unbucketed) td:first-child {
   background: #f5f6f7;
   padding: 0;
   padding-top: 11px;
   text-align: center;
 }
-/* line 228, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr:not(.total) td:first-child::before {
+/* line 299, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total):not(.unbucketed) td:first-child::before {
   content: counter(rowNumber);
 }
-/* line 232, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable #gridFirstColumns tr:not(.total) td:nth-child(2) {
+/* line 303, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable #gridFirstColumns tr:not(.total):not(.unbucketed) td:nth-child(2) {
   border-right: 1px solid #cfcfcf;
 }
-/* line 240, ../sass/components/3_components/_grid.scss */
+/* line 311, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable th {
   white-space: nowrap;
   box-sizing: border-box;
 }
-/* line 245, ../sass/components/3_components/_grid.scss */
+/* line 316, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .inactive {
   background-image: linear-gradient(-45deg, #dddddd 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, #dddddd 50%, #dddddd 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0)) !important;
   background-size: 4px 4px !important;
   height: 100%;
 }
-/* line 254, ../sass/components/3_components/_grid.scss */
+/* line 325, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr:not(.total).hover td {
   background: #E6F2F8 !important;
 }
-/* line 258, ../sass/components/3_components/_grid.scss */
+/* line 329, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr:not(.total).hover .inactive input {
   background: #fff !important;
 }
-/* line 264, ../sass/components/3_components/_grid.scss */
+/* line 335, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr td {
   background: #fff;
   height: 55px;
@@ -5646,54 +5868,61 @@ a {
   border-bottom: 1px solid #eee;
   border-right: 1px solid #ddd;
 }
-/* line 272, ../sass/components/3_components/_grid.scss */
-.grid.fixedTable tr.total td {
+/* line 343, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr.total td, .grid.fixedTable tr.unbucketed td {
   background: #f5f6f7;
   border-top: 1px solid #cfcfcf;
   font-weight: bold;
-  border-left: 1px solid transparent;
 }
-/* line 279, ../sass/components/3_components/_grid.scss */
+/* line 350, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr.unbucketed .col-30 {
+  border-left: 0;
+}
+/* line 353, ../sass/components/3_components/_grid.scss */
+.grid.fixedTable tr.unbucketed td:nth-child(3) span {
+  margin-left: -30px;
+}
+/* line 357, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.total:last-child td {
   border-bottom: 1px solid #cfcfcf;
 }
-/* line 283, ../sass/components/3_components/_grid.scss */
+/* line 361, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive {
   background: #fff;
   background-image: none !important;
 }
-/* line 288, ../sass/components/3_components/_grid.scss */
+/* line 366, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.inactive.admin td {
   background: #fff;
   opacity: 0.5;
 }
-/* line 293, ../sass/components/3_components/_grid.scss */
+/* line 371, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table {
   border-collapse: collapse;
 }
-/* line 296, ../sass/components/3_components/_grid.scss */
+/* line 374, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th, .grid.fixedTable table td, .grid.fixedTable table tr {
   box-sizing: border-box;
 }
-/* line 299, ../sass/components/3_components/_grid.scss */
+/* line 377, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th.readonly, .grid.fixedTable table th.link, .grid.fixedTable table td.readonly, .grid.fixedTable table td.link, .grid.fixedTable table tr.readonly, .grid.fixedTable table tr.link {
   padding: 5px;
   box-sizing: border-box;
   display: inline-block;
 }
-/* line 305, ../sass/components/3_components/_grid.scss */
+/* line 383, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number, .grid.fixedTable table td .col-line-number, .grid.fixedTable table tr .col-line-number {
   color: #ccc;
   font-size: 2em;
   padding: 0px;
   width: 100px;
 }
-/* line 311, ../sass/components/3_components/_grid.scss */
+/* line 389, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-line-number span, .grid.fixedTable table td .col-line-number span, .grid.fixedTable table tr .col-line-number span {
   display: block;
   padding: 10px;
 }
-/* line 318, ../sass/components/3_components/_grid.scss */
+/* line 396, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-checkbox, .grid.fixedTable table td .col-checkbox, .grid.fixedTable table tr .col-checkbox {
   max-width: 22px;
   min-width: 22px;
@@ -5702,19 +5931,19 @@ a {
   background-size: 4px 4px;
   height: 100%;
 }
-/* line 327, ../sass/components/3_components/_grid.scss */
+/* line 405, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable table th .col-placement-name, .grid.fixedTable table td .col-placement-name, .grid.fixedTable table tr .col-placement-name {
   color: #69AED4;
   width: 177px !important;
   padding: 5px;
 }
-/* line 337, ../sass/components/3_components/_grid.scss */
+/* line 415, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .currency-symbol {
   position: absolute;
   margin-top: 7px;
   margin-left: 5px;
 }
-/* line 343, ../sass/components/3_components/_grid.scss */
+/* line 421, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text] {
   padding: 5px;
   width: calc(100% - 12px);
@@ -5728,16 +5957,16 @@ a {
   box-sizing: content-box;
   text-overflow: ellipsis;
 }
-/* line 356, ../sass/components/3_components/_grid.scss */
+/* line 434, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].half {
   width: calc(50% - 12px);
   float: left;
 }
-/* line 361, ../sass/components/3_components/_grid.scss */
+/* line 439, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text]:focus {
   border-width: 1px;
 }
-/* line 365, ../sass/components/3_components/_grid.scss */
+/* line 443, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].secondary {
   color: #9b9b9b;
   font-size: 11px;
@@ -5745,19 +5974,19 @@ a {
   padding-bottom: 8px;
   margin-top: -1px;
 }
-/* line 373, ../sass/components/3_components/_grid.scss */
+/* line 451, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable input[type=text].custom {
   background: #fff url(../../css/images/triangle.svg) no-repeat right top;
   background-position-y: -5px;
 }
-/* line 380, ../sass/components/3_components/_grid.scss */
+/* line 458, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .vendor {
   font-size: 11px;
   color: #9b9b9b;
   display: block;
   padding: 3px 5px 0px;
 }
-/* line 387, ../sass/components/3_components/_grid.scss */
+/* line 465, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions {
   color: #999;
   font-size: 11px;
@@ -5767,24 +5996,24 @@ a {
   position: absolute;
   white-space: nowrap;
 }
-/* line 396, ../sass/components/3_components/_grid.scss */
+/* line 474, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable .kpi-actions a {
   font-weight: bold;
   margin-right: 5px;
 }
-/* line 405, ../sass/components/3_components/_grid.scss */
+/* line 483, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover input[type=text] {
   border-color: #6BADD1;
 }
-/* line 409, ../sass/components/3_components/_grid.scss */
+/* line 487, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover .col-kpi-cost {
   border-right: 1px solid #E6F2F8 !important;
 }
-/* line 414, ../sass/components/3_components/_grid.scss */
+/* line 492, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable tr.hover td[class*="col-kpi"]:hover .kpi-actions {
   display: block;
 }
-/* line 419, ../sass/components/3_components/_grid.scss */
+/* line 497, ../sass/components/3_components/_grid.scss */
 .grid.fixedTable:focus {
   border-width: 1px;
 }
@@ -5831,47 +6060,50 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 
 /* line 1, ../sass/components/3_components/_history.scss */
 .history {
-  width: 100%;
-  border: 1px solid #ddd;
-}
-/* line 6, ../sass/components/3_components/_history.scss */
-.history th, .history td {
-  padding: 10px;
-  text-align: left;
-}
-/* line 12, ../sass/components/3_components/_history.scss */
-.history tr {
-  border-bottom: 1px solid #ddd;
-}
-/* line 16, ../sass/components/3_components/_history.scss */
-.history th {
-  background: #f5f6f7;
-}
-/* line 20, ../sass/components/3_components/_history.scss */
-.history td {
-  background: #fff;
-  border-color: #fff;
-}
-/* line 25, ../sass/components/3_components/_history.scss */
-.history .timestamp {
-  width: 70px;
-}
-/* line 28, ../sass/components/3_components/_history.scss */
-.history .timestamp .time {
-  display: block;
-  clear: both;
-  font-size: 11px;
-}
-/* line 35, ../sass/components/3_components/_history.scss */
-.history .property {
-  width: 100px;
+  /*
+      width: 100%;
+      border: 1px solid #ddd;
+      
+      th,td {
+          padding: 10px;
+  //         border: 1px solid #ddd;
+          text-align: left;
+      }
+      
+      tr {
+          border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+          background: #f5f6f7;
+      }
+      
+      td {
+          background: #fff;
+          border-color: #fff;
+      }
+      
+      .timestamp {
+          width: 70px;   
+          
+          .time {
+              display: block;
+              clear: both;
+              font-size: 11px;
+          } 
+      } 
+      
+      .property {
+          width: 100px;
+      }
+  */
 }
 
 /* line 1, ../sass/components/3_components/_modals.scss */
 .modal {
   background: #fff;
   min-width: 300px;
-  max-width: 950px;
+  max-width: 1300px;
   padding: 0;
   width: auto;
 }
@@ -5893,7 +6125,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 }
 /* line 26, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-header {
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #ddd;
   padding: 15px 20px;
   cursor: move;
 }
@@ -5963,7 +6195,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 }
 /* line 97, ../sass/components/3_components/_modals.scss */
 .modal .bionic-modal-footer {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid #ddd;
   padding: 15px 20px;
 }
 /* line 101, ../sass/components/3_components/_modals.scss */
@@ -6048,8 +6280,39 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .modal .budget-modal .monthlyBreakdown div input {
   width: 210px;
 }
+/* line 193, ../sass/components/3_components/_modals.scss */
+.modal .history {
+  max-width: 1300px;
+  border: 0;
+}
+/* line 199, ../sass/components/3_components/_modals.scss */
+.modal .history .bionic-modal-header {
+  padding-bottom: 0;
+  background: #f5f6f7;
+}
+/* line 204, ../sass/components/3_components/_modals.scss */
+.modal .history .filter-container, .modal .history a {
+  width: auto;
+  float: left;
+  margin-right: 8px;
+}
+/* line 209, ../sass/components/3_components/_modals.scss */
+.modal .history li {
+  float: left;
+  margin: 8px 0;
+}
+/* line 214, ../sass/components/3_components/_modals.scss */
+.modal .history .button-divider {
+  border-left: 1px solid #cfcfcf;
+  height: 28px;
+  margin: 10px 10px 0 2px;
+}
+/* line 220, ../sass/components/3_components/_modals.scss */
+.modal .history table tr:last-child {
+  border-bottom: 1px solid #ddd;
+}
 
-/* line 195, ../sass/components/3_components/_modals.scss */
+/* line 228, ../sass/components/3_components/_modals.scss */
 .blocker {
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -6133,6 +6396,21 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-weight: bold;
 }
 
+/* line 85, ../sass/components/3_components/_navigation.scss */
+.previous-next {
+  float: right;
+  text-align: right;
+  color: #69AED4;
+}
+/* line 90, ../sass/components/3_components/_navigation.scss */
+.previous-next li {
+  float: left;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  cursor: pointer;
+}
+
 /* line 1, ../sass/components/3_components/_progress_bar.scss */
 .progress-bar {
   background: #cfcfcf;
@@ -6191,7 +6469,36 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
 .grid.fixedTable.budget .monthly.inline {
   display: inline-block;
 }
-/* line 27, ../sass/components/4_layouts/_budget.scss */
+/* line 22, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .deleted {
+  display: none;
+}
+/* line 29, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget #gridBody .deleted span {
+  display: none;
+}
+/* line 34, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .deleted a {
+  color: #333;
+}
+/* line 39, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .deleted strong {
+  font-weight: normal;
+}
+/* line 43, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .deleted .del {
+  color: #999;
+  display: inline;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+/* line 51, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .deleted .budget {
+  color: #999;
+  text-decoration: line-through;
+}
+/* line 61, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget tr:not(.locked):hover td.authorization, .grid.fixedTable.budget tr:not(.locked):hover td.budget, .grid.fixedTable.budget tr:not(.locked):hover td.po-number:not(.total), .grid.fixedTable.budget tr:not(.locked):hover td.monthly:not(.total):not(.variance),
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.budget,
@@ -6208,14 +6515,14 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   background: #fff !important;
   border: 1px solid #69AED4 !important;
 }
-/* line 34, ../sass/components/4_layouts/_budget.scss */
+/* line 68, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget tr:not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.authorization,
 .grid.fixedTable.budget tr:not(.locked).hover td.authorization {
   cursor: pointer;
 }
-/* line 38, ../sass/components/4_layouts/_budget.scss */
+/* line 72, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget tr:not(.locked):hover td.authorization span:after,
 .grid.fixedTable.budget tr:not(.total):not(.locked):hover td.authorization span:after,
 .grid.fixedTable.budget tr:not(.unbucketed):not(.locked):hover td.authorization span:after,
@@ -6228,11 +6535,11 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   position: relative;
   color: #9B9B9B;
 }
-/* line 51, ../sass/components/4_layouts/_budget.scss */
+/* line 85, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .menu.media-plan-input-menu {
   margin-top: 0px;
 }
-/* line 55, ../sass/components/4_layouts/_budget.scss */
+/* line 89, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget th:nth-child(4) i,
 .grid.fixedTable.budget td:nth-child(4) i {
   display: block;
@@ -6241,7 +6548,7 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   top: -2px;
   position: relative;
 }
-/* line 64, ../sass/components/4_layouts/_budget.scss */
+/* line 98, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget td i {
   display: inline;
   line-height: 17px;
@@ -6249,27 +6556,32 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   font-size: 18px;
   vertical-align: text-top;
 }
-/* line 72, ../sass/components/4_layouts/_budget.scss */
+/* line 106, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-question-circle {
   color: #F39C0F;
 }
-/* line 75, ../sass/components/4_layouts/_budget.scss */
+/* line 109, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-paper-plane {
   color: #F39C0F;
 }
-/* line 78, ../sass/components/4_layouts/_budget.scss */
+/* line 112, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-check {
   color: #5FBA74;
+  margin-right: -2px;
 }
-/* line 81, ../sass/components/4_layouts/_budget.scss */
+/* line 116, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-file-text {
   color: #cfcfcf;
 }
-/* line 84, ../sass/components/4_layouts/_budget.scss */
+/* line 119, ../sass/components/4_layouts/_budget.scss */
+.grid.fixedTable.budget .fa-pencil {
+  color: #cfcfcf;
+}
+/* line 122, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .fa-ban {
   color: #EE3424;
 }
-/* line 90, ../sass/components/4_layouts/_budget.scss */
+/* line 128, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .bar img {
   float: left;
   height: 32px;
@@ -6277,14 +6589,14 @@ table#schedule.module.heatmap tr:not(:last-child) .dark {
   margin-top: 3px;
   max-width: 144px;
 }
-/* line 99, ../sass/components/4_layouts/_budget.scss */
+/* line 137, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .bar span {
   box-sizing: border-box;
   position: absolute;
   width: 150px;
   text-align: right;
 }
-/* line 108, ../sass/components/4_layouts/_budget.scss */
+/* line 146, ../sass/components/4_layouts/_budget.scss */
 .grid.fixedTable.budget .cell-with-bar {
   background: url("../images/bar-gray.png") no-repeat;
 }

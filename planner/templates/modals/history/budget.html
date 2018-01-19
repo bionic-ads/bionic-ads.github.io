@@ -1,0 +1,209 @@
+<div class="history">
+    <div class="bionic-modal-header" style="display: block; float:left; width: 100%; box-sizing: border-box; border-bottom: 0;">
+        <h1><i class="fa fa-history"></i> History</h1>
+        
+        <div class="filter-container custom-form-controls">
+            <div class="bionic-filter bionic-filter-off"><i class="fa fa-filter"></i> Any Time </div>
+            <div class="menu filterTypeMenu">
+                <ul>
+                    <li class="divider first-option"><input id="alladvertisers" type="checkbox" checked><label for="alladvertisers">All Campaigns</label></li>
+                    <li class="first-option"><input id="following" type="checkbox" checked><label for="following">Following</label></li>
+                    <li><input id="notfollowing" type="checkbox" checked><label for="notfollowing">Not Following</label></li>
+                </ul>
+                <div class="footer"><a class="blue-button">Apply</a></div>
+            </div>
+        </div>     
+        
+        <div class="filter-container custom-form-controls">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Users </div>
+        </div>     
+        
+        <div class="filter-container custom-form-controls hidden" id="filtered-items">
+            <div class="bionic-filter bionic-filter-off on" style="margin-bottom: 0;"><i class="fa fa-filter"></i> Bucket: Digital </div>
+        </div>     
+        <div class="filter-container custom-form-controls all-items" id="all-items">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Items </div>
+        </div>     
+        <div class="filter-container custom-form-controls">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Actions </div>
+        </div>     
+
+        <div class="filter-container custom-form-controls">
+            <div class="bionic-filter bionic-filter-off" style="margin-bottom: 0;"><i class="fa fa-filter"></i> All Properties </div>
+        </div>     
+
+        <ul class="bionic-action-menu block custom-form-controls">
+            <li class="button-divider"></li>
+            <li><a id="history-undo" class="disabled"><i class="fa fa-undo"></i>Undo</a></li>
+            <li class="button-divider"></li>
+            <li id="action-lock"  class="row-select"><a><i class="fa fa-download"></i>Download</a></li>
+        </ul>   
+             
+    </div>
+</div>
+    
+<div class="bionic-modal-body budget-modal custom-form-controls" style="height: 500px; width: 1152px; padding: 0">
+ 
+    <div class="grid fixedTable block history custom-form-controls" id="historygrid">
+      
+          <table class="gridFirstColumnHeader">
+              <thead>
+                  <tr><th class="col-45"><span class="header center">#</span></th><th class="col-30 no-right-border"><input id="history-selectAll" type="checkbox"><label for="history-selectAll"></label></th><th class="col-150" style="border-left: 0; "><span class="header" style="padding-left: 5px">Timestamp</span></th></tr>
+              </thead>
+          </table>
+        
+          <header class="fixedTable-header block">
+            <table>
+                <thead>
+                <tr><th class="col-100"><span>Time Ago</span></th><th class="col-150"><span>User</span></th><th class="col-200"><span>Item</span></th><th class="col-75"><span>Action</span></th><th class="col-100"><span>Property</span></th><th class="col-150"><span>Old Value</span></th><th class="col-150"><span>New Value</span></th></tr></thead>
+            </table>
+          </header>
+          
+          <aside class="fixedTable-sidebar block">
+            <table class="table table-bordered grid" id="gridFirstColumns">
+                <tbody>
+                </tbody>
+            </table>
+          </aside>
+          
+          <div class="fixedTable-body block">
+            <table class="table table-bordered grid" id="gridBody">
+                <tbody>
+                </tbody>
+            </table>
+          </div>
+          
+    </div>
+
+
+
+</div>
+
+
+<div class="bionic-modal-footer" style="margin-top: 0;">
+    <a class="blue-button" rel="modal:close" >Done</a>
+</div>
+</div>
+
+<script type="text/javascript">
+
+    // ------------------------------------------------
+    // Set Up the Fixed First Column Table
+    
+    (function() {
+      var historygrid, historyfixedTable;
+    
+      historyfixedTable = function(el) {
+        var $hbody, $hheader, $hsidebar;
+        $hbody = $(el).find('#historygrid .fixedTable-body');
+        $hsidebar = $(el).find('#historygrid .fixedTable-sidebar table');
+        $hheader = $(el).find('#historygrid .fixedTable-header table');
+        
+        return $($hbody).scroll(function() {
+          console.log($($hbody).scrollLeft());
+          console.log("adsf");
+          $($hsidebar).css('margin-top', -$($hbody).scrollTop());
+          return $($hheader).css('margin-left', -$($hbody).scrollLeft());
+        });
+      };
+
+      
+
+      historygrid = new historyfixedTable($('#historygrid'));
+    
+    }).call(this);
+
+    // ------------------------------------------------
+    // Make the rows highlight with Fixed First Column   
+    
+    $(document).on({
+    mouseenter: function () {
+    var trIndex = $(this).index();
+    
+        $(".history table.grid").each(function(index) {
+            $(this).find("tr:eq("+trIndex+")").addClass("hover")
+        });
+    },
+    mouseleave: function () {
+    var trIndex = $(this).index();
+    $(".history table.grid").each(function(index) {
+        $(this).find("tr:eq("+trIndex+")").removeClass("hover")
+    });
+    }
+    }, "#historygrid table tr");
+    
+
+</script>
+
+<script type="text/javascript">
+    
+    
+      var spreadsheetTab = "BudgetHistory";
+      
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/13CfcOztU9RU-J-UHyXwt6NXsXbYWyeU3fMzLQa5uBLk/pubhtml';
+      
+      $(document).ready( function() {
+        
+        Tabletop.init( { key: public_spreadsheet_url,
+                         callback: showInfo,
+                         wanted: [ spreadsheetTab ],
+                         debug: true } )
+      
+      })
+        
+      function showInfo(data, tabletop) {
+
+        $.each( tabletop.sheets(spreadsheetTab).all(), function(i, item) {
+          
+          
+          var rowNumber,
+              budgetHistoryFirstColumns,
+              budgetHistoryBody;
+          
+          rowNumber = i + 1;
+          
+          budgetHistoryFirstColumns = $('<tr class="'+item.filter+'"><td class="col-45 line-number"></td>');
+          budgetHistoryFirstColumns.append('<td class="col-30 no-right-border"><input id="history-check'+rowNumber+'" type="checkbox"><label class="checkbox-undo" for="history-check'+rowNumber+'"></label></td>');
+          budgetHistoryFirstColumns.append('<td class="col-150 no-left-border"><span>'+item.Timestamp+'</span></td>');
+          budgetHistoryFirstColumns.append('</tr>');
+          budgetHistoryFirstColumns.appendTo(".history #gridFirstColumns tbody");
+
+          budgetHistorybody = $('<tr class="'+item.filter+'"><td class="col-100"><span>'+item.TimeAgo+'</span></td>');
+          budgetHistorybody.append('<td class="col-150"><span class="overflow col-150"><a>'+item.User+'</a></span></td>');
+          budgetHistorybody.append('<td class="col-200"><span class="overflow col-200"><a class="history-item">'+item.Item+'</a></span></td>');
+          budgetHistorybody.append('<td class="col-75"><span>'+item.Action+'</span></td>');
+          budgetHistorybody.append('<td class="col-100"><span>'+item.Property+'</span></td>');
+          budgetHistorybody.append('<td class="col-150"><span class="overflow col-150">'+item.OldValue+'</span></td>');
+          budgetHistorybody.append('<td class="col-150"><span class="overflow col-150">'+item.NewValue+'</span></td>');
+          budgetHistorybody.append('</tr>');
+          
+          budgetHistorybody.appendTo(".history #gridBody tbody");
+
+        })
+
+      }
+      
+    $(document).on('click', '.checkbox-undo', function() {
+        $("#history-undo").removeClass("disabled");
+    });
+
+    $(document).on('click', '#history-undo', function() {
+        $(".undo").removeClass("undo");
+    });
+
+    $(document).on('click', '.history-item', function() {
+        $("#all-items").addClass("hidden");
+        $("tr.filtered").addClass("hidden");
+        $("#filtered-items").removeClass("hidden");
+    });
+    
+    $(document).on('click', '#filtered-items', function() {
+        $("#all-items").removeClass("hidden");
+        $("tr.filtered").removeClass("hidden");
+        $("#filtered-items").addClass("hidden");
+    });
+    
+    
+    
+</script>
+

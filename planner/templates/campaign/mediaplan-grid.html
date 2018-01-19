@@ -1,5 +1,6 @@
 <style>
     
+/*
         .location {
             display: none;
         }
@@ -26,11 +27,40 @@
         .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
             height: calc(100vh - 263px);
         }
+*/
+
+        .mediaplan.fixedTable .fixedtable-sidebar, .mediaplan.fixedTable .fixedtable-body {
+            height: calc(100vh - 316px);
+        }
+
+.col-media-authorization {
+    display: none !important;
+}
+
+.fixedTable-body::-webkit-scrollbar {
+    height: 30px;
+/*     width: 50px; */
+    background-color: #eee;
+    border: 0px solid #cfcfcf;
+    padding: 2px;
+}
+
+.fixedTable-body::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 3px;
+    display: block;
+    -webkit-border-radius: 2px;
+    box-sizing: border-box;
+    margin: 2px;
+    height: 20px;
+    border: 3px solid #eee;
+}
+
 </style>
 
 <div class="bionic-campaign-header bionic-header block fullwidth">
                 
-    <h1 id="campaignname">...</h1>
+    <h1 id="campaignname" style="font-size: 24px">...</h1>
     <span class="bionic-campaign-summary block fullwidth"><span id="campaignStartDate">...</span> - <span id="campaignEndDate">...</span> 
         <span class="divider">|</span> $ <span id="campaignBudget">...</span> budget 
 <!--         <span class="authorize">Not Yet Approved</span> -->
@@ -49,7 +79,7 @@
                 var notification = '';
                 if (window.location.hash.substr(1,18) == campaignNavItem.page.substr(1,18)){ var currentnav = 'class="current"'; } 
                 if ( campaignNavItem.name == "Media Plan") {
-                    campaignNavItem.notification = '<i class="fa fa-paper-plane"></i>';
+<!--                     campaignNavItem.notification = '<i class="fa fa-paper-plane"></i>'; -->
                 }
             %>
     			<li>
@@ -62,8 +92,19 @@
 	</script>
 	
 </div>
-<ul class="bionic-action-menu media-plan block">
-    <li><a class="hasDropdown bionic-mode-menu"><i class="fa fa-table"></i><span>Mode</span><i class="fa fa-times-circle" style="display: none;"></i></a>
+
+
+<div class="nxm-menu-bar nxm-menu-filters" style="margin-right: 0px; margin-top: 5px;">
+    <div class="filter-section filter-search-master">
+    <input type="text" placeholder="Search" value="" required="" id="advertisers-filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="width: 180px;">
+    <span id="clear-search" class="clear-search-filter">
+        <i class="fa fa-times-circle"></i>
+    </span>
+    </div>
+</div>
+
+<ul class="bionic-action-menu media-plan what-you-see block" style="z-index: 4; width: 800px; padding-left: 0px;">
+    <li><a class="hasDropdown bionic-mode-menu"><i class="fa fa-table"></i><span>View</span><i style="color: #9b9b9b; margin-right: 0px;" class="fa fa-caret-down"></i> <i class="fa fa-times-circle" style="display: none;"></i></a>
             <div class="menu view-menu" style="width: 200px">
                 <div class="header filter-section filter-search-master">
                     <input type="text" placeholder="Search" value="" required="" id="filter-search-master" class="filter-search-master nxm-bg-search" autofocus="" style="">
@@ -77,21 +118,31 @@
                     <li><a>Performance & KPIs</a></li>
                     <li><a>Task Management</a></li>
                 </ul>
+<!--                 <div class="footer"><a><i class="fa fa-expand"></i>Enter Fullscreen...</a></div> -->
+<!--
                 <div class="footer"><a>Save Current View...</a></div>
                 <div class="footer"><a>Delete Current View</a></div>
+-->
             </div>
     </li>
     <li><a class="bionic-columns-menu open-modal" rel="modal:open" href="templates/modals/columns/columns.html"><i class="fa fa-bars fa-rotate-90"></i>Columns<i class="fa fa-times-circle" style="display: none;"></i></a></li>
-    <li><a class="bionic-filters-menu open-modal" rel="modal:open" href="templates/modals/filter/filter-choose-fields.html"><i class="fa fa-filter"></i>Filter<i class="fa fa-times-circle" style="display: none;"></i></a></li>
+    <li><a class="bionic-filters-menu open-modal" rel="modal:open" href="templates/modals/filter/filter-choose-fields.html"><i class="fa fa-filter"></i>Filters<i class="fa fa-times-circle" style="display: none;"></i></a></li>
+</ul>
+
+<ul class="bionic-action-menu media-plan block">
+    <li class="row-select"><a class=""><i class="fa fa-plus"></i>Add Placement</a></li>
+    <li class="row-select"><a><i class="fa fa-gift"></i>Add Package</a></li>
+    <li class="row-select"><a><i class="fa fa-road"></i>Add Roadblock</a></li>
+    <li class="button-divider"></li>
     <li class="row-select disabled"><a class="open-modal" rel="modal:open" href="templates/modals/bulk-edit/bulk-edit-choose-fields.html"><i class="fa fa-pencil"></i>Edit</a></li>
     <li class="row-select disabled"><a class="open-modal" href="templates/modals/move/move1.html" rel="modal:open"><i class="fa fa-external-link"></i>Move</a></li>
     <li class="row-select disabled"><a><img src="../planner/images/bucket.svg"> Color</a></li>
     <li class="row-select disabled"><a><i class="fa fa-clone"></i>Clone</a></li>
     <li class="row-select">
-        <a class="hasDropdown disabled"><i class="fa fa-check"></i>Authorization <i class="fa fa-caret-down"></i></a>
+        <a class="has-menu disabled"><i class="fa fa-check"></i>Authorization</a>
         <ul class="menu view-menu">
-            <li class="row-select"><a><i class="fa fa-question-circle"></i>Request Authorization</a></li>    
-            <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>    
+            <li class="row-select"><a><i class="fa fa-check"></i>Authorize</a></li>  
+            <li class="row-select"><a><i class="fa fa-paper-plane"></i>Request Authorization</a></li>    
             <li class="row-select"><a><i class="fa fa-file-text"></i>Mark as Draft</a></li>    
             <li class="row-select"><a><i class="fa fa-ban"></i>Reject</a></li>    
         </ul>
@@ -100,10 +151,11 @@
     <li class="row-select disabled"><a><i class="fa fa-trash"></i>Delete</a></li>
 </ul>
 
+
 <div class="mediaplan fixedTable block" id="mediaplan">
   
   <table class="mediaPlanFirstColumnHeader">
-      <thead>
+      <thead style="background: #f5f6f7">
 
       <tr class="group-members">
           <th class="col-checkbox" style=""></th><th class="col-line-number"><span class="header">Line</span></th><th class="col-placement-name divider-right"><span class="header"><a>Placement Name</a></span></th>
@@ -118,10 +170,10 @@
     
   <header class="fixedTable-header block">
     <table class="table table-bordered">
-        <thead>
+        <thead style="background: #f5f6f7">
             
         <tr class="group">
-<th colspan="7" style="width:1352px" ><span></span></th><th colspan="10" style="width:1750px" class="divider divider-costs"><span>Costs </span></th><th colspan="7" style="width: 820px" class="divider divider-ratings"><span>Audience</span></th><th colspan="3" style="width: 570px;" class="divider divider-tasks"><span>Tasks</span></th><th colspan="2" style="width: 800px;" class="divider divider-implementation"><span>URLs for Implementation</span></th><th colspan="6" style="width: 750px;" class="divider divider-kpis"><span>KPIs</span></th><th colspan="3" style="width: 450px" class="divider divider-kpis"><span>Picklists</span></th><th colspan="3" style="width: 100%" class="divider divider-kpis"><span>Notes & History</span></th>
+<th colspan="7" style="width:1352px" ><span></span></th><th colspan="10" style="width:1650px" class="divider divider-costs"><span>Costs </span></th><th colspan="7" style="width: 820px" class="divider divider-ratings"><span>Audience</span></th><th colspan="3" style="width: 570px;" class="divider divider-tasks"><span>Tasks</span></th><th colspan="2" style="width: 800px;" class="divider divider-implementation"><span>URLs for Implementation</span></th><th colspan="6" style="width: 750px;" class="divider divider-kpis"><span>KPIs</span></th><th colspan="3" style="width: 450px" class="divider divider-kpis"><span>Picklists</span></th><th colspan="3" style="width: 100%" class="divider divider-kpis"><span>Notes & History</span></th>
         </tr>
         
         <tr class="group-members"><!-- Basics --><th class="col-id"><span>Bionic ID</span></th><th class="col-program"><span><a>Program</a> / <a>Vendor</a></span></th><th class="col-product"><span><a>Product</a> / <a>Targeting</a></span></th><th class="col-channel"><span><a>Channel</a> / <a>Ad Unit</a> / <a>Ad Specs</a></span></th><th class="col-flight-dates"><span><a>Flight Dates</a> / <a>Day Parts</a></span></th><th class="col-rate center"><span>Rate</span></th><th class="col-quantity right "><span><a>Quantity</a></span></th><!-- Costs --><th class="divider divider-costs col-gross-media col-cost right"><span><a>Gross Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Net Media Cost</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Optimization</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Talent</a></span></th><th class="col-costs col-net-media col-cost right"><span><a>Tech Fee</a></span></th><th class="col-costs col-agency-comp col-cost right"><span><a>Agency Comp</a></span></th><th class="col-costs col-total-media-cost col-cost right"><span><a>Total Media Cost</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Ad Serving</a></span></th><th class="col-costs col-ad-serving col-cost right"><span><a>Rich Media Ad Serving</a></span></th><th class="col-costs col-total-cost  col-cost right"><span><a>Total Cost</a></span></th><th class="col-150 col-media-bucket"><span><a>Bucket</a></span></th><th class="col-media-authorization"><span><a>Authorization</a> / <a>Authorizer</a></span></th><!-- Audience --><th class="divider col-ratings col-180"><span><a>Market & Demographics</a></span></th><th class="col-ratings col-120 "><span><a>Population</a></span></th><th class="col-ratings col-120"><span><a>Impressions</a></span></th><th class="col-ratings col-90"><span><a>CPM</a></span></th><th class="col-ratings col-90 "><span><a>Reach #</a></span></th><th class="col-ratings col-90 "><span><a>Reach %</a></span></th><th class="col-ratings col-90 "><span><a>Frequency</a></span></th><!-- Tasks --><th class="divider col-tasks "><span><a>Get Creative Assets</a></span></th><th class="col-tasks "><span><a>Get Advertiser Approval</a></span></th><th class="col-tasks "><span><a>Send Report</a></span></th><!-- Implementation --><th class="divider col-implementation col-350 "><span><a>Landing Page URL</a></span></th><th class="col-implementation col-450"><span><a>Google Analytics Tracking URL</a></span></th><!-- KPIs --><th class="divider col-kpi-cost right"><span><a>CPM</a></span></th><th class="col-kpi-number right"><span><a>Impressions</a></span></th><th class=" col-kpi-cost right"><span><a>CPC</a></span></th><th class="col-kpi-number right"><span><a>Clicks</a></span></th><th class=" col-kpi-cost right"><span><a>/View</a></span></th><th class="col-kpi-number right"><span><a>Views</a></span></th><!-- Picklists --><th class="divider col-picklists "><span><a>Picklist 1</a></span></th><th class="col-picklists "><span><a>Picklist 2</a></span></th><th class="col-picklists "><span><a>Picklist 3</a></span></th><!-- Notes & History --><th class="divider col-50 col-notes "><span><a>Notes</a></span></th><th class="col-135 col-notes "><span><a>Created</a></span></th><th class="col-135 col-notes "><span><a>Last Updated</a></span></th></tr>
@@ -132,11 +184,13 @@
     <table class="table table-bordered mediaplan" id="MediaPlanFirstColumns">
         <tbody></tbody>
     </table>
+<!--
     <div class="" style="width: 800px; position: fixed;margin:20px;">
         <a class="blue-button">Add Placement</a>
         <a class="gray-button">Add Package</a>
         <a class="gray-button">Add Roadblock</a>
     </div>
+-->
     <style>
         .mediaplan-nav {
             position: fixed;
@@ -198,12 +252,12 @@
             <ul>
                 <li class="basics current" rel="0"><i class="fa fa-table"></i><span>Basics</span></li>
                 <li class="costs" rel="1355"><i class="fa fa-money"></i><span>Costs</span></li>
-                <li class="ratings" rel="3103"><i class="fa fa-users"></i><span>Audience</span></li>
-                <li class="tasks" rel="3923"><i class="fa fa-calendar-plus-o"></i><span>Tasks</span></li>
-                <li class="implementation" rel="4493"><i class="fa fa-code"></i><span>URLs</span></li>
-                <li class="kpis" rel="5293"><i class="fa fa-bar-chart"></i><span>KPIs</span></li>
-                <li class="picklists" rel="6043"><i class="fa fa-list"></i><span>Picklists</span></li>
-                <li class="notes" rel="6043"><i class="fa fa-file-text-o"></i><span>Notes</span></li>
+                <li class="ratings" rel="3003"><i class="fa fa-users"></i><span>Audience</span></li>
+                <li class="tasks" rel="3823"><i class="fa fa-calendar-plus-o"></i><span>Tasks</span></li>
+                <li class="implementation" rel="4393"><i class="fa fa-code"></i><span>URLs</span></li>
+                <li class="kpis" rel="5193"><i class="fa fa-bar-chart"></i><span>KPIs</span></li>
+                <li class="picklists" rel="5943"><i class="fa fa-list"></i><span>Picklists</span></li>
+                <li class="notes" rel="5943"><i class="fa fa-file-text-o"></i><span>Notes</span></li>
             </ul>
         </div>
   </aside>
@@ -266,6 +320,11 @@
                 $(".bionic-filters-menu span").text("Filtered");
                 $(".bionic-filters-menu .fa-times-circle").show();
 
+                $(".group th").hide();
+                $(".group .divider-costs").show();
+                
+                $(".location span").text("Costs");
+
 
                 $(".col-id").hide();
                 $(".col-program").hide();
@@ -296,13 +355,13 @@
             
             $(".bionic-mode-menu .fa-times-circle").bind("click",function(e){
                 $(".bionic-mode-menu").removeClass("on");
-                $(".bionic-mode-menu span").text("Mode");
+                $(".bionic-mode-menu span").text("View");
                 $(".bionic-mode-menu .fa-times-circle").hide();
                 $(".bionic-columns-menu").removeClass("on");
-                $(".bionic-columns-menu span").text("Mode");
+                $(".bionic-columns-menu span").text("View");
                 $(".bionic-columns-menu .fa-times-circle").hide();
                 $(".bionic-filters-menu").removeClass("on");
-                $(".bionic-filters-menu span").text("Mode");
+                $(".bionic-filters-menu span").text("View");
                 $(".bionic-filters-menu .fa-times-circle").hide();
                 $(".menu").hide();
                 
@@ -442,7 +501,8 @@
           
           mediaPlanFirstColumns.append('<td class="col-checkbox">'+ ' ' +'</td>');          
           mediaPlanFirstColumns.append('<td class="col-line-number"><span>' + rowNumber + flightHeaderImage+flightMemberImage+'</span></td>');
-          mediaPlanFirstColumns.append('<td class="col-placement-name divider-right"><a href="#/line/overview/">'+ item.PlacementName +'</a></td>');
+//           mediaPlanFirstColumns.append('<td class="col-placement-name divider-right"><a href="#/line/overview/">'+ item.PlacementName +'</a></td>');
+          mediaPlanFirstColumns.append('<td class="col-placement-name divider-right"><a class="open-modal" rel="open:modal" href="templates/modals/line/line-item-overview.html">'+ item.PlacementName +'</a></td>');
           mediaPlanFirstColumns.append('</tr>');
           mediaPlanFirstColumns.appendTo("#MediaPlanFirstColumns tbody");
                     
@@ -466,13 +526,15 @@
           mediaPlanBody.append('<td class="col-kpi col-delivery-dcm col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
           mediaPlanBody.append('<td class="col-kpi col-delivery-rich-media col-cost"><div class="readonly-amount"><span class="currency-symbol">$</span><input id="views'+ i + '" class="right number kpiCPV'+i + '" type="text" value="250.00"></div>'+kpiActionsCPM+'</td>');
 
-          mediaPlanBody.append('<td class="col-total-cost col-cost"><span class="currency-symbol">$</span><a class="">1,000.00</a></td>');          
-          mediaPlanBody.append('<td class="col-bucket col-cost"><input type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
-
+          mediaPlanBody.append('<td class="col-total-cost col-cost"><span class="currency-symbol">$</span><a class="">1,000.00</a></td>');     
           
+          // Buckets
+               
+          mediaPlanBody.append('<td class="col-bucket col-cost"><input type="text" class="has-menu" value="'+item.Bucket+'"><ul class="menu view-menu media-plan-input-menu buckets"><li><a>Digital '+progressBar(30,100)+'</a></li><li><a>Digital '+progressBar(30,100)+'</a></li><li><a>Digital '+progressBar(40,100)+'</a></li><li><a>Digital</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
+
           // Authorization
           
-          mediaPlanBody.append('<td class="col-media-authorization col-dropdown"><input class="half authorization-menu" style="float: none;" type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-question-circle"></i> Request Authorization</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorize</a></li><li><a><i class="fa fa-file-text"></i> Mark as Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Reject</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
+          mediaPlanBody.append('<td class="col-media-authorization col-dropdown"><input class="half has-menu" style="float: none;" type="text" value=""><ul class="menu view-menu media-plan-input-menu authorization-actions"><li><a open-modal" rel="modal:open" href="templates/modals/authorization/request.html"><i class="fa fa-paper-plane"></i> Pending</a></li><li><a open-modal" rel="modal:open" href="templates/modals/authorization/authorize.html"><i class="fa fa-check"></i> Authorized</a></li><li><a><i class="fa fa-file-text"></i> Draft</li></a><li><a open-modal" rel="modal:open" href="templates/modals/authorization/reject.html"><i class="fa fa-ban"></i> Rejected</a></li></ul><i class="dropdown fa fa-caret-down"></i></td>');          
           
           
           // Ratings
@@ -593,9 +655,11 @@
         });
         
         
+        // Budget 
+                
         // Authorizations
 
-            $(document).on('click', '.authorization-menu', function() {
+            $(document).on('click', '.has-menu', function() {
                 $(this).next(".menu").show();
             });
             
@@ -652,11 +716,11 @@
                $(".mediaplan-nav li.costs").addClass("current");
           }
 
-          if(($($body).scrollLeft() > 3050)&&$($body).scrollLeft() < 3102){ 
+          if(($($body).scrollLeft() > 3050)&&$($body).scrollLeft() < 3002){ 
               $($location).text(" ");
           }
           
-          if(($($body).scrollLeft() > 3102)&&$($body).scrollLeft() < 3824){ 
+          if(($($body).scrollLeft() > 3002)&&$($body).scrollLeft() < 3824){ 
               $($location).text("Audience");
                $(".mediaplan-nav li").removeClass("current");
                $(".mediaplan-nav li.ratings").addClass("current");

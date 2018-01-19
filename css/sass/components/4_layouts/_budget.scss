@@ -19,6 +19,40 @@
                 display: inline-block;
             }
             
+            .deleted {
+                display: none;
+            }
+            
+            
+            #gridBody .deleted
+            {
+                span {
+                    display: none;
+                }    
+            }
+            
+            .deleted a {
+                color: #333;
+//                 text-decoration: line-through;
+            }
+            
+            .deleted strong {
+                font-weight: normal;
+            }
+            
+            .deleted .del {
+                color: #999;
+                display: inline;
+                padding: 0;
+                text-transform: uppercase;
+                font-size: 11px;
+            }
+            
+            .deleted .budget {
+                color: #999;
+                text-decoration: line-through;
+            }
+            
             tr:not(.locked):hover,
             tr:not(.total):not(.locked):hover,
             tr:not(.unbucketed):not(.locked):hover,
@@ -77,8 +111,12 @@
             }
             .fa-check {
                 color: $green;
+                margin-right: -2px;
             }
             .fa-file-text {
+                color: $medium-gray;
+            }
+            .fa-pencil {
                 color: $medium-gray;
             }
             .fa-ban {

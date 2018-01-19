@@ -371,6 +371,34 @@
         color: #999;
         margin-right: 3px;
     }
+    
+    &.on{
+        @include nxm-button-orange-backgrond();
+        border: 1px solid #cfcfcf;
+        border-radius: 3px;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        margin: 8px 0 ;
+        padding: 6px 15px 7px 10px;
+        background-position: inherit;
+        font-weight: bold;
+        
+        &:after {
+            content: '\f057 ';
+            font-family: "FontAwesome";
+            opacity: 0.8;
+            padding: 10px 0px 6px 8px;
+            top: 1px;
+            font-size: 15px;
+            right: -6px;
+            position: relative;
+            color: #fff;
+            border-left: 1px dotted #fff;
+        }
+        
+    }
+
 }
 
 .bionic-filter-menu {

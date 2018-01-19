@@ -1,7 +1,7 @@
 .modal {
     background: #fff;
     min-width: 300px;
-    max-width: 950px;
+    max-width: 1300px;
     padding: 0;
     width: auto;
     
@@ -24,7 +24,7 @@
     }
     
     .bionic-modal-header {
-        border-bottom: 1px solid #cfcfcf;
+        border-bottom: 1px solid #ddd;
         padding: 15px 20px; 
         cursor: move; 
         
@@ -95,7 +95,7 @@
     }
     
     .bionic-modal-footer {
-        border-top: 1px solid #cfcfcf;
+        border-top: 1px solid #ddd;
         padding: 15px 20px;  
         
         &.warning {
@@ -190,6 +190,39 @@
         }
     }
     
+    .history {
+        
+        max-width: 1300px;
+        
+        border: 0;
+        
+        .bionic-modal-header {
+            padding-bottom: 0;
+            background: #f5f6f7;
+        }
+        
+        .filter-container, a {
+            width: auto;
+            float: left;
+            margin-right: 8px;
+        }
+        li {
+            float: left;
+            margin: 8px 0;
+        }
+        
+        .button-divider {
+            border-left: 1px solid #cfcfcf;
+            height: 28px;
+            margin: 10px 10px 0 2px;
+        }
+        
+        table tr:last-child {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        
+    }
 }
 
 .blocker {
