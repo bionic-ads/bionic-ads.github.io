@@ -4,6 +4,22 @@
 
 ![Grid](images/content/components/grid.png)
 
+<h2>Basics</h2>
+<h3>Table Headers</h3>
+<ul>
+    <li>Font Size: 13px</li>
+    <li>Font Weight: normal</li>
+    <li>Clickable/sortable: bionic blue color</li>
+    <li>Not Clickable/sortable: normal text (off black) color</li>
+</ul>
+
+<h3>Table Content</h3>
+<ul>
+    <li>Font Size: 13px</li>
+    <li>Alternate Font Size: 11px (for secondary content)</li>
+    <li>Font Weight: normal</li>
+</ul>
+
 ### Column Widths
 
 Bionic grids have two primary column width options, Fixed Width and Evenly Spaced.
@@ -72,4 +88,49 @@ e.g., Following, Locked, Active
 ### Names
 Sort the names of people using First Name instead of Last Name (presuming the first name is what's shown first)
 
+![Grid Details](images/content/grid-details.png)
 
+<h4>Grid Row Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-tr">
+            </div>
+        </xmp>
+    </pre>
+</div>
+
+![Grid Number](images/content/grid-numbering.png)
+
+<h4>Row Numbering Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-td grid-row-number">
+                <span class="row-number"></span>
+            </div>
+        </xmp>
+    </pre>
+</div>
+
+![Grid Checkbox](images/content/grid-checkbox.png)
+
+<h4>Row Checkbox Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-td grid-row-select ">
+                <div class="bionic-checkbox">
+                    <input type="checkbox" 
+                    name="name-<%= model.nextmarkId %>" 
+                    id="<%= model.nextmarkId %>" 
+                    class="nxm-grid-select-row" 
+                    <%= insured(model, 'selected', false)? 'checked' : '' %> >
+                    <label for="name-<%= model.nextmarkId %>">
+                        <span class="box checkbox"></span>
+                    </label>
+                </div>
+            </div>
+        </xmp>
+    </pre>
+</div>
