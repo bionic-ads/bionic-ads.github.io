@@ -28,6 +28,7 @@
 </div>
 
 ![Table Number](images/content/table-numbering.png)
+
 <h4>Row Numbering Classes</h4>
 <div class="code-wrapper">
     <pre class="prettyprint">
@@ -40,14 +41,15 @@
 </div>
 
 ![Table Checkbox](images/content/table-checkbox.png)
+
 <h4>Row Checkbox Classes</h4>
 <div class="code-wrapper">
     <pre class="prettyprint">
         <xmp>
             <div class="nxm-td grid-row-select ">
                 <div class="bionic-checkbox">
-                    <input type="checkbox" name="actual-spot-<%= actualSpot.nextmarkId %>" id="actual-spot-<%= actualSpot.nextmarkId %>" class="nxm-grid-select-row" <%= insured(actualSpot, 'selected', false)? 'checked' : '' %> >
-                    <label for="actual-spot-<%= actualSpot.nextmarkId %>">
+                    <input type="checkbox" name="name-<%= model.nextmarkId %>" id="<%= model.nextmarkId %>" class="nxm-grid-select-row" <%= insured(model, 'selected', false)? 'checked' : '' %> >
+                    <label for="name-<%= model.nextmarkId %>">
                         <span class="box checkbox"></span>
                     </label>
                 </div>
