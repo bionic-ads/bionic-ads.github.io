@@ -48,7 +48,11 @@
         <xmp>
             <div class="nxm-td grid-row-select ">
                 <div class="bionic-checkbox">
-                    <input type="checkbox" name="name-<%= model.nextmarkId %>" id="<%= model.nextmarkId %>" class="nxm-grid-select-row" <%= insured(model, 'selected', false)? 'checked' : '' %> >
+                    <input type="checkbox" 
+                    name="name-<%= model.nextmarkId %>" 
+                    id="<%= model.nextmarkId %>" 
+                    class="nxm-grid-select-row" 
+                    <%= insured(model, 'selected', false)? 'checked' : '' %> >
                     <label for="name-<%= model.nextmarkId %>">
                         <span class="box checkbox"></span>
                     </label>
