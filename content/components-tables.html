@@ -15,6 +15,47 @@
     <li>Font Weight: normal</li>
 </ul>
 
+![Table](images/content/table-details.png)
+
+<h4>Table Row Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-tr" ">
+            </div>
+        </xmp>
+    </pre>
+</div>
+
+![Table Number](images/content/table-numbering.png)
+<h4>Row Numbering Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-td grid-row-number">
+                <span class="row-number"></span>
+            </div>
+        </xmp>
+    </pre>
+</div>
+
+![Table Checkbox](images/content/table-checkbox.png)
+<h4>Row Checkbox Classes</h4>
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        <xmp>
+            <div class="nxm-td grid-row-select ">
+                <div class="bionic-checkbox">
+                    <input type="checkbox" name="actual-spot-<%= actualSpot.nextmarkId %>" id="actual-spot-<%= actualSpot.nextmarkId %>" class="nxm-grid-select-row" <%= insured(actualSpot, 'selected', false)? 'checked' : '' %> >
+                    <label for="actual-spot-<%= actualSpot.nextmarkId %>">
+                        <span class="box checkbox"></span>
+                    </label>
+                </div>
+            </div>
+        </xmp>
+    </pre>
+</div>
+
 
 <h2>Media Plan Grid</h2>
 
