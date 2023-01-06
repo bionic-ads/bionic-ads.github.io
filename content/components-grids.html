@@ -89,25 +89,27 @@ Sort the names of people using First Name instead of Last Name (presuming the fi
 
 ![Grid Details](images/content/grid-details.png)
 
-### Grid Row Classes
+### Grid Row Class
 
 <div class="code-wrapper">
-<pre class="prettyprint">
-    <div class="nxm-tr"></div>
-</pre>
+    <pre class="prettyprint">
+        &lt;div class="nxm-tr"&gt;
+            ...
+        &lt;/div&gt;
+    </pre>
 </div>
 
 ![Grid Number](images/content/grid-numbering.png)
 
 ### Row Numbering Classes
 
+This code will populate a row cell with the row's sequential index.
+
 <div class="code-wrapper">
     <pre class="prettyprint">
-        \<xmp\>
-            <div class="nxm-td grid-row-number">
-                <span class="row-number"></span>
-            </div>
-        </xmp>
+        &lt;div class="nxm-td grid-row-number"&gt;
+            &lt;span class="row-number"&gt;&lt;/span&gt;
+        &lt;/div&gt;
     </pre>
 </div>
 
@@ -115,21 +117,21 @@ Sort the names of people using First Name instead of Last Name (presuming the fi
 
 ### Row Checkbox Classes
 
+This code will generate a checkbox for the entire row. Replace 'model' with the variable name of the model passed to the component.
+
 <div class="code-wrapper">
     <pre class="prettyprint">
-        <xmp>
-            <div class="nxm-td grid-row-select ">
-                <div class="bionic-checkbox">
-                    <input type="checkbox" 
-                    name="name-<%= model.nextmarkId %>" 
-                    id="<%= model.nextmarkId %>" 
-                    class="nxm-grid-select-row" 
-                    <%= insured(model, 'selected', false)? 'checked' : '' %> >
-                    <label for="name-<%= model.nextmarkId %>">
-                        <span class="box checkbox"></span>
-                    </label>
-                </div>
-            </div>
-        </xmp>
+        &lt;div class="nxm-td grid-row-select "&gt;
+            &lt;div class="bionic-checkbox"&gt;
+                &lt;input type="checkbox" 
+                name="name-&lt;%= model.nextmarkId %&gt;" 
+                id="&lt;%= model.nextmarkId %&gt;" 
+                class="nxm-grid-select-row" 
+                &lt;%= insured(model, 'selected', false)? 'checked' : '' %&gt; &gt;
+                &lt;label for="name-&lt;%= model.nextmarkId %&gt;"&gt;
+                    &lt;span class="box checkbox"&gt;&lt;/span&gt;
+                &lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     </pre>
 </div>
