@@ -67,16 +67,27 @@ The height of the grid rows (headers and main content) should be 40px
 
 Any filtering of a grid should persist at the user level. See [Filters](#/components-filters) for more information.
 
-## Checkboxes
-
-Allow for multiple selection of rows using Shift+Click
-
 ## Actions
+
+There are two types of Bionioc components where actions are performed.
+
+1. Main Menu
+
+1. Action Menu
 
 ## Sorting
 
-### Remember Sort Order
-Remember the User's Last Sort for Each Page
+To add sorting to a grid column header, add a data sort ID and direction to the header cell's span element.
+
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        &lt;div class="nxm-td grid-row-bionic-date"&gt;
+            &lt;span class="" data-sort-id="BILLDATE" data-sort-direction="descending"&gt;
+                Bill Date
+            &lt;/span&gt;
+        &lt;/div&gt;
+    </pre>
+</div>
 
 ### Include Sorting Icons Where Applicable
 Allow sorting for icon columns:
