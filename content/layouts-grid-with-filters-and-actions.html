@@ -10,6 +10,78 @@ The basic approach for this layout is to combine three main components as the fo
 
 ![Grid with Filters and Actions](images/content/grid-with-filters-and-actions.png)
 
+## Actions
+
+There are two types of Bionic components where actions are performed.
+
+### Main Menu
+
+![Grid Main Menu](images/content/grid-main-menu.png)
+
+The main menu bar displays the filters and actions that are to always be shown.  This typically includes search, main filter toggle, download button. and help link.
+
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        &lt;div class="bionic-menu-bar main-section"&gt;
+            &lt;% if( settings.scopeLevel === 'DMPCMP' && isDmp()){ %&gt;
+                &lt;div id="orders-add-btn" class="nxm-menu-item action-item group-main-action always-active active"&gt;
+                    &lt;i class="nxm-icon fa fa-plus"&gt;&lt;/i&gt;
+                    &lt;span&gt;Add Orders&lt;/span&gt;
+                &lt;/div&gt;
+        
+                &lt;div class="nxm-menu-item divider"&gt;&lt;/div&gt;
+            &lt;% } %&gt;
+        
+            &lt;div class="nxm-menu-item filter-item filter-search-master"&gt;
+                &lt;input type="text" placeholder="Search" value="" required id="orders-filter-search-master" class="filter-search-master nxm-bg-search" autofocus=""&gt;
+                &lt;span id="clear-search" class="clear-search-filter"&gt;
+                    &lt;i class="nxm-icon fa fa-times-circle"&gt;&lt;/i&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        
+            &lt;% include components/filters/filter_main_button %&gt;
+        
+            &lt;div class="nxm-menu-item divider"&gt;&lt;/div&gt;
+        
+            &lt;div id="orders-download" class="nxm-menu-item action-item active"&gt;
+                &lt;i class="nxm-icon fa fa-download"&gt;&lt;/i&gt;
+                &lt;span&gt;Download&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="nxm-menu-item action-item not-button active"&gt;
+                &lt;a href="&lt;%= getHelpLink('HELP_WITH_ORDERS') %&gt;" target="_blank" class="nxm-menu-action nxm-external-link nxm-action-how usage-all-menu-how"&gt;
+                    &lt;i class="nxm-icon fa fa-question-circle"&gt;&lt;/i&gt;
+                    &lt;span&gt;Help&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+</div>
+
+### Action Menu
+
+![Grid Action Menu](images/content/grid-action-menu.png)
+
+The action menu appears when a row is selected.  For example, clicking an unlocked row may toggle a 'Lock' action button to appear.
+
+<div class="code-wrapper">
+    <pre class="prettyprint">
+        &lt;div class="bionic-menu-bar action-section"&gt;
+        
+            &lt;div id="order-delete" class="nxm-menu-item action-item active" data-rel="No Draft Orders"&gt;
+                &lt;i class="nxm-icon fa fa-trash-o"&gt;&lt;/i&gt;
+                &lt;span&gt;Delete&lt;/span&gt;
+            &lt;/div&gt;
+        
+            ...
+
+            &lt;div id="order-revise" class="nxm-menu-item action-item active" style="display:none"&gt;
+                &lt;i class="nxm-icon fa fa-arrow-left"&gt;&lt;/i&gt;
+                &lt;span&gt;Revise&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+</div>
+
 ## Variations
 
 ### Excluding Filters and/or Actions
