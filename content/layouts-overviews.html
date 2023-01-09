@@ -25,3 +25,26 @@ Overview Pages are used for Advertisers and Campaigns as concise landing pages w
 ## Org
 
 ![Org Overview](images/content/org-overview.png)
+
+## Overview Classes
+
+<div class="code-wrapper">
+    <pre class="prettyprint">
+&lt;div class="nxm-page-wrapper"&gt;
+    &lt;!-- model:model --&gt;
+        &lt;div id="COMPONENT-header-wrapper" class="nxm-header-wrapper advance-header"&gt;&lt;/div&gt;
+        &lt;div id="nxm-mid" class="COMPONENT-overview"&gt;
+    
+            &lt;div class="nxm-overview-wrapper COMPONENT-page"&gt;
+    
+                &lt;% include COMPONENT/COMPONENT-overview/COMPONENT_overview_actions %&gt;
+                &lt;% var clickable = isDmp()? 'clickable': '';%&gt;
+                
+                &lt;div class="nxm-overview-container nxm-data-container COMPONENT-overview"&gt;
+                    ( overview content goes here...)
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+</div>
