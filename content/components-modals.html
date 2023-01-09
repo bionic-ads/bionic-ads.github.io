@@ -45,4 +45,63 @@ Help links should appear to the right of the action buttons
 Background color: #333333
 Background opacity: 30%
 
+## Modal Classes
 
+<div class="code-wrapper">
+    <pre class="prettyprint">
+&lt;div class="floated-title-wrapper"&gt;
+    &lt;!-- model:actualSpot --&gt;
+    &lt;span class=""&gt;Add Spot&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="modal-main-wrapper"&gt;
+    &lt;div class="modal-title-help"&gt;
+        &lt;a href="&lt;%= getHelpLink( 'HOW_TO_ADD_ACTUAL_SPOT' ) %&gt;" 
+        target="_blank" class="nxm-menu-action nxm-external-link nxm-action-how usage-all-menu-how"&gt;
+            &lt;i class="nxm-icon fa fa-question-circle"&gt;&lt;/i&gt;
+            &lt;span&gt;Help&lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-page"&gt;
+        &lt;div class="modal-section"&gt;
+            ( modal body goes here... )
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="dialog-footer"&gt;
+    &lt;div class="footer-section bionic-menu-bar"&gt;
+        &lt;div class="float-left"&gt;
+            &lt;% if (actualSpot.locked) { %&gt;
+                &lt;div id="unlock-actual-spot-btn" class="nxm-menu-item action-item active blue-button"&gt;
+                    &lt;span class="active"&gt;
+                        &lt;span&gt;Unlock&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;% } else { %&gt;
+                &lt;div id="save-actual-spot-btn" class="nxm-menu-item action-item active blue-button"&gt;
+                    &lt;span class="active"&gt;
+                        &lt;span&gt;&lt;%= actualSpot.mode === 'create' ? 'Add Spot' : 'Save' %&gt;&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;% }  %&gt;
+            &lt;div class="nxm-menu-item action-item action-default active cancel-btn"&gt;
+                &lt;span class="active"&gt;
+                    &lt;span&gt;Cancel&lt;/span&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;% if (actualSpot.mode === 'edit' && !actualSpot.locked) { %&gt;
+            &lt;div class="float-right"&gt;
+                &lt;div id="delete-actual-spot-btn" class="nxm-menu-item action-item active blue-button"&gt;
+                    &lt;span class="active"&gt;
+                        &lt;i class="nxm-icon fa fa-trash-o"&gt;&lt;/i&gt;
+                        &lt;span&gt;Delete&lt;/span&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;% } %&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+</div>
